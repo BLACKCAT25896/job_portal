@@ -1,0 +1,57 @@
+# Robots.txt for FueQuiz - AI-Powered Quiz Platform
+# https://quiz.fuedevs.com/robots.txt
+
+User-agent: *
+Allow: /
+
+# Allow all major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+# Disallow admin and private areas (if any)
+Disallow: /admin/
+Disallow: /api/
+Disallow: /private/
+Disallow: /*.json$
+Disallow: /flutter_service_worker.js
+Disallow: /main.dart.js
+
+# Allow important files
+Allow: /manifest.json
+Allow: /sitemap.xml
+Allow: /favicon.png
+Allow: /icons/
+Allow: /assets/
+
+# Crawl delay for respectful crawling
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://quiz.fuedevs.com/sitemap.xml
+
+# Host directive (preferred domain)
+Host: https://quiz.fuedevs.com

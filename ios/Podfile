@@ -1,0 +1,37 @@
+platform :ios, '15.0'
+
+ENV['COCOAPODS_DISABLE_STATS'] = 'true'
+
+def flutter_install_all_ios_pods(install_dir)
+  flutter_root = File.expand_path(File.join(install_dir, '..', '..', 'Flutter'))
+  engine_dir = File.expand_path(File.join(flutter_root, 'bin', 'cache', 'artifacts', 'engine', 'ios'))
+  FileUtils.mkdir_p(engine_dir) unless File.exist?(engine_dir)
+  system("pod install")
+end
+
+target 'Runner' do
+  use_frameworks! :linkage => :static
+
+  flutter_install_all_ios_pods(File.dirname(File.realpath(__FILE__)))
+
+  pod 'Firebase/Core', '11.4.0'
+  pod 'Firebase/Messaging', '11.4.0'
+  pod 'GoogleDataTransport', '~> 10.0'
+
+  post_install do |installer|
+    installer.pods_project.targets.each do |target|
+      target.build_configurations.each do |config|
+        # Allow non-modular includes
+        config.build_settings['CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES'] = 'YES'
+
+        # Exclude arm64 for simulator builds
+        config.build_settings['EXCLUDED_ARCHS[sdk=iphonesimulator*]'] = 'arm64'
+
+        # Prevent code signing issues
+        config.build_settings['EXPANDED_CODE_SIGN_IDENTITY'] = ""
+        config.build_settings['CODE_SIGNING_REQUIRED'] = "NO"
+        config.build_settings['CODE_SIGNING_ALLOWED'] = "NO"
+      end
+    end
+  end
+end

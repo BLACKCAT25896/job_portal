@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <base href="/" />
+
+  <!-- Primary SEO -->
+  <title>Mighty ecommerce – ecommerce Management System | POS & Inventory</title>
+  <meta name="description"
+        content="Mighty ecommerce is a complete ecommerce management system with POS, inventory, orders, staff management, and analytics — fast and powerful for ecommerces and cafes." />
+  <link rel="canonical" href="https://ecommerce.mightyapp.com/" />
+
+  <!-- Fast OG/Twitter Preview -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Mighty ecommerce – ecommerce POS & Inventory System" />
+  <meta property="og:description"
+        content="A fast, modern POS and ecommerce management system for ecommerces, cafes, and food businesses." />
+  <meta property="og:image" content="https://ecommerce.mightyapp.com/icons/Icon-512.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Mighty ecommerce – POS & Management System" />
+  <meta name="twitter:image" content="https://ecommerce.mightyapp.com/icons/Icon-512.png" />
+
+  <!-- PWA Essentials -->
+  <link rel="icon" href="favicon.png" />
+  <link rel="apple-touch-icon" href="icons/Icon-192.png" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+
+  <!-- Preload for Speed -->
+  <link rel="preload" href="flutter.js" as="script" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Minimal CSS (Non-blocking by design) -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Flutter Script (Only essential JS in head) -->
+  <script src="flutter.js" defer></script>
+
+  <!-- WebView Support (not blocking) -->
+  <script src="/assets/packages/flutter_inappwebview_web/assets/web/web_support.js" defer></script>
+
+  <!-- Safari WebGL Fix -->
+  <script>
+    if (navigator.userAgent.includes("Safari") && !navigator.userAgent.includes("Chrome")) {
+      const original = HTMLCanvasElement.prototype.getContext;
+      HTMLCanvasElement.prototype.getContext = function (t, ...a) {
+        if (t === "webgl2") return;
+        return original.call(this, t, ...a);
+      };
+    }
+  </script>
+
+  <!-- Service Worker (Deferred automatically) -->
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("/service_worker.js");
+      });
+    }
+  </script>
+  <link rel="preload" href="assets/font/NotoSans-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="assets/font/NotoSans-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+
+<!-- Preloader and header HTML unchanged -->
+
+<!-- Preloader -->
+<div class="preloader">
+  <div class="food-icons-container">
+    <div class="food-icon food-icon-1">🛒</div>
+    <div class="food-icon food-icon-2">📦</div>
+    <div class="food-icon food-icon-3">🏷️</div>
+    <div class="food-icon food-icon-4">💳</div>
+    <div class="food-icon food-icon-5">🏬</div>
+    <div class="food-icon food-icon-6">📊</div>
+    <div class="food-icon food-icon-7">📱</div>
+    <div class="food-icon food-icon-8">🚚</div>
+    <div class="food-icon food-icon-9">🧾</div>
+    <div class="food-icon food-icon-10">🔄</div>
+    <div class="food-icon food-icon-11">📦</div>
+    <div class="food-icon food-icon-12">💰</div>
+    <div class="food-icon food-icon-13">🛍️</div>
+    <div class="food-icon food-icon-14">🏷️</div>
+    <div class="food-icon food-icon-15">📤</div>
+    <div class="food-icon food-icon-16">📥</div>
+    <div class="food-icon food-icon-17">🧑‍💼</div>
+    <div class="food-icon food-icon-18">🏪</div>
+    <div class="food-icon food-icon-19">📈</div>
+    <div class="food-icon food-icon-20">⚡</div>
+  </div>
+
+  <div class="preloader-particles">
+    <div class="particle"></div><div class="particle"></div><div class="particle"></div>
+    <div class="particle"></div><div class="particle"></div><div class="particle"></div>
+    <div class="particle"></div><div class="particle"></div><div class="particle"></div>
+  </div>
+
+  <p class="preloader-subtitle">Complete Ecommerce Management System</p>
+
+  <div class="ecommerce-loader"></div>
+
+  <div class="ecommerce-dots">
+    <div class="ecommerce-dot"></div>
+    <div class="ecommerce-dot"></div>
+    <div class="ecommerce-dot"></div>
+    <div class="ecommerce-dot"></div>
+  </div>
+</div>
+
+<header class="header">
+  <div class="header-container d-flex align-items-center justify-content-between">
+    <div class="header-start d-flex gap-5 align-items-center">
+      <div class="placeholder placeholder-wide"></div>
+      <div class="placeholder"></div>
+      <div class="placeholder"></div>
+      <div class="placeholder"></div>
+    </div>
+    <div class="header-end d-flex gap-5">
+      <div class="placeholder"></div>
+      <div class="placeholder"></div>
+      <div class="placeholder"></div>
+    </div>
+  </div>
+</header>
+
+<!-- Lazy Load All Scripts After Page Load -->
+<script>
+  window.addEventListener('load', function() {
+
+    // --- Google Maps ---
+    const mapsScript = document.createElement('script');
+    mapsScript.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyBXgrRUydLwIPnE8yPNwniAP6ltpd1jzIE&loading=async&callback=Function.prototype";
+    document.body.appendChild(mapsScript);
+
+    // --- Firebase ---
+    const firebaseAppScript = document.createElement('script');
+    firebaseAppScript.src = "https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js";
+    document.body.appendChild(firebaseAppScript);
+
+    const firebaseMessagingScript = document.createElement('script');
+    firebaseMessagingScript.src = "https://www.gstatic.com/firebasejs/8.10.1/firebase-messaging.js";
+    document.body.appendChild(firebaseMessagingScript);
+
+    // --- GTM noscript (already in HTML, no changes) ---
+
+    // --- SVG Replacement ---
+    document.querySelectorAll("img.svg").forEach(function(img) {
+      const xhr = new XMLHttpRequest();
+      xhr.open("GET", img.src, true);
+      xhr.responseType = "document";
+      xhr.onload = function() {
+        if (xhr.status === 200) {
+          const svg = xhr.response.querySelector("svg");
+          if (!svg) return;
+          if (img.id) svg.id = img.id;
+          if (img.className) svg.className.baseVal = img.className + " replaced-svg";
+          svg.removeAttribute("xmlns:a");
+          if (!svg.getAttribute("viewBox") && svg.height && svg.width) {
+            svg.setAttribute("viewBox", `0 0 ${svg.height.baseVal.value} ${svg.width.baseVal.value}`);
+          }
+          img.parentNode.replaceChild(svg, img);
+        }
+      };
+      xhr.send();
+    });
+
+    // --- Flutter Loader ---
+    {{flutter_js}}
+    {{flutter_build_config}}
+    _flutter.loader.load({
+      serviceWorker: { serviceWorkerVersion: {{flutter_service_worker_version}} },
+      onEntrypointLoaded: function(engineInitializer) {
+        engineInitializer.initializeEngine().then(function(appRunner) {
+          document.querySelector(".preloader")?.remove();
+          document.getElementById("splash")?.remove();
+          appRunner.runApp();
+        });
+      }
+    });
+
+    // --- Theme Loader ---
+    if (typeof Storage !== "undefined") {
+      const theme = localStorage.getItem("flutter.demand_theme");
+      if (theme === "true") document.body.classList.add("theme-dark");
+      else document.body.classList.remove("theme-light");
+    }
+
+  });
+</script>
+
+</body>
+
+</html>

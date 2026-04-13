@@ -1,0 +1,56 @@
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:ecommerce/common/widget/active_inactive_widget.dart';
+import 'package:ecommerce/common/widget/confirmation_dialog.dart';
+import 'package:ecommerce/common/widget/custom_image.dart';
+import 'package:ecommerce/common/widget/custom_popup_menu.dart';
+import 'package:ecommerce/common/widget/custom_text_item_widget.dart';
+import 'package:ecommerce/common/widget/numbering_widget.dart';
+import 'package:ecommerce/feature/loyalty/loyalty_point/domain/model/loyalty_point_model.dart';
+import 'package:ecommerce/feature/loyalty/loyalty_point/logic/loyalty_point_controller.dart';
+import 'package:ecommerce/feature/loyalty/loyalty_point/presentation/widgets/create_new_loyalty_point_widget.dart';
+import 'package:ecommerce/util/app_constants.dart';
+import 'package:ecommerce/util/dimensions.dart';
+
+
+class LoyaltyPointItemWidget extends StatelessWidget {
+  final LoyaltyPointItem? loyaltyPointItem;
+  final int index;
+  const LoyaltyPointItemWidget({super.key, this.loyaltyPointItem, required this.index});
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(spacing: Dimensions.paddingSizeDefault, children: [
+      NumberingWidget(index: index),
+
+        CustomImage(width: 40, height: 40,
+            image: '${AppConstants.imageBaseUrl}/loyalty_points/${loyaltyPointItem?.image}'),
+        Expanded(child: CustomTextItemWidget(text:"${loyaltyPointItem?.name}")),
+        Expanded(child: CustomTextItemWidget(text:"${loyaltyPointItem?.phone}")),
+        Expanded(child: CustomTextItemWidget(text:loyaltyPointItem?.email??'N/A')),
+        Expanded(child: CustomTextItemWidget(text:loyaltyPointItem?.address??'N/a')),
+        Expanded(child: CustomTextItemWidget(text:loyaltyPointItem?.companyName??'N/a')),
+        Expanded(child: CustomTextItemWidget(text:loyaltyPointItem?.contactPerson??'N/a')),
+
+        ActiveInActiveWidget(active: loyaltyPointItem?.status =="1"),
+
+
+      CustomPopupMenu(menuItems: Get.find<LoyaltyPointController>().getPopupMenuList(editDelete: true),
+        onSelected: (option) {
+          if (option.title == "edit".tr) {
+            Get.dialog(Dialog(child: CreateNewLoyaltyPointWidget(loyaltyPointItem: loyaltyPointItem)));
+          } else if (option.title == "delete".tr) {
+            Get.dialog(ConfirmationDialog(
+                title: "loyalty_point".tr,
+                onTap: (){
+                  Get.back();
+                  Get.find<LoyaltyPointController>().deleteLoyaltyPoint(int.parse(loyaltyPointItem!.id!));
+                }));
+
+          }
+        },
+        child: Icon(Icons.more_vert, color: Theme.of(context).hintColor),
+      ),
+      ]);
+  }
+}

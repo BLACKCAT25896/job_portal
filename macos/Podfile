@@ -1,0 +1,66 @@
+# Define the platform and minimum macOS version
+platform :osx, '11.5'
+
+# Disable CocoaPods analytics to reduce latency during builds
+ENV['COCOAPODS_DISABLE_STATS'] = 'true'
+
+# Specify the project settings for Runner
+project 'Runner', {
+  'Debug' => :debug,
+  'Profile' => :release,
+  'Release' => :release,
+}
+
+# Define a helper method to locate Flutter's root directory
+def flutter_root
+  # Path to the generated Flutter build settings file
+  generated_xcode_build_settings_path = File.expand_path(File.join('..', 'Flutter', 'ephemeral', 'Flutter-Generated.xcconfig'), __FILE__)
+
+  # Ensure the file exists
+  unless File.exist?(generated_xcode_build_settings_path)
+    raise "#{generated_xcode_build_settings_path} must exist. If you're running pod install manually, make sure \"flutter pub get\" is executed first"
+  end
+
+  # Read the file and extract FLUTTER_ROOT
+  File.foreach(generated_xcode_build_settings_path) do |line|
+    matches = line.match(/FLUTTER_ROOT\=(.*)/)
+    return matches[1].strip if matches
+  end
+
+  # Raise an error if FLUTTER_ROOT is not found
+  raise "FLUTTER_ROOT not found in #{generated_xcode_build_settings_path}. Try deleting Flutter-Generated.xcconfig, then run \"flutter pub get\""
+end
+
+# Load Flutter's CocoaPods helper
+require File.expand_path(File.join('packages', 'flutter_tools', 'bin', 'podhelper'), flutter_root)
+
+# Set up Flutter macOS pods
+flutter_macos_podfile_setup
+
+# Define the target for the main application
+target 'Runner' do
+  # Use frameworks and modular headers
+  use_frameworks!
+  use_modular_headers!
+
+  # Install all macOS Flutter pods
+  flutter_install_all_macos_pods File.dirname(File.realpath(__FILE__))
+
+  # Define the target for unit tests
+  target 'RunnerTests' do
+    inherit! :search_paths
+  end
+end
+
+# Post-install hook to customize CocoaPods build settings
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      # Update macOS deployment target to 10.15
+      config.build_settings['MACOSX_DEPLOYMENT_TARGET'] = '11.5'
+    end
+
+    # Add additional macOS build settings for Flutter
+    flutter_additional_macos_build_settings(target)
+  end
+end
