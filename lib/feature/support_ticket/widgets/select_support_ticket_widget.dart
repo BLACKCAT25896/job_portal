@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/widget/custom_title.dart';
-import 'package:ecommerce/feature/support_ticket/controllers/support_ticket_controller.dart';
-import 'package:ecommerce/feature/support_ticket/widgets/support_ticket_dropdown_widget.dart';
-import 'package:ecommerce/util/dimensions.dart';
+import 'package:mighty_job/common/widget/custom_title.dart';
+import 'package:mighty_job/feature/support_ticket/controllers/support_ticket_controller.dart';
+import 'package:mighty_job/feature/support_ticket/widgets/support_ticket_dropdown_widget.dart';
+import 'package:mighty_job/util/dimensions.dart';
 
 class SupportTicketCategorySelectionWidget extends StatefulWidget {
   const SupportTicketCategorySelectionWidget({super.key});

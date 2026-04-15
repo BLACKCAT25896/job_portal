@@ -2,7 +2,7 @@ import 'dart:convert'; // For UTF-8 encoding
 import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
-import 'package:ecommerce/util/dimensions.dart';
+import 'package:mighty_job/util/dimensions.dart';
 
 class VideoPlayerDialog extends StatefulWidget {
   final String? url;

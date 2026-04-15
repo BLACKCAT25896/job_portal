@@ -1,9 +1,9 @@
 import 'package:get/get.dart';
-import 'package:ecommerce/api_handle/api_checker.dart';
-import 'package:ecommerce/common/widget/custom_snackbar.dart';
-import 'package:ecommerce/feature/sms/phone_book/domain/models/phone_book_body.dart';
-import 'package:ecommerce/feature/sms/phone_book/domain/models/phone_book_model.dart';
-import 'package:ecommerce/feature/sms/phone_book/domain/repository/phone_book_repository.dart';
+import 'package:mighty_job/api_handle/api_checker.dart';
+import 'package:mighty_job/common/widget/custom_snackbar.dart';
+import 'package:mighty_job/feature/sms/phone_book/domain/models/phone_book_body.dart';
+import 'package:mighty_job/feature/sms/phone_book/domain/models/phone_book_model.dart';
+import 'package:mighty_job/feature/sms/phone_book/domain/repository/phone_book_repository.dart';
 
 class PhoneBookController extends GetxController implements GetxService{
   final PhoneBookRepository phoneBookRepository;

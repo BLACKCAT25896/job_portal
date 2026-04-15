@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/layout/list_layout_widget.dart';
-import 'package:ecommerce/feature/sms/phone_book/controller/phone_book_controller.dart';
-import 'package:ecommerce/feature/sms/phone_book/domain/models/phone_book_model.dart';
-import 'package:ecommerce/feature/sms/phone_book/presentation/widgets/phone_book_item_widget.dart';
-import 'package:ecommerce/feature/sms/phone_book/presentation/screens/create_new_phone_book_screen.dart';
+import 'package:mighty_job/common/layout/list_layout_widget.dart';
+import 'package:mighty_job/feature/sms/phone_book/controller/phone_book_controller.dart';
+import 'package:mighty_job/feature/sms/phone_book/domain/models/phone_book_model.dart';
+import 'package:mighty_job/feature/sms/phone_book/presentation/widgets/phone_book_item_widget.dart';
+import 'package:mighty_job/feature/sms/phone_book/presentation/screens/create_new_phone_book_screen.dart';
 
 class PhoneBookListWidget extends StatelessWidget {
   final ScrollController scrollController;

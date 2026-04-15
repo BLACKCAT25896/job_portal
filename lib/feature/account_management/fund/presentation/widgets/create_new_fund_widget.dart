@@ -1,16 +1,16 @@
 
-import 'package:ecommerce/feature/account_management/accounting/logic/account_controller.dart';
-import 'package:ecommerce/feature/account_management/accounting/presentation/widgets/accounting_type_widget.dart';
+import 'package:mighty_job/feature/account_management/accounting/logic/account_controller.dart';
+import 'package:mighty_job/feature/account_management/accounting/presentation/widgets/accounting_type_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/widget/custom_button.dart';
-import 'package:ecommerce/common/widget/custom_snackbar.dart';
-import 'package:ecommerce/common/widget/custom_text_field.dart';
-import 'package:ecommerce/feature/account_management/fund/domain/model/fund_body.dart';
-import 'package:ecommerce/feature/account_management/fund/domain/model/fund_model.dart';
-import 'package:ecommerce/feature/account_management/fund/logic/fund_controller.dart';
-import 'package:ecommerce/util/app_constants.dart';
-import 'package:ecommerce/util/dimensions.dart';
+import 'package:mighty_job/common/widget/custom_button.dart';
+import 'package:mighty_job/common/widget/custom_snackbar.dart';
+import 'package:mighty_job/common/widget/custom_text_field.dart';
+import 'package:mighty_job/feature/account_management/fund/domain/model/fund_body.dart';
+import 'package:mighty_job/feature/account_management/fund/domain/model/fund_model.dart';
+import 'package:mighty_job/feature/account_management/fund/logic/fund_controller.dart';
+import 'package:mighty_job/util/app_constants.dart';
+import 'package:mighty_job/util/dimensions.dart';
 
 
 class CreateNewFundWidget extends StatefulWidget {

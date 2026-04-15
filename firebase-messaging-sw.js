@@ -4,9 +4,9 @@ importScripts("https://www.gstatic.com/firebasejs/9.6.10/firebase-messaging-comp
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyCifalK_uMJydVsJqvNb7d9tDUDpWj3Qr0",
-  authDomain: "mighty-ecommerce.firebaseapp.com",
-  projectId: "mighty-ecommerce",
-  storageBucket: "mighty-ecommerce.firebasestorage.app",
+  authDomain: "mighty-mighty_job.firebaseapp.com",
+  projectId: "mighty-mighty_job",
+  storageBucket: "mighty-mighty_job.firebasestorage.app",
   messagingSenderId: "789305924846",
   appId: "1:789305924846:web:9f2e1784494c17179f27ff",
   measurementId: "G-BN99TFSDXJ"

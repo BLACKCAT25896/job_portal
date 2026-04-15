@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/widget/custom_title.dart';
-import 'package:ecommerce/common/widget/custom_generic_dropdown.dart';
-import 'package:ecommerce/feature/human_resource/leave_application/controller/leave_application_controller.dart';
+import 'package:mighty_job/common/widget/custom_title.dart';
+import 'package:mighty_job/common/widget/custom_generic_dropdown.dart';
+import 'package:mighty_job/feature/human_resource/leave_application/controller/leave_application_controller.dart';
 
 class SelectLeaveApplicationWidget extends StatefulWidget {
   const SelectLeaveApplicationWidget({super.key});

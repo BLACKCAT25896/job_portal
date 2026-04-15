@@ -1,8 +1,8 @@
 
 
-import 'package:ecommerce/feature/account_management/accounting/domain/model/account_model.dart';
-import 'package:ecommerce/feature/account_management/deposit_category/domain/model/deposit_category_model.dart';
-import 'package:ecommerce/helper/price_converter.dart';
+import 'package:mighty_job/feature/account_management/accounting/domain/model/account_model.dart';
+import 'package:mighty_job/feature/account_management/deposit_category/domain/model/deposit_category_model.dart';
+import 'package:mighty_job/helper/price_converter.dart';
 
 class DepositItem {
   String? id;

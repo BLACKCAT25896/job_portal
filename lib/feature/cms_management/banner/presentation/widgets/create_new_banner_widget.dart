@@ -1,13 +1,13 @@
-import 'package:ecommerce/common/widget/image_picker_widget.dart';
-import 'package:ecommerce/util/app_constants.dart';
+import 'package:mighty_job/common/widget/image_picker_widget.dart';
+import 'package:mighty_job/util/app_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/widget/custom_button.dart';
-import 'package:ecommerce/common/widget/custom_text_field.dart';
-import 'package:ecommerce/feature/cms_management/banner/domain/model/banner_body.dart';
-import 'package:ecommerce/feature/cms_management/banner/domain/model/banner_model.dart';
-import 'package:ecommerce/feature/cms_management/banner/logic/banner_controller.dart';
-import 'package:ecommerce/util/dimensions.dart';
+import 'package:mighty_job/common/widget/custom_button.dart';
+import 'package:mighty_job/common/widget/custom_text_field.dart';
+import 'package:mighty_job/feature/cms_management/banner/domain/model/banner_body.dart';
+import 'package:mighty_job/feature/cms_management/banner/domain/model/banner_model.dart';
+import 'package:mighty_job/feature/cms_management/banner/logic/banner_controller.dart';
+import 'package:mighty_job/util/dimensions.dart';
 
 class CreateNewBannerWidget extends StatefulWidget {
   final BannerItem? bannerItem;

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/widget/custom_title.dart';
-import 'package:ecommerce/feature/account_management/fund/logic/fund_controller.dart';
-import 'package:ecommerce/util/dimensions.dart';
-import 'package:ecommerce/common/widget/custom_generic_dropdown.dart';
+import 'package:mighty_job/common/widget/custom_title.dart';
+import 'package:mighty_job/feature/account_management/fund/logic/fund_controller.dart';
+import 'package:mighty_job/util/dimensions.dart';
+import 'package:mighty_job/common/widget/custom_generic_dropdown.dart';
 
 class SelectFundWidget extends StatefulWidget {
   const SelectFundWidget({super.key});

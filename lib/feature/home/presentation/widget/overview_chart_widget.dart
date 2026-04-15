@@ -1,14 +1,14 @@
 import 'dart:math';
-import 'package:ecommerce/feature/report_management/logic/report_controller.dart';
-import 'package:ecommerce/helper/app_color_helper.dart';
+import 'package:mighty_job/feature/report_management/logic/report_controller.dart';
+import 'package:mighty_job/helper/app_color_helper.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/feature/home/presentation/widget/filter_overview_widget.dart';
-import 'package:ecommerce/feature/report_management/domain/model/dashboard_report_data_model.dart';
-import 'package:ecommerce/helper/responsive_helper.dart';
-import 'package:ecommerce/util/dimensions.dart';
-import 'package:ecommerce/util/styles.dart';
+import 'package:mighty_job/feature/home/presentation/widget/filter_overview_widget.dart';
+import 'package:mighty_job/feature/report_management/domain/model/dashboard_report_data_model.dart';
+import 'package:mighty_job/helper/responsive_helper.dart';
+import 'package:mighty_job/util/dimensions.dart';
+import 'package:mighty_job/util/styles.dart';
 
 class OrdersLineChart extends StatelessWidget {
 

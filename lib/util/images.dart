@@ -137,13 +137,13 @@ class Images {
 
 
   //...........................................................................................
-  // ecommerce Management System Icons
+  // mighty_job Management System Icons
   static const String logoWithName = 'assets/image/common/logo_with_name.png';
   static const String sms = 'assets/image/common/sms.png';
   static const String shoppingCart = 'assets/image/common/shopping-cart.png';
   static const String theme = 'assets/image/common/theme.png';
 
-  // Core ecommerce Operations
+  // Core mighty_job Operations
   static const String posIcon = 'assets/image/common/pos_icon.png';
   static const String order = 'assets/image/order.png';
   static const String income = 'assets/image/common/income.png';

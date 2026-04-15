@@ -1,16 +1,16 @@
-import 'package:ecommerce/helper/app_color_helper.dart';
+import 'package:mighty_job/helper/app_color_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/widget/custom_button.dart';
-import 'package:ecommerce/common/widget/custom_checkbox.dart';
-import 'package:ecommerce/common/widget/custom_snackbar.dart';
-import 'package:ecommerce/common/widget/custom_text_field.dart';
-import 'package:ecommerce/feature/authentication/logic/authentication_controller.dart';
-import 'package:ecommerce/util/app_constants.dart';
-import 'package:ecommerce/util/dimensions.dart';
-import 'package:ecommerce/util/images.dart';
-import 'package:ecommerce/util/styles.dart';
+import 'package:mighty_job/common/widget/custom_button.dart';
+import 'package:mighty_job/common/widget/custom_checkbox.dart';
+import 'package:mighty_job/common/widget/custom_snackbar.dart';
+import 'package:mighty_job/common/widget/custom_text_field.dart';
+import 'package:mighty_job/feature/authentication/logic/authentication_controller.dart';
+import 'package:mighty_job/util/app_constants.dart';
+import 'package:mighty_job/util/dimensions.dart';
+import 'package:mighty_job/util/images.dart';
+import 'package:mighty_job/util/styles.dart';
 
 class LoginWidget extends StatefulWidget {
   final bool fromDashboard;

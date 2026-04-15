@@ -1,11 +1,11 @@
-import 'package:ecommerce/common/layout/custom_dialog_widget.dart';
-import 'package:ecommerce/feature/inventory/unit_measurement/domain/model/unit_model.dart';
-import 'package:ecommerce/feature/inventory/unit_measurement/logic/unit_controller.dart';
-import 'package:ecommerce/feature/inventory/unit_measurement/presentation/widgets/create_new_unit_widget.dart';
-import 'package:ecommerce/feature/inventory/unit_measurement/presentation/widgets/unit_item_widget.dart';
+import 'package:mighty_job/common/layout/custom_dialog_widget.dart';
+import 'package:mighty_job/feature/inventory/unit_measurement/domain/model/unit_model.dart';
+import 'package:mighty_job/feature/inventory/unit_measurement/logic/unit_controller.dart';
+import 'package:mighty_job/feature/inventory/unit_measurement/presentation/widgets/create_new_unit_widget.dart';
+import 'package:mighty_job/feature/inventory/unit_measurement/presentation/widgets/unit_item_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/layout/list_layout_widget.dart';
+import 'package:mighty_job/common/layout/list_layout_widget.dart';
 
 class UnitListWidget extends StatelessWidget {
   final ScrollController scrollController;

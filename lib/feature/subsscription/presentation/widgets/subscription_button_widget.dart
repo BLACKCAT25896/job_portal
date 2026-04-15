@@ -1,7 +1,7 @@
-import 'package:ecommerce/common/widget/custom_button.dart';
-import 'package:ecommerce/common/widget/custom_snackbar.dart';
-import 'package:ecommerce/feature/profile/logic/profile_controller.dart';
-import 'package:ecommerce/feature/subsscription/controller/subscription_controller.dart';
+import 'package:mighty_job/common/widget/custom_button.dart';
+import 'package:mighty_job/common/widget/custom_snackbar.dart';
+import 'package:mighty_job/feature/profile/logic/profile_controller.dart';
+import 'package:mighty_job/feature/subsscription/controller/subscription_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-/// Custom page transitions for ecommerce management system
+/// Custom page transitions for mighty_job management system
 /// Provides smooth, professional transitions that enhance the user experience
-class EcommercePageTransitions {
+class mighty_jobPageTransitions {
   
   /// Slide transition from right to left (for forward navigation)
   static PageRouteBuilder<T> slideFromRight<T>(Widget page) {
@@ -101,7 +101,7 @@ class EcommercePageTransitions {
     );
   }
 
-  /// ecommerce workflow transition (combines slide and fade)
+  /// mighty_job workflow transition (combines slide and fade)
   static PageRouteBuilder<T> workflowTransition<T>(Widget page, {bool isForward = true}) {
     return PageRouteBuilder<T>(
       pageBuilder: (context, animation, secondaryAnimation) => page,
@@ -176,46 +176,46 @@ class EcommercePageTransitions {
 }
 
 /// Extension to easily apply transitions to navigation
-extension EcommerceNavigation on BuildContext {
+extension mighty_jobNavigation on BuildContext {
   
   /// Navigate with slide from right transition
   Future<T?> pushWithSlideFromRight<T>(Widget page) {
     return Navigator.of(this).push<T>(
-      EcommercePageTransitions.slideFromRight<T>(page),
+      mighty_jobPageTransitions.slideFromRight<T>(page),
     );
   }
   
   /// Navigate with fade and scale transition
   Future<T?> pushWithFadeScale<T>(Widget page) {
     return Navigator.of(this).push<T>(
-      EcommercePageTransitions.fadeWithScale<T>(page),
+      mighty_jobPageTransitions.fadeWithScale<T>(page),
     );
   }
 
   /// Navigate with workflow transition
   Future<T?> pushWithWorkflowTransition<T>(Widget page, {bool isForward = true}) {
     return Navigator.of(this).push<T>(
-      EcommercePageTransitions.workflowTransition<T>(page, isForward: isForward),
+      mighty_jobPageTransitions.workflowTransition<T>(page, isForward: isForward),
     );
   }
 
   /// Navigate with slide from bottom transition
   Future<T?> pushWithSlideFromBottom<T>(Widget page) {
     return Navigator.of(this).push<T>(
-      EcommercePageTransitions.slideFromBottom<T>(page),
+      mighty_jobPageTransitions.slideFromBottom<T>(page),
     );
   }
 
   /// Navigate to dashboard with special transition
   Future<T?> pushToDashboard<T>(Widget page) {
     return Navigator.of(this).push<T>(
-      EcommercePageTransitions.dashboardTransition<T>(page),
+      mighty_jobPageTransitions.dashboardTransition<T>(page),
     );
   }
 }
 
 /// Animated container for smooth state changes
-class EcommerceAnimatedContainer extends StatelessWidget {
+class mighty_jobAnimatedContainer extends StatelessWidget {
   final Widget child;
   final Duration duration;
   final Curve curve;
@@ -226,7 +226,7 @@ class EcommerceAnimatedContainer extends StatelessWidget {
   final EdgeInsetsGeometry? margin;
   final Decoration? decoration;
 
-  const EcommerceAnimatedContainer({
+  const mighty_jobAnimatedContainer({
     super.key,
     required this.child,
     this.duration = const Duration(milliseconds: 300),

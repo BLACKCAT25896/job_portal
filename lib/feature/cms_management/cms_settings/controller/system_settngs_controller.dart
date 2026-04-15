@@ -2,19 +2,19 @@
 import 'dart:developer';
 import 'dart:ui';
 
-import 'package:ecommerce/feature/cms_management/cms_settings/domain/model/default_theme_model.dart';
+import 'package:mighty_job/feature/cms_management/cms_settings/domain/model/default_theme_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:ecommerce/api_handle/api_checker.dart';
-import 'package:ecommerce/common/widget/custom_snackbar.dart';
-import 'package:ecommerce/feature/cms_management/cms_settings/domain/model/cms_section_model.dart';
-import 'package:ecommerce/feature/cms_management/cms_settings/domain/model/cms_section_reorder_body.dart';
-import 'package:ecommerce/feature/cms_management/cms_settings/domain/model/general_settings_model.dart';
-import 'package:ecommerce/feature/cms_management/cms_settings/domain/model/image_setting_model.dart';
-import 'package:ecommerce/feature/cms_management/cms_settings/domain/repository/system_settings_repository.dart';
-import 'package:ecommerce/helper/image_size_checker.dart';
-import 'package:ecommerce/util/app_constants.dart';
+import 'package:mighty_job/api_handle/api_checker.dart';
+import 'package:mighty_job/common/widget/custom_snackbar.dart';
+import 'package:mighty_job/feature/cms_management/cms_settings/domain/model/cms_section_model.dart';
+import 'package:mighty_job/feature/cms_management/cms_settings/domain/model/cms_section_reorder_body.dart';
+import 'package:mighty_job/feature/cms_management/cms_settings/domain/model/general_settings_model.dart';
+import 'package:mighty_job/feature/cms_management/cms_settings/domain/model/image_setting_model.dart';
+import 'package:mighty_job/feature/cms_management/cms_settings/domain/repository/system_settings_repository.dart';
+import 'package:mighty_job/helper/image_size_checker.dart';
+import 'package:mighty_job/util/app_constants.dart';
 
 class SystemSettingsController extends GetxController implements GetxService{
   final SystemSettingsRepository systemSettingsRepository;
@@ -143,11 +143,11 @@ class SystemSettingsController extends GetxController implements GetxService{
   }
 
 
-  ImageSettingModel? ecommerceImageSettingModel;
-  Future<void> getEcommerceImageSetting() async {
-    Response? response = await systemSettingsRepository.getecommerceImageSetting();
+  ImageSettingModel? mighty_jobImageSettingModel;
+  Future<void> getmighty_jobImageSetting() async {
+    Response? response = await systemSettingsRepository.getmighty_jobImageSetting();
     if (response?.statusCode == 200) {
-      ecommerceImageSettingModel = ImageSettingModel.fromJson(response?.body);
+      mighty_jobImageSettingModel = ImageSettingModel.fromJson(response?.body);
     }else{
       ApiChecker.checkApi(response!);
     }

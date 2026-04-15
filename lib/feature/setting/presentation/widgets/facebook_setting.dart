@@ -1,17 +1,17 @@
 
-import 'package:ecommerce/common/widget/custom_checkbox.dart';
-import 'package:ecommerce/common/widget/custom_snackbar.dart';
-import 'package:ecommerce/feature/cms_management/cms_settings/controller/system_settngs_controller.dart';
+import 'package:mighty_job/common/widget/custom_checkbox.dart';
+import 'package:mighty_job/common/widget/custom_snackbar.dart';
+import 'package:mighty_job/feature/cms_management/cms_settings/controller/system_settngs_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/global_widget/custom_web_scroll_view_widget.dart';
-import 'package:ecommerce/common/layout/section_header_with_path_widget.dart';
-import 'package:ecommerce/common/widget/custom_app_bar.dart';
-import 'package:ecommerce/common/widget/custom_button.dart';
-import 'package:ecommerce/common/widget/custom_contaner.dart';
-import 'package:ecommerce/common/widget/custom_text_field.dart';
-import 'package:ecommerce/helper/responsive_helper.dart';
-import 'package:ecommerce/util/dimensions.dart';
+import 'package:mighty_job/common/global_widget/custom_web_scroll_view_widget.dart';
+import 'package:mighty_job/common/layout/section_header_with_path_widget.dart';
+import 'package:mighty_job/common/widget/custom_app_bar.dart';
+import 'package:mighty_job/common/widget/custom_button.dart';
+import 'package:mighty_job/common/widget/custom_contaner.dart';
+import 'package:mighty_job/common/widget/custom_text_field.dart';
+import 'package:mighty_job/helper/responsive_helper.dart';
+import 'package:mighty_job/util/dimensions.dart';
 
 class FacebookSetting extends StatefulWidget {
   const FacebookSetting({super.key});

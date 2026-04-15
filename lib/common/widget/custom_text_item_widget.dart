@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ecommerce/util/dimensions.dart';
-import 'package:ecommerce/util/styles.dart';
+import 'package:mighty_job/util/dimensions.dart';
+import 'package:mighty_job/util/styles.dart';
 
 class CustomTextItemWidget extends StatelessWidget {
   final String text;

@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:ecommerce/feature/payment_method/domain/model/payment_method_model.dart';
+import 'package:mighty_job/feature/payment_method/domain/model/payment_method_model.dart';
 
 
 class CreateNewPaymentMethodWidget extends StatefulWidget {

@@ -1,20 +1,20 @@
-import 'package:ecommerce/common/widget/custom_button.dart';
-import 'package:ecommerce/common/widget/custom_snackbar.dart';
-import 'package:ecommerce/common/widget/custom_text_field.dart';
-import 'package:ecommerce/common/widget/responsive_grid_widget.dart';
-import 'package:ecommerce/feature/human_resource/salary_setup/domain/models/salary_setup_body.dart';
-import 'package:ecommerce/feature/human_resource/salary_setup/domain/models/salary_setup_model.dart';
-import 'package:ecommerce/feature/human_resource/salary_type/controller/salary_type_controller.dart';
-import 'package:ecommerce/feature/human_resource/salary_type/domain/models/salary_type_model.dart';
-import 'package:ecommerce/feature/human_resource/salary_type/presentation/widgets/salary_type_selection_widget.dart';
-import 'package:ecommerce/feature/role_and_permission/user/controller/user_controller.dart';
-import 'package:ecommerce/feature/role_and_permission/user/domain/models/user_model.dart';
-import 'package:ecommerce/feature/role_and_permission/user/presentation/widgets/user_selection_widget.dart';
-import 'package:ecommerce/util/app_constants.dart';
-import 'package:ecommerce/util/dimensions.dart';
+import 'package:mighty_job/common/widget/custom_button.dart';
+import 'package:mighty_job/common/widget/custom_snackbar.dart';
+import 'package:mighty_job/common/widget/custom_text_field.dart';
+import 'package:mighty_job/common/widget/responsive_grid_widget.dart';
+import 'package:mighty_job/feature/human_resource/salary_setup/domain/models/salary_setup_body.dart';
+import 'package:mighty_job/feature/human_resource/salary_setup/domain/models/salary_setup_model.dart';
+import 'package:mighty_job/feature/human_resource/salary_type/controller/salary_type_controller.dart';
+import 'package:mighty_job/feature/human_resource/salary_type/domain/models/salary_type_model.dart';
+import 'package:mighty_job/feature/human_resource/salary_type/presentation/widgets/salary_type_selection_widget.dart';
+import 'package:mighty_job/feature/role_and_permission/user/controller/user_controller.dart';
+import 'package:mighty_job/feature/role_and_permission/user/domain/models/user_model.dart';
+import 'package:mighty_job/feature/role_and_permission/user/presentation/widgets/user_selection_widget.dart';
+import 'package:mighty_job/util/app_constants.dart';
+import 'package:mighty_job/util/dimensions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/feature/human_resource/salary_setup/controller/salary_setup_controller.dart';
+import 'package:mighty_job/feature/human_resource/salary_setup/controller/salary_setup_controller.dart';
 
 class AddNewSalarySetupWidget extends StatefulWidget {
   final SalarySetupItem? salarySetupItem;

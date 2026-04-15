@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:ecommerce/common/widget/custom_contaner.dart';
-import 'package:ecommerce/common/widget/custom_text_item_widget.dart';
-import 'package:ecommerce/common/widget/numbering_widget.dart';
-import 'package:ecommerce/feature/report_management/domain/model/stock_report_model.dart';
-import 'package:ecommerce/helper/price_converter.dart';
-import 'package:ecommerce/helper/responsive_helper.dart';
-import 'package:ecommerce/util/dimensions.dart';
+import 'package:mighty_job/common/widget/custom_contaner.dart';
+import 'package:mighty_job/common/widget/custom_text_item_widget.dart';
+import 'package:mighty_job/common/widget/numbering_widget.dart';
+import 'package:mighty_job/feature/report_management/domain/model/stock_report_model.dart';
+import 'package:mighty_job/helper/price_converter.dart';
+import 'package:mighty_job/helper/responsive_helper.dart';
+import 'package:mighty_job/util/dimensions.dart';
 import 'package:get/get.dart';
 
 

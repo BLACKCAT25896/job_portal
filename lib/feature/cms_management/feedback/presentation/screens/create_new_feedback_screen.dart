@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/global_widget/custom_web_scroll_view_widget.dart';
-import 'package:ecommerce/common/widget/custom_app_bar.dart';
-import 'package:ecommerce/common/widget/web_app_bar.dart';
-import 'package:ecommerce/feature/cms_management/feedback/domain/model/feedback_model.dart';
-import 'package:ecommerce/feature/cms_management/feedback/presentation/widgets/create_new_feedback_widget.dart';
-import 'package:ecommerce/helper/responsive_helper.dart';
-import 'package:ecommerce/util/dimensions.dart';
+import 'package:mighty_job/common/global_widget/custom_web_scroll_view_widget.dart';
+import 'package:mighty_job/common/widget/custom_app_bar.dart';
+import 'package:mighty_job/common/widget/web_app_bar.dart';
+import 'package:mighty_job/feature/cms_management/feedback/domain/model/feedback_model.dart';
+import 'package:mighty_job/feature/cms_management/feedback/presentation/widgets/create_new_feedback_widget.dart';
+import 'package:mighty_job/helper/responsive_helper.dart';
+import 'package:mighty_job/util/dimensions.dart';
 
 class CreateNewFeedbackScreen extends StatefulWidget {
   final FeedbackItem? feedbackItem;

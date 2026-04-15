@@ -1,11 +1,11 @@
 import 'dart:math';
 
-import 'package:ecommerce/helper/app_color_helper.dart';
-import 'package:ecommerce/helper/responsive_helper.dart';
-import 'package:ecommerce/util/dimensions.dart';
+import 'package:mighty_job/helper/app_color_helper.dart';
+import 'package:mighty_job/helper/responsive_helper.dart';
+import 'package:mighty_job/util/dimensions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/controller/theme_controller.dart';
+import 'package:mighty_job/common/controller/theme_controller.dart';
 
 const landingRegularFont = TextStyle(
   fontFamily: 'PlayfairDisplay',

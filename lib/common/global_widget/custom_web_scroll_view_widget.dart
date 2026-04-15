@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:ecommerce/common/global_widget/side_bar_reactive_wrapper.dart';
-import 'package:ecommerce/common/widget/web_app_bar.dart';
-import 'package:ecommerce/helper/responsive_helper.dart';
+import 'package:mighty_job/common/global_widget/side_bar_reactive_wrapper.dart';
+import 'package:mighty_job/common/widget/web_app_bar.dart';
+import 'package:mighty_job/helper/responsive_helper.dart';
 
 
 class CustomWebScrollView extends StatelessWidget {

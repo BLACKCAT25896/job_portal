@@ -1,11 +1,11 @@
-import 'package:ecommerce/common/layout/custom_dialog_widget.dart';
-import 'package:ecommerce/feature/human_resource/salary_setup/presentation/widgets/add_new_salary_setup_widget.dart';
+import 'package:mighty_job/common/layout/custom_dialog_widget.dart';
+import 'package:mighty_job/feature/human_resource/salary_setup/presentation/widgets/add_new_salary_setup_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/layout/list_layout_widget.dart';
-import 'package:ecommerce/feature/human_resource/salary_setup/controller/salary_setup_controller.dart';
-import 'package:ecommerce/feature/human_resource/salary_setup/domain/models/salary_setup_model.dart';
-import 'package:ecommerce/feature/human_resource/salary_setup/presentation/widgets/salary_setup_item_widget.dart';
+import 'package:mighty_job/common/layout/list_layout_widget.dart';
+import 'package:mighty_job/feature/human_resource/salary_setup/controller/salary_setup_controller.dart';
+import 'package:mighty_job/feature/human_resource/salary_setup/domain/models/salary_setup_model.dart';
+import 'package:mighty_job/feature/human_resource/salary_setup/presentation/widgets/salary_setup_item_widget.dart';
 
 class SalarySetupListWidget extends StatelessWidget {
   final ScrollController scrollController;

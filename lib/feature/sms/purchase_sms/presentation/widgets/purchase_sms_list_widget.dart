@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/layout/list_layout_widget.dart';
-import 'package:ecommerce/feature/sms/purchase_sms/controller/purchase_sms_controller.dart';
-import 'package:ecommerce/feature/sms/purchase_sms/domain/models/purchase_sms_model.dart';
-import 'package:ecommerce/feature/sms/purchase_sms/presentation/widgets/create_new_purchase_sms_widget.dart';
-import 'package:ecommerce/feature/sms/purchase_sms/presentation/widgets/purchase_sms_item_widget.dart';
+import 'package:mighty_job/common/layout/list_layout_widget.dart';
+import 'package:mighty_job/feature/sms/purchase_sms/controller/purchase_sms_controller.dart';
+import 'package:mighty_job/feature/sms/purchase_sms/domain/models/purchase_sms_model.dart';
+import 'package:mighty_job/feature/sms/purchase_sms/presentation/widgets/create_new_purchase_sms_widget.dart';
+import 'package:mighty_job/feature/sms/purchase_sms/presentation/widgets/purchase_sms_item_widget.dart';
 
 class PurchaseSmsListWidget extends StatelessWidget {
   final ScrollController scrollController;

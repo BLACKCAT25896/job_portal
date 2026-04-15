@@ -1,10 +1,10 @@
 
-import 'package:ecommerce/feature/inventory/category/controller/category_controller.dart';
-import 'package:ecommerce/feature/inventory/category/domain/models/category_model.dart';
-import 'package:ecommerce/feature/inventory/category/presentation/widgets/category_list_widget.dart';
+import 'package:mighty_job/feature/inventory/category/controller/category_controller.dart';
+import 'package:mighty_job/feature/inventory/category/domain/models/category_model.dart';
+import 'package:mighty_job/feature/inventory/category/presentation/widgets/category_list_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/widget/dropdown_with_search_widget.dart';
+import 'package:mighty_job/common/widget/dropdown_with_search_widget.dart';
 
 class SelectCategoryWidget extends StatefulWidget {
   final String? title;

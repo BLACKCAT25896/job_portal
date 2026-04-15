@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/controller/date_picker_controller.dart';
-import 'package:ecommerce/common/widget/custom_text_field.dart';
-import 'package:ecommerce/helper/date_converter.dart';
-import 'package:ecommerce/util/dimensions.dart';
-import 'package:ecommerce/util/styles.dart';
+import 'package:mighty_job/common/controller/date_picker_controller.dart';
+import 'package:mighty_job/common/widget/custom_text_field.dart';
+import 'package:mighty_job/helper/date_converter.dart';
+import 'package:mighty_job/util/dimensions.dart';
+import 'package:mighty_job/util/styles.dart';
 
 class FromDateToDateWidget extends StatelessWidget {
   const FromDateToDateWidget({super.key});

@@ -1,10 +1,10 @@
 
-import 'package:ecommerce/common/global_widget/custom_web_scroll_view_widget.dart';
-import 'package:ecommerce/common/widget/custom_app_bar.dart';
-import 'package:ecommerce/common/widget/custom_bottom_navigation_button.dart';
-import 'package:ecommerce/feature/career_level/controller/career_level_controller.dart';
-import 'package:ecommerce/feature/career_level/presentation/screens/create_new_career_level_screen.dart';
-import 'package:ecommerce/feature/career_level/presentation/widgets/career_level_list_widget.dart';
+import 'package:mighty_job/common/global_widget/custom_web_scroll_view_widget.dart';
+import 'package:mighty_job/common/widget/custom_app_bar.dart';
+import 'package:mighty_job/common/widget/custom_bottom_navigation_button.dart';
+import 'package:mighty_job/feature/career_level/controller/career_level_controller.dart';
+import 'package:mighty_job/feature/career_level/presentation/screens/create_new_career_level_screen.dart';
+import 'package:mighty_job/feature/career_level/presentation/widgets/career_level_list_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

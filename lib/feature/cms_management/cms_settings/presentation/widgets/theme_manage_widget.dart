@@ -2,12 +2,12 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/widget/custom_contaner.dart';
-import 'package:ecommerce/common/widget/custom_title.dart';
-import 'package:ecommerce/common/widget/responsive_grid_widget.dart';
-import 'package:ecommerce/feature/cms_management/cms_settings/controller/system_settngs_controller.dart';
-import 'package:ecommerce/feature/cms_management/cms_settings/presentation/widgets/style_widget.dart';
-import 'package:ecommerce/util/dimensions.dart';
+import 'package:mighty_job/common/widget/custom_contaner.dart';
+import 'package:mighty_job/common/widget/custom_title.dart';
+import 'package:mighty_job/common/widget/responsive_grid_widget.dart';
+import 'package:mighty_job/feature/cms_management/cms_settings/controller/system_settngs_controller.dart';
+import 'package:mighty_job/feature/cms_management/cms_settings/presentation/widgets/style_widget.dart';
+import 'package:mighty_job/util/dimensions.dart';
 
 class ThemeManageWidget extends StatelessWidget {
   const ThemeManageWidget({super.key});

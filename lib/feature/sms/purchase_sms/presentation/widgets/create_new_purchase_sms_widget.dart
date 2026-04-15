@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/controller/date_picker_controller.dart';
-import 'package:ecommerce/common/widget/custom_button.dart';
-import 'package:ecommerce/common/widget/custom_dropdown.dart';
-import 'package:ecommerce/common/widget/custom_snackbar.dart';
-import 'package:ecommerce/common/widget/custom_text_field.dart';
-import 'package:ecommerce/common/widget/custom_title.dart';
-import 'package:ecommerce/common/widget/date_selection_widget.dart';
-import 'package:ecommerce/feature/sms/purchase_sms/controller/purchase_sms_controller.dart';
-import 'package:ecommerce/feature/sms/purchase_sms/domain/models/purchase_sms_body.dart';
-import 'package:ecommerce/feature/sms/purchase_sms/domain/models/purchase_sms_model.dart';
-import 'package:ecommerce/helper/responsive_helper.dart';
-import 'package:ecommerce/util/dimensions.dart';
+import 'package:mighty_job/common/controller/date_picker_controller.dart';
+import 'package:mighty_job/common/widget/custom_button.dart';
+import 'package:mighty_job/common/widget/custom_dropdown.dart';
+import 'package:mighty_job/common/widget/custom_snackbar.dart';
+import 'package:mighty_job/common/widget/custom_text_field.dart';
+import 'package:mighty_job/common/widget/custom_title.dart';
+import 'package:mighty_job/common/widget/date_selection_widget.dart';
+import 'package:mighty_job/feature/sms/purchase_sms/controller/purchase_sms_controller.dart';
+import 'package:mighty_job/feature/sms/purchase_sms/domain/models/purchase_sms_body.dart';
+import 'package:mighty_job/feature/sms/purchase_sms/domain/models/purchase_sms_model.dart';
+import 'package:mighty_job/helper/responsive_helper.dart';
+import 'package:mighty_job/util/dimensions.dart';
 
 class CreateNewPurchaseSmsWidget extends StatefulWidget {
   final PurchaseSmsItem? purchaseSmsItem;

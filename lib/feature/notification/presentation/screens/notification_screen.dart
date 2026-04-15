@@ -1,10 +1,10 @@
 
-import 'package:ecommerce/common/global_widget/custom_web_scroll_view_widget.dart';
-import 'package:ecommerce/feature/notification/presentation/widgets/notification_list_widget.dart';
+import 'package:mighty_job/common/global_widget/custom_web_scroll_view_widget.dart';
+import 'package:mighty_job/feature/notification/presentation/widgets/notification_list_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:ecommerce/common/widget/custom_app_bar.dart';
+import 'package:mighty_job/common/widget/custom_app_bar.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/feature/notification/logic/notification_controller.dart';
+import 'package:mighty_job/feature/notification/logic/notification_controller.dart';
 
 class NotificationScreen extends StatefulWidget {
   const NotificationScreen({super.key});

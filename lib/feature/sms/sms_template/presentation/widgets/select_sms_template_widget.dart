@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/widget/custom_generic_dropdown.dart';
-import 'package:ecommerce/common/widget/custom_title.dart';
-import 'package:ecommerce/feature/sms/sms_template/controller/sms_template_controller.dart';
-import 'package:ecommerce/feature/sms/sms_template/domain/models/sms_template_model.dart';
-import 'package:ecommerce/util/dimensions.dart';
+import 'package:mighty_job/common/widget/custom_generic_dropdown.dart';
+import 'package:mighty_job/common/widget/custom_title.dart';
+import 'package:mighty_job/feature/sms/sms_template/controller/sms_template_controller.dart';
+import 'package:mighty_job/feature/sms/sms_template/domain/models/sms_template_model.dart';
+import 'package:mighty_job/util/dimensions.dart';
 
 class SelectSmsTemplateWidget extends StatefulWidget {
   const SelectSmsTemplateWidget({super.key});

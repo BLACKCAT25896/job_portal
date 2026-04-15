@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/global_widget/custom_web_scroll_view_widget.dart';
-import 'package:ecommerce/common/widget/custom_app_bar.dart';
-import 'package:ecommerce/feature/cms_management/faq/domain/model/faq_model.dart';
-import 'package:ecommerce/feature/cms_management/faq/presentation/widgets/create_new_faq_widget.dart';
-import 'package:ecommerce/util/dimensions.dart';
+import 'package:mighty_job/common/global_widget/custom_web_scroll_view_widget.dart';
+import 'package:mighty_job/common/widget/custom_app_bar.dart';
+import 'package:mighty_job/feature/cms_management/faq/domain/model/faq_model.dart';
+import 'package:mighty_job/feature/cms_management/faq/presentation/widgets/create_new_faq_widget.dart';
+import 'package:mighty_job/util/dimensions.dart';
 
 class CreateNewFAqScreen extends StatefulWidget {
   final FaqItem? faqItem;

@@ -1,13 +1,13 @@
-import 'package:ecommerce/helper/app_color_helper.dart';
+import 'package:mighty_job/helper/app_color_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/widget/custom_button.dart';
-import 'package:ecommerce/common/widget/custom_contaner.dart';
-import 'package:ecommerce/common/widget/custom_text_field.dart';
-import 'package:ecommerce/common/widget/custom_title.dart';
-import 'package:ecommerce/feature/cms_management/cms_settings/controller/system_settngs_controller.dart';
-import 'package:ecommerce/feature/cms_management/cms_settings/domain/model/general_settings_model.dart';
-import 'package:ecommerce/util/dimensions.dart';
+import 'package:mighty_job/common/widget/custom_button.dart';
+import 'package:mighty_job/common/widget/custom_contaner.dart';
+import 'package:mighty_job/common/widget/custom_text_field.dart';
+import 'package:mighty_job/common/widget/custom_title.dart';
+import 'package:mighty_job/feature/cms_management/cms_settings/controller/system_settngs_controller.dart';
+import 'package:mighty_job/feature/cms_management/cms_settings/domain/model/general_settings_model.dart';
+import 'package:mighty_job/util/dimensions.dart';
 
 class GeneralSettingsWidget extends StatefulWidget {
   const GeneralSettingsWidget({super.key});
@@ -22,7 +22,7 @@ class _GeneralSettingsWidgetState extends State<GeneralSettingsWidget> {
   TextEditingController emailController = TextEditingController();
   TextEditingController currencySymbolController = TextEditingController();
   TextEditingController addressController = TextEditingController();
-  TextEditingController ecommerceController = TextEditingController();
+  TextEditingController mighty_jobController = TextEditingController();
   TextEditingController liveNoticeController = TextEditingController();
   TextEditingController appUrlController = TextEditingController();
   TextEditingController appVersionController = TextEditingController();

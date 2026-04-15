@@ -1,4 +1,4 @@
-import 'package:ecommerce/util/dimensions.dart';
+import 'package:mighty_job/util/dimensions.dart';
 import 'package:flutter/material.dart';
 
 class CustomDialogWidget extends StatelessWidget {

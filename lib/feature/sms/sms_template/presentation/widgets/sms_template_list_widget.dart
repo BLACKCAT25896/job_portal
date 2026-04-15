@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/layout/list_layout_widget.dart';
-import 'package:ecommerce/feature/sms/sms_template/controller/sms_template_controller.dart';
-import 'package:ecommerce/feature/sms/sms_template/domain/models/sms_template_model.dart';
-import 'package:ecommerce/feature/sms/sms_template/presentation/widgets/sms_template_item_widget.dart';
-import 'package:ecommerce/feature/sms/sms_template/presentation/screens/create_new_sms_template_screen.dart';
+import 'package:mighty_job/common/layout/list_layout_widget.dart';
+import 'package:mighty_job/feature/sms/sms_template/controller/sms_template_controller.dart';
+import 'package:mighty_job/feature/sms/sms_template/domain/models/sms_template_model.dart';
+import 'package:mighty_job/feature/sms/sms_template/presentation/widgets/sms_template_item_widget.dart';
+import 'package:mighty_job/feature/sms/sms_template/presentation/screens/create_new_sms_template_screen.dart';
 
 class SmsTemplateListWidget extends StatelessWidget {
   final ScrollController scrollController;

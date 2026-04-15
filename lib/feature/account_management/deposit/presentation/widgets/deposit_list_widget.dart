@@ -1,11 +1,11 @@
-import 'package:ecommerce/common/layout/custom_dialog_widget.dart';
+import 'package:mighty_job/common/layout/custom_dialog_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/layout/list_layout_widget.dart';
-import 'package:ecommerce/feature/account_management/deposit/domain/model/deposit_model.dart';
-import 'package:ecommerce/feature/account_management/deposit/logic/deposit_controller.dart';
-import 'package:ecommerce/feature/account_management/deposit/presentation/widgets/create_new_deposit_widget.dart';
-import 'package:ecommerce/feature/account_management/deposit/presentation/widgets/deposit_card_widget.dart';
+import 'package:mighty_job/common/layout/list_layout_widget.dart';
+import 'package:mighty_job/feature/account_management/deposit/domain/model/deposit_model.dart';
+import 'package:mighty_job/feature/account_management/deposit/logic/deposit_controller.dart';
+import 'package:mighty_job/feature/account_management/deposit/presentation/widgets/create_new_deposit_widget.dart';
+import 'package:mighty_job/feature/account_management/deposit/presentation/widgets/deposit_card_widget.dart';
 
 class DepositListWidget extends StatelessWidget {
   final ScrollController scrollController;

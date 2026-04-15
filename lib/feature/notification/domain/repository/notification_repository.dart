@@ -1,5 +1,5 @@
 import 'package:get/get_connect/http/src/response/response.dart';
-import 'package:ecommerce/api_handle/api_client.dart';
+import 'package:mighty_job/api_handle/api_client.dart';
 
 class NotificationRepository{
   final ApiClient apiClient;

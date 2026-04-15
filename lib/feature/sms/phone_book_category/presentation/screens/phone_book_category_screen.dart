@@ -1,11 +1,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/global_widget/custom_web_scroll_view_widget.dart';
-import 'package:ecommerce/common/widget/custom_app_bar.dart';
-import 'package:ecommerce/common/widget/custom_floating_button.dart';
-import 'package:ecommerce/feature/sms/phone_book_category/presentation/screens/create_new_phone_book_category_screen.dart';
-import 'package:ecommerce/feature/sms/phone_book_category/presentation/widgets/phone_book_category_list_widget.dart';
+import 'package:mighty_job/common/global_widget/custom_web_scroll_view_widget.dart';
+import 'package:mighty_job/common/widget/custom_app_bar.dart';
+import 'package:mighty_job/common/widget/custom_floating_button.dart';
+import 'package:mighty_job/feature/sms/phone_book_category/presentation/screens/create_new_phone_book_category_screen.dart';
+import 'package:mighty_job/feature/sms/phone_book_category/presentation/widgets/phone_book_category_list_widget.dart';
 
 class PhoneBookCategoryScreen extends StatefulWidget {
   const PhoneBookCategoryScreen({super.key});

@@ -1,11 +1,11 @@
-import 'package:ecommerce/common/layout/custom_dialog_widget.dart';
+import 'package:mighty_job/common/layout/custom_dialog_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/layout/list_layout_widget.dart';
-import 'package:ecommerce/feature/human_resource/award/controller/award_controller.dart';
-import 'package:ecommerce/feature/human_resource/award/domain/models/award_model.dart';
-import 'package:ecommerce/feature/human_resource/award/presentation/screens/create_new_award_screen.dart';
-import 'package:ecommerce/feature/human_resource/award/presentation/widgets/award_item_widget.dart';
+import 'package:mighty_job/common/layout/list_layout_widget.dart';
+import 'package:mighty_job/feature/human_resource/award/controller/award_controller.dart';
+import 'package:mighty_job/feature/human_resource/award/domain/models/award_model.dart';
+import 'package:mighty_job/feature/human_resource/award/presentation/screens/create_new_award_screen.dart';
+import 'package:mighty_job/feature/human_resource/award/presentation/widgets/award_item_widget.dart';
 
 class AwardListWidget extends StatelessWidget {
   final ScrollController scrollController;

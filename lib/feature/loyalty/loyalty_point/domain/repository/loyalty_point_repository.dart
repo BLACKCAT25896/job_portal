@@ -1,9 +1,9 @@
 import 'package:flutter_image_compress/flutter_image_compress.dart';
 import 'package:get/get_connect/http/src/response/response.dart';
-import 'package:ecommerce/api_handle/api_client.dart';
-import 'package:ecommerce/feature/loyalty/loyalty_point/domain/model/loyalty_point_body.dart';
+import 'package:mighty_job/api_handle/api_client.dart';
+import 'package:mighty_job/feature/loyalty/loyalty_point/domain/model/loyalty_point_body.dart';
 
-import 'package:ecommerce/util/app_constants.dart';
+import 'package:mighty_job/util/app_constants.dart';
 
 class LoyaltyPointRepository {
   final ApiClient apiClient;

@@ -9,8 +9,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
 import 'package:path/path.dart';
-import 'package:ecommerce/api_handle/error_response.dart';
-import 'package:ecommerce/util/app_constants.dart';
+import 'package:mighty_job/api_handle/error_response.dart';
+import 'package:mighty_job/util/app_constants.dart';
 import 'dart:io' as io;
 
 
@@ -33,7 +33,7 @@ class ApiClient extends GetxService {
   }
 
   void updateHeader(String token, {String? deviceInfo, String? location}) {
-    final currentDomain = AppConstants.ecommerceDomain;
+    final currentDomain = AppConstants.mighty_jobDomain;
     Map<String, String> header = {
       'Content-Type': 'application/json; charset=UTF-8',
       'Accept' : 'application/json',

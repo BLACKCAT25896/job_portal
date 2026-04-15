@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
-import 'package:ecommerce/feature/profile/logic/profile_controller.dart';
-import 'package:ecommerce/helper/route_helper.dart';
+import 'package:mighty_job/feature/profile/logic/profile_controller.dart';
+import 'package:mighty_job/helper/route_helper.dart';
 
 class UserGuideItem {
   final String routeName;

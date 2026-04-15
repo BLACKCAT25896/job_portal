@@ -1,20 +1,20 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/widget/custom_button.dart';
-import 'package:ecommerce/common/widget/custom_snackbar.dart';
-import 'package:ecommerce/common/widget/custom_text_field.dart';
-import 'package:ecommerce/feature/account_management/accounting/logic/account_controller.dart';
-import 'package:ecommerce/feature/account_management/accounting/presentation/widgets/account_selection_widget.dart';
-import 'package:ecommerce/feature/account_management/deposit/domain/model/deposit_body.dart';
-import 'package:ecommerce/feature/account_management/deposit/domain/model/deposit_model.dart';
-import 'package:ecommerce/feature/account_management/deposit/logic/deposit_controller.dart';
-import 'package:ecommerce/feature/account_management/deposit_category/logic/deposit_category_controller.dart';
-import 'package:ecommerce/feature/account_management/deposit_category/presentation/widgets/deposit_category_selection_widget.dart';
-import 'package:ecommerce/feature/account_management/fund/logic/fund_controller.dart';
-import 'package:ecommerce/feature/account_management/fund/presentation/widgets/select_fund_widget.dart';
-import 'package:ecommerce/util/app_constants.dart';
-import 'package:ecommerce/util/dimensions.dart';
+import 'package:mighty_job/common/widget/custom_button.dart';
+import 'package:mighty_job/common/widget/custom_snackbar.dart';
+import 'package:mighty_job/common/widget/custom_text_field.dart';
+import 'package:mighty_job/feature/account_management/accounting/logic/account_controller.dart';
+import 'package:mighty_job/feature/account_management/accounting/presentation/widgets/account_selection_widget.dart';
+import 'package:mighty_job/feature/account_management/deposit/domain/model/deposit_body.dart';
+import 'package:mighty_job/feature/account_management/deposit/domain/model/deposit_model.dart';
+import 'package:mighty_job/feature/account_management/deposit/logic/deposit_controller.dart';
+import 'package:mighty_job/feature/account_management/deposit_category/logic/deposit_category_controller.dart';
+import 'package:mighty_job/feature/account_management/deposit_category/presentation/widgets/deposit_category_selection_widget.dart';
+import 'package:mighty_job/feature/account_management/fund/logic/fund_controller.dart';
+import 'package:mighty_job/feature/account_management/fund/presentation/widgets/select_fund_widget.dart';
+import 'package:mighty_job/util/app_constants.dart';
+import 'package:mighty_job/util/dimensions.dart';
 
 class CreateNewDepositWidget extends StatefulWidget {
   final DepositItem? depositItem;

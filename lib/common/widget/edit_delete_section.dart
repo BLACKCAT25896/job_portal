@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/controller/theme_controller.dart';
-import 'package:ecommerce/common/widget/custom_contaner.dart';
-import 'package:ecommerce/util/dimensions.dart';
-import 'package:ecommerce/util/images.dart';
+import 'package:mighty_job/common/controller/theme_controller.dart';
+import 'package:mighty_job/common/widget/custom_contaner.dart';
+import 'package:mighty_job/util/dimensions.dart';
+import 'package:mighty_job/util/images.dart';
 
 class EditDeleteSection extends StatelessWidget {
   final Function()? onEdit;

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/feature/profile/logic/profile_controller.dart';
-import 'package:ecommerce/feature/subsscription/presentation/screens/subscription_screen.dart';
-import 'package:ecommerce/util/app_constants.dart';
-import 'package:ecommerce/util/dimensions.dart';
-import 'package:ecommerce/util/styles.dart';
+import 'package:mighty_job/feature/profile/logic/profile_controller.dart';
+import 'package:mighty_job/feature/subsscription/presentation/screens/subscription_screen.dart';
+import 'package:mighty_job/util/app_constants.dart';
+import 'package:mighty_job/util/dimensions.dart';
+import 'package:mighty_job/util/styles.dart';
 
 class AnnouncementScreen extends StatelessWidget {
 

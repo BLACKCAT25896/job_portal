@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/global_widget/custom_web_scroll_view_widget.dart';
-import 'package:ecommerce/common/widget/custom_app_bar.dart';
-import 'package:ecommerce/common/widget/sub_menu_item_widget.dart';
-import 'package:ecommerce/feature/account_management/presentation/account_managment_screen.dart';
-import 'package:ecommerce/feature/sms/phone_book/presentation/screens/phone_book_screen.dart';
-import 'package:ecommerce/feature/sms/phone_book_category/presentation/screens/phone_book_category_screen.dart';
-import 'package:ecommerce/feature/sms/purchase_sms/presentation/screens/purchase_sms_screen.dart';
-import 'package:ecommerce/feature/sms/sms_template/presentation/screens/sms_template_screen.dart';
-import 'package:ecommerce/util/dimensions.dart';
-import 'package:ecommerce/util/images.dart';
+import 'package:mighty_job/common/global_widget/custom_web_scroll_view_widget.dart';
+import 'package:mighty_job/common/widget/custom_app_bar.dart';
+import 'package:mighty_job/common/widget/sub_menu_item_widget.dart';
+import 'package:mighty_job/feature/account_management/presentation/account_managment_screen.dart';
+import 'package:mighty_job/feature/sms/phone_book/presentation/screens/phone_book_screen.dart';
+import 'package:mighty_job/feature/sms/phone_book_category/presentation/screens/phone_book_category_screen.dart';
+import 'package:mighty_job/feature/sms/purchase_sms/presentation/screens/purchase_sms_screen.dart';
+import 'package:mighty_job/feature/sms/sms_template/presentation/screens/sms_template_screen.dart';
+import 'package:mighty_job/util/dimensions.dart';
+import 'package:mighty_job/util/images.dart';
 
 
 class SmsManagementScreen extends StatefulWidget {

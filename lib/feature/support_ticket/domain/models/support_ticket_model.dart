@@ -1,10 +1,10 @@
 
 
-import 'package:ecommerce/helper/price_converter.dart';
+import 'package:mighty_job/helper/price_converter.dart';
 
 class SupportTicketItem {
   int? id;
-  String? ecommerceId;
+  String? mighty_jobId;
   String? readableTicketId;
   String? userId;
   String? categoryId;
@@ -19,13 +19,13 @@ class SupportTicketItem {
   String? createdAt;
   User? user;
   Category? category;
-  Category? ecommerce;
+  Category? mighty_job;
   String? lastTicketConversation;
   List<Conversations>? conversations;
 
   SupportTicketItem(
       {this.id,
-        this.ecommerceId,
+        this.mighty_jobId,
         this.readableTicketId,
         this.userId,
         this.categoryId,
@@ -40,13 +40,13 @@ class SupportTicketItem {
         this.createdAt,
         this.user,
         this.category,
-        this.ecommerce,
+        this.mighty_job,
         this.lastTicketConversation,
         this.conversations});
 
   SupportTicketItem.fromJson(Map<String, dynamic> json) {
     id = PriceConverter.parseInt(json['id']);
-    ecommerceId = json['ecommerce_id'].toString();
+    mighty_jobId = json['mighty_job_id'].toString();
     readableTicketId = json['readable_ticket_id'].toString();
     userId = json['user_id'].toString();
     categoryId = json['category_id'].toString();
@@ -67,8 +67,8 @@ class SupportTicketItem {
     category = json['category'] != null
         ? Category.fromJson(json['category'])
         : null;
-    ecommerce = json['ecommerce'] != null
-        ? Category.fromJson(json['ecommerce'])
+    mighty_job = json['mighty_job'] != null
+        ? Category.fromJson(json['mighty_job'])
         : null;
     lastTicketConversation = json['last_ticket_conversation'];
     if (json['conversations'] != null) {
@@ -82,7 +82,7 @@ class SupportTicketItem {
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = <String, dynamic>{};
     data['id'] = id;
-    data['ecommerce_id'] = ecommerceId;
+    data['mighty_job_id'] = mighty_jobId;
     data['readable_ticket_id'] = readableTicketId;
     data['user_id'] = userId;
     data['category_id'] = categoryId;
@@ -101,8 +101,8 @@ class SupportTicketItem {
     if (category != null) {
       data['category'] = category!.toJson();
     }
-    if (ecommerce != null) {
-      data['ecommerce'] = ecommerce!.toJson();
+    if (mighty_job != null) {
+      data['mighty_job'] = mighty_job!.toJson();
     }
     data['last_ticket_conversation'] = lastTicketConversation;
     if (conversations != null) {

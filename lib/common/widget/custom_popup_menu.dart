@@ -1,6 +1,6 @@
-import 'package:ecommerce/common/model/popup_menu_model.dart';
-import 'package:ecommerce/util/dimensions.dart';
-import 'package:ecommerce/util/styles.dart';
+import 'package:mighty_job/common/model/popup_menu_model.dart';
+import 'package:mighty_job/util/dimensions.dart';
+import 'package:mighty_job/util/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

@@ -1,11 +1,11 @@
-import 'package:ecommerce/common/layout/custom_dialog_widget.dart';
+import 'package:mighty_job/common/layout/custom_dialog_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/layout/list_layout_widget.dart';
-import 'package:ecommerce/feature/role_and_permission/role/controller/role_controller.dart';
-import 'package:ecommerce/feature/role_and_permission/role/domain/models/role_model.dart';
-import 'package:ecommerce/feature/role_and_permission/role/presentation/widgets/create_new_role_widget.dart';
-import 'package:ecommerce/feature/role_and_permission/role/presentation/widgets/role_item.dart';
+import 'package:mighty_job/common/layout/list_layout_widget.dart';
+import 'package:mighty_job/feature/role_and_permission/role/controller/role_controller.dart';
+import 'package:mighty_job/feature/role_and_permission/role/domain/models/role_model.dart';
+import 'package:mighty_job/feature/role_and_permission/role/presentation/widgets/create_new_role_widget.dart';
+import 'package:mighty_job/feature/role_and_permission/role/presentation/widgets/role_item.dart';
 
 class RoleListWidget extends StatelessWidget {
   final ScrollController scrollController;

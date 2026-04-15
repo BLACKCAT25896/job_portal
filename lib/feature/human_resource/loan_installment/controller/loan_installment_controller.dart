@@ -1,10 +1,10 @@
-import 'package:ecommerce/feature/human_resource/loan_installment/domain/models/loan_installment_body.dart';
+import 'package:mighty_job/feature/human_resource/loan_installment/domain/models/loan_installment_body.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/api_handle/api_checker.dart';
-import 'package:ecommerce/api_handle/global_api_response_model.dart';
-import 'package:ecommerce/common/widget/custom_snackbar.dart';
-import 'package:ecommerce/feature/human_resource/loan_installment/domain/models/loan_installment_model.dart';
-import 'package:ecommerce/feature/human_resource/loan_installment/domain/repository/loan_installment_repository.dart';
+import 'package:mighty_job/api_handle/api_checker.dart';
+import 'package:mighty_job/api_handle/global_api_response_model.dart';
+import 'package:mighty_job/common/widget/custom_snackbar.dart';
+import 'package:mighty_job/feature/human_resource/loan_installment/domain/models/loan_installment_model.dart';
+import 'package:mighty_job/feature/human_resource/loan_installment/domain/repository/loan_installment_repository.dart';
 
 class LoanInstallmentController extends GetxController implements GetxService{
   final LoanInstallmentRepository loanInstallmentRepository;

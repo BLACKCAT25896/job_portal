@@ -1,13 +1,13 @@
-import 'package:ecommerce/common/widget/custom_divider.dart';
-import 'package:ecommerce/helper/app_color_helper.dart';
-import 'package:ecommerce/helper/responsive_helper.dart';
+import 'package:mighty_job/common/widget/custom_divider.dart';
+import 'package:mighty_job/helper/app_color_helper.dart';
+import 'package:mighty_job/helper/responsive_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/widget/custom_contaner.dart';
-import 'package:ecommerce/feature/notification/domain/model/notification_model.dart';
-import 'package:ecommerce/feature/notification/logic/notification_controller.dart';
-import 'package:ecommerce/util/dimensions.dart';
-import 'package:ecommerce/util/styles.dart';
+import 'package:mighty_job/common/widget/custom_contaner.dart';
+import 'package:mighty_job/feature/notification/domain/model/notification_model.dart';
+import 'package:mighty_job/feature/notification/logic/notification_controller.dart';
+import 'package:mighty_job/util/dimensions.dart';
+import 'package:mighty_job/util/styles.dart';
 
 class NotificationItemWidget extends StatelessWidget {
   final NotificationItem? notificationItem;

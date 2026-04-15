@@ -3,14 +3,14 @@ import 'dart:developer';
 
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:ecommerce/api_handle/api_checker.dart';
-import 'package:ecommerce/api_handle/global_api_response_model.dart';
-import 'package:ecommerce/common/widget/custom_snackbar.dart';
-import 'package:ecommerce/feature/account_management/accounting/logic/account_controller.dart';
-import 'package:ecommerce/feature/account_management/expense/domain/model/expense_body.dart';
-import 'package:ecommerce/feature/account_management/expense/domain/model/expense_model.dart';
-import 'package:ecommerce/feature/account_management/expense/domain/repository/expense_repository.dart';
-import 'package:ecommerce/helper/image_size_checker.dart';
+import 'package:mighty_job/api_handle/api_checker.dart';
+import 'package:mighty_job/api_handle/global_api_response_model.dart';
+import 'package:mighty_job/common/widget/custom_snackbar.dart';
+import 'package:mighty_job/feature/account_management/accounting/logic/account_controller.dart';
+import 'package:mighty_job/feature/account_management/expense/domain/model/expense_body.dart';
+import 'package:mighty_job/feature/account_management/expense/domain/model/expense_model.dart';
+import 'package:mighty_job/feature/account_management/expense/domain/repository/expense_repository.dart';
+import 'package:mighty_job/helper/image_size_checker.dart';
 
 class ExpenseController extends GetxController implements GetxService{
   final ExpenseRepository expenseRepository;

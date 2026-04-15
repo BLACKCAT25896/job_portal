@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/widget/custom_title.dart';
-import 'package:ecommerce/feature/account_management/accounting/logic/account_controller.dart';
-import 'package:ecommerce/feature/account_management/accounting/presentation/widgets/account_drop_down.dart';
-import 'package:ecommerce/util/dimensions.dart';
+import 'package:mighty_job/common/widget/custom_title.dart';
+import 'package:mighty_job/feature/account_management/accounting/logic/account_controller.dart';
+import 'package:mighty_job/feature/account_management/accounting/presentation/widgets/account_drop_down.dart';
+import 'package:mighty_job/util/dimensions.dart';
 
 class AccountSelectionWidget extends StatefulWidget {
   final String? title;

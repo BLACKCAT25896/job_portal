@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/widget/custom_popup_menu.dart';
-import 'package:ecommerce/feature/dashboard/controller/dashboard_controller.dart';
+import 'package:mighty_job/common/widget/custom_popup_menu.dart';
+import 'package:mighty_job/feature/dashboard/controller/dashboard_controller.dart';
 
 class EditDeletePopupMenu extends StatelessWidget {
   final Function()? onEdit;

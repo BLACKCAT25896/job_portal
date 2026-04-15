@@ -1,14 +1,14 @@
-import 'package:ecommerce/common/layout/custom_dialog_widget.dart';
-import 'package:ecommerce/common/widget/custom_item_text_widget.dart';
-import 'package:ecommerce/common/widget/edit_delete_popup_widget.dart';
-import 'package:ecommerce/feature/human_resource/candidate/presentation/widgets/add_new_candidate_widget.dart';
+import 'package:mighty_job/common/layout/custom_dialog_widget.dart';
+import 'package:mighty_job/common/widget/custom_item_text_widget.dart';
+import 'package:mighty_job/common/widget/edit_delete_popup_widget.dart';
+import 'package:mighty_job/feature/human_resource/candidate/presentation/widgets/add_new_candidate_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/widget/confirmation_dialog.dart';
-import 'package:ecommerce/common/widget/numbering_widget.dart';
-import 'package:ecommerce/feature/human_resource/candidate/controller/candidate_controller.dart';
-import 'package:ecommerce/feature/human_resource/candidate/domain/models/candidate_model.dart';
-import 'package:ecommerce/util/dimensions.dart';
+import 'package:mighty_job/common/widget/confirmation_dialog.dart';
+import 'package:mighty_job/common/widget/numbering_widget.dart';
+import 'package:mighty_job/feature/human_resource/candidate/controller/candidate_controller.dart';
+import 'package:mighty_job/feature/human_resource/candidate/domain/models/candidate_model.dart';
+import 'package:mighty_job/util/dimensions.dart';
 
 class CandidateItemWidget extends StatelessWidget {
   final CandidateItem? candidateItem;

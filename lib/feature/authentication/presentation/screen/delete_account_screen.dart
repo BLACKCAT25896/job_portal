@@ -1,15 +1,15 @@
-import 'package:ecommerce/helper/app_color_helper.dart';
+import 'package:mighty_job/helper/app_color_helper.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/widget/custom_button.dart';
-import 'package:ecommerce/common/widget/custom_contaner.dart';
-import 'package:ecommerce/common/widget/custom_snackbar.dart';
-import 'package:ecommerce/common/widget/custom_text_field.dart';
+import 'package:mighty_job/common/widget/custom_button.dart';
+import 'package:mighty_job/common/widget/custom_contaner.dart';
+import 'package:mighty_job/common/widget/custom_snackbar.dart';
+import 'package:mighty_job/common/widget/custom_text_field.dart';
 import 'package:flutter/material.dart';
-import 'package:ecommerce/helper/email_checker.dart';
-import 'package:ecommerce/helper/route_helper.dart';
-import 'package:ecommerce/util/dimensions.dart';
-import 'package:ecommerce/util/images.dart';
-import 'package:ecommerce/util/styles.dart';
+import 'package:mighty_job/helper/email_checker.dart';
+import 'package:mighty_job/helper/route_helper.dart';
+import 'package:mighty_job/util/dimensions.dart';
+import 'package:mighty_job/util/images.dart';
+import 'package:mighty_job/util/styles.dart';
 import 'package:lottie/lottie.dart';
 
 class DeleteAccountScreen extends StatefulWidget {

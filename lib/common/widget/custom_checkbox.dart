@@ -1,7 +1,7 @@
-import 'package:ecommerce/helper/app_color_helper.dart';
+import 'package:mighty_job/helper/app_color_helper.dart';
 import 'package:flutter/material.dart';
-import 'package:ecommerce/util/dimensions.dart';
-import 'package:ecommerce/util/styles.dart';
+import 'package:mighty_job/util/dimensions.dart';
+import 'package:mighty_job/util/styles.dart';
 
 class CustomCheckbox extends StatelessWidget {
   final bool value;

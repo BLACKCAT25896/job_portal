@@ -1,4 +1,4 @@
-package com.ecommerce.fuedevs
+package com.mighty_job.fuedevs
 
 import android.os.Build
 import android.os.Bundle

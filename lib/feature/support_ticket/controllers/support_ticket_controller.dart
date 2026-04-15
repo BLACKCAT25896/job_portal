@@ -1,13 +1,13 @@
 
 import 'package:get/get.dart';
-import 'package:ecommerce/api_handle/api_checker.dart';
-import 'package:ecommerce/api_handle/global_api_response_model.dart';
-import 'package:ecommerce/common/widget/custom_snackbar.dart';
-import 'package:ecommerce/feature/support_ticket/domain/models/support_reply_model.dart';
-import 'package:ecommerce/feature/support_ticket/domain/models/support_ticket_body.dart';
-import 'package:ecommerce/feature/support_ticket/domain/models/support_ticket_model.dart';
-import 'package:ecommerce/feature/support_ticket/domain/models/ticket_category_model.dart';
-import 'package:ecommerce/feature/support_ticket/domain/repositories/support_ticket_repository.dart';
+import 'package:mighty_job/api_handle/api_checker.dart';
+import 'package:mighty_job/api_handle/global_api_response_model.dart';
+import 'package:mighty_job/common/widget/custom_snackbar.dart';
+import 'package:mighty_job/feature/support_ticket/domain/models/support_reply_model.dart';
+import 'package:mighty_job/feature/support_ticket/domain/models/support_ticket_body.dart';
+import 'package:mighty_job/feature/support_ticket/domain/models/support_ticket_model.dart';
+import 'package:mighty_job/feature/support_ticket/domain/models/ticket_category_model.dart';
+import 'package:mighty_job/feature/support_ticket/domain/repositories/support_ticket_repository.dart';
 
 class SupportTicketController extends GetxController implements GetxService {
   final SupportTicketRepository supportTicketRepository;

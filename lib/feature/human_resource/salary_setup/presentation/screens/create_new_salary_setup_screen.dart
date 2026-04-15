@@ -1,9 +1,9 @@
-import 'package:ecommerce/common/global_widget/custom_web_scroll_view_widget.dart';
-import 'package:ecommerce/common/widget/custom_app_bar.dart';
-import 'package:ecommerce/feature/human_resource/salary_setup/presentation/widgets/add_new_salary_setup_widget.dart';
+import 'package:mighty_job/common/global_widget/custom_web_scroll_view_widget.dart';
+import 'package:mighty_job/common/widget/custom_app_bar.dart';
+import 'package:mighty_job/feature/human_resource/salary_setup/presentation/widgets/add_new_salary_setup_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/feature/human_resource/salary_setup/domain/models/salary_setup_model.dart';
+import 'package:mighty_job/feature/human_resource/salary_setup/domain/models/salary_setup_model.dart';
 
 class CreateNewSalarySetupScreen extends StatefulWidget {
   final SalarySetupItem? salarySetupItem;

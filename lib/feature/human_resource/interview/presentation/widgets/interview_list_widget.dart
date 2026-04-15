@@ -1,11 +1,11 @@
-import 'package:ecommerce/common/layout/custom_dialog_widget.dart';
-import 'package:ecommerce/feature/human_resource/interview/presentation/widgets/add_new_interview_widget.dart';
+import 'package:mighty_job/common/layout/custom_dialog_widget.dart';
+import 'package:mighty_job/feature/human_resource/interview/presentation/widgets/add_new_interview_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/layout/list_layout_widget.dart';
-import 'package:ecommerce/feature/human_resource/interview/controller/interview_controller.dart';
-import 'package:ecommerce/feature/human_resource/interview/domain/models/interview_model.dart';
-import 'package:ecommerce/feature/human_resource/interview/presentation/widgets/interview_item_widget.dart';
+import 'package:mighty_job/common/layout/list_layout_widget.dart';
+import 'package:mighty_job/feature/human_resource/interview/controller/interview_controller.dart';
+import 'package:mighty_job/feature/human_resource/interview/domain/models/interview_model.dart';
+import 'package:mighty_job/feature/human_resource/interview/presentation/widgets/interview_item_widget.dart';
 
 class InterviewListWidget extends StatelessWidget {
   final ScrollController scrollController;

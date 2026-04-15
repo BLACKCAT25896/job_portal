@@ -1,11 +1,11 @@
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
-import 'package:ecommerce/common/widget/custom_contaner.dart';
-import 'package:ecommerce/feature/cms_management/cms_settings/controller/system_settngs_controller.dart';
-import 'package:ecommerce/feature/cms_management/cms_settings/domain/model/cms_section_model.dart';
-import 'package:ecommerce/feature/cms_management/cms_settings/domain/model/cms_section_reorder_body.dart';
-import 'package:ecommerce/util/dimensions.dart';
-import 'package:ecommerce/util/styles.dart';
+import 'package:mighty_job/common/widget/custom_contaner.dart';
+import 'package:mighty_job/feature/cms_management/cms_settings/controller/system_settngs_controller.dart';
+import 'package:mighty_job/feature/cms_management/cms_settings/domain/model/cms_section_model.dart';
+import 'package:mighty_job/feature/cms_management/cms_settings/domain/model/cms_section_reorder_body.dart';
+import 'package:mighty_job/util/dimensions.dart';
+import 'package:mighty_job/util/styles.dart';
 
 class CmsSectionReorderWidget extends StatefulWidget {
   const CmsSectionReorderWidget({super.key});

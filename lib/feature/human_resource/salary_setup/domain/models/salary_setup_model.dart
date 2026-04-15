@@ -1,6 +1,6 @@
 
 
-import 'package:ecommerce/helper/price_converter.dart';
+import 'package:mighty_job/helper/price_converter.dart';
 class SalarySetupItem {
   int? id;
   int? employeeId;

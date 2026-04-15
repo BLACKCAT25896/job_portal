@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/widget/custom_image.dart';
-import 'package:ecommerce/feature/cms_management/cms_settings/controller/system_settngs_controller.dart';
-import 'package:ecommerce/feature/cms_management/cms_settings/domain/model/image_setting_model.dart';
-import 'package:ecommerce/helper/route_helper.dart';
-import 'package:ecommerce/util/app_constants.dart';
+import 'package:mighty_job/common/widget/custom_image.dart';
+import 'package:mighty_job/feature/cms_management/cms_settings/controller/system_settngs_controller.dart';
+import 'package:mighty_job/feature/cms_management/cms_settings/domain/model/image_setting_model.dart';
+import 'package:mighty_job/helper/route_helper.dart';
+import 'package:mighty_job/util/app_constants.dart';
 
 class HeaderLogoSection extends StatelessWidget {
   const HeaderLogoSection({super.key});
@@ -13,12 +13,12 @@ class HeaderLogoSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetBuilder<SystemSettingsController>(
       initState: (value){
-        if(Get.find<SystemSettingsController>().ecommerceImageSettingModel == null){
-          Get.find<SystemSettingsController>().getEcommerceImageSetting();
+        if(Get.find<SystemSettingsController>().mighty_jobImageSettingModel == null){
+          Get.find<SystemSettingsController>().getmighty_jobImageSetting();
         }
       },
       builder: (systemSettingsController) {
-        ImageSettingModel ? imageSettingModel = systemSettingsController.ecommerceImageSettingModel;
+        ImageSettingModel ? imageSettingModel = systemSettingsController.mighty_jobImageSettingModel;
 
         String? lightLogo =  imageSettingModel?.data?.headerLogoLightTheme;
         String? darkLogo =  imageSettingModel?.data?.headerLogoDarkTheme;
@@ -43,12 +43,12 @@ class FooterLogoSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetBuilder<SystemSettingsController>(
         initState: (value){
-          if(Get.find<SystemSettingsController>().ecommerceImageSettingModel == null){
-            Get.find<SystemSettingsController>().getEcommerceImageSetting();
+          if(Get.find<SystemSettingsController>().mighty_jobImageSettingModel == null){
+            Get.find<SystemSettingsController>().getmighty_jobImageSetting();
           }
         },
         builder: (systemSettingsController) {
-          ImageSettingModel ? imageSettingModel = systemSettingsController.ecommerceImageSettingModel;
+          ImageSettingModel ? imageSettingModel = systemSettingsController.mighty_jobImageSettingModel;
 
           String? lightLogo =  imageSettingModel?.data?.footerLogoLightTheme;
           String? darkLogo =  imageSettingModel?.data?.footerLogoDarkTheme;

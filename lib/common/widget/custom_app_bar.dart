@@ -1,9 +1,9 @@
-import 'package:ecommerce/helper/app_color_helper.dart';
+import 'package:mighty_job/helper/app_color_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/helper/responsive_helper.dart';
-import 'package:ecommerce/util/dimensions.dart';
-import 'package:ecommerce/util/styles.dart';
+import 'package:mighty_job/helper/responsive_helper.dart';
+import 'package:mighty_job/util/dimensions.dart';
+import 'package:mighty_job/util/styles.dart';
 
 class CustomAppBar extends StatelessWidget  implements PreferredSizeWidget {
   final String? title;

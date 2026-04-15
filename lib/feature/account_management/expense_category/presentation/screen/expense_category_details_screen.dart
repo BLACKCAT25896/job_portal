@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/global_widget/custom_web_scroll_view_widget.dart';
-import 'package:ecommerce/common/widget/custom_app_bar.dart';
-import 'package:ecommerce/common/widget/custom_snackbar.dart';
-import 'package:ecommerce/feature/account_management/expense_category/domain/model/expense_category_model.dart';
-import 'package:ecommerce/feature/account_management/expense_category/presentation/widgets/expense_category_details_widget.dart';
-import 'package:ecommerce/feature/account_management/expense_category/presentation/widgets/expense_category_edit_delete_widget.dart';
+import 'package:mighty_job/common/global_widget/custom_web_scroll_view_widget.dart';
+import 'package:mighty_job/common/widget/custom_app_bar.dart';
+import 'package:mighty_job/common/widget/custom_snackbar.dart';
+import 'package:mighty_job/feature/account_management/expense_category/domain/model/expense_category_model.dart';
+import 'package:mighty_job/feature/account_management/expense_category/presentation/widgets/expense_category_details_widget.dart';
+import 'package:mighty_job/feature/account_management/expense_category/presentation/widgets/expense_category_edit_delete_widget.dart';
 
 class ExpenseCategoryDetailsScreen extends StatefulWidget {
   final ExpenseCategoryItem? expenseCategoryItem;

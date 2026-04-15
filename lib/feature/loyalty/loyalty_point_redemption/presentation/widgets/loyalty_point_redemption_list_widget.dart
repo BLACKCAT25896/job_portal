@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/layout/list_layout_widget.dart';
-import 'package:ecommerce/feature/loyalty/loyalty_point_redemption/domain/model/loyalty_point_redemption_model.dart';
-import 'package:ecommerce/feature/loyalty/loyalty_point_redemption/logic/loyalty_point_redemption_controller.dart';
-import 'package:ecommerce/feature/loyalty/loyalty_point_redemption/presentation/widgets/create_new_loyalty_point_redemption_widget.dart';
-import 'package:ecommerce/feature/loyalty/loyalty_point_redemption/presentation/widgets/loyalty_point_redemption_item_widget.dart';
+import 'package:mighty_job/common/layout/list_layout_widget.dart';
+import 'package:mighty_job/feature/loyalty/loyalty_point_redemption/domain/model/loyalty_point_redemption_model.dart';
+import 'package:mighty_job/feature/loyalty/loyalty_point_redemption/logic/loyalty_point_redemption_controller.dart';
+import 'package:mighty_job/feature/loyalty/loyalty_point_redemption/presentation/widgets/create_new_loyalty_point_redemption_widget.dart';
+import 'package:mighty_job/feature/loyalty/loyalty_point_redemption/presentation/widgets/loyalty_point_redemption_item_widget.dart';
 
 class LoyaltyPointRedemptionListWidget extends StatelessWidget {
   final ScrollController scrollController;

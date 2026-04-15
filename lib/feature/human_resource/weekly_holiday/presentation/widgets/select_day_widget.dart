@@ -1,8 +1,8 @@
-import 'package:ecommerce/feature/human_resource/weekly_holiday/controller/weekly_holiday_controller.dart';
-import 'package:ecommerce/util/styles.dart';
+import 'package:mighty_job/feature/human_resource/weekly_holiday/controller/weekly_holiday_controller.dart';
+import 'package:mighty_job/util/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/widget/custom_generic_dropdown.dart';
+import 'package:mighty_job/common/widget/custom_generic_dropdown.dart';
 
 class SelectDayWidget extends StatefulWidget {
   const SelectDayWidget({super.key});

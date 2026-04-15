@@ -1,15 +1,15 @@
 import 'dart:io';
 
-import 'package:ecommerce/common/widget/custom_contaner.dart';
-import 'package:ecommerce/helper/app_color_helper.dart';
-import 'package:ecommerce/util/images.dart';
+import 'package:mighty_job/common/widget/custom_contaner.dart';
+import 'package:mighty_job/helper/app_color_helper.dart';
+import 'package:mighty_job/util/images.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:ecommerce/common/controller/image_picker_controller.dart';
-import 'package:ecommerce/common/widget/custom_image.dart';
-import 'package:ecommerce/util/dimensions.dart';
-import 'package:ecommerce/util/styles.dart';
+import 'package:mighty_job/common/controller/image_picker_controller.dart';
+import 'package:mighty_job/common/widget/custom_image.dart';
+import 'package:mighty_job/util/dimensions.dart';
+import 'package:mighty_job/util/styles.dart';
 
 class ImagePickerWidget extends StatelessWidget {
   final String? imageUrl;

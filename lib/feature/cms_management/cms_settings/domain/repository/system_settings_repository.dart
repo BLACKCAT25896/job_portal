@@ -1,9 +1,9 @@
 import 'package:flutter_image_compress/flutter_image_compress.dart';
 import 'package:get/get_connect/http/src/response/response.dart';
-import 'package:ecommerce/api_handle/api_client.dart';
-import 'package:ecommerce/feature/cms_management/cms_settings/domain/model/cms_section_reorder_body.dart';
-import 'package:ecommerce/feature/cms_management/cms_settings/domain/model/general_settings_model.dart';
-import 'package:ecommerce/util/app_constants.dart';
+import 'package:mighty_job/api_handle/api_client.dart';
+import 'package:mighty_job/feature/cms_management/cms_settings/domain/model/cms_section_reorder_body.dart';
+import 'package:mighty_job/feature/cms_management/cms_settings/domain/model/general_settings_model.dart';
+import 'package:mighty_job/util/app_constants.dart';
 
 class SystemSettingsRepository{
   final ApiClient apiClient;
@@ -83,14 +83,14 @@ class SystemSettingsRepository{
       body = MultipartBody("footer_logo_dark_theme", logo);
     }
     return await apiClient.postMultipartData(
-      "${AppConstants.ecommerceImageSetting}/$id", {
+      "${AppConstants.mighty_jobImageSetting}/$id", {
         "_method" : "put"
     },
       [], body, []);
   }
 
-  Future<Response?> getecommerceImageSetting () async {
-    return await apiClient.getData(AppConstants.ecommerceImageSetting);
+  Future<Response?> getmighty_jobImageSetting () async {
+    return await apiClient.getData(AppConstants.mighty_jobImageSetting);
   }
 
 

@@ -3,9 +3,9 @@ import 'package:facebook_app_events/facebook_app_events.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_linkify/flutter_linkify.dart';
-import 'package:ecommerce/helper/domain_helper/domain_helper.dart';
-import 'package:ecommerce/localization/language_model.dart';
-import 'package:ecommerce/util/images.dart';
+import 'package:mighty_job/helper/domain_helper/domain_helper.dart';
+import 'package:mighty_job/localization/language_model.dart';
+import 'package:mighty_job/util/images.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 
@@ -13,14 +13,14 @@ class AppConstants {
   static const String version = '1.0.0'; //Flutter version 3.24.3
   static const int versionCode = 1;
   static const String whatsUpdate = "Fixing Price related problems for sales and purchase";
-  static const String appName = 'Mighty ecommerce';
+  static const String appName = 'Mighty mighty_job';
   static const bool demo = true;
 
   //local
   static const String baseUrl = 'https://job-portal.bdboibazer.com';
   static const String imageBaseUrl = '$baseUrl/storage';
   static const String versionPath = '/api/v1';
-  static String get ecommerceDomain => DomainHelper.getCurrentDomain();
+  static String get mighty_jobDomain => DomainHelper.getCurrentDomain();
 
   static const String loginUri = '/login';
   static const String registration = '/onboardings';
@@ -59,11 +59,11 @@ class AppConstants {
   static const String publicSetting = '/publicSetting';
   static const String frontendCmsSection = '/frontend/cms-sections';
   static const String cmsSectionReorder = '/cms-sections-update';
-  static const String ecommerceSchedule = '/ecommerce-schedules';
-  static const String ecommerceImageSetting = '/tenant-image-settings';
+  static const String mighty_jobSchedule = '/mighty_job-schedules';
+  static const String mighty_jobImageSetting = '/tenant-image-settings';
 
 
-  //ecommerce management
+  //mighty_job management
   static const String purchase = '/purchases';
   static const String supplier = '/suppliers';
   static const String purchaseReturn = '/purchase-return';

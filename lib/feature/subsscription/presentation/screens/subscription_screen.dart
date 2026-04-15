@@ -1,12 +1,12 @@
-import 'package:ecommerce/common/global_widget/custom_web_scroll_view_widget.dart';
-import 'package:ecommerce/common/widget/custom_contaner.dart';
-import 'package:ecommerce/feature/subsscription/presentation/widgets/subscription_button_widget.dart';
-import 'package:ecommerce/feature/subsscription/presentation/widgets/subscription_package_widget.dart';
-import 'package:ecommerce/helper/responsive_helper.dart';
+import 'package:mighty_job/common/global_widget/custom_web_scroll_view_widget.dart';
+import 'package:mighty_job/common/widget/custom_contaner.dart';
+import 'package:mighty_job/feature/subsscription/presentation/widgets/subscription_button_widget.dart';
+import 'package:mighty_job/feature/subsscription/presentation/widgets/subscription_package_widget.dart';
+import 'package:mighty_job/helper/responsive_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/widget/custom_app_bar.dart';
-import 'package:ecommerce/util/dimensions.dart';
+import 'package:mighty_job/common/widget/custom_app_bar.dart';
+import 'package:mighty_job/util/dimensions.dart';
 
 class SubscriptionScreen extends StatefulWidget {
   const SubscriptionScreen({super.key});

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/feature/sms/purchase_sms/domain/models/purchase_sms_model.dart';
-import 'package:ecommerce/feature/sms/purchase_sms/presentation/widgets/create_new_purchase_sms_widget.dart';
-import 'package:ecommerce/helper/responsive_helper.dart';
-import 'package:ecommerce/util/dimensions.dart';
+import 'package:mighty_job/feature/sms/purchase_sms/domain/models/purchase_sms_model.dart';
+import 'package:mighty_job/feature/sms/purchase_sms/presentation/widgets/create_new_purchase_sms_widget.dart';
+import 'package:mighty_job/helper/responsive_helper.dart';
+import 'package:mighty_job/util/dimensions.dart';
 
 class CreateNewPurchaseSmsScreen extends StatefulWidget {
   final PurchaseSmsItem? purchaseSmsItem;

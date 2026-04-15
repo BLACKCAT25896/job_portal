@@ -1,8 +1,8 @@
-import 'package:ecommerce/common/widget/custom_dropdown.dart';
-import 'package:ecommerce/util/styles.dart';
+import 'package:mighty_job/common/widget/custom_dropdown.dart';
+import 'package:mighty_job/util/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/feature/account_management/accounting/logic/account_controller.dart';
+import 'package:mighty_job/feature/account_management/accounting/logic/account_controller.dart';
 
 class AccountingTypeWidget extends StatelessWidget {
   const AccountingTypeWidget({super.key});

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:html_editor_enhanced/html_editor.dart';
-import 'package:ecommerce/common/widget/custom_button.dart';
-import 'package:ecommerce/common/widget/custom_rich_text_editor_widget/custom_richtext_editor_widget.dart';
-import 'package:ecommerce/common/widget/custom_snackbar.dart';
-import 'package:ecommerce/common/widget/custom_text_field.dart';
-import 'package:ecommerce/feature/cms_management/policy_pages/domain/model/policy_model.dart';
-import 'package:ecommerce/feature/cms_management/policy_pages/logic/pages_controller.dart';
-import 'package:ecommerce/util/dimensions.dart';
+import 'package:mighty_job/common/widget/custom_button.dart';
+import 'package:mighty_job/common/widget/custom_rich_text_editor_widget/custom_richtext_editor_widget.dart';
+import 'package:mighty_job/common/widget/custom_snackbar.dart';
+import 'package:mighty_job/common/widget/custom_text_field.dart';
+import 'package:mighty_job/feature/cms_management/policy_pages/domain/model/policy_model.dart';
+import 'package:mighty_job/feature/cms_management/policy_pages/logic/pages_controller.dart';
+import 'package:mighty_job/util/dimensions.dart';
 
 class CreateNewPageWidget extends StatefulWidget {
   final PagesItem? pageItem;

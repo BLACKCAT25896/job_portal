@@ -1,7 +1,7 @@
-import 'package:ecommerce/feature/home/presentation/widget/ouder_status_wise_count_card_item_widget.dart';
-import 'package:ecommerce/feature/report_management/logic/report_controller.dart';
-import 'package:ecommerce/util/dimensions.dart';
-import 'package:ecommerce/util/images.dart';
+import 'package:mighty_job/feature/home/presentation/widget/ouder_status_wise_count_card_item_widget.dart';
+import 'package:mighty_job/feature/report_management/logic/report_controller.dart';
+import 'package:mighty_job/util/dimensions.dart';
+import 'package:mighty_job/util/images.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:get/get.dart';

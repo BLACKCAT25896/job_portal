@@ -1,17 +1,17 @@
-import 'package:ecommerce/helper/route_helper.dart';
+import 'package:mighty_job/helper/route_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/controller/theme_controller.dart';
-import 'package:ecommerce/common/widget/custom_contaner.dart';
-import 'package:ecommerce/common/widget/custom_image.dart';
-import 'package:ecommerce/feature/language/presentation/screens/select_language_bottom_sheet.dart';
-import 'package:ecommerce/feature/profile/logic/profile_controller.dart';
-import 'package:ecommerce/feature/profile/presentation/widgets/header_profile_info_dropdown.dart';
-import 'package:ecommerce/localization/localization_controller.dart';
-import 'package:ecommerce/util/app_constants.dart';
-import 'package:ecommerce/util/dimensions.dart';
-import 'package:ecommerce/util/images.dart';
-import 'package:ecommerce/util/styles.dart';
+import 'package:mighty_job/common/controller/theme_controller.dart';
+import 'package:mighty_job/common/widget/custom_contaner.dart';
+import 'package:mighty_job/common/widget/custom_image.dart';
+import 'package:mighty_job/feature/language/presentation/screens/select_language_bottom_sheet.dart';
+import 'package:mighty_job/feature/profile/logic/profile_controller.dart';
+import 'package:mighty_job/feature/profile/presentation/widgets/header_profile_info_dropdown.dart';
+import 'package:mighty_job/localization/localization_controller.dart';
+import 'package:mighty_job/util/app_constants.dart';
+import 'package:mighty_job/util/dimensions.dart';
+import 'package:mighty_job/util/images.dart';
+import 'package:mighty_job/util/styles.dart';
 
 class WebAppBar extends StatelessWidget implements PreferredSizeWidget {
   const WebAppBar({super.key});

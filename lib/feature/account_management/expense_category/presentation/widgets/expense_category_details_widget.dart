@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/feature/account_management/expense_category/domain/model/expense_category_details_model.dart';
-import 'package:ecommerce/feature/account_management/expense_category/domain/model/expense_category_model.dart';
-import 'package:ecommerce/feature/account_management/expense_category/logic/expense_category_controller.dart';
-import 'package:ecommerce/feature/account_management/expense_category/presentation/widgets/category_wise_expense_card_widget.dart';
-import 'package:ecommerce/feature/account_management/expense_category/presentation/widgets/expense_category_details_header.dart';
-import 'package:ecommerce/util/dimensions.dart';
-import 'package:ecommerce/util/styles.dart';
+import 'package:mighty_job/feature/account_management/expense_category/domain/model/expense_category_details_model.dart';
+import 'package:mighty_job/feature/account_management/expense_category/domain/model/expense_category_model.dart';
+import 'package:mighty_job/feature/account_management/expense_category/logic/expense_category_controller.dart';
+import 'package:mighty_job/feature/account_management/expense_category/presentation/widgets/category_wise_expense_card_widget.dart';
+import 'package:mighty_job/feature/account_management/expense_category/presentation/widgets/expense_category_details_header.dart';
+import 'package:mighty_job/util/dimensions.dart';
+import 'package:mighty_job/util/styles.dart';
 
 class ExpenseCategoryDetailsWidget extends StatelessWidget {
   final ExpenseCategoryItem? expenseCategoryItem;

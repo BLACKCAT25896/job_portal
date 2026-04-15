@@ -1,8 +1,8 @@
 import 'package:get/get.dart';
-import 'package:ecommerce/api_handle/api_checker.dart';
-import 'package:ecommerce/common/widget/custom_snackbar.dart';
-import 'package:ecommerce/feature/cms_management/faq/domain/model/faq_model.dart';
-import 'package:ecommerce/feature/cms_management/faq/domain/repository/faq_repository.dart';
+import 'package:mighty_job/api_handle/api_checker.dart';
+import 'package:mighty_job/common/widget/custom_snackbar.dart';
+import 'package:mighty_job/feature/cms_management/faq/domain/model/faq_model.dart';
+import 'package:mighty_job/feature/cms_management/faq/domain/repository/faq_repository.dart';
 
 class FaqController extends GetxController implements GetxService {
   final FaqRepository faqRepository;

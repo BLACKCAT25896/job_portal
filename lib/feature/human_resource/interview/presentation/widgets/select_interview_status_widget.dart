@@ -1,8 +1,8 @@
-import 'package:ecommerce/util/styles.dart';
+import 'package:mighty_job/util/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/feature/human_resource/interview/controller/interview_controller.dart';
-import 'package:ecommerce/common/widget/custom_generic_dropdown.dart';
+import 'package:mighty_job/feature/human_resource/interview/controller/interview_controller.dart';
+import 'package:mighty_job/common/widget/custom_generic_dropdown.dart';
 
 class SelectInterviewStatusWidget extends StatefulWidget {
   const SelectInterviewStatusWidget({super.key});

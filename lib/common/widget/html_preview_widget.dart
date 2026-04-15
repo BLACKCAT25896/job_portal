@@ -1,4 +1,4 @@
-import 'package:ecommerce/util/styles.dart';
+import 'package:mighty_job/util/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_widget_from_html_core/flutter_widget_from_html_core.dart';
 import 'package:get/get.dart';

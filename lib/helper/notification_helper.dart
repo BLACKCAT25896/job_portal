@@ -8,10 +8,10 @@ import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:get/get.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:http/http.dart' as http;
-import 'package:ecommerce/common/model/notification_body.dart';
-import 'package:ecommerce/feature/authentication/logic/authentication_controller.dart';
-import 'package:ecommerce/feature/notification/widget/notifiation_popup_dialog.dart';
-import 'package:ecommerce/util/app_constants.dart';
+import 'package:mighty_job/common/model/notification_body.dart';
+import 'package:mighty_job/feature/authentication/logic/authentication_controller.dart';
+import 'package:mighty_job/feature/notification/widget/notifiation_popup_dialog.dart';
+import 'package:mighty_job/util/app_constants.dart';
 
 class NotificationHelper {
 
@@ -54,7 +54,7 @@ class NotificationHelper {
           //   Get.find<ChatController>().getMessages(
           //     1, NotificationBody(
           //     notificationType: NotificationType.message, adminId: message.data['sender_type'] == AppConstants.admin ? 0 : null,
-          //     ecommerceId: message.data['sender_type'] == AppConstants.vendor ? 0 : null,
+          //     mighty_jobId: message.data['sender_type'] == AppConstants.vendor ? 0 : null,
           //     deliverymanId: message.data['sender_type'] == AppConstants.deliveryMan ? 0 : null,
           //   ),
           //     null, int.parse(message.data['conversation_id'].toString()),
@@ -218,7 +218,7 @@ class NotificationHelper {
         notificationType: NotificationType.message,
         deliverymanId: data['sender_type'] == 'delivery_man' ? 0 : null,
         adminId: data['sender_type'] == 'admin' ? 0 : null,
-        ecommerceId: data['sender_type'] == 'vendor' ? 0 : null,
+        mighty_jobId: data['sender_type'] == 'vendor' ? 0 : null,
         conversationId: int.parse(data['conversation_id'].toString()),
       );
     }

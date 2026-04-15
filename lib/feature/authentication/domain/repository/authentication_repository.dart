@@ -3,9 +3,9 @@ import 'dart:developer';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:ecommerce/api_handle/api_client.dart';
-import 'package:ecommerce/feature/authentication/domain/model/create_account_body.dart';
-import 'package:ecommerce/util/app_constants.dart';
+import 'package:mighty_job/api_handle/api_client.dart';
+import 'package:mighty_job/feature/authentication/domain/model/create_account_body.dart';
+import 'package:mighty_job/util/app_constants.dart';
 
 class AuthenticationRepository{
   final ApiClient apiClient;

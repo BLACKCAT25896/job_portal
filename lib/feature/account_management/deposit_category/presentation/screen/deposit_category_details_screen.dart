@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/global_widget/custom_web_scroll_view_widget.dart';
-import 'package:ecommerce/common/widget/custom_app_bar.dart';
-import 'package:ecommerce/common/widget/custom_snackbar.dart';
-import 'package:ecommerce/feature/account_management/deposit_category/domain/model/deposit_category_model.dart';
-import 'package:ecommerce/feature/account_management/deposit_category/presentation/widgets/deposit_category_details_widget.dart';
-import 'package:ecommerce/feature/account_management/deposit_category/presentation/widgets/deposit_category_edit_delete_section.dart';
+import 'package:mighty_job/common/global_widget/custom_web_scroll_view_widget.dart';
+import 'package:mighty_job/common/widget/custom_app_bar.dart';
+import 'package:mighty_job/common/widget/custom_snackbar.dart';
+import 'package:mighty_job/feature/account_management/deposit_category/domain/model/deposit_category_model.dart';
+import 'package:mighty_job/feature/account_management/deposit_category/presentation/widgets/deposit_category_details_widget.dart';
+import 'package:mighty_job/feature/account_management/deposit_category/presentation/widgets/deposit_category_edit_delete_section.dart';
 
 class DepositCategoryDetailsScreen extends StatefulWidget {
   final DepositCategoryItem? depositCategoryItem;

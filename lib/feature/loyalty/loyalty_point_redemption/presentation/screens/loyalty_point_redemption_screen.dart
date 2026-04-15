@@ -1,11 +1,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/global_widget/custom_web_scroll_view_widget.dart';
-import 'package:ecommerce/common/widget/custom_app_bar.dart';
-import 'package:ecommerce/common/widget/custom_floating_button.dart';
-import 'package:ecommerce/feature/loyalty/loyalty_point_redemption/presentation/widgets/create_new_loyalty_point_redemption_widget.dart';
-import 'package:ecommerce/feature/loyalty/loyalty_point_redemption/presentation/widgets/loyalty_point_redemption_list_widget.dart';
+import 'package:mighty_job/common/global_widget/custom_web_scroll_view_widget.dart';
+import 'package:mighty_job/common/widget/custom_app_bar.dart';
+import 'package:mighty_job/common/widget/custom_floating_button.dart';
+import 'package:mighty_job/feature/loyalty/loyalty_point_redemption/presentation/widgets/create_new_loyalty_point_redemption_widget.dart';
+import 'package:mighty_job/feature/loyalty/loyalty_point_redemption/presentation/widgets/loyalty_point_redemption_list_widget.dart';
 
 class LoyaltyPointRedemptionScreen extends StatefulWidget {
   const LoyaltyPointRedemptionScreen({super.key});

@@ -1,11 +1,11 @@
-import 'package:ecommerce/common/layout/custom_dialog_widget.dart';
+import 'package:mighty_job/common/layout/custom_dialog_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/layout/list_layout_widget.dart';
-import 'package:ecommerce/feature/human_resource/weekly_holiday/controller/weekly_holiday_controller.dart';
-import 'package:ecommerce/feature/human_resource/weekly_holiday/domain/models/weekly_holiday_model.dart';
-import 'package:ecommerce/feature/human_resource/weekly_holiday/presentation/screens/create_new_weekly_holiday_screen.dart';
-import 'package:ecommerce/feature/human_resource/weekly_holiday/presentation/widgets/weekly_holiday_item_widget.dart';
+import 'package:mighty_job/common/layout/list_layout_widget.dart';
+import 'package:mighty_job/feature/human_resource/weekly_holiday/controller/weekly_holiday_controller.dart';
+import 'package:mighty_job/feature/human_resource/weekly_holiday/domain/models/weekly_holiday_model.dart';
+import 'package:mighty_job/feature/human_resource/weekly_holiday/presentation/screens/create_new_weekly_holiday_screen.dart';
+import 'package:mighty_job/feature/human_resource/weekly_holiday/presentation/widgets/weekly_holiday_item_widget.dart';
 
 class WeeklyHolidayListWidget extends StatelessWidget {
   final ScrollController scrollController;

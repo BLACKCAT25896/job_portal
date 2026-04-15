@@ -1,11 +1,11 @@
 import 'package:dropdown_button2/dropdown_button2.dart';
-import 'package:ecommerce/helper/app_color_helper.dart';
+import 'package:mighty_job/helper/app_color_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/feature/authentication/logic/authentication_controller.dart';
-import 'package:ecommerce/feature/profile/presentation/widgets/header_profile_info.dart';
-import 'package:ecommerce/helper/route_helper.dart';
-import 'package:ecommerce/util/styles.dart';
+import 'package:mighty_job/feature/authentication/logic/authentication_controller.dart';
+import 'package:mighty_job/feature/profile/presentation/widgets/header_profile_info.dart';
+import 'package:mighty_job/helper/route_helper.dart';
+import 'package:mighty_job/util/styles.dart';
 
 
 class HeaderProfileInfoMenu extends StatefulWidget {

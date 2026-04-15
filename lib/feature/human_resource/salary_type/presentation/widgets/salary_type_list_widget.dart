@@ -1,11 +1,11 @@
-import 'package:ecommerce/common/layout/custom_dialog_widget.dart';
-import 'package:ecommerce/feature/human_resource/salary_type/presentation/widgets/add_new_salary_type_widget.dart';
+import 'package:mighty_job/common/layout/custom_dialog_widget.dart';
+import 'package:mighty_job/feature/human_resource/salary_type/presentation/widgets/add_new_salary_type_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/layout/list_layout_widget.dart';
-import 'package:ecommerce/feature/human_resource/salary_type/controller/salary_type_controller.dart';
-import 'package:ecommerce/feature/human_resource/salary_type/domain/models/salary_type_model.dart';
-import 'package:ecommerce/feature/human_resource/salary_type/presentation/widgets/salary_type_item_widget.dart';
+import 'package:mighty_job/common/layout/list_layout_widget.dart';
+import 'package:mighty_job/feature/human_resource/salary_type/controller/salary_type_controller.dart';
+import 'package:mighty_job/feature/human_resource/salary_type/domain/models/salary_type_model.dart';
+import 'package:mighty_job/feature/human_resource/salary_type/presentation/widgets/salary_type_item_widget.dart';
 
 class SalaryTypeListWidget extends StatelessWidget {
   final ScrollController scrollController;

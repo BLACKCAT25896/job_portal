@@ -1,11 +1,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/global_widget/custom_web_scroll_view_widget.dart';
-import 'package:ecommerce/common/widget/custom_app_bar.dart';
-import 'package:ecommerce/common/widget/custom_floating_button.dart';
-import 'package:ecommerce/feature/human_resource/weekly_holiday/presentation/screens/create_new_weekly_holiday_screen.dart';
-import 'package:ecommerce/feature/human_resource/weekly_holiday/presentation/widgets/weekly_holiday_list_widget.dart';
+import 'package:mighty_job/common/global_widget/custom_web_scroll_view_widget.dart';
+import 'package:mighty_job/common/widget/custom_app_bar.dart';
+import 'package:mighty_job/common/widget/custom_floating_button.dart';
+import 'package:mighty_job/feature/human_resource/weekly_holiday/presentation/screens/create_new_weekly_holiday_screen.dart';
+import 'package:mighty_job/feature/human_resource/weekly_holiday/presentation/widgets/weekly_holiday_list_widget.dart';
 
 class WeeklyHolidayScreen extends StatefulWidget {
   const WeeklyHolidayScreen({super.key});

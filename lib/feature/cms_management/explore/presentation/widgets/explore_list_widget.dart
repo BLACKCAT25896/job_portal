@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/layout/list_layout_widget.dart';
-import 'package:ecommerce/feature/cms_management/explore/domain/model/explore_model.dart';
-import 'package:ecommerce/feature/cms_management/explore/logic/explore_controller.dart';
-import 'package:ecommerce/feature/cms_management/explore/presentation/widgets/create_new_explore_widget.dart';
-import 'package:ecommerce/feature/cms_management/explore/presentation/widgets/explore_item_widget.dart';
-import 'package:ecommerce/util/dimensions.dart';
+import 'package:mighty_job/common/layout/list_layout_widget.dart';
+import 'package:mighty_job/feature/cms_management/explore/domain/model/explore_model.dart';
+import 'package:mighty_job/feature/cms_management/explore/logic/explore_controller.dart';
+import 'package:mighty_job/feature/cms_management/explore/presentation/widgets/create_new_explore_widget.dart';
+import 'package:mighty_job/feature/cms_management/explore/presentation/widgets/explore_item_widget.dart';
+import 'package:mighty_job/util/dimensions.dart';
 
 class ExploreListWidget extends StatelessWidget {
   final ScrollController scrollController;

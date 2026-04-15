@@ -1,10 +1,10 @@
 
-import 'package:ecommerce/common/global_widget/custom_web_scroll_view_widget.dart';
-import 'package:ecommerce/common/widget/custom_app_bar.dart';
-import 'package:ecommerce/common/widget/custom_bottom_navigation_button.dart';
-import 'package:ecommerce/feature/companySize/controller/company_size_controller.dart';
-import 'package:ecommerce/feature/companySize/presentation/screens/create_new_company_size_screen.dart';
-import 'package:ecommerce/feature/companySize/presentation/widgets/company_size_list_widget.dart';
+import 'package:mighty_job/common/global_widget/custom_web_scroll_view_widget.dart';
+import 'package:mighty_job/common/widget/custom_app_bar.dart';
+import 'package:mighty_job/common/widget/custom_bottom_navigation_button.dart';
+import 'package:mighty_job/feature/companySize/controller/company_size_controller.dart';
+import 'package:mighty_job/feature/companySize/presentation/screens/create_new_company_size_screen.dart';
+import 'package:mighty_job/feature/companySize/presentation/widgets/company_size_list_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

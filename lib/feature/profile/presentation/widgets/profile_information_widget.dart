@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/widget/custom_button.dart';
-import 'package:ecommerce/common/widget/custom_contaner.dart';
-import 'package:ecommerce/common/widget/custom_snackbar.dart';
-import 'package:ecommerce/common/widget/custom_text_field.dart';
-import 'package:ecommerce/common/widget/custom_title.dart';
-import 'package:ecommerce/feature/profile/domain/model/profile_model.dart';
-import 'package:ecommerce/feature/profile/logic/profile_controller.dart';
-import 'package:ecommerce/helper/email_checker.dart';
-import 'package:ecommerce/util/dimensions.dart';
+import 'package:mighty_job/common/widget/custom_button.dart';
+import 'package:mighty_job/common/widget/custom_contaner.dart';
+import 'package:mighty_job/common/widget/custom_snackbar.dart';
+import 'package:mighty_job/common/widget/custom_text_field.dart';
+import 'package:mighty_job/common/widget/custom_title.dart';
+import 'package:mighty_job/feature/profile/domain/model/profile_model.dart';
+import 'package:mighty_job/feature/profile/logic/profile_controller.dart';
+import 'package:mighty_job/helper/email_checker.dart';
+import 'package:mighty_job/util/dimensions.dart';
 
 class ProfileInformationWidget extends StatefulWidget {
   const ProfileInformationWidget({super.key});

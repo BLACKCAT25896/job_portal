@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/layout/list_layout_widget.dart';
-import 'package:ecommerce/feature/loyalty/loyalty_point/domain/model/loyalty_point_model.dart';
-import 'package:ecommerce/feature/loyalty/loyalty_point/logic/loyalty_point_controller.dart';
-import 'package:ecommerce/feature/loyalty/loyalty_point/presentation/widgets/create_new_loyalty_point_widget.dart';
-import 'package:ecommerce/feature/loyalty/loyalty_point/presentation/widgets/loyalty_point_item_widget.dart';
+import 'package:mighty_job/common/layout/list_layout_widget.dart';
+import 'package:mighty_job/feature/loyalty/loyalty_point/domain/model/loyalty_point_model.dart';
+import 'package:mighty_job/feature/loyalty/loyalty_point/logic/loyalty_point_controller.dart';
+import 'package:mighty_job/feature/loyalty/loyalty_point/presentation/widgets/create_new_loyalty_point_widget.dart';
+import 'package:mighty_job/feature/loyalty/loyalty_point/presentation/widgets/loyalty_point_item_widget.dart';
 
 class LoyaltyPointListWidget extends StatelessWidget {
   final ScrollController scrollController;

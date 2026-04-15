@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/controller/route_controller.dart';
-import 'package:ecommerce/common/global_widget/global_master_layout_widget.dart';
+import 'package:mighty_job/common/controller/route_controller.dart';
+import 'package:mighty_job/common/global_widget/global_master_layout_widget.dart';
 
 class SidebarReactiveWrapper extends StatelessWidget {
   final Widget child;

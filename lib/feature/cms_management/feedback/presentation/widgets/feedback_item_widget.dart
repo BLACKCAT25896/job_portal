@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/widget/active_inactive_widget.dart';
-import 'package:ecommerce/common/widget/confirmation_dialog.dart';
-import 'package:ecommerce/common/widget/custom_contaner.dart';
-import 'package:ecommerce/common/widget/custom_image.dart';
-import 'package:ecommerce/common/widget/custom_text_item_widget.dart';
-import 'package:ecommerce/common/widget/edit_delete_popup_widget.dart';
-import 'package:ecommerce/common/widget/edit_delete_section.dart';
-import 'package:ecommerce/common/widget/numbering_widget.dart';
-import 'package:ecommerce/feature/cms_management/feedback/domain/model/feedback_model.dart';
-import 'package:ecommerce/feature/cms_management/feedback/logic/feedback_controller.dart';
-import 'package:ecommerce/feature/cms_management/feedback/presentation/widgets/create_new_feedback_widget.dart';
-import 'package:ecommerce/feature/profile/domain/model/status_update_body.dart';
-import 'package:ecommerce/feature/profile/logic/profile_controller.dart';
-import 'package:ecommerce/helper/responsive_helper.dart';
-import 'package:ecommerce/util/app_constants.dart';
-import 'package:ecommerce/util/dimensions.dart';
+import 'package:mighty_job/common/widget/active_inactive_widget.dart';
+import 'package:mighty_job/common/widget/confirmation_dialog.dart';
+import 'package:mighty_job/common/widget/custom_contaner.dart';
+import 'package:mighty_job/common/widget/custom_image.dart';
+import 'package:mighty_job/common/widget/custom_text_item_widget.dart';
+import 'package:mighty_job/common/widget/edit_delete_popup_widget.dart';
+import 'package:mighty_job/common/widget/edit_delete_section.dart';
+import 'package:mighty_job/common/widget/numbering_widget.dart';
+import 'package:mighty_job/feature/cms_management/feedback/domain/model/feedback_model.dart';
+import 'package:mighty_job/feature/cms_management/feedback/logic/feedback_controller.dart';
+import 'package:mighty_job/feature/cms_management/feedback/presentation/widgets/create_new_feedback_widget.dart';
+import 'package:mighty_job/feature/profile/domain/model/status_update_body.dart';
+import 'package:mighty_job/feature/profile/logic/profile_controller.dart';
+import 'package:mighty_job/helper/responsive_helper.dart';
+import 'package:mighty_job/util/app_constants.dart';
+import 'package:mighty_job/util/dimensions.dart';
 
 class FeedbackItemWidget extends StatelessWidget {
   final FeedbackItem? feedbackItem;

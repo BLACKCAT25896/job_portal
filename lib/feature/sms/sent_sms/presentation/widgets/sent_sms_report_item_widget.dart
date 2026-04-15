@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:ecommerce/common/widget/custom_contaner.dart';
-import 'package:ecommerce/common/widget/custom_item_text_widget.dart';
-import 'package:ecommerce/common/widget/numbering_widget.dart';
-import 'package:ecommerce/feature/sms/sent_sms/domain/model/sent_sms_report_model.dart';
-import 'package:ecommerce/helper/responsive_helper.dart';
-import 'package:ecommerce/util/dimensions.dart';
+import 'package:mighty_job/common/widget/custom_contaner.dart';
+import 'package:mighty_job/common/widget/custom_item_text_widget.dart';
+import 'package:mighty_job/common/widget/numbering_widget.dart';
+import 'package:mighty_job/feature/sms/sent_sms/domain/model/sent_sms_report_model.dart';
+import 'package:mighty_job/helper/responsive_helper.dart';
+import 'package:mighty_job/util/dimensions.dart';
 
 class SentSmsReportItemWidget extends StatelessWidget {
   final SmsReportItem? userItem;

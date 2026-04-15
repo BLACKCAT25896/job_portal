@@ -1,12 +1,12 @@
 import 'dart:developer';
 import 'dart:io';
-import 'package:ecommerce/helper/app_color_helper.dart';
+import 'package:mighty_job/helper/app_color_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/widget/custom_image.dart';
-import 'package:ecommerce/feature/cms_management/about_us/logic/about_us_controller.dart';
-import 'package:ecommerce/util/app_constants.dart';
-import 'package:ecommerce/util/dimensions.dart';
+import 'package:mighty_job/common/widget/custom_image.dart';
+import 'package:mighty_job/feature/cms_management/about_us/logic/about_us_controller.dart';
+import 'package:mighty_job/util/app_constants.dart';
+import 'package:mighty_job/util/dimensions.dart';
 
 class AboutUsImageWidget extends StatelessWidget {
   const AboutUsImageWidget({super.key});

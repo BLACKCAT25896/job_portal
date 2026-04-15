@@ -1,10 +1,10 @@
 import 'package:get/get.dart';
-import 'package:ecommerce/api_handle/api_checker.dart';
-import 'package:ecommerce/api_handle/global_api_response_model.dart';
-import 'package:ecommerce/common/widget/custom_snackbar.dart';
-import 'package:ecommerce/feature/human_resource/salary_generate/domain/models/salary_generate_body.dart';
-import 'package:ecommerce/feature/human_resource/salary_generate/domain/models/salary_generate_model.dart';
-import 'package:ecommerce/feature/human_resource/salary_generate/domain/repository/salary_generate_repository.dart';
+import 'package:mighty_job/api_handle/api_checker.dart';
+import 'package:mighty_job/api_handle/global_api_response_model.dart';
+import 'package:mighty_job/common/widget/custom_snackbar.dart';
+import 'package:mighty_job/feature/human_resource/salary_generate/domain/models/salary_generate_body.dart';
+import 'package:mighty_job/feature/human_resource/salary_generate/domain/models/salary_generate_model.dart';
+import 'package:mighty_job/feature/human_resource/salary_generate/domain/repository/salary_generate_repository.dart';
 
 class SalaryGenerateController extends GetxController implements GetxService{
   final SalaryGenerateRepository salaryGenerateRepository;

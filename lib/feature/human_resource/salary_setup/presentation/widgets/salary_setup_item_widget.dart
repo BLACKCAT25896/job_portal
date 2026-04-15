@@ -1,16 +1,16 @@
-import 'package:ecommerce/common/layout/custom_dialog_widget.dart';
-import 'package:ecommerce/feature/human_resource/salary_setup/presentation/widgets/add_new_salary_setup_widget.dart';
+import 'package:mighty_job/common/layout/custom_dialog_widget.dart';
+import 'package:mighty_job/feature/human_resource/salary_setup/presentation/widgets/add_new_salary_setup_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/widget/active_inactive_widget.dart';
-import 'package:ecommerce/common/widget/confirmation_dialog.dart';
-import 'package:ecommerce/common/widget/custom_text_item_widget.dart';
-import 'package:ecommerce/common/widget/edit_delete_popup_widget.dart';
-import 'package:ecommerce/common/widget/numbering_widget.dart';
-import 'package:ecommerce/feature/human_resource/salary_setup/controller/salary_setup_controller.dart';
-import 'package:ecommerce/feature/human_resource/salary_setup/domain/models/salary_setup_model.dart';
-import 'package:ecommerce/helper/price_converter.dart';
-import 'package:ecommerce/util/dimensions.dart';
+import 'package:mighty_job/common/widget/active_inactive_widget.dart';
+import 'package:mighty_job/common/widget/confirmation_dialog.dart';
+import 'package:mighty_job/common/widget/custom_text_item_widget.dart';
+import 'package:mighty_job/common/widget/edit_delete_popup_widget.dart';
+import 'package:mighty_job/common/widget/numbering_widget.dart';
+import 'package:mighty_job/feature/human_resource/salary_setup/controller/salary_setup_controller.dart';
+import 'package:mighty_job/feature/human_resource/salary_setup/domain/models/salary_setup_model.dart';
+import 'package:mighty_job/helper/price_converter.dart';
+import 'package:mighty_job/util/dimensions.dart';
 
 class SalarySetupItemWidget extends StatelessWidget {
   final SalarySetupItem? salarySetupItem;

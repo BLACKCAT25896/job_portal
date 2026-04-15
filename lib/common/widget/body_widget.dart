@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ecommerce/common/widget/app_bar_widget.dart';
-import 'package:ecommerce/util/dimensions.dart';
+import 'package:mighty_job/common/widget/app_bar_widget.dart';
+import 'package:mighty_job/util/dimensions.dart';
 
 class BodyWidget extends StatefulWidget {
   final Widget body;

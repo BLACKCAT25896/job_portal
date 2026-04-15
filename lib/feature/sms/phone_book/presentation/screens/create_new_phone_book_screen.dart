@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/widget/custom_button.dart';
-import 'package:ecommerce/common/widget/custom_snackbar.dart';
-import 'package:ecommerce/common/widget/custom_text_field.dart';
-import 'package:ecommerce/common/widget/custom_title.dart';
-import 'package:ecommerce/feature/sms/phone_book/controller/phone_book_controller.dart';
-import 'package:ecommerce/feature/sms/phone_book/domain/models/phone_book_body.dart';
-import 'package:ecommerce/feature/sms/phone_book/domain/models/phone_book_model.dart';
-import 'package:ecommerce/feature/sms/phone_book_category/controller/phone_book_category_controller.dart';
-import 'package:ecommerce/feature/sms/phone_book_category/domain/models/phone_book_category_model.dart';
-import 'package:ecommerce/feature/sms/phone_book_category/presentation/widgets/select_phone_book_category_widget.dart';
-import 'package:ecommerce/helper/responsive_helper.dart';
-import 'package:ecommerce/util/app_constants.dart';
-import 'package:ecommerce/util/dimensions.dart';
+import 'package:mighty_job/common/widget/custom_button.dart';
+import 'package:mighty_job/common/widget/custom_snackbar.dart';
+import 'package:mighty_job/common/widget/custom_text_field.dart';
+import 'package:mighty_job/common/widget/custom_title.dart';
+import 'package:mighty_job/feature/sms/phone_book/controller/phone_book_controller.dart';
+import 'package:mighty_job/feature/sms/phone_book/domain/models/phone_book_body.dart';
+import 'package:mighty_job/feature/sms/phone_book/domain/models/phone_book_model.dart';
+import 'package:mighty_job/feature/sms/phone_book_category/controller/phone_book_category_controller.dart';
+import 'package:mighty_job/feature/sms/phone_book_category/domain/models/phone_book_category_model.dart';
+import 'package:mighty_job/feature/sms/phone_book_category/presentation/widgets/select_phone_book_category_widget.dart';
+import 'package:mighty_job/helper/responsive_helper.dart';
+import 'package:mighty_job/util/app_constants.dart';
+import 'package:mighty_job/util/dimensions.dart';
 
 class CreateNewPhoneBookScreen extends StatefulWidget {
   final PhoneBookItem? phoneBookItem;

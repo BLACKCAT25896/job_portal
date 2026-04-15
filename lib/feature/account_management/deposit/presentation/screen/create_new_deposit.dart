@@ -2,11 +2,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/global_widget/custom_web_scroll_view_widget.dart';
-import 'package:ecommerce/common/widget/custom_app_bar.dart';
-import 'package:ecommerce/feature/account_management/deposit/domain/model/deposit_model.dart';
-import 'package:ecommerce/feature/account_management/deposit/presentation/widgets/create_new_deposit_widget.dart';
-import 'package:ecommerce/util/dimensions.dart';
+import 'package:mighty_job/common/global_widget/custom_web_scroll_view_widget.dart';
+import 'package:mighty_job/common/widget/custom_app_bar.dart';
+import 'package:mighty_job/feature/account_management/deposit/domain/model/deposit_model.dart';
+import 'package:mighty_job/feature/account_management/deposit/presentation/widgets/create_new_deposit_widget.dart';
+import 'package:mighty_job/util/dimensions.dart';
 
 class CreateNewDepositScreen extends StatefulWidget {
   final DepositItem? depositItem;

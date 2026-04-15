@@ -1,10 +1,10 @@
 
-import 'package:ecommerce/api_handle/api_checker.dart';
-import 'package:ecommerce/api_handle/global_api_response_model.dart';
-import 'package:ecommerce/common/widget/custom_snackbar.dart';
-import 'package:ecommerce/feature/ownership_type/domain/models/ownership_type_body.dart';
-import 'package:ecommerce/feature/ownership_type/domain/models/ownership_type_model.dart';
-import 'package:ecommerce/feature/ownership_type/domain/repository/ownership_type_repository.dart';
+import 'package:mighty_job/api_handle/api_checker.dart';
+import 'package:mighty_job/api_handle/global_api_response_model.dart';
+import 'package:mighty_job/common/widget/custom_snackbar.dart';
+import 'package:mighty_job/feature/ownership_type/domain/models/ownership_type_body.dart';
+import 'package:mighty_job/feature/ownership_type/domain/models/ownership_type_model.dart';
+import 'package:mighty_job/feature/ownership_type/domain/repository/ownership_type_repository.dart';
 import 'package:get/get.dart';
 
 class OwnershipTypeController extends GetxController implements GetxService{

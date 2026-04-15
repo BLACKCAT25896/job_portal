@@ -1,16 +1,16 @@
-import 'package:ecommerce/common/widget/responsive_grid_widget.dart';
-import 'package:ecommerce/feature/home/presentation/widget/order_status_wise_count_widget.dart';
+import 'package:mighty_job/common/widget/responsive_grid_widget.dart';
+import 'package:mighty_job/feature/home/presentation/widget/order_status_wise_count_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/widget/custom_contaner.dart';
-import 'package:ecommerce/common/widget/custom_image.dart';
-import 'package:ecommerce/feature/report_management/domain/model/dashboard_report_data_model.dart';
-import 'package:ecommerce/feature/report_management/logic/report_controller.dart';
-import 'package:ecommerce/helper/price_converter.dart';
-import 'package:ecommerce/helper/responsive_helper.dart';
-import 'package:ecommerce/util/dimensions.dart';
-import 'package:ecommerce/util/images.dart';
-import 'package:ecommerce/util/styles.dart';
+import 'package:mighty_job/common/widget/custom_contaner.dart';
+import 'package:mighty_job/common/widget/custom_image.dart';
+import 'package:mighty_job/feature/report_management/domain/model/dashboard_report_data_model.dart';
+import 'package:mighty_job/feature/report_management/logic/report_controller.dart';
+import 'package:mighty_job/helper/price_converter.dart';
+import 'package:mighty_job/helper/responsive_helper.dart';
+import 'package:mighty_job/util/dimensions.dart';
+import 'package:mighty_job/util/images.dart';
+import 'package:mighty_job/util/styles.dart';
 
 class StatisticsCardsWidget extends StatelessWidget {
   const StatisticsCardsWidget({super.key});

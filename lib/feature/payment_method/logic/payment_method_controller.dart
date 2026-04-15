@@ -1,10 +1,10 @@
-import 'package:ecommerce/common/widget/active_inactive_widget.dart';
+import 'package:mighty_job/common/widget/active_inactive_widget.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/api_handle/api_checker.dart';
-import 'package:ecommerce/api_handle/global_api_response_model.dart';
-import 'package:ecommerce/common/widget/custom_snackbar.dart';
-import 'package:ecommerce/feature/payment_method/domain/model/payment_method_model.dart';
-import 'package:ecommerce/feature/payment_method/domain/repository/payment_method_repository.dart';
+import 'package:mighty_job/api_handle/api_checker.dart';
+import 'package:mighty_job/api_handle/global_api_response_model.dart';
+import 'package:mighty_job/common/widget/custom_snackbar.dart';
+import 'package:mighty_job/feature/payment_method/domain/model/payment_method_model.dart';
+import 'package:mighty_job/feature/payment_method/domain/repository/payment_method_repository.dart';
 
 class PaymentMethodController extends GetxController implements GetxService {
   final PaymentMethodRepository paymentMethodRepository;

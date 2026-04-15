@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/widget/confirmation_dialog.dart';
-import 'package:ecommerce/common/widget/custom_button.dart';
-import 'package:ecommerce/common/widget/custom_contaner.dart';
-import 'package:ecommerce/common/widget/custom_dropdown.dart';
-import 'package:ecommerce/common/widget/custom_snackbar.dart';
-import 'package:ecommerce/common/widget/custom_text_field.dart';
-import 'package:ecommerce/common/widget/custom_title.dart';
-import 'package:ecommerce/feature/sms/sent_sms/domain/model/sent_sms_body.dart';
-import 'package:ecommerce/feature/sms/sent_sms/domain/model/user_list_for_sms_model.dart';
-import 'package:ecommerce/feature/sms/sent_sms/logic/sent_sms_controller.dart';
-import 'package:ecommerce/feature/sms/sent_sms/presentation/widgets/user_list_for_sms_widget.dart';
-import 'package:ecommerce/feature/sms/sms_template/controller/sms_template_controller.dart';
-import 'package:ecommerce/feature/sms/sms_template/presentation/widgets/select_sms_template_widget.dart';
-import 'package:ecommerce/util/dimensions.dart';
+import 'package:mighty_job/common/widget/confirmation_dialog.dart';
+import 'package:mighty_job/common/widget/custom_button.dart';
+import 'package:mighty_job/common/widget/custom_contaner.dart';
+import 'package:mighty_job/common/widget/custom_dropdown.dart';
+import 'package:mighty_job/common/widget/custom_snackbar.dart';
+import 'package:mighty_job/common/widget/custom_text_field.dart';
+import 'package:mighty_job/common/widget/custom_title.dart';
+import 'package:mighty_job/feature/sms/sent_sms/domain/model/sent_sms_body.dart';
+import 'package:mighty_job/feature/sms/sent_sms/domain/model/user_list_for_sms_model.dart';
+import 'package:mighty_job/feature/sms/sent_sms/logic/sent_sms_controller.dart';
+import 'package:mighty_job/feature/sms/sent_sms/presentation/widgets/user_list_for_sms_widget.dart';
+import 'package:mighty_job/feature/sms/sms_template/controller/sms_template_controller.dart';
+import 'package:mighty_job/feature/sms/sms_template/presentation/widgets/select_sms_template_widget.dart';
+import 'package:mighty_job/util/dimensions.dart';
 
 class SentNewSmsWidget extends StatefulWidget {
   const SentNewSmsWidget({super.key});

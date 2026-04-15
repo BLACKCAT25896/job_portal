@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ecommerce/util/styles.dart';
+import 'package:mighty_job/util/styles.dart';
 
 class CustomRow extends StatelessWidget {
   final String title;

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/layout/custom_add_new_button_widget.dart';
-import 'package:ecommerce/common/widget/custom_route_path_widget.dart';
-import 'package:ecommerce/helper/responsive_helper.dart';
-import 'package:ecommerce/util/dimensions.dart';
+import 'package:mighty_job/common/layout/custom_add_new_button_widget.dart';
+import 'package:mighty_job/common/widget/custom_route_path_widget.dart';
+import 'package:mighty_job/helper/responsive_helper.dart';
+import 'package:mighty_job/util/dimensions.dart';
 
 
 class SectionHeaderWithPath extends StatelessWidget {

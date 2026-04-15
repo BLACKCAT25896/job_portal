@@ -1,11 +1,11 @@
-import 'package:ecommerce/common/layout/custom_dialog_widget.dart';
+import 'package:mighty_job/common/layout/custom_dialog_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/layout/list_layout_widget.dart';
-import 'package:ecommerce/feature/account_management/expense_category/domain/model/expense_category_model.dart';
-import 'package:ecommerce/feature/account_management/expense_category/logic/expense_category_controller.dart';
-import 'package:ecommerce/feature/account_management/expense_category/presentation/widgets/create_new_expense_category_widget.dart';
-import 'package:ecommerce/feature/account_management/expense_category/presentation/widgets/expense_category_item_widget.dart';
+import 'package:mighty_job/common/layout/list_layout_widget.dart';
+import 'package:mighty_job/feature/account_management/expense_category/domain/model/expense_category_model.dart';
+import 'package:mighty_job/feature/account_management/expense_category/logic/expense_category_controller.dart';
+import 'package:mighty_job/feature/account_management/expense_category/presentation/widgets/create_new_expense_category_widget.dart';
+import 'package:mighty_job/feature/account_management/expense_category/presentation/widgets/expense_category_item_widget.dart';
 
 class ExpenseCategoryListWidget extends StatelessWidget {
   final ScrollController scrollController;

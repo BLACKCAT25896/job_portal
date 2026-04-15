@@ -1,19 +1,19 @@
-import 'package:ecommerce/common/widget/responsive_grid_widget.dart';
-import 'package:ecommerce/feature/home/presentation/widget/top_brand/top_brand_list.dart';
-import 'package:ecommerce/feature/home/presentation/widget/top_category/top_category_list.dart';
-import 'package:ecommerce/feature/home/presentation/widget/top_product_order/top_product_list.dart';
+import 'package:mighty_job/common/widget/responsive_grid_widget.dart';
+import 'package:mighty_job/feature/home/presentation/widget/top_brand/top_brand_list.dart';
+import 'package:mighty_job/feature/home/presentation/widget/top_category/top_category_list.dart';
+import 'package:mighty_job/feature/home/presentation/widget/top_product_order/top_product_list.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/global_widget/custom_web_scroll_view_widget.dart';
-import 'package:ecommerce/common/widget/custom_app_bar.dart';
-import 'package:ecommerce/feature/cms_management/cms_settings/controller/system_settngs_controller.dart';
-import 'package:ecommerce/feature/home/presentation/widget/overview_chart_widget.dart';
-import 'package:ecommerce/feature/home/presentation/widget/sales_report_ratio_chart.dart';
-import 'package:ecommerce/feature/home/presentation/widget/statistics_cards_widget.dart';
-import 'package:ecommerce/feature/report_management/domain/model/dashboard_report_data_model.dart';
-import 'package:ecommerce/feature/report_management/logic/report_controller.dart';
-import 'package:ecommerce/helper/responsive_helper.dart';
-import 'package:ecommerce/util/dimensions.dart';
+import 'package:mighty_job/common/global_widget/custom_web_scroll_view_widget.dart';
+import 'package:mighty_job/common/widget/custom_app_bar.dart';
+import 'package:mighty_job/feature/cms_management/cms_settings/controller/system_settngs_controller.dart';
+import 'package:mighty_job/feature/home/presentation/widget/overview_chart_widget.dart';
+import 'package:mighty_job/feature/home/presentation/widget/sales_report_ratio_chart.dart';
+import 'package:mighty_job/feature/home/presentation/widget/statistics_cards_widget.dart';
+import 'package:mighty_job/feature/report_management/domain/model/dashboard_report_data_model.dart';
+import 'package:mighty_job/feature/report_management/logic/report_controller.dart';
+import 'package:mighty_job/helper/responsive_helper.dart';
+import 'package:mighty_job/util/dimensions.dart';
 
 
 class WebHomeScreen extends StatefulWidget {

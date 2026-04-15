@@ -1,18 +1,18 @@
-import 'package:ecommerce/common/layout/custom_dialog_widget.dart';
+import 'package:mighty_job/common/layout/custom_dialog_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/widget/confirmation_dialog.dart';
-import 'package:ecommerce/common/widget/custom_contaner.dart';
-import 'package:ecommerce/common/widget/custom_popup_menu.dart';
-import 'package:ecommerce/common/widget/custom_text_item_widget.dart';
-import 'package:ecommerce/common/widget/numbering_widget.dart';
-import 'package:ecommerce/feature/dashboard/controller/dashboard_controller.dart';
-import 'package:ecommerce/feature/human_resource/award/controller/award_controller.dart';
-import 'package:ecommerce/feature/human_resource/award/domain/models/award_model.dart';
-import 'package:ecommerce/feature/human_resource/award/presentation/screens/create_new_award_screen.dart';
-import 'package:ecommerce/helper/price_converter.dart';
-import 'package:ecommerce/helper/responsive_helper.dart';
-import 'package:ecommerce/util/dimensions.dart';
+import 'package:mighty_job/common/widget/confirmation_dialog.dart';
+import 'package:mighty_job/common/widget/custom_contaner.dart';
+import 'package:mighty_job/common/widget/custom_popup_menu.dart';
+import 'package:mighty_job/common/widget/custom_text_item_widget.dart';
+import 'package:mighty_job/common/widget/numbering_widget.dart';
+import 'package:mighty_job/feature/dashboard/controller/dashboard_controller.dart';
+import 'package:mighty_job/feature/human_resource/award/controller/award_controller.dart';
+import 'package:mighty_job/feature/human_resource/award/domain/models/award_model.dart';
+import 'package:mighty_job/feature/human_resource/award/presentation/screens/create_new_award_screen.dart';
+import 'package:mighty_job/helper/price_converter.dart';
+import 'package:mighty_job/helper/responsive_helper.dart';
+import 'package:mighty_job/util/dimensions.dart';
 
 class AwardItemWidget extends StatelessWidget {
   final AwardItem? awardItem;

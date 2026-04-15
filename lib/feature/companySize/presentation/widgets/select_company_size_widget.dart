@@ -1,11 +1,11 @@
-import 'package:ecommerce/feature/companySize/controller/company_size_controller.dart';
-import 'package:ecommerce/feature/companySize/domain/models/company_size_model.dart';
-import 'package:ecommerce/feature/companySize/presentation/widgets/company_size_list_widget.dart';
+import 'package:mighty_job/feature/companySize/controller/company_size_controller.dart';
+import 'package:mighty_job/feature/companySize/domain/models/company_size_model.dart';
+import 'package:mighty_job/feature/companySize/presentation/widgets/company_size_list_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/widget/custom_title.dart';
-import 'package:ecommerce/common/widget/dropdown_with_search_widget.dart';
-import 'package:ecommerce/util/dimensions.dart';
+import 'package:mighty_job/common/widget/custom_title.dart';
+import 'package:mighty_job/common/widget/dropdown_with_search_widget.dart';
+import 'package:mighty_job/util/dimensions.dart';
 
 class SelectCompanySizeWidget extends StatefulWidget {
   const SelectCompanySizeWidget({super.key});

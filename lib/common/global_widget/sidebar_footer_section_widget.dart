@@ -1,12 +1,12 @@
-import 'package:ecommerce/helper/app_color_helper.dart';
+import 'package:mighty_job/helper/app_color_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/global_widget/subscription_widget.dart';
-import 'package:ecommerce/common/widget/side_sheet_widget.dart';
-import 'package:ecommerce/feature/user_manual/presentation/user_manual_widget.dart';
-import 'package:ecommerce/util/dimensions.dart';
-import 'package:ecommerce/util/images.dart';
-import 'package:ecommerce/util/styles.dart';
+import 'package:mighty_job/common/global_widget/subscription_widget.dart';
+import 'package:mighty_job/common/widget/side_sheet_widget.dart';
+import 'package:mighty_job/feature/user_manual/presentation/user_manual_widget.dart';
+import 'package:mighty_job/util/dimensions.dart';
+import 'package:mighty_job/util/images.dart';
+import 'package:mighty_job/util/styles.dart';
 
 class SidebarFooterSectionWidget extends StatelessWidget {
   const SidebarFooterSectionWidget({super.key});

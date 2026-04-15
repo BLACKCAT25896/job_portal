@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:ecommerce/feature/loyalty/loyalty_point_redemption/domain/model/loyalty_point_redemption_model.dart';
+import 'package:mighty_job/feature/loyalty/loyalty_point_redemption/domain/model/loyalty_point_redemption_model.dart';
 
 
 class CreateNewLoyaltyPointRedemptionWidget extends StatefulWidget {

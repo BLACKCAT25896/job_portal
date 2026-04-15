@@ -1,18 +1,18 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/widget/confirmation_dialog.dart';
-import 'package:ecommerce/common/widget/custom_bottom_sheet.dart';
-import 'package:ecommerce/common/widget/custom_button.dart';
-import 'package:ecommerce/common/widget/custom_row.dart';
-import 'package:ecommerce/feature/account_management/deposit/domain/model/deposit_model.dart';
-import 'package:ecommerce/feature/account_management/deposit/logic/deposit_controller.dart';
-import 'package:ecommerce/feature/account_management/deposit/presentation/screen/create_new_deposit.dart';
-import 'package:ecommerce/helper/date_converter.dart';
-import 'package:ecommerce/helper/price_converter.dart';
-import 'package:ecommerce/util/dimensions.dart';
-import 'package:ecommerce/util/images.dart';
-import 'package:ecommerce/util/styles.dart';
+import 'package:mighty_job/common/widget/confirmation_dialog.dart';
+import 'package:mighty_job/common/widget/custom_bottom_sheet.dart';
+import 'package:mighty_job/common/widget/custom_button.dart';
+import 'package:mighty_job/common/widget/custom_row.dart';
+import 'package:mighty_job/feature/account_management/deposit/domain/model/deposit_model.dart';
+import 'package:mighty_job/feature/account_management/deposit/logic/deposit_controller.dart';
+import 'package:mighty_job/feature/account_management/deposit/presentation/screen/create_new_deposit.dart';
+import 'package:mighty_job/helper/date_converter.dart';
+import 'package:mighty_job/helper/price_converter.dart';
+import 'package:mighty_job/util/dimensions.dart';
+import 'package:mighty_job/util/images.dart';
+import 'package:mighty_job/util/styles.dart';
 
 class TransactionBottomSheet extends StatelessWidget {
   final DepositItem? depositItem;

@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
-import 'package:ecommerce/api_handle/api_checker.dart';
-import 'package:ecommerce/feature/notification/domain/model/notification_model.dart';
-import 'package:ecommerce/feature/notification/domain/repository/notification_repository.dart';
+import 'package:mighty_job/api_handle/api_checker.dart';
+import 'package:mighty_job/feature/notification/domain/model/notification_model.dart';
+import 'package:mighty_job/feature/notification/domain/repository/notification_repository.dart';
 
 class NotificationController extends GetxController implements GetxService{
   final NotificationRepository notificationRepository;

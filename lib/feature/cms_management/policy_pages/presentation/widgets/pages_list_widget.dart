@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/layout/list_layout_widget.dart';
-import 'package:ecommerce/feature/cms_management/policy_pages/domain/model/policy_model.dart';
-import 'package:ecommerce/feature/cms_management/policy_pages/logic/pages_controller.dart';
-import 'package:ecommerce/feature/cms_management/policy_pages/presentation/widgets/create_new_page_widget.dart';
-import 'package:ecommerce/feature/cms_management/policy_pages/presentation/widgets/page_item_widget.dart';
-import 'package:ecommerce/util/dimensions.dart';
+import 'package:mighty_job/common/layout/list_layout_widget.dart';
+import 'package:mighty_job/feature/cms_management/policy_pages/domain/model/policy_model.dart';
+import 'package:mighty_job/feature/cms_management/policy_pages/logic/pages_controller.dart';
+import 'package:mighty_job/feature/cms_management/policy_pages/presentation/widgets/create_new_page_widget.dart';
+import 'package:mighty_job/feature/cms_management/policy_pages/presentation/widgets/page_item_widget.dart';
+import 'package:mighty_job/util/dimensions.dart';
 
 class PagesListWidget extends StatelessWidget {
   final ScrollController scrollController;

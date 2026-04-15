@@ -1,9 +1,9 @@
-import 'package:ecommerce/helper/app_color_helper.dart';
+import 'package:mighty_job/helper/app_color_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/widget/custom_toggle_switch.dart';
-import 'package:ecommerce/feature/profile/domain/model/status_update_body.dart';
-import 'package:ecommerce/feature/profile/logic/profile_controller.dart';
+import 'package:mighty_job/common/widget/custom_toggle_switch.dart';
+import 'package:mighty_job/feature/profile/domain/model/status_update_body.dart';
+import 'package:mighty_job/feature/profile/logic/profile_controller.dart';
 
 
 class ActiveInActiveWidget extends StatelessWidget {

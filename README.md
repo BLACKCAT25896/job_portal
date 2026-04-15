@@ -1,4 +1,4 @@
-# ecommerce
+# mighty_job
 
 A new Flutter project.
 

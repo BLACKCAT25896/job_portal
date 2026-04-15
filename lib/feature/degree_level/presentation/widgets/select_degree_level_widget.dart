@@ -1,11 +1,11 @@
-import 'package:ecommerce/feature/career_level/controller/career_level_controller.dart';
-import 'package:ecommerce/feature/career_level/domain/models/career_level_model.dart';
-import 'package:ecommerce/feature/career_level/presentation/widgets/career_level_list_widget.dart';
+import 'package:mighty_job/feature/career_level/controller/career_level_controller.dart';
+import 'package:mighty_job/feature/career_level/domain/models/career_level_model.dart';
+import 'package:mighty_job/feature/career_level/presentation/widgets/career_level_list_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/widget/custom_title.dart';
-import 'package:ecommerce/common/widget/dropdown_with_search_widget.dart';
-import 'package:ecommerce/util/dimensions.dart';
+import 'package:mighty_job/common/widget/custom_title.dart';
+import 'package:mighty_job/common/widget/dropdown_with_search_widget.dart';
+import 'package:mighty_job/util/dimensions.dart';
 
 class SelectCareerLevelWidget extends StatefulWidget {
   const SelectCareerLevelWidget({super.key});

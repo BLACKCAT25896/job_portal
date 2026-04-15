@@ -1,13 +1,13 @@
-import 'package:ecommerce/api_handle/global_api_response_model.dart';
-import 'package:ecommerce/common/widget/paginated_list_widget.dart';
-import 'package:ecommerce/feature/profile/logic/profile_controller.dart';
+import 'package:mighty_job/api_handle/global_api_response_model.dart';
+import 'package:mighty_job/common/widget/paginated_list_widget.dart';
+import 'package:mighty_job/feature/profile/logic/profile_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/widget/no_data_found.dart';
-import 'package:ecommerce/feature/support_ticket/controllers/support_ticket_controller.dart';
-import 'package:ecommerce/feature/support_ticket/domain/models/support_reply_model.dart';
-import 'package:ecommerce/feature/support_ticket/widgets/support_ticket_reply_widget.dart';
-import 'package:ecommerce/helper/date_converter.dart';
+import 'package:mighty_job/common/widget/no_data_found.dart';
+import 'package:mighty_job/feature/support_ticket/controllers/support_ticket_controller.dart';
+import 'package:mighty_job/feature/support_ticket/domain/models/support_reply_model.dart';
+import 'package:mighty_job/feature/support_ticket/widgets/support_ticket_reply_widget.dart';
+import 'package:mighty_job/helper/date_converter.dart';
 
 class SupportTicketConversationWidget extends StatefulWidget {
   final String id;

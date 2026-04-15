@@ -1,11 +1,11 @@
-import 'package:ecommerce/common/layout/custom_dialog_widget.dart';
+import 'package:mighty_job/common/layout/custom_dialog_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/layout/list_layout_widget.dart';
-import 'package:ecommerce/feature/account_management/accounting/domain/model/account_model.dart';
-import 'package:ecommerce/feature/account_management/accounting/logic/account_controller.dart';
-import 'package:ecommerce/feature/account_management/accounting/presentation/widgets/account_item_widget.dart';
-import 'package:ecommerce/feature/account_management/accounting/presentation/widgets/create_new_account_widget.dart';
+import 'package:mighty_job/common/layout/list_layout_widget.dart';
+import 'package:mighty_job/feature/account_management/accounting/domain/model/account_model.dart';
+import 'package:mighty_job/feature/account_management/accounting/logic/account_controller.dart';
+import 'package:mighty_job/feature/account_management/accounting/presentation/widgets/account_item_widget.dart';
+import 'package:mighty_job/feature/account_management/accounting/presentation/widgets/create_new_account_widget.dart';
 
 class AccountListWidget extends StatelessWidget {
   final ScrollController scrollController;

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:ecommerce/common/widget/custom_contaner.dart';
-import 'package:ecommerce/feature/account_management/expense_category/domain/model/expense_category_model.dart';
-import 'package:ecommerce/helper/date_converter.dart';
-import 'package:ecommerce/helper/price_converter.dart';
-import 'package:ecommerce/helper/responsive_helper.dart';
-import 'package:ecommerce/util/dimensions.dart';
-import 'package:ecommerce/util/images.dart';
-import 'package:ecommerce/util/styles.dart';
+import 'package:mighty_job/common/widget/custom_contaner.dart';
+import 'package:mighty_job/feature/account_management/expense_category/domain/model/expense_category_model.dart';
+import 'package:mighty_job/helper/date_converter.dart';
+import 'package:mighty_job/helper/price_converter.dart';
+import 'package:mighty_job/helper/responsive_helper.dart';
+import 'package:mighty_job/util/dimensions.dart';
+import 'package:mighty_job/util/images.dart';
+import 'package:mighty_job/util/styles.dart';
 
 class CategoryWiseExpenseWidget extends StatelessWidget {
   final Expenses? expenseItem;

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/layout/list_layout_widget.dart';
-import 'package:ecommerce/feature/report_management/domain/model/opening_stock_report_model.dart';
-import 'package:ecommerce/feature/report_management/logic/report_controller.dart';
-import 'package:ecommerce/feature/report_management/presentation/opening_stock_report/opening_stock_report_item_widget.dart';
+import 'package:mighty_job/common/layout/list_layout_widget.dart';
+import 'package:mighty_job/feature/report_management/domain/model/opening_stock_report_model.dart';
+import 'package:mighty_job/feature/report_management/logic/report_controller.dart';
+import 'package:mighty_job/feature/report_management/presentation/opening_stock_report/opening_stock_report_item_widget.dart';
 
 class OpeningStockReportListWidget extends StatelessWidget {
   final ScrollController scrollController;

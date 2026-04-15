@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/widget/custom_image.dart';
+import 'package:mighty_job/common/widget/custom_image.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ImageDialog extends StatelessWidget {

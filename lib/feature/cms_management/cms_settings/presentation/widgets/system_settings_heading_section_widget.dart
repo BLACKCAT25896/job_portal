@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/feature/cms_management/cms_settings/controller/system_settngs_controller.dart';
-import 'package:ecommerce/feature/cms_management/cms_settings/presentation/widgets/heading_type_button_widget.dart';
-import 'package:ecommerce/util/dimensions.dart';
+import 'package:mighty_job/feature/cms_management/cms_settings/controller/system_settngs_controller.dart';
+import 'package:mighty_job/feature/cms_management/cms_settings/presentation/widgets/heading_type_button_widget.dart';
+import 'package:mighty_job/util/dimensions.dart';
 
 class SystemSettingsHeadingSectionWidget extends StatelessWidget {
   const SystemSettingsHeadingSectionWidget({super.key});

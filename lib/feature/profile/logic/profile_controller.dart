@@ -1,11 +1,11 @@
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:ecommerce/api_handle/api_checker.dart';
-import 'package:ecommerce/common/widget/custom_snackbar.dart';
-import 'package:ecommerce/feature/profile/domain/model/profile_model.dart';
-import 'package:ecommerce/feature/profile/domain/model/status_update_body.dart';
-import 'package:ecommerce/feature/profile/domain/repository/profile_repository.dart';
-import 'package:ecommerce/feature/side_menu/side_menu_controller.dart';
+import 'package:mighty_job/api_handle/api_checker.dart';
+import 'package:mighty_job/common/widget/custom_snackbar.dart';
+import 'package:mighty_job/feature/profile/domain/model/profile_model.dart';
+import 'package:mighty_job/feature/profile/domain/model/status_update_body.dart';
+import 'package:mighty_job/feature/profile/domain/repository/profile_repository.dart';
+import 'package:mighty_job/feature/side_menu/side_menu_controller.dart';
 
 class ProfileController extends GetxController implements GetxService{
   final ProfileRepository profileRepository;

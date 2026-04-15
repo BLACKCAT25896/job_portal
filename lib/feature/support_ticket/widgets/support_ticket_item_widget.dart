@@ -1,20 +1,20 @@
-import 'package:ecommerce/common/widget/custom_popup_menu.dart';
-import 'package:ecommerce/common/widget/custom_text_item_widget.dart';
-import 'package:ecommerce/common/widget/numbering_widget.dart';
-import 'package:ecommerce/feature/dashboard/controller/dashboard_controller.dart';
-import 'package:ecommerce/helper/app_color_helper.dart';
-import 'package:ecommerce/helper/responsive_helper.dart';
+import 'package:mighty_job/common/widget/custom_popup_menu.dart';
+import 'package:mighty_job/common/widget/custom_text_item_widget.dart';
+import 'package:mighty_job/common/widget/numbering_widget.dart';
+import 'package:mighty_job/feature/dashboard/controller/dashboard_controller.dart';
+import 'package:mighty_job/helper/app_color_helper.dart';
+import 'package:mighty_job/helper/responsive_helper.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/widget/confirmation_dialog.dart';
-import 'package:ecommerce/feature/support_ticket/controllers/support_ticket_controller.dart';
-import 'package:ecommerce/feature/support_ticket/domain/models/support_ticket_model.dart';
-import 'package:ecommerce/helper/date_converter.dart';
-import 'package:ecommerce/helper/route_helper.dart';
-import 'package:ecommerce/util/dimensions.dart';
-import 'package:ecommerce/util/styles.dart';
+import 'package:mighty_job/common/widget/confirmation_dialog.dart';
+import 'package:mighty_job/feature/support_ticket/controllers/support_ticket_controller.dart';
+import 'package:mighty_job/feature/support_ticket/domain/models/support_ticket_model.dart';
+import 'package:mighty_job/helper/date_converter.dart';
+import 'package:mighty_job/helper/route_helper.dart';
+import 'package:mighty_job/util/dimensions.dart';
+import 'package:mighty_job/util/styles.dart';
 
 
 class SupportTicketItemWidget extends StatelessWidget {

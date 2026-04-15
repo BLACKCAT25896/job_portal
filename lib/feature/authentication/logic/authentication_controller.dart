@@ -1,11 +1,11 @@
 import 'dart:developer';
 
 import 'package:get/get.dart';
-import 'package:ecommerce/api_handle/api_checker.dart';
-import 'package:ecommerce/feature/authentication/domain/model/user_role_permission_model.dart';
-import 'package:ecommerce/feature/authentication/domain/repository/authentication_repository.dart';
-import 'package:ecommerce/feature/profile/logic/profile_controller.dart';
-import 'package:ecommerce/helper/route_helper.dart';
+import 'package:mighty_job/api_handle/api_checker.dart';
+import 'package:mighty_job/feature/authentication/domain/model/user_role_permission_model.dart';
+import 'package:mighty_job/feature/authentication/domain/repository/authentication_repository.dart';
+import 'package:mighty_job/feature/profile/logic/profile_controller.dart';
+import 'package:mighty_job/helper/route_helper.dart';
 
 class AuthenticationController extends GetxController implements GetxService{
   final AuthenticationRepository authenticationRepository;

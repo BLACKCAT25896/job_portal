@@ -1,10 +1,10 @@
 import 'dart:developer';
 import 'dart:io';
-import 'package:ecommerce/api_handle/api_checker.dart';
-import 'package:ecommerce/common/widget/custom_snackbar.dart';
-import 'package:ecommerce/feature/inventory/brand/domain/models/brand_model.dart';
-import 'package:ecommerce/feature/inventory/brand/domain/repository/brand_repository.dart';
-import 'package:ecommerce/helper/image_size_checker.dart';
+import 'package:mighty_job/api_handle/api_checker.dart';
+import 'package:mighty_job/common/widget/custom_snackbar.dart';
+import 'package:mighty_job/feature/inventory/brand/domain/models/brand_model.dart';
+import 'package:mighty_job/feature/inventory/brand/domain/repository/brand_repository.dart';
+import 'package:mighty_job/helper/image_size_checker.dart';
 import 'package:flutter_image_compress/flutter_image_compress.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';

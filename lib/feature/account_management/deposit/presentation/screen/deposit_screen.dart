@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/global_widget/custom_web_scroll_view_widget.dart';
-import 'package:ecommerce/common/widget/custom_app_bar.dart';
-import 'package:ecommerce/common/widget/custom_bottom_navigation_button.dart';
-import 'package:ecommerce/feature/account_management/deposit/logic/deposit_controller.dart';
-import 'package:ecommerce/feature/account_management/deposit/presentation/screen/create_new_deposit.dart';
-import 'package:ecommerce/feature/account_management/deposit/presentation/widgets/deposit_list_widget.dart';
+import 'package:mighty_job/common/global_widget/custom_web_scroll_view_widget.dart';
+import 'package:mighty_job/common/widget/custom_app_bar.dart';
+import 'package:mighty_job/common/widget/custom_bottom_navigation_button.dart';
+import 'package:mighty_job/feature/account_management/deposit/logic/deposit_controller.dart';
+import 'package:mighty_job/feature/account_management/deposit/presentation/screen/create_new_deposit.dart';
+import 'package:mighty_job/feature/account_management/deposit/presentation/widgets/deposit_list_widget.dart';
 
 class DepositScreen extends StatefulWidget {
   const DepositScreen({super.key});

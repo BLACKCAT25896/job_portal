@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/util/dimensions.dart';
+import 'package:mighty_job/util/dimensions.dart';
 
 class CustomBottomSheet extends StatelessWidget {
   final Widget child;

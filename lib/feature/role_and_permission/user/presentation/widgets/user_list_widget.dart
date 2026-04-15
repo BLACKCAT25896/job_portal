@@ -1,12 +1,12 @@
-import 'package:ecommerce/common/layout/custom_dialog_widget.dart';
-import 'package:ecommerce/feature/role_and_permission/user/presentation/widgets/create_new_user_widget.dart';
+import 'package:mighty_job/common/layout/custom_dialog_widget.dart';
+import 'package:mighty_job/feature/role_and_permission/user/presentation/widgets/create_new_user_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/layout/list_layout_widget.dart';
-import 'package:ecommerce/feature/role_and_permission/role/presentation/widgets/select_roll_widget.dart';
-import 'package:ecommerce/feature/role_and_permission/user/controller/user_controller.dart';
-import 'package:ecommerce/feature/role_and_permission/user/domain/models/user_model.dart';
-import 'package:ecommerce/feature/role_and_permission/user/presentation/widgets/user_item_widget.dart';
+import 'package:mighty_job/common/layout/list_layout_widget.dart';
+import 'package:mighty_job/feature/role_and_permission/role/presentation/widgets/select_roll_widget.dart';
+import 'package:mighty_job/feature/role_and_permission/user/controller/user_controller.dart';
+import 'package:mighty_job/feature/role_and_permission/user/domain/models/user_model.dart';
+import 'package:mighty_job/feature/role_and_permission/user/presentation/widgets/user_item_widget.dart';
 
 class UserListWidget extends StatelessWidget {
   final ScrollController scrollController;

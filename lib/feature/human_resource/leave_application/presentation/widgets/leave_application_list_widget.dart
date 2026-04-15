@@ -1,11 +1,11 @@
-import 'package:ecommerce/common/layout/custom_dialog_widget.dart';
-import 'package:ecommerce/feature/human_resource/leave_application/presentation/widgets/create_new_leave_application_widget.dart';
+import 'package:mighty_job/common/layout/custom_dialog_widget.dart';
+import 'package:mighty_job/feature/human_resource/leave_application/presentation/widgets/create_new_leave_application_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/layout/list_layout_widget.dart';
-import 'package:ecommerce/feature/human_resource/leave_application/controller/leave_application_controller.dart';
-import 'package:ecommerce/feature/human_resource/leave_application/domain/models/leave_application_model.dart';
-import 'package:ecommerce/feature/human_resource/leave_application/presentation/widgets/leave_application_item_widget.dart';
+import 'package:mighty_job/common/layout/list_layout_widget.dart';
+import 'package:mighty_job/feature/human_resource/leave_application/controller/leave_application_controller.dart';
+import 'package:mighty_job/feature/human_resource/leave_application/domain/models/leave_application_model.dart';
+import 'package:mighty_job/feature/human_resource/leave_application/presentation/widgets/leave_application_item_widget.dart';
 
 class LeaveApplicationListWidget extends StatelessWidget {
   final ScrollController scrollController;

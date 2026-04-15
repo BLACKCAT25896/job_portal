@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ecommerce/util/dimensions.dart';
+import 'package:mighty_job/util/dimensions.dart';
 
 class CustomIndicator extends StatelessWidget {
   final int index;

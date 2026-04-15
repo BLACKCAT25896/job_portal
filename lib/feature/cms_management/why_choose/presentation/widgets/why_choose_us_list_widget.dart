@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/layout/list_layout_widget.dart';
-import 'package:ecommerce/feature/cms_management/why_choose/domain/model/why_choose_model.dart';
-import 'package:ecommerce/feature/cms_management/why_choose/logic/why_choose_controller.dart';
-import 'package:ecommerce/feature/cms_management/why_choose/presentation/widgets/why_choose_us_item_widget.dart';
-import 'package:ecommerce/feature/cms_management/why_choose/presentation/widgets/create_new_why_choose_us_widget.dart';
-import 'package:ecommerce/util/dimensions.dart';
+import 'package:mighty_job/common/layout/list_layout_widget.dart';
+import 'package:mighty_job/feature/cms_management/why_choose/domain/model/why_choose_model.dart';
+import 'package:mighty_job/feature/cms_management/why_choose/logic/why_choose_controller.dart';
+import 'package:mighty_job/feature/cms_management/why_choose/presentation/widgets/why_choose_us_item_widget.dart';
+import 'package:mighty_job/feature/cms_management/why_choose/presentation/widgets/create_new_why_choose_us_widget.dart';
+import 'package:mighty_job/util/dimensions.dart';
 
 class WhyChooseUsListWidget extends StatelessWidget {
   final ScrollController scrollController;

@@ -1,9 +1,9 @@
-import 'package:ecommerce/common/widget/custom_dropdown.dart';
-import 'package:ecommerce/feature/human_resource/recruitment/controller/recruitment_controller.dart';
+import 'package:mighty_job/common/widget/custom_dropdown.dart';
+import 'package:mighty_job/feature/human_resource/recruitment/controller/recruitment_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/widget/custom_title.dart';
-import 'package:ecommerce/util/dimensions.dart';
+import 'package:mighty_job/common/widget/custom_title.dart';
+import 'package:mighty_job/util/dimensions.dart';
 
 class SelectJobTypeWidget extends StatefulWidget {
   const SelectJobTypeWidget({super.key});

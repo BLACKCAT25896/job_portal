@@ -1,15 +1,15 @@
-import 'package:ecommerce/common/widget/custom_checkbox.dart';
-import 'package:ecommerce/common/widget/responsive_grid_widget.dart';
-import 'package:ecommerce/feature/human_resource/leave_type/domain/models/leave_type_body.dart';
-import 'package:ecommerce/util/app_constants.dart';
+import 'package:mighty_job/common/widget/custom_checkbox.dart';
+import 'package:mighty_job/common/widget/responsive_grid_widget.dart';
+import 'package:mighty_job/feature/human_resource/leave_type/domain/models/leave_type_body.dart';
+import 'package:mighty_job/util/app_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/widget/custom_button.dart';
-import 'package:ecommerce/common/widget/custom_snackbar.dart';
-import 'package:ecommerce/common/widget/custom_text_field.dart';
-import 'package:ecommerce/feature/human_resource/leave_type/controller/leave_type_controller.dart';
-import 'package:ecommerce/feature/human_resource/leave_type/domain/models/leave_type_model.dart';
-import 'package:ecommerce/util/dimensions.dart';
+import 'package:mighty_job/common/widget/custom_button.dart';
+import 'package:mighty_job/common/widget/custom_snackbar.dart';
+import 'package:mighty_job/common/widget/custom_text_field.dart';
+import 'package:mighty_job/feature/human_resource/leave_type/controller/leave_type_controller.dart';
+import 'package:mighty_job/feature/human_resource/leave_type/domain/models/leave_type_model.dart';
+import 'package:mighty_job/util/dimensions.dart';
 
 class CreateNewLeaveTypeScreen extends StatefulWidget {
   final LeaveTypeItem? leaveTypeItem;

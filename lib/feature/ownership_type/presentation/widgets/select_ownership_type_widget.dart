@@ -1,11 +1,11 @@
-import 'package:ecommerce/feature/ownership_type/controller/ownership_type_controller.dart';
-import 'package:ecommerce/feature/ownership_type/domain/models/ownership_type_model.dart';
-import 'package:ecommerce/feature/ownership_type/presentation/widgets/ownership_type_list_widget.dart';
+import 'package:mighty_job/feature/ownership_type/controller/ownership_type_controller.dart';
+import 'package:mighty_job/feature/ownership_type/domain/models/ownership_type_model.dart';
+import 'package:mighty_job/feature/ownership_type/presentation/widgets/ownership_type_list_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/widget/custom_title.dart';
-import 'package:ecommerce/common/widget/dropdown_with_search_widget.dart';
-import 'package:ecommerce/util/dimensions.dart';
+import 'package:mighty_job/common/widget/custom_title.dart';
+import 'package:mighty_job/common/widget/dropdown_with_search_widget.dart';
+import 'package:mighty_job/util/dimensions.dart';
 
 class SelectOwnershipTypeWidget extends StatefulWidget {
   const SelectOwnershipTypeWidget({super.key});

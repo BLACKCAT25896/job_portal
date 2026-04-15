@@ -1,12 +1,12 @@
-import 'package:ecommerce/common/widget/image_picker_widget.dart';
-import 'package:ecommerce/util/app_constants.dart';
+import 'package:mighty_job/common/widget/image_picker_widget.dart';
+import 'package:mighty_job/util/app_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/widget/custom_button.dart';
-import 'package:ecommerce/common/widget/custom_text_field.dart';
-import 'package:ecommerce/feature/cms_management/explore/domain/model/explore_model.dart';
-import 'package:ecommerce/feature/cms_management/explore/logic/explore_controller.dart';
-import 'package:ecommerce/util/dimensions.dart';
+import 'package:mighty_job/common/widget/custom_button.dart';
+import 'package:mighty_job/common/widget/custom_text_field.dart';
+import 'package:mighty_job/feature/cms_management/explore/domain/model/explore_model.dart';
+import 'package:mighty_job/feature/cms_management/explore/logic/explore_controller.dart';
+import 'package:mighty_job/util/dimensions.dart';
 
 class CreateNewExploreWidget extends StatefulWidget {
   final ExploreItem? exploreItem;

@@ -1,9 +1,9 @@
-import 'package:ecommerce/feature/inventory/unit_measurement/logic/unit_controller.dart';
+import 'package:mighty_job/feature/inventory/unit_measurement/logic/unit_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/widget/custom_title.dart';
-import 'package:ecommerce/util/dimensions.dart';
-import 'package:ecommerce/common/widget/custom_generic_dropdown.dart';
+import 'package:mighty_job/common/widget/custom_title.dart';
+import 'package:mighty_job/util/dimensions.dart';
+import 'package:mighty_job/common/widget/custom_generic_dropdown.dart';
 
 class SelectUnitWidget extends StatefulWidget {
   const SelectUnitWidget({super.key});

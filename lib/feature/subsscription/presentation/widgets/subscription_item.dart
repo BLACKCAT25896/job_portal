@@ -1,13 +1,13 @@
-import 'package:ecommerce/feature/subsscription/presentation/widgets/subscription_button_widget.dart';
-import 'package:ecommerce/helper/app_color_helper.dart';
+import 'package:mighty_job/feature/subsscription/presentation/widgets/subscription_button_widget.dart';
+import 'package:mighty_job/helper/app_color_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/widget/custom_contaner.dart';
-import 'package:ecommerce/feature/subsscription/controller/subscription_controller.dart';
-import 'package:ecommerce/feature/subsscription/domain/models/package_model.dart';
-import 'package:ecommerce/helper/price_converter.dart';
-import 'package:ecommerce/util/dimensions.dart';
-import 'package:ecommerce/util/styles.dart';
+import 'package:mighty_job/common/widget/custom_contaner.dart';
+import 'package:mighty_job/feature/subsscription/controller/subscription_controller.dart';
+import 'package:mighty_job/feature/subsscription/domain/models/package_model.dart';
+import 'package:mighty_job/helper/price_converter.dart';
+import 'package:mighty_job/util/dimensions.dart';
+import 'package:mighty_job/util/styles.dart';
 
 class SubscriptionItem extends StatelessWidget {
   final int index;

@@ -1,16 +1,16 @@
-import 'package:ecommerce/helper/app_color_helper.dart';
+import 'package:mighty_job/helper/app_color_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/controller/theme_controller.dart';
-import 'package:ecommerce/common/widget/app_bar_widget.dart';
-import 'package:ecommerce/common/widget/body_widget.dart';
-import 'package:ecommerce/common/widget/custom_contaner.dart';
-import 'package:ecommerce/common/widget/custom_image.dart';
-import 'package:ecommerce/common/widget/sun_switch_widget.dart';
-import 'package:ecommerce/feature/profile/presentation/widgets/profile_menu_item_widget.dart';
-import 'package:ecommerce/util/dimensions.dart';
-import 'package:ecommerce/util/images.dart';
-import 'package:ecommerce/util/styles.dart';
+import 'package:mighty_job/common/controller/theme_controller.dart';
+import 'package:mighty_job/common/widget/app_bar_widget.dart';
+import 'package:mighty_job/common/widget/body_widget.dart';
+import 'package:mighty_job/common/widget/custom_contaner.dart';
+import 'package:mighty_job/common/widget/custom_image.dart';
+import 'package:mighty_job/common/widget/sun_switch_widget.dart';
+import 'package:mighty_job/feature/profile/presentation/widgets/profile_menu_item_widget.dart';
+import 'package:mighty_job/util/dimensions.dart';
+import 'package:mighty_job/util/images.dart';
+import 'package:mighty_job/util/styles.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});

@@ -2,11 +2,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/widget/custom_button.dart';
-import 'package:ecommerce/common/widget/custom_contaner.dart';
-import 'package:ecommerce/common/widget/date_selection_widget.dart';
-import 'package:ecommerce/feature/sms/sent_sms/logic/sent_sms_controller.dart';
-import 'package:ecommerce/util/dimensions.dart';
+import 'package:mighty_job/common/widget/custom_button.dart';
+import 'package:mighty_job/common/widget/custom_contaner.dart';
+import 'package:mighty_job/common/widget/date_selection_widget.dart';
+import 'package:mighty_job/feature/sms/sent_sms/logic/sent_sms_controller.dart';
+import 'package:mighty_job/util/dimensions.dart';
 
 class SearchSmsReportWidget extends StatelessWidget {
   const SearchSmsReportWidget({super.key});

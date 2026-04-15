@@ -1,10 +1,10 @@
-import 'package:ecommerce/feature/human_resource/interview/domain/models/interview_body.dart';
+import 'package:mighty_job/feature/human_resource/interview/domain/models/interview_body.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/api_handle/api_checker.dart';
-import 'package:ecommerce/api_handle/global_api_response_model.dart';
-import 'package:ecommerce/common/widget/custom_snackbar.dart';
-import 'package:ecommerce/feature/human_resource/interview/domain/models/interview_model.dart';
-import 'package:ecommerce/feature/human_resource/interview/domain/repository/interview_repository.dart';
+import 'package:mighty_job/api_handle/api_checker.dart';
+import 'package:mighty_job/api_handle/global_api_response_model.dart';
+import 'package:mighty_job/common/widget/custom_snackbar.dart';
+import 'package:mighty_job/feature/human_resource/interview/domain/models/interview_model.dart';
+import 'package:mighty_job/feature/human_resource/interview/domain/repository/interview_repository.dart';
 
 class InterviewController extends GetxController implements GetxService{
   final InterviewRepository interviewRepository;

@@ -1,11 +1,11 @@
 import 'package:get/get.dart';
-import 'package:ecommerce/api_handle/api_checker.dart';
-import 'package:ecommerce/api_handle/global_api_response_model.dart';
-import 'package:ecommerce/common/controller/date_picker_controller.dart';
-import 'package:ecommerce/feature/report_management/domain/model/dashboard_report_data_model.dart';
-import 'package:ecommerce/feature/report_management/domain/model/opening_stock_report_model.dart';
-import 'package:ecommerce/feature/report_management/domain/model/stock_report_model.dart';
-import 'package:ecommerce/feature/report_management/domain/repository/report_repository.dart';
+import 'package:mighty_job/api_handle/api_checker.dart';
+import 'package:mighty_job/api_handle/global_api_response_model.dart';
+import 'package:mighty_job/common/controller/date_picker_controller.dart';
+import 'package:mighty_job/feature/report_management/domain/model/dashboard_report_data_model.dart';
+import 'package:mighty_job/feature/report_management/domain/model/opening_stock_report_model.dart';
+import 'package:mighty_job/feature/report_management/domain/model/stock_report_model.dart';
+import 'package:mighty_job/feature/report_management/domain/repository/report_repository.dart';
 
 class ReportController extends GetxController implements GetxService{
   final ReportRepository reportRepository;

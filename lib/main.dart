@@ -4,19 +4,19 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:meta_seo/meta_seo.dart';
-import 'package:ecommerce/common/controller/network_controller.dart';
+import 'package:mighty_job/common/controller/network_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/controller/route_controller.dart';
-import 'package:ecommerce/common/controller/theme_controller.dart';
-import 'package:ecommerce/common/model/messages.dart';
-import 'package:ecommerce/helper/di_container.dart';
-import 'package:ecommerce/helper/notification_helper.dart';
-import 'package:ecommerce/helper/route_helper.dart';
-import 'package:ecommerce/localization/localization_controller.dart';
-import 'package:ecommerce/theme/dark_theme.dart';
-import 'package:ecommerce/theme/light_theme.dart';
-import 'package:ecommerce/util/app_constants.dart';
+import 'package:mighty_job/common/controller/route_controller.dart';
+import 'package:mighty_job/common/controller/theme_controller.dart';
+import 'package:mighty_job/common/model/messages.dart';
+import 'package:mighty_job/helper/di_container.dart';
+import 'package:mighty_job/helper/notification_helper.dart';
+import 'package:mighty_job/helper/route_helper.dart';
+import 'package:mighty_job/localization/localization_controller.dart';
+import 'package:mighty_job/theme/dark_theme.dart';
+import 'package:mighty_job/theme/light_theme.dart';
+import 'package:mighty_job/util/app_constants.dart';
 import 'package:toastification/toastification.dart';
 import 'package:url_strategy/url_strategy.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -34,9 +34,9 @@ Future<void> main() async {
   if(GetPlatform.isWeb){
     await Firebase.initializeApp(options: const FirebaseOptions(
         apiKey: "AIzaSyCifalK_uMJydVsJqvNb7d9tDUDpWj3Qr0",
-        authDomain: "mighty-ecommerce.firebaseapp.com",
-        projectId: "mighty-ecommerce",
-        storageBucket: "mighty-ecommerce.firebasestorage.app",
+        authDomain: "mighty-mighty_job.firebaseapp.com",
+        projectId: "mighty-mighty_job",
+        storageBucket: "mighty-mighty_job.firebasestorage.app",
         messagingSenderId: "789305924846",
         appId: "1:789305924846:web:9f2e1784494c17179f27ff",
         measurementId: "G-BN99TFSDXJ"

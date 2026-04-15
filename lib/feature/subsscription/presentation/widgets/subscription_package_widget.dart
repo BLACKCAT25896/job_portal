@@ -1,17 +1,17 @@
-import 'package:ecommerce/common/widget/custom_divider.dart';
-import 'package:ecommerce/feature/subsscription/presentation/widgets/package_name_title.dart';
-import 'package:ecommerce/feature/subsscription/presentation/widgets/subscription_feature_item.dart';
-import 'package:ecommerce/feature/subsscription/presentation/widgets/unicorn_outline_border.dart';
-import 'package:ecommerce/helper/app_color_helper.dart';
-import 'package:ecommerce/helper/responsive_helper.dart';
-import 'package:ecommerce/util/styles.dart';
+import 'package:mighty_job/common/widget/custom_divider.dart';
+import 'package:mighty_job/feature/subsscription/presentation/widgets/package_name_title.dart';
+import 'package:mighty_job/feature/subsscription/presentation/widgets/subscription_feature_item.dart';
+import 'package:mighty_job/feature/subsscription/presentation/widgets/unicorn_outline_border.dart';
+import 'package:mighty_job/helper/app_color_helper.dart';
+import 'package:mighty_job/helper/responsive_helper.dart';
+import 'package:mighty_job/util/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/feature/subsscription/controller/subscription_controller.dart';
-import 'package:ecommerce/feature/subsscription/domain/models/package_model.dart';
-import 'package:ecommerce/feature/subsscription/presentation/widgets/subscription_item.dart';
-import 'package:ecommerce/util/dimensions.dart';
+import 'package:mighty_job/feature/subsscription/controller/subscription_controller.dart';
+import 'package:mighty_job/feature/subsscription/domain/models/package_model.dart';
+import 'package:mighty_job/feature/subsscription/presentation/widgets/subscription_item.dart';
+import 'package:mighty_job/util/dimensions.dart';
 
 class SubscriptionPackageWidget extends StatelessWidget {
   const SubscriptionPackageWidget({super.key});

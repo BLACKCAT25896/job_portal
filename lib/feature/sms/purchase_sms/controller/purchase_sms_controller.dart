@@ -1,9 +1,9 @@
 import 'package:get/get.dart';
-import 'package:ecommerce/api_handle/api_checker.dart';
-import 'package:ecommerce/common/widget/custom_snackbar.dart';
-import 'package:ecommerce/feature/sms/purchase_sms/domain/models/purchase_sms_body.dart';
-import 'package:ecommerce/feature/sms/purchase_sms/domain/models/purchase_sms_model.dart';
-import 'package:ecommerce/feature/sms/purchase_sms/domain/repository/purchase_sms_repository.dart';
+import 'package:mighty_job/api_handle/api_checker.dart';
+import 'package:mighty_job/common/widget/custom_snackbar.dart';
+import 'package:mighty_job/feature/sms/purchase_sms/domain/models/purchase_sms_body.dart';
+import 'package:mighty_job/feature/sms/purchase_sms/domain/models/purchase_sms_model.dart';
+import 'package:mighty_job/feature/sms/purchase_sms/domain/repository/purchase_sms_repository.dart';
 
 class PurchaseSmsController extends GetxController implements GetxService{
   final PurchaseSmsRepository purchaseSmsRepository;

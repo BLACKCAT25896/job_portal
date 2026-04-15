@@ -1,11 +1,11 @@
-import 'package:ecommerce/helper/app_color_helper.dart';
-import 'package:ecommerce/helper/responsive_helper.dart';
-import 'package:ecommerce/util/dimensions.dart';
+import 'package:mighty_job/helper/app_color_helper.dart';
+import 'package:mighty_job/helper/responsive_helper.dart';
+import 'package:mighty_job/util/dimensions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/widget/custom_contaner.dart';
-import 'package:ecommerce/feature/authentication/logic/authentication_controller.dart';
-import 'package:ecommerce/helper/route_helper.dart';
+import 'package:mighty_job/common/widget/custom_contaner.dart';
+import 'package:mighty_job/feature/authentication/logic/authentication_controller.dart';
+import 'package:mighty_job/helper/route_helper.dart';
 
 import '../widgets/login_widget.dart';
 

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/model/popup_menu_model.dart';
-import 'package:ecommerce/feature/dashboard/model/navigation_model.dart';
-import 'package:ecommerce/feature/home/presentation/screens/home_screen.dart';
-import 'package:ecommerce/feature/side_menu/presentation/more_screen.dart';
-import 'package:ecommerce/helper/responsive_helper.dart';
-import 'package:ecommerce/util/images.dart';
+import 'package:mighty_job/common/model/popup_menu_model.dart';
+import 'package:mighty_job/feature/dashboard/model/navigation_model.dart';
+import 'package:mighty_job/feature/home/presentation/screens/home_screen.dart';
+import 'package:mighty_job/feature/side_menu/presentation/more_screen.dart';
+import 'package:mighty_job/helper/responsive_helper.dart';
+import 'package:mighty_job/util/images.dart';
 
 class DashboardController extends GetxController implements GetxService{
   int _currentTab = 0;

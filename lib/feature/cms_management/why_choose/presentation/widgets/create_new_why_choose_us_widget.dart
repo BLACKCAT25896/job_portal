@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/widget/custom_button.dart';
-import 'package:ecommerce/common/widget/custom_text_field.dart';
-import 'package:ecommerce/common/widget/image_picker_widget.dart';
-import 'package:ecommerce/feature/cms_management/why_choose/domain/model/why_choose_body.dart';
-import 'package:ecommerce/feature/cms_management/why_choose/domain/model/why_choose_model.dart';
-import 'package:ecommerce/feature/cms_management/why_choose/logic/why_choose_controller.dart';
-import 'package:ecommerce/util/app_constants.dart';
-import 'package:ecommerce/util/dimensions.dart';
+import 'package:mighty_job/common/widget/custom_button.dart';
+import 'package:mighty_job/common/widget/custom_text_field.dart';
+import 'package:mighty_job/common/widget/image_picker_widget.dart';
+import 'package:mighty_job/feature/cms_management/why_choose/domain/model/why_choose_body.dart';
+import 'package:mighty_job/feature/cms_management/why_choose/domain/model/why_choose_model.dart';
+import 'package:mighty_job/feature/cms_management/why_choose/logic/why_choose_controller.dart';
+import 'package:mighty_job/util/app_constants.dart';
+import 'package:mighty_job/util/dimensions.dart';
 
 class CreateNewWhyChooseUsWidget extends StatefulWidget {
   final WhyChooseItem? whyChooseUsItem;

@@ -1,14 +1,14 @@
 class ImageSettingModel {
   bool? status;
   String? message;
-  EcommerceImageSettingItem? data;
+  mighty_jobImageSettingItem? data;
 
   ImageSettingModel({this.status, this.message, this.data});
 
   ImageSettingModel.fromJson(Map<String, dynamic> json) {
     status = json['status'];
     message = json['message'];
-    data = json['data'] != null ? EcommerceImageSettingItem.fromJson(json['data']) : null;
+    data = json['data'] != null ? mighty_jobImageSettingItem.fromJson(json['data']) : null;
   }
 
   Map<String, dynamic> toJson() {
@@ -22,21 +22,21 @@ class ImageSettingModel {
   }
 }
 
-class EcommerceImageSettingItem {
+class mighty_jobImageSettingItem {
   int? id;
   String? headerLogoLightTheme;
   String? headerLogoDarkTheme;
   String? footerLogoLightTheme;
   String? footerLogoDarkTheme;
 
-  EcommerceImageSettingItem(
+  mighty_jobImageSettingItem(
       {this.id,
         this.headerLogoLightTheme,
         this.headerLogoDarkTheme,
         this.footerLogoLightTheme,
         this.footerLogoDarkTheme,});
 
-  EcommerceImageSettingItem.fromJson(Map<String, dynamic> json) {
+  mighty_jobImageSettingItem.fromJson(Map<String, dynamic> json) {
     id = json['id'];
     headerLogoLightTheme = json['header_logo_light_theme'];
     headerLogoDarkTheme = json['header_logo_dark_theme'];

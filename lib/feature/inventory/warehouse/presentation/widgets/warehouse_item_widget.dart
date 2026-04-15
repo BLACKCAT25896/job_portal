@@ -1,17 +1,17 @@
-import 'package:ecommerce/common/layout/custom_dialog_widget.dart';
-import 'package:ecommerce/feature/inventory/warehouse/domain/model/warehouse_model.dart';
-import 'package:ecommerce/feature/inventory/warehouse/logic/warehouse_controller.dart';
-import 'package:ecommerce/feature/inventory/warehouse/presentation/widgets/create_new_warehouse_widget.dart';
+import 'package:mighty_job/common/layout/custom_dialog_widget.dart';
+import 'package:mighty_job/feature/inventory/warehouse/domain/model/warehouse_model.dart';
+import 'package:mighty_job/feature/inventory/warehouse/logic/warehouse_controller.dart';
+import 'package:mighty_job/feature/inventory/warehouse/presentation/widgets/create_new_warehouse_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/widget/active_inactive_widget.dart';
-import 'package:ecommerce/common/widget/confirmation_dialog.dart';
-import 'package:ecommerce/common/widget/custom_contaner.dart';
-import 'package:ecommerce/common/widget/custom_text_item_widget.dart';
-import 'package:ecommerce/common/widget/edit_delete_popup_widget.dart';
-import 'package:ecommerce/common/widget/numbering_widget.dart';
-import 'package:ecommerce/helper/responsive_helper.dart';
-import 'package:ecommerce/util/dimensions.dart';
+import 'package:mighty_job/common/widget/active_inactive_widget.dart';
+import 'package:mighty_job/common/widget/confirmation_dialog.dart';
+import 'package:mighty_job/common/widget/custom_contaner.dart';
+import 'package:mighty_job/common/widget/custom_text_item_widget.dart';
+import 'package:mighty_job/common/widget/edit_delete_popup_widget.dart';
+import 'package:mighty_job/common/widget/numbering_widget.dart';
+import 'package:mighty_job/helper/responsive_helper.dart';
+import 'package:mighty_job/util/dimensions.dart';
 
 
 class WarehouseItemWidget extends StatelessWidget {

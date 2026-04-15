@@ -1,4 +1,4 @@
-import 'package:ecommerce/util/images.dart';
+import 'package:mighty_job/util/images.dart';
 
 class ThemeItem {
   int id;

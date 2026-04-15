@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/layout/list_layout_widget.dart';
-import 'package:ecommerce/feature/sms/sent_sms/domain/model/user_list_for_sms_model.dart';
-import 'package:ecommerce/feature/sms/sent_sms/logic/sent_sms_controller.dart';
-import 'package:ecommerce/feature/sms/sent_sms/presentation/widgets/select_user_type_sms.dart';
-import 'package:ecommerce/feature/sms/sent_sms/presentation/widgets/sent_new_sms_widget.dart';
-import 'package:ecommerce/feature/sms/sent_sms/presentation/widgets/sms_user_item_widget.dart';
-import 'package:ecommerce/util/dimensions.dart';
+import 'package:mighty_job/common/layout/list_layout_widget.dart';
+import 'package:mighty_job/feature/sms/sent_sms/domain/model/user_list_for_sms_model.dart';
+import 'package:mighty_job/feature/sms/sent_sms/logic/sent_sms_controller.dart';
+import 'package:mighty_job/feature/sms/sent_sms/presentation/widgets/select_user_type_sms.dart';
+import 'package:mighty_job/feature/sms/sent_sms/presentation/widgets/sent_new_sms_widget.dart';
+import 'package:mighty_job/feature/sms/sent_sms/presentation/widgets/sms_user_item_widget.dart';
+import 'package:mighty_job/util/dimensions.dart';
 
 class UserListForSmsWidget extends StatelessWidget {
   final ScrollController scrollController;

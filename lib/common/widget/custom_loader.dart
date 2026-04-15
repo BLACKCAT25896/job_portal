@@ -1,7 +1,7 @@
-import 'package:ecommerce/helper/app_color_helper.dart';
+import 'package:mighty_job/helper/app_color_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:ecommerce/common/widget/custom_contaner.dart';
+import 'package:mighty_job/common/widget/custom_contaner.dart';
 
 class CustomLoader extends StatelessWidget {
   const CustomLoader({super.key});

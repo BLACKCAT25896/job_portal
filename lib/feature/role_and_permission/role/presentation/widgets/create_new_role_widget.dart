@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/widget/custom_button.dart';
-import 'package:ecommerce/common/widget/custom_contaner.dart';
-import 'package:ecommerce/common/widget/custom_snackbar.dart';
-import 'package:ecommerce/common/widget/custom_text_field.dart';
-import 'package:ecommerce/feature/role_and_permission/role/controller/role_controller.dart';
-import 'package:ecommerce/feature/role_and_permission/role/domain/models/permission_model.dart';
-import 'package:ecommerce/feature/role_and_permission/role/domain/models/role_body.dart';
-import 'package:ecommerce/feature/role_and_permission/role/domain/models/role_model.dart';
-import 'package:ecommerce/util/dimensions.dart';
-import 'package:ecommerce/util/styles.dart';
+import 'package:mighty_job/common/widget/custom_button.dart';
+import 'package:mighty_job/common/widget/custom_contaner.dart';
+import 'package:mighty_job/common/widget/custom_snackbar.dart';
+import 'package:mighty_job/common/widget/custom_text_field.dart';
+import 'package:mighty_job/feature/role_and_permission/role/controller/role_controller.dart';
+import 'package:mighty_job/feature/role_and_permission/role/domain/models/permission_model.dart';
+import 'package:mighty_job/feature/role_and_permission/role/domain/models/role_body.dart';
+import 'package:mighty_job/feature/role_and_permission/role/domain/models/role_model.dart';
+import 'package:mighty_job/util/dimensions.dart';
+import 'package:mighty_job/util/styles.dart';
 
 class CreateNewRoleWidget extends StatefulWidget {
   final RoleItem? roleItem;

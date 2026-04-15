@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/global_widget/header_logo_section.dart';
-import 'package:ecommerce/common/global_widget/sidebar_footer_section_widget.dart';
-import 'package:ecommerce/common/widget/custom_search.dart';
-import 'package:ecommerce/feature/side_menu/side_menu_controller.dart';
-import 'package:ecommerce/helper/responsive_helper.dart';
+import 'package:mighty_job/common/global_widget/header_logo_section.dart';
+import 'package:mighty_job/common/global_widget/sidebar_footer_section_widget.dart';
+import 'package:mighty_job/common/widget/custom_search.dart';
+import 'package:mighty_job/feature/side_menu/side_menu_controller.dart';
+import 'package:mighty_job/helper/responsive_helper.dart';
 
 class GlobalSideMenu extends StatefulWidget {
   final Widget child;

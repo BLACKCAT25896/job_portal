@@ -1,11 +1,11 @@
-import 'package:ecommerce/feature/home/presentation/widget/top_brand/top_brand_item.dart';
+import 'package:mighty_job/feature/home/presentation/widget/top_brand/top_brand_item.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/layout/list_layout_widget.dart';
-import 'package:ecommerce/feature/report_management/domain/model/dashboard_report_data_model.dart';
-import 'package:ecommerce/feature/report_management/logic/report_controller.dart';
-import 'package:ecommerce/util/dimensions.dart';
-import 'package:ecommerce/util/styles.dart';
+import 'package:mighty_job/common/layout/list_layout_widget.dart';
+import 'package:mighty_job/feature/report_management/domain/model/dashboard_report_data_model.dart';
+import 'package:mighty_job/feature/report_management/logic/report_controller.dart';
+import 'package:mighty_job/util/dimensions.dart';
+import 'package:mighty_job/util/styles.dart';
 
 class TopBrandListWidget extends StatelessWidget {
   final ScrollController scrollController;

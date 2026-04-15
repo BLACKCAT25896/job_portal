@@ -1,12 +1,12 @@
-import 'package:ecommerce/common/layout/custom_dialog_widget.dart';
-import 'package:ecommerce/common/layout/list_layout_widget.dart';
-import 'package:ecommerce/common/widget/custom_search.dart';
-import 'package:ecommerce/common/widget/custom_snackbar.dart';
-import 'package:ecommerce/feature/ownership_type/controller/ownership_type_controller.dart';
-import 'package:ecommerce/feature/ownership_type/domain/models/ownership_type_model.dart';
-import 'package:ecommerce/feature/ownership_type/presentation/widgets/add_new_ownership_type_widget.dart';
-import 'package:ecommerce/feature/ownership_type/presentation/widgets/ownership_type_item.dart';
-import 'package:ecommerce/util/dimensions.dart';
+import 'package:mighty_job/common/layout/custom_dialog_widget.dart';
+import 'package:mighty_job/common/layout/list_layout_widget.dart';
+import 'package:mighty_job/common/widget/custom_search.dart';
+import 'package:mighty_job/common/widget/custom_snackbar.dart';
+import 'package:mighty_job/feature/ownership_type/controller/ownership_type_controller.dart';
+import 'package:mighty_job/feature/ownership_type/domain/models/ownership_type_model.dart';
+import 'package:mighty_job/feature/ownership_type/presentation/widgets/add_new_ownership_type_widget.dart';
+import 'package:mighty_job/feature/ownership_type/presentation/widgets/ownership_type_item.dart';
+import 'package:mighty_job/util/dimensions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

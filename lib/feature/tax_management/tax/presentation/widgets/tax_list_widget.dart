@@ -1,11 +1,11 @@
-import 'package:ecommerce/common/layout/custom_dialog_widget.dart';
+import 'package:mighty_job/common/layout/custom_dialog_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/layout/list_layout_widget.dart';
-import 'package:ecommerce/feature/tax_management/tax/domain/model/tax_model.dart';
-import 'package:ecommerce/feature/tax_management/tax/logic/tax_controller.dart';
-import 'package:ecommerce/feature/tax_management/tax/presentation/widgets/create_new_tax_widget.dart';
-import 'package:ecommerce/feature/tax_management/tax/presentation/widgets/tax_item_widget.dart';
+import 'package:mighty_job/common/layout/list_layout_widget.dart';
+import 'package:mighty_job/feature/tax_management/tax/domain/model/tax_model.dart';
+import 'package:mighty_job/feature/tax_management/tax/logic/tax_controller.dart';
+import 'package:mighty_job/feature/tax_management/tax/presentation/widgets/create_new_tax_widget.dart';
+import 'package:mighty_job/feature/tax_management/tax/presentation/widgets/tax_item_widget.dart';
 
 class TaxListWidget extends StatelessWidget {
   final ScrollController scrollController;

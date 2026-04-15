@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/widget/confirmation_dialog.dart';
-import 'package:ecommerce/common/widget/custom_item_text_widget.dart';
-import 'package:ecommerce/common/widget/edit_delete_section.dart';
-import 'package:ecommerce/common/widget/numbering_widget.dart';
-import 'package:ecommerce/feature/sms/phone_book/controller/phone_book_controller.dart';
-import 'package:ecommerce/feature/sms/phone_book/domain/models/phone_book_model.dart';
-import 'package:ecommerce/feature/sms/phone_book/presentation/screens/create_new_phone_book_screen.dart';
-import 'package:ecommerce/util/dimensions.dart';
+import 'package:mighty_job/common/widget/confirmation_dialog.dart';
+import 'package:mighty_job/common/widget/custom_item_text_widget.dart';
+import 'package:mighty_job/common/widget/edit_delete_section.dart';
+import 'package:mighty_job/common/widget/numbering_widget.dart';
+import 'package:mighty_job/feature/sms/phone_book/controller/phone_book_controller.dart';
+import 'package:mighty_job/feature/sms/phone_book/domain/models/phone_book_model.dart';
+import 'package:mighty_job/feature/sms/phone_book/presentation/screens/create_new_phone_book_screen.dart';
+import 'package:mighty_job/util/dimensions.dart';
 
 class PhoneBookItemWidget extends StatelessWidget {
   final PhoneBookItem? phoneBookItem;

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/feature/report_management/logic/report_controller.dart';
-import 'package:ecommerce/common/widget/custom_generic_dropdown.dart';
+import 'package:mighty_job/feature/report_management/logic/report_controller.dart';
+import 'package:mighty_job/common/widget/custom_generic_dropdown.dart';
 
 class SelectSalesOverViewTypeWidget extends StatefulWidget {
   const SelectSalesOverViewTypeWidget({super.key});

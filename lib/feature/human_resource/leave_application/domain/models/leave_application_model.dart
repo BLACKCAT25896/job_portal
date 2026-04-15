@@ -2,7 +2,7 @@
 
 class LeaveApplicationItem {
   String? id;
-  String? ecommerceName;
+  String? mighty_jobName;
   String? firstName;
   String? lastName;
   String? departmentName;
@@ -20,7 +20,7 @@ class LeaveApplicationItem {
 
   LeaveApplicationItem(
       {this.id,
-        this.ecommerceName,
+        this.mighty_jobName,
         this.firstName,
         this.lastName,
         this.departmentName,
@@ -38,7 +38,7 @@ class LeaveApplicationItem {
 
   LeaveApplicationItem.fromJson(Map<String, dynamic> json) {
     id = json['id'].toString();
-    ecommerceName = json['ecommerce_name'];
+    mighty_jobName = json['mighty_job_name'];
     firstName = json['first_name'];
     lastName = json['last_name'];
     departmentName = json['department_name'];
@@ -58,7 +58,7 @@ class LeaveApplicationItem {
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = <String, dynamic>{};
     data['id'] = id;
-    data['ecommerce_name'] = ecommerceName;
+    data['mighty_job_name'] = mighty_jobName;
     data['first_name'] = firstName;
     data['last_name'] = lastName;
     data['department_name'] = departmentName;

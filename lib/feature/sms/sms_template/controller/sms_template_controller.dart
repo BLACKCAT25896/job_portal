@@ -1,9 +1,9 @@
 import 'package:get/get.dart';
-import 'package:ecommerce/api_handle/api_checker.dart';
-import 'package:ecommerce/common/widget/custom_snackbar.dart';
-import 'package:ecommerce/feature/sms/sent_sms/logic/sent_sms_controller.dart';
-import 'package:ecommerce/feature/sms/sms_template/domain/models/sms_template_model.dart';
-import 'package:ecommerce/feature/sms/sms_template/domain/repository/sms_template_repository.dart';
+import 'package:mighty_job/api_handle/api_checker.dart';
+import 'package:mighty_job/common/widget/custom_snackbar.dart';
+import 'package:mighty_job/feature/sms/sent_sms/logic/sent_sms_controller.dart';
+import 'package:mighty_job/feature/sms/sms_template/domain/models/sms_template_model.dart';
+import 'package:mighty_job/feature/sms/sms_template/domain/repository/sms_template_repository.dart';
 
 class SmsTemplateController extends GetxController implements GetxService{
   final SmsTemplateRepository smsTemplateRepository;

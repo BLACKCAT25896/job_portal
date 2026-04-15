@@ -1,12 +1,12 @@
-import 'package:ecommerce/common/layout/custom_dialog_widget.dart';
-import 'package:ecommerce/common/layout/list_layout_widget.dart';
-import 'package:ecommerce/common/widget/custom_search.dart';
-import 'package:ecommerce/common/widget/custom_snackbar.dart';
-import 'package:ecommerce/feature/inventory/category/controller/category_controller.dart';
-import 'package:ecommerce/feature/inventory/category/domain/models/category_model.dart';
-import 'package:ecommerce/feature/inventory/category/presentation/widgets/add_new_category_widget.dart';
-import 'package:ecommerce/feature/inventory/category/presentation/widgets/category_item.dart';
-import 'package:ecommerce/util/dimensions.dart';
+import 'package:mighty_job/common/layout/custom_dialog_widget.dart';
+import 'package:mighty_job/common/layout/list_layout_widget.dart';
+import 'package:mighty_job/common/widget/custom_search.dart';
+import 'package:mighty_job/common/widget/custom_snackbar.dart';
+import 'package:mighty_job/feature/inventory/category/controller/category_controller.dart';
+import 'package:mighty_job/feature/inventory/category/domain/models/category_model.dart';
+import 'package:mighty_job/feature/inventory/category/presentation/widgets/add_new_category_widget.dart';
+import 'package:mighty_job/feature/inventory/category/presentation/widgets/category_item.dart';
+import 'package:mighty_job/util/dimensions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

@@ -1,12 +1,12 @@
-import 'package:ecommerce/common/global_widget/custom_web_scroll_view_widget.dart';
-import 'package:ecommerce/feature/support_ticket/controllers/support_ticket_controller.dart';
-import 'package:ecommerce/feature/support_ticket/widgets/support_ticket_conversation_widget.dart';
-import 'package:ecommerce/helper/app_color_helper.dart';
+import 'package:mighty_job/common/global_widget/custom_web_scroll_view_widget.dart';
+import 'package:mighty_job/feature/support_ticket/controllers/support_ticket_controller.dart';
+import 'package:mighty_job/feature/support_ticket/widgets/support_ticket_conversation_widget.dart';
+import 'package:mighty_job/helper/app_color_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/widget/custom_app_bar.dart';
-import 'package:ecommerce/util/dimensions.dart';
-import 'package:ecommerce/util/styles.dart';
+import 'package:mighty_job/common/widget/custom_app_bar.dart';
+import 'package:mighty_job/util/dimensions.dart';
+import 'package:mighty_job/util/styles.dart';
 
 class SupportConversationScreen extends StatefulWidget {
   final String ticketId;

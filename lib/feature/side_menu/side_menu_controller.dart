@@ -1,15 +1,15 @@
 
-import 'package:ecommerce/common/layout/custom_dialog_widget.dart';
-import 'package:ecommerce/feature/cms_management/cms_settings/controller/system_settngs_controller.dart';
-import 'package:ecommerce/feature/inventory/unit_measurement/presentation/widgets/create_new_unit_widget.dart';
-import 'package:ecommerce/feature/support_ticket/widgets/add_ticket_widget.dart';
+import 'package:mighty_job/common/layout/custom_dialog_widget.dart';
+import 'package:mighty_job/feature/cms_management/cms_settings/controller/system_settngs_controller.dart';
+import 'package:mighty_job/feature/inventory/unit_measurement/presentation/widgets/create_new_unit_widget.dart';
+import 'package:mighty_job/feature/support_ticket/widgets/add_ticket_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/widget/side_menu/src/side_menu_item_widget.dart';
-import 'package:ecommerce/common/widget/side_menu/src/side_menu_nested_expension_item.dart';
-import 'package:ecommerce/feature/profile/logic/profile_controller.dart';
-import 'package:ecommerce/helper/route_helper.dart';
-import 'package:ecommerce/util/images.dart';
+import 'package:mighty_job/common/widget/side_menu/src/side_menu_item_widget.dart';
+import 'package:mighty_job/common/widget/side_menu/src/side_menu_nested_expension_item.dart';
+import 'package:mighty_job/feature/profile/logic/profile_controller.dart';
+import 'package:mighty_job/helper/route_helper.dart';
+import 'package:mighty_job/util/images.dart';
 
 class SideBarController extends GetxController implements GetxService{
 

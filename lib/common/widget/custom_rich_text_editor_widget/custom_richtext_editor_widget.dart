@@ -2,11 +2,11 @@ import 'package:get/get.dart';
 import 'package:html_editor_enhanced/html_editor.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:ecommerce/common/widget/custom_snackbar.dart';
-import 'package:ecommerce/feature/profile/logic/profile_controller.dart';
-import 'package:ecommerce/util/dimensions.dart';
-import 'package:ecommerce/util/styles.dart';
-import 'package:ecommerce/common/widget/custom_rich_text_editor_widget/latex_dialog.dart';
+import 'package:mighty_job/common/widget/custom_snackbar.dart';
+import 'package:mighty_job/feature/profile/logic/profile_controller.dart';
+import 'package:mighty_job/util/dimensions.dart';
+import 'package:mighty_job/util/styles.dart';
+import 'package:mighty_job/common/widget/custom_rich_text_editor_widget/latex_dialog.dart';
 
 class CustomRichEditor extends StatefulWidget {
   final HtmlEditorController? controller;

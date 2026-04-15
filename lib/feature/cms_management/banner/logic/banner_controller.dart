@@ -1,12 +1,12 @@
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:ecommerce/api_handle/api_checker.dart';
-import 'package:ecommerce/api_handle/global_api_response_model.dart';
-import 'package:ecommerce/common/widget/custom_snackbar.dart';
-import 'package:ecommerce/feature/cms_management/banner/domain/model/banner_body.dart';
-import 'package:ecommerce/feature/cms_management/banner/domain/model/banner_model.dart';
-import 'package:ecommerce/feature/cms_management/banner/domain/repository/banner_repository.dart';
-import 'package:ecommerce/helper/image_size_checker.dart';
+import 'package:mighty_job/api_handle/api_checker.dart';
+import 'package:mighty_job/api_handle/global_api_response_model.dart';
+import 'package:mighty_job/common/widget/custom_snackbar.dart';
+import 'package:mighty_job/feature/cms_management/banner/domain/model/banner_body.dart';
+import 'package:mighty_job/feature/cms_management/banner/domain/model/banner_model.dart';
+import 'package:mighty_job/feature/cms_management/banner/domain/repository/banner_repository.dart';
+import 'package:mighty_job/helper/image_size_checker.dart';
 
 class BannerController extends GetxController implements GetxService {
   final BannerRepository bannerRepository;

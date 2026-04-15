@@ -1,6 +1,6 @@
-import 'package:ecommerce/api_handle/api_client.dart';
-import 'package:ecommerce/feature/degree_level/domain/models/degree_level_body.dart';
-import 'package:ecommerce/util/app_constants.dart';
+import 'package:mighty_job/api_handle/api_client.dart';
+import 'package:mighty_job/feature/degree_level/domain/models/degree_level_body.dart';
+import 'package:mighty_job/util/app_constants.dart';
 import 'package:get/get_connect/http/src/response/response.dart';
 
 class DegreeLevelRepository{

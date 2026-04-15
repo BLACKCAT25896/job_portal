@@ -1,11 +1,11 @@
-import 'package:ecommerce/common/layout/custom_dialog_widget.dart';
-import 'package:ecommerce/feature/human_resource/recruitment/presentation/widgets/add_new_recruitment_widget.dart';
+import 'package:mighty_job/common/layout/custom_dialog_widget.dart';
+import 'package:mighty_job/feature/human_resource/recruitment/presentation/widgets/add_new_recruitment_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/layout/list_layout_widget.dart';
-import 'package:ecommerce/feature/human_resource/recruitment/controller/recruitment_controller.dart';
-import 'package:ecommerce/feature/human_resource/recruitment/domain/models/recruitment_model.dart';
-import 'package:ecommerce/feature/human_resource/recruitment/presentation/widgets/recruitment_item_widget.dart';
+import 'package:mighty_job/common/layout/list_layout_widget.dart';
+import 'package:mighty_job/feature/human_resource/recruitment/controller/recruitment_controller.dart';
+import 'package:mighty_job/feature/human_resource/recruitment/domain/models/recruitment_model.dart';
+import 'package:mighty_job/feature/human_resource/recruitment/presentation/widgets/recruitment_item_widget.dart';
 
 class RecruitmentListWidget extends StatelessWidget {
   final ScrollController scrollController;

@@ -1,9 +1,9 @@
 import 'package:get/get.dart';
-import 'package:ecommerce/api_handle/api_checker.dart';
-import 'package:ecommerce/api_handle/global_api_response_model.dart';
-import 'package:ecommerce/common/widget/custom_snackbar.dart';
-import 'package:ecommerce/feature/human_resource/designation/domain/models/designation_model.dart';
-import 'package:ecommerce/feature/human_resource/designation/domain/repository/designation_repository.dart';
+import 'package:mighty_job/api_handle/api_checker.dart';
+import 'package:mighty_job/api_handle/global_api_response_model.dart';
+import 'package:mighty_job/common/widget/custom_snackbar.dart';
+import 'package:mighty_job/feature/human_resource/designation/domain/models/designation_model.dart';
+import 'package:mighty_job/feature/human_resource/designation/domain/repository/designation_repository.dart';
 
 class DesignationController extends GetxController implements GetxService{
   final DesignationRepository designationRepository;

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/feature/user_manual/domain/models/user_guide_model.dart';
+import 'package:mighty_job/feature/user_manual/domain/models/user_guide_model.dart';
 
 class UserManualWidget extends StatelessWidget {
   const UserManualWidget({super.key});

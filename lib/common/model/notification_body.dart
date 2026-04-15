@@ -10,7 +10,7 @@ class NotificationBody {
   int? orderId;
   int? adminId;
   int? deliverymanId;
-  int? ecommerceId;
+  int? mighty_jobId;
   String? type;
   int? conversationId;
   int? index;
@@ -24,7 +24,7 @@ class NotificationBody {
     this.orderId,
     this.adminId,
     this.deliverymanId,
-    this.ecommerceId,
+    this.mighty_jobId,
     this.type,
     this.conversationId,
     this.index,
@@ -38,7 +38,7 @@ class NotificationBody {
     orderId = json['order_id'];
     adminId = json['admin_id'];
     deliverymanId = json['deliveryman_id'];
-    ecommerceId = json['ecommerce_id'];
+    mighty_jobId = json['mighty_job_id'];
     type = json['type'];
     conversationId = json['conversation_id'];
     index = json['index'];
@@ -53,7 +53,7 @@ class NotificationBody {
     data['order_id'] = orderId;
     data['admin_id'] = adminId;
     data['deliveryman_id'] = deliverymanId;
-    data['ecommerce_id'] = ecommerceId;
+    data['mighty_job_id'] = mighty_jobId;
     data['type'] = type;
     data['conversation_id'] = conversationId;
     data['index'] = index;

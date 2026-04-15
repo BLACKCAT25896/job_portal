@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/widget/custom_dropdown.dart';
-import 'package:ecommerce/feature/sms/sent_sms/logic/sent_sms_controller.dart';
+import 'package:mighty_job/common/widget/custom_dropdown.dart';
+import 'package:mighty_job/feature/sms/sent_sms/logic/sent_sms_controller.dart';
 
 class SelectUserTypeSms extends StatelessWidget {
   const SelectUserTypeSms({super.key});

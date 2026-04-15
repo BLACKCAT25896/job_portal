@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/layout/section_header_with_path_widget.dart';
-import 'package:ecommerce/common/widget/custom_button.dart';
-import 'package:ecommerce/common/widget/custom_contaner.dart';
-import 'package:ecommerce/common/widget/custom_text_field.dart';
-import 'package:ecommerce/feature/cms_management/about_us/domain/model/about_us_body.dart';
-import 'package:ecommerce/feature/cms_management/about_us/logic/about_us_controller.dart';
-import 'package:ecommerce/feature/cms_management/about_us/presentation/widgets/about_us_image_widget.dart';
-import 'package:ecommerce/util/dimensions.dart';
+import 'package:mighty_job/common/layout/section_header_with_path_widget.dart';
+import 'package:mighty_job/common/widget/custom_button.dart';
+import 'package:mighty_job/common/widget/custom_contaner.dart';
+import 'package:mighty_job/common/widget/custom_text_field.dart';
+import 'package:mighty_job/feature/cms_management/about_us/domain/model/about_us_body.dart';
+import 'package:mighty_job/feature/cms_management/about_us/logic/about_us_controller.dart';
+import 'package:mighty_job/feature/cms_management/about_us/presentation/widgets/about_us_image_widget.dart';
+import 'package:mighty_job/util/dimensions.dart';
 
 
 class AboutUsWidget extends StatefulWidget {

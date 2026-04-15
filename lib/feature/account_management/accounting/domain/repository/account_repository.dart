@@ -1,7 +1,7 @@
 import 'package:get/get_connect/http/src/response/response.dart';
-import 'package:ecommerce/api_handle/api_client.dart';
-import 'package:ecommerce/feature/account_management/accounting/domain/model/account_body_model.dart';
-import 'package:ecommerce/util/app_constants.dart';
+import 'package:mighty_job/api_handle/api_client.dart';
+import 'package:mighty_job/feature/account_management/accounting/domain/model/account_body_model.dart';
+import 'package:mighty_job/util/app_constants.dart';
 
 class AccountRepository{
   final ApiClient apiClient;

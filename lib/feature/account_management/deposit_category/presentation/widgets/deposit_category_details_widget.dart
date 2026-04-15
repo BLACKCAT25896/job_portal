@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/widget/custom_contaner.dart';
-import 'package:ecommerce/common/widget/custom_snackbar.dart';
-import 'package:ecommerce/feature/account_management/deposit_category/domain/model/deposit_category_details_model.dart';
-import 'package:ecommerce/feature/account_management/deposit_category/domain/model/deposit_category_model.dart';
-import 'package:ecommerce/feature/account_management/deposit_category/logic/deposit_category_controller.dart';
-import 'package:ecommerce/feature/account_management/deposit_category/presentation/widgets/category_wise_deposit_card.dart';
-import 'package:ecommerce/feature/account_management/deposit_category/presentation/widgets/deposit_category_details_head_section.dart';
-import 'package:ecommerce/feature/account_management/deposit_category/presentation/widgets/deposit_category_edit_delete_section.dart';
-import 'package:ecommerce/helper/responsive_helper.dart';
-import 'package:ecommerce/util/dimensions.dart';
-import 'package:ecommerce/util/styles.dart';
+import 'package:mighty_job/common/widget/custom_contaner.dart';
+import 'package:mighty_job/common/widget/custom_snackbar.dart';
+import 'package:mighty_job/feature/account_management/deposit_category/domain/model/deposit_category_details_model.dart';
+import 'package:mighty_job/feature/account_management/deposit_category/domain/model/deposit_category_model.dart';
+import 'package:mighty_job/feature/account_management/deposit_category/logic/deposit_category_controller.dart';
+import 'package:mighty_job/feature/account_management/deposit_category/presentation/widgets/category_wise_deposit_card.dart';
+import 'package:mighty_job/feature/account_management/deposit_category/presentation/widgets/deposit_category_details_head_section.dart';
+import 'package:mighty_job/feature/account_management/deposit_category/presentation/widgets/deposit_category_edit_delete_section.dart';
+import 'package:mighty_job/helper/responsive_helper.dart';
+import 'package:mighty_job/util/dimensions.dart';
+import 'package:mighty_job/util/styles.dart';
 
 class DepositCategoryDetailsWidget extends StatelessWidget {
   final DepositCategoryItem? depositCategoryItem;

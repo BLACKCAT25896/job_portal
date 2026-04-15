@@ -1,7 +1,7 @@
 import 'package:get/get_connect/http/src/response/response.dart';
-import 'package:ecommerce/api_handle/api_client.dart';
-import 'package:ecommerce/feature/human_resource/salary_setup/domain/models/salary_setup_body.dart';
-import 'package:ecommerce/util/app_constants.dart';
+import 'package:mighty_job/api_handle/api_client.dart';
+import 'package:mighty_job/feature/human_resource/salary_setup/domain/models/salary_setup_body.dart';
+import 'package:mighty_job/util/app_constants.dart';
 
 class SalarySetupRepository{
   final ApiClient apiClient;

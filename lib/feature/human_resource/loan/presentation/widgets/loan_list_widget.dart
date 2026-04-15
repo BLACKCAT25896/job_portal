@@ -1,11 +1,11 @@
-import 'package:ecommerce/common/layout/custom_dialog_widget.dart';
-import 'package:ecommerce/feature/human_resource/loan/presentation/widgets/add_new_loan_widget.dart';
+import 'package:mighty_job/common/layout/custom_dialog_widget.dart';
+import 'package:mighty_job/feature/human_resource/loan/presentation/widgets/add_new_loan_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/layout/list_layout_widget.dart';
-import 'package:ecommerce/feature/human_resource/loan/controller/loan_controller.dart';
-import 'package:ecommerce/feature/human_resource/loan/domain/models/loan_model.dart';
-import 'package:ecommerce/feature/human_resource/loan/presentation/widgets/loan_item_widget.dart';
+import 'package:mighty_job/common/layout/list_layout_widget.dart';
+import 'package:mighty_job/feature/human_resource/loan/controller/loan_controller.dart';
+import 'package:mighty_job/feature/human_resource/loan/domain/models/loan_model.dart';
+import 'package:mighty_job/feature/human_resource/loan/presentation/widgets/loan_item_widget.dart';
 
 class LoanListWidget extends StatelessWidget {
   final ScrollController scrollController;

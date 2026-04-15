@@ -1,16 +1,16 @@
-import 'package:ecommerce/helper/app_color_helper.dart';
+import 'package:mighty_job/helper/app_color_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/widget/app_bar_widget.dart';
-import 'package:ecommerce/common/widget/body_widget.dart';
-import 'package:ecommerce/feature/cms_management/cms_settings/controller/system_settngs_controller.dart';
-import 'package:ecommerce/feature/home/presentation/widget/overview_chart_widget.dart';
-import 'package:ecommerce/feature/home/presentation/widget/sales_report_ratio_chart.dart';
-import 'package:ecommerce/feature/home/presentation/widget/statistics_cards_widget.dart';
-import 'package:ecommerce/feature/profile/presentation/widgets/home_header_section_widget.dart';
-import 'package:ecommerce/feature/report_management/domain/model/dashboard_report_data_model.dart';
-import 'package:ecommerce/feature/report_management/logic/report_controller.dart';
-import 'package:ecommerce/util/dimensions.dart';
+import 'package:mighty_job/common/widget/app_bar_widget.dart';
+import 'package:mighty_job/common/widget/body_widget.dart';
+import 'package:mighty_job/feature/cms_management/cms_settings/controller/system_settngs_controller.dart';
+import 'package:mighty_job/feature/home/presentation/widget/overview_chart_widget.dart';
+import 'package:mighty_job/feature/home/presentation/widget/sales_report_ratio_chart.dart';
+import 'package:mighty_job/feature/home/presentation/widget/statistics_cards_widget.dart';
+import 'package:mighty_job/feature/profile/presentation/widgets/home_header_section_widget.dart';
+import 'package:mighty_job/feature/report_management/domain/model/dashboard_report_data_model.dart';
+import 'package:mighty_job/feature/report_management/logic/report_controller.dart';
+import 'package:mighty_job/util/dimensions.dart';
 
 
 class HomeScreen extends StatefulWidget {
@@ -37,7 +37,7 @@ class _HomeScreenState extends State<HomeScreen> {
       body: BodyWidget(appBar : AppBarWidget(showBackButton: false,
           actionWidget: HomeHeaderSectionWidget()),
         body: RefreshIndicator(onRefresh: () async {
-          Get.find<SystemSettingsController>().getEcommerceImageSetting();
+          Get.find<SystemSettingsController>().getmighty_jobImageSetting();
         },
           child: CustomScrollView(slivers: [
             SliverToBoxAdapter(

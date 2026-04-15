@@ -1,8 +1,8 @@
 import 'package:get/get_connect/http/src/response/response.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:ecommerce/api_handle/api_client.dart';
-import 'package:ecommerce/feature/cms_management/about_us/domain/model/about_us_body.dart';
-import 'package:ecommerce/util/app_constants.dart';
+import 'package:mighty_job/api_handle/api_client.dart';
+import 'package:mighty_job/feature/cms_management/about_us/domain/model/about_us_body.dart';
+import 'package:mighty_job/util/app_constants.dart';
 
 class AboutUsRepository {
   final ApiClient apiClient;

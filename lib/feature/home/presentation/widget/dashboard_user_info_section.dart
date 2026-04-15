@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/feature/profile/logic/profile_controller.dart';
-import 'package:ecommerce/util/dimensions.dart';
-import 'package:ecommerce/util/styles.dart';
+import 'package:mighty_job/feature/profile/logic/profile_controller.dart';
+import 'package:mighty_job/util/dimensions.dart';
+import 'package:mighty_job/util/styles.dart';
 
 class DashboardUserInfoSection extends StatelessWidget {
   const DashboardUserInfoSection({super.key});
@@ -17,7 +17,7 @@ class DashboardUserInfoSection extends StatelessWidget {
               Text('${"welcome_back".tr}, ${profileController.profileModel?.data?.name??'N/A'} 👋',
                   style: textBold.copyWith(fontSize: 24, color: Theme.of(context).textTheme.bodyLarge?.color)),
               const SizedBox(height: 4),
-              Text('today_ecommerce_performance'.tr,
+              Text('today_mighty_job_performance'.tr,
                 style: textRegular.copyWith(color: Theme.of(context).textTheme.bodyMedium?.color?.withValues(alpha:0.7)),),
 
             ])),

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/layout/list_layout_widget.dart';
-import 'package:ecommerce/common/widget/add_new_resource_widget.dart';
-import 'package:ecommerce/feature/human_resource/attendance/controller/attendance_controller.dart';
-import 'package:ecommerce/feature/human_resource/attendance/domain/models/attendance_model.dart';
-import 'package:ecommerce/feature/human_resource/attendance/presentation/screens/create_new_attendance_screen.dart';
-import 'package:ecommerce/feature/human_resource/attendance/presentation/widgets/attendance_item_widget.dart';
+import 'package:mighty_job/common/layout/list_layout_widget.dart';
+import 'package:mighty_job/common/widget/add_new_resource_widget.dart';
+import 'package:mighty_job/feature/human_resource/attendance/controller/attendance_controller.dart';
+import 'package:mighty_job/feature/human_resource/attendance/domain/models/attendance_model.dart';
+import 'package:mighty_job/feature/human_resource/attendance/presentation/screens/create_new_attendance_screen.dart';
+import 'package:mighty_job/feature/human_resource/attendance/presentation/widgets/attendance_item_widget.dart';
 
 class AttendanceListWidget extends StatelessWidget {
   final ScrollController scrollController;

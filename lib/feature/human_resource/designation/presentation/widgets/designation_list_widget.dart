@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/layout/list_layout_widget.dart';
-import 'package:ecommerce/feature/human_resource/designation/controller/designation_controller.dart';
-import 'package:ecommerce/feature/human_resource/designation/domain/models/designation_model.dart';
-import 'package:ecommerce/feature/human_resource/designation/presentation/screens/create_new_designation_screen.dart';
-import 'package:ecommerce/feature/human_resource/designation/presentation/widgets/designation_item_widget.dart';
+import 'package:mighty_job/common/layout/list_layout_widget.dart';
+import 'package:mighty_job/feature/human_resource/designation/controller/designation_controller.dart';
+import 'package:mighty_job/feature/human_resource/designation/domain/models/designation_model.dart';
+import 'package:mighty_job/feature/human_resource/designation/presentation/screens/create_new_designation_screen.dart';
+import 'package:mighty_job/feature/human_resource/designation/presentation/widgets/designation_item_widget.dart';
 
 class DesignationListWidget extends StatelessWidget {
   final ScrollController scrollController;

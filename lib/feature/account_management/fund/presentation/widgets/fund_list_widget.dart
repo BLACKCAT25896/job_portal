@@ -1,11 +1,11 @@
-import 'package:ecommerce/common/layout/custom_dialog_widget.dart';
+import 'package:mighty_job/common/layout/custom_dialog_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/layout/list_layout_widget.dart';
-import 'package:ecommerce/feature/account_management/fund/domain/model/fund_model.dart';
-import 'package:ecommerce/feature/account_management/fund/logic/fund_controller.dart';
-import 'package:ecommerce/feature/account_management/fund/presentation/widgets/create_new_fund_widget.dart';
-import 'package:ecommerce/feature/account_management/fund/presentation/widgets/fund_item_widget.dart';
+import 'package:mighty_job/common/layout/list_layout_widget.dart';
+import 'package:mighty_job/feature/account_management/fund/domain/model/fund_model.dart';
+import 'package:mighty_job/feature/account_management/fund/logic/fund_controller.dart';
+import 'package:mighty_job/feature/account_management/fund/presentation/widgets/create_new_fund_widget.dart';
+import 'package:mighty_job/feature/account_management/fund/presentation/widgets/fund_item_widget.dart';
 
 class FundListWidget extends StatelessWidget {
   final ScrollController scrollController;

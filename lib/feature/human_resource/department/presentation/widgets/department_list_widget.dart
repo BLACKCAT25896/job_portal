@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/layout/list_layout_widget.dart';
-import 'package:ecommerce/feature/human_resource/department/controller/department_controller.dart';
-import 'package:ecommerce/feature/human_resource/department/domain/models/department_model.dart';
-import 'package:ecommerce/feature/human_resource/department/presentation/screens/create_new_department_screen.dart';
-import 'package:ecommerce/feature/human_resource/department/presentation/widgets/department_item_widget.dart';
+import 'package:mighty_job/common/layout/list_layout_widget.dart';
+import 'package:mighty_job/feature/human_resource/department/controller/department_controller.dart';
+import 'package:mighty_job/feature/human_resource/department/domain/models/department_model.dart';
+import 'package:mighty_job/feature/human_resource/department/presentation/screens/create_new_department_screen.dart';
+import 'package:mighty_job/feature/human_resource/department/presentation/widgets/department_item_widget.dart';
 
 class DepartmentListWidget extends StatelessWidget {
   final ScrollController scrollController;

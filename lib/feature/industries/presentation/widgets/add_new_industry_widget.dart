@@ -1,10 +1,10 @@
-import 'package:ecommerce/common/widget/custom_button.dart';
-import 'package:ecommerce/common/widget/custom_snackbar.dart';
-import 'package:ecommerce/common/widget/custom_text_field.dart';
-import 'package:ecommerce/feature/industries/controller/industry_controller.dart';
-import 'package:ecommerce/feature/industries/domain/models/industry_body.dart';
-import 'package:ecommerce/feature/industries/domain/models/industry_model.dart';
-import 'package:ecommerce/util/dimensions.dart';
+import 'package:mighty_job/common/widget/custom_button.dart';
+import 'package:mighty_job/common/widget/custom_snackbar.dart';
+import 'package:mighty_job/common/widget/custom_text_field.dart';
+import 'package:mighty_job/feature/industries/controller/industry_controller.dart';
+import 'package:mighty_job/feature/industries/domain/models/industry_body.dart';
+import 'package:mighty_job/feature/industries/domain/models/industry_model.dart';
+import 'package:mighty_job/util/dimensions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

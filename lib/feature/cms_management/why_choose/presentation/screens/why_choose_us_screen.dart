@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/global_widget/custom_web_scroll_view_widget.dart';
-import 'package:ecommerce/common/widget/custom_app_bar.dart';
-import 'package:ecommerce/common/widget/custom_floating_button.dart';
-import 'package:ecommerce/feature/cms_management/why_choose/presentation/widgets/why_choose_us_list_widget.dart';
-import 'package:ecommerce/feature/cms_management/why_choose/presentation/widgets/create_new_why_choose_us_widget.dart';
-import 'package:ecommerce/util/dimensions.dart';
+import 'package:mighty_job/common/global_widget/custom_web_scroll_view_widget.dart';
+import 'package:mighty_job/common/widget/custom_app_bar.dart';
+import 'package:mighty_job/common/widget/custom_floating_button.dart';
+import 'package:mighty_job/feature/cms_management/why_choose/presentation/widgets/why_choose_us_list_widget.dart';
+import 'package:mighty_job/feature/cms_management/why_choose/presentation/widgets/create_new_why_choose_us_widget.dart';
+import 'package:mighty_job/util/dimensions.dart';
 
 class WhyChooseUsScreen extends StatefulWidget {
   const WhyChooseUsScreen({super.key});

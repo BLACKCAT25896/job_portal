@@ -2,9 +2,9 @@
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/feature/account_management/deposit_category/domain/model/deposit_category_model.dart';
-import 'package:ecommerce/util/dimensions.dart';
-import 'package:ecommerce/util/styles.dart';
+import 'package:mighty_job/feature/account_management/deposit_category/domain/model/deposit_category_model.dart';
+import 'package:mighty_job/util/dimensions.dart';
+import 'package:mighty_job/util/styles.dart';
 
 class DepositCategoryDropdown extends StatefulWidget {
   final double? width;

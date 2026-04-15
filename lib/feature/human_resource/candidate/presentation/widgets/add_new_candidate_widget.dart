@@ -1,17 +1,17 @@
-import 'package:ecommerce/common/widget/responsive_grid_widget.dart';
-import 'package:ecommerce/feature/human_resource/recruitment/controller/recruitment_controller.dart';
-import 'package:ecommerce/feature/human_resource/recruitment/domain/models/recruitment_model.dart';
-import 'package:ecommerce/feature/human_resource/recruitment/presentation/widgets/recruitment_selection_widget.dart';
-import 'package:ecommerce/util/app_constants.dart';
+import 'package:mighty_job/common/widget/responsive_grid_widget.dart';
+import 'package:mighty_job/feature/human_resource/recruitment/controller/recruitment_controller.dart';
+import 'package:mighty_job/feature/human_resource/recruitment/domain/models/recruitment_model.dart';
+import 'package:mighty_job/feature/human_resource/recruitment/presentation/widgets/recruitment_selection_widget.dart';
+import 'package:mighty_job/util/app_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/widget/custom_button.dart';
-import 'package:ecommerce/common/widget/custom_snackbar.dart';
-import 'package:ecommerce/common/widget/custom_text_field.dart';
-import 'package:ecommerce/feature/human_resource/candidate/controller/candidate_controller.dart';
-import 'package:ecommerce/feature/human_resource/candidate/domain/models/candidate_body.dart';
-import 'package:ecommerce/feature/human_resource/candidate/domain/models/candidate_model.dart';
-import 'package:ecommerce/util/dimensions.dart';
+import 'package:mighty_job/common/widget/custom_button.dart';
+import 'package:mighty_job/common/widget/custom_snackbar.dart';
+import 'package:mighty_job/common/widget/custom_text_field.dart';
+import 'package:mighty_job/feature/human_resource/candidate/controller/candidate_controller.dart';
+import 'package:mighty_job/feature/human_resource/candidate/domain/models/candidate_body.dart';
+import 'package:mighty_job/feature/human_resource/candidate/domain/models/candidate_model.dart';
+import 'package:mighty_job/util/dimensions.dart';
 
 class AddNewCandidateWidget extends StatefulWidget {
   final CandidateItem? candidateItem;

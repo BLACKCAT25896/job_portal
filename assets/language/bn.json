@@ -11,7 +11,7 @@
   "dont_have_an_account": "একাউন্ট নেই?",
   "create_an_account": "একাউন্ট তৈরি করুন",
 
-  "mighty_ecommerce": "মাইটি রেস্টুরেন্ট",
+  "mighty_mighty_job": "মাইটি রেস্টুরেন্ট",
   "pos": "পওস",
   "inventory_and_purchase": "ইনভেন্টরি ও ক্রয়",
   "manage_order": "অর্ডার ম্যানেজ",
@@ -50,7 +50,7 @@
   "roles_and_permissions": "ভূমিকা ও অনুমতি",
   "select_language": "ভাষা নির্বাচন করুন",
   "choose_your_language_to_proceed": "অগ্রসর হতে আপনার ভাষা নির্বাচন করুন",
-  "today_ecommerce_performance": "আজ আপনার প্ল্যাটফর্মে যা ঘটছে তা এখানে।",
+  "today_mighty_job_performance": "আজ আপনার প্ল্যাটফর্মে যা ঘটছে তা এখানে।",
   "welcome_back": "পুনরায় স্বাগতম",
   "order_summery": "অর্ডার সারসংক্ষেপ",
   "track_your_order": "এক নজরে আপনার অর্ডার ও কার্যক্ষমতা ট্র্যাক করুন!",

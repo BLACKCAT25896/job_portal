@@ -1,11 +1,11 @@
-import 'package:ecommerce/helper/app_color_helper.dart';
+import 'package:mighty_job/helper/app_color_helper.dart';
 import 'package:flutter/material.dart';
-import 'package:ecommerce/common/controller/splash_controller.dart';
-import 'package:ecommerce/util/app_constants.dart';
-import 'package:ecommerce/util/dimensions.dart';
-import 'package:ecommerce/util/images.dart';
+import 'package:mighty_job/common/controller/splash_controller.dart';
+import 'package:mighty_job/util/app_constants.dart';
+import 'package:mighty_job/util/dimensions.dart';
+import 'package:mighty_job/util/images.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/util/styles.dart';
+import 'package:mighty_job/util/styles.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -112,7 +112,7 @@ class _SplashScreenState extends State<SplashScreen>  with SingleTickerProviderS
                       FadeTransition(
                         opacity: _animation,
                         child: Text(
-                          'Complete ecommerce Management System',
+                          'Complete mighty_job Management System',
                           style: TextStyle(
                             fontSize: 16,
                             color: Colors.white.withValues(alpha:0.9),

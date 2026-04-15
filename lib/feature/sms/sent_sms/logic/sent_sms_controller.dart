@@ -1,14 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/api_handle/api_checker.dart';
-import 'package:ecommerce/api_handle/global_api_response_model.dart';
-import 'package:ecommerce/common/controller/date_picker_controller.dart';
-import 'package:ecommerce/common/widget/custom_snackbar.dart';
-import 'package:ecommerce/feature/sms/sent_sms/domain/model/sent_sms_body.dart';
-import 'package:ecommerce/feature/sms/sent_sms/domain/model/sent_sms_report_model.dart';
-import 'package:ecommerce/feature/sms/sent_sms/domain/model/user_list_for_sms_model.dart';
-import 'package:ecommerce/feature/sms/sent_sms/domain/repository/sms_sent_repository.dart';
-import 'package:ecommerce/feature/sms/sms_template/controller/sms_template_controller.dart';
+import 'package:mighty_job/api_handle/api_checker.dart';
+import 'package:mighty_job/api_handle/global_api_response_model.dart';
+import 'package:mighty_job/common/controller/date_picker_controller.dart';
+import 'package:mighty_job/common/widget/custom_snackbar.dart';
+import 'package:mighty_job/feature/sms/sent_sms/domain/model/sent_sms_body.dart';
+import 'package:mighty_job/feature/sms/sent_sms/domain/model/sent_sms_report_model.dart';
+import 'package:mighty_job/feature/sms/sent_sms/domain/model/user_list_for_sms_model.dart';
+import 'package:mighty_job/feature/sms/sent_sms/domain/repository/sms_sent_repository.dart';
+import 'package:mighty_job/feature/sms/sms_template/controller/sms_template_controller.dart';
 
 class SentSmsController extends GetxController implements GetxService{
   final SentSmsRepository sentSmsRepository;

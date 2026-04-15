@@ -1,11 +1,11 @@
 
 import 'package:get/get.dart';
-import 'package:ecommerce/api_handle/api_checker.dart';
-import 'package:ecommerce/api_handle/global_api_response_model.dart';
-import 'package:ecommerce/common/widget/custom_snackbar.dart';
-import 'package:ecommerce/feature/account_management/deposit_category/domain/model/deposit_category_details_model.dart';
-import 'package:ecommerce/feature/account_management/deposit_category/domain/model/deposit_category_model.dart';
-import 'package:ecommerce/feature/account_management/deposit_category/domain/repository/deposit_category_repository.dart';
+import 'package:mighty_job/api_handle/api_checker.dart';
+import 'package:mighty_job/api_handle/global_api_response_model.dart';
+import 'package:mighty_job/common/widget/custom_snackbar.dart';
+import 'package:mighty_job/feature/account_management/deposit_category/domain/model/deposit_category_details_model.dart';
+import 'package:mighty_job/feature/account_management/deposit_category/domain/model/deposit_category_model.dart';
+import 'package:mighty_job/feature/account_management/deposit_category/domain/repository/deposit_category_repository.dart';
 
 class DepositCategoryController extends GetxController implements GetxService{
   final DepositCategoryRepository depositCategoryRepository;

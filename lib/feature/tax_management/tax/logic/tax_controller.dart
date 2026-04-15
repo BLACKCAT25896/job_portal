@@ -1,10 +1,10 @@
 import 'package:get/get.dart';
-import 'package:ecommerce/api_handle/api_checker.dart';
-import 'package:ecommerce/api_handle/global_api_response_model.dart';
-import 'package:ecommerce/common/widget/custom_snackbar.dart';
-import 'package:ecommerce/feature/tax_management/tax/domain/model/tax_body.dart';
-import 'package:ecommerce/feature/tax_management/tax/domain/model/tax_model.dart';
-import 'package:ecommerce/feature/tax_management/tax/domain/repository/tax_repository.dart';
+import 'package:mighty_job/api_handle/api_checker.dart';
+import 'package:mighty_job/api_handle/global_api_response_model.dart';
+import 'package:mighty_job/common/widget/custom_snackbar.dart';
+import 'package:mighty_job/feature/tax_management/tax/domain/model/tax_body.dart';
+import 'package:mighty_job/feature/tax_management/tax/domain/model/tax_model.dart';
+import 'package:mighty_job/feature/tax_management/tax/domain/repository/tax_repository.dart';
 
 class TaxController extends GetxController implements GetxService {
   final TaxRepository taxRepository;

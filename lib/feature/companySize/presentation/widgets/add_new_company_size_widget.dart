@@ -1,11 +1,11 @@
-import 'package:ecommerce/common/widget/custom_button.dart';
-import 'package:ecommerce/common/widget/custom_snackbar.dart';
-import 'package:ecommerce/common/widget/custom_text_field.dart';
-import 'package:ecommerce/feature/companySize/controller/company_size_controller.dart';
-import 'package:ecommerce/feature/companySize/domain/models/company_size_body.dart';
-import 'package:ecommerce/feature/companySize/domain/models/company_size_model.dart';
-import 'package:ecommerce/util/app_constants.dart';
-import 'package:ecommerce/util/dimensions.dart';
+import 'package:mighty_job/common/widget/custom_button.dart';
+import 'package:mighty_job/common/widget/custom_snackbar.dart';
+import 'package:mighty_job/common/widget/custom_text_field.dart';
+import 'package:mighty_job/feature/companySize/controller/company_size_controller.dart';
+import 'package:mighty_job/feature/companySize/domain/models/company_size_body.dart';
+import 'package:mighty_job/feature/companySize/domain/models/company_size_model.dart';
+import 'package:mighty_job/util/app_constants.dart';
+import 'package:mighty_job/util/dimensions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

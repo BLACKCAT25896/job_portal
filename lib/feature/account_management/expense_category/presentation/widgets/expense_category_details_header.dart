@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/widget/custom_contaner.dart';
-import 'package:ecommerce/feature/account_management/expense_category/domain/model/expense_category_details_model.dart';
-import 'package:ecommerce/feature/account_management/expense_category/logic/expense_category_controller.dart';
-import 'package:ecommerce/helper/price_converter.dart';
-import 'package:ecommerce/util/dimensions.dart';
-import 'package:ecommerce/util/styles.dart';
+import 'package:mighty_job/common/widget/custom_contaner.dart';
+import 'package:mighty_job/feature/account_management/expense_category/domain/model/expense_category_details_model.dart';
+import 'package:mighty_job/feature/account_management/expense_category/logic/expense_category_controller.dart';
+import 'package:mighty_job/helper/price_converter.dart';
+import 'package:mighty_job/util/dimensions.dart';
+import 'package:mighty_job/util/styles.dart';
 
 class ExpenseCategoryDetailsHeaderSection extends StatelessWidget {
   const ExpenseCategoryDetailsHeaderSection({super.key});

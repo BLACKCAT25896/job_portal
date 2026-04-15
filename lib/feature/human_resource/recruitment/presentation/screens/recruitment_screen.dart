@@ -1,11 +1,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/global_widget/custom_web_scroll_view_widget.dart';
-import 'package:ecommerce/common/widget/custom_app_bar.dart';
-import 'package:ecommerce/common/widget/custom_floating_button.dart';
-import 'package:ecommerce/feature/human_resource/recruitment/presentation/screens/create_new_recruitment_screen.dart';
-import 'package:ecommerce/feature/human_resource/recruitment/presentation/widgets/recruitment_list_widget.dart';
+import 'package:mighty_job/common/global_widget/custom_web_scroll_view_widget.dart';
+import 'package:mighty_job/common/widget/custom_app_bar.dart';
+import 'package:mighty_job/common/widget/custom_floating_button.dart';
+import 'package:mighty_job/feature/human_resource/recruitment/presentation/screens/create_new_recruitment_screen.dart';
+import 'package:mighty_job/feature/human_resource/recruitment/presentation/widgets/recruitment_list_widget.dart';
 
 class RecruitmentScreen extends StatefulWidget {
   const RecruitmentScreen({super.key});

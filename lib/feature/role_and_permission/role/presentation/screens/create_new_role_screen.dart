@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/global_widget/custom_web_scroll_view_widget.dart';
-import 'package:ecommerce/common/widget/custom_app_bar.dart';
-import 'package:ecommerce/feature/role_and_permission/role/domain/models/role_model.dart';
-import 'package:ecommerce/feature/role_and_permission/role/presentation/widgets/create_new_role_widget.dart';
+import 'package:mighty_job/common/global_widget/custom_web_scroll_view_widget.dart';
+import 'package:mighty_job/common/widget/custom_app_bar.dart';
+import 'package:mighty_job/feature/role_and_permission/role/domain/models/role_model.dart';
+import 'package:mighty_job/feature/role_and_permission/role/presentation/widgets/create_new_role_widget.dart';
 
 class CreateNewRoleScreen extends StatefulWidget {
   final RoleItem? roleItem;

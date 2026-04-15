@@ -1,7 +1,7 @@
 import 'package:get/get_connect/http/src/response/response.dart';
-import 'package:ecommerce/api_handle/api_client.dart';
-import 'package:ecommerce/feature/sms/sent_sms/domain/model/sent_sms_body.dart';
-import 'package:ecommerce/util/app_constants.dart';
+import 'package:mighty_job/api_handle/api_client.dart';
+import 'package:mighty_job/feature/sms/sent_sms/domain/model/sent_sms_body.dart';
+import 'package:mighty_job/util/app_constants.dart';
 
 class SentSmsRepository{
   final ApiClient apiClient;

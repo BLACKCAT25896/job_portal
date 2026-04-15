@@ -1,8 +1,8 @@
-import 'package:ecommerce/helper/app_color_helper.dart';
+import 'package:mighty_job/helper/app_color_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/widget/custom_button.dart';
-import 'package:ecommerce/helper/route_helper.dart';
+import 'package:mighty_job/common/widget/custom_button.dart';
+import 'package:mighty_job/helper/route_helper.dart';
 
 class NotLoginWidget extends StatelessWidget {
   final VoidCallback? onLogin;

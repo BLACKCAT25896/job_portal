@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:ecommerce/api_handle/api_checker.dart';
-import 'package:ecommerce/api_handle/global_api_response_model.dart';
-import 'package:ecommerce/common/model/popup_menu_model.dart';
-import 'package:ecommerce/common/widget/custom_snackbar.dart';
-import 'package:ecommerce/feature/loyalty/loyalty_point_redemption/domain/model/loyalty_point_redemption_body.dart';
-import 'package:ecommerce/feature/loyalty/loyalty_point_redemption/domain/model/loyalty_point_redemption_model.dart';
-import 'package:ecommerce/feature/loyalty/loyalty_point_redemption/domain/repository/loyalty_point_redemption_repository.dart';
-import 'package:ecommerce/helper/image_size_checker.dart';
+import 'package:mighty_job/api_handle/api_checker.dart';
+import 'package:mighty_job/api_handle/global_api_response_model.dart';
+import 'package:mighty_job/common/model/popup_menu_model.dart';
+import 'package:mighty_job/common/widget/custom_snackbar.dart';
+import 'package:mighty_job/feature/loyalty/loyalty_point_redemption/domain/model/loyalty_point_redemption_body.dart';
+import 'package:mighty_job/feature/loyalty/loyalty_point_redemption/domain/model/loyalty_point_redemption_model.dart';
+import 'package:mighty_job/feature/loyalty/loyalty_point_redemption/domain/repository/loyalty_point_redemption_repository.dart';
+import 'package:mighty_job/helper/image_size_checker.dart';
 
 class LoyaltyPointRedemptionController extends GetxController implements GetxService {
   final LoyaltyPointRedemptionRepository loyaltyPointRedemptionRepository;

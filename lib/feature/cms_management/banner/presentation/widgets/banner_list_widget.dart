@@ -1,11 +1,11 @@
-import 'package:ecommerce/common/layout/custom_dialog_widget.dart';
+import 'package:mighty_job/common/layout/custom_dialog_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/layout/list_layout_widget.dart';
-import 'package:ecommerce/feature/cms_management/banner/domain/model/banner_model.dart';
-import 'package:ecommerce/feature/cms_management/banner/logic/banner_controller.dart';
-import 'package:ecommerce/feature/cms_management/banner/presentation/widgets/banner_item_widget.dart';
-import 'package:ecommerce/feature/cms_management/banner/presentation/widgets/create_new_banner_widget.dart';
+import 'package:mighty_job/common/layout/list_layout_widget.dart';
+import 'package:mighty_job/feature/cms_management/banner/domain/model/banner_model.dart';
+import 'package:mighty_job/feature/cms_management/banner/logic/banner_controller.dart';
+import 'package:mighty_job/feature/cms_management/banner/presentation/widgets/banner_item_widget.dart';
+import 'package:mighty_job/feature/cms_management/banner/presentation/widgets/create_new_banner_widget.dart';
 
 class BannerListWidget extends StatelessWidget {
   final ScrollController scrollController;

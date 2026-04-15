@@ -1,9 +1,9 @@
-import 'package:ecommerce/feature/inventory/unit_measurement/presentation/widgets/create_new_unit_widget.dart';
+import 'package:mighty_job/feature/inventory/unit_measurement/presentation/widgets/create_new_unit_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/global_widget/custom_web_scroll_view_widget.dart';
-import 'package:ecommerce/common/widget/custom_app_bar.dart';
-import 'package:ecommerce/util/dimensions.dart';
+import 'package:mighty_job/common/global_widget/custom_web_scroll_view_widget.dart';
+import 'package:mighty_job/common/widget/custom_app_bar.dart';
+import 'package:mighty_job/util/dimensions.dart';
 
 
 class CreateNewUnitScreen extends StatefulWidget {

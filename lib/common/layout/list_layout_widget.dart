@@ -1,14 +1,14 @@
-import 'package:ecommerce/helper/app_color_helper.dart';
+import 'package:mighty_job/helper/app_color_helper.dart';
 import 'package:flutter/material.dart';
-import 'package:ecommerce/common/layout/heading_menu_widget.dart';
-import 'package:ecommerce/common/layout/section_header_with_path_widget.dart';
-import 'package:ecommerce/common/widget/custom_contaner.dart';
-import 'package:ecommerce/common/widget/custom_divider.dart';
-import 'package:ecommerce/common/widget/no_data_found.dart';
-import 'package:ecommerce/common/widget/paginated_list_widget.dart';
-import 'package:ecommerce/helper/responsive_helper.dart';
-import 'package:ecommerce/util/dimensions.dart';
-import 'package:ecommerce/util/styles.dart';
+import 'package:mighty_job/common/layout/heading_menu_widget.dart';
+import 'package:mighty_job/common/layout/section_header_with_path_widget.dart';
+import 'package:mighty_job/common/widget/custom_contaner.dart';
+import 'package:mighty_job/common/widget/custom_divider.dart';
+import 'package:mighty_job/common/widget/no_data_found.dart';
+import 'package:mighty_job/common/widget/paginated_list_widget.dart';
+import 'package:mighty_job/helper/responsive_helper.dart';
+import 'package:mighty_job/util/dimensions.dart';
+import 'package:mighty_job/util/styles.dart';
 
 
 class GenericListSection<T> extends StatelessWidget {

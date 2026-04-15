@@ -1,11 +1,11 @@
 import 'dart:developer';
 
 import 'package:get/get.dart';
-import 'package:ecommerce/api_handle/api_checker.dart';
-import 'package:ecommerce/feature/profile/logic/profile_controller.dart';
-import 'package:ecommerce/feature/subsscription/domain/models/package_model.dart';
-import 'package:ecommerce/feature/subsscription/domain/repository/subscription_repository.dart';
-import 'package:ecommerce/feature/subsscription/presentation/widgets/subscription_request_successfull_dialog.dart';
+import 'package:mighty_job/api_handle/api_checker.dart';
+import 'package:mighty_job/feature/profile/logic/profile_controller.dart';
+import 'package:mighty_job/feature/subsscription/domain/models/package_model.dart';
+import 'package:mighty_job/feature/subsscription/domain/repository/subscription_repository.dart';
+import 'package:mighty_job/feature/subsscription/presentation/widgets/subscription_request_successfull_dialog.dart';
 
 class SubscriptionController extends GetxController implements GetxService{
   final SubscriptionRepository subscriptionRepository;

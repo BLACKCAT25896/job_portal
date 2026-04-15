@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/controller/date_picker_controller.dart';
-import 'package:ecommerce/common/widget/custom_button.dart';
-import 'package:ecommerce/common/widget/custom_snackbar.dart';
-import 'package:ecommerce/common/widget/custom_text_field.dart';
-import 'package:ecommerce/common/widget/date_selection_widget.dart';
-import 'package:ecommerce/feature/account_management/accounting/logic/account_controller.dart';
-import 'package:ecommerce/feature/account_management/accounting/presentation/widgets/account_selection_widget.dart';
-import 'package:ecommerce/feature/account_management/expense/domain/model/expense_body.dart';
-import 'package:ecommerce/feature/account_management/expense/domain/model/expense_model.dart';
-import 'package:ecommerce/feature/account_management/expense/logic/expense_controller.dart';
-import 'package:ecommerce/feature/account_management/expense_category/logic/expense_category_controller.dart';
-import 'package:ecommerce/feature/account_management/expense_category/presentation/widgets/select_expense_category_widget.dart';
-import 'package:ecommerce/feature/account_management/fund/logic/fund_controller.dart';
-import 'package:ecommerce/feature/account_management/fund/presentation/widgets/select_fund_widget.dart';
-import 'package:ecommerce/util/app_constants.dart';
-import 'package:ecommerce/util/dimensions.dart';
+import 'package:mighty_job/common/controller/date_picker_controller.dart';
+import 'package:mighty_job/common/widget/custom_button.dart';
+import 'package:mighty_job/common/widget/custom_snackbar.dart';
+import 'package:mighty_job/common/widget/custom_text_field.dart';
+import 'package:mighty_job/common/widget/date_selection_widget.dart';
+import 'package:mighty_job/feature/account_management/accounting/logic/account_controller.dart';
+import 'package:mighty_job/feature/account_management/accounting/presentation/widgets/account_selection_widget.dart';
+import 'package:mighty_job/feature/account_management/expense/domain/model/expense_body.dart';
+import 'package:mighty_job/feature/account_management/expense/domain/model/expense_model.dart';
+import 'package:mighty_job/feature/account_management/expense/logic/expense_controller.dart';
+import 'package:mighty_job/feature/account_management/expense_category/logic/expense_category_controller.dart';
+import 'package:mighty_job/feature/account_management/expense_category/presentation/widgets/select_expense_category_widget.dart';
+import 'package:mighty_job/feature/account_management/fund/logic/fund_controller.dart';
+import 'package:mighty_job/feature/account_management/fund/presentation/widgets/select_fund_widget.dart';
+import 'package:mighty_job/util/app_constants.dart';
+import 'package:mighty_job/util/dimensions.dart';
 
 class CreateNewExpenseWidget extends StatefulWidget {
   final ExpenseItem? expenseItem;

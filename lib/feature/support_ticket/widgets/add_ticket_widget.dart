@@ -1,12 +1,12 @@
-import 'package:ecommerce/helper/app_color_helper.dart';
+import 'package:mighty_job/helper/app_color_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/widget/custom_button.dart';
-import 'package:ecommerce/common/widget/custom_snackbar.dart';
-import 'package:ecommerce/common/widget/custom_text_field.dart';
-import 'package:ecommerce/feature/support_ticket/controllers/support_ticket_controller.dart';
-import 'package:ecommerce/feature/support_ticket/domain/models/support_ticket_body.dart';
-import 'package:ecommerce/util/dimensions.dart';
+import 'package:mighty_job/common/widget/custom_button.dart';
+import 'package:mighty_job/common/widget/custom_snackbar.dart';
+import 'package:mighty_job/common/widget/custom_text_field.dart';
+import 'package:mighty_job/feature/support_ticket/controllers/support_ticket_controller.dart';
+import 'package:mighty_job/feature/support_ticket/domain/models/support_ticket_body.dart';
+import 'package:mighty_job/util/dimensions.dart';
 
 class AddTicketWidget extends StatefulWidget {
   const AddTicketWidget({super.key});

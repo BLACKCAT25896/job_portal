@@ -1,18 +1,18 @@
-import 'package:ecommerce/common/layout/custom_dialog_widget.dart';
-import 'package:ecommerce/common/widget/active_inactive_widget.dart';
-import 'package:ecommerce/feature/profile/domain/model/status_update_body.dart';
-import 'package:ecommerce/feature/profile/logic/profile_controller.dart';
+import 'package:mighty_job/common/layout/custom_dialog_widget.dart';
+import 'package:mighty_job/common/widget/active_inactive_widget.dart';
+import 'package:mighty_job/feature/profile/domain/model/status_update_body.dart';
+import 'package:mighty_job/feature/profile/logic/profile_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/widget/confirmation_dialog.dart';
-import 'package:ecommerce/common/widget/custom_popup_menu.dart';
-import 'package:ecommerce/common/widget/custom_text_item_widget.dart';
-import 'package:ecommerce/common/widget/numbering_widget.dart';
-import 'package:ecommerce/feature/dashboard/controller/dashboard_controller.dart';
-import 'package:ecommerce/feature/human_resource/weekly_holiday/controller/weekly_holiday_controller.dart';
-import 'package:ecommerce/feature/human_resource/weekly_holiday/domain/models/weekly_holiday_model.dart';
-import 'package:ecommerce/feature/human_resource/weekly_holiday/presentation/screens/create_new_weekly_holiday_screen.dart';
-import 'package:ecommerce/util/dimensions.dart';
+import 'package:mighty_job/common/widget/confirmation_dialog.dart';
+import 'package:mighty_job/common/widget/custom_popup_menu.dart';
+import 'package:mighty_job/common/widget/custom_text_item_widget.dart';
+import 'package:mighty_job/common/widget/numbering_widget.dart';
+import 'package:mighty_job/feature/dashboard/controller/dashboard_controller.dart';
+import 'package:mighty_job/feature/human_resource/weekly_holiday/controller/weekly_holiday_controller.dart';
+import 'package:mighty_job/feature/human_resource/weekly_holiday/domain/models/weekly_holiday_model.dart';
+import 'package:mighty_job/feature/human_resource/weekly_holiday/presentation/screens/create_new_weekly_holiday_screen.dart';
+import 'package:mighty_job/util/dimensions.dart';
 
 class WeeklyHolidayItemWidget extends StatelessWidget {
   final WeeklyHolidayItem? weeklyHolidayItem;

@@ -1,11 +1,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/global_widget/custom_web_scroll_view_widget.dart';
-import 'package:ecommerce/common/widget/custom_app_bar.dart';
-import 'package:ecommerce/common/widget/custom_floating_button.dart';
-import 'package:ecommerce/feature/sms/sms_template/presentation/screens/create_new_sms_template_screen.dart';
-import 'package:ecommerce/feature/sms/sms_template/presentation/widgets/sms_template_list_widget.dart';
+import 'package:mighty_job/common/global_widget/custom_web_scroll_view_widget.dart';
+import 'package:mighty_job/common/widget/custom_app_bar.dart';
+import 'package:mighty_job/common/widget/custom_floating_button.dart';
+import 'package:mighty_job/feature/sms/sms_template/presentation/screens/create_new_sms_template_screen.dart';
+import 'package:mighty_job/feature/sms/sms_template/presentation/widgets/sms_template_list_widget.dart';
 
 class SmsTemplateScreen extends StatefulWidget {
   const SmsTemplateScreen({super.key});

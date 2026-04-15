@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/global_widget/custom_web_scroll_view_widget.dart';
-import 'package:ecommerce/common/widget/custom_app_bar.dart';
-import 'package:ecommerce/feature/tax_management/tax/presentation/widgets/create_new_tax_widget.dart';
-import 'package:ecommerce/util/dimensions.dart';
+import 'package:mighty_job/common/global_widget/custom_web_scroll_view_widget.dart';
+import 'package:mighty_job/common/widget/custom_app_bar.dart';
+import 'package:mighty_job/feature/tax_management/tax/presentation/widgets/create_new_tax_widget.dart';
+import 'package:mighty_job/util/dimensions.dart';
 
 
 class CreateNewTaxScreen extends StatefulWidget {

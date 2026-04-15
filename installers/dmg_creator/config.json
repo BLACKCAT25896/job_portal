@@ -1,8 +1,8 @@
 {
-  "title": "ecommerce",
+  "title": "mighty_job",
   "icon": "./app_icon.icns",
   "contents": [
     { "x": 448, "y": 344, "type": "link", "path": "/Applications" },
-    { "x": 192, "y": 344, "type": "file", "path": "../../build/macos/Build/Products/Debug/ecommerce.app" }
+    { "x": 192, "y": 344, "type": "file", "path": "../../build/macos/Build/Products/Debug/mighty_job.app" }
   ]
 }

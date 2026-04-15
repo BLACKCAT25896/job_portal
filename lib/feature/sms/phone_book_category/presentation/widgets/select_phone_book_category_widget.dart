@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/widget/custom_title.dart';
-import 'package:ecommerce/feature/sms/phone_book_category/controller/phone_book_category_controller.dart';
-import 'package:ecommerce/feature/sms/phone_book_category/presentation/widgets/phone_book_category_dropdown.dart';
+import 'package:mighty_job/common/widget/custom_title.dart';
+import 'package:mighty_job/feature/sms/phone_book_category/controller/phone_book_category_controller.dart';
+import 'package:mighty_job/feature/sms/phone_book_category/presentation/widgets/phone_book_category_dropdown.dart';
 
 class SelectPhoneBookCategoryWidget extends StatefulWidget {
   const SelectPhoneBookCategoryWidget({super.key});

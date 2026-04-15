@@ -1,16 +1,16 @@
-import 'package:ecommerce/common/widget/edit_delete_popup_widget.dart';
+import 'package:mighty_job/common/widget/edit_delete_popup_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/widget/active_inactive_widget.dart';
-import 'package:ecommerce/common/widget/confirmation_dialog.dart';
-import 'package:ecommerce/common/widget/numbering_widget.dart';
-import 'package:ecommerce/feature/human_resource/department/controller/department_controller.dart';
-import 'package:ecommerce/feature/human_resource/department/domain/models/department_model.dart';
-import 'package:ecommerce/feature/human_resource/department/presentation/screens/create_new_department_screen.dart';
-import 'package:ecommerce/feature/profile/domain/model/status_update_body.dart';
-import 'package:ecommerce/feature/profile/logic/profile_controller.dart';
-import 'package:ecommerce/util/dimensions.dart';
-import 'package:ecommerce/util/styles.dart';
+import 'package:mighty_job/common/widget/active_inactive_widget.dart';
+import 'package:mighty_job/common/widget/confirmation_dialog.dart';
+import 'package:mighty_job/common/widget/numbering_widget.dart';
+import 'package:mighty_job/feature/human_resource/department/controller/department_controller.dart';
+import 'package:mighty_job/feature/human_resource/department/domain/models/department_model.dart';
+import 'package:mighty_job/feature/human_resource/department/presentation/screens/create_new_department_screen.dart';
+import 'package:mighty_job/feature/profile/domain/model/status_update_body.dart';
+import 'package:mighty_job/feature/profile/logic/profile_controller.dart';
+import 'package:mighty_job/util/dimensions.dart';
+import 'package:mighty_job/util/styles.dart';
 
 class DepartmentItemWidget extends StatelessWidget {
   final DepartmentItem? departmentItem;

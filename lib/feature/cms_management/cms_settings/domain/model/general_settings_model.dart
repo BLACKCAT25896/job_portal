@@ -1,4 +1,4 @@
-import 'package:ecommerce/helper/price_converter.dart';
+import 'package:mighty_job/helper/price_converter.dart';
 
 class GeneralSettingModel {
   bool? status;
@@ -25,7 +25,7 @@ class GeneralSettingModel {
 }
 
 class SettingItem {
-  String? ecommerceName;
+  String? mighty_jobName;
   String? siteTitle;
   String? phone;
   String? email;
@@ -119,7 +119,7 @@ class SettingItem {
 
 
   SettingItem(
-      {this.ecommerceName,
+      {this.mighty_jobName,
         this.siteTitle,
         this.phone,
         this.email,
@@ -213,7 +213,7 @@ class SettingItem {
       });
 
   SettingItem.fromJson(Map<String, dynamic> json) {
-    ecommerceName = json['ecommerce_name'];
+    mighty_jobName = json['mighty_job_name'];
     siteTitle = json['site_title'];
     phone = json['phone'].toString();
     email = json['email'];
@@ -311,7 +311,7 @@ class SettingItem {
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = <String, dynamic>{};
-    data['ecommerce_name'] = ecommerceName;
+    data['mighty_job_name'] = mighty_jobName;
     data['site_title'] = siteTitle;
     data['phone'] = phone;
     data['email'] = email;

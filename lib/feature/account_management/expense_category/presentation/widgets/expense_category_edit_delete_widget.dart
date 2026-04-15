@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/common/widget/custom_bottom_sheet.dart';
-import 'package:ecommerce/common/widget/edit_delete_bottom_section.dart';
-import 'package:ecommerce/feature/account_management/expense_category/domain/model/expense_category_model.dart';
-import 'package:ecommerce/feature/account_management/expense_category/logic/expense_category_controller.dart';
-import 'package:ecommerce/feature/account_management/expense_category/presentation/screen/create_new_expense_category_screen.dart';
-import 'package:ecommerce/feature/profile/logic/profile_controller.dart';
-import 'package:ecommerce/util/dimensions.dart';
+import 'package:mighty_job/common/widget/custom_bottom_sheet.dart';
+import 'package:mighty_job/common/widget/edit_delete_bottom_section.dart';
+import 'package:mighty_job/feature/account_management/expense_category/domain/model/expense_category_model.dart';
+import 'package:mighty_job/feature/account_management/expense_category/logic/expense_category_controller.dart';
+import 'package:mighty_job/feature/account_management/expense_category/presentation/screen/create_new_expense_category_screen.dart';
+import 'package:mighty_job/feature/profile/logic/profile_controller.dart';
+import 'package:mighty_job/util/dimensions.dart';
 
 
 class ExpenseCategoryEditDeleteWidget extends StatelessWidget {

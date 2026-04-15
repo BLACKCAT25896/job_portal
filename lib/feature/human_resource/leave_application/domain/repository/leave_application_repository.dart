@@ -1,7 +1,7 @@
-import 'package:ecommerce/feature/human_resource/leave_application/domain/models/leave_application_body.dart';
+import 'package:mighty_job/feature/human_resource/leave_application/domain/models/leave_application_body.dart';
 import 'package:get/get_connect/http/src/response/response.dart';
-import 'package:ecommerce/api_handle/api_client.dart';
-import 'package:ecommerce/util/app_constants.dart';
+import 'package:mighty_job/api_handle/api_client.dart';
+import 'package:mighty_job/util/app_constants.dart';
 
 class LeaveApplicationRepository{
   final ApiClient apiClient;

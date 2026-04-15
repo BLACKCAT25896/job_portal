@@ -1,7 +1,7 @@
-import 'package:ecommerce/feature/payment_method/domain/model/payment_method_model.dart';
+import 'package:mighty_job/feature/payment_method/domain/model/payment_method_model.dart';
 import 'package:get/get_connect/http/src/response/response.dart';
-import 'package:ecommerce/api_handle/api_client.dart';
-import 'package:ecommerce/util/app_constants.dart';
+import 'package:mighty_job/api_handle/api_client.dart';
+import 'package:mighty_job/util/app_constants.dart';
 
 class PaymentMethodRepository {
   final ApiClient apiClient;
