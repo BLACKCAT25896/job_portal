@@ -40,6 +40,8 @@ class AppConstants {
   static const String degreeLevels = '/degree-levels';
   static const String salaryCurrencies = '/salary-currencies';
   static const String salaryPeriods = '/salary-periods';
+  static const String skills = '/skills';
+  static const String jobCategories = '/job-categories';
 
   // Dashboard API endpoints
   static const String dashboardStatistics = '/dashboard/statistics';

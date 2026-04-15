@@ -88,6 +88,8 @@ import 'package:mighty_job/feature/salary_period/controller/salary_period_contro
 import 'package:mighty_job/feature/salary_period/domain/repository/salary_period_repository.dart';
 import 'package:mighty_job/feature/setting/domain/repository/setting_repository.dart';
 import 'package:mighty_job/feature/setting/logic/setting_controller.dart';
+import 'package:mighty_job/feature/skill/controller/skill_controller.dart';
+import 'package:mighty_job/feature/skill/domain/repository/skill_repository.dart';
 import 'package:mighty_job/feature/tax_management/tax/domain/repository/tax_repository.dart';
 import 'package:mighty_job/feature/tax_management/tax/logic/tax_controller.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -165,6 +167,9 @@ Future<Map<String, Map<String, String>>> init() async {
 
   Get.lazyPut(() => SalaryPeriodRepository(apiClient: Get.find()));
   Get.lazyPut(() => SalaryPeriodController(salaryPeriodRepository: Get.find()));
+
+  Get.lazyPut(() => SkillRepository(apiClient: Get.find()));
+  Get.lazyPut(() => SkillController(skillRepository: Get.find()));
 
 
 
