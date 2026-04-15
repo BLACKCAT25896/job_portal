@@ -1,27 +1,12 @@
 
 
-import 'package:ecommerce/enum/action_type.dart';
-import 'package:ecommerce/feature/auction_management/auction/presentation/screens/auction_screen.dart';
-import 'package:ecommerce/feature/auction_management/auction/presentation/screens/create_new_auction_screen.dart';
 import 'package:ecommerce/feature/human_resource/salary_generate/presentation/screens/create_new_salary_generate_screen.dart';
-import 'package:ecommerce/feature/inventory/attribute/presentation/screens/attribute_screen.dart';
-import 'package:ecommerce/feature/inventory/attribute_value/presentation/screens/attribute_value_screen.dart';
 import 'package:ecommerce/feature/inventory/brand/presentation/screens/brand_screen.dart';
 import 'package:ecommerce/feature/inventory/brand/presentation/screens/create_new_brand_screen.dart';
 import 'package:ecommerce/feature/inventory/category/presentation/screens/category_screen.dart';
 import 'package:ecommerce/feature/inventory/category/presentation/screens/create_new_category_screen.dart';
-import 'package:ecommerce/feature/inventory/damage/presentation/screens/create_damage_screen.dart';
-import 'package:ecommerce/feature/inventory/damage/presentation/screens/damage_screen.dart';
-import 'package:ecommerce/feature/inventory/product/presentation/screen/add_product_screen.dart';
-import 'package:ecommerce/feature/inventory/product/presentation/screen/product_details_screen.dart';
-import 'package:ecommerce/feature/inventory/product/presentation/screen/product_screen.dart';
 import 'package:ecommerce/feature/inventory/unit_measurement/presentation/screens/create_new_unit_screen.dart';
 import 'package:ecommerce/feature/inventory/unit_measurement/presentation/screens/unit_screen.dart';
-import 'package:ecommerce/feature/inventory/warehouse/presentation/screens/create_new_warehouse_screen.dart';
-import 'package:ecommerce/feature/inventory/warehouse/presentation/screens/warehouse_screen.dart';
-import 'package:ecommerce/feature/order_management/order_status/presentation/screens/order_status_screen.dart';
-import 'package:ecommerce/feature/order_management/order_type/presentation/screens/order_type_screen.dart';
-import 'package:ecommerce/feature/pos_management/customer/presentation/screens/customer_screen.dart';
 import 'package:get/get.dart';
 import 'package:ecommerce/feature/account_management/accounting/presentation/screen/account_screen.dart';
 import 'package:ecommerce/feature/account_management/deposit/presentation/screen/deposit_screen.dart';
@@ -58,16 +43,9 @@ import 'package:ecommerce/feature/human_resource/weekly_holiday/presentation/scr
 import 'package:ecommerce/feature/loyalty/loyalty_point/presentation/screens/loyalty_point_screen.dart';
 import 'package:ecommerce/feature/loyalty/loyalty_point_redemption/presentation/screens/loyalty_point_redemption_screen.dart';
 import 'package:ecommerce/feature/notification/presentation/screens/notification_screen.dart';
-import 'package:ecommerce/feature/order_management/order/presentation/screens/order_screen.dart';
 import 'package:ecommerce/feature/payment_method/presentation/screens/payment_method_screen.dart';
-import 'package:ecommerce/feature/pos_management/pos/presentation/screens/pos_screen.dart';
-import 'package:ecommerce/feature/pos_management/pos/presentation/screens/pos_setting_screen.dart';
 import 'package:ecommerce/feature/profile/presentation/screens/profile_screen.dart';
-import 'package:ecommerce/feature/purchase_management/purchase/presentation/screens/purchase_screen.dart';
-import 'package:ecommerce/feature/purchase_management/purchase_return/presentation/screens/purchase_returns_screen.dart';
-import 'package:ecommerce/feature/purchase_management/supplier/presentation/screens/supplier_screen.dart';
 import 'package:ecommerce/feature/report_management/presentation/opening_stock_report/opening_stock_report_screen.dart';
-import 'package:ecommerce/feature/report_management/presentation/purchase_report/purchase_report_screen.dart';
 import 'package:ecommerce/feature/report_management/presentation/stock_report/stock_report_screen.dart';
 import 'package:ecommerce/feature/role_and_permission/role/presentation/screens/role_screen.dart';
 import 'package:ecommerce/feature/role_and_permission/user/presentation/screens/user_screen.dart';
@@ -108,34 +86,6 @@ class RouteHelper {
 
 
   static const String deleteAccount = '/delete-account';
-
-
-  //ecommerce Management
-
-
-  static const String order = '/order';
-  static String getOrderRoute() => order;
-
-  static const String orderStatus = '/order-status';
-  static String getOrderStatusRoute() => orderStatus;
-
-  static const String orderType = '/order-type';
-  static String getOrderTypeRoute() => orderType;
-
-  static const String posSetting = '/pos-setting';
-  static String getPosSettingRoute() => posSetting;
-  static const String pos = '/pos';
-  static String getPosRoute() => pos;
-  static const String purchase = '/purchase';
-  static String getPurchaseRoute() => purchase;
-  static const String returnPurchase = '/return';
-  static String getReturnPurchaseRoute() => returnPurchase;
-  static const String suppliers = '/suppliers';
-  static String getSupplierRoute() => suppliers;
-
-
-
-
   static const String paymentMethod = '/payment-method';
   static String getPaymentMethodRoute() => paymentMethod;
 
@@ -269,10 +219,6 @@ class RouteHelper {
   static String getTicketDetailRoute(String id) => "$ticketDetail?id=$id";
 
 
-  static const String addNewProducts = '/add-new-products';
-  static String getAddNewProductsRoute () => addNewProducts;
-
-
   static const String addNewUnit = '/add-new-unit';
   static String getAddNewUnitRoute () => addNewUnit;
 
@@ -294,36 +240,6 @@ class RouteHelper {
   static const String addNewSubCategory = '/add-new-sub-category';
   static String getAddNewSubCategoryRoute () => addNewSubCategory;
 
-  static const String products = '/products';
-  static String getProductsRoute () => products;
-
-  static const String productDetails = '/products-details';
-  static String getProductDetailsRoute ({required String id}) => "$productDetails?id=$id";
-
-  static const String damage = '/damage';
-  static String getDamageRoute () => damage;
-
-  static const String addNewDamage = '/add-new-damage';
-  static String getAddNewDamageRoute (ProductActionType actionType) => "$addNewDamage?type=${actionType.name}";
-
-  static const String attribute = '/attribute';
-  static String getAttributeRoute () => attribute;
-
-  static const String attributeValue = '/attribute-value';
-  static String getAttributeValueRoute () => attributeValue;
-
-  static const String warehouse = '/warehouse';
-  static String getWarehouseRoute() => warehouse;
-
-  static const String addNewWarehouse = '/add-new-warehouse';
-  static String getAddNewWarehouseRoute() => addNewWarehouse;
-
-
-  static const String auction = '/auction';
-  static String getAuctionRoute() => auction;
-
-  static const String addNewAuction = '/add-new-auction';
-  static String getAddNeAuctionRoute() => addNewAuction;
 
 
   static String getInitialRoute() => initial;
@@ -368,20 +284,10 @@ class RouteHelper {
     GetPage(name: feedback, page: () => const FeedbackScreen()),
     GetPage(name: websiteSetting, page: () => const SystemSettingScreen()),
 
-    //ecommerce
 
-    GetPage(name: order, page: () => const OrderScreen()),
-    GetPage(name: orderStatus, page: () => const OrderStatusScreen()),
-    GetPage(name: orderType, page: () => const OrderTypeScreen()),
-    GetPage(name: posSetting, page: () => const PosSettingScreen()),
-    GetPage(name: pos, page: () => const PosScreen()),
-    GetPage(name: suppliers, page: () => const SupplierScreen()),
-    GetPage(name: purchase, page: () => const PurchaseScreen()),
-    GetPage(name: returnPurchase, page: () => const PurchaseReturnScreen()),
     GetPage(name: paymentMethod, page: () => const PaymentMethodScreen()),
     GetPage(name: roles, page: () => const RoleManagementScreen()),
     GetPage(name: users, page: () => const UserScreen()),
-    GetPage(name: customer, page: () => const CustomerScreen()),
 
 
 
@@ -411,7 +317,6 @@ class RouteHelper {
 
 
     //Reports
-    GetPage(name: purchaseReport, page: () => const PurchaseReportScreen()),
     GetPage(name: stockReport, page: () => const StockReportScreen()),
     GetPage(name: openingStockReport, page: () => const OpeningStockReportScreen()),
 
@@ -448,29 +353,11 @@ class RouteHelper {
     GetPage(name: ticketDetail, page: ()=> SupportConversationScreen(ticketId: Get.parameters['id']??"0")),
 
 
-    GetPage(name: addNewProducts, page: ()=> AddProductScreen()),
     GetPage(name: brand, page: ()=> BrandScreen()),
     GetPage(name: addNewBrand, page: ()=> CreateNewBrandScreen()),
     GetPage(name: category, page: ()=> CategoryScreen()),
     GetPage(name: addNewCategory, page: ()=> CreateNewCategoryScreen()),
-    GetPage(name: products, page: ()=> ProductScreen()),
-    GetPage(name: productDetails, page: ()=> ProductDetailsScreen(id: Get.parameters['id']??"0")),
 
-    GetPage(name: damage, page: ()=> DamageScreen()),
-    GetPage(name: addNewDamage, page: () {
-        final typeParam = Get.parameters['type'];
-        final actionType = ProductActionType.values.firstWhere((e) => e.name == typeParam,
-            orElse: () => ProductActionType.pos);
-        return CreateDamageScreen(actionType: actionType);
-      },
-    ),
-    GetPage(name: attribute, page: ()=> AttributeScreen()),
-    GetPage(name: attributeValue, page: ()=> AttributeValueScreen()),
-    GetPage(name: warehouse, page: ()=> WarehouseScreen()),
-    GetPage(name: addNewWarehouse, page: ()=> CreateNewWarehouseScreen()),
-
-    GetPage(name: auction, page: ()=> AuctionScreen()),
-    GetPage(name: addNewAuction, page: ()=> CreateNewAuctionScreen()),
 
   ];
 }

@@ -1,12 +1,7 @@
 
 import 'package:ecommerce/common/layout/custom_dialog_widget.dart';
 import 'package:ecommerce/feature/cms_management/cms_settings/controller/system_settngs_controller.dart';
-import 'package:ecommerce/feature/inventory/attribute/presentation/widgets/create_new_attribute_widget.dart';
-import 'package:ecommerce/feature/inventory/attribute_value/presentation/widgets/create_new_attribute_value_widget.dart';
 import 'package:ecommerce/feature/inventory/unit_measurement/presentation/widgets/create_new_unit_widget.dart';
-import 'package:ecommerce/feature/order_management/order/presentation/widgets/order_filter_tab_widget.dart';
-import 'package:ecommerce/feature/order_management/order_status/presentation/widgets/create_new_order_status_widget.dart';
-import 'package:ecommerce/feature/order_management/order_type/presentation/widgets/create_new_order_type_widget.dart';
 import 'package:ecommerce/feature/support_ticket/widgets/add_ticket_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -95,53 +90,6 @@ class SideBarController extends GetxController implements GetxService{
     SideMenuNestedExpansionItem(title: "dashboard".tr, keyValue: "dashboard", parent: true,
       icon: Images.dashboardSvgIcon,onTap: () => Get.toNamed(RouteHelper.getDashboardRoute()),),
 
-    SideMenuNestedExpansionItem(title: "pos".tr,keyValue: "pos",parent: true,
-      icon: Images.posSvgIcon,onTap: () {
-          Get.toNamed(RouteHelper.getPosRoute());
-        }
-    ),
-
-    if(profileController.hasPermission("orders_index"))
-    SideMenuNestedExpansionItem(sectionTitle: "order_management".tr,
-      title: "manage_order".tr, keyValue: "manage_order",parent: true,
-      icon: Images.manageOrder, children: [
-
-
-        SideMenuItemWidget(title: 'order'.tr, keyValue: 'order',
-          onTap: () => Get.toNamed(RouteHelper.getOrderRoute())),
-
-        SideOrderMenu(),
-      ],
-    ),
-
-    SideMenuNestedExpansionItem(title: "order_status".tr, keyValue: "order_status",parent: true,
-      icon: Images.manageOrder, children: [
-
-
-        SideMenuItemWidget(title: 'order_status'.tr, keyValue: 'order_status',
-            onTap: () => Get.toNamed(RouteHelper.getOrderStatusRoute())),
-
-
-        SideMenuItemWidget(title: 'new_order_status'.tr, keyValue: 'new_order_status',
-            onTap: () => Get.dialog(CustomDialogWidget(child: CreateNewOrderStatusWidget(),))),
-
-
-      ],
-    ),
-
-    SideMenuNestedExpansionItem(title: "order_type".tr, keyValue: "order_type",parent: true,
-      icon: Images.manageOrder, children: [
-
-        SideMenuItemWidget(title: 'order_type'.tr, keyValue: 'order_type',
-            onTap: () => Get.toNamed(RouteHelper.getOrderTypeRoute())),
-
-        SideMenuItemWidget(title: 'new_order_type'.tr, keyValue: 'new_order_type',
-            onTap: () => Get.dialog(CustomDialogWidget(child: CreateNewOrderTypeWidget(),))),
-
-      ],
-    ),
-
-
 
 
     SideMenuNestedExpansionItem(sectionTitle: "product_management".tr,
@@ -170,29 +118,6 @@ class SideBarController extends GetxController implements GetxService{
     ],
     ),
 
-    SideMenuNestedExpansionItem(
-      title: "attribute_setup".tr, keyValue: "attribute_setup",parent: true,
-      icon: Images.manageOrder, children: [
-
-      SideMenuItemWidget(title: 'attribute'.tr, keyValue: 'attribute',
-          onTap: () => Get.toNamed(RouteHelper.getAttributeRoute())),
-
-
-      SideMenuItemWidget(title: 'add_new_attribute'.tr, keyValue: 'add_new_attribute',
-          onTap: () => Get.dialog(CustomDialogWidget(title: "attribute".tr,
-              child: CreateNewAttributeWidget()))),
-
-
-
-      SideMenuItemWidget(title: 'attribute_value'.tr, keyValue: 'attribute_value',
-          onTap: () => Get.toNamed(RouteHelper.getAttributeValueRoute())),
-
-
-      SideMenuItemWidget(title: 'add_new_attribute_value'.tr, keyValue: 'add_new_attribute_value',
-          onTap: () => Get.dialog(CustomDialogWidget(title: "attribute_value".tr,
-              child: CreateNewAttributeValueWidget()))),
-
-    ],),
 
 
     SideMenuNestedExpansionItem(
@@ -209,77 +134,6 @@ class SideBarController extends GetxController implements GetxService{
 
     ],),
 
-
-
-    SideMenuNestedExpansionItem(
-      title: "products".tr, keyValue: "products",parent: true,
-      icon: Images.manageOrder, children: [
-
-      SideMenuItemWidget(title: 'products'.tr, keyValue: 'products',
-          onTap: () => Get.toNamed(RouteHelper.getProductsRoute())),
-
-
-      SideMenuItemWidget(title: 'add_new_product'.tr, keyValue: 'add_new_product',
-          onTap: () => Get.toNamed(RouteHelper.getAddNewProductsRoute())),
-
-
-      SideMenuItemWidget(title: 'damage'.tr, keyValue: 'damage',
-          onTap: () => Get.toNamed(RouteHelper.getDamageRoute())),
-
-    ],
-    ),
-    SideMenuNestedExpansionItem(
-      title: "warehouse".tr, keyValue: "warehouse",parent: true,
-      icon: Images.manageOrder, children: [
-
-      SideMenuItemWidget(title: 'warehouse_list'.tr, keyValue: 'warehouse_list',
-          onTap: () => Get.toNamed(RouteHelper.getWarehouseRoute())),
-
-      SideMenuItemWidget(title: 'add_new_warehouse'.tr, keyValue: 'add_new_warehouse',
-          onTap: () => Get.toNamed(RouteHelper.getAddNewWarehouseRoute())),
-
-    ],
-    ),
-
-
-
-    if(profileController.hasPermission("purchases_index") || profileController.hasPermission("purchase_return_index") || profileController.hasPermission("suppliers_index"))
-      SideMenuNestedExpansionItem(title: "auction".tr, keyValue: "auction",
-        parent: true, icon: Images.purchaseManagement,
-        children: [
-          if(profileController.hasPermission("purchases_index"))
-            SideMenuItemWidget(title: 'auction_list'.tr, keyValue: 'auction_list',
-                onTap: () => Get.toNamed(RouteHelper.getAuctionRoute())),
-
-          if(profileController.hasPermission("suppliers_index"))
-            SideMenuItemWidget(title: 'add_new_auction'.tr, keyValue: 'add_new_auction',
-                onTap: () => Get.toNamed(RouteHelper.getAddNeAuctionRoute())),
-
-        ],
-      ),
-
-
-
-
-    if(profileController.hasPermission("purchases_index") || profileController.hasPermission("purchase_return_index") || profileController.hasPermission("suppliers_index"))
-    SideMenuNestedExpansionItem(sectionTitle: "purchase_management".tr,
-      title: "purchase_management".tr, keyValue: "purchase_management",
-      parent: true, icon: Images.purchaseManagement,
-      children: [
-        if(profileController.hasPermission("purchases_index"))
-        SideMenuItemWidget(title: 'purchase_list'.tr, keyValue: 'purchase_list',
-          onTap: () => Get.toNamed(RouteHelper.getPurchaseRoute())),
-
-        if(profileController.hasPermission("purchase_return_index"))
-        SideMenuItemWidget(title: 'purchase_return'.tr, keyValue: 'purchase_return',
-            onTap: () => Get.toNamed(RouteHelper.getReturnPurchaseRoute())),
-
-        if(profileController.hasPermission("suppliers_index"))
-        SideMenuItemWidget(title: 'supplier'.tr, keyValue: 'supplier',
-            onTap: () => Get.toNamed(RouteHelper.getSupplierRoute())),
-
-      ],
-    ),
 
 
 

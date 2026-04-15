@@ -4,7 +4,6 @@ import 'package:ecommerce/api_handle/global_api_response_model.dart';
 import 'package:ecommerce/common/controller/date_picker_controller.dart';
 import 'package:ecommerce/feature/report_management/domain/model/dashboard_report_data_model.dart';
 import 'package:ecommerce/feature/report_management/domain/model/opening_stock_report_model.dart';
-import 'package:ecommerce/feature/report_management/domain/model/purchase_report_model.dart';
 import 'package:ecommerce/feature/report_management/domain/model/stock_report_model.dart';
 import 'package:ecommerce/feature/report_management/domain/repository/report_repository.dart';
 
@@ -53,23 +52,7 @@ class ReportController extends GetxController implements GetxService{
     }
 
 
-    ApiResponse<PurchaseReportItem>? purchaseReportModel;
-  Future<void> getPurchaseReport(int page, {String? startDate, String? endDate}) async {
-    Response response = await reportRepository.getPurchaseReport(page, startDate: startDate, endDate: endDate);
-    if (response.statusCode == 200) {
-      final apiResponse = ApiResponse<PurchaseReportItem>.fromJson(response.body, (json)=> PurchaseReportItem.fromJson(json));
-      if(page == 1){
-        purchaseReportModel = apiResponse;
-      }else{
-        purchaseReportModel?.data?.data?.addAll(apiResponse.data?.data??[]);
-        purchaseReportModel?.data?.total = apiResponse.data?.total;
-        purchaseReportModel?.data?.currentPage = apiResponse.data?.currentPage;
-      }
-    }else{
-      ApiChecker.checkApi(response);
-    }
-    update();
-  }
+
 
   OpeningStockReportModel? openingStockReportModel;
   Future<void> getStockOpeningReport() async {

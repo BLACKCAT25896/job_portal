@@ -14,7 +14,7 @@ class AuthenticationRepository{
 
   Future<Response?> login({required String email, required String password}) async {
     return await apiClient.postData(AppConstants.loginUri,
-        {"login": email, "password": password});
+        {"phone": email, "password": password});
   }
 
 

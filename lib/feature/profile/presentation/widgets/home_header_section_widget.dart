@@ -19,7 +19,6 @@ class HomeHeaderSectionWidget extends StatelessWidget {
 
 
         CustomContainer(verticalPadding: 5, borderRadius: 5, showShadow: false,
-            onTap: ()=> Get.toNamed(RouteHelper.getOrderRoute()),
             color: Theme.of(context).cardColor.withValues(alpha: .35),
             child: Row(spacing: Dimensions.paddingSizeSmall,
               children: [

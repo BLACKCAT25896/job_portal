@@ -80,28 +80,6 @@ List<UserGuideItem> userGuideItems = [
 
 
 
-  if(profileController.hasPermission("orders_index"))
-    UserGuideItem(
-      routeName: RouteHelper.getOrderRoute(),
-      title: 'order'.tr,
-      description: 'Navigate to ${"order".tr} to manage orders.',
-    ),
-
-
-  if(profileController.hasPermission("pos_management.pos"))
-    UserGuideItem(
-      routeName: RouteHelper.getPosRoute(),
-      title: 'pos'.tr,
-      description: 'Navigate to ${"pos".tr} to manage POS systems.',
-    ),
-
-  if(profileController.hasPermission("pos_management.pos_setting"))
-    UserGuideItem(
-      routeName: RouteHelper.getPosSettingRoute(),
-      title: 'pos_setting'.tr,
-      description: 'Navigate to ${"pos_setting".tr} to manage POS settings.',
-    ),
-
   // Accounting
   if(profileController.hasPermission("accounting.deposit"))
     UserGuideItem(

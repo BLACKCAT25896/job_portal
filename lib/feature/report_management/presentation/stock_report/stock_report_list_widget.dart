@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:ecommerce/common/layout/list_layout_widget.dart';
 import 'package:ecommerce/feature/report_management/domain/model/stock_report_model.dart';
 import 'package:ecommerce/feature/report_management/logic/report_controller.dart';
-import 'package:ecommerce/feature/report_management/presentation/purchase_report/search_purchase_report_widget.dart';
 import 'package:ecommerce/feature/report_management/presentation/stock_report/stock_report_item_widget.dart';
 
 class StockReportListWidget extends StatelessWidget {
@@ -19,7 +18,6 @@ class StockReportListWidget extends StatelessWidget {
         final data = model?.data;
 
         return GenericListSection<StockReportItem>(
-          topWidget: SearchPurchaseReportWidget(type: "stock",),
           sectionTitle: "reports".tr,
           pathItems: ["stock_report".tr],
           addNewTitle: "export_report".tr,

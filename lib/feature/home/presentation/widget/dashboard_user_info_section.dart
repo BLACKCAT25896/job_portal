@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ecommerce/feature/home/presentation/widget/feature_menu_item_widget.dart';
 import 'package:ecommerce/feature/profile/logic/profile_controller.dart';
-import 'package:ecommerce/helper/responsive_helper.dart';
-import 'package:ecommerce/helper/route_helper.dart';
 import 'package:ecommerce/util/dimensions.dart';
-import 'package:ecommerce/util/images.dart';
 import 'package:ecommerce/util/styles.dart';
 
 class DashboardUserInfoSection extends StatelessWidget {
@@ -25,11 +21,6 @@ class DashboardUserInfoSection extends StatelessWidget {
                 style: textRegular.copyWith(color: Theme.of(context).textTheme.bodyMedium?.color?.withValues(alpha:0.7)),),
 
             ])),
-
-            if(ResponsiveHelper.isDesktop(context))
-            FeatureMenuItemWidget(onTap: ()=> Get.toNamed(RouteHelper.getPosRoute()),
-                title: "pos".tr, imageUrl: Images.posIcon),
-
 
           ]),
         );

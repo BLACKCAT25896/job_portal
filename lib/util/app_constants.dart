@@ -17,7 +17,7 @@ class AppConstants {
   static const bool demo = true;
 
   //local
-  static const String baseUrl = 'https://ecommerce.bdboibazer.com';
+  static const String baseUrl = 'https://job-portal.bdboibazer.com';
   static const String imageBaseUrl = '$baseUrl/storage';
   static const String versionPath = '/api/v1';
   static String get ecommerceDomain => DomainHelper.getCurrentDomain();
@@ -29,6 +29,16 @@ class AppConstants {
   static const String tokenUri = '/save-fcm-token';
   static const String vapidKey = 'BGvbfIkEn80a8STCbBPdr-S8QNtjrZfrs-UH7-sZgDDpr_LDfxCsx4n-pC-kUh2jqpWLwEvoAti0AyFYLcvQhng';
 
+
+
+  //Here is
+  static const String industries = '/industries';
+  static const String companySizes = '/company-sizes';
+  static const String companies = '/companies';
+  static const String ownerShipTypes = '/owner-ship-types';
+  static const String careerLevels = '/career-levels';
+  static const String degreeLevels = '/degree-levels';
+  static const String salaryCurrencies = '/salary-currencies';
 
   // Dashboard API endpoints
   static const String dashboardStatistics = '/dashboard/statistics';
@@ -44,13 +54,13 @@ class AppConstants {
   static const String feedback = '/testimonials';
   static const String academicImages = '/academic-images';
   static const String policies = '/policies';
-  static const String generalSetting = '/shop-settings';
-  static const String generalSettingUpdate = '/shop-settings-update';
+  static const String generalSetting = '/tenant-settings';
+  static const String generalSettingUpdate = '/tenant-settings-update';
   static const String publicSetting = '/publicSetting';
   static const String frontendCmsSection = '/frontend/cms-sections';
   static const String cmsSectionReorder = '/cms-sections-update';
   static const String ecommerceSchedule = '/ecommerce-schedules';
-  static const String ecommerceImageSetting = '/shop-image-settings';
+  static const String ecommerceImageSetting = '/tenant-image-settings';
 
 
   //ecommerce management
@@ -167,7 +177,7 @@ class AppConstants {
 
   //Theme
   static const String getTheme = '/frontend/themes';
-  static const String themeAssign = '/shops-theme';
+  static const String themeAssign = '/tenants-theme';
   static const String getDefaultTheme = '/frontend/default-theme';
 
 

@@ -4,7 +4,6 @@ import 'package:ecommerce/common/layout/list_layout_widget.dart';
 import 'package:ecommerce/feature/report_management/domain/model/opening_stock_report_model.dart';
 import 'package:ecommerce/feature/report_management/logic/report_controller.dart';
 import 'package:ecommerce/feature/report_management/presentation/opening_stock_report/opening_stock_report_item_widget.dart';
-import 'package:ecommerce/feature/report_management/presentation/purchase_report/search_purchase_report_widget.dart';
 
 class OpeningStockReportListWidget extends StatelessWidget {
   final ScrollController scrollController;
@@ -19,7 +18,6 @@ class OpeningStockReportListWidget extends StatelessWidget {
         final data = model?.data;
 
         return GenericListSection<OpeningStockReportItem>(
-          topWidget: SearchPurchaseReportWidget(type: "opening_stock",),
           sectionTitle: "reports".tr,
           pathItems: ["opening_stock_report".tr],
           addNewTitle: "export_report".tr,

@@ -1,32 +1,26 @@
 import 'dart:convert';
 import 'package:ecommerce/common/controller/image_picker_controller.dart';
 import 'package:ecommerce/common/controller/network_controller.dart';
-import 'package:ecommerce/feature/auction_management/auction/domain/repository/auction_repository.dart';
-import 'package:ecommerce/feature/auction_management/auction/logic/auction_controller.dart';
-import 'package:ecommerce/feature/cart/domain/repository/cart_repository.dart';
-import 'package:ecommerce/feature/cart/logic/cart_controller.dart';
-import 'package:ecommerce/feature/inventory/attribute/controller/attribute_controller.dart';
-import 'package:ecommerce/feature/inventory/attribute/domain/repository/attribute_repository.dart';
-import 'package:ecommerce/feature/inventory/attribute_value/controller/attribute_value_controller.dart';
-import 'package:ecommerce/feature/inventory/attribute_value/domain/repository/attribute_value_repository.dart';
+import 'package:ecommerce/feature/career_level/controller/career_level_controller.dart';
+import 'package:ecommerce/feature/career_level/domain/repository/career_level_repository.dart';
+import 'package:ecommerce/feature/company/controller/company_controller.dart';
+import 'package:ecommerce/feature/company/domain/repository/company_repository.dart';
+import 'package:ecommerce/feature/companySize/controller/company_size_controller.dart';
+import 'package:ecommerce/feature/companySize/domain/repository/company_size_repository.dart';
+import 'package:ecommerce/feature/degree_level/controller/degree_level_controller.dart';
+import 'package:ecommerce/feature/degree_level/domain/repository/degree_level_repository.dart';
+import 'package:ecommerce/feature/industries/controller/industry_controller.dart';
+import 'package:ecommerce/feature/industries/domain/repository/industry_repository.dart';
 import 'package:ecommerce/feature/inventory/brand/controller/brand_controller.dart';
 import 'package:ecommerce/feature/inventory/brand/domain/repository/brand_repository.dart';
 import 'package:ecommerce/feature/inventory/category/controller/category_controller.dart';
 import 'package:ecommerce/feature/inventory/category/domain/repository/category_repository.dart';
-import 'package:ecommerce/feature/inventory/damage/controller/damage_controller.dart';
-import 'package:ecommerce/feature/inventory/damage/domain/repository/damage_repository.dart';
-import 'package:ecommerce/feature/inventory/product/domain/repository/product_repository.dart';
-import 'package:ecommerce/feature/inventory/product/domain/repository/search_product_repository.dart';
-import 'package:ecommerce/feature/inventory/product/logic/product_controller.dart';
-import 'package:ecommerce/feature/inventory/product/logic/search_product_controller.dart';
 import 'package:ecommerce/feature/inventory/unit_measurement/domain/repository/unit_repository.dart';
 import 'package:ecommerce/feature/inventory/unit_measurement/logic/unit_controller.dart';
 import 'package:ecommerce/feature/inventory/warehouse/domain/repository/warehouse_repository.dart';
 import 'package:ecommerce/feature/inventory/warehouse/logic/warehouse_controller.dart';
-import 'package:ecommerce/feature/order_management/order_status/domain/repository/order_status_repository.dart';
-import 'package:ecommerce/feature/order_management/order_status/logic/order_status_controller.dart';
-import 'package:ecommerce/feature/order_management/order_type/domain/repository/order_type_repository.dart';
-import 'package:ecommerce/feature/order_management/order_type/logic/order_type_controller.dart';
+import 'package:ecommerce/feature/ownership_type/controller/ownership_type_controller.dart';
+import 'package:ecommerce/feature/ownership_type/domain/repository/ownership_type_repository.dart';
 import 'package:flutter/services.dart';
 import 'package:ecommerce/common/controller/route_controller.dart';
 import 'package:ecommerce/common/widget/side_menu/src/side_bar_controller.dart';
@@ -85,20 +79,8 @@ import 'package:ecommerce/feature/loyalty/loyalty_point/domain/repository/loyalt
 import 'package:ecommerce/feature/loyalty/loyalty_point/logic/loyalty_point_controller.dart';
 import 'package:ecommerce/feature/loyalty/loyalty_point_redemption/domain/repository/loyalty_point_redemption_repository.dart';
 import 'package:ecommerce/feature/loyalty/loyalty_point_redemption/logic/loyalty_point_redemption_controller.dart';
-import 'package:ecommerce/feature/order_management/order/domain/repository/order_repository.dart';
-import 'package:ecommerce/feature/order_management/order/logic/order_controller.dart';
 import 'package:ecommerce/feature/payment_method/domain/repository/payment_method_repository.dart';
 import 'package:ecommerce/feature/payment_method/logic/payment_method_controller.dart';
-import 'package:ecommerce/feature/pos_management/customer/domain/repository/customer_repository.dart';
-import 'package:ecommerce/feature/pos_management/customer/logic/customer_controller.dart';
-import 'package:ecommerce/feature/pos_management/pos/domain/repository/pos_repository.dart';
-import 'package:ecommerce/feature/pos_management/pos/logic/pos_controller.dart';
-import 'package:ecommerce/feature/purchase_management/purchase/domain/repository/purchase_repository.dart';
-import 'package:ecommerce/feature/purchase_management/purchase/logic/purchase_controller.dart';
-import 'package:ecommerce/feature/purchase_management/purchase_return/domain/repository/purchase_returns_repository.dart';
-import 'package:ecommerce/feature/purchase_management/purchase_return/logic/purchase_returns_controller.dart';
-import 'package:ecommerce/feature/purchase_management/supplier/domain/repository/supplier_repository.dart';
-import 'package:ecommerce/feature/purchase_management/supplier/logic/supplier_controller.dart';
 import 'package:ecommerce/feature/report_management/domain/repository/report_repository.dart';
 import 'package:ecommerce/feature/report_management/logic/report_controller.dart';
 import 'package:ecommerce/feature/role_and_permission/role/domain/repository/role_repository.dart';
@@ -159,6 +141,25 @@ Future<Map<String, Map<String, String>>> init() async {
   Get.lazyPut(() => SupportTicketRepository(apiClient : Get.find()));
 
 
+  //Here
+  Get.lazyPut(() => IndustryRepository(apiClient: Get.find()));
+  Get.lazyPut(() => IndustryController(industryRepository: Get.find()));
+
+  Get.lazyPut(() => CompanySizeRepository(apiClient: Get.find()));
+  Get.lazyPut(() => CompanySizeController(companySizeRepository: Get.find()));
+
+  Get.lazyPut(() => OwnershipTypeRepository(apiClient: Get.find()));
+  Get.lazyPut(() => OwnershipTypeController(ownershipTypeRepository: Get.find()));
+
+  Get.lazyPut(() => CompanyRepository(apiClient: Get.find()));
+  Get.lazyPut(() => CompanyController(companyRepository: Get.find()));
+
+  Get.lazyPut(() => CareerLevelRepository(apiClient: Get.find()));
+  Get.lazyPut(() => CareerLevelController(careerLevelRepository: Get.find()));
+
+  Get.lazyPut(() => DegreeLevelRepository(apiClient: Get.find()));
+  Get.lazyPut(() => DegreeLevelController(degreeLevelRepository: Get.find()));
+
   Get.lazyPut(() => BannerRepository(apiClient: Get.find()));
   Get.lazyPut(() => AboutUsRepository(apiClient: Get.find()));
   Get.lazyPut(() => ExploreRepository(apiClient: Get.find()));
@@ -199,43 +200,16 @@ Future<Map<String, Map<String, String>>> init() async {
   Get.lazyPut(() => NetworkController());
 
 
-  // ecommerce management
-  Get.lazyPut(() => OrderRepository(apiClient: Get.find()));
-  Get.lazyPut(() => OrderController(orderRepository: Get.find()));
-
-
-  Get.lazyPut(() => OrderStatusRepository(apiClient: Get.find()));
-  Get.lazyPut(() => OrderStatusController(orderStatusRepository: Get.find()));
-
-  Get.lazyPut(() => OrderTypeRepository(apiClient: Get.find()));
-  Get.lazyPut(() => OrderTypeController(orderTypeRepository: Get.find()));
-
-
-
-  Get.lazyPut(() => PosRepository(apiClient: Get.find()));
-  Get.lazyPut(() => PosController(foodRepository: Get.find()));
-
-  Get.lazyPut(() => PurchaseRepository(apiClient: Get.find()));
-  Get.lazyPut(() => PurchaseController(purchaseRepository: Get.find()));
-  Get.lazyPut(() => PurchaseReturnRepository(apiClient: Get.find()));
-  Get.lazyPut(() => PurchaseReturnController(purchaseReturnRepository: Get.find()));
-  Get.lazyPut(() => SupplierRepository(apiClient: Get.find()));
-  Get.lazyPut(() => SupplierController(supplierRepository: Get.find()));
 
   Get.lazyPut(() => PaymentMethodRepository(apiClient: Get.find()));
   Get.lazyPut(() => PaymentMethodController(paymentMethodRepository: Get.find()));
 
-  Get.lazyPut(() => CustomerRepository(apiClient: Get.find()));
-  Get.lazyPut(() => CustomerController(customerRepository  : Get.find()));
 
 
   Get.lazyPut(() => ReportRepository(apiClient: Get.find()));
   Get.lazyPut(() => ReportController(reportRepository  : Get.find()));
 
 
-
-  Get.lazyPut(() => CartRepository(apiClient : Get.find(), sharedPreferences: Get.find()));
-  Get.lazyPut(() => CartController(cartRepository: Get.find()));
 
   //HRM
   Get.lazyPut(() => DepartmentRepository(apiClient : Get.find()));
@@ -320,28 +294,10 @@ Future<Map<String, Map<String, String>>> init() async {
   Get.lazyPut(() => UnitRepository(apiClient: Get.find()));
   Get.lazyPut(() => UnitController(unitRepository: Get.find()));
 
-  Get.lazyPut(() => DamageRepository(apiClient: Get.find()));
-  Get.lazyPut(() => DamageController(damageRepository: Get.find()));
-
-  Get.lazyPut(() => AttributeRepository(apiClient: Get.find()));
-  Get.lazyPut(() => AttributeController(attributeRepository: Get.find()));
-
-  Get.lazyPut(() => AttributeValueRepository(apiClient: Get.find()));
-  Get.lazyPut(() => AttributeValueController(attributeValueRepository: Get.find()));
-
-
-  Get.lazyPut(() => ProductRepository(apiClient: Get.find()));
-  Get.lazyPut(() => ProductController(productRepository: Get.find()));
-
-  Get.lazyPut(() => SearchProductRepository(apiClient: Get.find()));
-  Get.lazyPut(() => SearchProductController(searchProductRepository: Get.find()));
-
 
   Get.lazyPut(() => WarehouseRepository(apiClient: Get.find()));
   Get.lazyPut(() => WarehouseController(warehouseRepository: Get.find()));
 
-  Get.lazyPut(() => AuctionRepository(apiClient: Get.find()));
-  Get.lazyPut(() => AuctionController(auctionRepository: Get.find()));
 
 
 

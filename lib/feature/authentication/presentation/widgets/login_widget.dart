@@ -27,7 +27,7 @@ class _LoginWidgetState extends State<LoginWidget> {
   void initState() {
     final controller = Get.find<AuthenticationController>();
     if(AppConstants.demo){
-      phoneController.text = "shop1@gmail.com";
+      phoneController.text = "00000000001";
       passwordController.text = "123456";
     }else{
       phoneController.text = controller.getEmail();
@@ -133,7 +133,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                           onTap: (){
                         authenticationController.setSelectedRoleIndex(index);
                         if(index == 0){
-                          phoneController.text = "shop1@gmail.com";
+                          phoneController.text = "00000000001";
                           passwordController.text = "123456";
                         }else if(index == 1){
                           phoneController.text = "manager1@gmail.com";

@@ -1,4 +1,3 @@
-import 'package:ecommerce/feature/cart/logic/cart_controller.dart';
 import 'package:ecommerce/helper/app_color_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -21,17 +20,11 @@ class CustomFloatingButton extends StatelessWidget {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(Dimensions.paddingSizeSmall)),
       onPressed: onTap,
-      label: GetBuilder<CartController>(builder: (controller) {
-          return Row(spacing: Dimensions.paddingSizeSmall, children: [
-            (cart)?
-            Badge(label : Text(controller.selectedItems.length.toString()),
-                child: Icon(icon?? Icons.add)):
+      label: Row(spacing: Dimensions.paddingSizeSmall, children: [
 
-            Icon(icon?? Icons.add),
+        Icon(icon?? Icons.add),
 
-            Text(title?.tr?? "add".tr, style: textRegular.copyWith(),)
-          ],);
-        }
-      ),);
+        Text(title?.tr?? "add".tr, style: textRegular.copyWith(),)
+      ],));
   }
 }

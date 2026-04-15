@@ -1,5 +1,4 @@
 import 'package:ecommerce/common/widget/responsive_grid_widget.dart';
-import 'package:ecommerce/feature/home/presentation/widget/recent_order/recent_order_list_widget.dart';
 import 'package:ecommerce/feature/home/presentation/widget/top_brand/top_brand_list.dart';
 import 'package:ecommerce/feature/home/presentation/widget/top_category/top_category_list.dart';
 import 'package:ecommerce/feature/home/presentation/widget/top_product_order/top_product_list.dart';
@@ -61,8 +60,6 @@ class _WebHomeScreenState extends State<WebHomeScreen> {
                         const SalesReportRatioChartWidget(),
                       ])),
 
-
-                    RecentOrderListWidget(scrollController: scrollController),
 
                     ResponsiveMasonryGrid(crossAxisSpacing: 0,
                         width: 600, children: [
