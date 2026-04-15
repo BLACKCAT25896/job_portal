@@ -37,7 +37,7 @@ class _HomeScreenState extends State<HomeScreen> {
       body: BodyWidget(appBar : AppBarWidget(showBackButton: false,
           actionWidget: HomeHeaderSectionWidget()),
         body: RefreshIndicator(onRefresh: () async {
-          Get.find<SystemSettingsController>().getmighty_jobImageSetting();
+          Get.find<SystemSettingsController>().getImageSetting();
         },
           child: CustomScrollView(slivers: [
             SliverToBoxAdapter(

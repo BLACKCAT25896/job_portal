@@ -25,7 +25,7 @@ class GeneralSettingModel {
 }
 
 class SettingItem {
-  String? mighty_jobName;
+  String? mightyJobName;
   String? siteTitle;
   String? phone;
   String? email;
@@ -119,7 +119,7 @@ class SettingItem {
 
 
   SettingItem(
-      {this.mighty_jobName,
+      {this.mightyJobName,
         this.siteTitle,
         this.phone,
         this.email,
@@ -213,7 +213,7 @@ class SettingItem {
       });
 
   SettingItem.fromJson(Map<String, dynamic> json) {
-    mighty_jobName = json['mighty_job_name'];
+    mightyJobName = json['mighty_job_name'];
     siteTitle = json['site_title'];
     phone = json['phone'].toString();
     email = json['email'];
@@ -311,7 +311,7 @@ class SettingItem {
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = <String, dynamic>{};
-    data['mighty_job_name'] = mighty_jobName;
+    data['mighty_job_name'] = mightyJobName;
     data['site_title'] = siteTitle;
     data['phone'] = phone;
     data['email'] = email;

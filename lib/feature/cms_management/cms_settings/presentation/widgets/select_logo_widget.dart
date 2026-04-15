@@ -14,10 +14,10 @@ class SelectLogoWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetBuilder<SystemSettingsController>(initState: (value){
-      Get.find<SystemSettingsController>().getmighty_jobImageSetting();
+      Get.find<SystemSettingsController>().getImageSetting();
       },
         builder: (controller) {
-      final model = controller.mighty_jobImageSettingModel;
+      final model = controller.imageSettingModel;
 
       return Padding(padding: const EdgeInsets.all(Dimensions.paddingSizeDefault),
         child: Column(spacing: Dimensions.paddingSizeDefault,children: [

@@ -22,7 +22,6 @@ class _GeneralSettingsWidgetState extends State<GeneralSettingsWidget> {
   TextEditingController emailController = TextEditingController();
   TextEditingController currencySymbolController = TextEditingController();
   TextEditingController addressController = TextEditingController();
-  TextEditingController mighty_jobController = TextEditingController();
   TextEditingController liveNoticeController = TextEditingController();
   TextEditingController appUrlController = TextEditingController();
   TextEditingController appVersionController = TextEditingController();

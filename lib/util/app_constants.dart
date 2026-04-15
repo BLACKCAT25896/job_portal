@@ -20,7 +20,7 @@ class AppConstants {
   static const String baseUrl = 'https://job-portal.bdboibazer.com';
   static const String imageBaseUrl = '$baseUrl/storage';
   static const String versionPath = '/api/v1';
-  static String get mighty_jobDomain => DomainHelper.getCurrentDomain();
+  static String get domain => DomainHelper.getCurrentDomain();
 
   static const String loginUri = '/login';
   static const String registration = '/onboardings';
@@ -39,6 +39,7 @@ class AppConstants {
   static const String careerLevels = '/career-levels';
   static const String degreeLevels = '/degree-levels';
   static const String salaryCurrencies = '/salary-currencies';
+  static const String salaryPeriods = '/salary-periods';
 
   // Dashboard API endpoints
   static const String dashboardStatistics = '/dashboard/statistics';
@@ -59,8 +60,7 @@ class AppConstants {
   static const String publicSetting = '/publicSetting';
   static const String frontendCmsSection = '/frontend/cms-sections';
   static const String cmsSectionReorder = '/cms-sections-update';
-  static const String mighty_jobSchedule = '/mighty_job-schedules';
-  static const String mighty_jobImageSetting = '/tenant-image-settings';
+  static const String imageSetting = '/tenant-image-settings';
 
 
   //mighty_job management

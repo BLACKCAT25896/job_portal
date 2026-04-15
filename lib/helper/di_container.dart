@@ -15,10 +15,6 @@ import 'package:mighty_job/feature/inventory/brand/controller/brand_controller.d
 import 'package:mighty_job/feature/inventory/brand/domain/repository/brand_repository.dart';
 import 'package:mighty_job/feature/inventory/category/controller/category_controller.dart';
 import 'package:mighty_job/feature/inventory/category/domain/repository/category_repository.dart';
-import 'package:mighty_job/feature/inventory/unit_measurement/domain/repository/unit_repository.dart';
-import 'package:mighty_job/feature/inventory/unit_measurement/logic/unit_controller.dart';
-import 'package:mighty_job/feature/inventory/warehouse/domain/repository/warehouse_repository.dart';
-import 'package:mighty_job/feature/inventory/warehouse/logic/warehouse_controller.dart';
 import 'package:mighty_job/feature/ownership_type/controller/ownership_type_controller.dart';
 import 'package:mighty_job/feature/ownership_type/domain/repository/ownership_type_repository.dart';
 import 'package:flutter/services.dart';
@@ -86,6 +82,10 @@ import 'package:mighty_job/feature/report_management/logic/report_controller.dar
 import 'package:mighty_job/feature/role_and_permission/role/domain/repository/role_repository.dart';
 import 'package:mighty_job/feature/role_and_permission/user/controller/user_controller.dart';
 import 'package:mighty_job/feature/role_and_permission/user/domain/repository/user_repository.dart';
+import 'package:mighty_job/feature/salary_currency/controller/salary_currency_controller.dart';
+import 'package:mighty_job/feature/salary_currency/domain/repository/salary_currency_repository.dart';
+import 'package:mighty_job/feature/salary_period/controller/salary_period_controller.dart';
+import 'package:mighty_job/feature/salary_period/domain/repository/salary_period_repository.dart';
 import 'package:mighty_job/feature/setting/domain/repository/setting_repository.dart';
 import 'package:mighty_job/feature/setting/logic/setting_controller.dart';
 import 'package:mighty_job/feature/tax_management/tax/domain/repository/tax_repository.dart';
@@ -159,6 +159,14 @@ Future<Map<String, Map<String, String>>> init() async {
 
   Get.lazyPut(() => DegreeLevelRepository(apiClient: Get.find()));
   Get.lazyPut(() => DegreeLevelController(degreeLevelRepository: Get.find()));
+
+  Get.lazyPut(() => SalaryCurrencyRepository(apiClient: Get.find()));
+  Get.lazyPut(() => SalaryCurrencyController(salaryCurrencyRepository: Get.find()));
+
+  Get.lazyPut(() => SalaryPeriodRepository(apiClient: Get.find()));
+  Get.lazyPut(() => SalaryPeriodController(salaryPeriodRepository: Get.find()));
+
+
 
   Get.lazyPut(() => BannerRepository(apiClient: Get.find()));
   Get.lazyPut(() => AboutUsRepository(apiClient: Get.find()));
@@ -290,13 +298,6 @@ Future<Map<String, Map<String, String>>> init() async {
 
   Get.lazyPut(() => BrandRepository(apiClient: Get.find()));
   Get.lazyPut(() => BrandController(brandRepository: Get.find()));
-
-  Get.lazyPut(() => UnitRepository(apiClient: Get.find()));
-  Get.lazyPut(() => UnitController(unitRepository: Get.find()));
-
-
-  Get.lazyPut(() => WarehouseRepository(apiClient: Get.find()));
-  Get.lazyPut(() => WarehouseController(warehouseRepository: Get.find()));
 
 
 

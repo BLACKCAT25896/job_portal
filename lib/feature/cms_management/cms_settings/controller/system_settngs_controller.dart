@@ -143,11 +143,11 @@ class SystemSettingsController extends GetxController implements GetxService{
   }
 
 
-  ImageSettingModel? mighty_jobImageSettingModel;
-  Future<void> getmighty_jobImageSetting() async {
-    Response? response = await systemSettingsRepository.getmighty_jobImageSetting();
+  ImageSettingModel? imageSettingModel;
+  Future<void> getImageSetting() async {
+    Response? response = await systemSettingsRepository.getImageSetting();
     if (response?.statusCode == 200) {
-      mighty_jobImageSettingModel = ImageSettingModel.fromJson(response?.body);
+      imageSettingModel = ImageSettingModel.fromJson(response?.body);
     }else{
       ApiChecker.checkApi(response!);
     }

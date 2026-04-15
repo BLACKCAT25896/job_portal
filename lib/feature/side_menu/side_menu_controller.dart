@@ -1,7 +1,6 @@
 
 import 'package:mighty_job/common/layout/custom_dialog_widget.dart';
 import 'package:mighty_job/feature/cms_management/cms_settings/controller/system_settngs_controller.dart';
-import 'package:mighty_job/feature/inventory/unit_measurement/presentation/widgets/create_new_unit_widget.dart';
 import 'package:mighty_job/feature/support_ticket/widgets/add_ticket_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -119,20 +118,6 @@ class SideBarController extends GetxController implements GetxService{
     ),
 
 
-
-    SideMenuNestedExpansionItem(
-      title: "unit_setup".tr, keyValue: "unit_setup",parent: true,
-      icon: Images.manageOrder, children: [
-
-      SideMenuItemWidget(title: 'unit'.tr, keyValue: 'unit',
-          onTap: () => Get.toNamed(RouteHelper.getUnitMeasurementSettingRoute())),
-
-
-      SideMenuItemWidget(title: 'add_new_unit'.tr, keyValue: 'add_new_unit',
-          onTap: () => Get.dialog(CustomDialogWidget(title: "unit".tr,
-              child: CreateNewUnitWidget()))),
-
-    ],),
 
 
 

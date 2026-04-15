@@ -13,12 +13,12 @@ class HeaderLogoSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetBuilder<SystemSettingsController>(
       initState: (value){
-        if(Get.find<SystemSettingsController>().mighty_jobImageSettingModel == null){
-          Get.find<SystemSettingsController>().getmighty_jobImageSetting();
+        if(Get.find<SystemSettingsController>().imageSettingModel == null){
+          Get.find<SystemSettingsController>().getImageSetting();
         }
       },
       builder: (systemSettingsController) {
-        ImageSettingModel ? imageSettingModel = systemSettingsController.mighty_jobImageSettingModel;
+        ImageSettingModel ? imageSettingModel = systemSettingsController.imageSettingModel;
 
         String? lightLogo =  imageSettingModel?.data?.headerLogoLightTheme;
         String? darkLogo =  imageSettingModel?.data?.headerLogoDarkTheme;
@@ -43,12 +43,12 @@ class FooterLogoSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetBuilder<SystemSettingsController>(
         initState: (value){
-          if(Get.find<SystemSettingsController>().mighty_jobImageSettingModel == null){
-            Get.find<SystemSettingsController>().getmighty_jobImageSetting();
+          if(Get.find<SystemSettingsController>().imageSettingModel == null){
+            Get.find<SystemSettingsController>().getImageSetting();
           }
         },
         builder: (systemSettingsController) {
-          ImageSettingModel ? imageSettingModel = systemSettingsController.mighty_jobImageSettingModel;
+          ImageSettingModel ? imageSettingModel = systemSettingsController.imageSettingModel;
 
           String? lightLogo =  imageSettingModel?.data?.footerLogoLightTheme;
           String? darkLogo =  imageSettingModel?.data?.footerLogoDarkTheme;

@@ -218,7 +218,6 @@ class NotificationHelper {
         notificationType: NotificationType.message,
         deliverymanId: data['sender_type'] == 'delivery_man' ? 0 : null,
         adminId: data['sender_type'] == 'admin' ? 0 : null,
-        mighty_jobId: data['sender_type'] == 'vendor' ? 0 : null,
         conversationId: int.parse(data['conversation_id'].toString()),
       );
     }

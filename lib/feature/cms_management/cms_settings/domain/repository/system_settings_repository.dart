@@ -83,14 +83,14 @@ class SystemSettingsRepository{
       body = MultipartBody("footer_logo_dark_theme", logo);
     }
     return await apiClient.postMultipartData(
-      "${AppConstants.mighty_jobImageSetting}/$id", {
+      "${AppConstants.imageSetting}/$id", {
         "_method" : "put"
     },
       [], body, []);
   }
 
-  Future<Response?> getmighty_jobImageSetting () async {
-    return await apiClient.getData(AppConstants.mighty_jobImageSetting);
+  Future<Response?> getImageSetting () async {
+    return await apiClient.getData(AppConstants.imageSetting);
   }
 
 

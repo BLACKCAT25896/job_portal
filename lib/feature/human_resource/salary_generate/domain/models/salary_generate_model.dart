@@ -7,7 +7,7 @@ import 'package:mighty_job/helper/price_converter.dart';
 
 class SalaryGenerateItem {
   int? id;
-  String? mighty_jobName;
+  String? name;
   int? employeeId;
   String? firstName;
   String? lastName;
@@ -29,7 +29,7 @@ class SalaryGenerateItem {
 
   SalaryGenerateItem(
       {this.id,
-        this.mighty_jobName,
+        this.name,
         this.employeeId,
         this.firstName,
         this.lastName,
@@ -52,7 +52,7 @@ class SalaryGenerateItem {
 
   SalaryGenerateItem.fromJson(Map<String, dynamic> json) {
     id = json['id'];
-    mighty_jobName = json['mighty_job_name'];
+    name = json['mighty_job_name'];
     employeeId = PriceConverter.parseInt(json['employee_id']);
     firstName = json['first_name'];
     lastName = json['last_name'];
@@ -78,7 +78,7 @@ class SalaryGenerateItem {
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = <String, dynamic>{};
     data['id'] = id;
-    data['mighty_job_name'] = mighty_jobName;
+    data['mighty_job_name'] = name;
     data['employee_id'] = employeeId;
     data['first_name'] = firstName;
     data['last_name'] = lastName;

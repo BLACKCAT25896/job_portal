@@ -5,8 +5,6 @@ import 'package:mighty_job/feature/inventory/brand/presentation/screens/brand_sc
 import 'package:mighty_job/feature/inventory/brand/presentation/screens/create_new_brand_screen.dart';
 import 'package:mighty_job/feature/inventory/category/presentation/screens/category_screen.dart';
 import 'package:mighty_job/feature/inventory/category/presentation/screens/create_new_category_screen.dart';
-import 'package:mighty_job/feature/inventory/unit_measurement/presentation/screens/create_new_unit_screen.dart';
-import 'package:mighty_job/feature/inventory/unit_measurement/presentation/screens/unit_screen.dart';
 import 'package:get/get.dart';
 import 'package:mighty_job/feature/account_management/accounting/presentation/screen/account_screen.dart';
 import 'package:mighty_job/feature/account_management/deposit/presentation/screen/deposit_screen.dart';
@@ -194,8 +192,6 @@ class RouteHelper {
   static const String customerTypeSetting = '/customer-type-setting';
   static String getCustomerTypeSettingRoute() => customerTypeSetting;
 
-  static const String unitMeasurementSetting = '/unit-measurement-setting';
-  static String getUnitMeasurementSettingRoute() => unitMeasurementSetting;
 
   static const String smsSetting = '/sms-setting';
   static String getSmsSettingRoute() => smsSetting;
@@ -218,9 +214,6 @@ class RouteHelper {
   static const String ticketDetail = '/ticket-detail';
   static String getTicketDetailRoute(String id) => "$ticketDetail?id=$id";
 
-
-  static const String addNewUnit = '/add-new-unit';
-  static String getAddNewUnitRoute () => addNewUnit;
 
   static const String brand = '/brand';
   static String getBrandRoute () => brand;
@@ -340,8 +333,6 @@ class RouteHelper {
     GetPage(name: systemSetting, page: ()=> SystemSetting()),
     GetPage(name: paymentMethodSetting, page: ()=> SystemSetting()),
     GetPage(name: customerTypeSetting, page: ()=> SystemSetting()),
-    GetPage(name: unitMeasurementSetting, page: ()=> UnitScreen()),
-    GetPage(name: addNewUnit, page: ()=> CreateNewUnitScreen()),
     GetPage(name: smsSetting, page: ()=> SystemSetting()),
     GetPage(name: bankSetting, page: ()=> SystemSetting()),
     GetPage(name: languageSetting, page: ()=> LanguageSetting()),
