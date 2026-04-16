@@ -2,8 +2,6 @@ import 'package:mighty_job/common/widget/responsive_grid_widget.dart';
 import 'package:mighty_job/feature/candidate_education/controller/candidate_education_controller.dart';
 import 'package:mighty_job/feature/candidate_education/domain/models/candidate_education_body.dart';
 import 'package:mighty_job/feature/candidate_education/domain/models/candidate_education_model.dart';
-import 'package:mighty_job/feature/human_resource/recruitment/controller/recruitment_controller.dart';
-import 'package:mighty_job/feature/human_resource/recruitment/presentation/widgets/recruitment_selection_widget.dart';
 import 'package:mighty_job/util/app_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -60,7 +58,6 @@ class _AddNewCandidateEducationWidgetState extends State<AddNewCandidateEducatio
             inputFormatters: [AppConstants.phoneNumberFormat],
             hintText: "phone".tr,),
 
-          SelectRecruitmentWidget(),
 
 
         ]),
@@ -86,7 +83,6 @@ class _AddNewCandidateEducationWidgetState extends State<AddNewCandidateEducatio
                   String email = emailController.text.trim();
                   String phone = phoneController.text.trim();
                   String notes = notesController.text.trim();
-                  int? recruitmentId = Get.find<RecruitmentController>().selectedRecruitmentItem?.id;
                   if(name.isEmpty){
                     showCustomSnackBar("first_name_is_empty".tr);
                   }else if(lastName.trim().isEmpty){
@@ -97,8 +93,6 @@ class _AddNewCandidateEducationWidgetState extends State<AddNewCandidateEducatio
                     showCustomSnackBar("invalid_email".tr);
                   }else if(phone.isEmpty){
                     showCustomSnackBar("phone_is_empty".tr);
-                  }else if(recruitmentId == null){
-                    showCustomSnackBar("select_recruitment".tr);
                   }
                   else{
                     CandidateEducationBody body = CandidateEducationBody(

@@ -25,10 +25,6 @@ import 'package:mighty_job/feature/industries/controller/industry_controller.dar
 import 'package:mighty_job/feature/industries/domain/repository/industry_repository.dart';
 import 'package:mighty_job/feature/inquiry/controller/inquiry_controller.dart';
 import 'package:mighty_job/feature/inquiry/domain/repository/inquiry_repository.dart';
-import 'package:mighty_job/feature/inventory/brand/controller/brand_controller.dart';
-import 'package:mighty_job/feature/inventory/brand/domain/repository/brand_repository.dart';
-import 'package:mighty_job/feature/inventory/category/controller/category_controller.dart';
-import 'package:mighty_job/feature/inventory/category/domain/repository/category_repository.dart';
 import 'package:mighty_job/feature/job_application/controller/job_application_controller.dart';
 import 'package:mighty_job/feature/job_application/domain/repository/job_application_repository.dart';
 import 'package:mighty_job/feature/job_category/controller/job_category_controller.dart';
@@ -42,18 +38,6 @@ import 'package:mighty_job/feature/ownership_type/domain/repository/ownership_ty
 import 'package:flutter/services.dart';
 import 'package:mighty_job/common/controller/route_controller.dart';
 import 'package:mighty_job/common/widget/side_menu/src/side_bar_controller.dart';
-import 'package:mighty_job/feature/account_management/accounting/domain/repository/account_repository.dart';
-import 'package:mighty_job/feature/account_management/accounting/logic/account_controller.dart';
-import 'package:mighty_job/feature/account_management/deposit/domain/repository/deposit_repository.dart';
-import 'package:mighty_job/feature/account_management/deposit/logic/deposit_controller.dart';
-import 'package:mighty_job/feature/account_management/deposit_category/domain/repository/deposit_category_repository.dart';
-import 'package:mighty_job/feature/account_management/deposit_category/logic/deposit_category_controller.dart';
-import 'package:mighty_job/feature/account_management/expense/domain/repository/expense_repository.dart';
-import 'package:mighty_job/feature/account_management/expense/logic/expense_controller.dart';
-import 'package:mighty_job/feature/account_management/expense_category/domain/repository/expense_category_repository.dart';
-import 'package:mighty_job/feature/account_management/expense_category/logic/expense_category_controller.dart';
-import 'package:mighty_job/feature/account_management/fund/domain/repository/fund_repository.dart';
-import 'package:mighty_job/feature/account_management/fund/logic/fund_controller.dart';
 import 'package:mighty_job/feature/cms_management/about_us/domain/repository/about_us_repository.dart';
 import 'package:mighty_job/feature/cms_management/about_us/logic/about_us_controller.dart';
 import 'package:mighty_job/feature/cms_management/cms_settings/controller/system_settngs_controller.dart';
@@ -64,37 +48,6 @@ import 'package:mighty_job/feature/cms_management/explore/domain/repository/expl
 import 'package:mighty_job/feature/cms_management/explore/logic/explore_controller.dart';
 import 'package:mighty_job/feature/cms_management/why_choose/domain/repository/why_choose_repository.dart';
 import 'package:mighty_job/feature/cms_management/why_choose/logic/why_choose_controller.dart';
-import 'package:mighty_job/feature/human_resource/attendance/controller/attendance_controller.dart';
-import 'package:mighty_job/feature/human_resource/attendance/domain/repository/attendance_repository.dart';
-import 'package:mighty_job/feature/human_resource/award/controller/award_controller.dart';
-import 'package:mighty_job/feature/human_resource/award/domain/repository/award_repository.dart';
-import 'package:mighty_job/feature/human_resource/department/controller/department_controller.dart';
-import 'package:mighty_job/feature/human_resource/department/domain/repository/department_repository.dart';
-import 'package:mighty_job/feature/human_resource/designation/controller/designation_controller.dart';
-import 'package:mighty_job/feature/human_resource/designation/domain/repository/designation_repository.dart';
-import 'package:mighty_job/feature/human_resource/interview/controller/interview_controller.dart';
-import 'package:mighty_job/feature/human_resource/interview/domain/repository/interview_repository.dart';
-import 'package:mighty_job/feature/human_resource/leave_application/controller/leave_application_controller.dart';
-import 'package:mighty_job/feature/human_resource/leave_application/domain/repository/leave_application_repository.dart';
-import 'package:mighty_job/feature/human_resource/leave_type/controller/leave_type_controller.dart';
-import 'package:mighty_job/feature/human_resource/leave_type/domain/repository/leave_type_repository.dart';
-import 'package:mighty_job/feature/human_resource/loan/controller/loan_controller.dart';
-import 'package:mighty_job/feature/human_resource/loan/domain/repository/loan_repository.dart';
-import 'package:mighty_job/feature/human_resource/loan_installment/controller/loan_installment_controller.dart';
-import 'package:mighty_job/feature/human_resource/loan_installment/domain/repository/loan_installment_repository.dart';
-import 'package:mighty_job/feature/human_resource/recruitment/controller/recruitment_controller.dart';
-import 'package:mighty_job/feature/human_resource/recruitment/domain/repository/recruitment_repository.dart';
-import 'package:mighty_job/feature/human_resource/salary_generate/controller/salary_generate_controller.dart';
-import 'package:mighty_job/feature/human_resource/salary_generate/domain/repository/salary_generate_repository.dart';
-import 'package:mighty_job/feature/human_resource/salary_setup/domain/repository/salary_setup_repository.dart';
-import 'package:mighty_job/feature/human_resource/salary_type/controller/salary_type_controller.dart';
-import 'package:mighty_job/feature/human_resource/salary_type/domain/repository/salary_type_repository.dart';
-import 'package:mighty_job/feature/human_resource/weekly_holiday/controller/weekly_holiday_controller.dart';
-import 'package:mighty_job/feature/human_resource/weekly_holiday/domain/repository/weekly_holiday_repository.dart';
-import 'package:mighty_job/feature/loyalty/loyalty_point/domain/repository/loyalty_point_repository.dart';
-import 'package:mighty_job/feature/loyalty/loyalty_point/logic/loyalty_point_controller.dart';
-import 'package:mighty_job/feature/loyalty/loyalty_point_redemption/domain/repository/loyalty_point_redemption_repository.dart';
-import 'package:mighty_job/feature/loyalty/loyalty_point_redemption/logic/loyalty_point_redemption_controller.dart';
 import 'package:mighty_job/feature/payment_method/domain/repository/payment_method_repository.dart';
 import 'package:mighty_job/feature/payment_method/logic/payment_method_controller.dart';
 import 'package:mighty_job/feature/post_category/controller/post_category_controller.dart';
@@ -114,8 +67,6 @@ import 'package:mighty_job/feature/setting/domain/repository/setting_repository.
 import 'package:mighty_job/feature/setting/logic/setting_controller.dart';
 import 'package:mighty_job/feature/skill/controller/skill_controller.dart';
 import 'package:mighty_job/feature/skill/domain/repository/skill_repository.dart';
-import 'package:mighty_job/feature/tax_management/tax/domain/repository/tax_repository.dart';
-import 'package:mighty_job/feature/tax_management/tax/logic/tax_controller.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:get/get.dart';
 import 'package:mighty_job/api_handle/api_client.dart';
@@ -146,7 +97,6 @@ import 'package:mighty_job/feature/cms_management/faq/domain/repository/faq_repo
 import 'package:mighty_job/feature/cms_management/faq/logic/faq_controller.dart';
 import 'package:mighty_job/feature/cms_management/feedback/domain/repository/feedback_repository.dart';
 import 'package:mighty_job/feature/cms_management/feedback/logic/feedback_controller.dart';
-import '../feature/human_resource/salary_setup/controller/salary_setup_controller.dart';
 
 Future<Map<String, Map<String, String>>> init() async {
 
@@ -232,6 +182,9 @@ Future<Map<String, Map<String, String>>> init() async {
   Get.lazyPut(() => PostCategoryRepository(apiClient: Get.find()));
   Get.lazyPut(() => PostCategoryController(postCategoryRepository: Get.find()));
 
+  Get.lazyPut(() => ReportRepository(apiClient: Get.find()));
+  Get.lazyPut(() => ReportController(reportRepository: Get.find()));
+
 
 
   Get.lazyPut(() => BannerRepository(apiClient: Get.find()));
@@ -280,91 +233,14 @@ Future<Map<String, Map<String, String>>> init() async {
 
 
 
-  Get.lazyPut(() => ReportRepository(apiClient: Get.find()));
-  Get.lazyPut(() => ReportController(reportRepository  : Get.find()));
-
-
-
-  //HRM
-  Get.lazyPut(() => DepartmentRepository(apiClient : Get.find()));
-  Get.lazyPut(() => DepartmentController(departmentRepository: Get.find()));
-  Get.lazyPut(() => DesignationRepository(apiClient : Get.find()));
-  Get.lazyPut(() => DesignationController(designationRepository: Get.find()));
-  Get.lazyPut(() => LoanRepository(apiClient : Get.find()));
-  Get.lazyPut(() => LoanController(loanRepository: Get.find()));
-  Get.lazyPut(() => WeeklyHolidayRepository(apiClient : Get.find()));
-  Get.lazyPut(() => WeeklyHolidayController(weeklyHolidayRepository: Get.find()));
-  Get.lazyPut(() => AttendanceRepository(apiClient: Get.find()));
-  Get.lazyPut(() => AttendanceController(attendanceRepository: Get.find()));
-  Get.lazyPut(() => AwardRepository(apiClient: Get.find()));
-  Get.lazyPut(() => AwardController(awardRepository: Get.find()));
   Get.lazyPut(() => CandidateRepository(apiClient: Get.find()));
   Get.lazyPut(() => CandidateController(candidateRepository: Get.find()));
-  Get.lazyPut(() => InterviewRepository(apiClient: Get.find()));
-  Get.lazyPut(() => InterviewController(interviewRepository: Get.find()));
-  Get.lazyPut(() => LeaveApplicationRepository(apiClient: Get.find()));
-  Get.lazyPut(() => LeaveApplicationController(leaveApplicationRepository: Get.find()));
-  Get.lazyPut(() => LeaveTypeRepository(apiClient: Get.find()));
-  Get.lazyPut(() => LeaveTypeController(leaveTypeRepository: Get.find()));
-  Get.lazyPut(() => LoanInstallmentRepository(apiClient: Get.find()));
-  Get.lazyPut(() => LoanInstallmentController(loanInstallmentRepository: Get.find()));
-  Get.lazyPut(() => RecruitmentRepository(apiClient: Get.find()));
-  Get.lazyPut(() => RecruitmentController(recruitmentRepository: Get.find()));
-  Get.lazyPut(() => SalaryGenerateRepository(apiClient: Get.find()));
-  Get.lazyPut(() => SalaryGenerateController(salaryGenerateRepository: Get.find()));
-  Get.lazyPut(() => SalarySetupRepository(apiClient: Get.find()));
-  Get.lazyPut(() => SalarySetupController(salarySetupRepository: Get.find()));
-  Get.lazyPut(() => SalaryTypeRepository(apiClient: Get.find()));
-  Get.lazyPut(() => SalaryTypeController(salaryTypeRepository: Get.find()));
-
-
-  //Accounting
-  Get.lazyPut(() => AccountRepository(apiClient: Get.find()));
-  Get.lazyPut(() => AccountController(accountRepository: Get.find()));
-
-  Get.lazyPut(() => DepositCategoryRepository(apiClient: Get.find()));
-  Get.lazyPut(() => DepositCategoryController(depositCategoryRepository: Get.find()));
-
-  Get.lazyPut(() => DepositRepository(apiClient: Get.find()));
-  Get.lazyPut(() => DepositController(depositRepository: Get.find()));
-
-
-  Get.lazyPut(() => ExpanseCategoryRepository(apiClient: Get.find()));
-  Get.lazyPut(() => ExpanseCategoryController(expanseCategoryRepository: Get.find()));
-
-  Get.lazyPut(() => ExpenseRepository(apiClient: Get.find()));
-  Get.lazyPut(() => ExpenseController(expenseRepository: Get.find()));
-
-  Get.lazyPut(() => FundRepository(apiClient: Get.find()));
-  Get.lazyPut(() => FundController(fundRepository: Get.find()));
-
-  Get.lazyPut(() => LoyaltyPointRepository(apiClient: Get.find()));
-  Get.lazyPut(() => LoyaltyPointController(loyaltyPointRepository: Get.find()));
-
-  Get.lazyPut(() => LoyaltyPointRedemptionRepository(apiClient: Get.find()));
-  Get.lazyPut(() => LoyaltyPointRedemptionController(loyaltyPointRedemptionRepository: Get.find()));
-
 
   Get.lazyPut(() => PagesRepository(apiClient: Get.find()));
   Get.lazyPut(() => PagesController(pagesRepository: Get.find()));
 
   Get.lazyPut(() => SettingRepository(apiClient: Get.find()));
   Get.lazyPut(() => SettingController(settingRepository: Get.find()));
-
-
-  Get.lazyPut(() => TaxRepository(apiClient: Get.find()));
-  Get.lazyPut(() => TaxController(taxRepository: Get.find()));
-
-
-
-  //Inventory
-
-  Get.lazyPut(() => CategoryRepository(apiClient: Get.find()));
-  Get.lazyPut(() => CategoryController(categoryRepository: Get.find()));
-
-  Get.lazyPut(() => BrandRepository(apiClient: Get.find()));
-  Get.lazyPut(() => BrandController(brandRepository: Get.find()));
-
 
 
 

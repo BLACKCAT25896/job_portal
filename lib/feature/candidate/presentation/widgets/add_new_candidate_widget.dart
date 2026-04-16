@@ -1,7 +1,4 @@
 import 'package:mighty_job/common/widget/responsive_grid_widget.dart';
-import 'package:mighty_job/feature/human_resource/recruitment/controller/recruitment_controller.dart';
-import 'package:mighty_job/feature/human_resource/recruitment/domain/models/recruitment_model.dart';
-import 'package:mighty_job/feature/human_resource/recruitment/presentation/widgets/recruitment_selection_widget.dart';
 import 'package:mighty_job/util/app_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -38,10 +35,7 @@ class _AddNewCandidateWidgetState extends State<AddNewCandidateWidget> {
       emailController.text = widget.candidateItem?.email ?? '';
       phoneController.text = widget.candidateItem?.phone ?? '';
       notesController.text = widget.candidateItem?.notes ?? '';
-      Get.find<RecruitmentController>().selectRecruitment(RecruitmentItem(
-        id: widget.candidateItem?.recruitmentId,
-        title: widget.candidateItem?.recruitmentTitle,
-      ), notify: false);
+
     }
   }
   @override
@@ -69,7 +63,6 @@ class _AddNewCandidateWidgetState extends State<AddNewCandidateWidget> {
             inputFormatters: [AppConstants.phoneNumberFormat],
             hintText: "phone".tr,),
 
-          SelectRecruitmentWidget(),
 
 
         ]),
@@ -95,7 +88,6 @@ class _AddNewCandidateWidgetState extends State<AddNewCandidateWidget> {
                   String email = emailController.text.trim();
                   String phone = phoneController.text.trim();
                   String notes = notesController.text.trim();
-                  int? recruitmentId = Get.find<RecruitmentController>().selectedRecruitmentItem?.id;
                   if(name.isEmpty){
                     showCustomSnackBar("first_name_is_empty".tr);
                   }else if(lastName.trim().isEmpty){
@@ -106,8 +98,6 @@ class _AddNewCandidateWidgetState extends State<AddNewCandidateWidget> {
                     showCustomSnackBar("invalid_email".tr);
                   }else if(phone.isEmpty){
                     showCustomSnackBar("phone_is_empty".tr);
-                  }else if(recruitmentId == null){
-                    showCustomSnackBar("select_recruitment".tr);
                   }
                   else{
                     CandidateBody body = CandidateBody(
@@ -117,7 +107,6 @@ class _AddNewCandidateWidgetState extends State<AddNewCandidateWidget> {
                       phone: phone,
                       notes: notes,
                       status: "applied",
-                      recruitmentId: recruitmentId,
                       method: update? "put" : "post"
                     );
                     if(update){

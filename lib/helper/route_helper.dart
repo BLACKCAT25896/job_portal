@@ -1,18 +1,7 @@
 
 
 import 'package:mighty_job/feature/candidate/presentation/screens/candidate_screen.dart';
-import 'package:mighty_job/feature/human_resource/salary_generate/presentation/screens/create_new_salary_generate_screen.dart';
-import 'package:mighty_job/feature/inventory/brand/presentation/screens/brand_screen.dart';
-import 'package:mighty_job/feature/inventory/brand/presentation/screens/create_new_brand_screen.dart';
-import 'package:mighty_job/feature/inventory/category/presentation/screens/category_screen.dart';
-import 'package:mighty_job/feature/inventory/category/presentation/screens/create_new_category_screen.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/feature/account_management/accounting/presentation/screen/account_screen.dart';
-import 'package:mighty_job/feature/account_management/deposit/presentation/screen/deposit_screen.dart';
-import 'package:mighty_job/feature/account_management/deposit_category/presentation/screen/deposit_category_screen.dart';
-import 'package:mighty_job/feature/account_management/expense/presentation/screen/expense_screen.dart';
-import 'package:mighty_job/feature/account_management/expense_category/presentation/screen/expense_category_screen.dart';
-import 'package:mighty_job/feature/account_management/fund/presentation/screens/fund_screen.dart';
 import 'package:mighty_job/feature/cms_management/about_us/presentation/screens/about_us_screen.dart';
 import 'package:mighty_job/feature/cms_management/cms_settings/presentation/screens/system_setting_screen.dart';
 import 'package:mighty_job/feature/cms_management/policy_pages/presentation/screens/policy_pages_screen.dart';
@@ -24,27 +13,9 @@ import 'package:mighty_job/feature/cms_management/faq/presentation/screens/faq_s
 import 'package:mighty_job/feature/cms_management/feedback/presentation/screens/feedback_screen.dart';
 import 'package:mighty_job/feature/cms_management/why_choose/presentation/screens/why_choose_us_screen.dart';
 import 'package:mighty_job/feature/dashboard/views/dashboard_screen.dart';
-import 'package:mighty_job/feature/human_resource/attendance/presentation/screens/attendance_screen.dart';
-import 'package:mighty_job/feature/human_resource/award/presentation/screens/award_screen.dart';
-import 'package:mighty_job/feature/human_resource/department/presentation/screens/department_screen.dart';
-import 'package:mighty_job/feature/human_resource/designation/presentation/screens/designation_screen.dart';
-import 'package:mighty_job/feature/human_resource/interview/presentation/screens/interview_screen.dart';
-import 'package:mighty_job/feature/human_resource/leave_application/presentation/screens/leave_application_screen.dart';
-import 'package:mighty_job/feature/human_resource/leave_type/presentation/screens/leave_type_screen.dart';
-import 'package:mighty_job/feature/human_resource/loan/presentation/screens/loan_screen.dart';
-import 'package:mighty_job/feature/human_resource/loan_installment/presentation/screens/loan_installment_screen.dart';
-import 'package:mighty_job/feature/human_resource/recruitment/presentation/screens/recruitment_screen.dart';
-import 'package:mighty_job/feature/human_resource/salary_generate/presentation/screens/salary_generate_screen.dart';
-import 'package:mighty_job/feature/human_resource/salary_setup/presentation/screens/salary_setup_screen.dart';
-import 'package:mighty_job/feature/human_resource/salary_type/presentation/screens/salary_type_screen.dart';
-import 'package:mighty_job/feature/human_resource/weekly_holiday/presentation/screens/weekly_holiday_screen.dart';
-import 'package:mighty_job/feature/loyalty/loyalty_point/presentation/screens/loyalty_point_screen.dart';
-import 'package:mighty_job/feature/loyalty/loyalty_point_redemption/presentation/screens/loyalty_point_redemption_screen.dart';
 import 'package:mighty_job/feature/notification/presentation/screens/notification_screen.dart';
 import 'package:mighty_job/feature/payment_method/presentation/screens/payment_method_screen.dart';
 import 'package:mighty_job/feature/profile/presentation/screens/profile_screen.dart';
-import 'package:mighty_job/feature/report_management/presentation/opening_stock_report/opening_stock_report_screen.dart';
-import 'package:mighty_job/feature/report_management/presentation/stock_report/stock_report_screen.dart';
 import 'package:mighty_job/feature/role_and_permission/role/presentation/screens/role_screen.dart';
 import 'package:mighty_job/feature/role_and_permission/user/presentation/screens/user_screen.dart';
 import 'package:mighty_job/feature/setting/presentation/widgets/facebook_setting.dart';
@@ -55,7 +26,6 @@ import 'package:mighty_job/feature/support_ticket/screens/add_ticket_screen.dart
 import 'package:mighty_job/feature/support_ticket/screens/support_conversation_screen.dart';
 import 'package:mighty_job/feature/support_ticket/screens/support_ticket_screen.dart';
 import 'package:mighty_job/feature/support_ticket/screens/ticket_category_screen.dart';
-import 'package:mighty_job/feature/tax_management/tax/presentation/screens/tax_screen.dart';
 
 class RouteHelper {
   static const String initial = '/';
@@ -91,43 +61,10 @@ class RouteHelper {
 
 
   //HRM
-  static const String department = '/department';
-  static String getDepartmentRoute() => department;
-  static const String designation = '/designation';
-  static String getDesignationRoute() => designation;
-  static const String attendance = '/attendance';
-  static String getAttendanceRoute() => attendance;
-  static const String award = '/award';
-  static String getAwardRoute() => award;
+
   static const String candidate = '/candidate';
   static String getCandidateRoute() => candidate;
-  static const String employee = '/employee';
-  static String getEmployeeRoute() => employee;
-  static const String interview = '/interview';
-  static String getInterviewRoute() => interview;
-  static const String leaveApplication = '/leave-application';
-  static String getLeaveApplicationRoute() => leaveApplication;
-  static const String leaveType = '/leave-type';
-  static String getLeaveTypeRoute() => leaveType;
-  static const String loan = '/loan';
-  static String getLoanRoute() => loan;
-  static const String loanInstallment = '/loan-installment';
-  static String getLoanInstallmentRoute() => loanInstallment;
-  static const String recruitment = '/recruitment';
-  static String getRecruitmentRoute() => recruitment;
-  static const String salaryGenerate = '/salary-generate';
-  static String getSalaryGenerateRoute() => salaryGenerate;
 
-  static const String generateNewSalary = '/generate-new-salary';
-  static String getGenerateNewSalaryRoute() => generateNewSalary;
-
-
-  static const String salarySetup = '/salary-setup';
-  static String getSalarySetupRoute() => salarySetup;
-  static const String salaryType = '/salary-type';
-  static String getSalaryTypeRoute() => salaryType;
-  static const String weeklyHoliday = '/weekly-holiday';
-  static String getWeeklyHolidayRoute() => weeklyHoliday;
 
   static const String roles = '/roles';
   static String getRolesRoute() => roles;
@@ -146,40 +83,6 @@ class RouteHelper {
   static String getTaxSettingRoute() => taxSetting;
 
 
-
-  //Reports
-  static const String purchaseReport = '/purchase-report';
-  static String getPurchaseReportRoute() => purchaseReport;
-
-  static const String stockReport = '/stock-report';
-  static String getStockReportRoute() => stockReport;
-  static const String openingStockReport = '/opening-stock-report';
-  static String getOpeningStockReportRoute() => openingStockReport;
-
-
-
-//Accounting
-  static const String accounting = '/accounting';
-  static String getAccountingRoute() => accounting;
-  static const String deposit = '/deposit';
-  static String getDepositRoute() => deposit;
-  static const String depositCategory = '/deposit-category';
-  static String getDepositCategoryRoute() => depositCategory;
-
-  static const String expense = '/expense';
-  static String getExpenseRoute() => expense;
-  static const String expenseCategory = '/expense-category';
-  static String getExpenseCategoryRoute() => expenseCategory;
-
-  static const String fund = '/fund';
-  static String getFundRoute() => fund;
-
-
-  static const String loyaltyPoint = '/loyalty-point';
-  static String getLoyaltyPointRoute() => loyaltyPoint;
-
-  static const String loyaltyPointRedemption = '/loyalty-point-redemption';
-  static String getLoyaltyPointRedemptionRoute() => loyaltyPointRedemption;
 
   static const String pages = '/pages';
   static String getPagesRoute() => pages;
@@ -285,46 +188,13 @@ class RouteHelper {
 
 
     //HRM
-    GetPage(name: department, page: () => const DepartmentScreen()),
-    GetPage(name: designation, page: () => const DesignationScreen()),
-    GetPage(name: attendance, page: () => const AttendanceScreen()),
-    GetPage(name: award, page: () => const AwardScreen()),
-    GetPage(name: candidate, page: () => const CandidateScreen()),
-    GetPage(name: interview, page: () => const InterviewScreen()),
-    GetPage(name: leaveApplication, page: () => const LeaveApplicationScreen()),
-    GetPage(name: leaveType, page: () => const LeaveTypeScreen()),
-    GetPage(name: loan, page: () => const LoanScreen()),
-    GetPage(name: loanInstallment, page: () => const LoanInstallmentScreen()),
-    GetPage(name: recruitment, page: () => const RecruitmentScreen()),
-    GetPage(name: salaryGenerate, page: () => const SalaryGenerateScreen()),
-    GetPage(name: generateNewSalary, page: () => const CreateNewSalaryGenerateScreen()),
-    GetPage(name: salarySetup, page: () => const SalarySetupScreen()),
-    GetPage(name: salaryType, page: () => const SalaryTypeScreen()),
-    GetPage(name: weeklyHoliday, page: () => const WeeklyHolidayScreen()),
 
+    GetPage(name: candidate, page: () => const CandidateScreen()),
 
     //setting
     GetPage(name: whatsappSetting, page: () => const WhatsappSetting()),
     GetPage(name: facebookSetting, page: () => const FacebookSetting()),
-    GetPage(name: taxSetting, page: () => const TaxScreen()),
 
-
-    //Reports
-    GetPage(name: stockReport, page: () => const StockReportScreen()),
-    GetPage(name: openingStockReport, page: () => const OpeningStockReportScreen()),
-
-    //Accounting
-    GetPage(name: accounting, page: () => const AccountScreen()),
-    GetPage(name: deposit, page: () => const DepositScreen()),
-    GetPage(name: depositCategory, page: () => const DepositCategoryScreen()),
-    GetPage(name: expense, page: () => const ExpenseScreen()),
-    GetPage(name: expenseCategory, page: ()=> ExpenseCategoryScreen()),
-    GetPage(name: fund, page: ()=> FundScreen()),
-
-    //Loyalty
-
-    GetPage(name: loyaltyPoint, page: ()=> LoyaltyPointScreen()),
-    GetPage(name: loyaltyPointRedemption, page: ()=> LoyaltyPointRedemptionScreen()),
 
     //waste Tracking
     GetPage(name: pages, page: ()=> PolicyPagesScreen()),
@@ -342,12 +212,6 @@ class RouteHelper {
     GetPage(name: supportTicket, page: ()=> SupportTicketScreen()),
     GetPage(name: newTicket, page: ()=> AddTicketScreen()),
     GetPage(name: ticketDetail, page: ()=> SupportConversationScreen(ticketId: Get.parameters['id']??"0")),
-
-
-    GetPage(name: brand, page: ()=> BrandScreen()),
-    GetPage(name: addNewBrand, page: ()=> CreateNewBrandScreen()),
-    GetPage(name: category, page: ()=> CategoryScreen()),
-    GetPage(name: addNewCategory, page: ()=> CreateNewCategoryScreen()),
 
 
   ];
