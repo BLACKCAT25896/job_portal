@@ -8,8 +8,8 @@ import 'package:mighty_job/feature/job_category/domain/repository/job_category_r
 import 'package:get/get.dart';
 
 class JobCategoryController extends GetxController implements GetxService{
-  final JobCategoryRepository categoryRepository;
-  JobCategoryController({required this.categoryRepository});
+  final JobCategoryRepository jobCategoryRepository;
+  JobCategoryController({required this.jobCategoryRepository});
 
 
 
@@ -18,7 +18,7 @@ class JobCategoryController extends GetxController implements GetxService{
   ApiResponse<JobCategoryItem>? categoryModel;
   Future<void> getJobCategoryList(int offset, {String search = ""}) async {
     isLoading = true;
-    Response? response = await categoryRepository.getJobCategoryList(offset, search);
+    Response? response = await jobCategoryRepository.getJobCategoryList(offset, search);
     if (response?.statusCode == 200) {
       final apiResponse = ApiResponse<JobCategoryItem>.fromJson(response?.body, (json)=>
           JobCategoryItem.fromJson(json));
@@ -68,7 +68,7 @@ class JobCategoryController extends GetxController implements GetxService{
   Future<void> createNewJobCategory(JobCategoryBody categoryBody) async {
     isLoading = true;
     update();
-    Response? response = await categoryRepository.createNewJobCategory(categoryBody);
+    Response? response = await jobCategoryRepository.createNewJobCategory(categoryBody);
     if(response!.statusCode == 200){
       isLoading = false;
       Get.back();
@@ -85,7 +85,7 @@ class JobCategoryController extends GetxController implements GetxService{
   Future<void> updateJobCategory(JobCategoryBody categoryBody, int id) async {
     isLoading = true;
     update();
-    Response? response = await categoryRepository.updateJobCategory(categoryBody, id);
+    Response? response = await jobCategoryRepository.updateJobCategory(categoryBody, id);
     if(response!.statusCode == 200){
       isLoading = false;
       showCustomSnackBar("updated_successfully".tr, isError: false);
@@ -101,7 +101,7 @@ class JobCategoryController extends GetxController implements GetxService{
 
   Future<void> deleteJobCategory(int id) async {
     isLoading = true;
-    Response? response = await categoryRepository.deleteJobCategory(id);
+    Response? response = await jobCategoryRepository.deleteJobCategory(id);
     if (response?.statusCode == 200) {
       showCustomSnackBar("deleted_successfully".tr, isError: false);
       getJobCategoryList(1);

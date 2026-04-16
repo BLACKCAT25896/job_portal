@@ -243,8 +243,6 @@ class SideBarController extends GetxController implements GetxService{
             SideMenuItemWidget(title: 'candidate'.tr, keyValue: 'candidate',
                 onTap: () => Get.toNamed(RouteHelper.getCandidateRoute())),
 
-            // SideMenuItemWidget(title: 'candidate_shortlist'.tr, keyValue: 'candidate_shortlist',
-            //     onTap: () => Get.toNamed(RouteHelper.getCandidateRoute())),
 
             SideMenuItemWidget(title: 'interview'.tr, keyValue: 'interview',
                 onTap: () => Get.toNamed(RouteHelper.getInterviewRoute())),

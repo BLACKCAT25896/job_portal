@@ -6,9 +6,6 @@ import 'package:mighty_job/feature/job_listing/domain/models/job_listing_body.da
 import 'package:mighty_job/feature/job_listing/domain/models/job_listing_model.dart';
 import 'package:mighty_job/feature/job_listing/domain/repository/job_listing_repository.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/feature/job_listing/domain/models/job_listing_body.dart';
-import 'package:mighty_job/feature/job_listing/domain/models/job_listing_model.dart';
-import 'package:mighty_job/feature/job_listing/domain/repository/job_listing_repository.dart';
 
 class JobListingController extends GetxController implements GetxService{
   final JobListingRepository listingRepository;

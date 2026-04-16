@@ -7,7 +7,6 @@ import 'package:mighty_job/feature/job_listing/presentation/screens/create_new_j
 import 'package:mighty_job/feature/job_listing/presentation/widgets/job_listing_list_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/feature/job_listing/controller/job_listing_controller.dart';
 class JobListingScreen extends StatefulWidget {
   const JobListingScreen({super.key});
 

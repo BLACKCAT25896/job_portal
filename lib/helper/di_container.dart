@@ -1,20 +1,42 @@
 import 'dart:convert';
 import 'package:mighty_job/common/controller/image_picker_controller.dart';
 import 'package:mighty_job/common/controller/network_controller.dart';
+import 'package:mighty_job/feature/candidate/controller/candidate_controller.dart';
+import 'package:mighty_job/feature/candidate/domain/repository/candidate_repository.dart';
+import 'package:mighty_job/feature/candidate_education/controller/candidate_education_controller.dart';
+import 'package:mighty_job/feature/candidate_education/domain/repository/candidate_education_repository.dart';
+import 'package:mighty_job/feature/candidate_experience/controller/candidate_experience_controller.dart';
+import 'package:mighty_job/feature/candidate_experience/domain/repository/candidate_experience_repository.dart';
+import 'package:mighty_job/feature/candidate_resume/controller/candidate_resume_controller.dart';
+import 'package:mighty_job/feature/candidate_resume/domain/repository/candidate_resume_repository.dart';
 import 'package:mighty_job/feature/career_level/controller/career_level_controller.dart';
 import 'package:mighty_job/feature/career_level/domain/repository/career_level_repository.dart';
 import 'package:mighty_job/feature/company/controller/company_controller.dart';
 import 'package:mighty_job/feature/company/domain/repository/company_repository.dart';
-import 'package:mighty_job/feature/companySize/controller/company_size_controller.dart';
-import 'package:mighty_job/feature/companySize/domain/repository/company_size_repository.dart';
+import 'package:mighty_job/feature/company_size/controller/company_size_controller.dart';
+import 'package:mighty_job/feature/company_size/domain/repository/company_size_repository.dart';
 import 'package:mighty_job/feature/degree_level/controller/degree_level_controller.dart';
 import 'package:mighty_job/feature/degree_level/domain/repository/degree_level_repository.dart';
+import 'package:mighty_job/feature/favorite_company/controller/favorite_company_controller.dart';
+import 'package:mighty_job/feature/favorite_company/domain/repository/favorite_company_repository.dart';
+import 'package:mighty_job/feature/favorite_job/controller/favorite_job_controller.dart';
+import 'package:mighty_job/feature/favorite_job/domain/repository/favorite_job_repository.dart';
 import 'package:mighty_job/feature/industries/controller/industry_controller.dart';
 import 'package:mighty_job/feature/industries/domain/repository/industry_repository.dart';
+import 'package:mighty_job/feature/inquiry/controller/inquiry_controller.dart';
+import 'package:mighty_job/feature/inquiry/domain/repository/inquiry_repository.dart';
 import 'package:mighty_job/feature/inventory/brand/controller/brand_controller.dart';
 import 'package:mighty_job/feature/inventory/brand/domain/repository/brand_repository.dart';
 import 'package:mighty_job/feature/inventory/category/controller/category_controller.dart';
 import 'package:mighty_job/feature/inventory/category/domain/repository/category_repository.dart';
+import 'package:mighty_job/feature/job_application/controller/job_application_controller.dart';
+import 'package:mighty_job/feature/job_application/domain/repository/job_application_repository.dart';
+import 'package:mighty_job/feature/job_category/controller/job_category_controller.dart';
+import 'package:mighty_job/feature/job_category/domain/repository/job_category_repository.dart';
+import 'package:mighty_job/feature/job_listing/controller/job_listing_controller.dart';
+import 'package:mighty_job/feature/job_listing/domain/repository/job_listing_repository.dart';
+import 'package:mighty_job/feature/job_stage/controller/job_stage_controller.dart';
+import 'package:mighty_job/feature/job_stage/domain/repository/job_stage_repository.dart';
 import 'package:mighty_job/feature/ownership_type/controller/ownership_type_controller.dart';
 import 'package:mighty_job/feature/ownership_type/domain/repository/ownership_type_repository.dart';
 import 'package:flutter/services.dart';
@@ -46,8 +68,6 @@ import 'package:mighty_job/feature/human_resource/attendance/controller/attendan
 import 'package:mighty_job/feature/human_resource/attendance/domain/repository/attendance_repository.dart';
 import 'package:mighty_job/feature/human_resource/award/controller/award_controller.dart';
 import 'package:mighty_job/feature/human_resource/award/domain/repository/award_repository.dart';
-import 'package:mighty_job/feature/human_resource/candidate/controller/candidate_controller.dart';
-import 'package:mighty_job/feature/human_resource/candidate/domain/repository/candidate_repository.dart';
 import 'package:mighty_job/feature/human_resource/department/controller/department_controller.dart';
 import 'package:mighty_job/feature/human_resource/department/domain/repository/department_repository.dart';
 import 'package:mighty_job/feature/human_resource/designation/controller/designation_controller.dart';
@@ -77,8 +97,12 @@ import 'package:mighty_job/feature/loyalty/loyalty_point_redemption/domain/repos
 import 'package:mighty_job/feature/loyalty/loyalty_point_redemption/logic/loyalty_point_redemption_controller.dart';
 import 'package:mighty_job/feature/payment_method/domain/repository/payment_method_repository.dart';
 import 'package:mighty_job/feature/payment_method/logic/payment_method_controller.dart';
+import 'package:mighty_job/feature/post_category/controller/post_category_controller.dart';
+import 'package:mighty_job/feature/post_category/domain/repository/post_category_repository.dart';
 import 'package:mighty_job/feature/report_management/domain/repository/report_repository.dart';
 import 'package:mighty_job/feature/report_management/logic/report_controller.dart';
+import 'package:mighty_job/feature/reported_job/controller/reported_job_controller.dart';
+import 'package:mighty_job/feature/reported_job/domain/repository/reported_job_repository.dart';
 import 'package:mighty_job/feature/role_and_permission/role/domain/repository/role_repository.dart';
 import 'package:mighty_job/feature/role_and_permission/user/controller/user_controller.dart';
 import 'package:mighty_job/feature/role_and_permission/user/domain/repository/user_repository.dart';
@@ -156,6 +180,9 @@ Future<Map<String, Map<String, String>>> init() async {
   Get.lazyPut(() => CompanyRepository(apiClient: Get.find()));
   Get.lazyPut(() => CompanyController(companyRepository: Get.find()));
 
+  Get.lazyPut(() => FavoriteCompanyRepository(apiClient: Get.find()));
+  Get.lazyPut(() => FavoriteCompanyController(favoriteCompanyRepository: Get.find()));
+
   Get.lazyPut(() => CareerLevelRepository(apiClient: Get.find()));
   Get.lazyPut(() => CareerLevelController(careerLevelRepository: Get.find()));
 
@@ -170,6 +197,40 @@ Future<Map<String, Map<String, String>>> init() async {
 
   Get.lazyPut(() => SkillRepository(apiClient: Get.find()));
   Get.lazyPut(() => SkillController(skillRepository: Get.find()));
+
+  Get.lazyPut(() => JobCategoryRepository(apiClient: Get.find()));
+  Get.lazyPut(() => JobCategoryController(jobCategoryRepository: Get.find()));
+
+  Get.lazyPut(() => JobListingRepository(apiClient: Get.find()));
+  Get.lazyPut(() => JobListingController(listingRepository: Get.find()));
+
+  Get.lazyPut(() => JobStageRepository(apiClient: Get.find()));
+  Get.lazyPut(() => JobStageController(stageRepository: Get.find()));
+
+  Get.lazyPut(() => JobApplicationRepository(apiClient: Get.find()));
+  Get.lazyPut(() => JobApplicationController(applicationRepository: Get.find()));
+
+  Get.lazyPut(() => FavoriteJobRepository(apiClient: Get.find()));
+  Get.lazyPut(() => FavoriteJobController(favoriteJobRepository: Get.find()));
+
+  Get.lazyPut(() => CandidateEducationRepository(apiClient: Get.find()));
+  Get.lazyPut(() => CandidateEducationController(candidateEducationRepository: Get.find()));
+
+  Get.lazyPut(() => CandidateExperienceRepository(apiClient: Get.find()));
+  Get.lazyPut(() => CandidateExperienceController(candidateExperienceRepository: Get.find()));
+
+
+  Get.lazyPut(() => CandidateResumeRepository(apiClient: Get.find()));
+  Get.lazyPut(() => CandidateResumeController(candidateResumeRepository: Get.find()));
+
+  Get.lazyPut(() => ReportedJobRepository(apiClient: Get.find()));
+  Get.lazyPut(() => ReportedJobController(reportedJobRepository: Get.find()));
+
+  Get.lazyPut(() => InquiryRepository(apiClient: Get.find()));
+  Get.lazyPut(() => InquiryController(inquiryRepository: Get.find()));
+
+  Get.lazyPut(() => PostCategoryRepository(apiClient: Get.find()));
+  Get.lazyPut(() => PostCategoryController(postCategoryRepository: Get.find()));
 
 
 

@@ -35,6 +35,7 @@ class AppConstants {
   static const String industries = '/industries';
   static const String companySizes = '/company-sizes';
   static const String companies = '/companies';
+  static const String favoriteCompanies = '/favorite-companies';
   static const String ownerShipTypes = '/owner-ship-types';
   static const String careerLevels = '/career-levels';
   static const String degreeLevels = '/degree-levels';
@@ -42,7 +43,17 @@ class AppConstants {
   static const String salaryPeriods = '/salary-periods';
   static const String skills = '/skills';
   static const String jobCategories = '/job-categories';
+  static const String postCategories = '/post-categories';
+  static const String favoriteJobs = '/favorite-jobs';
   static const String jobListings = '/job-listings';
+  static const String jobStages = '/job-stages';
+  static const String jobApplications = '/job-applications';
+  static const String candidateEducation = '/candidate-education';
+  static const String candidateExperience = '/candidate-experiences';
+  static const String candidateResume = '/candidate-resumes';
+  static const String reportedJobs = '/reported-jobs';
+  static const String inquiries = '/inquiries';
+
 
   // Dashboard API endpoints
   static const String dashboardStatistics = '/dashboard/statistics';

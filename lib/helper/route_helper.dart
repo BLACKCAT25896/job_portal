@@ -1,5 +1,6 @@
 
 
+import 'package:mighty_job/feature/candidate/presentation/screens/candidate_screen.dart';
 import 'package:mighty_job/feature/human_resource/salary_generate/presentation/screens/create_new_salary_generate_screen.dart';
 import 'package:mighty_job/feature/inventory/brand/presentation/screens/brand_screen.dart';
 import 'package:mighty_job/feature/inventory/brand/presentation/screens/create_new_brand_screen.dart';
@@ -25,7 +26,6 @@ import 'package:mighty_job/feature/cms_management/why_choose/presentation/screen
 import 'package:mighty_job/feature/dashboard/views/dashboard_screen.dart';
 import 'package:mighty_job/feature/human_resource/attendance/presentation/screens/attendance_screen.dart';
 import 'package:mighty_job/feature/human_resource/award/presentation/screens/award_screen.dart';
-import 'package:mighty_job/feature/human_resource/candidate/presentation/screens/candidate_screen.dart';
 import 'package:mighty_job/feature/human_resource/department/presentation/screens/department_screen.dart';
 import 'package:mighty_job/feature/human_resource/designation/presentation/screens/designation_screen.dart';
 import 'package:mighty_job/feature/human_resource/interview/presentation/screens/interview_screen.dart';

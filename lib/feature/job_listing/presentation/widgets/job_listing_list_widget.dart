@@ -6,7 +6,6 @@ import 'package:mighty_job/feature/job_listing/controller/job_listing_controller
 import 'package:mighty_job/feature/job_listing/domain/models/job_listing_model.dart';
 import 'package:mighty_job/feature/job_listing/presentation/widgets/add_new_job_listing_widget.dart';
 import 'package:mighty_job/feature/job_listing/presentation/widgets/job_listing_item.dart';
-import 'package:mighty_job/feature/job_listing/controller/job_listing_controller.dart';
 import 'package:mighty_job/util/dimensions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
