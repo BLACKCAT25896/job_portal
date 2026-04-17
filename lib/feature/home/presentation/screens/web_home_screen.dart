@@ -1,7 +1,3 @@
-import 'package:mighty_job/common/widget/responsive_grid_widget.dart';
-import 'package:mighty_job/feature/home/presentation/widget/top_brand/top_brand_list.dart';
-import 'package:mighty_job/feature/home/presentation/widget/top_category/top_category_list.dart';
-import 'package:mighty_job/feature/home/presentation/widget/top_product_order/top_product_list.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:mighty_job/common/global_widget/custom_web_scroll_view_widget.dart';
@@ -59,14 +55,6 @@ class _WebHomeScreenState extends State<WebHomeScreen> {
                         OrdersLineChart(),
                         const SalesReportRatioChartWidget(),
                       ])),
-
-
-                    ResponsiveMasonryGrid(crossAxisSpacing: 0,
-                        width: 600, children: [
-                      TopProductListWidget(scrollController: scrollController),
-                      TopCategoryListWidget(scrollController: scrollController),
-                      TopBrandListWidget(scrollController: scrollController),
-                    ]),
 
                   ],
                 ):SizedBox();

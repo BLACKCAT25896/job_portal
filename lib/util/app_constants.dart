@@ -33,6 +33,7 @@ class AppConstants {
 
   //Here is
   static const String industries = '/industries';
+  static const String transactions = '/transactions';
   static const String companySizes = '/company-sizes';
   static const String companies = '/companies';
   static const String favoriteCompanies = '/favorite-companies';
@@ -44,6 +45,7 @@ class AppConstants {
   static const String skills = '/skills';
   static const String jobCategories = '/job-categories';
   static const String postCategories = '/post-categories';
+  static const String posts = '/posts';
   static const String favoriteJobs = '/favorite-jobs';
   static const String jobListings = '/job-listings';
   static const String jobStages = '/job-stages';
@@ -53,10 +55,22 @@ class AppConstants {
   static const String candidateResume = '/candidate-resumes';
   static const String reportedJobs = '/reported-jobs';
   static const String inquiries = '/inquiries';
-
-
-  // Dashboard API endpoints
   static const String dashboardStatistics = '/dashboard/statistics';
+
+
+  //Frontend
+  static const String frontendIndustries = '/frontend/industries';
+  static const String frontendCompanies = '/frontend/companies';
+  static const String frontendSkills = '/frontend/skills';
+  static const String frontendJobCategories = '/frontend/job-categories';
+  static const String frontendJobListings = '/frontend/job-listings';
+  static const String frontendPostCategories = '/frontend/post-categories';
+  static const String frontendPost = '/frontend/posts';
+  static const String frontendContactUs = '/frontend/contact-us';
+  static const String frontendPrivacyPolicy = '/frontend/privacy-policy';
+  static const String frontendTermsCondition = '/frontend/terms-conditions';
+  static const String frontendCookiePolicy = '/frontend/cookie-policy';
+  static const String frontendAboutUs = '/frontend/about-us';
 
 
 

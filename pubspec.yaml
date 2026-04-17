@@ -80,7 +80,6 @@ dependencies:
   timeago: ^3.7.1
   country_code_picker: ^3.4.1
   pin_code_fields: ^8.0.1
-  web_smooth_scroll: ^2.0.0
   font_awesome_flutter: ^10.9.1
   google_maps_flutter: ^2.13.1
   google_maps_flutter_web: ^0.5.14+2

@@ -13,6 +13,8 @@ import 'package:mighty_job/feature/cms_management/faq/presentation/screens/faq_s
 import 'package:mighty_job/feature/cms_management/feedback/presentation/screens/feedback_screen.dart';
 import 'package:mighty_job/feature/cms_management/why_choose/presentation/screens/why_choose_us_screen.dart';
 import 'package:mighty_job/feature/dashboard/views/dashboard_screen.dart';
+import 'package:mighty_job/feature/frontend/policy_enum.dart';
+import 'package:mighty_job/feature/frontend/presentation/screens/policy_screen.dart';
 import 'package:mighty_job/feature/notification/presentation/screens/notification_screen.dart';
 import 'package:mighty_job/feature/payment_method/presentation/screens/payment_method_screen.dart';
 import 'package:mighty_job/feature/profile/presentation/screens/profile_screen.dart';
@@ -137,6 +139,11 @@ class RouteHelper {
   static String getAddNewSubCategoryRoute () => addNewSubCategory;
 
 
+  static const String policy = '/policy/:type';
+  static String getPolicyRoute(PolicyEnum type) => '/policy/${toSeoPath(type)}';
+
+
+
 
   static String getInitialRoute() => initial;
   static String getSignInRoute() => signIn;
@@ -213,6 +220,26 @@ class RouteHelper {
     GetPage(name: newTicket, page: ()=> AddTicketScreen()),
     GetPage(name: ticketDetail, page: ()=> SupportConversationScreen(ticketId: Get.parameters['id']??"0")),
 
+    GetPage(name: policy, page: () {
+      final typeParam = Get.parameters['type'];
+      final policyType = PolicyEnum.values.firstWhere((e) => toSeoPath(e) == typeParam,
+        orElse: () => PolicyEnum.termsOfService,
+      );
+      return PolicyScreen(policyType: policyType);
+    },
+    ),
 
   ];
+}
+String toSeoPath(PolicyEnum type) {
+  switch (type) {
+    case PolicyEnum.termsOfService:
+      return 'terms-of-service';
+    case PolicyEnum.privacyPolicy:
+      return 'privacy-policy';
+    case PolicyEnum.cookiePolicy:
+      return 'cookie-policy';
+    case PolicyEnum.aboutUs:
+      return 'about-us';
+  }
 }

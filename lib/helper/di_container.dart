@@ -50,8 +50,12 @@ import 'package:mighty_job/feature/cms_management/why_choose/domain/repository/w
 import 'package:mighty_job/feature/cms_management/why_choose/logic/why_choose_controller.dart';
 import 'package:mighty_job/feature/payment_method/domain/repository/payment_method_repository.dart';
 import 'package:mighty_job/feature/payment_method/logic/payment_method_controller.dart';
+import 'package:mighty_job/feature/post/controller/post_controller.dart';
+import 'package:mighty_job/feature/post/domain/repository/post_repository.dart';
 import 'package:mighty_job/feature/post_category/controller/post_category_controller.dart';
 import 'package:mighty_job/feature/post_category/domain/repository/post_category_repository.dart';
+import 'package:mighty_job/feature/post_comment/controller/post_comment_controller.dart';
+import 'package:mighty_job/feature/post_comment/domain/repository/post_comment_repository.dart';
 import 'package:mighty_job/feature/report_management/domain/repository/report_repository.dart';
 import 'package:mighty_job/feature/report_management/logic/report_controller.dart';
 import 'package:mighty_job/feature/reported_job/controller/reported_job_controller.dart';
@@ -67,6 +71,8 @@ import 'package:mighty_job/feature/setting/domain/repository/setting_repository.
 import 'package:mighty_job/feature/setting/logic/setting_controller.dart';
 import 'package:mighty_job/feature/skill/controller/skill_controller.dart';
 import 'package:mighty_job/feature/skill/domain/repository/skill_repository.dart';
+import 'package:mighty_job/feature/transaction/controller/transaction_controller.dart';
+import 'package:mighty_job/feature/transaction/domain/repository/transaction_repository.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:get/get.dart';
 import 'package:mighty_job/api_handle/api_client.dart';
@@ -184,6 +190,15 @@ Future<Map<String, Map<String, String>>> init() async {
 
   Get.lazyPut(() => ReportRepository(apiClient: Get.find()));
   Get.lazyPut(() => ReportController(reportRepository: Get.find()));
+
+  Get.lazyPut(() => PostRepository(apiClient: Get.find()));
+  Get.lazyPut(() => PostController(postRepository: Get.find()));
+
+  Get.lazyPut(() => PostCommentRepository(apiClient: Get.find()));
+  Get.lazyPut(() => PostCommentController(postCommentRepository: Get.find()));
+
+  Get.lazyPut(() => TransactionRepository(apiClient: Get.find()));
+  Get.lazyPut(() => TransactionController(transactionRepository: Get.find()));
 
 
 
