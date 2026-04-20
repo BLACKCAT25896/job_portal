@@ -6,7 +6,7 @@ class TransactionItem {
   int? id;
   int? userId;
   String? invoiceId;
-  String? amount;
+  double? amount;
   int? status;
   int? isApproved;
   int? approvedId;
@@ -31,7 +31,7 @@ class TransactionItem {
     id = PriceConverter.parseInt(json['id']);
     userId = PriceConverter.parseInt(json['user_id']);
     invoiceId = json['invoice_id'];
-    amount = json['amount'];
+    amount = PriceConverter.parseAmount(json['amount']);
     status = PriceConverter.parseInt(json['status']);
     isApproved = PriceConverter.parseInt(json['is_approved']);
     approvedId = PriceConverter.parseInt(json['approved_id']);

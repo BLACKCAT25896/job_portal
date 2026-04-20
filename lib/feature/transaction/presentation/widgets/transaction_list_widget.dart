@@ -46,9 +46,8 @@ class _TransactionListWidgetState extends State<TransactionListWidget> {
           showRouteSection: !widget.fromFilter,
           sectionTitle: "transaction".tr,
           pathItems: ["transaction".tr],
-
-
-          headings: const ["name"],
+          showActionOption: false,
+          headings: const ["title", "amount"],
           scrollController: widget.scrollController,
           isLoading: transactionModel == null,
           totalSize:  data?.total ?? 0,

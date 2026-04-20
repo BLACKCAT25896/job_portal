@@ -54,7 +54,7 @@ class _SalaryPeriodListWidgetState extends State<SalaryPeriodListWidget> {
                 child: AddNewSalaryPeriodWidget()));
           },
 
-          headings: const ["name"],
+          headings: const ["name", "description"],
           scrollController: widget.scrollController,
           isLoading: model == null,
           totalSize:  data?.total ?? 0,

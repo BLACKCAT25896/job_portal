@@ -54,7 +54,7 @@ class _PostListWidgetState extends State<PostListWidget> {
                 child: AddNewPostWidget()));
           },
 
-          headings: const ["name"],
+          headings: const ["title", "category", "description"],
           scrollController: widget.scrollController,
           isLoading: postModel == null,
           totalSize:  data?.total ?? 0,

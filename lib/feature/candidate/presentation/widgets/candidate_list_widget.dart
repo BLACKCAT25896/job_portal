@@ -25,7 +25,7 @@ class CandidateListWidget extends StatelessWidget {
           addNewTitle: "add_new_candidate".tr,
           onAddNewTap: () => Get.dialog(CustomDialogWidget(title: "candidate".tr,
               child: const AddNewCandidateWidget())),
-          headings: const ["name", "email", "phone","candidate_status", "notes"],
+          headings: const ["name", "email", "phone"],
 
           scrollController: scrollController,
           isLoading: candidateModel == null,

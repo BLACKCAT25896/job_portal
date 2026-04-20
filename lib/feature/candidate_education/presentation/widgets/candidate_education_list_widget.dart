@@ -22,10 +22,10 @@ class CandidateEducationListWidget extends StatelessWidget {
         return GenericListSection<CandidateEducationItem>(
           sectionTitle: "human_resource".tr,
           pathItems: ["candidateEducation_list".tr],
-          addNewTitle: "add_new_candidateEducation".tr,
-          onAddNewTap: () => Get.dialog(CustomDialogWidget(title: "candidateEducation".tr,
+          addNewTitle: "add_new_candidate_education".tr,
+          onAddNewTap: () => Get.dialog(CustomDialogWidget(title: "candidate_education".tr,
               child: const AddNewCandidateEducationWidget())),
-          headings: const ["name", "email", "phone","candidateEducation_status", "notes"],
+          headings: const ["name","institute",  "result", "year"],
 
           scrollController: scrollController,
           isLoading: candidateEducationModel == null,

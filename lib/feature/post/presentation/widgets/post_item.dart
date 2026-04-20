@@ -26,6 +26,8 @@ class PostItemWidget extends StatelessWidget {
     Row(spacing: Dimensions.paddingSizeDefault, children: [
       NumberingWidget(index: index),
       Expanded(child: CustomTextItemWidget(text: postItem?.title??'')),
+      Expanded(child: CustomTextItemWidget(text: postItem?.category?.name??'')),
+      Expanded(child: CustomTextItemWidget(text: postItem?.description??'')),
 
       EditDeletePopupMenu(onEdit:(){
         Get.dialog(CustomDialogWidget(child: AddNewPostWidget(postItem: postItem)));

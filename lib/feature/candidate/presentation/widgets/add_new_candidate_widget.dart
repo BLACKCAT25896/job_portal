@@ -30,11 +30,10 @@ class _AddNewCandidateWidgetState extends State<AddNewCandidateWidget> {
     super.initState();
     if(widget.candidateItem != null) {
       update = true;
-      firstNameController.text = widget.candidateItem?.firstName ?? '';
-      lastNameController.text = widget.candidateItem?.lastName ?? '';
-      emailController.text = widget.candidateItem?.email ?? '';
-      phoneController.text = widget.candidateItem?.phone ?? '';
-      notesController.text = widget.candidateItem?.notes ?? '';
+      firstNameController.text = widget.candidateItem?.user?.firstName ?? '';
+      lastNameController.text = widget.candidateItem?.user?.lastName ?? '';
+      emailController.text = widget.candidateItem?.user?.email ?? '';
+      phoneController.text = widget.candidateItem?.user?.phone ?? '';
 
     }
   }
@@ -110,7 +109,7 @@ class _AddNewCandidateWidgetState extends State<AddNewCandidateWidget> {
                       method: update? "put" : "post"
                     );
                     if(update){
-                      candidateController.updateCandidate(body,  int.parse(widget.candidateItem!.id!));
+                      candidateController.updateCandidate(body, (widget.candidateItem!.id!));
                     }else{
                       candidateController.createNewCandidate(body);
                     }

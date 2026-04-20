@@ -25,7 +25,7 @@ class CandidateResumeListWidget extends StatelessWidget {
           addNewTitle: "add_new_candidate_resume".tr,
           onAddNewTap: () => Get.dialog(CustomDialogWidget(title: "candidate_resume".tr,
               child: const AddNewCandidateResumeWidget())),
-          headings: const ["name", "email", "phone","candidate_resume_status", "notes"],
+          headings: const ["title", "resume"],
 
           scrollController: scrollController,
           isLoading: candidateResumeModel == null,

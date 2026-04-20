@@ -34,6 +34,7 @@ class JobListingItem {
   String? countryName;
   String? stateName;
   String? cityName;
+  Company? company;
 
   JobListingItem(
       {this.id,
@@ -66,7 +67,9 @@ class JobListingItem {
         this.salaryPeriod,
         this.countryName,
         this.stateName,
-        this.cityName});
+        this.cityName,
+        this.company,
+      });
 
   JobListingItem.fromJson(Map<String, dynamic> json) {
     id = PriceConverter.parseInt(json['id']);
@@ -100,6 +103,7 @@ class JobListingItem {
     countryName = json['country_name'];
     stateName = json['state_name'];
     cityName = json['city_name'];
+    company = json['company'] != null ? Company.fromJson(json['company']) : null;
   }
 
   Map<String, dynamic> toJson() {
@@ -135,6 +139,55 @@ class JobListingItem {
     data['country_name'] = countryName;
     data['state_name'] = stateName;
     data['city_name'] = cityName;
+    if (company != null) {
+      data['company'] = company!.toJson();
+    }
+    return data;
+  }
+}
+
+class Company {
+  int? id;
+  String? name;
+  String? slug;
+  String? logo;
+  String? establishedIn;
+  String? details;
+  String? website;
+  String? location;
+
+  Company(
+      {this.id,
+        this.name,
+        this.slug,
+        this.logo,
+        this.establishedIn,
+        this.details,
+        this.website,
+        this.location,
+        });
+
+  Company.fromJson(Map<String, dynamic> json) {
+    id = json['id'];
+    name = json['name'];
+    slug = json['slug'];
+    logo = json['logo'];
+    establishedIn = json['established_in'];
+    details = json['details'];
+    website = json['website'];
+    location = json['location'];
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['id'] = id;
+    data['name'] = name;
+    data['slug'] = slug;
+    data['logo'] = logo;
+    data['established_in'] = establishedIn;
+    data['details'] = details;
+    data['website'] = website;
+    data['location'] = location;
     return data;
   }
 }

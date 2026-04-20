@@ -20,7 +20,8 @@ class CandidateResumeItemWidget extends StatelessWidget {
     return Row(spacing: Dimensions.paddingSizeDefault, children: [
       NumberingWidget(index: index),
 
-      Expanded(child: CustomItemTextWidget(text:'${candidateResumeItem?.status}')),
+      Expanded(child: CustomItemTextWidget(text:'${candidateResumeItem?.title}')),
+      Expanded(child: CustomItemTextWidget(text:'${candidateResumeItem?.fileName}${candidateResumeItem?.type}')),
 
       EditDeletePopupMenu(onDelete: (){
         Get.dialog(ConfirmationDialog(title: "candidate_resume", onTap: (){

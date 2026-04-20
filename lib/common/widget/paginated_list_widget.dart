@@ -1,8 +1,10 @@
+import 'package:mighty_job/common/widget/custom_contaner.dart';
 import 'package:mighty_job/helper/app_color_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:mighty_job/helper/responsive_helper.dart';
 import 'package:mighty_job/util/dimensions.dart';
 import 'package:mighty_job/util/styles.dart';
+import 'package:get/get.dart';
 
 class PaginatedListWidget extends StatefulWidget {
   final ScrollController scrollController;
@@ -13,6 +15,7 @@ class PaginatedListWidget extends StatefulWidget {
   final bool enabledPagination;
   final bool reverse;
   final int? limit;
+  final bool? landing;
 
   const PaginatedListWidget({
     super.key,
@@ -24,6 +27,7 @@ class PaginatedListWidget extends StatefulWidget {
     this.enabledPagination = true,
     this.reverse = false,
     this.limit,
+    this.landing = false,
   });
 
   @override
@@ -35,6 +39,9 @@ class _PaginatedListWidgetState extends State<PaginatedListWidget> {
   late List<int?> _offsetList;
   bool _isLoading = false;
 
+  late bool isDesktop;
+  late VoidCallback _scrollListener;
+
   @override
   void initState() {
     super.initState();
@@ -42,18 +49,32 @@ class _PaginatedListWidgetState extends State<PaginatedListWidget> {
     _offset = 1;
     _offsetList = [1];
 
-    widget.scrollController.addListener(() {
-      if (widget.scrollController.position.pixels ==
-          widget.scrollController.position.maxScrollExtent &&
+    _scrollListener = () {
+      if (!mounted) return;
+
+      if (widget.scrollController.position.pixels >=
+          widget.scrollController.position.maxScrollExtent - 100 &&
           widget.totalSize != null &&
           !_isLoading &&
           widget.enabledPagination &&
-          !ResponsiveHelper.isDesktop(context)) {
-        if (mounted) {
-          _paginate();
-        }
+          !isDesktop) {
+        _paginate();
       }
-    });
+    };
+
+    widget.scrollController.addListener(_scrollListener);
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    isDesktop = ResponsiveHelper.isDesktop(context);
+  }
+
+  @override
+  void dispose() {
+    widget.scrollController.removeListener(_scrollListener);
+    super.dispose();
   }
 
   void _paginate({int? page}) async {
@@ -71,6 +92,8 @@ class _PaginatedListWidgetState extends State<PaginatedListWidget> {
 
       await widget.onPaginate(_offset);
 
+      if (!mounted) return;
+
       setState(() {
         _isLoading = false;
       });
@@ -82,57 +105,78 @@ class _PaginatedListWidgetState extends State<PaginatedListWidget> {
 
     int pageSize = (widget.totalSize! / (widget.limit ?? 10)).ceil();
 
-    // If only one page, don't show pagination
     if (pageSize <= 1) return const SizedBox.shrink();
 
-    return Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-        IconButton(icon: const Icon(Icons.arrow_back),
-          onPressed: _offset! > 1 ? () => _paginate(page: _offset! - 1) : null),
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed:
+          _offset! > 1 ? () => _paginate(page: _offset! - 1) : null,
+        ),
 
-        Wrap(children: List.generate(pageSize, (index) {
+        Wrap(
+          children: List.generate(pageSize, (index) {
             int page = index + 1;
-            if (page == 1 || page == pageSize || (page >= _offset! - 1 && page <= _offset! + 1)) {
-              return InkWell(onTap: () => _paginate(page: page),
+
+            if (page == 1 ||
+                page == pageSize ||
+                (page >= _offset! - 1 && page <= _offset! + 1)) {
+              return InkWell(
+                onTap: () => _paginate(page: page),
                 child: Container(
                   margin: const EdgeInsets.symmetric(horizontal: 4),
-                  padding: const EdgeInsets.symmetric(vertical: 6, horizontal: 12),
+                  padding:
+                  const EdgeInsets.symmetric(vertical: 6, horizontal: 12),
                   decoration: BoxDecoration(
-                    color: _offset == page ? systemPrimaryColor() : Colors.transparent,
-                    borderRadius: BorderRadius.circular(6)),
-
-                  child: Text("$page", style: textRegular.copyWith(
-                      color: _offset == page ? Colors.white : Colors.black))),
+                    color: _offset == page
+                        ? systemPrimaryColor()
+                        : Colors.transparent,
+                    borderRadius: BorderRadius.circular(6),
+                  ),
+                  child: Text(
+                    "$page",
+                    style: textRegular.copyWith(
+                      color:
+                      _offset == page ? Colors.white : Colors.black,
+                    ),
+                  ),
+                ),
               );
             } else if (page == 2 && _offset! > 3) {
               return const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 6),
-                child: Text("..."));
-            } else if (page == pageSize - 1 && _offset! < pageSize - 2) {
-              return const Padding(padding: EdgeInsets.symmetric(horizontal: 6),
-                child: Text("..."));
+                child: Text("..."),
+              );
+            } else if (page == pageSize - 1 &&
+                _offset! < pageSize - 2) {
+              return const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 6),
+                child: Text("..."),
+              );
             } else {
               return const SizedBox.shrink();
             }
           }),
         ),
 
-        // Next Button
         IconButton(
           icon: const Icon(Icons.arrow_forward),
-          onPressed: _offset! < pageSize ? () => _paginate(page: _offset! + 1) : null,
+          onPressed:
+          _offset! < pageSize ? () => _paginate(page: _offset! + 1) : null,
         ),
       ],
     );
   }
-
 
   @override
   Widget build(BuildContext context) {
     if (widget.offset != null) {
       _offset = widget.offset;
       _offsetList = [];
-      for (int index = 1; index <= widget.offset!; index++) {
-        _offsetList.add(index);
+      for (int i = 1; i <= widget.offset!; i++) {
+        _offsetList.add(i);
       }
     }
 
@@ -140,17 +184,33 @@ class _PaginatedListWidgetState extends State<PaginatedListWidget> {
       children: [
         widget.reverse ? const SizedBox() : widget.itemView,
 
-        // Pagination depending on screen size
-        if (ResponsiveHelper.isDesktop(context) && widget.totalSize != null)
+        if (widget.landing == true)
+          Padding(
+            padding: const EdgeInsets.all(Dimensions.paddingSizeSmall),
+            child: _isLoading
+                ? const CircularProgressIndicator()
+                : (_offset! * (widget.limit ?? 10) <
+                (widget.totalSize ?? 0))
+                ? CustomContainer(
+              onTap: () => _paginate(),
+              child: Text(
+                "view_more".tr,
+                style: textRegular,
+              ),
+            )
+                : const SizedBox(),
+          )
+        else if (ResponsiveHelper.isDesktop(context) &&
+            widget.totalSize != null)
           Padding(
             padding: const EdgeInsets.all(Dimensions.paddingSizeSmall),
             child: _buildDesktopPagination(context),
           )
         else if (_isLoading)
-          const Padding(
-            padding: EdgeInsets.all(Dimensions.paddingSizeSmall),
-            child: CircularProgressIndicator(),
-          ),
+            const Padding(
+              padding: EdgeInsets.all(Dimensions.paddingSizeSmall),
+              child: CircularProgressIndicator(),
+            ),
 
         widget.reverse ? widget.itemView : const SizedBox(),
       ],

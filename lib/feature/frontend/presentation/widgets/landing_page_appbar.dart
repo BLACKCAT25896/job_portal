@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:mighty_job/common/global_widget/header_logo_section.dart';
+import 'package:mighty_job/common/layout/navbar_menu_button_widget.dart';
 import 'package:mighty_job/common/widget/custom_contaner.dart';
 import 'package:mighty_job/feature/frontend/controller/frontend_controller.dart';
 import 'package:mighty_job/feature/profile/presentation/widgets/login_option_widget.dart';
@@ -39,23 +40,22 @@ class _LandingPageAppBarState extends State<LandingPageAppBar> {
 
                 //Expanded(child: ProductSearchHeaderWidget()),
 
+                Spacer(),
 
                 LoginOptionWidget()
               ]),))),
-            // Container(
-            //   decoration: BoxDecoration(color: Theme.of(context).cardColor),
-            //   child: Center(child: SizedBox(width: Dimensions.webMaxWidth,
-            //     child: Row(children: [
-            //       MenuButtonWeb(title: 'home'.tr, onTap: () {
-            //         Get.toNamed(RouteHelper.getInitialRoute());
-            //       },),
-            //       CategoryNavbarWidget(),
-            //       BrandNavbarWidget(),
-            //       MenuButtonWeb(title: 'contact_us'.tr, onTap: () {
-            //         Get.toNamed(RouteHelper.getContactUsRoute());
-            //       },),
-            //     ]),)),
-            // ),
+            Container(
+              decoration: BoxDecoration(color: Theme.of(context).cardColor),
+              child: Center(child: SizedBox(width: Dimensions.webMaxWidth,
+                child: Row(children: [
+                  MenuButtonWeb(title: 'home'.tr, onTap: () {
+                    Get.toNamed(RouteHelper.getInitialRoute());
+                  },),
+                  MenuButtonWeb(title: 'contact_us'.tr, onTap: () {
+
+                  },),
+                ]),)),
+            ),
           ],
         );
       }

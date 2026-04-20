@@ -25,7 +25,7 @@ class CandidateExperienceListWidget extends StatelessWidget {
           addNewTitle: "add_new_candidate_experience".tr,
           onAddNewTap: () => Get.dialog(CustomDialogWidget(title: "candidate_experience".tr,
               child: const AddNewCandidateExperienceWidget())),
-          headings: const ["name", "email", "phone","candidate_experience_status", "notes"],
+          headings: const ["designation", "company", "start_date","end_date"],
 
           scrollController: scrollController,
           isLoading: candidateExperienceModel == null,

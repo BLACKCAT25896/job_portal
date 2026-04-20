@@ -19,16 +19,15 @@ class CandidateItemWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(spacing: Dimensions.paddingSizeDefault, children: [
       NumberingWidget(index: index),
-      Expanded(child: CustomItemTextWidget(text:'${candidateItem?.firstName} ${candidateItem?.lastName??''}',)),
-      Expanded(child: CustomItemTextWidget(text:'${candidateItem?.email}')),
-      Expanded(child: CustomItemTextWidget(text:'${candidateItem?.phone}')),
-      Expanded(child: CustomItemTextWidget(text:'${candidateItem?.status}')),
-      Expanded(child: CustomItemTextWidget(text:'${candidateItem?.notes}')),
+      Expanded(child: CustomItemTextWidget(text:'${candidateItem?.user?.firstName} ${candidateItem?.user?.lastName??''}',)),
+      Expanded(child: CustomItemTextWidget(text:'${candidateItem?.user?.email}')),
+      Expanded(child: CustomItemTextWidget(text:'${candidateItem?.user?.phone}')),
+      Expanded(child: CustomItemTextWidget(text:'${candidateItem?.user?.phone}')),
 
       EditDeletePopupMenu(onDelete: (){
         Get.dialog(ConfirmationDialog(title: "candidate", onTap: (){
             Get.back();
-            Get.find<CandidateController>().deleteCandidate(int.parse(candidateItem!.id!));
+            Get.find<CandidateController>().deleteCandidate((candidateItem!.id!));
           },));
 
       }, onEdit: (){

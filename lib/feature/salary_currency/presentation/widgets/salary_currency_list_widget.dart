@@ -54,7 +54,7 @@ class _SalaryCurrencyListWidgetState extends State<SalaryCurrencyListWidget> {
                 child: AddNewSalaryCurrencyWidget()));
           },
 
-          headings: const ["name"],
+          headings: const ["name", "code", "symbol"],
           scrollController: widget.scrollController,
           isLoading: model == null,
           totalSize:  data?.total ?? 0,

@@ -7,7 +7,7 @@ import 'package:mighty_job/feature/post_comment/presentation/screens/create_new_
 import 'package:mighty_job/feature/post_comment/presentation/widgets/post_comment_list_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/feature/post_comment/controller/post_comment_controller.dart';
+
 class PostCommentScreen extends StatefulWidget {
   const PostCommentScreen({super.key});
 

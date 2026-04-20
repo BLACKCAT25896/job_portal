@@ -75,7 +75,7 @@ class _AddNewCandidateExperienceWidgetState extends State<AddNewCandidateExperie
 
             Padding(padding: const EdgeInsets.symmetric(vertical: Dimensions.paddingSizeDefault),
                 child: CustomButton(onTap: (){
-                  String? candidateId = Get.find<CandidateController>().selectedCandidateItem?.id;
+                  int? candidateId = Get.find<CandidateController>().selectedCandidateItem?.id;
                   String title = titleController.text.trim();
                   bool isCurrentlyWorking = candidateExperienceController.isCurrentlyWorking;
                   String company = companyController.text.trim();
@@ -99,7 +99,7 @@ class _AddNewCandidateExperienceWidgetState extends State<AddNewCandidateExperie
                   else{
                     CandidateExperienceBody body = CandidateExperienceBody(
                       experienceTitle: title,
-                      candidateId: int.parse(candidateId),
+                      candidateId:(candidateId),
                       company: company,
                       description: description,
                       startDate: startDate,

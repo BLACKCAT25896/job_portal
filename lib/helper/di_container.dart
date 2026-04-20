@@ -21,6 +21,8 @@ import 'package:mighty_job/feature/favorite_company/controller/favorite_company_
 import 'package:mighty_job/feature/favorite_company/domain/repository/favorite_company_repository.dart';
 import 'package:mighty_job/feature/favorite_job/controller/favorite_job_controller.dart';
 import 'package:mighty_job/feature/favorite_job/domain/repository/favorite_job_repository.dart';
+import 'package:mighty_job/feature/frontend/controller/frontend_controller.dart';
+import 'package:mighty_job/feature/frontend/domain/repository/frontend_repository.dart';
 import 'package:mighty_job/feature/industries/controller/industry_controller.dart';
 import 'package:mighty_job/feature/industries/domain/repository/industry_repository.dart';
 import 'package:mighty_job/feature/inquiry/controller/inquiry_controller.dart';
@@ -38,16 +40,10 @@ import 'package:mighty_job/feature/ownership_type/domain/repository/ownership_ty
 import 'package:flutter/services.dart';
 import 'package:mighty_job/common/controller/route_controller.dart';
 import 'package:mighty_job/common/widget/side_menu/src/side_bar_controller.dart';
-import 'package:mighty_job/feature/cms_management/about_us/domain/repository/about_us_repository.dart';
-import 'package:mighty_job/feature/cms_management/about_us/logic/about_us_controller.dart';
 import 'package:mighty_job/feature/cms_management/cms_settings/controller/system_settngs_controller.dart';
 import 'package:mighty_job/feature/cms_management/cms_settings/domain/repository/system_settings_repository.dart';
 import 'package:mighty_job/feature/cms_management/policy_pages/domain/repository/policy_pages_repository.dart';
 import 'package:mighty_job/feature/cms_management/policy_pages/logic/pages_controller.dart';
-import 'package:mighty_job/feature/cms_management/explore/domain/repository/explore_repository.dart';
-import 'package:mighty_job/feature/cms_management/explore/logic/explore_controller.dart';
-import 'package:mighty_job/feature/cms_management/why_choose/domain/repository/why_choose_repository.dart';
-import 'package:mighty_job/feature/cms_management/why_choose/logic/why_choose_controller.dart';
 import 'package:mighty_job/feature/payment_method/domain/repository/payment_method_repository.dart';
 import 'package:mighty_job/feature/payment_method/logic/payment_method_controller.dart';
 import 'package:mighty_job/feature/post/controller/post_controller.dart';
@@ -97,12 +93,6 @@ import 'package:mighty_job/feature/support_ticket/domain/repositories/support_ti
 import 'package:mighty_job/localization/language_model.dart';
 import 'package:mighty_job/localization/localization_controller.dart';
 import 'package:mighty_job/util/app_constants.dart';
-import 'package:mighty_job/feature/cms_management/banner/domain/repository/banner_repository.dart';
-import 'package:mighty_job/feature/cms_management/banner/logic/banner_controller.dart';
-import 'package:mighty_job/feature/cms_management/faq/domain/repository/faq_repository.dart';
-import 'package:mighty_job/feature/cms_management/faq/logic/faq_controller.dart';
-import 'package:mighty_job/feature/cms_management/feedback/domain/repository/feedback_repository.dart';
-import 'package:mighty_job/feature/cms_management/feedback/logic/feedback_controller.dart';
 
 Future<Map<String, Map<String, String>>> init() async {
 
@@ -199,23 +189,7 @@ Future<Map<String, Map<String, String>>> init() async {
 
   Get.lazyPut(() => TransactionRepository(apiClient: Get.find()));
   Get.lazyPut(() => TransactionController(transactionRepository: Get.find()));
-
-
-
-  Get.lazyPut(() => BannerRepository(apiClient: Get.find()));
-  Get.lazyPut(() => AboutUsRepository(apiClient: Get.find()));
-  Get.lazyPut(() => ExploreRepository(apiClient: Get.find()));
-  Get.lazyPut(() => WhyChooseRepository(apiClient: Get.find()));
-  Get.lazyPut(() => FaqRepository(apiClient: Get.find()));
-  Get.lazyPut(() => FeedbackRepository(apiClient: Get.find()));
   Get.lazyPut(() => SystemSettingsRepository(apiClient: Get.find()));
-
-  Get.lazyPut(() => BannerController(bannerRepository: Get.find()));
-  Get.lazyPut(() => AboutUsController(aboutUsRepository: Get.find()));
-  Get.lazyPut(() => ExploreController(benefitRepository: Get.find()));
-  Get.lazyPut(() => WhyChooseController(whyChooseUsRepository: Get.find()));
-  Get.lazyPut(() => FaqController(faqRepository: Get.find()));
-  Get.lazyPut(() => FeedbackController(feedbackRepository: Get.find()));
   Get.lazyPut(() => SystemSettingsController(systemSettingsRepository: Get.find()));
   Get.lazyPut(() => ImagePickerController());
 
@@ -256,6 +230,9 @@ Future<Map<String, Map<String, String>>> init() async {
 
   Get.lazyPut(() => SettingRepository(apiClient: Get.find()));
   Get.lazyPut(() => SettingController(settingRepository: Get.find()));
+
+  Get.lazyPut(() => LandingRepository(apiClient: Get.find()));
+  Get.lazyPut(() => LandingPageController(landingRepository: Get.find()));
 
 
 

@@ -20,7 +20,10 @@ class CandidateExperienceItemWidget extends StatelessWidget {
     return Row(spacing: Dimensions.paddingSizeDefault, children: [
       NumberingWidget(index: index),
 
-      Expanded(child: CustomItemTextWidget(text:'${candidateExperienceItem?.status}')),
+      Expanded(child: CustomItemTextWidget(text:'${candidateExperienceItem?.experienceTitle}')),
+      Expanded(child: CustomItemTextWidget(text:'${candidateExperienceItem?.company}')),
+      Expanded(child: CustomItemTextWidget(text:'${candidateExperienceItem?.startDate}')),
+      Expanded(child: CustomItemTextWidget(text:candidateExperienceItem?.endDate??'N/A')),
 
       EditDeletePopupMenu(onDelete: (){
         Get.dialog(ConfirmationDialog(title: "candidate_experience", onTap: (){

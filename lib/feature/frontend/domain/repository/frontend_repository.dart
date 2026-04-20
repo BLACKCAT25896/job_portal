@@ -1,5 +1,4 @@
 import 'package:mighty_job/api_handle/api_client.dart';
-import 'package:mighty_job/feature/industries/domain/models/industry_body.dart';
 import 'package:mighty_job/util/app_constants.dart';
 import 'package:get/get_connect/http/src/response/response.dart';
 
@@ -9,31 +8,31 @@ class LandingRepository{
 
 
   Future<Response?> getLandingIndustriesList(int page, String search) async {
-    return await apiClient.getData("${AppConstants.frontendIndustries}?page=$page&perPage=10&search=$search");
+    return await apiClient.getData("${AppConstants.frontendIndustries}?page=$page&perPage=50&search=$search");
   }
 
 Future<Response?> getLandingCompanies(int page, String search) async {
-    return await apiClient.getData("${AppConstants.frontendCompanies}?page=$page&perPage=10&search=$search");
+    return await apiClient.getData("${AppConstants.frontendCompanies}?page=$page&perPage=50&search=$search");
 }
 
   Future<Response?> getLandingSkills(int page, String search) async {
-    return await apiClient.getData("${AppConstants.frontendSkills}?page=$page&perPage=10&search=$search");
+    return await apiClient.getData("${AppConstants.frontendSkills}?page=$page&perPage=50&search=$search");
   }
 
   Future<Response?> getLandingJobCategories(int page, String search) async {
-    return await apiClient.getData("${AppConstants.frontendJobCategories}?page=$page&perPage=10&search=$search");
+    return await apiClient.getData("${AppConstants.frontendJobCategories}?page=$page&perPage=50&search=$search");
   }
 
   Future<Response?> getLandingJobListing(int page, String search) async {
-    return await apiClient.getData("${AppConstants.frontendJobListings}?page=$page&perPage=10&search=$search");
+    return await apiClient.getData("${AppConstants.frontendJobListings}?page=$page&per_page=50&search=$search");
   }
 
   Future<Response?> getLandingPostCategories(int page, String search) async {
-    return await apiClient.getData("${AppConstants.frontendPostCategories}?page=$page&perPage=10&search=$search");
+    return await apiClient.getData("${AppConstants.frontendPostCategories}?page=$page&perPage=50&search=$search");
   }
 
   Future<Response?> getLandingPost(int page, String search) async {
-    return await apiClient.getData("${AppConstants.frontendPost}?page=$page&perPage=10&search=$search");
+    return await apiClient.getData("${AppConstants.frontendPost}?page=$page&perPage=50&search=$search");
   }
 
 

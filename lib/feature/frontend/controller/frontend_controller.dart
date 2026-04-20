@@ -33,6 +33,18 @@ class LandingPageController extends GetxController implements GetxService{
     update();
   }
 
+  IndustryItem? selectedIndustryItem;
+  void selectIndustry(IndustryItem item) {
+    selectedIndustryItem = item;
+    update();
+  }
+
+  bool isCategorySelected = false;
+  void toggleCategorySelection() {
+    isCategorySelected = !isCategorySelected;
+    update();
+  }
+
 
   ApiResponse<CompanyItem>? publicCompanyModel;
   Future<void> getLandingCompanyList(int offset, {String search = ""}) async {
@@ -64,7 +76,7 @@ class LandingPageController extends GetxController implements GetxService{
     publicJobCategoryModel = await fetchPaginatedList<JobCategoryItem>(
       offset: offset,
       currentModel: publicJobCategoryModel,
-      apiCall: () => landingRepository.getLandingSkills(offset, search),
+      apiCall: () => landingRepository.getLandingJobCategories(offset, search),
       fromJson: (json) => JobCategoryItem.fromJson(json),
       onUpdate: (value) => publicJobCategoryModel = value,
     );
@@ -77,7 +89,7 @@ class LandingPageController extends GetxController implements GetxService{
     publicJobListingModel = await fetchPaginatedList<JobListingItem>(
       offset: offset,
       currentModel: publicJobListingModel,
-      apiCall: () => landingRepository.getLandingSkills(offset, search),
+      apiCall: () => landingRepository.getLandingJobListing(offset, search),
       fromJson: (json) => JobListingItem.fromJson(json),
       onUpdate: (value) => publicJobListingModel = value,
     );
@@ -89,7 +101,7 @@ class LandingPageController extends GetxController implements GetxService{
     publicPostCategoryModel = await fetchPaginatedList<PostCategoryItem>(
       offset: offset,
       currentModel: publicPostCategoryModel,
-      apiCall: () => landingRepository.getLandingSkills(offset, search),
+      apiCall: () => landingRepository.getLandingPostCategories(offset, search),
       fromJson: (json) => PostCategoryItem.fromJson(json),
       onUpdate: (value) => publicPostCategoryModel = value,
     );
@@ -102,7 +114,7 @@ class LandingPageController extends GetxController implements GetxService{
     publicPostModel = await fetchPaginatedList<PostItem>(
       offset: offset,
       currentModel: publicPostModel,
-      apiCall: () => landingRepository.getLandingSkills(offset, search),
+      apiCall: () => landingRepository.getLandingPost(offset, search),
       fromJson: (json) => PostItem.fromJson(json),
       onUpdate: (value) => publicPostModel = value,
     );

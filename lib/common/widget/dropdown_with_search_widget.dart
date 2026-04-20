@@ -18,6 +18,7 @@ class DropdownSearch<T> extends StatelessWidget {
   final ListBuilder listWidgetBuilder;
   final TextEditingController searchController;
   final Function()? onTap;
+  final double? height;
 
   const DropdownSearch({
     super.key,
@@ -27,7 +28,7 @@ class DropdownSearch<T> extends StatelessWidget {
     this.hintText = 'Select',
     this.sectionTitle,
     this.selectedItem,
-    this.onSearch, this.onTap,
+    this.onSearch, this.onTap, this.height,
   });
 
   @override
@@ -69,19 +70,18 @@ class DropdownSearch<T> extends StatelessWidget {
           if(sectionTitle != null)
             Padding(padding: EdgeInsets.symmetric(vertical: Dimensions.paddingSizeSmall, ),
               child: Text("$sectionTitle", style: textRegular.copyWith())),
-          Padding(
-            padding: const EdgeInsets.only(bottom: 8.0),
-            child: Container(padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-              decoration: BoxDecoration(border: Border.all(width: .5, color: Theme.of(context).hintColor),
-                borderRadius: BorderRadius.circular(5)),
-              child: Row(children: [
-                  Expanded(child: Text(
-                    selectedItem != null ? itemLabel(selectedItem as T) : hintText,
-                      overflow: TextOverflow.ellipsis)),
-                  Icon(Icons.keyboard_arrow_down_rounded,
-                      size: 16, color: Theme.of(context).hintColor),
-                ],
-              ),
+          Container(height: height?? 50,
+            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+            decoration: BoxDecoration(color: Theme.of(context).cardColor,
+                border: Border.all(width: .5, color: Theme.of(context).hintColor),
+              borderRadius: BorderRadius.circular(5)),
+            child: Row(children: [
+                Expanded(child: Text(
+                  selectedItem != null ? itemLabel(selectedItem as T) : hintText,
+                    overflow: TextOverflow.ellipsis)),
+                Icon(Icons.keyboard_arrow_down_rounded,
+                    size: 16, color: Theme.of(context).hintColor),
+              ],
             ),
           ),
         ],

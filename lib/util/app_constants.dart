@@ -147,15 +147,6 @@ class AppConstants {
 
 
 
-
-  //customer
-  static const String customerLogin = '/customer-login';
-  static const String customerOtpVerify = '/customer-otp-verify';
-  static const String customerResentOtp = '/customer-otp-sent';
-  static const String customerProfile = '/customer/profile';
-  static const String customerUpdateProfile = '/customer/update';
-  static const String customerUpdateProfileAvatar = '/customer/profile-update';
-
   static const String roles = '/roles';
   static const String permissionList = '/permissions-list';
   static const String user = '/users';

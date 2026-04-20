@@ -6,7 +6,6 @@ import 'package:mighty_job/feature/post/controller/post_controller.dart';
 import 'package:mighty_job/feature/post/domain/models/post_body.dart';
 import 'package:mighty_job/feature/post/domain/models/post_model.dart';
 import 'package:mighty_job/feature/post_category/controller/post_category_controller.dart';
-import 'package:mighty_job/feature/post_category/domain/repository/post_category_repository.dart';
 import 'package:mighty_job/feature/post_category/presentation/widgets/select_post_category_widget.dart';
 import 'package:mighty_job/util/dimensions.dart';
 import 'package:mighty_job/util/styles.dart';

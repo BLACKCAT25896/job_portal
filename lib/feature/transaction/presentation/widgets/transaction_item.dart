@@ -2,6 +2,7 @@ import 'package:mighty_job/common/widget/custom_contaner.dart';
 import 'package:mighty_job/common/widget/custom_text_item_widget.dart';
 import 'package:mighty_job/common/widget/numbering_widget.dart';
 import 'package:mighty_job/feature/transaction/domain/models/transaction_model.dart';
+import 'package:mighty_job/helper/price_converter.dart';
 import 'package:mighty_job/helper/responsive_helper.dart';
 import 'package:mighty_job/util/dimensions.dart';
 import 'package:mighty_job/util/styles.dart';
@@ -19,6 +20,7 @@ class TransactionItemWidget extends StatelessWidget {
       NumberingWidget(index: index),
 
       Expanded(child: CustomTextItemWidget(text: transactionItem?.invoiceId??'')),
+      Expanded(child: CustomTextItemWidget(text: PriceConverter.convertPrice(context, transactionItem?.amount??0))),
 
     ]):
 

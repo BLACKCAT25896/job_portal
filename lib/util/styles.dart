@@ -61,18 +61,12 @@ const textHeavy = TextStyle(
 );
 
 class ThemeShadow {
-  static List<BoxShadow> getShadow() {
-    final isDark = Get.find<ThemeController>().darkTheme;
-    final baseColor = isDark ? Colors.black : Theme.of(Get.context!).hintColor;
-    return [
-      BoxShadow(color: baseColor.withValues(alpha: isDark ? 0.4 : 0.25),
-        blurRadius: 12, spreadRadius: 1,
-        offset: const Offset(0, 4)),
-
-      BoxShadow(color: Colors.white.withValues(alpha: isDark ? 0.02 : 0.6),
-        blurRadius: 6, spreadRadius: -1,
-        offset: const Offset(0, -2)),
-    ];
+  static List <BoxShadow> getShadow() {
+    List<BoxShadow> boxShadow =  [
+      BoxShadow(color: Get.find<ThemeController>().darkTheme? Colors.black26:
+    Theme.of(Get.context!).hintColor.withValues(alpha: .25),
+          blurRadius: 1,spreadRadius: 1,offset: const Offset(0,0))];
+    return boxShadow;
   }
 
   static EdgeInsetsGeometry getPadding() {

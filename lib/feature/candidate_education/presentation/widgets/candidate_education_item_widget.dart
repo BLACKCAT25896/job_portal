@@ -20,7 +20,10 @@ class CandidateEducationItemWidget extends StatelessWidget {
     return Row(spacing: Dimensions.paddingSizeDefault, children: [
       NumberingWidget(index: index),
 
-      Expanded(child: CustomItemTextWidget(text:'${candidateEducationItem?.status}')),
+      Expanded(child: CustomItemTextWidget(text:'${candidateEducationItem?.degreeTitle}')),
+      Expanded(child: CustomItemTextWidget(text:'${candidateEducationItem?.institute}')),
+      Expanded(child: CustomItemTextWidget(text:'${candidateEducationItem?.result}')),
+      Expanded(child: CustomItemTextWidget(text:'${candidateEducationItem?.year}')),
 
       EditDeletePopupMenu(onDelete: (){
         Get.dialog(ConfirmationDialog(title: "candidate_education", onTap: (){

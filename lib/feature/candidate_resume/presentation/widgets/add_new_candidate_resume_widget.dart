@@ -75,7 +75,7 @@ class _AddNewCandidateResumeWidgetState extends State<AddNewCandidateResumeWidge
 
             Padding(padding: const EdgeInsets.symmetric(vertical: Dimensions.paddingSizeDefault),
                 child: CustomButton(onTap: (){
-                  String? candidateId = Get.find<CandidateController>().selectedCandidateItem?.id;
+                  int? candidateId = Get.find<CandidateController>().selectedCandidateItem?.id;
                   String title = titleController.text.trim();
                   bool isCurrentlyWorking = candidateResumeController.isCurrentlyWorking;
                   String company = companyController.text.trim();
@@ -98,7 +98,7 @@ class _AddNewCandidateResumeWidgetState extends State<AddNewCandidateResumeWidge
                   }
                   else{
                     CandidateResumeBody body = CandidateResumeBody(
-                      candidateId: int.parse(candidateId),
+                      candidateId: (candidateId),
                       sMethod: update? "put" : "post"
                     );
                     if(update){

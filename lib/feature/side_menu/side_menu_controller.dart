@@ -1,7 +1,5 @@
 
-import 'package:mighty_job/common/layout/custom_dialog_widget.dart';
 import 'package:mighty_job/feature/cms_management/cms_settings/controller/system_settngs_controller.dart';
-import 'package:mighty_job/feature/support_ticket/widgets/add_ticket_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:mighty_job/common/widget/side_menu/src/side_menu_item_widget.dart';
@@ -90,60 +88,121 @@ class SideBarController extends GetxController implements GetxService{
       icon: Images.dashboardSvgIcon,onTap: () => Get.toNamed(RouteHelper.getDashboardRoute()),),
 
 
+    // if(profileController.hasPermission("dashboard"))
+      SideMenuNestedExpansionItem(title: "industry".tr, keyValue: "industry", parent: true,
+        icon: Images.dashboardSvgIcon,
+        onTap: () => Get.toNamed(RouteHelper.getIndustryRoute()),),
 
-    SideMenuNestedExpansionItem(sectionTitle: "product_management".tr,
-      title: "category_setup".tr, keyValue: "category_setup",parent: true,
-      icon: Images.manageOrder, children: [
-
-        SideMenuItemWidget(title: 'category'.tr, keyValue: 'category',
-            onTap: () => Get.toNamed(RouteHelper.getCategoryRoute())),
-
-      SideMenuItemWidget(title: 'add_new_category'.tr, keyValue: 'add_new_category',
-          onTap: () => Get.toNamed(RouteHelper.getAddNewCategoryRoute())),
-
-    ],
-    ),
-
-    SideMenuNestedExpansionItem(
-      title: "brand_setup".tr, keyValue: "brand_setup",parent: true,
-      icon: Images.manageOrder, children: [
-
-      SideMenuItemWidget(title: 'brand'.tr, keyValue: 'brand',
-          onTap: () => Get.toNamed(RouteHelper.getBrandRoute())),
-
-      SideMenuItemWidget(title: 'add_new_brand'.tr, keyValue: 'add_new_brand',
-          onTap: () => Get.toNamed(RouteHelper.getAddNewBrandRoute())),
-
-    ],
-    ),
+    // if(profileController.hasPermission("dashboard"))
+    SideMenuNestedExpansionItem(title: "company_size".tr, keyValue: "company_size", parent: true,
+      icon: Images.dashboardSvgIcon,
+      onTap: () => Get.toNamed(RouteHelper.getCompanySizeRoute()),),
 
 
+    // if(profileController.hasPermission("dashboard"))
+    SideMenuNestedExpansionItem(title: "ownership_type".tr, keyValue: "ownership_type", parent: true,
+      icon: Images.dashboardSvgIcon,
+      onTap: () => Get.toNamed(RouteHelper.getOwnershipTypeRoute()),),
+
+
+    // if(profileController.hasPermission("dashboard"))
+    SideMenuNestedExpansionItem(title: "company".tr, keyValue: "company", parent: true,
+      icon: Images.dashboardSvgIcon,
+      onTap: () => Get.toNamed(RouteHelper.getCompanyRoute()),),
+
+
+    // if(profileController.hasPermission("dashboard"))
+    SideMenuNestedExpansionItem(title: "career_level".tr, keyValue: "career_level", parent: true,
+      icon: Images.dashboardSvgIcon,
+      onTap: () => Get.toNamed(RouteHelper.getCareerLevelRoute()),),
+
+
+    // if(profileController.hasPermission("dashboard"))
+    SideMenuNestedExpansionItem(title: "salary_currency".tr, keyValue: "salary_currency", parent: true,
+      icon: Images.dashboardSvgIcon,
+      onTap: () => Get.toNamed(RouteHelper.getSalaryCurrencyRoute()),),
+
+
+    // if(profileController.hasPermission("dashboard"))
+    SideMenuNestedExpansionItem(title: "salary_period".tr, keyValue: "salary_period", parent: true,
+      icon: Images.dashboardSvgIcon,
+      onTap: () => Get.toNamed(RouteHelper.getSalaryPeriodRoute()),),
+
+    // if(profileController.hasPermission("dashboard"))
+    SideMenuNestedExpansionItem(title: "skill".tr, keyValue: "skill", parent: true,
+      icon: Images.dashboardSvgIcon,
+      onTap: () => Get.toNamed(RouteHelper.getSkillRoute()),),
+
+    // if(profileController.hasPermission("dashboard"))
+    SideMenuNestedExpansionItem(title: "job_category".tr, keyValue: "job_category", parent: true,
+      icon: Images.dashboardSvgIcon,
+      onTap: () => Get.toNamed(RouteHelper.getJobCategoryRoute()),),
+
+    // if(profileController.hasPermission("dashboard"))
+    SideMenuNestedExpansionItem(title: "job_listing".tr, keyValue: "job_listing", parent: true,
+      icon: Images.dashboardSvgIcon,
+      onTap: () => Get.toNamed(RouteHelper.getJobListingRoute()),),
+
+    // if(profileController.hasPermission("dashboard"))
+    SideMenuNestedExpansionItem(title: "job_stage".tr, keyValue: "job_stage", parent: true,
+      icon: Images.dashboardSvgIcon,
+      onTap: () => Get.toNamed(RouteHelper.getJobStageRoute()),),
+
+
+    // if(profileController.hasPermission("dashboard"))
+    SideMenuNestedExpansionItem(title: "job_application".tr, keyValue: "job_application", parent: true,
+      icon: Images.dashboardSvgIcon,
+      onTap: () => Get.toNamed(RouteHelper.getJobApplicationRoute()),),
+
+
+    // if(profileController.hasPermission("dashboard"))
+    SideMenuNestedExpansionItem(title: "candidate".tr, keyValue: "candidate", parent: true,
+      icon: Images.dashboardSvgIcon,
+      onTap: () => Get.toNamed(RouteHelper.getCandidateRoute()),),
+
+
+    // if(profileController.hasPermission("dashboard"))
+    SideMenuNestedExpansionItem(title: "candidate_education".tr, keyValue: "candidate_education", parent: true,
+      icon: Images.dashboardSvgIcon,
+      onTap: () => Get.toNamed(RouteHelper.getCandidateEducationRoute()),),
+
+
+    // if(profileController.hasPermission("dashboard"))
+    SideMenuNestedExpansionItem(title: "candidate_experience".tr, keyValue: "candidate_experience", parent: true,
+      icon: Images.dashboardSvgIcon,
+      onTap: () => Get.toNamed(RouteHelper.getCandidateExperienceRoute()),),
+
+
+    // if(profileController.hasPermission("dashboard"))
+    SideMenuNestedExpansionItem(title: "candidate_resume".tr, keyValue: "candidate_resume", parent: true,
+      icon: Images.dashboardSvgIcon,
+      onTap: () => Get.toNamed(RouteHelper.getCandidateResumeRoute()),),
+
+    // if(profileController.hasPermission("dashboard"))
+    SideMenuNestedExpansionItem(title: "inquiry".tr, keyValue: "inquiry", parent: true,
+      icon: Images.dashboardSvgIcon,
+      onTap: () => Get.toNamed(RouteHelper.getInquiryRoute()),),
+
+    // if(profileController.hasPermission("dashboard"))
+    SideMenuNestedExpansionItem(title: "post_category".tr, keyValue: "post_category", parent: true,
+      icon: Images.dashboardSvgIcon,
+      onTap: () => Get.toNamed(RouteHelper.getPostCategoryRoute()),),
+
+    // if(profileController.hasPermission("dashboard"))
+    SideMenuNestedExpansionItem(title: "post".tr, keyValue: "post", parent: true,
+      icon: Images.dashboardSvgIcon,
+      onTap: () => Get.toNamed(RouteHelper.getPostRoute()),),
+
+    // if(profileController.hasPermission("dashboard"))
+    SideMenuNestedExpansionItem(title: "transaction".tr, keyValue: "transaction", parent: true,
+      icon: Images.dashboardSvgIcon,
+      onTap: () => Get.toNamed(RouteHelper.getTransactionRoute()),),
 
 
 
     if(profileController.hasPermission("banners_index"))
     SideMenuNestedExpansionItem(title: "website_setup".tr, keyValue: "website_setup",
-      parent: true, icon: Images.websiteSetup,
-      children: [
-        if(profileController.hasPermission("banners_index"))
-        SideMenuItemWidget(title: 'banner'.tr, keyValue: 'banner',
-          onTap: () => Get.toNamed(RouteHelper.getBannerRoute())),
-
-        if(profileController.hasPermission("about_us_index"))
-        SideMenuItemWidget(title: 'about_us'.tr, keyValue: 'about_us',
-          onTap: () => Get.toNamed(RouteHelper.getAboutUsRoute())),
-
-        if(profileController.hasPermission("why_choose_us_index"))
-        SideMenuItemWidget(title: 'why_choose_us'.tr, keyValue: 'why_choose_us',
-          onTap: () => Get.toNamed(RouteHelper.getWhyChooseUsRoute())),
-
-        if(profileController.hasPermission("faqs_index"))
-        SideMenuItemWidget(title: 'faq'.tr, keyValue: 'faq',
-          onTap: () => Get.toNamed(RouteHelper.getFaqRoute())),
-
-        if(profileController.hasPermission("feedbacks_index"))
-        SideMenuItemWidget(title: 'feedback'.tr, keyValue: 'feedback',
-          onTap: () => Get.toNamed(RouteHelper.getFeedbackRoute())),
+      parent: true, icon: Images.websiteSetup, children: [
 
         if(profileController.hasPermission("banners_index"))
         SideMenuItemWidget(title: 'website_settings'.tr, keyValue: 'website_settings',
@@ -155,24 +214,24 @@ class SideBarController extends GetxController implements GetxService{
       ],
     ),
 
-    SideMenuNestedExpansionItem(title: "message".tr, keyValue: "message",
-      parent: true, icon: Images.message,
-      children: [
-        SideMenuItemWidget(title: 'new_message'.tr, keyValue: 'new_message',
-          onTap: () => Get.dialog(CustomDialogWidget(title: "message".tr,
-              child: AddTicketWidget()))),
-
-        SideMenuItemWidget(title: 'inbox'.tr, keyValue: 'inbox',
-            onTap: () => Get.toNamed(RouteHelper.getSupportTicketRoute())),
-
-        SideMenuItemWidget(title: 'ticket_category'.tr, keyValue: 'ticket_category',
-            onTap: () => Get.toNamed(RouteHelper.getSupportTicketCategoryRoute())),
-
-
-
-
-      ],
-    ),
+    // SideMenuNestedExpansionItem(title: "message".tr, keyValue: "message",
+    //   parent: true, icon: Images.message,
+    //   children: [
+    //     SideMenuItemWidget(title: 'new_message'.tr, keyValue: 'new_message',
+    //       onTap: () => Get.dialog(CustomDialogWidget(title: "message".tr,
+    //           child: AddTicketWidget()))),
+    //
+    //     SideMenuItemWidget(title: 'inbox'.tr, keyValue: 'inbox',
+    //         onTap: () => Get.toNamed(RouteHelper.getSupportTicketRoute())),
+    //
+    //     SideMenuItemWidget(title: 'ticket_category'.tr, keyValue: 'ticket_category',
+    //         onTap: () => Get.toNamed(RouteHelper.getSupportTicketCategoryRoute())),
+    //
+    //
+    //
+    //
+    //   ],
+    // ),
 
 
     if(profileController.hasPermission("user_index"))
@@ -185,15 +244,7 @@ class SideBarController extends GetxController implements GetxService{
       ],
     ),
 
-    if(profileController.hasPermission("user_index"))
-      SideMenuNestedExpansionItem(title: "customer".tr, keyValue: "customer",
-        parent: true, icon: Images.user, children: [
-          SideMenuItemWidget(title: 'customer'.tr, keyValue: 'customer',
-              onTap: () => Get.toNamed(RouteHelper.getCustomerRoute())),
 
-
-        ],
-      ),
 
     if(profileController.hasPermission("role_index"))
     SideMenuNestedExpansionItem(title: "roles_and_permissions".tr, keyValue: "roles_and_permissions",
@@ -207,30 +258,7 @@ class SideBarController extends GetxController implements GetxService{
       ],
     ),
 
-    if(profileController.hasPermission("settings_index"))
-    SideMenuNestedExpansionItem(title: "tax_settings".tr, keyValue: "tax_settings",
-      parent: true, icon: Images.taxSetting, children: [
-        SideMenuItemWidget(title: 'tax_settings'.tr, keyValue: 'tax_settings',
-          onTap: () => Get.toNamed(RouteHelper.getTaxSettingRoute())),
 
-      ]),
-
-
-
-    if(profileController.hasPermission("settings_index"))
-    SideMenuNestedExpansionItem(title: "whatsapp_setting".tr, keyValue: "whatsapp_setting",
-      parent: true, icon: Images.whatsappSvgIcon, children: [
-        SideMenuItemWidget(title: 'whatsapp_setting'.tr, keyValue: 'whatsapp_setting',
-          onTap: ()=> Get.toNamed(RouteHelper.getWhatsappSettingRoute())),
-      ],
-    ),
-
-    if(profileController.hasPermission("settings_index"))
-    SideMenuNestedExpansionItem(title: "facebook_setting".tr, keyValue: "facebook_setting",
-      parent: true, icon: Images.facebook, children: [
-        SideMenuItemWidget(title: 'facebook_setting'.tr, keyValue: 'facebook_setting',
-          onTap: () => Get.toNamed(RouteHelper.getFacebookSettingRoute())),
-      ],),
 
 
     if(profileController.hasPermission("settings_index"))

@@ -24,9 +24,9 @@ class SystemSettingsController extends GetxController implements GetxService{
 
 
 
-  Color primaryColor = const Color(0xFF11152B);
-  Color secondaryColor = const Color(0xFF11152B);
-  Color primaryContainerColor = const Color(0xFF11152B);
+  Color primaryColor = const Color(0xFF224169);
+  Color secondaryColor = const Color(0xFF224169);
+  Color primaryContainerColor = const Color(0xFF224169);
   Color textColor = const Color(0xFF11152B);
   Color sidebarColor = const Color(0xFF11152B);
   Color sidebarTextColor = const Color(0xFFFFFFFF);

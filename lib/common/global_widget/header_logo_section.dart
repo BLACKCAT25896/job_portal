@@ -14,7 +14,7 @@ class HeaderLogoSection extends StatelessWidget {
     return GetBuilder<SystemSettingsController>(
       initState: (value){
         if(Get.find<SystemSettingsController>().imageSettingModel == null){
-          Get.find<SystemSettingsController>().getImageSetting();
+         // Get.find<SystemSettingsController>().getImageSetting();
         }
       },
       builder: (systemSettingsController) {
@@ -44,7 +44,7 @@ class FooterLogoSection extends StatelessWidget {
     return GetBuilder<SystemSettingsController>(
         initState: (value){
           if(Get.find<SystemSettingsController>().imageSettingModel == null){
-            Get.find<SystemSettingsController>().getImageSetting();
+            //Get.find<SystemSettingsController>().getImageSetting();
           }
         },
         builder: (systemSettingsController) {
