@@ -13,7 +13,7 @@ class AppConstants {
   static const String version = '1.0.0'; //Flutter version 3.24.3
   static const int versionCode = 1;
   static const String whatsUpdate = "Fixing Price related problems for sales and purchase";
-  static const String appName = 'Mighty mighty_job';
+  static const String appName = 'Mighty Job';
   static const bool demo = true;
 
   //local

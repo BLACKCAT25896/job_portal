@@ -46,9 +46,6 @@ class WebAppBar extends StatelessWidget implements PreferredSizeWidget {
 
                 Container(width: 1, height: 40, color: Theme.of(context).hintColor),
 
-                CustomContainer(showShadow: false,
-                    color: Theme.of(context).hintColor.withValues(alpha: .125), borderRadius: 3,
-                    child: CustomImage(isLocalAsset: true,width: 16,  image: Images.shoppingCart)),
 
                 CustomContainer(showShadow: false,
                     onTap: ()=> Get.toNamed(RouteHelper.getSupportTicketRoute()),

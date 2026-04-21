@@ -98,39 +98,8 @@ class _CustomSearchState extends State<CustomSearch> {
                       size: 20,
                       color: Theme.of(context).colorScheme.error,
                     ),
-                  )
-                      : const SizedBox(),
+                  ) : const SizedBox(),
                 ),
-              ),
-            ),
-          ),
-
-          /// Search button
-          InkWell(
-            onTap: widget.onSearch,
-            child: Container(
-              height: 35,
-              padding: const EdgeInsets.symmetric(horizontal: 10),
-              margin: const EdgeInsets.all(3),
-              decoration: BoxDecoration(
-                color: systemPrimaryColor(),
-                borderRadius: BorderRadius.circular(5),
-              ),
-              child: Row(
-                spacing: Dimensions.paddingSizeSmall,
-                children: [
-                  SizedBox(
-                    height: 16,
-                    child: Image.asset(Images.search, color: Colors.white),
-                  ),
-                  Text(
-                    "search".tr,
-                    style: textRegular.copyWith(
-                      color: Colors.white,
-                      fontSize: Dimensions.fontSizeSmall,
-                    ),
-                  ),
-                ],
               ),
             ),
           ),

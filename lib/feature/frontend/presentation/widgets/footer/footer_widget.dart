@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:mighty_job/feature/frontend/presentation/widgets/footer/copyright_widget.dart';
 import 'package:mighty_job/feature/frontend/presentation/widgets/footer/footer_left_portion.dart';
 import 'package:mighty_job/feature/frontend/presentation/widgets/footer/footer_navigation_link_widget.dart';
+import 'package:mighty_job/feature/frontend/presentation/widgets/footer/job_recruiter.dart';
+import 'package:mighty_job/feature/frontend/presentation/widgets/footer/job_seekers.dart';
 import 'package:mighty_job/feature/frontend/presentation/widgets/footer/news_letter_widget.dart';
 import 'package:mighty_job/helper/responsive_helper.dart';
 import 'package:mighty_job/util/dimensions.dart';
@@ -20,6 +22,8 @@ class FooterWidget extends StatelessWidget {
           child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
             Expanded(child: FooterLeftPortion()),
             Expanded(child: FooterNavigationLinkWidget()),
+            Expanded(child: JobSeekers()),
+            Expanded(child: JobRecruiter()),
             Expanded(child: NewsLetterWidget())
 
           ])))),
@@ -36,6 +40,8 @@ class FooterWidget extends StatelessWidget {
             spacing: Dimensions.paddingSizeOverLarge, children: [
               FooterLeftPortion(),
               FooterNavigationLinkWidget(),
+              JobSeekers(),
+              JobRecruiter(),
               NewsLetterWidget()
 
         ])),

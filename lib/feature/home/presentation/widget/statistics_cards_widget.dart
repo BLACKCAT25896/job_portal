@@ -1,5 +1,4 @@
 import 'package:mighty_job/common/widget/responsive_grid_widget.dart';
-import 'package:mighty_job/feature/home/presentation/widget/order_status_wise_count_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:mighty_job/common/widget/custom_contaner.dart';
@@ -51,8 +50,6 @@ class StatisticsCardsWidget extends StatelessWidget {
 
 
               ]),
-
-                OrderStatusWiseCount(),
               ],
             ),
           ),

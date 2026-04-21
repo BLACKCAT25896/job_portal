@@ -2,31 +2,28 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:mighty_job/feature/frontend/controller/frontend_controller.dart';
 import 'package:mighty_job/helper/responsive_helper.dart';
+import 'package:mighty_job/util/app_constants.dart';
 import 'package:mighty_job/util/dimensions.dart';
 import 'package:mighty_job/util/styles.dart';
 
-class FooterNavigationLinkWidget extends StatelessWidget {
-  const FooterNavigationLinkWidget({super.key});
+class JobSeekers extends StatelessWidget {
+  const JobSeekers({super.key});
 
   @override
   Widget build(BuildContext context) {
     final quickLinks = [
 
       {
-        'label': 'about_us'.tr,
-        'type': "about",
+        'label': 'My ${AppConstants.appName} Panel'.tr,
+        'type': "my_${AppConstants.appName}_panel",
       },
       {
-        'label': 'privacy_policy'.tr,
-        'type': "privacy_policy",
+        'label': 'list_of_feature'.tr,
+        'type': "list_of_feature",
       },
       {
-        'label': 'terms_and_condition'.tr,
-        'type': "terms_and_condition",
-      },
-      {
-        'label': 'contact_us'.tr,
-        'type': "contact"
+        'label': 'FAQ'.tr,
+        'type': "faq"
       },
 
     ];
@@ -41,7 +38,7 @@ class FooterNavigationLinkWidget extends StatelessWidget {
         padding: EdgeInsets.symmetric(horizontal: ResponsiveHelper.isDesktop(context)? 0 : Dimensions.paddingSizeDefault),
         child: Column(spacing: Dimensions.paddingSizeDefault,
           crossAxisAlignment: CrossAxisAlignment.start, children: [
-            Text("about_us".tr, style: textMedium.copyWith(fontSize: Dimensions.fontSizeDefault),),
+            Text("job_seekers".tr, style: textMedium.copyWith(fontSize: Dimensions.fontSizeDefault),),
             Column(spacing: Dimensions.paddingSizeDefault,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: quickLinks.map((item) {

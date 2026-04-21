@@ -35,6 +35,7 @@ class JobListingItem {
   String? stateName;
   String? cityName;
   Company? company;
+  Category? category;
 
   JobListingItem(
       {this.id,
@@ -69,6 +70,7 @@ class JobListingItem {
         this.stateName,
         this.cityName,
         this.company,
+        this.category
       });
 
   JobListingItem.fromJson(Map<String, dynamic> json) {
@@ -104,6 +106,7 @@ class JobListingItem {
     stateName = json['state_name'];
     cityName = json['city_name'];
     company = json['company'] != null ? Company.fromJson(json['company']) : null;
+    category = json['category'] != null ? Category.fromJson(json['category']) : null;
   }
 
   Map<String, dynamic> toJson() {
@@ -141,6 +144,9 @@ class JobListingItem {
     data['city_name'] = cityName;
     if (company != null) {
       data['company'] = company!.toJson();
+    }
+    if (category != null) {
+      data['category'] = category!.toJson();
     }
     return data;
   }
@@ -191,4 +197,35 @@ class Company {
     return data;
   }
 }
+
+class Category {
+  int? id;
+  String? name;
+  String? description;
+  String? slug;
+
+  Category(
+      {this.id,
+        this.name,
+        this.description,
+        this.slug,
+       });
+
+  Category.fromJson(Map<String, dynamic> json) {
+    id = json['id'];
+    name = json['name'];
+    description = json['description'];
+    slug = json['slug'];
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['id'] = id;
+    data['name'] = name;
+    data['description'] = description;
+    data['slug'] = slug;
+    return data;
+  }
+}
+
 

@@ -6,8 +6,8 @@ import 'package:mighty_job/feature/frontend/controller/frontend_controller.dart'
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:mighty_job/feature/frontend/presentation/widgets/category_or_industry_selection_widget.dart';
+import 'package:mighty_job/feature/frontend/presentation/widgets/industry/public_industry_iten_widget.dart';
 import 'package:mighty_job/util/dimensions.dart';
-import 'package:mighty_job/util/styles.dart';
 
 class PublicIndustryListWidget extends StatefulWidget {
   final ScrollController scrollController;
@@ -34,6 +34,7 @@ class _PublicIndustryListWidgetState extends State<PublicIndustryListWidget> {
 
           return data != null? (data.data != null && data.data!.isNotEmpty)?
           Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            if(!widget.fromFilter)
             CategoryOrIndustrySelectionWidget(),
             PaginatedListWidget(landing: true,limit: 50,
               offset: data.currentPage??1,
@@ -51,14 +52,7 @@ class _PublicIndustryListWidgetState extends State<PublicIndustryListWidget> {
                   gridDelegate: SliverSimpleGridDelegateWithMaxCrossAxisExtent(maxCrossAxisExtent: 300),
                   itemBuilder: (_, index){
                     final item = data.data?[index];
-                    return CustomContainer(borderRadius: 5, showShadow: false,
-                        child: Row(spacing: Dimensions.paddingSizeExtraSmall,
-                          children: [
-                            Icon(Icons.arrow_forward_ios_rounded, size: 12,
-                              color: Theme.of(context).hintColor,),
-                            Expanded(child: Text(item?.name??'', style: textRegular)),
-                          ],
-                        ));
+                    return PublicIndustryItemWidget(index: index, item: item);
                   }),
             ),
           ],

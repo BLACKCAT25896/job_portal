@@ -7,6 +7,7 @@ import 'package:mighty_job/feature/frontend/presentation/widgets/industry/select
 import 'package:mighty_job/feature/frontend/presentation/widgets/job_search_header_widget.dart';
 import 'package:mighty_job/helper/app_color_helper.dart';
 import 'package:mighty_job/util/dimensions.dart';
+import 'package:mighty_job/util/images.dart';
 import 'package:mighty_job/util/styles.dart';
 import 'package:get/get.dart';
 
@@ -15,31 +16,38 @@ class HeroSectionWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: SizedBox(width: Dimensions.webMaxWidth,
-        child: Column(crossAxisAlignment: CrossAxisAlignment.start,
-            spacing: Dimensions.paddingSizeDefault, children: [
-          Text("find_the_right_job".tr,
-              style: landingTextStyle(context).copyWith(fontSize: Dimensions.fontSizeHeading)),
-          ResponsiveMasonryGrid(children: [
-            CountingItemWidget(title: "live_jobs".tr, count: 100),
-            CountingItemWidget(title: "vacancies".tr, count: 100),
-            CountingItemWidget(title: "companies".tr, count: 100),
-            CountingItemWidget(title: "new_jobs".tr, count: 100),
-          ]),
-          CustomContainer(color: systemPrimaryColor(),
-            showShadow: false,
-            child: Row(spacing: Dimensions.paddingSizeDefault, children: [
-              Expanded(child: JobSearchHeaderWidget()),
-              Expanded(child: SelectPublicIndustryWidget()),
-              SizedBox(width: 120, child: CustomButton(height: 45,
-                buttonColor: Theme.of(context).primaryColor,
-                  onTap: (){}, text: "search".tr))
+    return Stack(children: [
+      CustomImage(image: Images.heroBg, isLocalAsset: true,),
+        Center(child: SizedBox(width: Dimensions.webMaxWidth,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(vertical: 50),
+              child: Column(crossAxisAlignment: CrossAxisAlignment.start,
+                  spacing: Dimensions.paddingSizeDefault, children: [
+                Text("find_the_right_job".tr,
+                    style: landingTextStyle(context).copyWith(fontSize: Dimensions.fontSizeHeading)),
+                ResponsiveMasonryGrid(children: [
+                  CountingItemWidget(title: "live_jobs".tr, count: 100),
+                  CountingItemWidget(title: "vacancies".tr, count: 100),
+                  CountingItemWidget(title: "companies".tr, count: 100),
+                  CountingItemWidget(title: "new_jobs".tr, count: 100),
+                ]),
+                CustomContainer(color: systemPrimaryColor(),
+                  showShadow: false, horizontalPadding: Dimensions.paddingSizeLarge,
+                  verticalPadding: Dimensions.paddingSizeLarge,
+                  child: Row(spacing: Dimensions.paddingSizeDefault, children: [
+                    Expanded(child: JobSearchHeaderWidget()),
+                    Expanded(child: SelectPublicIndustryWidget()),
+                    SizedBox(width: 120, child: CustomButton(height: 45,
+                      buttonColor: Theme.of(context).primaryColor,
+                        onTap: (){}, text: "search".tr))
 
-            ]),
+                  ]),
+                ),
+              ]),
+            ),
           ),
-        ]),
-      ),
+        ),
+      ],
     );
   }
 }

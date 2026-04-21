@@ -34,7 +34,7 @@ class _PublicPostCategoryListWidgetState extends State<PublicPostCategoryListWid
 
             return data != null? (data.data != null && data.data!.isNotEmpty)?
             Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-              CategoryOrIndustrySelectionWidget(),
+              Text("post_category".tr, style: textBold.copyWith(fontSize: Dimensions.fontSizeExtraLarge),),
                 PaginatedListWidget(landing: true,
                   offset: data.currentPage??1,
                   scrollController: widget.scrollController,

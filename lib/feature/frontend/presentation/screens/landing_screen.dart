@@ -9,6 +9,7 @@ import 'package:mighty_job/feature/frontend/presentation/widgets/job/public_job_
 import 'package:mighty_job/feature/frontend/presentation/widgets/job/public_job_listing_list_widget.dart';
 import 'package:mighty_job/feature/frontend/presentation/widgets/post/public_post_category_list_widget.dart';
 import 'package:mighty_job/feature/frontend/presentation/widgets/post/public_post_list_widget.dart';
+import 'package:mighty_job/util/dimensions.dart';
 
 class LandingScreen extends StatefulWidget {
   const LandingScreen({super.key});
@@ -25,7 +26,7 @@ class _LandingScreenState extends State<LandingScreen> {
 
     return BaseLayout(scrollController: scrollController,
       child: GetBuilder<LandingPageController>(builder: (controller) {
-        return Column(spacing: 50, children: [
+        return Column(spacing: 20, children: [
           HeroSectionWidget(),
 
           if(controller.isCategorySelected)...[

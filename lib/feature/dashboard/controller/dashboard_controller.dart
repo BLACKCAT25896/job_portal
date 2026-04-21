@@ -27,8 +27,7 @@ class DashboardController extends GetxController implements GetxService{
   final List<NavigationModel> item = [
     NavigationModel(name: 'home', activeIcon: Images.home, inactiveIcon: Images.home,
         screen: const HomeScreen()),
-    NavigationModel(name: 'pos', activeIcon: Images.posIcon,
-        inactiveIcon: Images.posIcon, screen: const SizedBox()),
+
     NavigationModel(name: 'product', activeIcon: Images.product,
         inactiveIcon: Images.product, screen: const SizedBox()),
     NavigationModel(name: 'more', activeIcon: Images.more,

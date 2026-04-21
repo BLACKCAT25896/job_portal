@@ -33,7 +33,7 @@ class _BaseLayoutState extends State<BaseLayout> {
     return Scaffold(
       body: Listener(onPointerSignal: _onPointerScroll,
         child: Stack(children: [
-          Padding(padding: const EdgeInsets.only(top: 150),
+          Padding(padding: const EdgeInsets.only(top: 100),
             child: SingleChildScrollView(
               controller: widget.scrollController,
               physics: const NeverScrollableScrollPhysics(),
@@ -45,7 +45,7 @@ class _BaseLayoutState extends State<BaseLayout> {
               ),
             ),
           ),
-          SizedBox(height: 170, width: double.infinity,
+          SizedBox(height: 150, width: double.infinity,
             child: widget.appbar ?? const LandingPageAppBar(),),
         ],
         ),

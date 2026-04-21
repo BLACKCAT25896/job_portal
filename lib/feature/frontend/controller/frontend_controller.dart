@@ -1,4 +1,5 @@
 
+import 'package:flutter/material.dart';
 import 'package:mighty_job/api_handle/api_checker.dart';
 import 'package:mighty_job/api_handle/global_api_response_model.dart';
 import 'package:mighty_job/common/global_widget/fetch_paginated_list.dart';
@@ -162,5 +163,41 @@ class LandingPageController extends GetxController implements GetxService{
     isLoading = false;
     update();
   }
+
+  double salaryMin = 0;
+  double salaryMax = 100;
+
+  double ageMin = 0;
+  double ageMax = 100;
+
+  double experienceMin = 0;
+  double experienceMax = 50;
+
+  RangeValues salaryRange = RangeValues(0, 500000);
+  RangeValues ageRange = RangeValues(20, 50);
+  RangeValues experienceRange = RangeValues(0, 50);
+
+  void initRanges() {
+    salaryRange = RangeValues(salaryMin, salaryMax);
+    ageRange = RangeValues(ageMin, ageMax);
+    experienceRange = RangeValues(experienceMin, experienceMax);
+  }
+  void updateSalaryRange(RangeValues values) {
+    salaryRange = values;
+    update();
+  }
+
+  void updateAgeRange(RangeValues values) {
+    ageRange = values;
+    update();
+  }
+
+  void updateExperienceRange(RangeValues values) {
+    experienceRange = values;
+    update();
+  }
+
+
+
 
 }

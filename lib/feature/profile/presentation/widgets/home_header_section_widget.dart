@@ -18,17 +18,6 @@ class HomeHeaderSectionWidget extends StatelessWidget {
       child: Row(spacing: Dimensions.paddingSizeSmall, children: [
 
 
-        CustomContainer(verticalPadding: 5, borderRadius: 5, showShadow: false,
-            color: Theme.of(context).cardColor.withValues(alpha: .35),
-            child: Row(spacing: Dimensions.paddingSizeSmall,
-              children: [
-                CustomImage(image: Images.order, height: width,width: width,
-                    svgColor: Colors.white,
-                    isLocalAsset: true, fit: BoxFit.contain),
-                Text("order".tr, style: textRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Colors.white))
-              ],
-            )),
-
 
         CustomContainer(verticalPadding: 5, borderRadius: 5, showShadow: false,
             onTap: ()=> Get.toNamed(RouteHelper.getSupportTicketRoute()),

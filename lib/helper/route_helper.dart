@@ -16,6 +16,8 @@ import 'package:mighty_job/feature/dashboard/views/dashboard_screen.dart';
 import 'package:mighty_job/feature/degree_level/presentation/screens/degree_level_screen.dart';
 import 'package:mighty_job/feature/favorite_company/presentation/screens/favorite_company_screen.dart';
 import 'package:mighty_job/feature/frontend/policy_enum.dart';
+import 'package:mighty_job/feature/frontend/presentation/screens/category_wise_job_list_widget.dart';
+import 'package:mighty_job/feature/frontend/presentation/screens/job_details_screen.dart';
 import 'package:mighty_job/feature/frontend/presentation/screens/landing_screen.dart';
 import 'package:mighty_job/feature/frontend/presentation/screens/policy_screen.dart';
 import 'package:mighty_job/feature/industries/presentation/screens/industry_screen.dart';
@@ -211,6 +213,12 @@ class RouteHelper {
   static String getPolicyRoute(PolicyEnum type) => '/policy/${toSeoPath(type)}';
 
 
+  static const String categoryWiseJob = '/category-wise-job';
+  static String getCategoryWiseJobRoute({required String slug, required String type}) => "$categoryWiseJob?type=$type&slug=$slug";
+
+  static const String jobDetails = '/job-detail';
+  static String getJobDetailRoute(String slug) => "$jobDetails?id=$slug";
+
 
 
   static List<GetPage> routes = [
@@ -270,6 +278,13 @@ class RouteHelper {
     GetPage(name: supportTicket, page: ()=> SupportTicketScreen()),
     GetPage(name: newTicket, page: ()=> AddTicketScreen()),
     GetPage(name: ticketDetail, page: ()=> SupportConversationScreen(ticketId: Get.parameters['id']??"0")),
+
+    GetPage(name: categoryWiseJob, page: ()=> CategoryOrIndustryWiseJobListWidget(
+        type: Get.parameters['type']??'',
+        slug: Get.parameters['slug']??"")),
+
+    GetPage(name: jobDetails, page: ()=> JobDetailsScreen(slug: Get.parameters['slug']??"")),
+
 
     GetPage(name: policy, page: () {
       final typeParam = Get.parameters['type'];
