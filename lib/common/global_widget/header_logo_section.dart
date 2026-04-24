@@ -14,7 +14,7 @@ class HeaderLogoSection extends StatelessWidget {
     return GetBuilder<SystemSettingsController>(
       initState: (value){
         if(Get.find<SystemSettingsController>().imageSettingModel == null){
-         // Get.find<SystemSettingsController>().getImageSetting();
+         Get.find<SystemSettingsController>().getLandingImageSetting();
         }
       },
       builder: (systemSettingsController) {
@@ -23,13 +23,11 @@ class HeaderLogoSection extends StatelessWidget {
         String? lightLogo =  imageSettingModel?.data?.headerLogoLightTheme;
         String? darkLogo =  imageSettingModel?.data?.headerLogoDarkTheme;
         String ? logoToShow = Get.isDarkMode? darkLogo : lightLogo;
-        return (imageSettingModel != null && imageSettingModel.data != null )?
-        Padding(padding: const EdgeInsets.all(16),
+        return Padding(padding: const EdgeInsets.all(16),
             child: InkWell(onTap: () => Get.toNamed(RouteHelper.getInitialRoute()),
-                child: SizedBox(height: 70, child: CustomImage(
-                  image: '${AppConstants.imageBaseUrl}/shop_image_settings/$logoToShow',
-                  fit: BoxFit.contain,
-                )))): SizedBox();
+                child: SizedBox(height: 50, child: CustomImage(
+                  image: '${AppConstants.imageBaseUrl}/image_settings/$logoToShow',
+                  fit: BoxFit.contain))));
       }
     );
   }
@@ -44,7 +42,7 @@ class FooterLogoSection extends StatelessWidget {
     return GetBuilder<SystemSettingsController>(
         initState: (value){
           if(Get.find<SystemSettingsController>().imageSettingModel == null){
-            //Get.find<SystemSettingsController>().getImageSetting();
+            Get.find<SystemSettingsController>().getLandingImageSetting();
           }
         },
         builder: (systemSettingsController) {
@@ -57,7 +55,7 @@ class FooterLogoSection extends StatelessWidget {
           Padding(padding: const EdgeInsets.all(16),
               child: InkWell(onTap: () => Get.toNamed(RouteHelper.getDashboardRoute()),
                   child: SizedBox(height: 40, child: CustomImage(
-                    image: '${AppConstants.imageBaseUrl}/shop_image_settings/$logoToShow',
+                    image: '${AppConstants.imageBaseUrl}/image_settings/$logoToShow',
                     fit: BoxFit.contain,
                   )))): SizedBox();
         }

@@ -53,7 +53,6 @@ class _AddNewReportedJobWidgetState extends State<AddNewReportedJobWidget> {
 
             CustomButton(onTap: (){
               String name = nameController.text.trim();
-              String description = descriptionController.text.trim();
 
               if(name.isEmpty){
                 showCustomSnackBar("name_is_empty".tr);

@@ -56,6 +56,7 @@ class AppConstants {
   static const String reportedJobs = '/reported-jobs';
   static const String inquiries = '/inquiries';
   static const String dashboardStatistics = '/dashboard/statistics';
+  static const String candidates = '/candidates';
 
 
   //Frontend
@@ -75,86 +76,24 @@ class AppConstants {
 
 
   //cms Controll
-  static const String banner = '/banners';
-  static const String aboutUs = '/about-us';
-  static const String explore = '/explores';
-  static const String whyChooseUs = '/why-choose-us';
-  static const String faqs = '/faqs';
-  static const String feedback = '/testimonials';
-  static const String academicImages = '/academic-images';
   static const String policies = '/policies';
   static const String generalSetting = '/tenant-settings';
   static const String generalSettingUpdate = '/tenant-settings-update';
   static const String publicSetting = '/publicSetting';
-  static const String frontendCmsSection = '/frontend/cms-sections';
-  static const String cmsSectionReorder = '/cms-sections-update';
-  static const String imageSetting = '/tenant-image-settings';
+  static const String imageSetting = '/image-settings';
+  static const String frontendImageSetting = '/frontend/image-settings';
+  static const String paymentMethods = '/payment-methods';
 
 
   //mighty_job management
-  static const String purchase = '/purchases';
-  static const String supplier = '/suppliers';
-  static const String purchaseReturn = '/purchase-return';
-  static const String orders = '/orders';
-  static const String orderStatus = '/order-statuses';
-  static const String orderType = '/order-types';
-  static const String customers = '/customers';
-  static const String paymentMethods = '/payment-methods';
-  static const String unit = '/units';
-  static const String warehouses = '/warehouses';
-  static const String tax = '/tax-settings';
   static const String globalStatusUpdate = '/global-status-update';
-
-
-  //Inventory
-  static const String brand = '/brands';
-  static const String categories = '/categories';
-  static const String subCategory = '/product-categories';
-  static const String products = '/product-items';
-  static const String quotation = '/quotation';
-  static const String posOrder = '/quotation';
-  static const String stock = '/quotation';
-  static const String uint = '/uint';
-  static const String damage = '/product-damage';
-  static const String attribute = '/attributes';
-  static const String attributeValue = '/attribute-values';
-
-  //reports
   static const String dashboardReport = '/dashboard-data';
-  static const String stockReport = '/reports/stocks';
-  static const String purchaseReport = '/reports/purchases';
-  static const String purchaseEstimateReport = '/reports/purchase-estimate';
-  static const String openingStockReport = '/reports/opening-stock';
-
-  //Hrm module
-  static const String department = '/departments';
-  static const String designations = '/designations';
-  static const String salaryTypes = '/salary-types';
-  static const String employees = '/employees';
-  static const String employeeAttendance = '/attendances';
-  static const String employeeSalary = '/employee-salaries';
-  static const String salarySetup = '/salary-setups';
-  static const String salaryGenerate = '/salary-generates';
-  static const String leaveTypes = '/leave-types';
-  static const String leaveApplications = '/leave-applications';
-  static const String weeklyHolidays = '/weekly-holidays';
-  static const String loans = '/loans';
-  static const String loanInstallments = '/loan-installments';
-  static const String awards = '/awards';
-  static const String recruitments = '/recruitments';
-  static const String candidates = '/candidates';
-  static const String interviews = '/interviews';
-
 
 
   static const String roles = '/roles';
   static const String permissionList = '/permissions-list';
   static const String user = '/users';
 
-
-  //loyalty
-  static const String loyaltyPoint = '/loyalty-points';
-  static const String loyaltyPointRedemption = '/loyalty-redemptions';
 
 
   //setting
@@ -163,16 +102,6 @@ class AppConstants {
   static const String clearCache = '/system/clear-cache';
 
 
-
-  //accounts
-  static const String accounts = '/accounts';
-  static const String depositCategory = '/deposit-categories';
-  static const String deposit = '/deposits';
-  static const String expensesCategory = '/expense-categories';
-  static const String expenses = '/expenses';
-  static const String fund = '/funds';
-  static const String tip = '/tips';
-  static const String tipDistribution = '/tip-distributions';
 
 
   //sms
@@ -198,9 +127,6 @@ class AppConstants {
   static const String getTheme = '/frontend/themes';
   static const String themeAssign = '/tenants-theme';
   static const String getDefaultTheme = '/frontend/default-theme';
-
-
-  static const String auction = '/auction-items';
 
 
 

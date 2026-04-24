@@ -5,7 +5,6 @@ import 'package:mighty_job/common/widget/paginated_list_widget.dart';
 import 'package:mighty_job/feature/frontend/controller/frontend_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/feature/frontend/presentation/widgets/category_or_industry_selection_widget.dart';
 import 'package:mighty_job/util/dimensions.dart';
 import 'package:mighty_job/util/styles.dart';
 

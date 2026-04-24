@@ -1,7 +1,6 @@
 import 'package:flutter_image_compress/flutter_image_compress.dart';
 import 'package:get/get_connect/http/src/response/response.dart';
 import 'package:mighty_job/api_handle/api_client.dart';
-import 'package:mighty_job/feature/cms_management/cms_settings/domain/model/cms_section_reorder_body.dart';
 import 'package:mighty_job/feature/cms_management/cms_settings/domain/model/general_settings_model.dart';
 import 'package:mighty_job/util/app_constants.dart';
 
@@ -93,13 +92,11 @@ class SystemSettingsRepository{
     return await apiClient.getData(AppConstants.imageSetting);
   }
 
+  Future<Response?> getLandingImageSetting () async {
+    return await apiClient.getData(AppConstants.frontendImageSetting);
+  }
 
-  Future<Response?> cmsSection () async {
-    return await apiClient.getData(AppConstants.frontendCmsSection);
-  }
-  Future<Response?> cmsSectionReorder (CmsSectionReorderBody body) async {
-    return await apiClient.postData(AppConstants.cmsSectionReorder, body.toJson());
-  }
+
 
   Future<Response?> whatsappSetting (String whatsappNumber, int chatEnable, int orderEnable ) async {
     return await apiClient.postData(AppConstants.generalSettingUpdate , {

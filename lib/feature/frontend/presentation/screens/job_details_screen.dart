@@ -25,7 +25,7 @@ class _JobDetailsScreenState extends State<JobDetailsScreen> {
   Widget build(BuildContext context) {
     return BaseLayout(scrollController: scrollController,
       child: GetBuilder<LandingPageController>(builder: (controller) {
-        final model = controller.publicJobListingModel;
+        //final model = controller.publicJobListingModel;
         return Center(
           child: SizedBox(width: Dimensions.webMaxWidth,
             child: Column(crossAxisAlignment: CrossAxisAlignment.start, spacing: 20, children: [

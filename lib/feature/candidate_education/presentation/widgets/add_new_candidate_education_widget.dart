@@ -82,7 +82,7 @@ class _AddNewCandidateEducationWidgetState extends State<AddNewCandidateEducatio
                   String lastName = lastNameController.text.trim();
                   String email = emailController.text.trim();
                   String phone = phoneController.text.trim();
-                  String notes = notesController.text.trim();
+
                   if(name.isEmpty){
                     showCustomSnackBar("first_name_is_empty".tr);
                   }else if(lastName.trim().isEmpty){

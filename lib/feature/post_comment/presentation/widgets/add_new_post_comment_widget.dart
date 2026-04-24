@@ -66,7 +66,6 @@ class _AddNewPostCommentWidgetState extends State<AddNewPostCommentWidget> {
 
             CustomButton(onTap: (){
               String name = nameController.text.trim();
-              String description = descriptionController.text.trim();
 
 
               if(name.isEmpty){

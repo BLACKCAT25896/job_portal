@@ -27,13 +27,6 @@ class _CategoryOrIndustryWiseJobListWidgetState extends State<CategoryOrIndustry
 
   @override
   void initState() {
-    final controller = Get.find<LandingPageController>();
-    if(widget.type == "category"){
-      // controller.getLandingPostCategoryList(1, widget.slug);
-    }else{
-      // controller.getBrandWiseProductList(1, widget.slug);
-    }
-
     super.initState();
 
   }

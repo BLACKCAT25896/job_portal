@@ -77,7 +77,6 @@ class _AddNewCandidateResumeWidgetState extends State<AddNewCandidateResumeWidge
                 child: CustomButton(onTap: (){
                   int? candidateId = Get.find<CandidateController>().selectedCandidateItem?.id;
                   String title = titleController.text.trim();
-                  bool isCurrentlyWorking = candidateResumeController.isCurrentlyWorking;
                   String company = companyController.text.trim();
                   String description = descriptionController.text.trim();
                   String startDate = Get.find<DatePickerController>().formatedFromDate;

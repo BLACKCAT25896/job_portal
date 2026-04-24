@@ -51,6 +51,24 @@
   "company_website": "Company Website",
   "company_address": "Company Address",
   "report_this_job_or_company": "Report this job or company",
-  "report_this_job": "Report this job"
+  "report_this_job": "Report this job",
+  "no_data_found": "No Data Found",
+  "about_us": "About Us",
+  "job_seekers": "Job Seekers",
+  "job_recruiter": "Job Recruiter",
+  "contact_us": "Contact Us",
+  "privacy_policy": "Privacy Policy",
+  "terms_of_service": "Terms of Service",
+  "faq": "FAQ",
+  "create_account": "Create Account",
+  "login": "Login",
+  "list_of_feature": "List of Feature",
+  "terms_and_condition": "Terms and Condition",
+  "vacancy": "Vacancy",
+  "product_or_service": "Product/Service",
+  "location": "Location",
+  "recruiter":"Recruiter",
+  "post_a_job": "Post a Job"
+
 
 }

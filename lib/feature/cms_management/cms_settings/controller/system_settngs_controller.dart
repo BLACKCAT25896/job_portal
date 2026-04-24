@@ -8,8 +8,6 @@ import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:mighty_job/api_handle/api_checker.dart';
 import 'package:mighty_job/common/widget/custom_snackbar.dart';
-import 'package:mighty_job/feature/cms_management/cms_settings/domain/model/cms_section_model.dart';
-import 'package:mighty_job/feature/cms_management/cms_settings/domain/model/cms_section_reorder_body.dart';
 import 'package:mighty_job/feature/cms_management/cms_settings/domain/model/general_settings_model.dart';
 import 'package:mighty_job/feature/cms_management/cms_settings/domain/model/image_setting_model.dart';
 import 'package:mighty_job/feature/cms_management/cms_settings/domain/repository/system_settings_repository.dart';
@@ -154,6 +152,17 @@ class SystemSettingsController extends GetxController implements GetxService{
     update();
   }
 
+  Future<void> getLandingImageSetting() async {
+    Response? response = await systemSettingsRepository.getLandingImageSetting();
+    if (response?.statusCode == 200) {
+      imageSettingModel = ImageSettingModel.fromJson(response?.body);
+    }else{
+      ApiChecker.checkApi(response!);
+    }
+    update();
+  }
+
+
 
 
   int settingsTypeIndex = 0;
@@ -189,35 +198,6 @@ class SystemSettingsController extends GetxController implements GetxService{
     update();
   }
 
-
-  CmsSectionModel? cmsSectionModel;
-  Future<void> getCmsSection() async {
-    Response? response = await systemSettingsRepository.cmsSection();
-    if (response?.statusCode == 200) {
-      cmsSectionModel = CmsSectionModel.fromJson(response?.body);
-    }else{
-      ApiChecker.checkApi(response!);
-    }
-    update();
-  }
-
-
-
-
-  Future<void> reorderCmsSection(CmsSectionReorderBody body) async {
-    loading = true;
-    update();
-    Response? response = await systemSettingsRepository.cmsSectionReorder(body);
-    if (response?.statusCode == 200) {
-      loading = false;
-      getCmsSection();
-      showCustomSnackBar("updated_successfully".tr, isError: false);
-    }else{
-      loading = false;
-      ApiChecker.checkApi(response!);
-    }
-    update();
-  }
 
 
   Future<void> whatsappSetting(String whatsappNumber, int chatEnable, int orderEnable ) async {

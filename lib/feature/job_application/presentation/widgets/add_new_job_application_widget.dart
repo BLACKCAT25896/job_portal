@@ -58,13 +58,13 @@ class _AddNewJobApplicationWidgetState extends State<AddNewJobApplicationWidget>
 
             CustomButton(onTap: (){
               String name = nameController.text.trim();
-              String description = descriptionController.text.trim();
 
               if(name.isEmpty){
                 showCustomSnackBar("name_is_empty".tr);
               }
               else{
                 JobApplicationBody applicationBody = JobApplicationBody(
+
 
                     sMethod: update? "put":"POST",
                     );

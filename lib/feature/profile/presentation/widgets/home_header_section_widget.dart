@@ -4,7 +4,6 @@ import 'package:mighty_job/common/widget/custom_image.dart';
 import 'package:mighty_job/helper/route_helper.dart';
 import 'package:mighty_job/util/dimensions.dart';
 import 'package:mighty_job/util/images.dart';
-import 'package:mighty_job/util/styles.dart';
 import 'package:get/get.dart';
 
 class HomeHeaderSectionWidget extends StatelessWidget {

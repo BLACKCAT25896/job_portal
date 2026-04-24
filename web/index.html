@@ -7,20 +7,28 @@
   <base href="/" />
 
   <!-- Primary SEO -->
-  <title>Mighty job – job Management System | POS & Inventory</title>
+  <title>MightyJob – Job Portal & Recruitment Management System</title>
   <meta name="description"
-        content="Mighty job is a complete job management system with POS, inventory, orders, staff management, and analytics — fast and powerful for jobs and cafes." />
+        content="MightyJob is a complete job portal and recruitment management system. Post jobs, manage candidates, track applications, and hire faster with a modern SaaS platform." />
   <link rel="canonical" href="https://job.mightyapp.com/" />
 
-  <!-- Fast OG/Twitter Preview -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Mighty job – job POS & Inventory System" />
-  <meta property="og:description"
-        content="A fast, modern POS and job management system for jobs, cafes, and food businesses." />
-  <meta property="og:image" content="https://job.mightyapp.com/icons/Icon-512.png" />
+  <!-- Keywords (optional but useful for marketplaces like CodeCanyon) -->
+  <meta name="keywords"
+        content="job portal, recruitment system, hiring software, applicant tracking system, ATS, job board, HRM, MightyJob, job SaaS, BD job portal" />
 
+  <!-- Open Graph (Facebook / LinkedIn) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="MightyJob – Modern Job Portal & Hiring System" />
+  <meta property="og:description"
+        content="Create your own job portal like Bdjobs. Manage jobs, applications, employers, and candidates in one powerful platform." />
+  <meta property="og:image" content="https://job.mightyapp.com/icons/Icon-512.png" />
+  <meta property="og:url" content="https://job.mightyapp.com/" />
+
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Mighty job – POS & Management System" />
+  <meta name="twitter:title" content="MightyJob – Recruitment & Job Portal SaaS" />
+  <meta name="twitter:description"
+        content="Launch your own job portal with MightyJob. Fast, scalable, and easy to manage." />
   <meta name="twitter:image" content="https://job.mightyapp.com/icons/Icon-512.png" />
 
   <!-- PWA Essentials -->
@@ -28,18 +36,23 @@
   <link rel="apple-touch-icon" href="icons/Icon-192.png" />
   <link rel="manifest" href="manifest.json" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="theme-color" content="#0f172a" />
 
-  <!-- Preload for Speed -->
+  <!-- Performance -->
   <link rel="preload" href="flutter.js" as="script" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-  <!-- Minimal CSS (Non-blocking by design) -->
+  <!-- Fonts -->
+  <link rel="preload" href="assets/font/NotoSans-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="assets/font/NotoSans-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+
+  <!-- Styles -->
   <link rel="stylesheet" href="style.css" />
 
-  <!-- Flutter Script (Only essential JS in head) -->
+  <!-- Flutter -->
   <script src="flutter.js" defer></script>
 
-  <!-- WebView Support (not blocking) -->
+  <!-- WebView Support -->
   <script src="/assets/packages/flutter_inappwebview_web/assets/web/web_support.js" defer></script>
 
   <!-- Safari WebGL Fix -->
@@ -53,7 +66,7 @@
     }
   </script>
 
-  <!-- Service Worker (Deferred automatically) -->
+  <!-- Service Worker -->
   <script>
     if ("serviceWorker" in navigator) {
       window.addEventListener("load", () => {
@@ -61,10 +74,6 @@
       });
     }
   </script>
-  <link rel="preload" href="assets/font/NotoSans-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
-  <link rel="preload" href="assets/font/NotoSans-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
-
-
 </head>
 
 <body>
@@ -73,27 +82,27 @@
 
 <!-- Preloader -->
 <div class="preloader">
-  <div class="food-icons-container">
-    <div class="food-icon food-icon-1">🛒</div>
-    <div class="food-icon food-icon-2">📦</div>
-    <div class="food-icon food-icon-3">🏷️</div>
-    <div class="food-icon food-icon-4">💳</div>
-    <div class="food-icon food-icon-5">🏬</div>
-    <div class="food-icon food-icon-6">📊</div>
-    <div class="food-icon food-icon-7">📱</div>
-    <div class="food-icon food-icon-8">🚚</div>
-    <div class="food-icon food-icon-9">🧾</div>
-    <div class="food-icon food-icon-10">🔄</div>
-    <div class="food-icon food-icon-11">📦</div>
-    <div class="food-icon food-icon-12">💰</div>
-    <div class="food-icon food-icon-13">🛍️</div>
-    <div class="food-icon food-icon-14">🏷️</div>
-    <div class="food-icon food-icon-15">📤</div>
-    <div class="food-icon food-icon-16">📥</div>
-    <div class="food-icon food-icon-17">🧑‍💼</div>
-    <div class="food-icon food-icon-18">🏪</div>
-    <div class="food-icon food-icon-19">📈</div>
-    <div class="food-icon food-icon-20">⚡</div>
+  <div class="job-icons-container">
+    <div class="job-icon job-icon-1">💼</div> <!-- Jobs -->
+    <div class="job-icon job-icon-2">📄</div> <!-- Resume -->
+    <div class="job-icon job-icon-3">🏷️</div> <!-- Job Category -->
+    <div class="job-icon job-icon-4">💳</div> <!-- Paid Jobs / Subscription -->
+    <div class="job-icon job-icon-5">🏢</div> <!-- Company -->
+    <div class="job-icon job-icon-6">📊</div> <!-- Analytics -->
+    <div class="job-icon job-icon-7">📱</div> <!-- Mobile Apply -->
+    <div class="job-icon job-icon-8">📍</div> <!-- Location -->
+    <div class="job-icon job-icon-9">🧾</div> <!-- CV / Documents -->
+    <div class="job-icon job-icon-10">🔄</div> <!-- Application Status -->
+    <div class="job-icon job-icon-11">📂</div> <!-- Job Listings -->
+    <div class="job-icon job-icon-12">💰</div> <!-- Salary -->
+    <div class="job-icon job-icon-13">🧑‍💼</div> <!-- Employer -->
+    <div class="job-icon job-icon-14">🏷️</div> <!-- Skills -->
+    <div class="job-icon job-icon-15">📤</div> <!-- Apply -->
+    <div class="job-icon job-icon-16">📥</div> <!-- Received Applications -->
+    <div class="job-icon job-icon-17">👨‍💻</div> <!-- Candidate -->
+    <div class="job-icon job-icon-18">🏬</div> <!-- Office -->
+    <div class="job-icon job-icon-19">📈</div> <!-- Growth / Hiring Trends -->
+    <div class="job-icon job-icon-20">⚡</div> <!-- Fast Hiring -->
   </div>
 
   <div class="preloader-particles">
