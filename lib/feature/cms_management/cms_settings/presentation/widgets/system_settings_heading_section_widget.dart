@@ -11,7 +11,7 @@ class SystemSettingsHeadingSectionWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetBuilder<SystemSettingsController>(builder: (systemSettingsController) {
 
-      final List<String> titles = ["general_settings", "logo", "theme_color", "theme"];
+      final List<String> titles = ["general_settings", "logo", "theme_color",];
 
       return Padding(padding: const EdgeInsets.all(Dimensions.paddingSizeSmall),
         child: SizedBox(height: 35,

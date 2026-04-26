@@ -86,5 +86,5 @@ class CandidateController extends GetxController implements GetxService{
     selectedCandidateItem = item;
     update();
   }
-  
+
 }

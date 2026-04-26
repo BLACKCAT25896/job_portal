@@ -72,6 +72,7 @@ class AppConstants {
   static const String frontendTermsCondition = '/frontend/terms-conditions';
   static const String frontendCookiePolicy = '/frontend/cookie-policy';
   static const String frontendAboutUs = '/frontend/about-us';
+  static const String frontendJobListingSummery = '/frontend/job-listing-summery';
 
 
 

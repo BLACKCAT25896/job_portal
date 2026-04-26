@@ -23,11 +23,12 @@ class HeaderLogoSection extends StatelessWidget {
         String? lightLogo =  imageSettingModel?.data?.headerLogoLightTheme;
         String? darkLogo =  imageSettingModel?.data?.headerLogoDarkTheme;
         String ? logoToShow = Get.isDarkMode? darkLogo : lightLogo;
-        return Padding(padding: const EdgeInsets.all(16),
+        return (imageSettingModel != null && imageSettingModel.data != null )?
+        Padding(padding: const EdgeInsets.all(5),
             child: InkWell(onTap: () => Get.toNamed(RouteHelper.getInitialRoute()),
                 child: SizedBox(height: 50, child: CustomImage(
                   image: '${AppConstants.imageBaseUrl}/image_settings/$logoToShow',
-                  fit: BoxFit.contain))));
+                  fit: BoxFit.contain)))):SizedBox();
       }
     );
   }
@@ -52,7 +53,7 @@ class FooterLogoSection extends StatelessWidget {
           String? darkLogo =  imageSettingModel?.data?.footerLogoDarkTheme;
           String ? logoToShow = Get.isDarkMode? darkLogo : lightLogo;
           return (imageSettingModel != null && imageSettingModel.data != null )?
-          Padding(padding: const EdgeInsets.all(16),
+          Padding(padding: const EdgeInsets.all(10),
               child: InkWell(onTap: () => Get.toNamed(RouteHelper.getDashboardRoute()),
                   child: SizedBox(height: 40, child: CustomImage(
                     image: '${AppConstants.imageBaseUrl}/image_settings/$logoToShow',

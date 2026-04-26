@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:mighty_job/common/widget/custom_contaner.dart';
@@ -18,6 +20,7 @@ class PublicJoListingItemWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomContainer(onTap: (){
+      log("id===>${item?.id}");
       Get.toNamed(RouteHelper.getJobDetailRoute(item?.id.toString()??''));
     },
         borderRadius: 5, color: Theme.of(context).cardColor,

@@ -217,13 +217,13 @@ class RouteHelper {
   static String getCategoryWiseJobRoute({required String slug, required String type}) => "$categoryWiseJob?type=$type&slug=$slug";
 
   static const String jobDetails = '/job-detail';
-  static String getJobDetailRoute(String slug) => "$jobDetails?id=$slug";
+  static String getJobDetailRoute(String slug) => "$jobDetails?slug=$slug";
 
 
 
   static List<GetPage> routes = [
     GetPage(name: initial, page: () => const LandingScreen()),
-    GetPage(name: signIn, page: () => const LoginScreen()),
+    GetPage(name: login, page: () => const LoginScreen()),
     GetPage(name: dashboard, page: () => const DashboardScreen()),
     GetPage(name: profile, page: () => const ProfileScreen()),
     GetPage(name: deleteAccount, page: () => const DeleteAccountScreen()),

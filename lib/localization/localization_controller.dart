@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -27,6 +26,12 @@ class LocalizationController extends GetxController {
     Get.updateLocale(locale);
     _locale = locale;
     _isLtr = !intl.Bidi.isRtlLanguage(_locale.languageCode);
+    for(int index=0; index<AppConstants.languages.length; index++) {
+      if(AppConstants.languages[index].languageCode == _locale.languageCode) {
+        _selectIndex = index;
+        break;
+      }
+    }
     saveLanguage(_locale);
     update();
   }

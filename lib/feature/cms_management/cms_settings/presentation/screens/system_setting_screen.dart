@@ -1,5 +1,4 @@
 
-import 'package:mighty_job/feature/cms_management/cms_settings/presentation/widgets/available_theme_list.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:mighty_job/common/global_widget/custom_web_scroll_view_widget.dart';
@@ -55,8 +54,6 @@ class _SystemSettingScreenState extends State<SystemSettingScreen> {
 
                if(systemSettingsController.settingsTypeIndex == 2)
                  ThemeManageWidget(),
-               if(systemSettingsController.settingsTypeIndex == 3)
-                 AvailableThemeList(),
 
 
              ],);

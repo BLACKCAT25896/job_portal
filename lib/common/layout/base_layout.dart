@@ -33,7 +33,7 @@ class _BaseLayoutState extends State<BaseLayout> {
     return Scaffold(
       body: Listener(onPointerSignal: _onPointerScroll,
         child: Stack(children: [
-          Padding(padding: const EdgeInsets.only(top: 100),
+          Padding(padding: const EdgeInsets.only(top: 120),
             child: SingleChildScrollView(
               controller: widget.scrollController,
               physics: const NeverScrollableScrollPhysics(),

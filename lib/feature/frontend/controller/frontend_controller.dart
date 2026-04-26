@@ -1,4 +1,5 @@
 
+
 import 'package:flutter/material.dart';
 import 'package:mighty_job/api_handle/api_checker.dart';
 import 'package:mighty_job/api_handle/global_api_response_model.dart';
@@ -6,6 +7,8 @@ import 'package:mighty_job/common/global_widget/fetch_paginated_list.dart';
 import 'package:mighty_job/common/widget/custom_snackbar.dart';
 import 'package:mighty_job/feature/company/domain/models/company_model.dart';
 import 'package:mighty_job/feature/frontend/domain/models/frontend_policy_model.dart';
+import 'package:mighty_job/feature/frontend/domain/models/job_details_model.dart';
+import 'package:mighty_job/feature/frontend/domain/models/job_listing_summery_model.dart';
 import 'package:mighty_job/feature/frontend/domain/repository/frontend_repository.dart';
 import 'package:get/get.dart';
 import 'package:mighty_job/feature/frontend/policy_enum.dart';
@@ -86,16 +89,65 @@ class LandingPageController extends GetxController implements GetxService{
 
 
   ApiResponse<JobListingItem>? publicJobListingModel;
-  Future<void> getLandingJobListingList(int offset, {String search = ""}) async {
+
+  Future<void> getLandingJobListingList(int offset, {String? search,
+    int? companyId, int? jobCategoryId, int? careerLevelId,
+    int? degreeLevelId, int? salaryFrom, int? salaryTo,
+    int? status, String? sortBy, String? sortOrder,
+    int? countryId, int? stateId, int? cityId}) async {
+
     publicJobListingModel = await fetchPaginatedList<JobListingItem>(
       offset: offset,
       currentModel: publicJobListingModel,
-      apiCall: () => landingRepository.getLandingJobListing(offset, search),
+      apiCall: () => landingRepository.getLandingJobListing(
+        page: offset,
+        search: search,
+        companyId: companyId,
+        jobCategoryId: jobCategoryId,
+        careerLevelId: careerLevelId,
+        degreeLevelId: degreeLevelId,
+        salaryFrom: salaryFrom,
+        salaryTo: salaryTo,
+        status: status,
+        sortBy: sortBy,
+        sortOrder: sortOrder,
+        countryId: countryId,
+        stateId: stateId,
+        cityId: cityId),
       fromJson: (json) => JobListingItem.fromJson(json),
       onUpdate: (value) => publicJobListingModel = value,
     );
     update();
   }
+
+
+
+
+  LandingJobDetailsModel? jobDetailsModel;
+  Future<void> getLandingJobDetails(String id) async {
+    Response? response = await landingRepository.getLandingJobDetails(id);
+    if (response?.statusCode == 200) {
+      jobDetailsModel = LandingJobDetailsModel.fromJson(response?.body);
+    }else{
+      ApiChecker.checkApi(response!);
+    }
+    update();
+  }
+
+
+  JobListingSummeryModel? jobListingSummeryModel;
+  Future<void> getLandingJobSummery() async {
+    Response? response = await landingRepository.getLandingJobListingSummery();
+    if (response?.statusCode == 200) {
+      jobListingSummeryModel = JobListingSummeryModel.fromJson(response?.body);
+    }else{
+      ApiChecker.checkApi(response!);
+    }
+    update();
+  }
+
+
+
 
   ApiResponse<PostCategoryItem>? publicPostCategoryModel;
   Future<void> getLandingPostCategoryList(int offset, {String search = ""}) async {

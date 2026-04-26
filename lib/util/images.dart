@@ -154,8 +154,11 @@ class Images {
   static const String brand = 'assets/image/brand.png';
   static const String sales = 'assets/image/sales.png';
 
-  static const String themeOne = 'assets/image/banner/theme_one.png';
   static const String customer = 'assets/image/customer.png';
+  static const String company = 'assets/image/banner/company.png';
+  static const String lifeline = 'assets/image/banner/lifeline.png';
+  static const String newJob = 'assets/image/banner/new_job.png';
+  static const String vacancy = 'assets/image/banner/vacancies.png';
   static const String heroBg = 'assets/image/banner/hero_bg.jpg';
 
   //payment_icon

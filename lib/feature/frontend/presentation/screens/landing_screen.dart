@@ -3,6 +3,7 @@ import 'package:mighty_job/common/layout/base_layout.dart';
 import 'package:mighty_job/feature/frontend/controller/frontend_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:mighty_job/feature/frontend/presentation/widgets/company/public_company_list_widget.dart';
 import 'package:mighty_job/feature/frontend/presentation/widgets/hero_section_widget.dart';
 import 'package:mighty_job/feature/frontend/presentation/widgets/industry/public_industry_list_widget.dart';
 import 'package:mighty_job/feature/frontend/presentation/widgets/job/public_job_category_list_widget.dart';
@@ -34,6 +35,7 @@ class _LandingScreenState extends State<LandingScreen> {
             PublicIndustryListWidget(scrollController: scrollController),
           ],
 
+          PublicCompanyListWidget(scrollController: scrollController),
           PublicJobListingListWidget(scrollController: scrollController),
           PublicPostCategoryListWidget(scrollController: scrollController),
           PublicPostListWidget(scrollController: scrollController),

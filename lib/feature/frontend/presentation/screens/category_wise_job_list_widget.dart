@@ -51,7 +51,7 @@ class _CategoryOrIndustryWiseJobListWidgetState extends State<CategoryOrIndustry
 
                                 CustomRangeSlider(
                                   values: controller.salaryRange,
-                                  title: "salary_range",
+                                  title: "salary_range".tr,
                                   min: 0,
                                   max: 100,
                                   divisions: 10,
@@ -62,7 +62,7 @@ class _CategoryOrIndustryWiseJobListWidgetState extends State<CategoryOrIndustry
 
                                 CustomRangeSlider(
                                   values: controller.ageRange,
-                                  title: "age_range",
+                                  title: "age_range".tr,
                                   min: 0,
                                   max: 100,
                                   divisions: 10,
@@ -73,7 +73,7 @@ class _CategoryOrIndustryWiseJobListWidgetState extends State<CategoryOrIndustry
 
                                 CustomRangeSlider(
                                   values: controller.experienceRange, // ✅ FIXED
-                                  title: "experience_range",
+                                  title: "experience_range".tr,
                                   min: 0,
                                   max: 100,
                                   divisions: 10,

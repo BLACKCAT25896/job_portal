@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
@@ -20,12 +22,20 @@ class JobDetailsScreen extends StatefulWidget {
 
 class _JobDetailsScreenState extends State<JobDetailsScreen> {
   ScrollController scrollController = ScrollController();
+  @override
+  void initState() {
+    Get.find<LandingPageController>().getLandingJobDetails(widget.slug);
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
+    log("id===>${widget.slug}");
     return BaseLayout(scrollController: scrollController,
       child: GetBuilder<LandingPageController>(builder: (controller) {
-        //final model = controller.publicJobListingModel;
+        final model = controller.jobDetailsModel;
+        final data = model?.data;
+        final job = data?.job;
         return Center(
           child: SizedBox(width: Dimensions.webMaxWidth,
             child: Column(crossAxisAlignment: CrossAxisAlignment.start, spacing: 20, children: [
@@ -34,7 +44,7 @@ class _JobDetailsScreenState extends State<JobDetailsScreen> {
               CustomContainer(borderRadius: 5,
                 child: Column(spacing: Dimensions.paddingSizeSmall,
                     crossAxisAlignment: CrossAxisAlignment.start, children: [
-                  Text("Square Food & Beverage Ltd.", style: textSemiBold.copyWith(fontSize: Dimensions.fontSizeLarge)),
+                  Text(job?.jobTitle??'N/A', style: textSemiBold.copyWith(fontSize: Dimensions.fontSizeLarge)),
                   Text("Supervisor - PPIC (সুপারভাইজার)", style: textBold.copyWith(fontSize: Dimensions.fontSizeExtraLarge),),
                  Row(spacing: Dimensions.paddingSizeDefault, children: [
                    Expanded(child: Text("Application Deadline : 26 Apr 2026")),

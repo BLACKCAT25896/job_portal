@@ -6,7 +6,7 @@ ThemeData lightTheme = ThemeData(
     primaryColor: const Color(0xFFFD5622),
   brightness: Brightness.light,
   cardColor: const Color(0xFFFFFFFF),
-  secondaryHeaderColor: const Color(0xFF882200),
+  secondaryHeaderColor: const Color(0xFFEBF6E9),
   hintColor: const Color(0xFFABABAB),
   scaffoldBackgroundColor: const Color(0xFFF1F4F8),
     primaryColorDark: const Color(0xFF952400),

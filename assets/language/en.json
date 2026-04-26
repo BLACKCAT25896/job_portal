@@ -68,7 +68,31 @@
   "product_or_service": "Product/Service",
   "location": "Location",
   "recruiter":"Recruiter",
-  "post_a_job": "Post a Job"
+  "post_a_job": "Post a Job",
+  "select_language": "Select Language",
+  "choose_your_language": "Choose your language",
+  "career_level": "Career Level",
+  "inquiry": "Inquiry",
+  "transaction": "Transaction",
+  "candidate_resume": "Candidate Resume",
+  "candidate_education": "Candidate Education",
+  "candidate_experience": "Candidate Experience",
+  "candidate": "Candidate",
+  "job_application": "Job Application",
+  "reported_job": "Reported Job",
+  "favorite_job": "Favorite Job",
+  "favorite_company": "Favorite Company",
+  "degree_level": "Degree Level",
+  "salary_currency": "Salary Currency",
+  "salary_period": "Salary Period",
+  "skill": "Skill",
+  "job_category": "Job Category",
+  "job_listing": "Job Listing",
+  "job_stage": "Job Stage",
+  "notification": "Notification",
+  "profile": "Profile",
+  "delete_account": "Delete Account",
+  "top_companies": "Top Companies are Hiring"
 
 
 }
