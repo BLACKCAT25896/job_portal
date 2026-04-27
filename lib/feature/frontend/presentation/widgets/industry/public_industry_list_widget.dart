@@ -26,7 +26,9 @@ class _PublicIndustryListWidgetState extends State<PublicIndustryListWidget> {
     return Center(child: CustomContainer(width: Dimensions.webMaxWidth,
       showShadow: false,borderRadius: 5,
       child: GetBuilder<LandingPageController>(initState: (_) {
-        Get.find<LandingPageController>().getLandingIndustryList(1);
+        if(Get.find<LandingPageController>().publicIndustryModel == null) {
+          Get.find<LandingPageController>().getLandingIndustryList(1);
+        }
       },
         builder: (controller) {
           final listingModel = controller.publicIndustryModel;

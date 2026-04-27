@@ -17,6 +17,7 @@ import 'package:mighty_job/feature/degree_level/presentation/screens/degree_leve
 import 'package:mighty_job/feature/favorite_company/presentation/screens/favorite_company_screen.dart';
 import 'package:mighty_job/feature/frontend/policy_enum.dart';
 import 'package:mighty_job/feature/frontend/presentation/screens/category_wise_job_list_widget.dart';
+import 'package:mighty_job/feature/frontend/presentation/screens/job_apply_screen.dart';
 import 'package:mighty_job/feature/frontend/presentation/screens/job_details_screen.dart';
 import 'package:mighty_job/feature/frontend/presentation/screens/landing_screen.dart';
 import 'package:mighty_job/feature/frontend/presentation/screens/policy_screen.dart';
@@ -214,10 +215,18 @@ class RouteHelper {
 
 
   static const String categoryWiseJob = '/category-wise-job';
-  static String getCategoryWiseJobRoute({required String slug, required String type}) => "$categoryWiseJob?type=$type&slug=$slug";
+  static String getCategoryWiseJobRoute({
+    required String slug,
+    required String type,
+    String? categoryId
+  }) => "$categoryWiseJob?type=$type&slug=$slug&category-id=$categoryId";
 
   static const String jobDetails = '/job-detail';
   static String getJobDetailRoute(String slug) => "$jobDetails?slug=$slug";
+
+  static const String jobApply = '/job-apply';
+  static String getJobApplyRoute() => jobApply;
+
 
 
 
@@ -281,10 +290,13 @@ class RouteHelper {
 
     GetPage(name: categoryWiseJob, page: ()=> CategoryOrIndustryWiseJobListWidget(
         type: Get.parameters['type']??'',
-        slug: Get.parameters['slug']??"")),
+        slug: Get.parameters['slug']??"",
+        categoryId: Get.parameters['category-id']??""
+    )),
 
     GetPage(name: jobDetails, page: ()=> JobDetailsScreen(slug: Get.parameters['slug']??"")),
 
+    GetPage(name: jobApply, page: ()=> const JobApplyScreen()),
 
     GetPage(name: policy, page: () {
       final typeParam = Get.parameters['type'];

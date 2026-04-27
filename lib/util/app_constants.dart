@@ -23,7 +23,8 @@ class AppConstants {
   static String get domain => DomainHelper.getCurrentDomain();
 
   static const String loginUri = '/login';
-  static const String registration = '/onboardings';
+  static const String candidateRegistration = '/candidate/register';
+  static const String companyRegistration = '/company/register';
   static const String profile = '/profile';
   static const String galleries = '/galleries';
   static const String tokenUri = '/save-fcm-token';

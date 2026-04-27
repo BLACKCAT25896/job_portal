@@ -91,7 +91,7 @@ class LandingPageController extends GetxController implements GetxService{
   ApiResponse<JobListingItem>? publicJobListingModel;
 
   Future<void> getLandingJobListingList(int offset, {String? search,
-    int? companyId, int? jobCategoryId, int? careerLevelId,
+    int? companyId, String? jobCategoryId, int? careerLevelId,
     int? degreeLevelId, int? salaryFrom, int? salaryTo,
     int? status, String? sortBy, String? sortOrder,
     int? countryId, int? stateId, int? cityId}) async {

@@ -15,7 +15,10 @@ import 'package:mighty_job/util/dimensions.dart';
 class CategoryOrIndustryWiseJobListWidget extends StatefulWidget {
   final String slug;
   final String type;
-  const CategoryOrIndustryWiseJobListWidget({super.key, required this.slug, required this.type});
+  final String? categoryId;
+  final String? industryId;
+  const CategoryOrIndustryWiseJobListWidget({super.key, required this.slug,
+    required this.type, this.categoryId, this.industryId});
 
   @override
   State<CategoryOrIndustryWiseJobListWidget> createState() => _CategoryOrIndustryWiseJobListWidgetState();
@@ -27,6 +30,7 @@ class _CategoryOrIndustryWiseJobListWidgetState extends State<CategoryOrIndustry
 
   @override
   void initState() {
+    Get.find<LandingPageController>().getLandingJobListingList(1, jobCategoryId: widget.categoryId);
     super.initState();
 
   }

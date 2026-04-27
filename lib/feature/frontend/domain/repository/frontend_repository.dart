@@ -30,7 +30,7 @@ Future<Response?> getLandingCompanies(int page, String search) async {
     int? page,
     String? search,
     int? companyId,
-    int? jobCategoryId,
+    String? jobCategoryId,
     int? careerLevelId,
     int? degreeLevelId,
     int? salaryFrom,

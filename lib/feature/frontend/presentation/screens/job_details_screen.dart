@@ -8,6 +8,7 @@ import 'package:mighty_job/common/widget/custom_button.dart';
 import 'package:mighty_job/common/widget/custom_contaner.dart';
 import 'package:mighty_job/common/widget/responsive_grid_widget.dart';
 import 'package:mighty_job/feature/frontend/controller/frontend_controller.dart';
+import 'package:mighty_job/feature/frontend/presentation/widgets/job_details/title_section.dart';
 import 'package:mighty_job/helper/app_color_helper.dart';
 import 'package:mighty_job/util/dimensions.dart';
 import 'package:mighty_job/util/styles.dart';
@@ -41,36 +42,7 @@ class _JobDetailsScreenState extends State<JobDetailsScreen> {
             child: Column(crossAxisAlignment: CrossAxisAlignment.start, spacing: 20, children: [
               SizedBox(height: Dimensions.paddingSizeDefault),
 
-              CustomContainer(borderRadius: 5,
-                child: Column(spacing: Dimensions.paddingSizeSmall,
-                    crossAxisAlignment: CrossAxisAlignment.start, children: [
-                  Text(job?.jobTitle??'N/A', style: textSemiBold.copyWith(fontSize: Dimensions.fontSizeLarge)),
-                  Text("Supervisor - PPIC (সুপারভাইজার)", style: textBold.copyWith(fontSize: Dimensions.fontSizeExtraLarge),),
-                 Row(spacing: Dimensions.paddingSizeDefault, children: [
-                   Expanded(child: Text("Application Deadline : 26 Apr 2026")),
-                   IntrinsicWidth(child: CustomButton(onTap: (){}, text: "apply_now".tr)),
-
-                   IntrinsicWidth(
-                       child: CustomButton(showBorderOnly: true,
-                         borderColor: Theme.of(context).hintColor,
-                         textColor: Theme.of(context).textTheme.displayLarge!.color!,
-                         onTap: (){},
-                     text: "save".tr, icon: Icon(Icons.star_rounded),)),
-
-                   IntrinsicWidth(
-                       child: CustomButton(showBorderOnly: true,
-                           borderColor: Theme.of(context).hintColor,
-                           textColor: Theme.of(context).textTheme.displayLarge!.color!,
-                           onTap: (){},
-                         text: "share".tr, icon: Row(spacing: Dimensions.paddingSizeSmall, children: [
-                           FaIcon(FontAwesomeIcons.facebook, size: 20,),
-                           FaIcon(FontAwesomeIcons.linkedin, size: 20,),
-                           FaIcon(FontAwesomeIcons.whatsapp, size: 20,),
-                           ]))),
-                 ])
-
-                ]),
-              ),
+              JobDetailsTitleSection(),
 
               CustomContainer(borderRadius: 5,
                   child: Column(spacing: Dimensions.paddingSizeDefault,

@@ -92,7 +92,8 @@
   "notification": "Notification",
   "profile": "Profile",
   "delete_account": "Delete Account",
-  "top_companies": "Top Companies are Hiring"
+  "top_companies": "Top Companies are Hiring",
+  "application_deadline": "Application Deadline"
 
 
 }

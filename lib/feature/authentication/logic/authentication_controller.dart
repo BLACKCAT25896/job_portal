@@ -116,9 +116,9 @@ class AuthenticationController extends GetxController implements GetxService{
   }
 
   List<String> roles = [
-  'Owner',
-  'Manager',
-  'Employee',
+  'Admin',
+  'Company',
+  'Candidate',
   ];
 
 

@@ -27,7 +27,7 @@ class _LoginWidgetState extends State<LoginWidget> {
   void initState() {
     final controller = Get.find<AuthenticationController>();
     if(AppConstants.demo){
-      phoneController.text = "00000000001";
+      phoneController.text = "admin@gmail.com";
       passwordController.text = "123456";
     }else{
       phoneController.text = controller.getEmail();
@@ -55,8 +55,8 @@ class _LoginWidgetState extends State<LoginWidget> {
                   padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeDefault),
                   child: Column(mainAxisSize: MainAxisSize.min, children: [
 
-                    Text("welcome_back".tr, style: textBold.copyWith(
-                        fontSize: Dimensions.fontSizeLarge),),
+                    Text("login".tr, style: textBold.copyWith(
+                        fontSize: Dimensions.fontSizeHeading),),
 
                     CustomTextField(title: "email".tr,
                       controller: phoneController,
@@ -95,7 +95,10 @@ class _LoginWidgetState extends State<LoginWidget> {
                         String username = phoneController.text.trim();
                         String password = passwordController.text.trim();
                         if(username.isEmpty){
-                          showCustomSnackBar("phone_is_empty".tr);
+                          showCustomSnackBar("email_is_empty".tr);
+                        }
+                        else if(!GetUtils.isEmail(username)){
+                          showCustomSnackBar("invalid_email".tr);
                         }
                         else if(password.isEmpty){
                           showCustomSnackBar("password_is_empty".tr);
@@ -133,13 +136,13 @@ class _LoginWidgetState extends State<LoginWidget> {
                           onTap: (){
                         authenticationController.setSelectedRoleIndex(index);
                         if(index == 0){
-                          phoneController.text = "00000000001";
+                          phoneController.text = "admin@gmail.com";
                           passwordController.text = "123456";
                         }else if(index == 1){
-                          phoneController.text = "manager1@gmail.com";
+                          phoneController.text = "company@gmail.com";
                           passwordController.text = "123456";
                         }else if(index == 2){
-                          phoneController.text = "employee1@gmail.com";
+                          phoneController.text = "candidate@gmail.com";
                           passwordController.text = "123456";
                         }
                       }, text: text));

@@ -27,7 +27,9 @@ class _PublicJobCategoryListWidgetState extends State<PublicJobCategoryListWidge
     return Center(child: CustomContainer(width: Dimensions.webMaxWidth,
         showShadow: false,borderRadius: 5,
         child: GetBuilder<LandingPageController>(initState: (_) {
+          if(Get.find<LandingPageController>().publicJobCategoryModel == null) {
             Get.find<LandingPageController>().getLandingJobCategoryList(1);
+          }
           },
           builder: (controller) {
             final listingModel = controller.publicJobCategoryModel;
@@ -54,7 +56,9 @@ class _PublicJobCategoryListWidgetState extends State<PublicJobCategoryListWidge
                       itemBuilder: (_, index){
                         final item = data.data?[index];
                         return CustomContainer(onTap: (){
-                          Get.toNamed(RouteHelper.getCategoryWiseJobRoute(slug: '', type: 'category'));
+                          Get.toNamed(RouteHelper.getCategoryWiseJobRoute(
+                            categoryId: item?.id.toString()??'',
+                              slug: '', type: 'category'));
                         },
                             borderRadius: 5, showShadow: false,
                             child: Row(spacing: Dimensions.paddingSizeExtraSmall,

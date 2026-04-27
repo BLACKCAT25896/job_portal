@@ -1,4 +1,4 @@
-class CreateAccountBody {
+class CreateCompanyAccountBody {
   String? ownerName;
   String? shopName;
   String? email;
@@ -10,7 +10,7 @@ class CreateAccountBody {
   String? address;
   String? businessIndustry;
 
-  CreateAccountBody(
+  CreateCompanyAccountBody(
       {this.ownerName,
         this.shopName,
         this.email,
@@ -23,7 +23,7 @@ class CreateAccountBody {
         this.businessIndustry
       });
 
-  CreateAccountBody.fromJson(Map<String, dynamic> json) {
+  CreateCompanyAccountBody.fromJson(Map<String, dynamic> json) {
     ownerName = json['owner_name'];
     shopName = json['shop_name'];
     email = json['email'];

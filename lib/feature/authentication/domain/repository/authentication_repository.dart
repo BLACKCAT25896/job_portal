@@ -2,9 +2,10 @@ import 'dart:developer';
 
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:get/get.dart';
+import 'package:mighty_job/feature/authentication/domain/model/create_candidate_account_body.dart';
+import 'package:mighty_job/feature/authentication/domain/model/create_company_account_body.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:mighty_job/api_handle/api_client.dart';
-import 'package:mighty_job/feature/authentication/domain/model/create_account_body.dart';
 import 'package:mighty_job/util/app_constants.dart';
 
 class AuthenticationRepository{
@@ -18,10 +19,13 @@ class AuthenticationRepository{
   }
 
 
-  Future<Response?> registration(CreateAccountBody createAccountBody) async {
-    return await apiClient.postData(AppConstants.registration, createAccountBody.toJson());
+  Future<Response?> candidateRegistration(CreateCandidateAccountBody body) async {
+    return await apiClient.postData(AppConstants.candidateRegistration, body.toJson());
   }
 
+  Future<Response?> companyRegistration(CreateCompanyAccountBody body) async {
+    return await apiClient.postData(AppConstants.companyRegistration, body.toJson());
+  }
 
   Future<Response?> userRolePermissionList(String id) async {
     return await apiClient.getData("");
@@ -105,7 +109,6 @@ class AuthenticationRepository{
   }
 
   Future<String?> _saveDeviceToken() async {
-    //BGvbfIkEn80a8STCbBPdr-S8QNtjrZfrs-UH7-sZgDDpr_LDfxCsx4n-pC-kUh2jqpWLwEvoAti0AyFYLcvQhng
     String? deviceToken = '@';
     if(GetPlatform.isWeb) {
       deviceToken = await FirebaseMessaging.instance.getToken(
@@ -121,20 +124,4 @@ class AuthenticationRepository{
     }
     return deviceToken;
   }
-  //
-  // void setNotificationActive(bool isActive) {
-  //   if(isActive) {
-  //     updateToken();
-  //   }else {
-  //     if(!GetPlatform.isWeb) {
-  //       updateToken(notificationDeviceToken: '@');
-  //       FirebaseMessaging.instance.unsubscribeFromTopic(AppConstants.topic);
-  //       if(isLoggedIn()) {
-  //         FirebaseMessaging.instance.unsubscribeFromTopic('zone_${Get.find<LocationController>().getUserAddress()!.zoneId}_customer');
-  //       }
-  //     }
-  //   }
-  //   sharedPreferences.setBool(AppConstants.notification, isActive);
-  // }
-
 }

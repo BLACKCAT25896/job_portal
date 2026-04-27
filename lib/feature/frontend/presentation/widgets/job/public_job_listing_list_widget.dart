@@ -26,7 +26,9 @@ class _PublicJobListingListWidgetState extends State<PublicJobListingListWidget>
     return Center(child: CustomContainer(width: Dimensions.webMaxWidth,
         showShadow: false,borderRadius: 5,
         child: GetBuilder<LandingPageController>(initState: (_) {
+          if(Get.find<LandingPageController>().publicJobListingModel == null) {
             Get.find<LandingPageController>().getLandingJobListingList(1);
+          }
           },
           builder: (controller) {
             final listingModel = controller.publicJobListingModel;
