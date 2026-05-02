@@ -35,7 +35,7 @@ class _WebHomeScreenState extends State<WebHomeScreen> {
       body: GetBuilder<AuthenticationController>(
         builder: (controller) {
           final userType = controller.getUserType();
-          return userType == "Admin"?
+          return userType == "Super Admin"?
           AdminDashboardSection(scrollController: scrollController):
           userType == "Company"?
           CompanyDashboardSection(): CandidateDashboardSection();

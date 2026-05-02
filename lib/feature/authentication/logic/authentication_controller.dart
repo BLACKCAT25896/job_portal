@@ -34,7 +34,7 @@ class AuthenticationController extends GetxController implements GetxService{
       updateToken();
       String userType = response.body['data']["user"]['user_type'].toString();
       setUserType(userType);
-      if(userType == 'admin'){
+      if(userType == 'Super Admin'){
         await Get.find<ProfileController>().getProfileInfo().then((val){
           Get.offNamed(RouteHelper.getDashboardRoute());
         });
