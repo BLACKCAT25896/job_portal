@@ -1,4 +1,3 @@
-import 'package:mighty_job/feature/subsscription/presentation/widgets/subscription_button_widget.dart';
 import 'package:mighty_job/helper/app_color_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -42,11 +41,7 @@ class SubscriptionItem extends StatelessWidget {
                     style: textRegular.copyWith(fontSize: Dimensions.fontSizeSmall)),
 
 
-                if(MediaQuery.sizeOf(context).width>1000)
-                Padding(
-                  padding: const EdgeInsets.only(top: Dimensions.paddingSizeDefault),
-                  child: SubscriptionButtonWidget(),
-                )
+
               ],),),
 
             if(packageItem!.discount! > 0 && (packageItem?.name?.toLowerCase() != "enterprise"))

@@ -1,4 +1,5 @@
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
@@ -31,6 +32,7 @@ class DashboardScreenState extends State<DashboardScreen> {
   }
   @override
   Widget build(BuildContext context) {
+    bool isDesktop = ResponsiveHelper.isDesktop(context);
     return PopScope(canPop: false,
       onPopInvokedWithResult: (didPop, dynamic) async {
         _onWillPop(context);
@@ -39,11 +41,14 @@ class DashboardScreenState extends State<DashboardScreen> {
       child: GetBuilder<DashboardController>(builder: (menuController) {
         return Scaffold(
           resizeToAvoidBottomInset: false,
-          body: ResponsiveHelper.isDesktop(context)? const WebHomeScreen() : PageStorage(bucket: bucket, child: menuController.item[menuController.currentTab].screen),
+          body: isDesktop? const WebHomeScreen() :
+          PageStorage(bucket: bucket, child: menuController.item[menuController.currentTab].screen),
 
-          bottomNavigationBar: MediaQuery.sizeOf(context).width>1000? const SizedBox() : Container(decoration: BoxDecoration(
+          bottomNavigationBar: isDesktop? const SizedBox() :
+          Container(decoration: BoxDecoration(
               color: Theme.of(context).cardColor,
-              boxShadow: [BoxShadow(offset: const Offset(1,1), blurRadius: 2, spreadRadius: 1, color: Theme.of(context).hintColor)]),
+              boxShadow: [BoxShadow(offset: const Offset(1,1),
+                  blurRadius: 2, spreadRadius: 1, color: Theme.of(context).hintColor)]),
             child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: generateBottomNavigationItems(menuController, menuController.item)),
           ),
@@ -52,7 +57,8 @@ class DashboardScreenState extends State<DashboardScreen> {
     );
   }
 
-  List<Widget> generateBottomNavigationItems(DashboardController menuController, List<NavigationModel> item) {
+  List<Widget> generateBottomNavigationItems(
+      DashboardController menuController, List<NavigationModel> item) {
 
     List<Widget> items = [];
     for(int index = 0; index < item.length; index++) {
@@ -71,12 +77,21 @@ class DashboardScreenState extends State<DashboardScreen> {
 
 }
 Future<bool> _onWillPop(BuildContext context) async {
-  showAnimatedDialog(context,  ConfirmationDialogWidget(icon: Images.logo,
-    title: 'exit_app'.tr,
-    description: 'do_you_want_to_exit_the_app'.tr, onYesPressed: (){
-      SystemNavigator.pop();
-    },),isFlip: true);
-  return true;
+  if (kIsWeb) {
+    return true;
+  } else {
+    showAnimatedDialog(context,
+      ConfirmationDialogWidget(
+        icon: Images.logo,
+        title: 'exit_app'.tr,
+        description: 'do_you_want_to_exit_the_app'.tr,
+        onYesPressed: () {
+          SystemNavigator.pop();
+        },
+      ),
+      isFlip: true,
+    );
+    return false;
+  }
 }
-
 

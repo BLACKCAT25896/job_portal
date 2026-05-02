@@ -28,7 +28,7 @@ class HeaderProfileInfo extends StatelessWidget {
                   child: const CustomImage(width: 30,height: 30,radius: 120,)),
               Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                 Row(children: [
-                  Text(profile?.data?.name??'No Name', style: textMedium.copyWith(fontSize: Dimensions.fontSizeDefault )),
+                  Text("${profile?.data?.user?.firstName??'No Name'} ${profile?.data?.user?.lastName??''}", style: textMedium.copyWith(fontSize: Dimensions.fontSizeDefault )),
                   Icon(Icons.keyboard_arrow_down, size: 20, color: Theme.of(context).hintColor)
                 ],
                 ),

@@ -13,6 +13,14 @@ class ProfileRepository{
     return await apiClient.getData(AppConstants.profile);
   }
 
+  Future<Response?> getCandidateProfileInfo() async {
+    return await apiClient.getData(AppConstants.candidateProfile);
+  }
+
+  Future<Response?> getCompanyProfileInfo() async {
+    return await apiClient.getData(AppConstants.companyProfile);
+  }
+
   Future<Response?> globalStatusUpdate(StatusUpdateBody body) async {
     return await apiClient.postData(AppConstants.globalStatusUpdate, body.toJson());
   }

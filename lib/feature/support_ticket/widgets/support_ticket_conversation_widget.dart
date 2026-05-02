@@ -58,7 +58,7 @@ class _SupportTicketConversationWidgetState extends State<SupportTicketConversat
                 itemCount: replyItem.length,
                 itemBuilder: (context, index) {
                   ReplyItem comment = replyItem[index];
-                  bool isMe = (comment.userId != Get.find<ProfileController>().profileModel?.data?.id);
+                  bool isMe = (comment.userId != Get.find<ProfileController>().profileModel?.data?.user?.id);
                   String? message = comment.message;
                   String dateTime = DateConverter.supportDate(comment.createdAt!);
                   return SupportTicketReplyWidget(message: message, dateTime: dateTime, isMe: isMe);

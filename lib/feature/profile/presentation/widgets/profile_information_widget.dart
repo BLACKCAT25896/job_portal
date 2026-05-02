@@ -24,8 +24,9 @@ class _ProfileInformationWidgetState extends State<ProfileInformationWidget> {
 
   @override
   void initState() {
-    nameController.text = Get.find<ProfileController>().profileModel?.data?.name??'';
-    emailController.text = Get.find<ProfileController>().profileModel?.data?.email??'';
+    final profileController = Get.find<ProfileController>().profileModel?.data;
+    nameController.text = "${profileController?.user?.firstName??''} ${profileController?.user?.lastName??''}";
+    emailController.text = profileController?.user?.email??'';
 
 
     super.initState();
@@ -46,16 +47,17 @@ class _ProfileInformationWidgetState extends State<ProfileInformationWidget> {
 
           CustomTextField(title: "name".tr,
           controller: nameController,
-          hintText: "${profileModel?.data?.name}"),
+          hintText: "${profileModel?.data?.user?.firstName??'No Name'} ${profileModel?.data?.user?.lastName??''}"),
 
           CustomTextField(title: "email".tr,
             controller: emailController,
             inputType: TextInputType.emailAddress,
-            hintText: profileModel?.data?.email??'enter_email'.tr),
+            hintText: profileModel?.data?.user?.email??'enter_email'.tr),
           const SizedBox(height: Dimensions.paddingSizeDefault),
 
 
-          SizedBox(width: 100, child:profileController.isLoading? const Center(child: CircularProgressIndicator()):
+          SizedBox(width: 100, child:profileController.isLoading?
+          const Center(child: CircularProgressIndicator()):
           CustomButton(borderRadius: 5,
               onTap: (){
             String name = nameController.text.trim();
@@ -67,7 +69,7 @@ class _ProfileInformationWidgetState extends State<ProfileInformationWidget> {
             else if(email.isNotEmpty && EmailChecker.isNotValid(email)){
               showCustomSnackBar("email_is_invalid".tr);
             }
-            else if(profileModel?.data?.email == email && profileModel?.data?.name == name){
+            else if(profileModel?.data?.user?.email == email && profileModel?.data?.user?.firstName == name){
               showCustomSnackBar("nothing_change".tr);
             }
 

@@ -1,15 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/global_widget/custom_web_scroll_view_widget.dart';
 import 'package:mighty_job/common/widget/custom_app_bar.dart';
+import 'package:mighty_job/feature/authentication/logic/authentication_controller.dart';
 import 'package:mighty_job/feature/cms_management/cms_settings/controller/system_settngs_controller.dart';
-import 'package:mighty_job/feature/home/presentation/widget/overview_chart_widget.dart';
-import 'package:mighty_job/feature/home/presentation/widget/sales_report_ratio_chart.dart';
-import 'package:mighty_job/feature/home/presentation/widget/statistics_cards_widget.dart';
-import 'package:mighty_job/feature/report_management/domain/model/dashboard_report_data_model.dart';
-import 'package:mighty_job/feature/report_management/logic/report_controller.dart';
-import 'package:mighty_job/helper/responsive_helper.dart';
-import 'package:mighty_job/util/dimensions.dart';
+import 'package:mighty_job/feature/home/presentation/widget/admin_dashboard_section.dart';
+import 'package:mighty_job/feature/home/presentation/widget/candidate_dashboard_section.dart';
+import 'package:mighty_job/feature/home/presentation/widget/company_dashboard_section.dart';
+import 'package:mighty_job/feature/profile/logic/profile_controller.dart';
 
 
 class WebHomeScreen extends StatefulWidget {
@@ -24,8 +21,10 @@ class _WebHomeScreenState extends State<WebHomeScreen> {
 
   @override
   void initState() {
-    Get.find<ReportController>().getDashboardReport();
     Get.find<SystemSettingsController>().getGeneralSetting();
+    if(Get.find<ProfileController>().profileModel == null){
+      Get.find<ProfileController>().getProfileInfo();
+    }
     super.initState();
 
   }
@@ -33,35 +32,14 @@ class _WebHomeScreenState extends State<WebHomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(appBar: CustomAppBar(title: "dashboard".tr),
-      body: CustomWebScrollView(controller: scrollController, slivers: [
-          SliverToBoxAdapter(
-            child: GetBuilder<ReportController>(builder: (reportController) {
-                DashboardReportModel? reportModel = reportController.dashboardReportModel;
-
-                return reportModel != null?
-                Column(crossAxisAlignment: CrossAxisAlignment.start,
-                  spacing: Dimensions.paddingSizeDefault, children: [
-                    SizedBox(height: Dimensions.paddingSizeDefault),
-
-                    const StatisticsCardsWidget(),
-
-                    Padding(padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeDefault),
-                      child: ResponsiveHelper.isDesktop(context)?
-                      Row(crossAxisAlignment: CrossAxisAlignment.start,spacing: Dimensions.paddingSizeDefault, children: [
-                        Expanded(child: OrdersLineChart(),),
-                        SizedBox(width: 300, child: const SalesReportRatioChartWidget()),
-                        ]): Column(crossAxisAlignment: CrossAxisAlignment.start,
-                          spacing: Dimensions.paddingSizeDefault, children: [
-                        OrdersLineChart(),
-                        const SalesReportRatioChartWidget(),
-                      ])),
-
-                  ],
-                ):SizedBox();
-              }
-            ),
-          ),
-        ],
+      body: GetBuilder<AuthenticationController>(
+        builder: (controller) {
+          final userType = controller.getUserType();
+          return userType == "Admin"?
+          AdminDashboardSection(scrollController: scrollController):
+          userType == "Company"?
+          CompanyDashboardSection(): CandidateDashboardSection();
+        }
       ),
     );
   }

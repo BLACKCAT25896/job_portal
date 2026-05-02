@@ -1,5 +1,6 @@
 
 
+import 'package:mighty_job/feature/authentication/presentation/screen/crete_new_account_screen.dart';
 import 'package:mighty_job/feature/candidate/presentation/screens/candidate_screen.dart';
 import 'package:get/get.dart';
 import 'package:mighty_job/feature/candidate_education/presentation/screens/candidate_education_screen.dart';
@@ -61,6 +62,8 @@ class RouteHelper {
 
 
   static const String signUp = '/sign-up';
+  static String getSignUpRoute() => signUp;
+
   static const String forgotPassword = '/forgot-password';
   static const String otpVerify = '/otp-verify';
   static const String resetPassword = '/reset-password';
@@ -233,6 +236,7 @@ class RouteHelper {
   static List<GetPage> routes = [
     GetPage(name: initial, page: () => const LandingScreen()),
     GetPage(name: login, page: () => const LoginScreen()),
+    GetPage(name: signUp, page: () => const CreateNewAccount()),
     GetPage(name: dashboard, page: () => const DashboardScreen()),
     GetPage(name: profile, page: () => const ProfileScreen()),
     GetPage(name: deleteAccount, page: () => const DeleteAccountScreen()),

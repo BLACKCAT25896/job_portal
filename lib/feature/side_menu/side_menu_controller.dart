@@ -82,159 +82,119 @@ class SideBarController extends GetxController implements GetxService{
   final ProfileController profileController = Get.find<ProfileController>();
   List<dynamic> _buildSideSideMenuTypes() { return  [
 
-
-    if(profileController.hasPermission("dashboard"))
     SideMenuNestedExpansionItem(title: "dashboard".tr, keyValue: "dashboard", parent: true,
       icon: Images.dashboardSvgIcon,onTap: () => Get.toNamed(RouteHelper.getDashboardRoute()),),
 
 
-    // if(profileController.hasPermission("dashboard"))
       SideMenuNestedExpansionItem(title: "industry".tr, keyValue: "industry", parent: true,
         icon: Images.dashboardSvgIcon,
         onTap: () => Get.toNamed(RouteHelper.getIndustryRoute()),),
 
-    // if(profileController.hasPermission("dashboard"))
     SideMenuNestedExpansionItem(title: "company_size".tr, keyValue: "company_size", parent: true,
       icon: Images.dashboardSvgIcon,
       onTap: () => Get.toNamed(RouteHelper.getCompanySizeRoute()),),
 
 
-    // if(profileController.hasPermission("dashboard"))
     SideMenuNestedExpansionItem(title: "ownership_type".tr, keyValue: "ownership_type", parent: true,
       icon: Images.dashboardSvgIcon,
       onTap: () => Get.toNamed(RouteHelper.getOwnershipTypeRoute()),),
 
 
-    // if(profileController.hasPermission("dashboard"))
     SideMenuNestedExpansionItem(title: "company".tr, keyValue: "company", parent: true,
       icon: Images.dashboardSvgIcon,
       onTap: () => Get.toNamed(RouteHelper.getCompanyRoute()),),
 
 
-    // if(profileController.hasPermission("dashboard"))
     SideMenuNestedExpansionItem(title: "career_level".tr, keyValue: "career_level", parent: true,
       icon: Images.dashboardSvgIcon,
       onTap: () => Get.toNamed(RouteHelper.getCareerLevelRoute()),),
 
 
-    // if(profileController.hasPermission("dashboard"))
     SideMenuNestedExpansionItem(title: "salary_currency".tr, keyValue: "salary_currency", parent: true,
       icon: Images.dashboardSvgIcon,
       onTap: () => Get.toNamed(RouteHelper.getSalaryCurrencyRoute()),),
 
 
-    // if(profileController.hasPermission("dashboard"))
     SideMenuNestedExpansionItem(title: "salary_period".tr, keyValue: "salary_period", parent: true,
       icon: Images.dashboardSvgIcon,
       onTap: () => Get.toNamed(RouteHelper.getSalaryPeriodRoute()),),
 
-    // if(profileController.hasPermission("dashboard"))
     SideMenuNestedExpansionItem(title: "skill".tr, keyValue: "skill", parent: true,
       icon: Images.dashboardSvgIcon,
       onTap: () => Get.toNamed(RouteHelper.getSkillRoute()),),
 
-    // if(profileController.hasPermission("dashboard"))
     SideMenuNestedExpansionItem(title: "job_category".tr, keyValue: "job_category", parent: true,
       icon: Images.dashboardSvgIcon,
       onTap: () => Get.toNamed(RouteHelper.getJobCategoryRoute()),),
 
-    // if(profileController.hasPermission("dashboard"))
     SideMenuNestedExpansionItem(title: "job_listing".tr, keyValue: "job_listing", parent: true,
       icon: Images.dashboardSvgIcon,
       onTap: () => Get.toNamed(RouteHelper.getJobListingRoute()),),
 
-    // if(profileController.hasPermission("dashboard"))
     SideMenuNestedExpansionItem(title: "job_stage".tr, keyValue: "job_stage", parent: true,
       icon: Images.dashboardSvgIcon,
       onTap: () => Get.toNamed(RouteHelper.getJobStageRoute()),),
 
 
-    // if(profileController.hasPermission("dashboard"))
     SideMenuNestedExpansionItem(title: "job_application".tr, keyValue: "job_application", parent: true,
       icon: Images.dashboardSvgIcon,
       onTap: () => Get.toNamed(RouteHelper.getJobApplicationRoute()),),
 
 
-    // if(profileController.hasPermission("dashboard"))
     SideMenuNestedExpansionItem(title: "candidate".tr, keyValue: "candidate", parent: true,
       icon: Images.dashboardSvgIcon,
       onTap: () => Get.toNamed(RouteHelper.getCandidateRoute()),),
 
 
-    // if(profileController.hasPermission("dashboard"))
     SideMenuNestedExpansionItem(title: "candidate_education".tr, keyValue: "candidate_education", parent: true,
       icon: Images.dashboardSvgIcon,
       onTap: () => Get.toNamed(RouteHelper.getCandidateEducationRoute()),),
 
 
-    // if(profileController.hasPermission("dashboard"))
     SideMenuNestedExpansionItem(title: "candidate_experience".tr, keyValue: "candidate_experience", parent: true,
       icon: Images.dashboardSvgIcon,
       onTap: () => Get.toNamed(RouteHelper.getCandidateExperienceRoute()),),
 
 
-    // if(profileController.hasPermission("dashboard"))
     SideMenuNestedExpansionItem(title: "candidate_resume".tr, keyValue: "candidate_resume", parent: true,
       icon: Images.dashboardSvgIcon,
       onTap: () => Get.toNamed(RouteHelper.getCandidateResumeRoute()),),
 
-    // if(profileController.hasPermission("dashboard"))
     SideMenuNestedExpansionItem(title: "inquiry".tr, keyValue: "inquiry", parent: true,
       icon: Images.dashboardSvgIcon,
       onTap: () => Get.toNamed(RouteHelper.getInquiryRoute()),),
 
-    // if(profileController.hasPermission("dashboard"))
     SideMenuNestedExpansionItem(title: "post_category".tr, keyValue: "post_category", parent: true,
       icon: Images.dashboardSvgIcon,
       onTap: () => Get.toNamed(RouteHelper.getPostCategoryRoute()),),
 
-    // if(profileController.hasPermission("dashboard"))
     SideMenuNestedExpansionItem(title: "post".tr, keyValue: "post", parent: true,
       icon: Images.dashboardSvgIcon,
       onTap: () => Get.toNamed(RouteHelper.getPostRoute()),),
 
-    // if(profileController.hasPermission("dashboard"))
     SideMenuNestedExpansionItem(title: "transaction".tr, keyValue: "transaction", parent: true,
       icon: Images.dashboardSvgIcon,
       onTap: () => Get.toNamed(RouteHelper.getTransactionRoute()),),
 
 
 
-    if(profileController.hasPermission("banners_index"))
+
     SideMenuNestedExpansionItem(title: "website_setup".tr, keyValue: "website_setup",
       parent: true, icon: Images.websiteSetup, children: [
 
-        if(profileController.hasPermission("banners_index"))
+
         SideMenuItemWidget(title: 'website_settings'.tr, keyValue: 'website_settings',
             onTap: () => Get.toNamed(RouteHelper.getWebsiteSettingRoute())),
 
-        if(profileController.hasPermission("policies_index"))
+
         SideMenuItemWidget(title: 'pages'.tr, keyValue: 'pages',
             onTap: () => Get.toNamed(RouteHelper.getPagesRoute())),
       ],
     ),
 
-    // SideMenuNestedExpansionItem(title: "message".tr, keyValue: "message",
-    //   parent: true, icon: Images.message,
-    //   children: [
-    //     SideMenuItemWidget(title: 'new_message'.tr, keyValue: 'new_message',
-    //       onTap: () => Get.dialog(CustomDialogWidget(title: "message".tr,
-    //           child: AddTicketWidget()))),
-    //
-    //     SideMenuItemWidget(title: 'inbox'.tr, keyValue: 'inbox',
-    //         onTap: () => Get.toNamed(RouteHelper.getSupportTicketRoute())),
-    //
-    //     SideMenuItemWidget(title: 'ticket_category'.tr, keyValue: 'ticket_category',
-    //         onTap: () => Get.toNamed(RouteHelper.getSupportTicketCategoryRoute())),
-    //
-    //
-    //
-    //
-    //   ],
-    // ),
 
 
-    if(profileController.hasPermission("user_index"))
+
     SideMenuNestedExpansionItem(title: "user".tr, keyValue: "user",
       parent: true, icon: Images.user, children: [
         SideMenuItemWidget(title: 'user'.tr, keyValue: 'user',
@@ -245,12 +205,12 @@ class SideBarController extends GetxController implements GetxService{
     ),
 
 
-
-    if(profileController.hasPermission("role_index"))
-    SideMenuNestedExpansionItem(title: "roles_and_permissions".tr, keyValue: "roles_and_permissions",
+    SideMenuNestedExpansionItem(title: "roles_and_permissions".tr,
+      keyValue: "roles_and_permissions",
       parent: true, icon: Images.role, children: [
 
-        SideMenuItemWidget(title: 'admin_roles_and_permissions'.tr, keyValue: 'roles_admin_roles',
+        SideMenuItemWidget(title: 'admin_roles_and_permissions'.tr,
+            keyValue: 'roles_admin_roles',
           onTap: () => Get.toNamed(RouteHelper.getRolesRoute())),
 
 
@@ -258,10 +218,6 @@ class SideBarController extends GetxController implements GetxService{
       ],
     ),
 
-
-
-
-    if(profileController.hasPermission("settings_index"))
     SideMenuNestedExpansionItem(title: "general_settings".tr, keyValue: "general_settings",
       parent: true, icon: Images.setting, children: [
 

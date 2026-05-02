@@ -1,9 +1,12 @@
 import 'dart:developer';
 
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:mighty_job/api_handle/api_checker.dart';
+import 'package:mighty_job/feature/authentication/domain/model/create_candidate_account_body.dart';
 import 'package:mighty_job/feature/authentication/domain/model/user_role_permission_model.dart';
 import 'package:mighty_job/feature/authentication/domain/repository/authentication_repository.dart';
+import 'package:mighty_job/feature/authentication/presentation/widgets/gender_selection_widget.dart';
 import 'package:mighty_job/feature/profile/logic/profile_controller.dart';
 import 'package:mighty_job/helper/route_helper.dart';
 
@@ -28,11 +31,16 @@ class AuthenticationController extends GetxController implements GetxService{
     if(response!.statusCode == 200){
       isLoading = false;
       setUserToken(response.body['data']['access_token']);
-      setUserType(response.body['data']["user"]['user_type'].toString());
-      await Get.find<ProfileController>().getProfileInfo().then((val){
-        Get.offAllNamed(RouteHelper.getDashboardRoute());
-        updateToken();
-      });
+      updateToken();
+      String userType = response.body['data']["user"]['user_type'].toString();
+      setUserType(userType);
+      if(userType == 'admin'){
+        await Get.find<ProfileController>().getProfileInfo().then((val){
+          Get.offNamed(RouteHelper.getDashboardRoute());
+        });
+      }else{
+        Get.offNamed(RouteHelper.getInitialRoute());
+      }
 
     }else{
       isLoading = false;
@@ -44,6 +52,32 @@ class AuthenticationController extends GetxController implements GetxService{
 
   }
 
+  String countryDialCode = '+880';
+  void setCountryCode( String countryCode){
+    countryDialCode  = countryDialCode;
+    update();
+  }
+
+  bool isAccept = false;
+  void setAccept(bool value){
+    isAccept = value;
+    update();
+  }
+
+
+  Future<void> candidateRegistration(CreateCandidateAccountBody body) async {
+    isLoading = true;
+    update();
+    Response? response = await authenticationRepository.candidateRegistration(body);
+    if(response!.statusCode == 200){
+      isLoading = false;
+      login(body.email!, body.password!);
+    }else{
+      isLoading = false;
+      ApiChecker.checkApi(response);
+    }
+    update();
+  }
 
 
   UserRolePermissionModel? userRolePermissionModel;
@@ -125,7 +159,19 @@ class AuthenticationController extends GetxController implements GetxService{
   int selectedRoleIndex = 0;
   void setSelectedRoleIndex(int index) {
     selectedRoleIndex = index;
+    for(int i = 0; i < genderList.length; i++) {
+      genderList[i].isSelected = false;
+    }
+    genderList[index].isSelected = true;
+
     update();
   }
+
+
+  List<GenderModel> genderList = [
+    GenderModel(name: 'male'.tr, icon: Icons.male),
+    GenderModel(name: 'female'.tr, icon: Icons.female),
+    GenderModel(name: 'other'.tr, icon: Icons.transgender),
+  ];
 
 }

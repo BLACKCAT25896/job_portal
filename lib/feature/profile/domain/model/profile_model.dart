@@ -1,22 +1,19 @@
-import 'package:mighty_job/helper/price_converter.dart';
-
 class ProfileModel {
-  bool? success;
+  bool? status;
   String? message;
-  ProfileItem? data;
+  Data? data;
 
-  ProfileModel({this.success, this.message, this.data});
+  ProfileModel({this.status, this.message, this.data});
 
   ProfileModel.fromJson(Map<String, dynamic> json) {
-    success = json['success'];
+    status = json['status'];
     message = json['message'];
-    data = json['data'] != null ? ProfileItem.fromJson(json['data']) : null;
-
+    data = json['data'] != null ? Data.fromJson(json['data']) : null;
   }
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = <String, dynamic>{};
-    data['success'] = success;
+    data['status'] = status;
     data['message'] = message;
     if (this.data != null) {
       data['data'] = this.data!.toJson();
@@ -25,116 +22,97 @@ class ProfileModel {
   }
 }
 
-class ProfileItem {
+class Data {
+  User? user;
+  String? tokenType;
+  String? accessToken;
+
+  Data({this.user, this.tokenType, this.accessToken});
+
+  Data.fromJson(Map<String, dynamic> json) {
+    user = json['user'] != null ? User.fromJson(json['user']) : null;
+    tokenType = json['token_type'];
+    accessToken = json['access_token'];
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = <String, dynamic>{};
+    if (user != null) {
+      data['user'] = user!.toJson();
+    }
+    data['token_type'] = tokenType;
+    data['access_token'] = accessToken;
+    return data;
+  }
+}
+
+class User {
   int? id;
-  String? name;
+  String? firstName;
+  String? lastName;
   String? username;
-  String? phone;
   String? email;
-  String? role;
-  Subscription? subscription;
-  String? image;
-  Shop? shop;
-  List<String>? permissions;
+  String? phone;
+  String? avatar;
+  int? roleId;
+  String? userType;
+  int? profileViews;
+  String? regionCode;
+  String? facebookUrl;
+  String? twitterUrl;
+  String? linkedinUrl;
 
-  ProfileItem(
+  User(
       {this.id,
-        this.name,
+        this.firstName,
+        this.lastName,
         this.username,
-        this.phone,
         this.email,
-        this.role,
-        this.subscription,
-        this.image,
-        this.shop,
-        this.permissions
-      });
+        this.phone,
+        this.avatar,
+        this.roleId,
+        this.userType,
+        this.profileViews,
+        this.regionCode,
+        this.facebookUrl,
+        this.twitterUrl,
+        this.linkedinUrl,
+       });
 
-  ProfileItem.fromJson(Map<String, dynamic> json) {
+  User.fromJson(Map<String, dynamic> json) {
     id = json['id'];
-    name = json['name'];
+    firstName = json['first_name'];
+    lastName = json['last_name'];
     username = json['username'];
-    phone = json['phone'];
     email = json['email'];
-    role = json['role'];
-    subscription = json['subscription'] != null ? Subscription.fromJson(json['subscription']) : null;
-    image = json['image'];
-    shop = json['shop'] != null ? Shop.fromJson(json['shop']) : null;
-    permissions = json['permissions'] != null ? List<String>.from(json['permissions']) : null;
+    phone = json['phone'];
+    avatar = json['avatar'];
+    roleId = json['role_id'];
+    userType = json['user_type'];
+    profileViews = json['profile_views'];
+    regionCode = json['region_code'];
+    facebookUrl = json['facebook_url'];
+    twitterUrl = json['twitter_url'];
+    linkedinUrl = json['linkedin_url'];
 
   }
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = <String, dynamic>{};
     data['id'] = id;
-    data['name'] = name;
+    data['first_name'] = firstName;
+    data['last_name'] = lastName;
     data['username'] = username;
-    data['phone'] = phone;
     data['email'] = email;
-    data['role'] = role;
-    if (subscription != null) {
-      data['subscription'] = subscription!.toJson();
-    }
-    data['image'] = image;
-    if (shop != null) {
-      data['shop'] = shop!.toJson();
-    }
-    data['permissions'] = permissions;
-    return data;
-  }
-}
-
-class Shop {
-  int? id;
-  String? name;
-
-  Shop({this.id, this.name});
-
-  Shop.fromJson(Map<String, dynamic> json) {
-    id = PriceConverter.parseInt(json['id']);
-    name = json['name'];
-  }
-
-  Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = <String, dynamic>{};
-    data['id'] = id;
-    data['name'] = name;
-    return data;
-  }
-}
-
-class Subscription {
-  String? startDate;
-  String? endDate;
-  Package? package;
-  Subscription({this.startDate, this.endDate, this.package});
-  Subscription.fromJson(Map<String, dynamic> json) {
-    startDate = json['start_date'];
-    endDate = json['end_date'];
-    package = json['package'] != null ? Package.fromJson(json['package']) : null;
-  }
-
-  Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = <String, dynamic>{};
-    data['start_date'] = startDate;
-    data['end_date'] = endDate;
-    if (package != null) {
-      data['package'] = package!.toJson();
-    }
-    return data;
-  }
-}
-
-class Package {
-  String? packageType;
-  Package({this.packageType});
-  Package.fromJson(Map<String, dynamic> json) {
-    packageType = json['name'];
-  }
-
-  Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = <String, dynamic>{};
-    data['name'] = packageType;
+    data['phone'] = phone;
+    data['avatar'] = avatar;
+    data['role_id'] = roleId;
+    data['user_type'] = userType;
+    data['profile_views'] = profileViews;
+    data['region_code'] = regionCode;
+    data['facebook_url'] = facebookUrl;
+    data['twitter_url'] = twitterUrl;
+    data['linkedin_url'] = linkedinUrl;
     return data;
   }
 }

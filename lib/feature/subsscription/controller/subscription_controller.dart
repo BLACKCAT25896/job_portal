@@ -1,8 +1,6 @@
-import 'dart:developer';
 
 import 'package:get/get.dart';
 import 'package:mighty_job/api_handle/api_checker.dart';
-import 'package:mighty_job/feature/profile/logic/profile_controller.dart';
 import 'package:mighty_job/feature/subsscription/domain/models/package_model.dart';
 import 'package:mighty_job/feature/subsscription/domain/repository/subscription_repository.dart';
 import 'package:mighty_job/feature/subsscription/presentation/widgets/subscription_request_successfull_dialog.dart';
@@ -14,29 +12,6 @@ class SubscriptionController extends GetxController implements GetxService{
 
   bool isLoading = false;
   PackageModel? packageModel;
-  Future<void> getStockList() async {
-    isLoading = true;
-    Response? response = await subscriptionRepository.getPackageList();
-    if (response?.statusCode == 200) {
-      packageModel = PackageModel.fromJson(response?.body);
-      if(packageModel != null){
-        for( int i= 0; i < packageModel!.data!.length; i++){
-          log("message===>>> ${packageModel?.data?[i].name}===${Get.find<ProfileController>().profileModel?.data?.subscription?.package?.packageType}");
-          if(packageModel?.data?[i].name == Get.find<ProfileController>().profileModel?.data?.subscription?.package?.packageType){
-            selectPackage(i);
-            break;
-          }
-
-        }
-      }
-      isLoading = false;
-    }else{
-      isLoading = false;
-      ApiChecker.checkApi(response!);
-    }
-    update();
-  }
-
 
   Future<void> purchasePackage(int packageId, String userPhone, String shopPhone) async {
     isLoading = true;

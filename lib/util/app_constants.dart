@@ -26,6 +26,8 @@ class AppConstants {
   static const String candidateRegistration = '/candidate/register';
   static const String companyRegistration = '/company/register';
   static const String profile = '/profile';
+  static const String candidateProfile = '/candidate/profile';
+  static const String companyProfile = '/company/profile';
   static const String galleries = '/galleries';
   static const String tokenUri = '/save-fcm-token';
   static const String vapidKey = 'BGvbfIkEn80a8STCbBPdr-S8QNtjrZfrs-UH7-sZgDDpr_LDfxCsx4n-pC-kUh2jqpWLwEvoAti0AyFYLcvQhng';
@@ -89,7 +91,7 @@ class AppConstants {
 
   //mighty_job management
   static const String globalStatusUpdate = '/global-status-update';
-  static const String dashboardReport = '/dashboard-data';
+  static const String dashboardReport = '/admin-dashboard';
 
 
   static const String roles = '/roles';
@@ -135,7 +137,7 @@ class AppConstants {
   // Shared Key
   static const String theme = 'theme';
   static const String token = 'token';
-  static const String useType = 'userId';
+  static const String useType = 'userType';
   static const String deviceToken = 'deviceToken';
   static const String countryCode = 'country_code';
   static const String languageCode = 'language_code';

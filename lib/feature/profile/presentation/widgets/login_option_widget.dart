@@ -23,7 +23,7 @@ class LoginOptionWidget extends StatelessWidget {
               borderColor: systemPrimaryColor(),
               borderWidth: 1,
               height: 35, onTap: (){
-
+              Get.toNamed(RouteHelper.getSignUpRoute());
           }, text: "create_account".tr)),
 
         IntrinsicWidth(child: FrontendCustomButton(

@@ -7,7 +7,8 @@ class CustomCheckbox extends StatelessWidget {
   final bool value;
   final Function()? onChange;
   final String? title;
-  const CustomCheckbox({super.key, required this.value, this.onChange, this.title});
+  final Widget? titleWidget;
+  const CustomCheckbox({super.key, required this.value, this.onChange, this.title, this.titleWidget});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +20,9 @@ class CustomCheckbox extends StatelessWidget {
           color: value? systemPrimaryColor() : Theme.of(context).hintColor),
           const SizedBox(width: Dimensions.paddingSizeSmall,),
           if(title != null)
-          Expanded(child: Text(title!, style: textRegular.copyWith()))
+          Expanded(child: Text(title!, style: textRegular.copyWith())),
+          if(titleWidget != null)
+          Expanded(child: titleWidget!)
           ],
         ),
       ),

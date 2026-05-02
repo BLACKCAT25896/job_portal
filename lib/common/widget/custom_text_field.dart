@@ -119,10 +119,8 @@ class _CustomTextFieldState extends State<CustomTextField> {
     return Column(crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         if(widget.title != null)...[
-          Padding(
-            padding: const EdgeInsets.only(top: Dimensions.paddingSizeSmall),
-            child: Row(
-              children: [
+          Padding(padding: const EdgeInsets.only(top: Dimensions.paddingSizeSmall),
+            child: Row(children: [
                 Text(widget.title??"",
                     style: textRegular.copyWith(fontSize: Dimensions.fontSizeDefault)),
                 if(widget.isRequired)
@@ -220,7 +218,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
                   horizontal: widget.horizontalContentPadding?? Dimensions.paddingSizeDefault),
 
               prefixIcon: widget.isCodePicker ? SizedBox(width: 130, child: Row(children: [
-                Container(width: 70,height: 50,
+                Container(width: 70,height: 37,
                   decoration: BoxDecoration(
                     color: widget.isCodePickerFillColor
                         ? Get.isDarkMode

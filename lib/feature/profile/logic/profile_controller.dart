@@ -15,22 +15,12 @@ class ProfileController extends GetxController implements GetxService{
 
   bool isLoading = false;
   ProfileModel? profileModel;
-  bool isStandard = false;
   Future<void> getProfileInfo() async {
     isLoading = true;
     Response? response = await profileRepository.getProfileInfo();
     if (response?.statusCode == 200) {
       profileModel = ProfileModel.fromJson(response?.body);
       Get.find<SideBarController>().refreshMenus();
-      if(profileModel != null){
-        getDays(profileModel?.data?.subscription?.endDate?? DateTime.now().toString());
-        if(profileModel?.data?.subscription?.package?.packageType?.toLowerCase() == "standard"){
-          isStandard = true;
-        }else{
-          isStandard = false;
-        }
-
-      }
       isLoading = false;
     }else{
       isLoading = false;
@@ -38,9 +28,7 @@ class ProfileController extends GetxController implements GetxService{
     }
     update();
   }
-  bool hasPermission(String permission) {
-    return profileModel?.data?.permissions?.contains(permission) ?? false;
-  }
+
 
 
 

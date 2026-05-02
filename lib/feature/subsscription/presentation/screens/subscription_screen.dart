@@ -1,8 +1,4 @@
 import 'package:mighty_job/common/global_widget/custom_web_scroll_view_widget.dart';
-import 'package:mighty_job/common/widget/custom_contaner.dart';
-import 'package:mighty_job/feature/subsscription/presentation/widgets/subscription_button_widget.dart';
-import 'package:mighty_job/feature/subsscription/presentation/widgets/subscription_package_widget.dart';
-import 'package:mighty_job/helper/responsive_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:mighty_job/common/widget/custom_app_bar.dart';
@@ -23,11 +19,10 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> {
       body: CustomWebScrollView(slivers: [
         SliverToBoxAdapter(child: Padding(
           padding: const EdgeInsets.all(Dimensions.paddingSizeDefault),
-          child: SubscriptionPackageWidget(),
+          child: SizedBox(),
         ),)
       ],),
 
-      bottomNavigationBar: ResponsiveHelper.isDesktop(context)? SizedBox() : CustomContainer(borderRadius: 0, child: SubscriptionButtonWidget()),
     );
   }
 }
