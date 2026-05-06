@@ -1,8 +1,6 @@
 
 import 'dart:developer';
 import 'dart:ui';
-
-import 'package:mighty_job/feature/cms_management/cms_settings/domain/model/default_theme_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
@@ -253,36 +251,4 @@ class SystemSettingsController extends GetxController implements GetxService{
       update();
     }
   }
-
-
-
-  Future <void> setActiveTheme(int shopId, int themeId) async{
-    loading = true;
-    update();
-    Response? response = await systemSettingsRepository.setTheme(shopId, themeId);
-    if (response?.statusCode == 200) {
-      showCustomSnackBar("updated_successfully".tr, isError: false);
-      loading = false;
-      getDefaultTheme();
-    }else{
-      loading = false;
-      ApiChecker.checkApi(response!);
-    }
-    update();
-  }
-
-
-
-  DefaultThemeModel? defaultThemeModel;
-  Future<void> getDefaultTheme() async {
-    Response? response = await systemSettingsRepository.getDefaultTheme();
-    if (response?.statusCode == 200) {
-      defaultThemeModel = DefaultThemeModel.fromJson(response?.body);
-    }else{
-      ApiChecker.checkApi(response!);
-    }
-    update();
-  }
-
-
 }

@@ -24,9 +24,9 @@ class _ProfileInformationWidgetState extends State<ProfileInformationWidget> {
 
   @override
   void initState() {
-    final profileController = Get.find<ProfileController>().profileModel?.data;
-    nameController.text = "${profileController?.user?.firstName??''} ${profileController?.user?.lastName??''}";
-    emailController.text = profileController?.user?.email??'';
+    final data = Get.find<ProfileController>().profileModel?.data;
+    nameController.text = data?.name??'';
+    emailController.text = data?.email??'';
 
 
     super.initState();
@@ -47,12 +47,12 @@ class _ProfileInformationWidgetState extends State<ProfileInformationWidget> {
 
           CustomTextField(title: "name".tr,
           controller: nameController,
-          hintText: "${profileModel?.data?.user?.firstName??'No Name'} ${profileModel?.data?.user?.lastName??''}"),
+          hintText: profileModel?.data?.name??'No Name'),
 
           CustomTextField(title: "email".tr,
             controller: emailController,
             inputType: TextInputType.emailAddress,
-            hintText: profileModel?.data?.user?.email??'enter_email'.tr),
+            hintText: profileModel?.data?.email??'email'.tr),
           const SizedBox(height: Dimensions.paddingSizeDefault),
 
 
@@ -69,7 +69,7 @@ class _ProfileInformationWidgetState extends State<ProfileInformationWidget> {
             else if(email.isNotEmpty && EmailChecker.isNotValid(email)){
               showCustomSnackBar("email_is_invalid".tr);
             }
-            else if(profileModel?.data?.user?.email == email && profileModel?.data?.user?.firstName == name){
+            else if(profileModel?.data?.email == email && profileModel?.data?.name == name){
               showCustomSnackBar("nothing_change".tr);
             }
 

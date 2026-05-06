@@ -16,36 +16,31 @@ class HeaderProfileInfoMenu extends StatefulWidget {
 
 class _HeaderProfileInfoMenuState extends State<HeaderProfileInfoMenu> {
   @override
-  void initState() {
-    if(Get.find<ProfileController>().profileModel == null) {
-      Get.find<ProfileController>().getProfileInfo();
-    }
-    super.initState();
-  }
-  @override
   Widget build(BuildContext context) {
     return GetBuilder<AuthenticationController>(builder: (authenticationController) {
+      String userType = authenticationController.getUserType();
       return GetBuilder<ProfileController>(builder: (profileController) {
         return Center(child: SimpleDropdownMenu(
           button: const HeaderProfileInfo(),
-          backgroundColor: Theme.of(context).cardColor, items: [
+          backgroundColor: Theme.of(context).cardColor,
+          items: userType == "Candidate"?[
 
-          SimpleMenuItem(title: 'profile'.tr, icon: Icons.person,
+          SimpleMenuItem(title: 'profile'.tr, icon: Icons.person_outline,
               onTap: () => Get.toNamed(RouteHelper.getProfileRoute())),
 
-          SimpleMenuItem(title: 'email_cv'.tr, icon: Icons.dashboard,
+          SimpleMenuItem(title: 'email_cv'.tr, icon: Icons.mail_outline,
               onTap: () => Get.toNamed(RouteHelper.getDashboardRoute())),
 
-          SimpleMenuItem(title: 'personal_hiring'.tr, icon: Icons.dashboard,
+          SimpleMenuItem(title: 'personal_hiring'.tr, icon: Icons.handshake_outlined,
               onTap: () => Get.toNamed(RouteHelper.getDashboardRoute())),
 
-          SimpleMenuItem(title: 'saved_job'.tr, icon: Icons.dashboard,
+          SimpleMenuItem(title: 'saved_job'.tr, icon: Icons.bookmark_border,
               onTap: () => Get.toNamed(RouteHelper.getDashboardRoute())),
 
-          SimpleMenuItem(title: 'following_employer'.tr, icon: Icons.dashboard,
+          SimpleMenuItem(title: 'following_employer'.tr, icon: Icons.group_outlined,
               onTap: () => Get.toNamed(RouteHelper.getDashboardRoute())),
 
-          SimpleMenuItem(title: 'applied_job'.tr, icon: Icons.dashboard,
+          SimpleMenuItem(title: 'applied_job'.tr, icon: Icons.work_outline,
               onTap: () => Get.toNamed(RouteHelper.getDashboardRoute())),
 
 
@@ -55,7 +50,37 @@ class _HeaderProfileInfoMenuState extends State<HeaderProfileInfoMenu> {
               Get.offAllNamed(RouteHelper.getSignInRoute());
             },
           ),
-        ],
+        ] :[
+            SimpleMenuItem(title: 'billing'.tr, icon: Icons.payment_outlined,
+                onTap: () => Get.toNamed(RouteHelper.getProfileRoute())),
+
+            SimpleMenuItem(title: 'subscribed_services'.tr, icon: Icons.subscriptions_outlined,
+                onTap: () => Get.toNamed(RouteHelper.getProfileRoute())),
+
+            SimpleMenuItem(title: 'edit_account'.tr, icon: Icons.edit_outlined,
+                onTap: () => Get.toNamed(RouteHelper.getProfileRoute())),
+
+            SimpleMenuItem(title: 'communication'.tr, icon: Icons.chat_bubble_outline,
+                onTap: () => Get.toNamed(RouteHelper.getProfileRoute())),
+
+            SimpleMenuItem(title: 'support'.tr, icon: Icons.support_agent,
+                onTap: () => Get.toNamed(RouteHelper.getProfileRoute())),
+
+            SimpleMenuItem(title: 'settings'.tr, icon: Icons.settings_outlined,
+                onTap: () => Get.toNamed(RouteHelper.getProfileRoute())),
+
+            SimpleMenuItem(title: 'analytics'.tr, icon: Icons.bar_chart_outlined,
+                onTap: () => Get.toNamed(RouteHelper.getProfileRoute())),
+
+            SimpleMenuItem(title: 'change_password'.tr, icon: Icons.lock_outline,
+                onTap: () => Get.toNamed(RouteHelper.getProfileRoute())),
+
+            SimpleMenuItem(title: 'user_management'.tr, icon: Icons.manage_accounts_outlined,
+                onTap: () => Get.toNamed(RouteHelper.getProfileRoute())),
+
+            SimpleMenuItem(title: 'logout'.tr, icon: Icons.logout,
+                onTap: () => Get.toNamed(RouteHelper.getProfileRoute())),
+          ],
         ),
         );
       }

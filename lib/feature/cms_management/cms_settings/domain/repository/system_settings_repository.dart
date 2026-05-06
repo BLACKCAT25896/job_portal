@@ -117,19 +117,5 @@ class SystemSettingsRepository{
     });
   }
 
-  Future<Response?> getDefaultTheme () async {
-    return await apiClient.getData(AppConstants.themeAssign);
-  }
-
-
-
-  Future<Response?> setTheme(int shopId, int themeId) async {
-    return await apiClient.postData(AppConstants.themeAssign,
-        {
-          "shop_id": shopId,
-          "theme_id": themeId
-        });
-
-  }
 
 }

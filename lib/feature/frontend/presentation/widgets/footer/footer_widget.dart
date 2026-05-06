@@ -4,7 +4,6 @@ import 'package:mighty_job/feature/frontend/presentation/widgets/footer/footer_l
 import 'package:mighty_job/feature/frontend/presentation/widgets/footer/footer_navigation_link_widget.dart';
 import 'package:mighty_job/feature/frontend/presentation/widgets/footer/job_recruiter.dart';
 import 'package:mighty_job/feature/frontend/presentation/widgets/footer/job_seekers.dart';
-import 'package:mighty_job/feature/frontend/presentation/widgets/footer/news_letter_widget.dart';
 import 'package:mighty_job/helper/responsive_helper.dart';
 import 'package:mighty_job/util/dimensions.dart';
 
@@ -24,7 +23,7 @@ class FooterWidget extends StatelessWidget {
             Expanded(child: FooterNavigationLinkWidget()),
             Expanded(child: JobSeekers()),
             Expanded(child: JobRecruiter()),
-            Expanded(child: NewsLetterWidget())
+
 
           ])))),
        Container(width: double.infinity,height: .25, color: Theme.of(context).hintColor),
@@ -42,7 +41,6 @@ class FooterWidget extends StatelessWidget {
               FooterNavigationLinkWidget(),
               JobSeekers(),
               JobRecruiter(),
-              NewsLetterWidget()
 
         ])),
       const CopyrightWidget()

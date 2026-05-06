@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:mighty_job/common/widget/custom_contaner.dart';
 import 'package:mighty_job/common/widget/custom_image.dart';
 import 'package:mighty_job/feature/cms_management/cms_settings/controller/system_settngs_controller.dart';
 import 'package:mighty_job/feature/cms_management/cms_settings/domain/model/image_setting_model.dart';
@@ -23,12 +24,12 @@ class HeaderLogoSection extends StatelessWidget {
         String? lightLogo =  imageSettingModel?.data?.headerLogoLightTheme;
         String? darkLogo =  imageSettingModel?.data?.headerLogoDarkTheme;
         String ? logoToShow = Get.isDarkMode? darkLogo : lightLogo;
-        return (imageSettingModel != null && imageSettingModel.data != null )?
-        Padding(padding: const EdgeInsets.all(5),
-            child: InkWell(onTap: () => Get.toNamed(RouteHelper.getInitialRoute()),
-                child: SizedBox(height: 50, child: CustomImage(
-                  image: '${AppConstants.imageBaseUrl}/image_settings/$logoToShow',
-                  fit: BoxFit.contain)))):SizedBox();
+        return
+        CustomContainer(showShadow: false,verticalPadding: 0, horizontalPadding: 0,
+            onTap: () => Get.toNamed(RouteHelper.getInitialRoute()),
+            child: SizedBox(height: 50, child: CustomImage(
+              image: '${AppConstants.imageBaseUrl}/image_settings/$logoToShow',
+              fit: BoxFit.contain)));
       }
     );
   }

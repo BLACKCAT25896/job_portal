@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:mighty_job/feature/frontend/presentation/widgets/category_or_industry_selection_widget.dart';
 import 'package:mighty_job/feature/frontend/presentation/widgets/industry/public_industry_iten_widget.dart';
+import 'package:mighty_job/helper/route_helper.dart';
 import 'package:mighty_job/util/dimensions.dart';
 
 class PublicIndustryListWidget extends StatefulWidget {
@@ -54,7 +55,16 @@ class _PublicIndustryListWidgetState extends State<PublicIndustryListWidget> {
                   gridDelegate: SliverSimpleGridDelegateWithMaxCrossAxisExtent(maxCrossAxisExtent: 300),
                   itemBuilder: (_, index){
                     final item = data.data?[index];
-                    return PublicIndustryItemWidget(index: index, item: item);
+                    return InkWell( mouseCursor: SystemMouseCursors.click,
+                        onTap: (){
+                      if(widget.fromFilter){
+                        Get.find<LandingPageController>().selectIndustry(item!);
+                        Get.back();
+                      }else{
+                        Get.toNamed(RouteHelper.getCategoryWiseJobRoute(slug: '', type: 'industry'));
+                      }
+                    },
+                        child: PublicIndustryItemWidget(index: index, item: item));
                   }),
             ),
           ],

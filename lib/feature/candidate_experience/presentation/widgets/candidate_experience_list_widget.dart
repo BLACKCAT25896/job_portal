@@ -20,10 +20,10 @@ class CandidateExperienceListWidget extends StatelessWidget {
         final candidateExperienceData = candidateExperienceModel?.data;
 
         return GenericListSection<CandidateExperienceItem>(
-          sectionTitle: "human_resource".tr,
-          pathItems: ["candidate_experience_list".tr],
-          addNewTitle: "add_new_candidate_experience".tr,
-          onAddNewTap: () => Get.dialog(CustomDialogWidget(title: "candidate_experience".tr,
+          sectionTitle: "experience".tr,
+          pathItems: ["experience_list".tr],
+          addNewTitle: "add_new_experience".tr,
+          onAddNewTap: () => Get.dialog(CustomDialogWidget(title: "experience".tr,
               child: const AddNewCandidateExperienceWidget())),
           headings: const ["designation", "company", "start_date","end_date"],
 

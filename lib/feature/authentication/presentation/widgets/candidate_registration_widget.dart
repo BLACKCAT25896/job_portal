@@ -122,7 +122,6 @@ class _CandidateRegistrationWidgetState extends State<CandidateRegistrationWidge
                 String phone = phoneController.text.trim();
                 String password = passwordController.text.trim();
                 String confirmPassword = confirmPasswordController.text.trim();
-                String? gender = controller.genderList[controller.selectedRoleIndex].name;
 
                 if(firstName.isEmpty) {
                   showCustomSnackBar("first_name_is_empty".tr);

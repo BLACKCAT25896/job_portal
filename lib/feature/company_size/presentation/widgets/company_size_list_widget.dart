@@ -48,7 +48,7 @@ class _CompanySizeListWidgetState extends State<CompanySizeListWidget> {
           showRouteSection: !widget.fromFilter,
           sectionTitle: "company_size".tr,
           pathItems: ["company_size".tr],
-          addNewTitle: "add_new_companySize".tr,
+          addNewTitle: "add_new_company_size".tr,
           onAddNewTap: () {
             Get.dialog(CustomDialogWidget(title: "company_size".tr,
                 child: AddNewCompanySizeWidget()));

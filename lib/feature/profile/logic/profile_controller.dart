@@ -31,6 +31,37 @@ class ProfileController extends GetxController implements GetxService{
 
 
 
+  Future<void> getCandidateProfileInfo() async {
+    isLoading = true;
+    Response? response = await profileRepository.getCandidateProfileInfo();
+    if (response?.statusCode == 200) {
+      profileModel = ProfileModel.fromJson(response?.body);
+      Get.find<SideBarController>().refreshMenus();
+      isLoading = false;
+    }else{
+      isLoading = false;
+      ApiChecker.checkApi(response!);
+    }
+    update();
+  }
+
+
+  Future<void> getCompanyProfileInfo() async {
+    isLoading = true;
+    Response? response = await profileRepository.getCompanyProfileInfo();
+    if (response?.statusCode == 200) {
+      profileModel = ProfileModel.fromJson(response?.body);
+      Get.find<SideBarController>().refreshMenus();
+      isLoading = false;
+    }else{
+      isLoading = false;
+      ApiChecker.checkApi(response!);
+    }
+    update();
+  }
+
+
+
 
 
   Future<void> globalStatusUpdate(StatusUpdateBody body, {

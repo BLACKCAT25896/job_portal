@@ -50,7 +50,7 @@ class _LandingPageAppBarState extends State<LandingPageAppBar> {
               child: Center(child: SizedBox(width: Dimensions.webMaxWidth,
                 child: Row(children: [
                   MenuButtonWeb(title: 'recruiter'.tr, onTap: () {
-                    Get.toNamed(RouteHelper.getInitialRoute());
+                    Get.toNamed(RouteHelper.getCreateCompanyRoute());
                   },),
                   MenuButtonWeb(title: 'post_a_job'.tr, onTap: () {
                     Get.toNamed(RouteHelper.getInitialRoute());

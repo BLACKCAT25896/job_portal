@@ -65,12 +65,15 @@ class DropdownSearch<T> extends StatelessWidget {
           },
         );
       },
-      child: Column(crossAxisAlignment: CrossAxisAlignment.start,spacing: Dimensions.paddingSizeTiny,
+      child: Column(crossAxisAlignment: CrossAxisAlignment.start,
+        spacing: Dimensions.paddingSizeSmall,
         children: [
           if(sectionTitle != null)
             Padding(padding: EdgeInsets.symmetric(vertical: Dimensions.paddingSizeSmall, ),
               child: Text("$sectionTitle", style: textRegular.copyWith())),
-          Container(height: height?? 50,
+
+        
+          Container(height: height?? 40,
             padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
             decoration: BoxDecoration(color: Theme.of(context).cardColor,
                 border: Border.all(width: .5, color: Theme.of(context).hintColor),

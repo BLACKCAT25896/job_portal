@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:mighty_job/api_handle/api_checker.dart';
 import 'package:mighty_job/feature/authentication/domain/model/create_candidate_account_body.dart';
+import 'package:mighty_job/feature/authentication/domain/model/create_company_account_body.dart';
 import 'package:mighty_job/feature/authentication/domain/model/user_role_permission_model.dart';
 import 'package:mighty_job/feature/authentication/domain/repository/authentication_repository.dart';
 import 'package:mighty_job/feature/authentication/presentation/widgets/gender_selection_widget.dart';
@@ -38,8 +39,14 @@ class AuthenticationController extends GetxController implements GetxService{
         await Get.find<ProfileController>().getProfileInfo().then((val){
           Get.offNamed(RouteHelper.getDashboardRoute());
         });
+      }else if(userType == "Employer"){
+        await Get.find<ProfileController>().getCompanyProfileInfo().then((val){
+          Get.offNamed(RouteHelper.getInitialRoute());
+        });
       }else{
-        Get.offNamed(RouteHelper.getInitialRoute());
+        await Get.find<ProfileController>().getCandidateProfileInfo().then((val){
+          Get.offNamed(RouteHelper.getInitialRoute());
+        });
       }
 
     }else{
@@ -69,6 +76,20 @@ class AuthenticationController extends GetxController implements GetxService{
     isLoading = true;
     update();
     Response? response = await authenticationRepository.candidateRegistration(body);
+    if(response!.statusCode == 200){
+      isLoading = false;
+      login(body.email!, body.password!);
+    }else{
+      isLoading = false;
+      ApiChecker.checkApi(response);
+    }
+    update();
+  }
+
+  Future<void> companyRegistration(CreateCompanyAccountBody body) async {
+    isLoading = true;
+    update();
+    Response? response = await authenticationRepository.companyRegistration(body);
     if(response!.statusCode == 200){
       isLoading = false;
       login(body.email!, body.password!);
@@ -173,5 +194,22 @@ class AuthenticationController extends GetxController implements GetxService{
     GenderModel(name: 'female'.tr, icon: Icons.female),
     GenderModel(name: 'other'.tr, icon: Icons.transgender),
   ];
+
+  List<String> numberOfEmployees =["1-25", "26-50", "51-100", "101-500", "500-1000", "1000+" ];
+
+  String selectedNumberOfEmployees = "1-25";
+  void setSelectedNumberOfEmployees(String value) {
+    selectedNumberOfEmployees = value;
+    update();
+  }
+
+  bool captchaVerified = false;
+  void setCaptchaVerified(bool value) {
+    captchaVerified = value;
+    update();
+  }
+
+
+
 
 }

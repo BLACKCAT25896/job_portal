@@ -4,7 +4,6 @@ import 'package:get/get.dart';
 import 'package:mighty_job/common/widget/app_bar_widget.dart';
 import 'package:mighty_job/common/widget/body_widget.dart';
 import 'package:mighty_job/feature/cms_management/cms_settings/controller/system_settngs_controller.dart';
-import 'package:mighty_job/feature/home/presentation/widget/overview_chart_widget.dart';
 import 'package:mighty_job/feature/home/presentation/widget/sales_report_ratio_chart.dart';
 import 'package:mighty_job/feature/home/presentation/widget/statistics_cards_widget.dart';
 import 'package:mighty_job/feature/profile/presentation/widgets/home_header_section_widget.dart';
@@ -54,7 +53,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         horizontal: Dimensions.paddingSizeDefault),
                         child: Column(crossAxisAlignment: CrossAxisAlignment.start,
                             spacing: Dimensions.paddingSizeDefault, children: [
-                              OrdersLineChart(),
+                              // OrdersLineChart(),
                               const SalesReportRatioChartWidget()
                             ])),
 

@@ -20,10 +20,10 @@ class CandidateEducationListWidget extends StatelessWidget {
         final candidateEducationData = candidateEducationModel?.data;
 
         return GenericListSection<CandidateEducationItem>(
-          sectionTitle: "human_resource".tr,
-          pathItems: ["candidateEducation_list".tr],
-          addNewTitle: "add_new_candidate_education".tr,
-          onAddNewTap: () => Get.dialog(CustomDialogWidget(title: "candidate_education".tr,
+          sectionTitle: "education".tr,
+          pathItems: ["education_list".tr],
+          addNewTitle: "add_new_education".tr,
+          onAddNewTap: () => Get.dialog(CustomDialogWidget(title: "education".tr,
               child: const AddNewCandidateEducationWidget())),
           headings: const ["name","institute",  "result", "year"],
 

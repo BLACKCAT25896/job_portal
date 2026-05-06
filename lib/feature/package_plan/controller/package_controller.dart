@@ -1,0 +1,96 @@
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:mighty_job/api_handle/api_checker.dart';
+import 'package:mighty_job/common/widget/custom_snackbar.dart';
+import 'package:mighty_job/feature/package_plan/domain/models/package_body.dart';
+import 'package:mighty_job/feature/package_plan/domain/models/package_model.dart';
+import 'package:mighty_job/feature/package_plan/domain/repository/package_repository.dart';
+
+class PackageController extends GetxController implements GetxService{
+  final PackageRepository packageRepository;
+  PackageController({required this.packageRepository});
+
+
+
+
+  bool isLoading = false;
+  PackageModel? packageModel;
+  Future<void> getPackageList(int offset) async {
+    Response? response = await packageRepository.getPackageList(offset);
+    if (response?.statusCode == 200) {
+      if(offset == 1){
+        packageModel = PackageModel.fromJson(response?.body);
+      }else{
+        packageModel?.data?.data?.addAll(PackageModel.fromJson(response?.body).data!.data!);
+        packageModel?.data?.meta?.currentPage = PackageModel.fromJson(response?.body).data?.meta?.currentPage;
+        packageModel?.data?.meta?.total = PackageModel.fromJson(response?.body).data?.meta?.total;
+      }
+      isLoading = false;
+    }else{
+      isLoading = false;
+      ApiChecker.checkApi(response!);
+    }
+    update();
+  }
+
+  Future<void> createNewPackage(PackageBody body,) async {
+    isLoading = true;
+    update();
+    Response? response = await packageRepository.createNewPackage(body);
+    if(response!.statusCode == 200){
+      isLoading = false;
+      Get.back();
+      showCustomSnackBar("added_successfully".tr, isError: false);
+      getPackageList(1);
+
+    }else{
+      ApiChecker.checkApi(response);
+    }
+    isLoading = false;
+    update();
+
+  }
+
+  Future<void> updatePackage(PackageBody body, int id) async {
+    isLoading = true;
+    update();
+    Response? response = await packageRepository.updatePackage(body, id);
+    if(response!.statusCode == 200){
+      isLoading = false;
+      Get.back();
+      showCustomSnackBar("updated_successfully".tr, isError: false);
+      getPackageList(1);
+    }else{
+      ApiChecker.checkApi(response);
+    }
+    isLoading = false;
+    update();
+
+  }
+
+
+  Future<void> deletePackage(int id) async {
+    isLoading = true;
+    Response? response = await packageRepository.deletePackage(id);
+    if (response?.statusCode == 200) {
+      showCustomSnackBar("deleted_successfully".tr, isError: false);
+      getPackageList(1);
+      isLoading = false;
+    }else{
+      isLoading = false;
+      ApiChecker.checkApi(response!);
+    }
+    update();
+  }
+
+  TextEditingController extraDaysController = TextEditingController();
+  TextEditingController amountController = TextEditingController();
+  PackageItem? selectedPackageItem;
+  void selectPackage(PackageItem item){
+    selectedPackageItem = item;
+    amountController.text = selectedPackageItem?.price?.toString()??"0";
+    extraDaysController.text = selectedPackageItem?.durationDays?.toString() ??"0";
+    update();
+  }
+
+}

@@ -44,6 +44,8 @@ import 'package:mighty_job/feature/cms_management/cms_settings/controller/system
 import 'package:mighty_job/feature/cms_management/cms_settings/domain/repository/system_settings_repository.dart';
 import 'package:mighty_job/feature/cms_management/policy_pages/domain/repository/policy_pages_repository.dart';
 import 'package:mighty_job/feature/cms_management/policy_pages/logic/pages_controller.dart';
+import 'package:mighty_job/feature/package_plan/controller/package_controller.dart';
+import 'package:mighty_job/feature/package_plan/domain/repository/package_repository.dart';
 import 'package:mighty_job/feature/payment_method/domain/repository/payment_method_repository.dart';
 import 'package:mighty_job/feature/payment_method/logic/payment_method_controller.dart';
 import 'package:mighty_job/feature/post/controller/post_controller.dart';
@@ -233,6 +235,10 @@ Future<Map<String, Map<String, String>>> init() async {
 
   Get.lazyPut(() => LandingRepository(apiClient: Get.find()));
   Get.lazyPut(() => LandingPageController(landingRepository: Get.find()));
+
+
+  Get.lazyPut(() => PackageRepository(apiClient: Get.find()));
+  Get.lazyPut(() => PackageController(packageRepository: Get.find()));
 
 
 

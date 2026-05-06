@@ -53,9 +53,14 @@ class AppConstants {
   static const String jobListings = '/job-listings';
   static const String jobStages = '/job-stages';
   static const String jobApplications = '/job-applications';
-  static const String candidateEducation = '/candidate-education';
-  static const String candidateExperience = '/candidate-experiences';
-  static const String candidateResume = '/candidate-resumes';
+  static const String candidateEducation = '/candidate/candidate-education';
+  static const String candidateExperience = '/candidate/candidate-experiences';
+  static const String candidateResume = '/candidate/candidate-resumes';
+  static const String candidateProject = '/candidate/candidate-projects';
+  static const String candidateTraining = '/candidate/candidate-trainings';
+  static const String candidateCertificate = '/candidate/candidate-certifications';
+  static const String candidateReference = '/candidate/candidate-references';
+  static const String candidateSocialLinks = '/candidate/candidate-social-links';
   static const String reportedJobs = '/reported-jobs';
   static const String inquiries = '/inquiries';
   static const String dashboardStatistics = '/dashboard/statistics';
@@ -126,11 +131,9 @@ class AppConstants {
   static const String closeTicket = '/admin/close-ticket';
 
 
+  static const String packages = '/packages';
 
-  //Theme
-  static const String getTheme = '/frontend/themes';
-  static const String themeAssign = '/tenants-theme';
-  static const String getDefaultTheme = '/frontend/default-theme';
+
 
 
 

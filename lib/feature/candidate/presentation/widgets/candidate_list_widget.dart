@@ -20,7 +20,7 @@ class CandidateListWidget extends StatelessWidget {
         final candidateData = candidateModel?.data;
 
         return GenericListSection<CandidateItem>(
-          sectionTitle: "human_resource".tr,
+          sectionTitle: "candidate".tr,
           pathItems: ["candidate_list".tr],
           addNewTitle: "add_new_candidate".tr,
           onAddNewTap: () => Get.dialog(CustomDialogWidget(title: "candidate".tr,
