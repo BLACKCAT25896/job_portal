@@ -4,7 +4,7 @@ import 'package:mighty_job/common/widget/custom_search.dart';
 import 'package:mighty_job/common/widget/custom_snackbar.dart';
 import 'package:mighty_job/feature/job_listing/controller/job_listing_controller.dart';
 import 'package:mighty_job/feature/job_listing/domain/models/job_listing_model.dart';
-import 'package:mighty_job/feature/job_listing/presentation/widgets/add_new_job_listing_widget.dart';
+import 'package:mighty_job/feature/job_listing/presentation/widgets/post_a_job_widget.dart';
 import 'package:mighty_job/feature/job_listing/presentation/widgets/job_listing_item.dart';
 import 'package:mighty_job/util/dimensions.dart';
 import 'package:flutter/material.dart';
@@ -51,7 +51,7 @@ class _JobListingListWidgetState extends State<JobListingListWidget> {
           addNewTitle: "add_new_listing".tr,
           onAddNewTap: () {
             Get.dialog(CustomDialogWidget(title: "listing".tr,
-                child: AddNewJobListingWidget()));
+                child: PostAJobWidget()));
           },
 
           headings: const ["name"],

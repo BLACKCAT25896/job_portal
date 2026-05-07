@@ -28,6 +28,7 @@ import 'package:mighty_job/feature/inquiry/presentation/screens/inquiry_screen.d
 import 'package:mighty_job/feature/job_application/presentation/screens/job_application_screen.dart';
 import 'package:mighty_job/feature/job_category/presentation/screens/job_category_screen.dart';
 import 'package:mighty_job/feature/job_listing/presentation/screens/job_listing_screen.dart';
+import 'package:mighty_job/feature/job_listing/presentation/screens/post_a_job_screen.dart';
 import 'package:mighty_job/feature/job_stage/presentation/screens/job_stage_screen.dart';
 import 'package:mighty_job/feature/notification/presentation/screens/notification_screen.dart';
 import 'package:mighty_job/feature/ownership_type/presentation/screens/ownership_type_screen.dart';
@@ -114,6 +115,10 @@ class RouteHelper {
 
   static const String jobListing = '/job-listing';
   static String getJobListingRoute() => jobListing;
+
+  static const String postAJob = '/post-a-job';
+  static String getPostAJobRoute() => postAJob;
+
 
   static const String jobStage = '/job-stage';
   static String getJobStageRoute() => jobStage;
@@ -280,6 +285,7 @@ class RouteHelper {
     GetPage(name: skill, page: ()=> SkillScreen()),
     GetPage(name: jobCategories, page: ()=> JobCategoryScreen()),
     GetPage(name: jobListing, page: ()=> JobListingScreen()),
+    GetPage(name: postAJob, page: ()=> PostAJobScreen()),
     GetPage(name: jobStage, page: ()=> JobStageScreen()),
     GetPage(name: jobApplication, page: ()=> JobApplicationScreen()),
     GetPage(name: reportedJob, page: ()=> const ReportedJobScreen()),

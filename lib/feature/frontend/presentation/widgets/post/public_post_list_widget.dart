@@ -22,17 +22,17 @@ class _PublicPostListWidgetState extends State<PublicPostListWidget> {
   TextEditingController searchController = TextEditingController();
   @override
   Widget build(BuildContext context) {
-    return Center(child: CustomContainer(width: Dimensions.webMaxWidth,
-        showShadow: false,borderRadius: 5,
-        child: GetBuilder<LandingPageController>(initState: (_) {
-            Get.find<LandingPageController>().getLandingPostList(1);
-          },
-          builder: (controller) {
-            final listingModel = controller.publicPostModel;
-            final data = listingModel?.data;
+    return GetBuilder<LandingPageController>(initState: (_) {
+        Get.find<LandingPageController>().getLandingPostList(1);
+      },
+      builder: (controller) {
+        final listingModel = controller.publicPostModel;
+        final data = listingModel?.data;
 
-            return data != null? (data.data != null && data.data!.isNotEmpty)?
-            Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+        return data != null? (data.data != null && data.data!.isNotEmpty)?
+        Center(
+          child: CustomContainer(width: Dimensions.webMaxWidth, showShadow: false,borderRadius: 5,
+            child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                 Text("post".tr, style: textBold.copyWith(fontSize: Dimensions.fontSizeExtraLarge),),
                 PaginatedListWidget(landing: true,limit: 50,
                   offset: data.currentPage??1,
@@ -61,11 +61,11 @@ class _PublicPostListWidgetState extends State<PublicPostListWidget> {
                        }),
                 ),
               ],
-            ): NoDataFound(): const Center(child: CircularProgressIndicator());
+            ),
+          ),
+        ): SizedBox(): const Center(child: CircularProgressIndicator());
 
-          },
-        ),
-      ),
+      },
     );
   }
 }

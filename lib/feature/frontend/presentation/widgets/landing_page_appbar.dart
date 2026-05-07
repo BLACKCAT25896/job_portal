@@ -53,7 +53,7 @@ class _LandingPageAppBarState extends State<LandingPageAppBar> {
                     Get.toNamed(RouteHelper.getCreateCompanyRoute());
                   },),
                   MenuButtonWeb(title: 'post_a_job'.tr, onTap: () {
-                    Get.toNamed(RouteHelper.getInitialRoute());
+                    Get.toNamed(RouteHelper.getPostAJobRoute());
                   },),
                   Spacer(),
 

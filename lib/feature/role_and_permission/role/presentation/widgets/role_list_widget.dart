@@ -22,7 +22,7 @@ class RoleListWidget extends StatelessWidget {
         return GenericListSection<RoleItem>(
           sectionTitle: "roles_and_permissions".tr,
           pathItems: ["role_list".tr],
-          addNewTitle: "add_new_roll".tr,
+          addNewTitle: "add_new_role".tr,
           onAddNewTap: () => Get.dialog(CustomDialogWidget(width: 700,
               title: "role".tr,
               child: CreateNewRoleWidget())),

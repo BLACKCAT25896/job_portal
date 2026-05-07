@@ -60,7 +60,7 @@ class CompanyItem {
     website = json['website'];
     location = json['location'];
     location2 = json['location2'];
-    isFeatured = json['is_featured'];
+    isFeatured = PriceConverter.parseInt(json['is_featured']);
     fax = json['fax'];
     uniqueId = json['unique_id'];
     status = PriceConverter.parseInt(json['status']);

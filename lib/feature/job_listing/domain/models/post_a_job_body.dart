@@ -1,4 +1,4 @@
-class JobListingBody {
+class PostAJobBody {
   String? jobIdentityNumber;
   String? jobTitle;
   String? description;
@@ -18,7 +18,7 @@ class JobListingBody {
   int? experience;
   String? sMethod;
 
-  JobListingBody(
+  PostAJobBody(
       {this.jobIdentityNumber,
         this.jobTitle,
         this.description,
@@ -39,7 +39,7 @@ class JobListingBody {
         this.sMethod
       });
 
-  JobListingBody.fromJson(Map<String, dynamic> json) {
+  PostAJobBody.fromJson(Map<String, dynamic> json) {
     jobIdentityNumber = json['job_identity_number'];
     jobTitle = json['job_title'];
     description = json['description'];

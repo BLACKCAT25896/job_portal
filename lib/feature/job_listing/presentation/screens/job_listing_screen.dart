@@ -3,7 +3,7 @@ import 'package:mighty_job/common/global_widget/custom_web_scroll_view_widget.da
 import 'package:mighty_job/common/widget/custom_app_bar.dart';
 import 'package:mighty_job/common/widget/custom_bottom_navigation_button.dart';
 import 'package:mighty_job/feature/job_listing/controller/job_listing_controller.dart';
-import 'package:mighty_job/feature/job_listing/presentation/screens/create_new_job_listing_screen.dart';
+import 'package:mighty_job/feature/job_listing/presentation/screens/post_a_job_screen.dart';
 import 'package:mighty_job/feature/job_listing/presentation/widgets/job_listing_list_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -19,7 +19,7 @@ class _JobListingScreenState extends State<JobListingScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(appBar: CustomAppBar(title: "job_listing".tr),
+    return Scaffold(appBar: CustomAppBar(title: "job_list".tr),
       body: RefreshIndicator(onRefresh: () async {
           await Get.find<JobListingController>().getJobListingList(1);
         },
@@ -29,8 +29,8 @@ class _JobListingScreenState extends State<JobListingScreen> {
       ),
 
       bottomNavigationBar :
-          CustomBottomNavigationButton(title: "add_new_job_listing",
-              onTap: () =>  Get.to(()=> const CreateNewJobListingScreen())),
+          CustomBottomNavigationButton(title: "post_new_job",
+              onTap: () =>  Get.to(()=> const PostAJobScreen())),
     );
   }
 }

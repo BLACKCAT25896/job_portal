@@ -87,6 +87,14 @@ class LandingPageController extends GetxController implements GetxService{
     update();
   }
 
+  JobCategoryItem? selectedJobCategoryItem;
+  void selectJobCategory(JobCategoryItem item) {
+    selectedJobCategoryItem = item;
+    update();
+  }
+
+
+
 
   ApiResponse<JobListingItem>? publicJobListingModel;
 

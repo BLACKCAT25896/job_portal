@@ -5,6 +5,7 @@ import 'package:mighty_job/common/widget/paginated_list_widget.dart';
 import 'package:mighty_job/feature/frontend/controller/frontend_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:mighty_job/feature/frontend/presentation/widgets/job/public_hot_joblist_shimmer.dart';
 import 'package:mighty_job/feature/frontend/presentation/widgets/job/public_job_listing_item_widget.dart';
 import 'package:mighty_job/util/dimensions.dart';
 import 'package:mighty_job/util/styles.dart';
@@ -62,7 +63,7 @@ class _PublicJobListingListWidgetState extends State<PublicJobListingListWidget>
                        }),
                 ),
               ],
-            ): NoDataFound(): const Center(child: CircularProgressIndicator());
+            ): NoDataFound(): const PublicJobListingShimmer();
 
           },
         ),

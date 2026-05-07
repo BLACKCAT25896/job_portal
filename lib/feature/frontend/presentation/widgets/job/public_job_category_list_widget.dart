@@ -6,6 +6,7 @@ import 'package:mighty_job/feature/frontend/controller/frontend_controller.dart'
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:mighty_job/feature/frontend/presentation/widgets/category_or_industry_selection_widget.dart';
+import 'package:mighty_job/feature/frontend/presentation/widgets/job/public_job_category_shimmer.dart';
 import 'package:mighty_job/helper/route_helper.dart';
 import 'package:mighty_job/util/dimensions.dart';
 import 'package:mighty_job/util/styles.dart';
@@ -56,9 +57,14 @@ class _PublicJobCategoryListWidgetState extends State<PublicJobCategoryListWidge
                       itemBuilder: (_, index){
                         final item = data.data?[index];
                         return CustomContainer(onTap: (){
-                          Get.toNamed(RouteHelper.getCategoryWiseJobRoute(
+                          if(widget.fromFilter){
+                            Get.find<LandingPageController>().selectJobCategory(item!);
+                            Get.back();
+                          }else {
+                            Get.toNamed(RouteHelper.getCategoryWiseJobRoute(
                             categoryId: item?.id.toString()??'',
                               slug: '', type: 'category'));
+                          }
                         },
                             borderRadius: 5, showShadow: false,
                             child: Row(spacing: Dimensions.paddingSizeExtraSmall,
@@ -71,7 +77,7 @@ class _PublicJobCategoryListWidgetState extends State<PublicJobCategoryListWidge
                        }),
                 ),
               ],
-            ): NoDataFound(): const Center(child: CircularProgressIndicator());
+            ): NoDataFound(): const PublicJobCategoryShimmer();
 
           },
         ),

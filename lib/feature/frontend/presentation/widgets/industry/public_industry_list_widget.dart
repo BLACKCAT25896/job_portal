@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:mighty_job/feature/frontend/presentation/widgets/category_or_industry_selection_widget.dart';
 import 'package:mighty_job/feature/frontend/presentation/widgets/industry/public_industry_iten_widget.dart';
+import 'package:mighty_job/feature/frontend/presentation/widgets/job/public_job_category_shimmer.dart';
 import 'package:mighty_job/helper/route_helper.dart';
 import 'package:mighty_job/util/dimensions.dart';
 
@@ -68,7 +69,7 @@ class _PublicIndustryListWidgetState extends State<PublicIndustryListWidget> {
                   }),
             ),
           ],
-          ): NoDataFound(): const Center(child: CircularProgressIndicator());
+          ): NoDataFound(): const PublicJobCategoryShimmer();
 
         },
       ),

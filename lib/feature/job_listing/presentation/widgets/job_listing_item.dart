@@ -7,8 +7,8 @@ import 'package:mighty_job/common/widget/edit_delete_section.dart';
 import 'package:mighty_job/common/widget/numbering_widget.dart';
 import 'package:mighty_job/feature/job_listing/controller/job_listing_controller.dart';
 import 'package:mighty_job/feature/job_listing/domain/models/job_listing_model.dart';
-import 'package:mighty_job/feature/job_listing/presentation/screens/create_new_job_listing_screen.dart';
-import 'package:mighty_job/feature/job_listing/presentation/widgets/add_new_job_listing_widget.dart';
+import 'package:mighty_job/feature/job_listing/presentation/screens/post_a_job_screen.dart';
+import 'package:mighty_job/feature/job_listing/presentation/widgets/post_a_job_widget.dart';
 import 'package:mighty_job/helper/responsive_helper.dart';
 import 'package:mighty_job/util/dimensions.dart';
 import 'package:mighty_job/util/styles.dart';
@@ -28,7 +28,7 @@ class JobListingItemWidget extends StatelessWidget {
       Expanded(child: CustomTextItemWidget(text: listingItem?.jobTitle??'')),
 
       EditDeletePopupMenu(onEdit:(){
-        Get.dialog(CustomDialogWidget(child: AddNewJobListingWidget(listingItem: listingItem)));
+        Get.dialog(CustomDialogWidget(child: PostAJobWidget(listingItem: listingItem)));
       } ,
           onDelete: (){
             Get.dialog(ConfirmationDialog(title: "listing", onTap: (){
@@ -46,7 +46,7 @@ class JobListingItemWidget extends StatelessWidget {
               Expanded(child: Text("${listingItem?.jobTitle}", style: textMedium.copyWith(fontSize: Dimensions.fontSizeDefault),)),
               EditDeleteSection(isHorizontal: true,
                   onEdit: (){
-                Get.to(()=> CreateNewJobListingScreen(listingItem: listingItem));
+                Get.to(()=> PostAJobScreen(listingItem: listingItem));
               },
                 onDelete: (){
                   Get.dialog(ConfirmationDialog(title: "listing", onTap: (){

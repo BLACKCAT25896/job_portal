@@ -1,9 +1,11 @@
 
+import 'package:flutter/material.dart';
 import 'package:mighty_job/api_handle/api_checker.dart';
 import 'package:mighty_job/api_handle/global_api_response_model.dart';
 import 'package:mighty_job/common/widget/custom_snackbar.dart';
-import 'package:mighty_job/feature/job_listing/domain/models/job_listing_body.dart';
+import 'package:mighty_job/feature/job_listing/domain/models/post_a_job_body.dart';
 import 'package:mighty_job/feature/job_listing/domain/models/job_listing_model.dart';
+import 'package:mighty_job/feature/job_listing/domain/models/step_model.dart';
 import 'package:mighty_job/feature/job_listing/domain/repository/job_listing_repository.dart';
 import 'package:get/get.dart';
 
@@ -51,7 +53,7 @@ class JobListingController extends GetxController implements GetxService{
 
 
 
-  Future<void> createNewJobListing(JobListingBody listingBody) async {
+  Future<void> createNewJobListing(PostAJobBody listingBody) async {
     isLoading = true;
     update();
     Response? response = await listingRepository.createNewJobListing(listingBody);
@@ -68,7 +70,7 @@ class JobListingController extends GetxController implements GetxService{
 
   }
 
-  Future<void> updateJobListing(JobListingBody listingBody, int id) async {
+  Future<void> updateJobListing(PostAJobBody listingBody, int id) async {
     isLoading = true;
     update();
     Response? response = await listingRepository.updateJobListing(listingBody, id);
@@ -98,5 +100,51 @@ class JobListingController extends GetxController implements GetxService{
     }
     update();
   }
+
+  int selectedStepIndex = 0;
+  void selectStep(int index) {
+    selectedStepIndex = index;
+    steps[index].isActive = true;
+    update();
+  }
+
+
+
+   List<StepItem> steps = [
+    StepItem(
+      title: "job_information",
+      icon: Icons.work_outline_rounded,
+      isActive: true,
+    ),
+    StepItem(
+      title: "candidate_requirements",
+      icon: Icons.groups_2_outlined,
+    ),
+    StepItem(
+      title: "matching_and_restrictions",
+      icon: Icons.rule_folder_outlined,
+    ),
+    StepItem(
+      title: "billing_and_contact_info",
+      icon: Icons.payments_outlined,
+    ),
+  ];
+
+  List<String> employeeStatus = ["full_time", "part_time", "contract", "internship", "freelance"];
+  String selectedEmployeeStatus = "full_time";
+  void selectEmployeeStatus(String status) {
+    selectedEmployeeStatus = status;
+    update();
+  }
+
+  List<String> workPlace = ["work_from_office", "work_from_home"];
+  String selectedWorkPlace = "work_from_office";
+  void selectWorkPlace(String place) {
+    selectedWorkPlace = place;
+    update();
+  }
+
   
+
+
 }
