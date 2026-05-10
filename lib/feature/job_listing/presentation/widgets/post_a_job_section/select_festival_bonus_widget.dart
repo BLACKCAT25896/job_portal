@@ -7,8 +7,8 @@ import 'package:mighty_job/helper/app_color_helper.dart';
 import 'package:mighty_job/util/dimensions.dart';
 import 'package:mighty_job/util/styles.dart';
 
-class SelectionEmployeeWidget extends StatelessWidget {
-  const SelectionEmployeeWidget({super.key});
+class SelectionFestivalBonusWidget extends StatelessWidget {
+  const SelectionFestivalBonusWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class SelectionEmployeeWidget extends StatelessWidget {
         builder: (controller) {
           return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             Padding(padding: const EdgeInsets.symmetric(vertical: 8.0),
-              child: Text("employee_status".tr, style: textRegular.copyWith(fontSize: Dimensions.fontSizeLarge)),),
+              child: Text("festival_bonus".tr, style: textRegular.copyWith(fontSize: Dimensions.fontSizeLarge)),),
             SizedBox(height: 34,
               child: ListView.separated(
                   physics: NeverScrollableScrollPhysics(),
@@ -24,23 +24,22 @@ class SelectionEmployeeWidget extends StatelessWidget {
                   shrinkWrap: true,
                   padding: EdgeInsets.zero,
                   itemBuilder: (_, index){
-                    final employeeStatus = controller.employeeStatus[index];
-                    bool isSelected = employeeStatus == controller.selectedEmployeeStatus;
+                    final festivalBonus = controller.festivalBonus[index];
+                    bool isSelected = festivalBonus == controller.selectedFestivalBonus;
                     return CustomContainer(color: isSelected? systemPrimaryColor() : null,
                         verticalPadding: 0, borderRadius : 5, showShadow: false,
                         horizontalPadding: Dimensions.paddingSizeLarge,
                         border: Border.all(color: systemPrimaryColor(), width: .5),
                         onTap: (){
-                          controller.selectEmployeeStatus(employeeStatus);
+                          controller.selectFestivalBonus(festivalBonus);
                         },
                         child: Center(
-                          child: Text(employeeStatus.tr, style: textRegular.copyWith(color:
-                          isSelected? Colors.white: systemPrimaryColor(),
-                              fontSize: Dimensions.fontSizeLarge)),
+                          child: Text(festivalBonus.tr, style: textRegular.copyWith(color:
+                          isSelected? Colors.white: systemPrimaryColor())),
                         ));
                   }, separatorBuilder: (_, index){
                 return SizedBox(width: Dimensions.paddingSizeSmall);
-              }, itemCount: controller.employeeStatus.length),
+              }, itemCount: controller.festivalBonus.length),
             ),
           ],
           );

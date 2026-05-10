@@ -73,7 +73,7 @@ class DropdownSearch<T> extends StatelessWidget {
               child: Text("$sectionTitle", style: textRegular.copyWith())),
 
         
-          Container(height: height?? 35,
+          Container(height: height?? 37,
             padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 2),
             decoration: BoxDecoration(color: Theme.of(context).cardColor,
                 border: Border.all(width: .5, color: Theme.of(context).hintColor),

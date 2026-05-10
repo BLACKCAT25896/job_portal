@@ -1,20 +1,20 @@
-import 'package:mighty_job/feature/career_level/controller/career_level_controller.dart';
-import 'package:mighty_job/feature/career_level/domain/models/career_level_model.dart';
-import 'package:mighty_job/feature/career_level/presentation/widgets/career_level_list_widget.dart';
+import 'package:mighty_job/feature/degree_level/controller/degree_level_controller.dart';
+import 'package:mighty_job/feature/degree_level/domain/models/degree_level_model.dart';
+import 'package:mighty_job/feature/degree_level/presentation/widgets/degree_level_list_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:mighty_job/common/widget/custom_title.dart';
 import 'package:mighty_job/common/widget/dropdown_with_search_widget.dart';
 import 'package:mighty_job/util/dimensions.dart';
 
-class SelectCareerLevelWidget extends StatefulWidget {
-  const SelectCareerLevelWidget({super.key});
+class SelectDegreeLevelWidget extends StatefulWidget {
+  const SelectDegreeLevelWidget({super.key});
 
   @override
-  State<SelectCareerLevelWidget> createState() => _SelectCareerLevelWidgetState();
+  State<SelectDegreeLevelWidget> createState() => _SelectDegreeLevelWidgetState();
 }
 
-class _SelectCareerLevelWidgetState extends State<SelectCareerLevelWidget> {
+class _SelectDegreeLevelWidgetState extends State<SelectDegreeLevelWidget> {
   TextEditingController searchController = TextEditingController();
   ScrollController scrollController = ScrollController();
   @override
@@ -22,23 +22,23 @@ class _SelectCareerLevelWidgetState extends State<SelectCareerLevelWidget> {
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
 
       SizedBox(height: Dimensions.paddingSizeSmall),
-      CustomTitle(title: "career_level", leftPadding: 0, fontSize: Dimensions.fontSizeDefault),
+      CustomTitle(title: "degree_level", leftPadding: 0, fontSize: Dimensions.fontSizeDefault),
 
-      GetBuilder<CareerLevelController>(initState: (_) {
-        if (Get.find<CareerLevelController>().careerLevelModel == null) {
-          Get.find<CareerLevelController>().getCareerLevelList(1);
+      GetBuilder<DegreeLevelController>(initState: (_) {
+        if (Get.find<DegreeLevelController>().degreeLevelModel == null) {
+          Get.find<DegreeLevelController>().getDegreeLevelList(1);
         }
       },
-        builder: (careerLevelController) {
-          return DropdownSearch<CareerLevelItem>(
-            selectedItem: careerLevelController.selectedCareerLevelItem,
+        builder: (degreeLevelController) {
+          return DropdownSearch<DegreeLevelItem>(
+            selectedItem: degreeLevelController.selectedDegreeLevelItem,
             itemLabel: (item) => item.name ?? "",
             searchController: searchController,
             onSearch: (val) {
-              careerLevelController.getCareerLevelList(1, search: val.trim());
+              degreeLevelController.getDegreeLevelList(1, search: val.trim());
             },
             listWidgetBuilder: () => SingleChildScrollView(
-                child: CareerLevelListWidget(fromFilter: true,
+                child: DegreeLevelListWidget(fromFilter: true,
                     scrollController: scrollController)),
           );
         },

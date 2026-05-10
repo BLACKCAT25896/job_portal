@@ -1,14 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_quill/flutter_quill.dart';
 import 'package:get/get.dart';
 import 'package:html_editor_enhanced/html_editor.dart';
+import 'package:mighty_job/common/layout/custom_add_new_button_widget.dart';
+import 'package:mighty_job/common/layout/custom_dialog_widget.dart';
+import 'package:mighty_job/common/widget/custom_button.dart';
 import 'package:mighty_job/common/widget/custom_contaner.dart';
-import 'package:mighty_job/common/widget/custom_rich_text_editor_widget/custom_richtext_editor_widget.dart';
+import 'package:mighty_job/common/widget/custom_rich_text_editor_widget/custom_rich_editor_v2.dart';
 import 'package:mighty_job/common/widget/custom_switch.dart';
 import 'package:mighty_job/common/widget/custom_text_field.dart';
 import 'package:mighty_job/common/widget/date_selection_widget.dart';
 import 'package:mighty_job/common/widget/responsive_grid_widget.dart';
 import 'package:mighty_job/feature/frontend/presentation/widgets/job/select_public_job_category_widget.dart';
+import 'package:mighty_job/feature/job_listing/controller/job_listing_controller.dart';
 import 'package:mighty_job/feature/job_listing/presentation/widgets/post_a_job_section/select_employee_status.dart';
+import 'package:mighty_job/feature/job_listing/presentation/widgets/post_a_job_section/select_festival_bonus_widget.dart';
+import 'package:mighty_job/feature/job_listing/presentation/widgets/post_a_job_section/select_lunch_facility_widget.dart';
+import 'package:mighty_job/feature/job_listing/presentation/widgets/post_a_job_section/select_salary_review_widget.dart';
+import 'package:mighty_job/feature/job_listing/presentation/widgets/post_a_job_section/selection_benefit_widget.dart';
+import 'package:mighty_job/helper/app_color_helper.dart';
 import 'package:mighty_job/util/dimensions.dart';
 import 'package:mighty_job/util/styles.dart';
 
@@ -23,9 +33,12 @@ class _JobInformationWidgetState extends State<JobInformationWidget> {
   TextEditingController jobTitleController = TextEditingController();
   TextEditingController jobLocationController = TextEditingController();
   TextEditingController vacancyController = TextEditingController();
-  HtmlEditorController jobResponsibleAndContextController = HtmlEditorController();
+  QuillController jobResponsibleAndContextController = QuillController.basic();
+  QuillController otherBenefitController = QuillController.basic();
   TextEditingController minimumSalaryController = TextEditingController();
   TextEditingController maximumController = TextEditingController();
+
+
   @override
   Widget build(BuildContext context) {
     return CustomContainer(child: Column(spacing: Dimensions.paddingSizeDefault,
@@ -34,7 +47,7 @@ class _JobInformationWidgetState extends State<JobInformationWidget> {
         CustomTextField(
           title: "job_title".tr,
           controller: jobTitleController,
-          hintText: "enter_job_title".tr
+          hintText: "job_title".tr
         ),
         DateSelectionWidget(title: "deadline".tr),
         SelectPublicJobCategoryWidget(),
@@ -42,7 +55,7 @@ class _JobInformationWidgetState extends State<JobInformationWidget> {
         CustomTextField(
           title: "job_location".tr,
           controller: jobLocationController,
-            hintText: "enter_job_location".tr
+            hintText: "job_location".tr
         ),
 
         CustomTextField(
@@ -56,7 +69,7 @@ class _JobInformationWidgetState extends State<JobInformationWidget> {
 
       SelectionEmployeeWidget(),
 
-      CustomRichEditor(
+      CustomRichEditorV2(
           title: "job_responsible_and_context".tr,
           controller: jobResponsibleAndContextController,
           hintText: "job_responsible_and_context".tr),
@@ -82,6 +95,49 @@ class _JobInformationWidgetState extends State<JobInformationWidget> {
                 hintText: "maximum_salary".tr
             )
           ]),
+
+
+          CustomAddNewButtonWidget(icon: Icons.add, onTap: () {
+
+            Get.dialog(CustomDialogWidget(width: 700, title: "compensations_and_benefits".tr,
+                child: Column(crossAxisAlignment: CrossAxisAlignment.start,
+                    spacing: Dimensions.paddingSizeDefault,
+                    children: [
+                  SelectionBenefitWidget(),
+                  ResponsiveMasonryGrid(width: 400, children: [
+                    SelectionLunchWidget(),
+                    SelectionSalaryWidget(),
+                  ]),
+                  SelectionFestivalBonusWidget(),
+
+                  CustomRichEditorV2(
+                    height: 200,
+                      title: "other_benefits".tr,
+                      controller: otherBenefitController,
+                      hintText: "other_benefits".tr),
+
+                  Align(alignment: Alignment.centerRight,
+                    child: SizedBox(width: 150,
+                      child: CustomButton(onTap: (){
+
+                      }, text: "save".tr),
+                    ),
+                  )
+
+
+              ])));
+              },
+              title: "add_compensations_and_benefits_information".tr),
+
+          CustomContainer(showShadow: false, borderRadius: 5,
+            verticalPadding: 20,
+            color: systemPrimaryColor().withValues(alpha: .125),
+            child: Align(alignment: Alignment.centerRight,
+              child: SizedBox(width: 150,
+            child: CustomButton(onTap: (){
+              Get.find<JobListingController>().selectStep(1);
+            }, text: "continue".tr),
+          )),)
 
 
     ]));

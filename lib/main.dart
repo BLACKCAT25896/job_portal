@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+import 'package:flutter_quill/flutter_quill.dart';
 import 'package:meta_seo/meta_seo.dart';
 import 'package:mighty_job/common/controller/network_controller.dart';
 import 'package:flutter/material.dart';
@@ -100,6 +101,7 @@ class _MyAppState extends State<MyApp> {
                 theme: themeController.darkTheme? darkTheme : lightTheme,
                 locale: localizeController.locale,
                 localizationsDelegates: [
+                  FlutterQuillLocalizations.delegate,
                   GlobalMaterialLocalizations.delegate,
                   GlobalCupertinoLocalizations.delegate,
                   GlobalWidgetsLocalizations.delegate,

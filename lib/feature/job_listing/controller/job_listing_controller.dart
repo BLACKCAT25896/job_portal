@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:mighty_job/api_handle/api_checker.dart';
 import 'package:mighty_job/api_handle/global_api_response_model.dart';
 import 'package:mighty_job/common/widget/custom_snackbar.dart';
+import 'package:mighty_job/feature/job_listing/domain/models/benefit_model.dart';
 import 'package:mighty_job/feature/job_listing/domain/models/post_a_job_body.dart';
 import 'package:mighty_job/feature/job_listing/domain/models/job_listing_model.dart';
 import 'package:mighty_job/feature/job_listing/domain/models/step_model.dart';
@@ -144,7 +145,48 @@ class JobListingController extends GetxController implements GetxService{
     update();
   }
 
-  
+  List<String> lunchFacility = ["partially_subsidize", "fully_subsidize"];
+  String? selectedLunchFacility;
+  void selectLunchFacility(String facility) {
+    selectedLunchFacility = facility;
+    update();
+  }
+
+  List<String> salaryReview = ["half_yearly", "yearly"];
+  String? selectedSalaryReview;
+  void selectSalaryReview(String review) {
+    selectedSalaryReview = review;
+    update();
+  }
+
+  List<String> festivalBonus = ["1", "2", "3", "4"];
+  String? selectedFestivalBonus;
+  void selectFestivalBonus(String bonus) {
+    selectedFestivalBonus = bonus;
+    update();
+  }
+
+
+  List<BenefitModel> benefits = [
+    BenefitModel(title: "T/A"),
+    BenefitModel(title: "Provident fund"),
+    BenefitModel(title: "Pension policy"),
+    BenefitModel(title: "Tour allowance"),
+    BenefitModel(title: "Medical allowance"),
+    BenefitModel(title: "Mobile bill"),
+    BenefitModel(title: "Credit card"),
+    BenefitModel(title: "Weekly 2 holidays"),
+    BenefitModel(title: "Overtime allowance"),
+    BenefitModel(title: "Performance bonus"),
+    BenefitModel(title: "Insurance"),
+    BenefitModel(title: "Profit share"),
+    BenefitModel(title: "Gratuity"),
+  ];
+
+  void toggleBenefitSelection(int index){
+    benefits[index].isSelected = !benefits[index].isSelected!;
+    update();
+  }
 
 
 }

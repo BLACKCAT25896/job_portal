@@ -32,7 +32,7 @@ class _SelectPublicJobCategoryWidgetState extends State<SelectPublicJobCategoryW
               child: Text("job_category".tr, style: textRegular),
             ),
             DropdownSearch<JobCategoryItem>(
-              hintText: 'select_job_category'.tr,
+              hintText: 'job_category'.tr,
               selectedItem: jobCategoryController.selectedJobCategoryItem,
               itemLabel: (item) => item.name ?? "",
               searchController: searchController,
