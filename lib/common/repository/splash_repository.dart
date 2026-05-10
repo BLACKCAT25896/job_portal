@@ -1,8 +1,8 @@
 
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:mighty_job/api_handle/api_client.dart';
-import 'package:mighty_job/util/app_constants.dart';
+import 'package:job/api_handle/api_client.dart';
+import 'package:job/util/app_constants.dart';
 
 class SplashRepository {
   ApiClient apiClient;

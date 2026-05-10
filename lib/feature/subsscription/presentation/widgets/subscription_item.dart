@@ -1,12 +1,12 @@
-import 'package:mighty_job/helper/app_color_helper.dart';
+import 'package:job/helper/app_color_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/widget/custom_contaner.dart';
-import 'package:mighty_job/feature/subsscription/controller/subscription_controller.dart';
-import 'package:mighty_job/feature/subsscription/domain/models/package_model.dart';
-import 'package:mighty_job/helper/price_converter.dart';
-import 'package:mighty_job/util/dimensions.dart';
-import 'package:mighty_job/util/styles.dart';
+import 'package:job/common/widget/custom_contaner.dart';
+import 'package:job/feature/subsscription/controller/subscription_controller.dart';
+import 'package:job/feature/subsscription/domain/models/package_model.dart';
+import 'package:job/helper/price_converter.dart';
+import 'package:job/util/dimensions.dart';
+import 'package:job/util/styles.dart';
 
 class SubscriptionItem extends StatelessWidget {
   final int index;
@@ -28,7 +28,7 @@ class SubscriptionItem extends StatelessWidget {
                 Row(children: [
                     Text(PriceConverter.convertPrice(context, packageItem?.amount??0),
                         style: textSemiBold.copyWith(fontSize: Dimensions.fontSizeExtraLarge)),
-                    const SizedBox(width: Dimensions.paddingSizeExtraSmall,),
+                  SizedBox(width: Dimensions.paddingSizeExtraSmall,),
 
                     if(packageItem?.amount != packageItem?.afterAmount)
                     Text(PriceConverter.convertPrice(context, packageItem?.afterAmount??0),
@@ -49,7 +49,7 @@ class SubscriptionItem extends StatelessWidget {
                 child: Container(decoration: BoxDecoration(color: Theme.of(context).secondaryHeaderColor,
                   borderRadius: const BorderRadius.only(topRight: Radius.circular(5),
                       bottomLeft: Radius.circular(10))
-                ),padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeDefault,
+                ),padding: EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeDefault,
                     vertical: Dimensions.paddingSizeExtraSmall),
                     child: Text("${packageItem?.discount??''}% ${"off".tr}",
                         style: textRegular.copyWith()))),

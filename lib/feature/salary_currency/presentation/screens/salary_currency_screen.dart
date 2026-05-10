@@ -1,12 +1,12 @@
 
-import 'package:mighty_job/common/global_widget/custom_web_scroll_view_widget.dart';
-import 'package:mighty_job/common/widget/custom_app_bar.dart';
-import 'package:mighty_job/common/widget/custom_bottom_navigation_button.dart';
+import 'package:job/common/global_widget/custom_web_scroll_view_widget.dart';
+import 'package:job/common/widget/custom_app_bar.dart';
+import 'package:job/common/widget/custom_bottom_navigation_button.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/feature/salary_currency/controller/salary_currency_controller.dart';
-import 'package:mighty_job/feature/salary_currency/presentation/screens/create_new_salary_currency_screen.dart';
-import 'package:mighty_job/feature/salary_currency/presentation/widgets/salary_currency_list_widget.dart';
+import 'package:job/feature/salary_currency/controller/salary_currency_controller.dart';
+import 'package:job/feature/salary_currency/presentation/screens/create_new_salary_currency_screen.dart';
+import 'package:job/feature/salary_currency/presentation/widgets/salary_currency_list_widget.dart';
 
 class SalaryCurrencyScreen extends StatefulWidget {
   const SalaryCurrencyScreen({super.key});

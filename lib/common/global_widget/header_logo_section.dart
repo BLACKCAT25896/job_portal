@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/widget/custom_contaner.dart';
-import 'package:mighty_job/common/widget/custom_image.dart';
-import 'package:mighty_job/feature/cms_management/cms_settings/controller/system_settngs_controller.dart';
-import 'package:mighty_job/feature/cms_management/cms_settings/domain/model/image_setting_model.dart';
-import 'package:mighty_job/helper/route_helper.dart';
-import 'package:mighty_job/util/app_constants.dart';
+import 'package:job/common/widget/custom_contaner.dart';
+import 'package:job/common/widget/custom_image.dart';
+import 'package:job/feature/cms_management/cms_settings/controller/system_settngs_controller.dart';
+import 'package:job/feature/cms_management/cms_settings/domain/model/image_setting_model.dart';
+import 'package:job/helper/route_helper.dart';
+import 'package:job/util/app_constants.dart';
 
 class HeaderLogoSection extends StatelessWidget {
   const HeaderLogoSection({super.key});

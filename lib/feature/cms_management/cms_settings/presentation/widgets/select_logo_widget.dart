@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/widget/custom_button.dart';
-import 'package:mighty_job/common/widget/custom_contaner.dart';
-import 'package:mighty_job/common/widget/image_picker_widget.dart';
-import 'package:mighty_job/feature/cms_management/cms_settings/controller/system_settngs_controller.dart';
-import 'package:mighty_job/util/app_constants.dart';
-import 'package:mighty_job/util/dimensions.dart';
-import 'package:mighty_job/util/styles.dart';
+import 'package:job/common/widget/custom_button.dart';
+import 'package:job/common/widget/custom_contaner.dart';
+import 'package:job/common/widget/image_picker_widget.dart';
+import 'package:job/feature/cms_management/cms_settings/controller/system_settngs_controller.dart';
+import 'package:job/util/app_constants.dart';
+import 'package:job/util/dimensions.dart';
+import 'package:job/util/styles.dart';
 
 class SelectLogoWidget extends StatelessWidget {
   const SelectLogoWidget({super.key});
@@ -19,7 +19,7 @@ class SelectLogoWidget extends StatelessWidget {
         builder: (controller) {
       final model = controller.imageSettingModel;
 
-      return Padding(padding: const EdgeInsets.all(Dimensions.paddingSizeDefault),
+      return Padding(padding: EdgeInsets.all(Dimensions.paddingSizeDefault),
         child: Column(spacing: Dimensions.paddingSizeDefault,children: [
           Row(spacing: Dimensions.paddingSizeDefault, children: [
             Expanded(child: LogoItem(

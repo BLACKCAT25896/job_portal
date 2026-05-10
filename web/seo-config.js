@@ -9,17 +9,17 @@ window.HOTJAR_ID = null;
 
 window.SEOConfig = {
   // Site Information
-  siteName: "Mighty mighty_job",
-  siteUrl: "https://mighty_job.mightyapp.com",
+  siteName: "Mighty job",
+  siteUrl: "https://job.mightyapp.com",
   siteDescription:
-    "Streamline your mighty_job operations with Mighty mighty_job - the ultimate mighty_job management system. Manage orders, inventory, staff, and analytics all in one powerful platform.",
+    "Streamline your job operations with Mighty job - the ultimate job management system. Manage orders, inventory, staff, and analytics all in one powerful platform.",
 
   // Social Media
   social: {
-    twitter: "@mightymighty_job",
-    facebook: "mightymighty_job",
-    linkedin: "company/mightymighty_job",
-    instagram: "mighty_mighty_job",
+    twitter: "@mightyjob",
+    facebook: "mightyjob",
+    linkedin: "company/mightyjob",
+    instagram: "mighty_job",
   },
 
   // Analytics IDs - all disabled
@@ -32,25 +32,25 @@ window.SEOConfig = {
 
   // SEO Keywords
   keywords: [
-    "mighty_job management system",
+    "job management system",
     "POS system",
     "inventory management",
-    "mighty_job software",
+    "job software",
     "order management",
     "food service management",
-    "mighty_job analytics",
+    "job analytics",
     "staff management",
     "menu management",
-    "mighty_job technology",
+    "job technology",
     "kitchen management",
     "table management",
-    "mighty_job billing",
+    "job billing",
     "food ordering system",
-    "mighty_job operations",
+    "job operations",
     "hospitality management",
-    "mighty_job automation",
+    "job automation",
     "food business software",
-    "mighty_job dashboard",
+    "job dashboard",
     "catering management",
   ],
 
@@ -58,41 +58,41 @@ window.SEOConfig = {
   pages: {
     home: {
       title:
-        "Mighty mighty_job - Complete mighty_job Management System | POS & Inventory",
+        "Mighty job - Complete job Management System | POS & Inventory",
       description:
-        "Streamline your mighty_job operations with Mighty mighty_job - the ultimate mighty_job management system. Manage orders, inventory, staff, and analytics all in one powerful platform.",
+        "Streamline your job operations with Mighty job - the ultimate job management system. Manage orders, inventory, staff, and analytics all in one powerful platform.",
       keywords:
-        "mighty_job management system, POS system, inventory management, mighty_job software, order management",
+        "job management system, POS system, inventory management, job software, order management",
     },
     dashboard: {
-      title: "Dashboard - Mighty mighty_job | mighty_job Analytics & Reports",
+      title: "Dashboard - Mighty job | job Analytics & Reports",
       description:
-        "Monitor your mighty_job performance, view sales analytics, track inventory, and access detailed reports on your Mighty mighty_job dashboard.",
+        "Monitor your job performance, view sales analytics, track inventory, and access detailed reports on your Mighty job dashboard.",
       keywords:
-        "mighty_job dashboard, sales analytics, performance tracking, mighty_job reports",
+        "job dashboard, sales analytics, performance tracking, job reports",
     },
     inventory: {
       title:
-        "Inventory Management - Mighty mighty_job | Stock Control & Tracking",
+        "Inventory Management - Mighty job | Stock Control & Tracking",
       description:
-        "Manage your mighty_job inventory efficiently with real-time stock tracking, automated alerts, and comprehensive reporting.",
+        "Manage your job inventory efficiently with real-time stock tracking, automated alerts, and comprehensive reporting.",
       keywords:
-        "inventory management, stock control, mighty_job supplies, inventory tracking",
+        "inventory management, stock control, job supplies, inventory tracking",
     },
     orders: {
-      title: "Order Management - Mighty mighty_job | POS & Order Processing",
+      title: "Order Management - Mighty job | POS & Order Processing",
       description:
         "Streamline your order processing with our advanced POS system. Handle dine-in, takeout, and delivery orders seamlessly.",
       keywords:
-        "order management, POS system, mighty_job orders, order processing",
+        "order management, POS system, job orders, order processing",
     },
     analytics: {
       title:
-        "mighty_job Analytics - Mighty mighty_job | Sales & Performance Reports",
+        "job Analytics - Mighty job | Sales & Performance Reports",
       description:
-        "Get detailed insights into your mighty_job performance with comprehensive analytics, sales reports, and business intelligence.",
+        "Get detailed insights into your job performance with comprehensive analytics, sales reports, and business intelligence.",
       keywords:
-        "mighty_job analytics, sales reports, performance tracking, business intelligence",
+        "job analytics, sales reports, performance tracking, business intelligence",
     },
   },
 };

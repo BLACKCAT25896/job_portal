@@ -1,8 +1,8 @@
-import 'package:mighty_job/common/global_widget/custom_web_scroll_view_widget.dart';
+import 'package:job/common/global_widget/custom_web_scroll_view_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/widget/custom_app_bar.dart';
-import 'package:mighty_job/util/dimensions.dart';
+import 'package:job/common/widget/custom_app_bar.dart';
+import 'package:job/util/dimensions.dart';
 
 class SubscriptionScreen extends StatefulWidget {
   const SubscriptionScreen({super.key});
@@ -18,7 +18,7 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> {
       appBar: CustomAppBar(title: "packages".tr),
       body: CustomWebScrollView(slivers: [
         SliverToBoxAdapter(child: Padding(
-          padding: const EdgeInsets.all(Dimensions.paddingSizeDefault),
+          padding: EdgeInsets.all(Dimensions.paddingSizeDefault),
           child: SizedBox(),
         ),)
       ],),

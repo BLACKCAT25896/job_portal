@@ -1,26 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_quill/flutter_quill.dart';
 import 'package:get/get.dart';
-import 'package:html_editor_enhanced/html_editor.dart';
-import 'package:mighty_job/common/layout/custom_add_new_button_widget.dart';
-import 'package:mighty_job/common/layout/custom_dialog_widget.dart';
-import 'package:mighty_job/common/widget/custom_button.dart';
-import 'package:mighty_job/common/widget/custom_contaner.dart';
-import 'package:mighty_job/common/widget/custom_rich_text_editor_widget/custom_rich_editor_v2.dart';
-import 'package:mighty_job/common/widget/custom_switch.dart';
-import 'package:mighty_job/common/widget/custom_text_field.dart';
-import 'package:mighty_job/common/widget/date_selection_widget.dart';
-import 'package:mighty_job/common/widget/responsive_grid_widget.dart';
-import 'package:mighty_job/feature/frontend/presentation/widgets/job/select_public_job_category_widget.dart';
-import 'package:mighty_job/feature/job_listing/controller/job_listing_controller.dart';
-import 'package:mighty_job/feature/job_listing/presentation/widgets/post_a_job_section/select_employee_status.dart';
-import 'package:mighty_job/feature/job_listing/presentation/widgets/post_a_job_section/select_festival_bonus_widget.dart';
-import 'package:mighty_job/feature/job_listing/presentation/widgets/post_a_job_section/select_lunch_facility_widget.dart';
-import 'package:mighty_job/feature/job_listing/presentation/widgets/post_a_job_section/select_salary_review_widget.dart';
-import 'package:mighty_job/feature/job_listing/presentation/widgets/post_a_job_section/selection_benefit_widget.dart';
-import 'package:mighty_job/helper/app_color_helper.dart';
-import 'package:mighty_job/util/dimensions.dart';
-import 'package:mighty_job/util/styles.dart';
+import 'package:job/common/layout/custom_add_new_button_widget.dart';
+import 'package:job/common/layout/custom_dialog_widget.dart';
+import 'package:job/common/widget/custom_button.dart';
+import 'package:job/common/widget/custom_contaner.dart';
+import 'package:job/common/widget/custom_rich_text_editor_widget/custom_rich_editor_v2.dart';
+import 'package:job/common/widget/custom_switch.dart';
+import 'package:job/common/widget/custom_text_field.dart';
+import 'package:job/common/widget/date_selection_widget.dart';
+import 'package:job/common/widget/responsive_grid_widget.dart';
+import 'package:job/feature/frontend/presentation/widgets/job/select_public_job_category_widget.dart';
+import 'package:job/feature/job_listing/controller/job_listing_controller.dart';
+import 'package:job/feature/job_listing/presentation/widgets/post_a_job_section/select_employee_status.dart';
+import 'package:job/feature/job_listing/presentation/widgets/post_a_job_section/select_festival_bonus_widget.dart';
+import 'package:job/feature/job_listing/presentation/widgets/post_a_job_section/select_lunch_facility_widget.dart';
+import 'package:job/feature/job_listing/presentation/widgets/post_a_job_section/select_salary_review_widget.dart';
+import 'package:job/feature/job_listing/presentation/widgets/post_a_job_section/selection_benefit_widget.dart';
+import 'package:job/helper/app_color_helper.dart';
+import 'package:job/util/dimensions.dart';
+import 'package:job/util/styles.dart';
 
 class JobInformationWidget extends StatefulWidget {
   const JobInformationWidget({super.key});
@@ -79,7 +78,7 @@ class _JobInformationWidgetState extends State<JobInformationWidget> {
 
             Row(children: [
               Text("show_salary".tr, style: textRegular.copyWith(fontSize: Dimensions.fontSizeDefault)),
-              const SizedBox(width: Dimensions.paddingSizeSmall),
+              SizedBox(width: Dimensions.paddingSizeSmall),
               CustomSwitch(value: false, onChanged: (value) {}),
             ])]),
 

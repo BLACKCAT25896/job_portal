@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:mighty_job/common/widget/custom_contaner.dart';
-import 'package:mighty_job/common/widget/custom_image.dart';
-import 'package:mighty_job/util/dimensions.dart';
-import 'package:mighty_job/util/styles.dart';
+import 'package:job/common/widget/custom_contaner.dart';
+import 'package:job/common/widget/custom_image.dart';
+import 'package:job/util/dimensions.dart';
+import 'package:job/util/styles.dart';
 
 class FeatureMenuItemWidget extends StatelessWidget {
   final String title;

@@ -1,11 +1,11 @@
-import 'package:mighty_job/feature/degree_level/controller/degree_level_controller.dart';
-import 'package:mighty_job/feature/degree_level/domain/models/degree_level_model.dart';
-import 'package:mighty_job/feature/degree_level/presentation/widgets/degree_level_list_widget.dart';
+import 'package:job/feature/degree_level/controller/degree_level_controller.dart';
+import 'package:job/feature/degree_level/domain/models/degree_level_model.dart';
+import 'package:job/feature/degree_level/presentation/widgets/degree_level_list_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/widget/custom_title.dart';
-import 'package:mighty_job/common/widget/dropdown_with_search_widget.dart';
-import 'package:mighty_job/util/dimensions.dart';
+import 'package:job/common/widget/custom_title.dart';
+import 'package:job/common/widget/dropdown_with_search_widget.dart';
+import 'package:job/util/dimensions.dart';
 
 class SelectDegreeLevelWidget extends StatefulWidget {
   const SelectDegreeLevelWidget({super.key});

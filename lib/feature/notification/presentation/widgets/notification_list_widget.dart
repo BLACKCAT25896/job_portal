@@ -1,14 +1,14 @@
 
-import 'package:mighty_job/common/widget/custom_contaner.dart';
-import 'package:mighty_job/common/widget/custom_title.dart';
-import 'package:mighty_job/helper/responsive_helper.dart';
-import 'package:mighty_job/util/dimensions.dart';
+import 'package:job/common/widget/custom_contaner.dart';
+import 'package:job/common/widget/custom_title.dart';
+import 'package:job/helper/responsive_helper.dart';
+import 'package:job/util/dimensions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/widget/no_data_found.dart';
-import 'package:mighty_job/common/widget/paginated_list_widget.dart';
-import 'package:mighty_job/feature/notification/logic/notification_controller.dart';
-import 'package:mighty_job/feature/notification/presentation/widgets/notification_item.dart';
+import 'package:job/common/widget/no_data_found.dart';
+import 'package:job/common/widget/paginated_list_widget.dart';
+import 'package:job/feature/notification/logic/notification_controller.dart';
+import 'package:job/feature/notification/presentation/widgets/notification_item.dart';
 
 class NotificationListWidget extends StatelessWidget {
   final ScrollController scrollController;

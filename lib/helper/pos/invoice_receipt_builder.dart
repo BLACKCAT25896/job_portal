@@ -1,4 +1,4 @@
-// import 'package:mighty_job/helper/pos/esc_pos_builder.dart';
+// import 'package:job/helper/pos/esc_pos_builder.dart';
 //
 // class InvoiceReceiptBuilder {
 //   /// Builds a receipt with restaurant info, items, addons, and totals

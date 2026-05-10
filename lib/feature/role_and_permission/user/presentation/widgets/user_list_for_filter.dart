@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/widget/custom_divider.dart';
-import 'package:mighty_job/feature/role_and_permission/user/controller/user_controller.dart';
-import 'package:mighty_job/feature/role_and_permission/user/presentation/widgets/user_item_widget_for_filter.dart';
+import 'package:job/common/widget/custom_divider.dart';
+import 'package:job/feature/role_and_permission/user/controller/user_controller.dart';
+import 'package:job/feature/role_and_permission/user/presentation/widgets/user_item_widget_for_filter.dart';
 
 class UserListForPosWidget extends StatelessWidget {
   final String userType;

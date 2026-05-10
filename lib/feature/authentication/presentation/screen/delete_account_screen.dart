@@ -1,15 +1,15 @@
-import 'package:mighty_job/helper/app_color_helper.dart';
+import 'package:job/helper/app_color_helper.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/widget/custom_button.dart';
-import 'package:mighty_job/common/widget/custom_contaner.dart';
-import 'package:mighty_job/common/widget/custom_snackbar.dart';
-import 'package:mighty_job/common/widget/custom_text_field.dart';
+import 'package:job/common/widget/custom_button.dart';
+import 'package:job/common/widget/custom_contaner.dart';
+import 'package:job/common/widget/custom_snackbar.dart';
+import 'package:job/common/widget/custom_text_field.dart';
 import 'package:flutter/material.dart';
-import 'package:mighty_job/helper/email_checker.dart';
-import 'package:mighty_job/helper/route_helper.dart';
-import 'package:mighty_job/util/dimensions.dart';
-import 'package:mighty_job/util/images.dart';
-import 'package:mighty_job/util/styles.dart';
+import 'package:job/helper/email_checker.dart';
+import 'package:job/helper/route_helper.dart';
+import 'package:job/util/dimensions.dart';
+import 'package:job/util/images.dart';
+import 'package:job/util/styles.dart';
 import 'package:lottie/lottie.dart';
 
 class DeleteAccountScreen extends StatefulWidget {
@@ -42,7 +42,7 @@ class _DeleteAccountScreenState extends State<DeleteAccountScreen> {
                      Get.dialog(
                         Dialog(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
                           child: SizedBox(width: 400,
-                            child: Padding(padding: const EdgeInsets.all(Dimensions.paddingSizeDefault),
+                            child: Padding(padding: EdgeInsets.all(Dimensions.paddingSizeDefault),
                               child: Column(mainAxisSize: MainAxisSize.min, children: [
                                Lottie.asset(Images.emailSent),
                                 Text("please_check_your_email_you_will_get_a_link_to_delete_your_account".tr,

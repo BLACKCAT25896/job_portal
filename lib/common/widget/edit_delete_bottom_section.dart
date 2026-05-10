@@ -3,9 +3,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/widget/custom_button.dart';
-import 'package:mighty_job/util/dimensions.dart';
-import 'package:mighty_job/util/images.dart';
+import 'package:job/common/widget/custom_button.dart';
+import 'package:job/util/dimensions.dart';
+import 'package:job/util/images.dart';
 
 class EditDeleteBottomSection extends StatelessWidget {
   final Function()? edit;
@@ -22,7 +22,7 @@ class EditDeleteBottomSection extends StatelessWidget {
         text: "delete".tr, icon: const Icon(CupertinoIcons.delete, color: Colors.white, size: 15,),)),
 
       if(edit != null)
-      const SizedBox(width: Dimensions.paddingSizeSmall),
+        SizedBox(width: Dimensions.paddingSizeSmall),
       if(edit != null)
       Expanded(child: CustomButton(onTap: edit, text: "edit_details".tr,
         buttonColor: Colors.transparent,

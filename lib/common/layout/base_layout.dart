@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
-import 'package:mighty_job/feature/frontend/presentation/widgets/footer/footer_widget.dart';
-import 'package:mighty_job/feature/frontend/presentation/widgets/landing_page_appbar.dart';
-import 'package:mighty_job/util/dimensions.dart';
+import 'package:job/feature/frontend/presentation/widgets/footer/footer_widget.dart';
+import 'package:job/feature/frontend/presentation/widgets/landing_page_appbar.dart';
+import 'package:job/util/dimensions.dart';
 
 class BaseLayout extends StatefulWidget {
   final Widget child;

@@ -1,12 +1,12 @@
-import 'package:mighty_job/common/layout/custom_dialog_widget.dart';
-import 'package:mighty_job/common/layout/list_layout_widget.dart';
-import 'package:mighty_job/common/widget/custom_search.dart';
-import 'package:mighty_job/common/widget/custom_snackbar.dart';
-import 'package:mighty_job/feature/job_listing/controller/job_listing_controller.dart';
-import 'package:mighty_job/feature/job_listing/domain/models/job_listing_model.dart';
-import 'package:mighty_job/feature/job_listing/presentation/widgets/post_a_job_widget.dart';
-import 'package:mighty_job/feature/job_listing/presentation/widgets/job_listing_item.dart';
-import 'package:mighty_job/util/dimensions.dart';
+import 'package:job/common/layout/custom_dialog_widget.dart';
+import 'package:job/common/layout/list_layout_widget.dart';
+import 'package:job/common/widget/custom_search.dart';
+import 'package:job/common/widget/custom_snackbar.dart';
+import 'package:job/feature/job_listing/controller/job_listing_controller.dart';
+import 'package:job/feature/job_listing/domain/models/job_listing_model.dart';
+import 'package:job/feature/job_listing/presentation/widgets/post_a_job_widget.dart';
+import 'package:job/feature/job_listing/presentation/widgets/job_listing_item.dart';
+import 'package:job/util/dimensions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -32,7 +32,8 @@ class _JobListingListWidgetState extends State<JobListingListWidget> {
         final data = listingModel?.data;
 
         return GenericListSection<JobListingItem>(
-          topWidget: widget.fromFilter? SizedBox() : Padding(padding: const EdgeInsets.fromLTRB(Dimensions.paddingSizeDefault, 0,
+          topWidget: widget.fromFilter? SizedBox() :
+          Padding(padding: EdgeInsets.fromLTRB(Dimensions.paddingSizeDefault, 0,
                 Dimensions.paddingSizeDefault,Dimensions.paddingSizeDefault),
             child: CustomSearch(hintText: 'search'.tr, searchController: searchController,
               onSearch: () async {

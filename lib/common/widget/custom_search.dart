@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:mighty_job/util/dimensions.dart';
-import 'package:mighty_job/util/images.dart';
-import 'package:mighty_job/util/styles.dart';
+import 'package:job/util/dimensions.dart';
+import 'package:job/util/images.dart';
+import 'package:job/util/styles.dart';
 
 
 class CustomSearch extends StatefulWidget {
@@ -41,7 +41,7 @@ class _CustomSearchState extends State<CustomSearch> {
         children: [
           Expanded(
             child: Padding(
-              padding: const EdgeInsets.symmetric(
+              padding: EdgeInsets.symmetric(
                 vertical: Dimensions.paddingSizeExtraSmall,
                 horizontal: Dimensions.paddingSizeSmall,
               ),
@@ -62,7 +62,7 @@ class _CustomSearchState extends State<CustomSearch> {
                 decoration: InputDecoration(
                   hintText: widget.hintText,
                   isDense: true,
-                  contentPadding: const EdgeInsets.symmetric(
+                  contentPadding: EdgeInsets.symmetric(
                       horizontal: Dimensions.paddingSizeSmall, vertical: 5),
                   hintStyle: textRegular.copyWith(
                       color: Theme.of(context).hintColor,

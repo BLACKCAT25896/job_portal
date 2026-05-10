@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/helper/price_converter.dart';
-import 'package:mighty_job/util/dimensions.dart';
-import 'package:mighty_job/util/styles.dart';
+import 'package:job/helper/price_converter.dart';
+import 'package:job/util/dimensions.dart';
+import 'package:job/util/styles.dart';
 
 class ItemWidget extends StatelessWidget {
   final String? icon;
@@ -23,7 +23,7 @@ class ItemWidget extends StatelessWidget {
 
       if(details != null)
         Padding(
-          padding: const EdgeInsets.symmetric(vertical : Dimensions.paddingSizeExtraSmall),
+          padding: EdgeInsets.symmetric(vertical : Dimensions.paddingSizeExtraSmall),
           child: Text(details!.tr, style: textRegular.copyWith(fontSize: Dimensions.fontSizeSmall), textAlign: TextAlign.center),
         ),
 

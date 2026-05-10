@@ -1,11 +1,11 @@
 import 'package:get/get.dart';
-import 'package:mighty_job/api_handle/api_checker.dart';
-import 'package:mighty_job/common/widget/custom_snackbar.dart';
-import 'package:mighty_job/feature/role_and_permission/role/domain/models/permission_model.dart';
-import 'package:mighty_job/feature/role_and_permission/role/domain/models/role_body.dart';
-import 'package:mighty_job/feature/role_and_permission/role/domain/models/role_model.dart';
-import 'package:mighty_job/feature/role_and_permission/role/domain/repository/role_repository.dart';
-import 'package:mighty_job/feature/role_and_permission/user/controller/user_controller.dart';
+import 'package:job/api_handle/api_checker.dart';
+import 'package:job/common/widget/custom_snackbar.dart';
+import 'package:job/feature/role_and_permission/role/domain/models/permission_model.dart';
+import 'package:job/feature/role_and_permission/role/domain/models/role_body.dart';
+import 'package:job/feature/role_and_permission/role/domain/models/role_model.dart';
+import 'package:job/feature/role_and_permission/role/domain/repository/role_repository.dart';
+import 'package:job/feature/role_and_permission/user/controller/user_controller.dart';
 
 class RoleController extends GetxController implements GetxService{
   final RoleRepository roleRepository;

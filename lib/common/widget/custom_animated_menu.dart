@@ -1,10 +1,10 @@
-import 'package:mighty_job/helper/app_color_helper.dart';
+import 'package:job/helper/app_color_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_utils/src/extensions/internacionalization.dart';
-import 'package:mighty_job/common/widget/custom_menu/custom_menu_button_widget.dart';
-import 'package:mighty_job/common/widget/custom_menu/custom_menu_widget.dart';
-import 'package:mighty_job/util/dimensions.dart';
-import 'package:mighty_job/util/images.dart';
+import 'package:job/common/widget/custom_menu/custom_menu_button_widget.dart';
+import 'package:job/common/widget/custom_menu/custom_menu_widget.dart';
+import 'package:job/util/dimensions.dart';
+import 'package:job/util/images.dart';
 
 class CustomAnimatedMenu extends StatelessWidget {
   const CustomAnimatedMenu({super.key});
@@ -41,7 +41,7 @@ class CustomAnimatedMenu extends StatelessWidget {
             ),
 
           ],
-          child: Padding(padding: const EdgeInsets.all(Dimensions.paddingSizeDefault),
+          child: Padding(padding: EdgeInsets.all(Dimensions.paddingSizeDefault),
             child: Image.asset(Images.menuIcon),
           )),);
   }

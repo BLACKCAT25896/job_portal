@@ -1,11 +1,11 @@
-import 'package:mighty_job/common/layout/custom_dialog_widget.dart';
+import 'package:job/common/layout/custom_dialog_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/layout/list_layout_widget.dart';
-import 'package:mighty_job/feature/candidate_resume/controller/candidate_resume_controller.dart';
-import 'package:mighty_job/feature/candidate_resume/domain/models/candidate_resume_model.dart';
-import 'package:mighty_job/feature/candidate_resume/presentation/widgets/add_new_candidate_resume_widget.dart';
-import 'package:mighty_job/feature/candidate_resume/presentation/widgets/candidate_resume_item_widget.dart';
+import 'package:job/common/layout/list_layout_widget.dart';
+import 'package:job/feature/candidate_resume/controller/candidate_resume_controller.dart';
+import 'package:job/feature/candidate_resume/domain/models/candidate_resume_model.dart';
+import 'package:job/feature/candidate_resume/presentation/widgets/add_new_candidate_resume_widget.dart';
+import 'package:job/feature/candidate_resume/presentation/widgets/candidate_resume_item_widget.dart';
 
 class CandidateResumeListWidget extends StatelessWidget {
   final ScrollController scrollController;

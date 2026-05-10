@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/widget/custom_munu_item.dart';
-import 'package:mighty_job/feature/authentication/logic/authentication_controller.dart';
-import 'package:mighty_job/feature/profile/logic/profile_controller.dart';
-import 'package:mighty_job/feature/profile/presentation/widgets/header_profile_info.dart';
-import 'package:mighty_job/helper/route_helper.dart';
+import 'package:job/common/widget/custom_munu_item.dart';
+import 'package:job/feature/authentication/logic/authentication_controller.dart';
+import 'package:job/feature/profile/logic/profile_controller.dart';
+import 'package:job/feature/profile/presentation/widgets/header_profile_info.dart';
+import 'package:job/helper/route_helper.dart';
 
 
 class HeaderProfileInfoMenu extends StatefulWidget {
@@ -26,7 +26,7 @@ class _HeaderProfileInfoMenuState extends State<HeaderProfileInfoMenu> {
           items: userType == "Candidate"?[
 
           SimpleMenuItem(title: 'profile'.tr, icon: Icons.person_outline,
-              onTap: () => Get.toNamed(RouteHelper.getProfileRoute())),
+              onTap: () => Get.toNamed(RouteHelper.getCandidateProfileRoute())),
 
           SimpleMenuItem(title: 'email_cv'.tr, icon: Icons.mail_outline,
               onTap: () => Get.toNamed(RouteHelper.getDashboardRoute())),
@@ -79,7 +79,10 @@ class _HeaderProfileInfoMenuState extends State<HeaderProfileInfoMenu> {
                 onTap: () => Get.toNamed(RouteHelper.getProfileRoute())),
 
             SimpleMenuItem(title: 'logout'.tr, icon: Icons.logout,
-                onTap: () => Get.toNamed(RouteHelper.getProfileRoute())),
+                onTap: () {
+                  Get.find<AuthenticationController>().clearSharedData();
+                  Get.offAllNamed(RouteHelper.getSignInRoute());
+                }),
           ],
         ),
         );

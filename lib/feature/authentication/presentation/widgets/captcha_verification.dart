@@ -1,7 +1,7 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/feature/authentication/logic/authentication_controller.dart';
+import 'package:job/feature/authentication/logic/authentication_controller.dart';
 
 class CaptchaVerificationWidget extends StatefulWidget {
   const CaptchaVerificationWidget({super.key});

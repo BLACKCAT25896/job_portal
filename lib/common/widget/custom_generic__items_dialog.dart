@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mighty_job/util/dimensions.dart';
+import 'package:job/util/dimensions.dart';
 
 class GenericListDialog<T> extends StatelessWidget {
   final List<T>? items;
@@ -28,7 +28,7 @@ class GenericListDialog<T> extends StatelessWidget {
           maxHeight: dialogMaxHeight),
         child: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.start, children: [
             if (title != null)
-              Padding(padding: const EdgeInsets.all(Dimensions.paddingSizeDefault),
+              Padding(padding: EdgeInsets.all(Dimensions.paddingSizeDefault),
                 child: title),
             Flexible(child: ListView.builder(
                 itemCount: items?.length ?? 0,

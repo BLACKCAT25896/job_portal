@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/widget/custom_button.dart';
-import 'package:mighty_job/util/dimensions.dart';
-import 'package:mighty_job/util/styles.dart';
+import 'package:job/common/widget/custom_button.dart';
+import 'package:job/util/dimensions.dart';
+import 'package:job/util/styles.dart';
 
 class ConfirmationDialogWidget extends StatelessWidget {
   final String icon;
@@ -19,14 +19,15 @@ class ConfirmationDialogWidget extends StatelessWidget {
       elevation: 0,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(Dimensions.radiusSmall)),
       child: Padding(
-        padding:  const EdgeInsets.all(Dimensions.paddingSizeLarge),
+        padding:  EdgeInsets.all(Dimensions.paddingSizeLarge),
         child: Column(mainAxisSize: MainAxisSize.min, children: [
 
 
 
-          Padding(padding:  const EdgeInsets.all(Dimensions.paddingSizeSmall),
+          Padding(padding: EdgeInsets.all(Dimensions.paddingSizeSmall),
             child: Text(description, style: textMedium.copyWith(fontSize: Dimensions.fontSizeDefault), textAlign: TextAlign.center)),
-           const SizedBox(height: Dimensions.paddingSizeSmall),
+
+          SizedBox(height: Dimensions.paddingSizeSmall),
 
           Row(children: [
             hasCancel ? Expanded(child: CustomButton(height: 28,

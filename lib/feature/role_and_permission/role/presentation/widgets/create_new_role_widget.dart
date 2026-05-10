@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/widget/custom_button.dart';
-import 'package:mighty_job/common/widget/custom_contaner.dart';
-import 'package:mighty_job/common/widget/custom_snackbar.dart';
-import 'package:mighty_job/common/widget/custom_text_field.dart';
-import 'package:mighty_job/feature/role_and_permission/role/controller/role_controller.dart';
-import 'package:mighty_job/feature/role_and_permission/role/domain/models/permission_model.dart';
-import 'package:mighty_job/feature/role_and_permission/role/domain/models/role_body.dart';
-import 'package:mighty_job/feature/role_and_permission/role/domain/models/role_model.dart';
-import 'package:mighty_job/util/dimensions.dart';
-import 'package:mighty_job/util/styles.dart';
+import 'package:job/common/widget/custom_button.dart';
+import 'package:job/common/widget/custom_contaner.dart';
+import 'package:job/common/widget/custom_snackbar.dart';
+import 'package:job/common/widget/custom_text_field.dart';
+import 'package:job/feature/role_and_permission/role/controller/role_controller.dart';
+import 'package:job/feature/role_and_permission/role/domain/models/permission_model.dart';
+import 'package:job/feature/role_and_permission/role/domain/models/role_body.dart';
+import 'package:job/feature/role_and_permission/role/domain/models/role_model.dart';
+import 'package:job/util/dimensions.dart';
+import 'package:job/util/styles.dart';
 
 class CreateNewRoleWidget extends StatefulWidget {
   final RoleItem? roleItem;
@@ -46,7 +46,7 @@ class _CreateNewRoleWidgetState extends State<CreateNewRoleWidget> {
   Widget build(BuildContext context) {
     return GetBuilder<RoleController>(
         builder: (roleController) {
-          return Padding(padding: const EdgeInsets.all(Dimensions.paddingSizeDefault),
+          return Padding(padding: EdgeInsets.all(Dimensions.paddingSizeDefault),
             child: SingleChildScrollView(
               child: Column(mainAxisSize: MainAxisSize.min, children: [
 
@@ -101,7 +101,7 @@ class _CreateNewRoleWidgetState extends State<CreateNewRoleWidget> {
 
 
 
-                Padding(padding: const EdgeInsets.symmetric(vertical: Dimensions.paddingSizeDefault),
+                Padding(padding: EdgeInsets.symmetric(vertical: Dimensions.paddingSizeDefault),
                     child: CustomButton(onTap: (){
                       String name = nameController.text.trim();
                       if(name.isEmpty){

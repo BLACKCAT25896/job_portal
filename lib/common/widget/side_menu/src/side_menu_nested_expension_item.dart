@@ -1,11 +1,11 @@
-import 'package:mighty_job/helper/app_color_helper.dart';
-import 'package:mighty_job/util/dimensions.dart';
+import 'package:job/helper/app_color_helper.dart';
+import 'package:job/util/dimensions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/widget/custom_divider.dart';
-import 'package:mighty_job/common/widget/side_menu/src/side_bar_controller.dart';
-import 'package:mighty_job/util/styles.dart';
+import 'package:job/common/widget/custom_divider.dart';
+import 'package:job/common/widget/side_menu/src/side_bar_controller.dart';
+import 'package:job/util/styles.dart';
 
 class SideMenuNestedExpansionItem extends StatelessWidget {
   final String keyValue;

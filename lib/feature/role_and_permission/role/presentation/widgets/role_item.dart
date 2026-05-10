@@ -1,16 +1,16 @@
 
-import 'package:mighty_job/helper/app_color_helper.dart';
+import 'package:job/helper/app_color_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/controller/theme_controller.dart';
-import 'package:mighty_job/common/widget/custom_contaner.dart';
-import 'package:mighty_job/common/widget/numbering_widget.dart';
-import 'package:mighty_job/feature/role_and_permission/role/domain/models/role_model.dart';
-import 'package:mighty_job/feature/role_and_permission/role/presentation/screens/create_new_role_screen.dart';
-import 'package:mighty_job/helper/responsive_helper.dart';
-import 'package:mighty_job/util/dimensions.dart';
-import 'package:mighty_job/util/images.dart';
-import 'package:mighty_job/util/styles.dart';
+import 'package:job/common/controller/theme_controller.dart';
+import 'package:job/common/widget/custom_contaner.dart';
+import 'package:job/common/widget/numbering_widget.dart';
+import 'package:job/feature/role_and_permission/role/domain/models/role_model.dart';
+import 'package:job/feature/role_and_permission/role/presentation/screens/create_new_role_screen.dart';
+import 'package:job/helper/responsive_helper.dart';
+import 'package:job/util/dimensions.dart';
+import 'package:job/util/images.dart';
+import 'package:job/util/styles.dart';
 
 class RoleItemWidget extends StatelessWidget {
   final RoleItem? roleItem;
@@ -44,9 +44,9 @@ class RoleItemWidget extends StatelessWidget {
                       borderRadius: const BorderRadius.all(Radius.circular(50)),
                       color: Get.find<ThemeController>().darkTheme? Colors.grey.withValues(alpha: 0.2):
                       systemPrimaryColor().withValues(alpha: .1)),
-                    padding: const EdgeInsets.symmetric(vertical: Dimensions.paddingSizeSmall-3,
+                    padding: EdgeInsets.symmetric(vertical: Dimensions.paddingSizeSmall-3,
                         horizontal: Dimensions.paddingSizeSmall),
-                    margin: const EdgeInsets.only(right: Dimensions.paddingSizeSmall),
+                    margin: EdgeInsets.only(right: Dimensions.paddingSizeSmall),
                     child: ConstrainedBox(
                       constraints: BoxConstraints(maxWidth: MediaQuery.of(context).size.width*0.85),
                       child: Row(mainAxisSize:MainAxisSize.min,children: [
@@ -83,9 +83,9 @@ class RoleItemWidget extends StatelessWidget {
                       borderRadius: const BorderRadius.all(Radius.circular(50)),
                       color: Get.find<ThemeController>().darkTheme?
                       Colors.grey.withValues(alpha: 0.2): systemPrimaryColor().withValues(alpha: .1)),
-                    padding: const EdgeInsets.symmetric(vertical: Dimensions.paddingSizeSmall-3,
+                    padding: EdgeInsets.symmetric(vertical: Dimensions.paddingSizeSmall-3,
                         horizontal: Dimensions.paddingSizeSmall),
-                    margin: const EdgeInsets.only(right: Dimensions.paddingSizeSmall),
+                    margin: EdgeInsets.only(right: Dimensions.paddingSizeSmall),
                     child: ConstrainedBox(
                       constraints: BoxConstraints(maxWidth: MediaQuery.of(context).size.width*0.85),
                       child: Row(mainAxisSize:MainAxisSize.min,children: [

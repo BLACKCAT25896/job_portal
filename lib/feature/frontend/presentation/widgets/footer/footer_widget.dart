@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:mighty_job/feature/frontend/presentation/widgets/footer/copyright_widget.dart';
-import 'package:mighty_job/feature/frontend/presentation/widgets/footer/footer_left_portion.dart';
-import 'package:mighty_job/feature/frontend/presentation/widgets/footer/footer_navigation_link_widget.dart';
-import 'package:mighty_job/feature/frontend/presentation/widgets/footer/job_recruiter.dart';
-import 'package:mighty_job/feature/frontend/presentation/widgets/footer/job_seekers.dart';
-import 'package:mighty_job/helper/responsive_helper.dart';
-import 'package:mighty_job/util/dimensions.dart';
+import 'package:job/feature/frontend/presentation/widgets/footer/copyright_widget.dart';
+import 'package:job/feature/frontend/presentation/widgets/footer/footer_left_portion.dart';
+import 'package:job/feature/frontend/presentation/widgets/footer/footer_navigation_link_widget.dart';
+import 'package:job/feature/frontend/presentation/widgets/footer/job_recruiter.dart';
+import 'package:job/feature/frontend/presentation/widgets/footer/job_seekers.dart';
+import 'package:job/helper/responsive_helper.dart';
+import 'package:job/util/dimensions.dart';
 
 
 class FooterWidget extends StatelessWidget {
@@ -35,7 +35,7 @@ class FooterWidget extends StatelessWidget {
       Container(color: Theme.of(context).cardColor,
           padding: EdgeInsets.symmetric(
             vertical: ResponsiveHelper.isDesktop(context)? 50 : Dimensions.paddingSizeDefault),
-        child: const Column(crossAxisAlignment: CrossAxisAlignment.start,
+        child: Column(crossAxisAlignment: CrossAxisAlignment.start,
             spacing: Dimensions.paddingSizeOverLarge, children: [
               FooterLeftPortion(),
               FooterNavigationLinkWidget(),

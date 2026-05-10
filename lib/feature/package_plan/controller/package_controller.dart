@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/api_handle/api_checker.dart';
-import 'package:mighty_job/common/widget/custom_snackbar.dart';
-import 'package:mighty_job/feature/package_plan/domain/models/package_body.dart';
-import 'package:mighty_job/feature/package_plan/domain/models/package_model.dart';
-import 'package:mighty_job/feature/package_plan/domain/repository/package_repository.dart';
+import 'package:job/api_handle/api_checker.dart';
+import 'package:job/common/widget/custom_snackbar.dart';
+import 'package:job/feature/package_plan/domain/models/package_body.dart';
+import 'package:job/feature/package_plan/domain/models/package_model.dart';
+import 'package:job/feature/package_plan/domain/repository/package_repository.dart';
 
 class PackageController extends GetxController implements GetxService{
   final PackageRepository packageRepository;

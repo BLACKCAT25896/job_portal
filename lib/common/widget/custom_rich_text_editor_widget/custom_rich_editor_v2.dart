@@ -1,7 +1,7 @@
 import 'package:flutter_quill/flutter_quill.dart';
 import 'package:flutter/material.dart';
-import 'package:mighty_job/util/dimensions.dart';
-import 'package:mighty_job/util/styles.dart';
+import 'package:job/util/dimensions.dart';
+import 'package:job/util/styles.dart';
 
 class CustomRichEditorV2 extends StatefulWidget {
   final QuillController? controller;
@@ -54,7 +54,7 @@ class _CustomRichEditorV2State extends State<CustomRichEditorV2> {
         /// Title
         if (widget.title != null)
           Padding(
-            padding: const EdgeInsets.only(
+            padding:  EdgeInsets.only(
               bottom: Dimensions.paddingSizeSmall,
             ),
             child: Text.rich(

@@ -1,9 +1,9 @@
 
 import 'package:get/get.dart';
-import 'package:mighty_job/api_handle/api_checker.dart';
-import 'package:mighty_job/feature/subsscription/domain/models/package_model.dart';
-import 'package:mighty_job/feature/subsscription/domain/repository/subscription_repository.dart';
-import 'package:mighty_job/feature/subsscription/presentation/widgets/subscription_request_successfull_dialog.dart';
+import 'package:job/api_handle/api_checker.dart';
+import 'package:job/feature/subsscription/domain/models/package_model.dart';
+import 'package:job/feature/subsscription/domain/repository/subscription_repository.dart';
+import 'package:job/feature/subsscription/presentation/widgets/subscription_request_successfull_dialog.dart';
 
 class SubscriptionController extends GetxController implements GetxService{
   final SubscriptionRepository subscriptionRepository;

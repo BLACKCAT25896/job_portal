@@ -3,9 +3,9 @@
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/feature/support_ticket/domain/models/ticket_category_model.dart';
-import 'package:mighty_job/util/dimensions.dart';
-import 'package:mighty_job/util/styles.dart';
+import 'package:job/feature/support_ticket/domain/models/ticket_category_model.dart';
+import 'package:job/util/dimensions.dart';
+import 'package:job/util/styles.dart';
 
 class SupportTicketDropdownWidget extends StatefulWidget {
   final double? width;
@@ -29,7 +29,7 @@ class _SupportTicketDropdownWidgetState extends State<SupportTicketDropdownWidge
     return Container(decoration: BoxDecoration(
       borderRadius: BorderRadius.circular(Dimensions.paddingSizeExtraSmall),
       border: Border.all(width: .5, color: Theme.of(context).hintColor), ),
-      padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeSmall),
+      padding: EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeSmall),
       child: DropdownButton2<TicketCategoryItem>(
         isExpanded: true,
         underline: const SizedBox(),

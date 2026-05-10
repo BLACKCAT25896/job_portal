@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:mighty_job/common/widget/custom_contaner.dart';
-import 'package:mighty_job/common/widget/responsive_grid_widget.dart';
-import 'package:mighty_job/feature/frontend/controller/frontend_controller.dart';
-import 'package:mighty_job/feature/frontend/presentation/widgets/job_details/info_richtext_widget.dart';
-import 'package:mighty_job/helper/app_color_helper.dart';
-import 'package:mighty_job/helper/date_converter.dart';
-import 'package:mighty_job/util/dimensions.dart';
-import 'package:mighty_job/util/styles.dart';
+import 'package:job/common/widget/custom_contaner.dart';
+import 'package:job/common/widget/responsive_grid_widget.dart';
+import 'package:job/feature/frontend/controller/frontend_controller.dart';
+import 'package:job/feature/frontend/presentation/widgets/job_details/info_richtext_widget.dart';
+import 'package:job/helper/app_color_helper.dart';
+import 'package:job/helper/date_converter.dart';
+import 'package:job/util/dimensions.dart';
+import 'package:job/util/styles.dart';
 import 'package:get/get.dart';
 
 class JobSummerySection extends StatelessWidget {
@@ -37,7 +37,7 @@ class JobSummerySection extends StatelessWidget {
               Text("summary".tr, style: textBold.copyWith(
                   fontSize: Dimensions.fontSizeExtraLarge,
                   color: systemPrimaryColor())),
-              const SizedBox(height: Dimensions.paddingSizeDefault),
+               SizedBox(height: Dimensions.paddingSizeDefault),
 
               ResponsiveMasonryGrid(
                 children: [

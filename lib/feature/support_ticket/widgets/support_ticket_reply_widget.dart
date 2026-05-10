@@ -1,7 +1,7 @@
-import 'package:mighty_job/helper/app_color_helper.dart';
+import 'package:job/helper/app_color_helper.dart';
 import 'package:flutter/material.dart';
-import 'package:mighty_job/util/dimensions.dart';
-import 'package:mighty_job/util/styles.dart';
+import 'package:job/util/dimensions.dart';
+import 'package:job/util/styles.dart';
 
 
 class SupportTicketReplyWidget extends StatelessWidget {

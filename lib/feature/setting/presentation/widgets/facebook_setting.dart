@@ -1,17 +1,17 @@
 
-import 'package:mighty_job/common/widget/custom_checkbox.dart';
-import 'package:mighty_job/common/widget/custom_snackbar.dart';
-import 'package:mighty_job/feature/cms_management/cms_settings/controller/system_settngs_controller.dart';
+import 'package:job/common/widget/custom_checkbox.dart';
+import 'package:job/common/widget/custom_snackbar.dart';
+import 'package:job/feature/cms_management/cms_settings/controller/system_settngs_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/global_widget/custom_web_scroll_view_widget.dart';
-import 'package:mighty_job/common/layout/section_header_with_path_widget.dart';
-import 'package:mighty_job/common/widget/custom_app_bar.dart';
-import 'package:mighty_job/common/widget/custom_button.dart';
-import 'package:mighty_job/common/widget/custom_contaner.dart';
-import 'package:mighty_job/common/widget/custom_text_field.dart';
-import 'package:mighty_job/helper/responsive_helper.dart';
-import 'package:mighty_job/util/dimensions.dart';
+import 'package:job/common/global_widget/custom_web_scroll_view_widget.dart';
+import 'package:job/common/layout/section_header_with_path_widget.dart';
+import 'package:job/common/widget/custom_app_bar.dart';
+import 'package:job/common/widget/custom_button.dart';
+import 'package:job/common/widget/custom_contaner.dart';
+import 'package:job/common/widget/custom_text_field.dart';
+import 'package:job/helper/responsive_helper.dart';
+import 'package:job/util/dimensions.dart';
 
 class FacebookSetting extends StatefulWidget {
   const FacebookSetting({super.key});
@@ -46,7 +46,7 @@ class _FacebookSettingState extends State<FacebookSetting> {
             return Column(children: [
               SizedBox(height: isDesktop ? 0 : Dimensions.paddingSizeDefault),
               SectionHeaderWithPath(sectionTitle: "facebook_setting".tr),
-              Padding(padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeDefault),
+              Padding(padding: EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeDefault),
                 child: CustomContainer(showShadow: false, borderRadius: 5,
                   child: Column(spacing: Dimensions.paddingSizeDefault,
                     crossAxisAlignment: CrossAxisAlignment.end, children: [

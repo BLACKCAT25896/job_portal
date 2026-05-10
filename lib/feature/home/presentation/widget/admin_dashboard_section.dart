@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/global_widget/custom_web_scroll_view_widget.dart';
-import 'package:mighty_job/feature/home/presentation/widget/sales_report_ratio_chart.dart';
-import 'package:mighty_job/feature/home/presentation/widget/statistics_cards_widget.dart';
-import 'package:mighty_job/feature/report_management/domain/model/dashboard_report_data_model.dart';
-import 'package:mighty_job/feature/report_management/logic/report_controller.dart';
-import 'package:mighty_job/helper/responsive_helper.dart';
-import 'package:mighty_job/util/dimensions.dart';
+import 'package:job/common/global_widget/custom_web_scroll_view_widget.dart';
+import 'package:job/feature/home/presentation/widget/sales_report_ratio_chart.dart';
+import 'package:job/feature/home/presentation/widget/statistics_cards_widget.dart';
+import 'package:job/feature/report_management/domain/model/dashboard_report_data_model.dart';
+import 'package:job/feature/report_management/logic/report_controller.dart';
+import 'package:job/helper/responsive_helper.dart';
+import 'package:job/util/dimensions.dart';
 
 class AdminDashboardSection extends StatelessWidget {
   final ScrollController scrollController;
@@ -30,7 +30,7 @@ class AdminDashboardSection extends StatelessWidget {
 
               const StatisticsCardsWidget(),
 
-              Padding(padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeDefault),
+              Padding(padding: EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeDefault),
                   child: ResponsiveHelper.isDesktop(context)?
                   Row(crossAxisAlignment: CrossAxisAlignment.start,spacing: Dimensions.paddingSizeDefault, children: [
 

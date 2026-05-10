@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/widget/custom_title.dart';
-import 'package:mighty_job/common/widget/dropdown_with_search_widget.dart';
-import 'package:mighty_job/feature/reported_job/controller/reported_job_controller.dart';
-import 'package:mighty_job/feature/reported_job/domain/models/reported_job_model.dart';
-import 'package:mighty_job/feature/reported_job/presentation/widgets/reported_job_list_widget.dart';
-import 'package:mighty_job/util/dimensions.dart';
+import 'package:job/common/widget/custom_title.dart';
+import 'package:job/common/widget/dropdown_with_search_widget.dart';
+import 'package:job/feature/reported_job/controller/reported_job_controller.dart';
+import 'package:job/feature/reported_job/domain/models/reported_job_model.dart';
+import 'package:job/feature/reported_job/presentation/widgets/reported_job_list_widget.dart';
+import 'package:job/util/dimensions.dart';
 
 class SelectReportedJobWidget extends StatefulWidget {
   const SelectReportedJobWidget({super.key});

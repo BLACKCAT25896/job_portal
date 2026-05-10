@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
-import 'package:mighty_job/api_handle/api_checker.dart';
-import 'package:mighty_job/common/widget/custom_snackbar.dart';
-import 'package:mighty_job/feature/setting/domain/repository/setting_repository.dart';
+import 'package:job/api_handle/api_checker.dart';
+import 'package:job/common/widget/custom_snackbar.dart';
+import 'package:job/feature/setting/domain/repository/setting_repository.dart';
 
 class SettingController extends GetxController implements GetxService{
   final SettingRepository settingRepository;

@@ -1,8 +1,8 @@
-import 'package:mighty_job/feature/candidate_resume/controller/candidate_resume_controller.dart';
-import 'package:mighty_job/util/styles.dart';
+import 'package:job/feature/candidate_resume/controller/candidate_resume_controller.dart';
+import 'package:job/util/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/widget/custom_generic_dropdown.dart';
+import 'package:job/common/widget/custom_generic_dropdown.dart';
 
 class SelectCandidateResumeWidget extends StatefulWidget {
   const SelectCandidateResumeWidget({super.key});

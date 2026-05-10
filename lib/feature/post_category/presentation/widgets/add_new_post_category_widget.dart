@@ -1,12 +1,12 @@
-import 'package:mighty_job/common/widget/active_inactive_widget.dart';
-import 'package:mighty_job/common/widget/custom_button.dart';
-import 'package:mighty_job/common/widget/custom_snackbar.dart';
-import 'package:mighty_job/common/widget/custom_text_field.dart';
-import 'package:mighty_job/feature/post_category/controller/post_category_controller.dart';
-import 'package:mighty_job/feature/post_category/domain/models/post_category_body.dart';
-import 'package:mighty_job/feature/post_category/domain/models/post_category_model.dart';
-import 'package:mighty_job/util/dimensions.dart';
-import 'package:mighty_job/util/styles.dart';
+import 'package:job/common/widget/active_inactive_widget.dart';
+import 'package:job/common/widget/custom_button.dart';
+import 'package:job/common/widget/custom_snackbar.dart';
+import 'package:job/common/widget/custom_text_field.dart';
+import 'package:job/feature/post_category/controller/post_category_controller.dart';
+import 'package:job/feature/post_category/domain/models/post_category_body.dart';
+import 'package:job/feature/post_category/domain/models/post_category_model.dart';
+import 'package:job/util/dimensions.dart';
+import 'package:job/util/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -61,7 +61,7 @@ class _AddNewPostCategoryWidgetState extends State<AddNewPostCategoryWidget> {
 
         ]),
 
-        Padding(padding: const EdgeInsets.symmetric(vertical: Dimensions.paddingSizeDefault),
+        Padding(padding: EdgeInsets.symmetric(vertical: Dimensions.paddingSizeDefault),
             child: postCategoryController.isLoading? const CircularProgressIndicator() :
 
             CustomButton(onTap: (){

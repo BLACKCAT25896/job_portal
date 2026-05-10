@@ -1,12 +1,12 @@
-import 'package:mighty_job/common/layout/custom_dialog_widget.dart';
-import 'package:mighty_job/common/layout/list_layout_widget.dart';
-import 'package:mighty_job/common/widget/custom_search.dart';
-import 'package:mighty_job/common/widget/custom_snackbar.dart';
-import 'package:mighty_job/feature/post_category/controller/post_category_controller.dart';
-import 'package:mighty_job/feature/post_category/domain/models/post_category_model.dart';
-import 'package:mighty_job/feature/post_category/presentation/widgets/add_new_post_category_widget.dart';
-import 'package:mighty_job/feature/post_category/presentation/widgets/post_category_item.dart';
-import 'package:mighty_job/util/dimensions.dart';
+import 'package:job/common/layout/custom_dialog_widget.dart';
+import 'package:job/common/layout/list_layout_widget.dart';
+import 'package:job/common/widget/custom_search.dart';
+import 'package:job/common/widget/custom_snackbar.dart';
+import 'package:job/feature/post_category/controller/post_category_controller.dart';
+import 'package:job/feature/post_category/domain/models/post_category_model.dart';
+import 'package:job/feature/post_category/presentation/widgets/add_new_post_category_widget.dart';
+import 'package:job/feature/post_category/presentation/widgets/post_category_item.dart';
+import 'package:job/util/dimensions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -32,7 +32,7 @@ class _PostCategoryListWidgetState extends State<PostCategoryListWidget> {
         final data = categoryModel?.data;
 
         return GenericListSection<PostCategoryItem>(
-          topWidget: widget.fromFilter? SizedBox() : Padding(padding: const EdgeInsets.fromLTRB(Dimensions.paddingSizeDefault, 0,
+          topWidget: widget.fromFilter? SizedBox() : Padding(padding: EdgeInsets.fromLTRB(Dimensions.paddingSizeDefault, 0,
                 Dimensions.paddingSizeDefault,Dimensions.paddingSizeDefault),
             child: CustomSearch(hintText: 'search'.tr, searchController: searchController,
               onSearch: () async {

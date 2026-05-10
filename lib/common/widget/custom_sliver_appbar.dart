@@ -1,9 +1,9 @@
-import 'package:mighty_job/common/widget/custom_circular_icon_button.dart';
-import 'package:mighty_job/feature/profile/logic/profile_controller.dart';
-import 'package:mighty_job/helper/app_color_helper.dart';
-import 'package:mighty_job/util/dimensions.dart';
-import 'package:mighty_job/util/images.dart';
-import 'package:mighty_job/util/styles.dart';
+import 'package:job/common/widget/custom_circular_icon_button.dart';
+import 'package:job/feature/profile/logic/profile_controller.dart';
+import 'package:job/helper/app_color_helper.dart';
+import 'package:job/util/dimensions.dart';
+import 'package:job/util/images.dart';
+import 'package:job/util/styles.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -40,12 +40,12 @@ class CustomSliverAppbar extends StatelessWidget {
                       child: Padding(padding: const EdgeInsets.symmetric(vertical: 8.0),
                         child: Row(children: [
                           SizedBox(height: 20, child: Image.asset(Images.logo)),
-                          const SizedBox(width: Dimensions.paddingSizeExtraSmall,),
+                          SizedBox(width: Dimensions.paddingSizeExtraSmall,),
                           Flexible(child: Text('default',
                               maxLines: 1, overflow: TextOverflow.ellipsis,
                               style: textRegular.copyWith(color: Colors.white,
                                   fontSize: Dimensions.fontSizeSmall))),
-                          const SizedBox(width: Dimensions.paddingSizeExtraSmall,),
+                          SizedBox(width: Dimensions.paddingSizeExtraSmall,),
                           const Icon(Icons.keyboard_arrow_down_rounded, size: 20, color: Colors.white),
                         ],),
                       ),

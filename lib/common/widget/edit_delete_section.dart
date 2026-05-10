@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/controller/theme_controller.dart';
-import 'package:mighty_job/common/widget/custom_contaner.dart';
-import 'package:mighty_job/util/dimensions.dart';
-import 'package:mighty_job/util/images.dart';
+import 'package:job/common/controller/theme_controller.dart';
+import 'package:job/common/widget/custom_contaner.dart';
+import 'package:job/util/dimensions.dart';
+import 'package:job/util/images.dart';
 
 class EditDeleteSection extends StatelessWidget {
   final Function()? onEdit;
@@ -22,13 +22,13 @@ class EditDeleteSection extends StatelessWidget {
                 child: SizedBox(width: 20,child: Image.asset(Images.edit, color:  darkTheme? Colors.white : Colors.black,))),
 
           if(onDelete != null && onEdit != null)
-            const SizedBox(width: Dimensions.paddingSizeLarge),
+             SizedBox(width: Dimensions.paddingSizeLarge),
           if(onDelete != null)
             InkWell(onTap: onDelete,
                 child: SizedBox(width: 20,child: Image.asset(Images.delete))),
 
           if(onDelete != null && onDownload != null)
-            const SizedBox(width: Dimensions.paddingSizeDefault),
+             SizedBox(width: Dimensions.paddingSizeDefault),
           if(onDownload != null)
             InkWell(onTap: onDownload,
                 child: SizedBox(width: 16 , child: Image.asset(Images.downloadIcon, color: Theme.of(context).textTheme.displayLarge?.color,))),
@@ -41,14 +41,14 @@ class EditDeleteSection extends StatelessWidget {
               width: 30,child: Image.asset(Images.edit, color:  darkTheme? Colors.white : Colors.black,))),
 
       if(onDelete != null && onEdit != null)
-      const SizedBox(height: Dimensions.paddingSizeDefault),
+       SizedBox(height: Dimensions.paddingSizeDefault),
       if(onDelete != null)
       InkWell(onTap: onDelete,
           child: CustomContainer(borderRadius: 3, horizontalPadding: 7, verticalPadding: 7,
               width: 30, child: Image.asset(Images.delete, color: Theme.of(context).textTheme.displayLarge?.color,))),
 
       if(onDelete != null && onDownload != null)
-        const SizedBox(height: Dimensions.paddingSizeDefault),
+         SizedBox(height: Dimensions.paddingSizeDefault),
       if(onDownload != null)
         InkWell(onTap: onDownload,
             child: CustomContainer(borderRadius: 3, horizontalPadding: 7, verticalPadding: 7,

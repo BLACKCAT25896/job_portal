@@ -1,10 +1,10 @@
-import 'package:mighty_job/helper/app_color_helper.dart';
+import 'package:job/helper/app_color_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/global_widget/header_logo_section.dart';
-import 'package:mighty_job/feature/dashboard/views/dashboard_screen.dart';
-import 'package:mighty_job/util/dimensions.dart';
-import 'package:mighty_job/util/styles.dart';
+import 'package:job/common/global_widget/header_logo_section.dart';
+import 'package:job/feature/dashboard/views/dashboard_screen.dart';
+import 'package:job/util/dimensions.dart';
+import 'package:job/util/styles.dart';
 
 class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
   final String? title;
@@ -34,7 +34,7 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
         toolbarHeight: 80,
         automaticallyImplyLeading: false,
         title: title!= null?
-        Padding(padding: const EdgeInsets.only(left: Dimensions.paddingSizeExtraSmall),
+        Padding(padding: EdgeInsets.only(left: Dimensions.paddingSizeExtraSmall),
           child: Column(mainAxisSize: MainAxisSize.min, children: [
               Text(title!.tr, style: textRegular.copyWith(fontSize: fontSize ??
                   Dimensions.fontSizeLarge , color: Get.isDarkMode ?

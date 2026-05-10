@@ -1,8 +1,8 @@
-import 'package:mighty_job/helper/app_color_helper.dart';
+import 'package:job/helper/app_color_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/util/dimensions.dart';
-import 'package:mighty_job/util/styles.dart';
+import 'package:job/util/dimensions.dart';
+import 'package:job/util/styles.dart';
 
 
 
@@ -16,7 +16,7 @@ class TitleRowWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(bottom: Dimensions.paddingSizeDefault,
+      padding: EdgeInsets.only(bottom: Dimensions.paddingSizeDefault,
           top: Dimensions.paddingSizeLarge),
       child: Row( children: [
 

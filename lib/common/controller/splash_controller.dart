@@ -3,9 +3,9 @@ import 'dart:developer';
 
 import 'package:get/get.dart';
 import 'package:in_app_update/in_app_update.dart';
-import 'package:mighty_job/api_handle/api_checker.dart';
-import 'package:mighty_job/common/repository/splash_repository.dart';
-import 'package:mighty_job/common/widget/custom_snackbar.dart';
+import 'package:job/api_handle/api_checker.dart';
+import 'package:job/common/repository/splash_repository.dart';
+import 'package:job/common/widget/custom_snackbar.dart';
 
 class SplashController extends GetxController implements GetxService{
   final SplashRepository splashRepo;

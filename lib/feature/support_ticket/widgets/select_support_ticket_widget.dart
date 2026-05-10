@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/widget/custom_title.dart';
-import 'package:mighty_job/feature/support_ticket/controllers/support_ticket_controller.dart';
-import 'package:mighty_job/feature/support_ticket/widgets/support_ticket_dropdown_widget.dart';
-import 'package:mighty_job/util/dimensions.dart';
+import 'package:job/common/widget/custom_title.dart';
+import 'package:job/feature/support_ticket/controllers/support_ticket_controller.dart';
+import 'package:job/feature/support_ticket/widgets/support_ticket_dropdown_widget.dart';
+import 'package:job/util/dimensions.dart';
 
 class SupportTicketCategorySelectionWidget extends StatefulWidget {
   const SupportTicketCategorySelectionWidget({super.key});
@@ -25,7 +25,8 @@ class _SupportTicketCategorySelectionWidgetState extends State<SupportTicketCate
     return GetBuilder<SupportTicketController>(
         builder: (ticketCategoryController) {
           return Column(children: [
-            const SizedBox(height: Dimensions.paddingSizeSmall),
+
+            SizedBox(height: Dimensions.paddingSizeSmall),
             CustomTitle(title: "Category", leftPadding: 0, fontSize: Dimensions.fontSizeDefault),
 
             const SizedBox(height: 8,),

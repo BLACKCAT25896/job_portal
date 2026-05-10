@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/widget/custom_title.dart';
-import 'package:mighty_job/common/widget/dropdown_with_search_widget.dart';
-import 'package:mighty_job/feature/inquiry/controller/inquiry_controller.dart';
-import 'package:mighty_job/feature/inquiry/domain/models/inquiry_model.dart';
-import 'package:mighty_job/feature/inquiry/presentation/widgets/inquiry_list_widget.dart';
-import 'package:mighty_job/util/dimensions.dart';
+import 'package:job/common/widget/custom_title.dart';
+import 'package:job/common/widget/dropdown_with_search_widget.dart';
+import 'package:job/feature/inquiry/controller/inquiry_controller.dart';
+import 'package:job/feature/inquiry/domain/models/inquiry_model.dart';
+import 'package:job/feature/inquiry/presentation/widgets/inquiry_list_widget.dart';
+import 'package:job/util/dimensions.dart';
 
 class SelectInquiryWidget extends StatefulWidget {
   const SelectInquiryWidget({super.key});

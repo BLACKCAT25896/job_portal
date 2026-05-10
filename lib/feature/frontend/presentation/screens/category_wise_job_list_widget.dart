@@ -2,15 +2,15 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/layout/base_layout.dart';
-import 'package:mighty_job/common/widget/custom_contaner.dart';
-import 'package:mighty_job/common/widget/custom_search.dart';
-import 'package:mighty_job/feature/frontend/controller/frontend_controller.dart';
-import 'package:mighty_job/feature/frontend/presentation/widgets/custom_range_slider_widget.dart';
-import 'package:mighty_job/feature/frontend/presentation/widgets/industry/public_industry_list_widget.dart';
-import 'package:mighty_job/feature/frontend/presentation/widgets/job/public_job_category_list_widget.dart';
-import 'package:mighty_job/feature/frontend/presentation/widgets/job/public_job_listing_list_widget.dart';
-import 'package:mighty_job/util/dimensions.dart';
+import 'package:job/common/layout/base_layout.dart';
+import 'package:job/common/widget/custom_contaner.dart';
+import 'package:job/common/widget/custom_search.dart';
+import 'package:job/feature/frontend/controller/frontend_controller.dart';
+import 'package:job/feature/frontend/presentation/widgets/custom_range_slider_widget.dart';
+import 'package:job/feature/frontend/presentation/widgets/industry/public_industry_list_widget.dart';
+import 'package:job/feature/frontend/presentation/widgets/job/public_job_category_list_widget.dart';
+import 'package:job/feature/frontend/presentation/widgets/job/public_job_listing_list_widget.dart';
+import 'package:job/util/dimensions.dart';
 
 class CategoryOrIndustryWiseJobListWidget extends StatefulWidget {
   final String slug;
@@ -38,7 +38,7 @@ class _CategoryOrIndustryWiseJobListWidgetState extends State<CategoryOrIndustry
   Widget build(BuildContext context) {
     return BaseLayout(scrollController: scrollController,
         child: GetBuilder<LandingPageController>(builder: (controller) {
-            return Padding(padding: const EdgeInsets.only(top: Dimensions.paddingSizeDefault),
+            return Padding(padding: EdgeInsets.only(top: Dimensions.paddingSizeDefault),
               child: Center(child: SizedBox(width: Dimensions.webMaxWidth,
                   child: Row(crossAxisAlignment: CrossAxisAlignment.start,
                     spacing: Dimensions.paddingSizeDefault, children: [

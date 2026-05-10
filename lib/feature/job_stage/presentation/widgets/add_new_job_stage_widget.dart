@@ -1,11 +1,11 @@
-import 'package:mighty_job/common/widget/custom_button.dart';
-import 'package:mighty_job/common/widget/custom_snackbar.dart';
-import 'package:mighty_job/common/widget/custom_text_field.dart';
-import 'package:mighty_job/feature/company/presentation/widgets/select_company_widget.dart';
-import 'package:mighty_job/feature/job_stage/controller/job_stage_controller.dart';
-import 'package:mighty_job/feature/job_stage/domain/models/job_stage_body.dart';
-import 'package:mighty_job/feature/job_stage/domain/models/job_stage_model.dart';
-import 'package:mighty_job/util/dimensions.dart';
+import 'package:job/common/widget/custom_button.dart';
+import 'package:job/common/widget/custom_snackbar.dart';
+import 'package:job/common/widget/custom_text_field.dart';
+import 'package:job/feature/company/presentation/widgets/select_company_widget.dart';
+import 'package:job/feature/job_stage/controller/job_stage_controller.dart';
+import 'package:job/feature/job_stage/domain/models/job_stage_body.dart';
+import 'package:job/feature/job_stage/domain/models/job_stage_model.dart';
+import 'package:job/util/dimensions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -55,7 +55,7 @@ class _AddNewJobStageWidgetState extends State<AddNewJobStageWidget> {
 
         ]),
 
-        Padding(padding: const EdgeInsets.symmetric(vertical: Dimensions.paddingSizeDefault),
+        Padding(padding: EdgeInsets.symmetric(vertical: Dimensions.paddingSizeDefault),
             child: stageController.isLoading? const CircularProgressIndicator() :
 
             CustomButton(onTap: (){

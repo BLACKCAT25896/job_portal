@@ -1,14 +1,14 @@
-import 'package:mighty_job/common/layout/custom_dialog_widget.dart';
-import 'package:mighty_job/common/widget/custom_item_text_widget.dart';
-import 'package:mighty_job/common/widget/edit_delete_popup_widget.dart';
-import 'package:mighty_job/feature/candidate/presentation/widgets/add_new_candidate_widget.dart';
+import 'package:job/common/layout/custom_dialog_widget.dart';
+import 'package:job/common/widget/custom_item_text_widget.dart';
+import 'package:job/common/widget/edit_delete_popup_widget.dart';
+import 'package:job/feature/candidate/presentation/widgets/add_new_candidate_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/widget/confirmation_dialog.dart';
-import 'package:mighty_job/common/widget/numbering_widget.dart';
-import 'package:mighty_job/feature/candidate/controller/candidate_controller.dart';
-import 'package:mighty_job/feature/candidate/domain/models/candidate_model.dart';
-import 'package:mighty_job/util/dimensions.dart';
+import 'package:job/common/widget/confirmation_dialog.dart';
+import 'package:job/common/widget/numbering_widget.dart';
+import 'package:job/feature/candidate/controller/candidate_controller.dart';
+import 'package:job/feature/candidate/domain/models/candidate_model.dart';
+import 'package:job/util/dimensions.dart';
 
 class CandidateItemWidget extends StatelessWidget {
   final CandidateItem? candidateItem;

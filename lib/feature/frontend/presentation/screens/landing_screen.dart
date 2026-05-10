@@ -1,15 +1,15 @@
 
-import 'package:mighty_job/common/layout/base_layout.dart';
-import 'package:mighty_job/feature/frontend/controller/frontend_controller.dart';
+import 'package:job/common/layout/base_layout.dart';
+import 'package:job/feature/frontend/controller/frontend_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/feature/frontend/presentation/widgets/company/public_company_list_widget.dart';
-import 'package:mighty_job/feature/frontend/presentation/widgets/hero_section_widget.dart';
-import 'package:mighty_job/feature/frontend/presentation/widgets/industry/public_industry_list_widget.dart';
-import 'package:mighty_job/feature/frontend/presentation/widgets/job/public_job_category_list_widget.dart';
-import 'package:mighty_job/feature/frontend/presentation/widgets/job/public_job_listing_list_widget.dart';
-import 'package:mighty_job/feature/frontend/presentation/widgets/post/public_post_category_list_widget.dart';
-import 'package:mighty_job/feature/frontend/presentation/widgets/post/public_post_list_widget.dart';
+import 'package:job/feature/frontend/presentation/widgets/company/public_company_list_widget.dart';
+import 'package:job/feature/frontend/presentation/widgets/hero_section_widget.dart';
+import 'package:job/feature/frontend/presentation/widgets/industry/public_industry_list_widget.dart';
+import 'package:job/feature/frontend/presentation/widgets/job/public_job_category_list_widget.dart';
+import 'package:job/feature/frontend/presentation/widgets/job/public_job_listing_list_widget.dart';
+import 'package:job/feature/frontend/presentation/widgets/post/public_post_category_list_widget.dart';
+import 'package:job/feature/frontend/presentation/widgets/post/public_post_list_widget.dart';
 
 class LandingScreen extends StatefulWidget {
   const LandingScreen({super.key});

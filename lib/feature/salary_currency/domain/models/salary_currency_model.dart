@@ -1,5 +1,5 @@
 
-import 'package:mighty_job/helper/price_converter.dart';
+import 'package:job/helper/price_converter.dart';
 
 class SalaryCurrencyItem {
   int? id;

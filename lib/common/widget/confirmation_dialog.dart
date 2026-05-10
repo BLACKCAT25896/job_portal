@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/widget/custom_button.dart';
-import 'package:mighty_job/util/dimensions.dart';
-import 'package:mighty_job/util/styles.dart';
+import 'package:job/common/widget/custom_button.dart';
+import 'package:job/util/dimensions.dart';
+import 'package:job/util/styles.dart';
 
 class ConfirmationDialog extends StatelessWidget {
   final String? title;
@@ -19,7 +19,7 @@ class ConfirmationDialog extends StatelessWidget {
     return AlertDialog.adaptive(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
       insetPadding: const EdgeInsets.all(25),
       content: Stack(children: [
-          Padding(padding: const EdgeInsets.only(top: Dimensions.paddingSizeSmall),
+          Padding(padding: EdgeInsets.only(top: Dimensions.paddingSizeSmall),
             child: Column(mainAxisSize: MainAxisSize.min, spacing: Dimensions.paddingSizeSmall ,children: [
 
               if(action)...[

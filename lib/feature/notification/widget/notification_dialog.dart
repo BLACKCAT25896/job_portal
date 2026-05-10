@@ -1,11 +1,11 @@
-import 'package:mighty_job/common/widget/custom_image.dart';
-import 'package:mighty_job/feature/notification/domain/model/push_notification_model.dart';
-import 'package:mighty_job/helper/app_color_helper.dart';
-import 'package:mighty_job/util/app_constants.dart';
-import 'package:mighty_job/util/dimensions.dart';
+import 'package:job/common/widget/custom_image.dart';
+import 'package:job/feature/notification/domain/model/push_notification_model.dart';
+import 'package:job/helper/app_color_helper.dart';
+import 'package:job/util/app_constants.dart';
+import 'package:job/util/dimensions.dart';
 
 import 'package:flutter/material.dart';
-import 'package:mighty_job/util/styles.dart';
+import 'package:job/util/styles.dart';
 
 class NotificationDialog extends StatelessWidget {
   final PushNotificationModel notificationModel;
@@ -13,7 +13,7 @@ class NotificationDialog extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Dialog(shape: const RoundedRectangleBorder(
+    return Dialog(shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.all(Radius.circular(Dimensions.radiusSmall))),
       insetPadding: const EdgeInsets.all(30),
       clipBehavior: Clip.antiAliasWithSaveLayer,
@@ -28,7 +28,7 @@ class NotificationDialog extends StatelessWidget {
 
               (notificationModel.data!.image != null && notificationModel.data!.image!.isNotEmpty) ?
               Container(width: MediaQuery.of(context).size.width,
-                margin: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeLarge),
+                margin: EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeLarge),
                 decoration: BoxDecoration(borderRadius: BorderRadius.circular(Dimensions.radiusSmall),
                     color: systemPrimaryColor().withValues(alpha: 0.20)),
 
@@ -39,7 +39,7 @@ class NotificationDialog extends StatelessWidget {
               SizedBox(height: (notificationModel.data!.image != null && notificationModel.data!.image!.isNotEmpty)
                   ? Dimensions.paddingSizeLarge : 0),
 
-              Padding(padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeLarge),
+              Padding(padding: EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeLarge),
                 child: Text(notificationModel.data!.title!,
                   textAlign: TextAlign.center,
                   style: textMedium.copyWith(color: systemPrimaryColor(),

@@ -1,12 +1,12 @@
 
-import 'package:mighty_job/feature/cms_management/cms_settings/controller/system_settngs_controller.dart';
+import 'package:job/feature/cms_management/cms_settings/controller/system_settngs_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/widget/side_menu/src/side_menu_item_widget.dart';
-import 'package:mighty_job/common/widget/side_menu/src/side_menu_nested_expension_item.dart';
-import 'package:mighty_job/feature/profile/logic/profile_controller.dart';
-import 'package:mighty_job/helper/route_helper.dart';
-import 'package:mighty_job/util/images.dart';
+import 'package:job/common/widget/side_menu/src/side_menu_item_widget.dart';
+import 'package:job/common/widget/side_menu/src/side_menu_nested_expension_item.dart';
+import 'package:job/feature/profile/logic/profile_controller.dart';
+import 'package:job/helper/route_helper.dart';
+import 'package:job/util/images.dart';
 
 class SideBarController extends GetxController implements GetxService{
 
@@ -14,10 +14,22 @@ class SideBarController extends GetxController implements GetxService{
   late final List<dynamic> allMenuItems;
   List<dynamic> sideMenuItems = [];
 
+
+  late final List<dynamic> candidateAllMenuItems;
+  List<dynamic> candidateSideMenuItems = [];
+
+
+
   @override
   void onInit() {
     allMenuItems = _buildSideSideMenuTypes();
     sideMenuItems = List.from(allMenuItems);
+
+    candidateAllMenuItems = _candidateSideMenuItems();
+    candidateSideMenuItems = List.from(candidateAllMenuItems);
+
+
+
     Get.find<SystemSettingsController>().getGeneralSetting();
     super.onInit();
   }
@@ -182,10 +194,8 @@ class SideBarController extends GetxController implements GetxService{
     SideMenuNestedExpansionItem(title: "website_setup".tr, keyValue: "website_setup",
       parent: true, icon: Images.websiteSetup, children: [
 
-
         SideMenuItemWidget(title: 'website_settings'.tr, keyValue: 'website_settings',
             onTap: () => Get.toNamed(RouteHelper.getWebsiteSettingRoute())),
-
 
         SideMenuItemWidget(title: 'pages'.tr, keyValue: 'pages',
             onTap: () => Get.toNamed(RouteHelper.getPagesRoute())),
@@ -231,5 +241,93 @@ class SideBarController extends GetxController implements GetxService{
     ),
 
   ];}
+
+  List<dynamic> _candidateSideMenuItems() { return  [
+    SideMenuNestedExpansionItem(title: "dashboard".tr, keyValue: "dashboard", parent: true,
+      icon: Images.dashboardSvgIcon,onTap: () => Get.toNamed(RouteHelper.getDashboardRoute()),),
+
+
+    SideMenuNestedExpansionItem(title: "manage_profile".tr, keyValue: "manage_profile", parent: true,
+      icon: Images.dashboardSvgIcon,
+      children: [
+        SideMenuItemWidget(title: 'profile'.tr, keyValue: 'profile',
+            onTap: () => Get.toNamed(RouteHelper.getUsersRoute())),
+        SideMenuItemWidget(title: 'customized_cv'.tr, keyValue: 'customized_cv',
+            onTap: () => Get.toNamed(RouteHelper.getUsersRoute())),
+
+
+        SideMenuItemWidget(title: 'email_cv'.tr, keyValue: 'email_cv',
+            onTap: () => Get.toNamed(RouteHelper.getUsersRoute())),
+
+      ],
+    ),
+
+    SideMenuNestedExpansionItem(title: "invitation".tr, keyValue: "invitation", parent: true,
+      icon: Images.dashboardSvgIcon,
+      children: [
+        SideMenuItemWidget(title: 'general_interview'.tr, keyValue: 'general_interview',
+            onTap: () => Get.toNamed(RouteHelper.getUsersRoute())),
+
+        SideMenuItemWidget(title: 'online_test'.tr, keyValue: 'online_test',
+            onTap: () => Get.toNamed(RouteHelper.getUsersRoute())),
+
+
+      ],
+    ),
+
+    SideMenuNestedExpansionItem(title: "my_activity".tr, keyValue: "my_activity", parent: true,
+      icon: Images.dashboardSvgIcon,
+      children: [
+        SideMenuItemWidget(title: 'applied_jobs'.tr, keyValue: 'applied_jobs',
+            onTap: () => Get.toNamed(RouteHelper.getUsersRoute())),
+
+        SideMenuItemWidget(title: 'emailed_cv'.tr, keyValue: 'emailed_cv',
+            onTap: () => Get.toNamed(RouteHelper.getUsersRoute())),
+
+        SideMenuItemWidget(title: 'shortlisted_job'.tr, keyValue: 'shortlisted_job',
+            onTap: () => Get.toNamed(RouteHelper.getUsersRoute())),
+
+
+        SideMenuItemWidget(title: 'following_employer'.tr, keyValue: 'following_employer',
+            onTap: () => Get.toNamed(RouteHelper.getUsersRoute())),
+
+        SideMenuItemWidget(title: 'transaction_overview'.tr, keyValue: 'transaction_overview',
+            onTap: () => Get.toNamed(RouteHelper.getUsersRoute())),
+
+
+
+
+      ],
+    ),
+
+
+    SideMenuNestedExpansionItem(title: "my_personal_hiring".tr, keyValue: "my_personal_hiring", parent: true,
+      icon: Images.dashboardSvgIcon,
+      children: [
+        SideMenuItemWidget(title: 'post_new_job'.tr, keyValue: 'post_new_job',
+            onTap: () => Get.toNamed(RouteHelper.getUsersRoute())),
+
+        SideMenuItemWidget(title: 'dashboard'.tr, keyValue: 'dashboard',
+            onTap: () => Get.toNamed(RouteHelper.getUsersRoute())),
+
+        SideMenuItemWidget(title: 'help'.tr, keyValue: 'help',
+            onTap: () => Get.toNamed(RouteHelper.getUsersRoute())),
+
+      ],
+    ),
+
+    SideMenuNestedExpansionItem(title: "account_settings".tr, keyValue: "account_settings", parent: true,
+      icon: Images.dashboardSvgIcon,onTap: () => Get.toNamed(RouteHelper.getDashboardRoute()),),
+
+
+    SideMenuNestedExpansionItem(title: "sign_out".tr, keyValue: "sign_out", parent: true,
+      icon: Images.dashboardSvgIcon,onTap: () => Get.toNamed(RouteHelper.getDashboardRoute()),),
+
+
+
+
+
+  ];}
+
 
 }

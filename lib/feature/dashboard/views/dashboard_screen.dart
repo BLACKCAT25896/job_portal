@@ -3,14 +3,14 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/widget/animated_custom_dialog.dart';
-import 'package:mighty_job/common/widget/confirmation_dialog_widget.dart';
-import 'package:mighty_job/feature/dashboard/controller/dashboard_controller.dart';
-import 'package:mighty_job/feature/dashboard/model/navigation_model.dart';
-import 'package:mighty_job/feature/dashboard/widget/custom_menu_item.dart';
-import 'package:mighty_job/feature/home/presentation/screens/web_home_screen.dart';
-import 'package:mighty_job/helper/responsive_helper.dart';
-import 'package:mighty_job/util/images.dart';
+import 'package:job/common/widget/animated_custom_dialog.dart';
+import 'package:job/common/widget/confirmation_dialog_widget.dart';
+import 'package:job/feature/dashboard/controller/dashboard_controller.dart';
+import 'package:job/feature/dashboard/model/navigation_model.dart';
+import 'package:job/feature/dashboard/widget/custom_menu_item.dart';
+import 'package:job/feature/home/presentation/screens/web_home_screen.dart';
+import 'package:job/helper/responsive_helper.dart';
+import 'package:job/util/images.dart';
 
 
 

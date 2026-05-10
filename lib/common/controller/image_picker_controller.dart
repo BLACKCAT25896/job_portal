@@ -1,8 +1,8 @@
 
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:mighty_job/common/widget/custom_snackbar.dart';
-import 'package:mighty_job/helper/image_size_checker.dart';
+import 'package:job/common/widget/custom_snackbar.dart';
+import 'package:job/helper/image_size_checker.dart';
 
 class ImagePickerController extends GetxController implements GetxService{
   XFile? icon;

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/layout/base_layout.dart';
-import 'package:mighty_job/feature/frontend/controller/frontend_controller.dart';
-import 'package:mighty_job/feature/frontend/domain/models/frontend_policy_model.dart';
-import 'package:mighty_job/feature/frontend/policy_enum.dart';
-import 'package:mighty_job/helper/responsive_helper.dart';
-import 'package:mighty_job/util/dimensions.dart';
-import 'package:mighty_job/util/styles.dart';
+import 'package:job/common/layout/base_layout.dart';
+import 'package:job/feature/frontend/controller/frontend_controller.dart';
+import 'package:job/feature/frontend/domain/models/frontend_policy_model.dart';
+import 'package:job/feature/frontend/policy_enum.dart';
+import 'package:job/helper/responsive_helper.dart';
+import 'package:job/util/dimensions.dart';
+import 'package:job/util/styles.dart';
 
 class PolicyScreen extends StatefulWidget {
   final PolicyEnum policyType;
@@ -46,13 +46,12 @@ class _PolicyScreenState extends State<PolicyScreen> {
             return SizedBox(
               width: Dimensions.webMaxWidth,
               child: Padding(
-                padding: const EdgeInsets.all(Dimensions.paddingSizeSmall),
+                padding: EdgeInsets.all(Dimensions.paddingSizeSmall),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     if (ResponsiveHelper.isDesktop(context))
-                      Padding(
-                        padding: const EdgeInsets.symmetric(
+                      Padding(padding: EdgeInsets.symmetric(
                             vertical: Dimensions.paddingSizeDefault),
                         child: Text(
                           widget.policyType == PolicyEnum.termsOfService

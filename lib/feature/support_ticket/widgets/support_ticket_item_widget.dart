@@ -1,20 +1,20 @@
-import 'package:mighty_job/common/widget/custom_popup_menu.dart';
-import 'package:mighty_job/common/widget/custom_text_item_widget.dart';
-import 'package:mighty_job/common/widget/numbering_widget.dart';
-import 'package:mighty_job/feature/dashboard/controller/dashboard_controller.dart';
-import 'package:mighty_job/helper/app_color_helper.dart';
-import 'package:mighty_job/helper/responsive_helper.dart';
+import 'package:job/common/widget/custom_popup_menu.dart';
+import 'package:job/common/widget/custom_text_item_widget.dart';
+import 'package:job/common/widget/numbering_widget.dart';
+import 'package:job/feature/dashboard/controller/dashboard_controller.dart';
+import 'package:job/helper/app_color_helper.dart';
+import 'package:job/helper/responsive_helper.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/widget/confirmation_dialog.dart';
-import 'package:mighty_job/feature/support_ticket/controllers/support_ticket_controller.dart';
-import 'package:mighty_job/feature/support_ticket/domain/models/support_ticket_model.dart';
-import 'package:mighty_job/helper/date_converter.dart';
-import 'package:mighty_job/helper/route_helper.dart';
-import 'package:mighty_job/util/dimensions.dart';
-import 'package:mighty_job/util/styles.dart';
+import 'package:job/common/widget/confirmation_dialog.dart';
+import 'package:job/feature/support_ticket/controllers/support_ticket_controller.dart';
+import 'package:job/feature/support_ticket/domain/models/support_ticket_model.dart';
+import 'package:job/helper/date_converter.dart';
+import 'package:job/helper/route_helper.dart';
+import 'package:job/util/dimensions.dart';
+import 'package:job/util/styles.dart';
 
 
 class SupportTicketItemWidget extends StatelessWidget {
@@ -48,7 +48,7 @@ class SupportTicketItemWidget extends StatelessWidget {
     ]):
 
     Padding(
-      padding: const EdgeInsets.fromLTRB(Dimensions.paddingSizeSmall, Dimensions.paddingSizeSmall,
+      padding: EdgeInsets.fromLTRB(Dimensions.paddingSizeSmall, Dimensions.paddingSizeSmall,
           Dimensions.paddingSizeSmall, 0),
       child: Slidable(key: const ValueKey(0),
         endActionPane: ActionPane(extentRatio:supportTicketModel.status == 'close'? 0.01 : .30,
@@ -77,7 +77,7 @@ class SupportTicketItemWidget extends StatelessWidget {
           onTap: () {
             Get.toNamed(RouteHelper.getTicketDetailRoute(supportTicketModel.id!.toString()));
           },
-          child: Container(padding: const EdgeInsets.all(Dimensions.paddingSizeSmall),
+          child: Container(padding: EdgeInsets.all(Dimensions.paddingSizeSmall),
             decoration: BoxDecoration(borderRadius: BorderRadius.circular(5),
                 border: Border.all(color: systemPrimaryColor().withValues(alpha:.25),
                     width: .5)),
@@ -88,7 +88,7 @@ class SupportTicketItemWidget extends StatelessWidget {
                 Expanded(child: Text(supportTicketModel.title??'N/A',
                     style: textSemiBold.copyWith())),
 
-                Container(padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeSmall,
+                Container(padding: EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeSmall,
                     vertical: Dimensions.paddingSizeExtraSmall),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(Dimensions.paddingSizeExtraSmall),
@@ -103,7 +103,7 @@ class SupportTicketItemWidget extends StatelessWidget {
                         style: textRegular.copyWith(color: supportTicketModel.status?.toLowerCase() == 'open' ?
                         Colors.green  : Theme.of(context).colorScheme.error)))]),
 
-              Padding(padding: const EdgeInsets.symmetric(vertical: Dimensions.paddingSizeExtraSmall),
+              Padding(padding: EdgeInsets.symmetric(vertical: Dimensions.paddingSizeExtraSmall),
                 child: Text(supportTicketModel.description??'', style: textRegular),
               ),
             ]),

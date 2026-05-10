@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/widget/custom_button.dart';
-import 'package:mighty_job/common/widget/custom_contaner.dart';
-import 'package:mighty_job/feature/job_listing/controller/job_listing_controller.dart';
-import 'package:mighty_job/helper/app_color_helper.dart';
-import 'package:mighty_job/helper/app_color_helper.dart';
-import 'package:mighty_job/helper/app_color_helper.dart';
-import 'package:mighty_job/util/dimensions.dart';
-import 'package:mighty_job/util/styles.dart';
+import 'package:job/common/widget/custom_button.dart';
+import 'package:job/common/widget/custom_contaner.dart';
+import 'package:job/feature/job_listing/controller/job_listing_controller.dart';
+import 'package:job/helper/app_color_helper.dart';
+import 'package:job/util/dimensions.dart';
+import 'package:job/util/styles.dart';
 
 class PostAJobStepWidget extends StatefulWidget {
   const PostAJobStepWidget({super.key});
@@ -30,7 +28,7 @@ class _PostAJobStepWidgetState extends State<PostAJobStepWidget> {
                   itemCount: steps.length,
                   shrinkWrap: true,
                   physics: const NeverScrollableScrollPhysics(),
-                  separatorBuilder: (_, __) => const SizedBox(height: Dimensions.paddingSizeSmall),
+                  separatorBuilder: (_, __) => SizedBox(height: Dimensions.paddingSizeSmall),
                   itemBuilder: (context, index) {
                     final item = steps[index];
                     return CustomContainer(width: 300, showShadow: false, borderRadius: 8,
@@ -49,7 +47,7 @@ class _PostAJobStepWidgetState extends State<PostAJobStepWidget> {
                               systemPrimaryColor().withValues(alpha: .08)),
                             child: Icon(item.icon, size: 20, color: item.isActive? Colors.white : systemPrimaryColor())),
 
-                        const SizedBox(width: Dimensions.paddingSizeDefault),
+                        SizedBox(width: Dimensions.paddingSizeDefault),
                         Expanded(child: Text(item.title.tr,
                             style: textMedium.copyWith(
                               color: item.isActive? Colors.white : Theme.of(context).hintColor,
@@ -60,7 +58,7 @@ class _PostAJobStepWidgetState extends State<PostAJobStepWidget> {
                   },
                 ),
 
-                const SizedBox(height: Dimensions.paddingSizeLarge),
+              SizedBox(height: Dimensions.paddingSizeLarge),
                 CustomButton(onTap: () {
 
                 }, text: "publish_this_job".tr),

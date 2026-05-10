@@ -1,11 +1,11 @@
 
-import 'package:mighty_job/api_handle/api_checker.dart';
-import 'package:mighty_job/api_handle/global_api_response_model.dart';
-import 'package:mighty_job/common/widget/custom_snackbar.dart';
+import 'package:job/api_handle/api_checker.dart';
+import 'package:job/api_handle/global_api_response_model.dart';
+import 'package:job/common/widget/custom_snackbar.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/feature/reported_job/domain/models/reported_job_body.dart';
-import 'package:mighty_job/feature/reported_job/domain/models/reported_job_model.dart';
-import 'package:mighty_job/feature/reported_job/domain/repository/reported_job_repository.dart';
+import 'package:job/feature/reported_job/domain/models/reported_job_body.dart';
+import 'package:job/feature/reported_job/domain/models/reported_job_model.dart';
+import 'package:job/feature/reported_job/domain/repository/reported_job_repository.dart';
 
 class ReportedJobController extends GetxController implements GetxService{
   final ReportedJobRepository reportedJobRepository;

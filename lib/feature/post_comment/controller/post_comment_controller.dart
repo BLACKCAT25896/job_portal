@@ -1,11 +1,11 @@
 
 import 'package:get/get.dart';
-import 'package:mighty_job/api_handle/api_checker.dart';
-import 'package:mighty_job/api_handle/global_api_response_model.dart';
-import 'package:mighty_job/common/widget/custom_snackbar.dart';
-import 'package:mighty_job/feature/post_comment/domain/models/post_comment_body.dart';
-import 'package:mighty_job/feature/post_comment/domain/models/post_comment_model.dart';
-import 'package:mighty_job/feature/post_comment/domain/repository/post_comment_repository.dart';
+import 'package:job/api_handle/api_checker.dart';
+import 'package:job/api_handle/global_api_response_model.dart';
+import 'package:job/common/widget/custom_snackbar.dart';
+import 'package:job/feature/post_comment/domain/models/post_comment_body.dart';
+import 'package:job/feature/post_comment/domain/models/post_comment_model.dart';
+import 'package:job/feature/post_comment/domain/repository/post_comment_repository.dart';
 
 class PostCommentController extends GetxController implements GetxService{
   final PostCommentRepository postCommentRepository;

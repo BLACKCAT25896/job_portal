@@ -1,14 +1,13 @@
 import 'dart:developer';
 
-import 'package:mighty_job/helper/responsive_helper.dart';
-import 'package:mighty_job/util/dimensions.dart';
-import 'package:mighty_job/util/styles.dart';
+import 'package:job/helper/responsive_helper.dart';
+import 'package:job/util/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
 import 'package:toastification/toastification.dart';
 
-void showCustomSnackBar(String? message, {bool isError = true, double margin = Dimensions.paddingSizeSmall}) {
+void showCustomSnackBar(String? message, {bool isError = true, double margin = 14}) {
 
   if(message != null && message.isNotEmpty) {
     if(ResponsiveHelper.isDesktop(Get.context!)){

@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/widget/custom_button.dart';
-import 'package:mighty_job/common/widget/custom_snackbar.dart';
-import 'package:mighty_job/common/widget/custom_text_field.dart';
-import 'package:mighty_job/feature/package_plan/controller/package_controller.dart';
-import 'package:mighty_job/feature/package_plan/domain/models/package_body.dart';
-import 'package:mighty_job/feature/package_plan/domain/models/package_model.dart';
-import 'package:mighty_job/util/app_constants.dart';
-import 'package:mighty_job/util/dimensions.dart';
+import 'package:job/common/widget/custom_button.dart';
+import 'package:job/common/widget/custom_snackbar.dart';
+import 'package:job/common/widget/custom_text_field.dart';
+import 'package:job/feature/package_plan/controller/package_controller.dart';
+import 'package:job/feature/package_plan/domain/models/package_body.dart';
+import 'package:job/feature/package_plan/domain/models/package_model.dart';
+import 'package:job/util/app_constants.dart';
+import 'package:job/util/dimensions.dart';
 
 class CreateNewPackageScreen extends StatefulWidget {
   final PackageItem? packageItem;
@@ -73,10 +73,10 @@ class _CreateNewPackageScreenState extends State<CreateNewPackageScreen> {
 
 
 
-          packageController.isLoading? const Padding(padding: EdgeInsets.all(Dimensions.paddingSizeDefault),
+          packageController.isLoading? Padding(padding: EdgeInsets.all(Dimensions.paddingSizeDefault),
             child: Center(child: CircularProgressIndicator())):
 
-          Padding(padding: const EdgeInsets.symmetric(vertical: Dimensions.paddingSizeDefault),
+          Padding(padding: EdgeInsets.symmetric(vertical: Dimensions.paddingSizeDefault),
             child: CustomButton(onTap: (){
               String name = nameController.text.trim();
               String description = descriptionController.text.trim();

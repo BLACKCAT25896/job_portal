@@ -1,10 +1,10 @@
 
-import 'package:mighty_job/common/global_widget/custom_web_scroll_view_widget.dart';
-import 'package:mighty_job/common/widget/custom_app_bar.dart';
+import 'package:job/common/global_widget/custom_web_scroll_view_widget.dart';
+import 'package:job/common/widget/custom_app_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/feature/favorite_company/controller/favorite_company_controller.dart';
-import 'package:mighty_job/feature/favorite_company/presentation/widgets/favorite_company_list_widget.dart';
+import 'package:job/feature/favorite_company/controller/favorite_company_controller.dart';
+import 'package:job/feature/favorite_company/presentation/widgets/favorite_company_list_widget.dart';
 
 class FavoriteCompanyScreen extends StatefulWidget {
   const FavoriteCompanyScreen({super.key});

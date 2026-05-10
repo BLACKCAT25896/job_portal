@@ -1,11 +1,11 @@
-import 'package:mighty_job/common/layout/custom_dialog_widget.dart';
-import 'package:mighty_job/feature/candidate/presentation/widgets/add_new_candidate_widget.dart';
+import 'package:job/common/layout/custom_dialog_widget.dart';
+import 'package:job/feature/candidate/presentation/widgets/add_new_candidate_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/layout/list_layout_widget.dart';
-import 'package:mighty_job/feature/candidate/controller/candidate_controller.dart';
-import 'package:mighty_job/feature/candidate/domain/models/candidate_model.dart';
-import 'package:mighty_job/feature/candidate/presentation/widgets/candidate_item_widget.dart';
+import 'package:job/common/layout/list_layout_widget.dart';
+import 'package:job/feature/candidate/controller/candidate_controller.dart';
+import 'package:job/feature/candidate/domain/models/candidate_model.dart';
+import 'package:job/feature/candidate/presentation/widgets/candidate_item_widget.dart';
 
 class CandidateListWidget extends StatelessWidget {
   final ScrollController scrollController;

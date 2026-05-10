@@ -1,8 +1,8 @@
-import 'package:mighty_job/helper/app_color_helper.dart';
+import 'package:job/helper/app_color_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/util/dimensions.dart';
-import 'package:mighty_job/util/styles.dart';
+import 'package:job/util/dimensions.dart';
+import 'package:job/util/styles.dart';
 
 
 class HeadingMenu extends StatelessWidget {
@@ -14,11 +14,11 @@ class HeadingMenu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(padding: const EdgeInsets.only(bottom: Dimensions.paddingSizeSmall),
-      child: Container(padding: const EdgeInsets.symmetric(vertical: Dimensions.paddingSizeDefault,
+    return Padding(padding: EdgeInsets.only(bottom: Dimensions.paddingSizeSmall),
+      child: Container(padding: EdgeInsets.symmetric(vertical: Dimensions.paddingSizeDefault,
           horizontal: Dimensions.paddingSizeDefault),
         decoration: BoxDecoration(color: systemPrimaryColor().withValues(alpha: .2),
-            borderRadius: const BorderRadius.vertical(top: Radius.circular(Dimensions.radiusSmall))),
+            borderRadius: BorderRadius.vertical(top: Radius.circular(Dimensions.radiusSmall))),
         child: Row(spacing:  Dimensions.paddingSizeDefault, children: [
              Text("sl".tr, style: textMedium.copyWith(fontSize: Dimensions.fontSizeDefault,
                  color: systemPrimaryColor())),

@@ -1,4 +1,3 @@
-import 'package:mighty_job/util/dimensions.dart';
 import 'package:flutter/material.dart';
 
 class CustomDialogWidget extends StatelessWidget {
@@ -10,11 +9,11 @@ class CustomDialogWidget extends StatelessWidget {
   final bool showCloseButton;
   final VoidCallback? onClose;
 
-  const CustomDialogWidget({
+   const CustomDialogWidget({
     super.key,
     required this.child,
-    this.padding = const EdgeInsets.all(Dimensions.paddingSizeDefault),
-    this.radius = Dimensions.paddingSizeDefault,
+    this.padding =  const EdgeInsets.all(16),
+    this.radius = 12,
     this.title,
     this.showCloseButton = true,
     this.onClose,

@@ -4,13 +4,13 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:mighty_job/api_handle/api_checker.dart';
-import 'package:mighty_job/common/widget/custom_snackbar.dart';
-import 'package:mighty_job/feature/cms_management/cms_settings/domain/model/general_settings_model.dart';
-import 'package:mighty_job/feature/cms_management/cms_settings/domain/model/image_setting_model.dart';
-import 'package:mighty_job/feature/cms_management/cms_settings/domain/repository/system_settings_repository.dart';
-import 'package:mighty_job/helper/image_size_checker.dart';
-import 'package:mighty_job/util/app_constants.dart';
+import 'package:job/api_handle/api_checker.dart';
+import 'package:job/common/widget/custom_snackbar.dart';
+import 'package:job/feature/cms_management/cms_settings/domain/model/general_settings_model.dart';
+import 'package:job/feature/cms_management/cms_settings/domain/model/image_setting_model.dart';
+import 'package:job/feature/cms_management/cms_settings/domain/repository/system_settings_repository.dart';
+import 'package:job/helper/image_size_checker.dart';
+import 'package:job/util/app_constants.dart';
 
 class SystemSettingsController extends GetxController implements GetxService{
   final SystemSettingsRepository systemSettingsRepository;

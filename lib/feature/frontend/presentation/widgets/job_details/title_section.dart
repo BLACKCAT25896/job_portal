@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/widget/custom_button.dart';
-import 'package:mighty_job/common/widget/custom_contaner.dart';
-import 'package:mighty_job/feature/authentication/logic/authentication_controller.dart';
-import 'package:mighty_job/feature/frontend/controller/frontend_controller.dart';
-import 'package:mighty_job/helper/app_color_helper.dart';
-import 'package:mighty_job/helper/date_converter.dart';
-import 'package:mighty_job/helper/route_helper.dart';
-import 'package:mighty_job/util/dimensions.dart';
-import 'package:mighty_job/util/styles.dart';
+import 'package:job/common/widget/custom_button.dart';
+import 'package:job/common/widget/custom_contaner.dart';
+import 'package:job/feature/authentication/logic/authentication_controller.dart';
+import 'package:job/feature/frontend/controller/frontend_controller.dart';
+import 'package:job/helper/app_color_helper.dart';
+import 'package:job/helper/date_converter.dart';
+import 'package:job/helper/route_helper.dart';
+import 'package:job/util/dimensions.dart';
+import 'package:job/util/styles.dart';
 
 class JobDetailsTitleSection extends StatelessWidget {
   const JobDetailsTitleSection({super.key});

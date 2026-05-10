@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:mighty_job/common/widget/custom_image.dart';
-import 'package:mighty_job/util/images.dart';
+import 'package:job/common/widget/custom_image.dart';
+import 'package:job/util/images.dart';
 
 class TypewriterSearchField<T> extends StatefulWidget {
   final String hint;

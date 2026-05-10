@@ -1,5 +1,5 @@
-name: mighty_job
-description: "mighty_job Management System"
+name: job
+description: "job Management System"
 publish_to: 'none'
 version: 1.0.0+0
 
@@ -81,8 +81,6 @@ dependencies:
   country_code_picker: ^3.4.1
   pin_code_fields: ^8.0.1
   font_awesome_flutter: ^11.0.0
-  google_maps_flutter: ^2.13.1
-  google_maps_flutter_web: ^0.5.14+2
   pdf: ^3.11.3
   printing: ^5.14.2
   qr_flutter: ^4.1.0

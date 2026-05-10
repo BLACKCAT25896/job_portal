@@ -1,14 +1,14 @@
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
-import 'package:mighty_job/common/widget/custom_contaner.dart';
-import 'package:mighty_job/common/widget/no_data_found.dart';
-import 'package:mighty_job/common/widget/paginated_list_widget.dart';
-import 'package:mighty_job/feature/frontend/controller/frontend_controller.dart';
+import 'package:job/common/widget/custom_contaner.dart';
+import 'package:job/common/widget/no_data_found.dart';
+import 'package:job/common/widget/paginated_list_widget.dart';
+import 'package:job/feature/frontend/controller/frontend_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/feature/frontend/presentation/widgets/job/public_hot_joblist_shimmer.dart';
-import 'package:mighty_job/feature/frontend/presentation/widgets/job/public_job_listing_item_widget.dart';
-import 'package:mighty_job/util/dimensions.dart';
-import 'package:mighty_job/util/styles.dart';
+import 'package:job/feature/frontend/presentation/widgets/job/public_hot_joblist_shimmer.dart';
+import 'package:job/feature/frontend/presentation/widgets/job/public_job_listing_item_widget.dart';
+import 'package:job/util/dimensions.dart';
+import 'package:job/util/styles.dart';
 
 class PublicJobListingListWidget extends StatefulWidget {
   final ScrollController scrollController;

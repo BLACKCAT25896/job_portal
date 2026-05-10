@@ -1,14 +1,14 @@
-import 'package:mighty_job/common/layout/custom_dialog_widget.dart';
-import 'package:mighty_job/common/widget/custom_item_text_widget.dart';
-import 'package:mighty_job/common/widget/edit_delete_popup_widget.dart';
+import 'package:job/common/layout/custom_dialog_widget.dart';
+import 'package:job/common/widget/custom_item_text_widget.dart';
+import 'package:job/common/widget/edit_delete_popup_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/widget/confirmation_dialog.dart';
-import 'package:mighty_job/common/widget/numbering_widget.dart';
-import 'package:mighty_job/feature/candidate_resume/controller/candidate_resume_controller.dart';
-import 'package:mighty_job/feature/candidate_resume/domain/models/candidate_resume_model.dart';
-import 'package:mighty_job/feature/candidate_resume/presentation/widgets/add_new_candidate_resume_widget.dart';
-import 'package:mighty_job/util/dimensions.dart';
+import 'package:job/common/widget/confirmation_dialog.dart';
+import 'package:job/common/widget/numbering_widget.dart';
+import 'package:job/feature/candidate_resume/controller/candidate_resume_controller.dart';
+import 'package:job/feature/candidate_resume/domain/models/candidate_resume_model.dart';
+import 'package:job/feature/candidate_resume/presentation/widgets/add_new_candidate_resume_widget.dart';
+import 'package:job/util/dimensions.dart';
 
 class CandidateResumeItemWidget extends StatelessWidget {
   final CandidateResumeItem? candidateResumeItem;

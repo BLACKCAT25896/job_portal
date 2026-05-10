@@ -1,4 +1,4 @@
-import 'package:mighty_job/helper/price_converter.dart';
+import 'package:job/helper/price_converter.dart';
 
 class GeneralSettingModel {
   bool? status;
@@ -213,7 +213,7 @@ class SettingItem {
       });
 
   SettingItem.fromJson(Map<String, dynamic> json) {
-    mightyJobName = json['mighty_job_name'];
+    mightyJobName = json['job_name'];
     siteTitle = json['site_title'];
     phone = json['phone'].toString();
     email = json['email'];
@@ -311,7 +311,7 @@ class SettingItem {
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = <String, dynamic>{};
-    data['mighty_job_name'] = mightyJobName;
+    data['job_name'] = mightyJobName;
     data['site_title'] = siteTitle;
     data['phone'] = phone;
     data['email'] = email;

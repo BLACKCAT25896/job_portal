@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mighty_job/util/dimensions.dart';
+import 'package:job/util/dimensions.dart';
 
 class CustomCircularIconButton extends StatelessWidget {
   final IconData iconData;
@@ -12,7 +12,7 @@ class CustomCircularIconButton extends StatelessWidget {
       child: InkWell(onTap: onTap,
         child: Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(120),
             color: Theme.of(context).cardColor.withValues(alpha:.15)),
-          padding: const EdgeInsets.all(Dimensions.paddingSizeSeven),
+          padding: EdgeInsets.all(Dimensions.paddingSizeSeven),
           child: Icon(iconData, color: Colors.white, size: 18),),
       ),
     );

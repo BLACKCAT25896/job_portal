@@ -1,18 +1,18 @@
-import 'package:mighty_job/feature/payment_method/domain/model/payment_method_model.dart';
-import 'package:mighty_job/feature/payment_method/logic/payment_method_controller.dart';
+import 'package:job/feature/payment_method/domain/model/payment_method_model.dart';
+import 'package:job/feature/payment_method/logic/payment_method_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/widget/active_inactive_widget.dart';
-import 'package:mighty_job/common/widget/custom_button.dart';
-import 'package:mighty_job/common/widget/custom_contaner.dart';
-import 'package:mighty_job/common/widget/custom_divider.dart';
-import 'package:mighty_job/common/widget/custom_image.dart';
-import 'package:mighty_job/common/widget/custom_snackbar.dart';
-import 'package:mighty_job/common/widget/custom_text_field.dart';
-import 'package:mighty_job/util/app_constants.dart';
-import 'package:mighty_job/util/dimensions.dart';
-import 'package:mighty_job/util/images.dart';
-import 'package:mighty_job/util/styles.dart';
+import 'package:job/common/widget/active_inactive_widget.dart';
+import 'package:job/common/widget/custom_button.dart';
+import 'package:job/common/widget/custom_contaner.dart';
+import 'package:job/common/widget/custom_divider.dart';
+import 'package:job/common/widget/custom_image.dart';
+import 'package:job/common/widget/custom_snackbar.dart';
+import 'package:job/common/widget/custom_text_field.dart';
+import 'package:job/util/app_constants.dart';
+import 'package:job/util/dimensions.dart';
+import 'package:job/util/images.dart';
+import 'package:job/util/styles.dart';
 
 class StripePaymentGatewayCardItem extends StatefulWidget {
   const StripePaymentGatewayCardItem({super.key});
@@ -49,7 +49,8 @@ class _StripePaymentGatewayCardItemState extends State<StripePaymentGatewayCardI
                       saasPaymentGatewayController.paymentGatewayStatusUpdate(paymentGatewayItem.id!);
                     }),
               ]),
-              const Padding(padding: EdgeInsets.symmetric(vertical: Dimensions.paddingSizeSmall),
+
+               Padding(padding: EdgeInsets.symmetric(vertical: Dimensions.paddingSizeSmall),
                   child: CustomDivider()),
 
               const CustomImage( height: 50, image: Images.stripe, isLocalAsset: true,),
@@ -64,7 +65,8 @@ class _StripePaymentGatewayCardItemState extends State<StripePaymentGatewayCardI
                 hintText: paymentGatewayItem.credentials?.publishedKey,),
 
 
-              const SizedBox(height: Dimensions.paddingSizeDefault),
+
+               SizedBox(height: Dimensions.paddingSizeDefault),
 
               Align(alignment: Alignment.centerRight, child: CustomButton(width: 100, onTap: (){
                 String apiKey = apiKeyController.text.trim();

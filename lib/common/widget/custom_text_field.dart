@@ -1,13 +1,13 @@
 import 'package:country_code_picker/country_code_picker.dart';
-import 'package:mighty_job/helper/app_color_helper.dart';
+import 'package:job/helper/app_color_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:flutter/foundation.dart';
-import 'package:mighty_job/common/widget/country_picker_widget.dart';
-import 'package:mighty_job/localization/localization_controller.dart';
-import 'package:mighty_job/util/dimensions.dart';
-import 'package:mighty_job/util/styles.dart';
+import 'package:job/common/widget/country_picker_widget.dart';
+import 'package:job/localization/localization_controller.dart';
+import 'package:job/util/dimensions.dart';
+import 'package:job/util/styles.dart';
 
 class CustomTextField extends StatefulWidget {
   final String? hintText;
@@ -119,7 +119,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
     return Column(crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         if(widget.title != null)...[
-          Padding(padding: const EdgeInsets.only(top: Dimensions.paddingSizeSmall),
+          Padding(padding: EdgeInsets.only(top: Dimensions.paddingSizeSmall),
             child: Row(children: [
                 Text(widget.title??"",
                     style: textRegular.copyWith(fontSize: Dimensions.fontSizeDefault)),
@@ -128,7 +128,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
               ],
             ),
           ),
-          const SizedBox(height: Dimensions.paddingSizeSeven,)
+          SizedBox(height: Dimensions.paddingSizeSeven,)
         ],
 
         TextFormField(
@@ -294,7 +294,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
               suffixIcon: widget.suffix ?? (widget.suffixIcon != null ?
               IconButton(
                 onPressed: widget.onPressedSuffix,
-                icon: Padding(padding: const EdgeInsets.all(Dimensions.paddingSizeDefault),
+                icon: Padding(padding: EdgeInsets.all(Dimensions.paddingSizeDefault),
                   child: Image.asset(widget.suffixIcon!, height: 20, width: 20,
                       color: widget.suffixIconColor),),) : widget.isPassword ?
 

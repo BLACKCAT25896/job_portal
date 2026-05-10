@@ -1,11 +1,11 @@
-import 'package:mighty_job/feature/home/presentation/widget/top_product_order/top_product_item.dart';
+import 'package:job/feature/home/presentation/widget/top_product_order/top_product_item.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/layout/list_layout_widget.dart';
-import 'package:mighty_job/feature/report_management/domain/model/dashboard_report_data_model.dart';
-import 'package:mighty_job/feature/report_management/logic/report_controller.dart';
-import 'package:mighty_job/util/dimensions.dart';
-import 'package:mighty_job/util/styles.dart';
+import 'package:job/common/layout/list_layout_widget.dart';
+import 'package:job/feature/report_management/domain/model/dashboard_report_data_model.dart';
+import 'package:job/feature/report_management/logic/report_controller.dart';
+import 'package:job/util/dimensions.dart';
+import 'package:job/util/styles.dart';
 
 class TopProductListWidget extends StatelessWidget {
   final ScrollController scrollController;
@@ -19,7 +19,7 @@ class TopProductListWidget extends StatelessWidget {
 
         return GenericListSection<TopProducts>(
           showRouteSection: false,
-          topWidget: Padding(padding: const EdgeInsets.symmetric(
+          topWidget: Padding(padding: EdgeInsets.symmetric(
               horizontal: Dimensions.paddingSizeDefault),
             child: Row(children: [
                 Text("top_product".tr, style: textMedium.copyWith(fontSize: Dimensions.fontSizeLarge)),

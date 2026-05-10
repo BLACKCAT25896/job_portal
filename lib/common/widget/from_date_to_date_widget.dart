@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/controller/date_picker_controller.dart';
-import 'package:mighty_job/common/widget/custom_text_field.dart';
-import 'package:mighty_job/helper/date_converter.dart';
-import 'package:mighty_job/util/dimensions.dart';
-import 'package:mighty_job/util/styles.dart';
+import 'package:job/common/controller/date_picker_controller.dart';
+import 'package:job/common/widget/custom_text_field.dart';
+import 'package:job/helper/date_converter.dart';
+import 'package:job/util/dimensions.dart';
+import 'package:job/util/styles.dart';
 
 class FromDateToDateWidget extends StatelessWidget {
   const FromDateToDateWidget({super.key});
@@ -13,7 +13,7 @@ class FromDateToDateWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetBuilder<DatePickerController>(
       builder: (datePickerController) {
-        return Padding(padding: const EdgeInsets.all(Dimensions.paddingSizeDefault),
+        return Padding(padding: EdgeInsets.all(Dimensions.paddingSizeDefault),
           child: Row(children: [
             Expanded(child: InkWell(onTap: ()=> datePickerController.setSelectDate(context, fromDate: true),
                 child: CustomTextField(title: "from_date".tr,

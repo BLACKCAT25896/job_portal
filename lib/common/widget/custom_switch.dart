@@ -1,4 +1,4 @@
-import 'package:mighty_job/helper/app_color_helper.dart';
+import 'package:job/helper/app_color_helper.dart';
 import 'package:flutter/material.dart';
 
 class CustomSwitch extends StatelessWidget {

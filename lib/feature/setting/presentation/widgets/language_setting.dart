@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/global_widget/custom_web_scroll_view_widget.dart';
-import 'package:mighty_job/common/layout/section_header_with_path_widget.dart';
-import 'package:mighty_job/common/widget/custom_app_bar.dart';
-import 'package:mighty_job/feature/language/presentation/screens/select_language_bottom_sheet.dart';
+import 'package:job/common/global_widget/custom_web_scroll_view_widget.dart';
+import 'package:job/common/layout/section_header_with_path_widget.dart';
+import 'package:job/common/widget/custom_app_bar.dart';
+import 'package:job/feature/language/presentation/screens/select_language_bottom_sheet.dart';
 
 class LanguageSetting extends StatelessWidget {
   const LanguageSetting({super.key});

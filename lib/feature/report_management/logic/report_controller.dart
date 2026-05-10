@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
-import 'package:mighty_job/api_handle/api_checker.dart';
-import 'package:mighty_job/feature/report_management/domain/model/dashboard_report_data_model.dart';
-import 'package:mighty_job/feature/report_management/domain/repository/report_repository.dart';
+import 'package:job/api_handle/api_checker.dart';
+import 'package:job/feature/report_management/domain/model/dashboard_report_data_model.dart';
+import 'package:job/feature/report_management/domain/repository/report_repository.dart';
 
 class ReportController extends GetxController implements GetxService{
   final ReportRepository reportRepository;

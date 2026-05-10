@@ -1,14 +1,14 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/layout/base_layout.dart';
-import 'package:mighty_job/feature/frontend/controller/frontend_controller.dart';
-import 'package:mighty_job/feature/frontend/presentation/widgets/job_details/company_info_widget.dart';
-import 'package:mighty_job/feature/frontend/presentation/widgets/job_details/job_report_widget.dart';
-import 'package:mighty_job/feature/frontend/presentation/widgets/job_details/job_summery_section.dart';
-import 'package:mighty_job/feature/frontend/presentation/widgets/job_details/requirements_widget.dart';
-import 'package:mighty_job/feature/frontend/presentation/widgets/job_details/title_section.dart';
-import 'package:mighty_job/util/dimensions.dart';
+import 'package:job/common/layout/base_layout.dart';
+import 'package:job/feature/frontend/controller/frontend_controller.dart';
+import 'package:job/feature/frontend/presentation/widgets/job_details/company_info_widget.dart';
+import 'package:job/feature/frontend/presentation/widgets/job_details/job_report_widget.dart';
+import 'package:job/feature/frontend/presentation/widgets/job_details/job_summery_section.dart';
+import 'package:job/feature/frontend/presentation/widgets/job_details/requirements_widget.dart';
+import 'package:job/feature/frontend/presentation/widgets/job_details/title_section.dart';
+import 'package:job/util/dimensions.dart';
 
 class JobDetailsScreen extends StatefulWidget {
   final String slug;

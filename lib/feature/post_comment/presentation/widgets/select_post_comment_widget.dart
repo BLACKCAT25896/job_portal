@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/widget/custom_title.dart';
-import 'package:mighty_job/common/widget/dropdown_with_search_widget.dart';
-import 'package:mighty_job/feature/post/controller/post_controller.dart';
-import 'package:mighty_job/feature/post/domain/models/post_model.dart';
-import 'package:mighty_job/feature/post/presentation/widgets/post_list_widget.dart';
-import 'package:mighty_job/util/dimensions.dart';
+import 'package:job/common/widget/custom_title.dart';
+import 'package:job/common/widget/dropdown_with_search_widget.dart';
+import 'package:job/feature/post/controller/post_controller.dart';
+import 'package:job/feature/post/domain/models/post_model.dart';
+import 'package:job/feature/post/presentation/widgets/post_list_widget.dart';
+import 'package:job/util/dimensions.dart';
 
 class SelectPostWidget extends StatefulWidget {
   const SelectPostWidget({super.key});

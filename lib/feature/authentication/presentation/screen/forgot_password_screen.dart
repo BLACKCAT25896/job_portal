@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/widget/custom_button.dart';
-import 'package:mighty_job/common/widget/custom_text_field.dart';
-import 'package:mighty_job/util/dimensions.dart';
-import 'package:mighty_job/util/images.dart';
+import 'package:job/common/widget/custom_button.dart';
+import 'package:job/common/widget/custom_text_field.dart';
+import 'package:job/util/dimensions.dart';
+import 'package:job/util/images.dart';
 
 class ForgotPasswordScreen extends StatelessWidget {
   const ForgotPasswordScreen({super.key});
@@ -14,7 +14,7 @@ class ForgotPasswordScreen extends StatelessWidget {
 
 
       body: ListView(
-          padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeDefault,vertical: Dimensions.paddingSizeLarge),
+          padding: EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeDefault,vertical: Dimensions.paddingSizeLarge),
           children: [
             CustomTextField(
               title: "email".tr,hintText: "email".tr,
@@ -28,7 +28,7 @@ class ForgotPasswordScreen extends StatelessWidget {
           ]),
 
       bottomNavigationBar: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeDefault,vertical: Dimensions.paddingSizeLarge),
+        padding: EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeDefault,vertical: Dimensions.paddingSizeLarge),
         child: CustomButton(onTap: (){},
             height: 45, text: 'continue'.tr),
       ),

@@ -1,7 +1,7 @@
-import 'package:mighty_job/common/widget/custom_contaner.dart';
-import 'package:mighty_job/util/dimensions.dart';
-import 'package:mighty_job/util/images.dart';
-import 'package:mighty_job/util/styles.dart';
+import 'package:job/common/widget/custom_contaner.dart';
+import 'package:job/util/dimensions.dart';
+import 'package:job/util/images.dart';
+import 'package:job/util/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

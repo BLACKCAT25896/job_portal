@@ -1,10 +1,10 @@
-import 'package:mighty_job/common/widget/custom_button.dart';
-import 'package:mighty_job/common/widget/custom_snackbar.dart';
-import 'package:mighty_job/common/widget/custom_text_field.dart';
-import 'package:mighty_job/feature/reported_job/controller/reported_job_controller.dart';
-import 'package:mighty_job/feature/reported_job/domain/models/reported_job_body.dart';
-import 'package:mighty_job/feature/reported_job/domain/models/reported_job_model.dart';
-import 'package:mighty_job/util/dimensions.dart';
+import 'package:job/common/widget/custom_button.dart';
+import 'package:job/common/widget/custom_snackbar.dart';
+import 'package:job/common/widget/custom_text_field.dart';
+import 'package:job/feature/reported_job/controller/reported_job_controller.dart';
+import 'package:job/feature/reported_job/domain/models/reported_job_body.dart';
+import 'package:job/feature/reported_job/domain/models/reported_job_model.dart';
+import 'package:job/util/dimensions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -48,7 +48,7 @@ class _AddNewReportedJobWidgetState extends State<AddNewReportedJobWidget> {
 
         ]),
 
-        Padding(padding: const EdgeInsets.symmetric(vertical: Dimensions.paddingSizeDefault),
+        Padding(padding: EdgeInsets.symmetric(vertical: Dimensions.paddingSizeDefault),
             child: reportedJobController.isLoading? const CircularProgressIndicator() :
 
             CustomButton(onTap: (){

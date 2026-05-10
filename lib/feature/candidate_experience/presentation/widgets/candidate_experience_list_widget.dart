@@ -1,11 +1,11 @@
-import 'package:mighty_job/common/layout/custom_dialog_widget.dart';
+import 'package:job/common/layout/custom_dialog_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/layout/list_layout_widget.dart';
-import 'package:mighty_job/feature/candidate_experience/controller/candidate_experience_controller.dart';
-import 'package:mighty_job/feature/candidate_experience/domain/models/candidate_experience_model.dart';
-import 'package:mighty_job/feature/candidate_experience/presentation/widgets/add_new_candidate_experience_widget.dart';
-import 'package:mighty_job/feature/candidate_experience/presentation/widgets/candidate_experience_item_widget.dart';
+import 'package:job/common/layout/list_layout_widget.dart';
+import 'package:job/feature/candidate_experience/controller/candidate_experience_controller.dart';
+import 'package:job/feature/candidate_experience/domain/models/candidate_experience_model.dart';
+import 'package:job/feature/candidate_experience/presentation/widgets/add_new_candidate_experience_widget.dart';
+import 'package:job/feature/candidate_experience/presentation/widgets/candidate_experience_item_widget.dart';
 
 class CandidateExperienceListWidget extends StatelessWidget {
   final ScrollController scrollController;

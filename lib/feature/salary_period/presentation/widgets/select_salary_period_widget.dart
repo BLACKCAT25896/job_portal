@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/widget/custom_title.dart';
-import 'package:mighty_job/common/widget/dropdown_with_search_widget.dart';
-import 'package:mighty_job/feature/salary_period/controller/salary_period_controller.dart';
-import 'package:mighty_job/feature/salary_period/domain/models/salary_period_model.dart';
-import 'package:mighty_job/feature/salary_period/presentation/widgets/salary_period_list_widget.dart';
-import 'package:mighty_job/util/dimensions.dart';
+import 'package:job/common/widget/custom_title.dart';
+import 'package:job/common/widget/dropdown_with_search_widget.dart';
+import 'package:job/feature/salary_period/controller/salary_period_controller.dart';
+import 'package:job/feature/salary_period/domain/models/salary_period_model.dart';
+import 'package:job/feature/salary_period/presentation/widgets/salary_period_list_widget.dart';
+import 'package:job/util/dimensions.dart';
 
 class SelectSalaryPeriodWidget extends StatefulWidget {
   const SelectSalaryPeriodWidget({super.key});

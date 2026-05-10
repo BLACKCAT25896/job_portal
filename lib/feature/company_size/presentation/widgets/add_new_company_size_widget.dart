@@ -1,11 +1,11 @@
-import 'package:mighty_job/common/widget/custom_button.dart';
-import 'package:mighty_job/common/widget/custom_snackbar.dart';
-import 'package:mighty_job/common/widget/custom_text_field.dart';
-import 'package:mighty_job/feature/company_size/controller/company_size_controller.dart';
-import 'package:mighty_job/feature/company_size/domain/models/company_size_body.dart';
-import 'package:mighty_job/feature/company_size/domain/models/company_size_model.dart';
-import 'package:mighty_job/util/app_constants.dart';
-import 'package:mighty_job/util/dimensions.dart';
+import 'package:job/common/widget/custom_button.dart';
+import 'package:job/common/widget/custom_snackbar.dart';
+import 'package:job/common/widget/custom_text_field.dart';
+import 'package:job/feature/company_size/controller/company_size_controller.dart';
+import 'package:job/feature/company_size/domain/models/company_size_body.dart';
+import 'package:job/feature/company_size/domain/models/company_size_model.dart';
+import 'package:job/util/app_constants.dart';
+import 'package:job/util/dimensions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -57,7 +57,7 @@ class _AddNewCompanySizeWidgetState extends State<AddNewCompanySizeWidget> {
             inputFormatters: [AppConstants.numberFormat],
           ),
 
-          Padding(padding: const EdgeInsets.symmetric(vertical: Dimensions.paddingSizeDefault),
+          Padding(padding: EdgeInsets.symmetric(vertical: Dimensions.paddingSizeDefault),
                 child: companySizeController.isLoading? const CircularProgressIndicator() :
                 CustomButton(onTap: (){
                   String name = nameController.text.trim();

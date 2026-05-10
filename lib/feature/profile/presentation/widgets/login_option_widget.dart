@@ -1,12 +1,12 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/widget/frontend_custom_button.dart';
-import 'package:mighty_job/feature/authentication/logic/authentication_controller.dart';
-import 'package:mighty_job/feature/profile/presentation/widgets/header_profile_info_dropdown.dart';
-import 'package:mighty_job/helper/app_color_helper.dart';
-import 'package:mighty_job/helper/route_helper.dart';
-import 'package:mighty_job/util/dimensions.dart';
+import 'package:job/common/widget/frontend_custom_button.dart';
+import 'package:job/feature/authentication/logic/authentication_controller.dart';
+import 'package:job/feature/profile/presentation/widgets/header_profile_info_dropdown.dart';
+import 'package:job/helper/app_color_helper.dart';
+import 'package:job/helper/route_helper.dart';
+import 'package:job/util/dimensions.dart';
 
 class LoginOptionWidget extends StatelessWidget {
   const LoginOptionWidget({super.key});

@@ -1,4 +1,4 @@
-# mighty_job
+# job
 
 A new Flutter project.
 

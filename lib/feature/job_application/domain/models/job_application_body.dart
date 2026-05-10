@@ -154,7 +154,7 @@ class JobApplicationBody {
     if (json['screening_questions'] != null) {
       screeningQuestions = <ScreeningQuestions>[];
       json['screening_questions'].forEach((v) {
-        screeningQuestions!.add(new ScreeningQuestions.fromJson(v));
+        screeningQuestions!.add(ScreeningQuestions.fromJson(v));
       });
     }
     sMethod = json['sMethod'];
@@ -263,7 +263,7 @@ class ScreeningQuestions {
     if (json['options'] != null) {
       options = <Options>[];
       json['options'].forEach((v) {
-        options!.add(new Options.fromJson(v));
+        options!.add(Options.fromJson(v));
       });
     }
   }

@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:shimmer/shimmer.dart';
 
-import 'package:mighty_job/common/widget/custom_contaner.dart';
-import 'package:mighty_job/util/dimensions.dart';
+import 'package:job/common/widget/custom_contaner.dart';
+import 'package:job/util/dimensions.dart';
 
 class PublicJobListingShimmer extends StatelessWidget {
   final bool fromFilter;
@@ -29,7 +29,7 @@ class PublicJobListingShimmer extends StatelessWidget {
             ),
           ),
 
-          const SizedBox(
+          SizedBox(
             height: Dimensions.paddingSizeDefault,
           ),
         ],
@@ -72,7 +72,7 @@ class PublicJobListingShimmer extends StatelessWidget {
                         ),
                       ),
 
-                      const SizedBox(
+                      SizedBox(
                         width:
                         Dimensions.paddingSizeExtraSmall,
                       ),

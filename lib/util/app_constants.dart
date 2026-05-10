@@ -3,9 +3,9 @@ import 'package:facebook_app_events/facebook_app_events.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_linkify/flutter_linkify.dart';
-import 'package:mighty_job/helper/domain_helper/domain_helper.dart';
-import 'package:mighty_job/localization/language_model.dart';
-import 'package:mighty_job/util/images.dart';
+import 'package:job/helper/domain_helper/domain_helper.dart';
+import 'package:job/localization/language_model.dart';
+import 'package:job/util/images.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 
@@ -94,7 +94,7 @@ class AppConstants {
   static const String paymentMethods = '/payment-methods';
 
 
-  //mighty_job management
+  //job management
   static const String globalStatusUpdate = '/global-status-update';
   static const String dashboardReport = '/admin-dashboard';
 

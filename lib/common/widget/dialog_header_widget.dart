@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/util/dimensions.dart';
-import 'package:mighty_job/util/styles.dart';
+import 'package:job/util/dimensions.dart';
+import 'package:job/util/styles.dart';
 
 class DialogHeaderWidget extends StatelessWidget {
   final String title;
@@ -9,7 +9,7 @@ class DialogHeaderWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(padding: const EdgeInsets.symmetric(vertical : Dimensions.paddingSizeSmall),
+    return Padding(padding: EdgeInsets.symmetric(vertical : Dimensions.paddingSizeSmall),
         child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(title.tr, style: textSemiBold.copyWith(fontSize: Dimensions.fontSizeLarge),),

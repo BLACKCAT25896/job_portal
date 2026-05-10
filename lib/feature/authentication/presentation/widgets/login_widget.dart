@@ -1,16 +1,16 @@
-import 'package:mighty_job/helper/app_color_helper.dart';
+import 'package:job/helper/app_color_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/widget/custom_button.dart';
-import 'package:mighty_job/common/widget/custom_checkbox.dart';
-import 'package:mighty_job/common/widget/custom_snackbar.dart';
-import 'package:mighty_job/common/widget/custom_text_field.dart';
-import 'package:mighty_job/feature/authentication/logic/authentication_controller.dart';
-import 'package:mighty_job/util/app_constants.dart';
-import 'package:mighty_job/util/dimensions.dart';
-import 'package:mighty_job/util/images.dart';
-import 'package:mighty_job/util/styles.dart';
+import 'package:job/common/widget/custom_button.dart';
+import 'package:job/common/widget/custom_checkbox.dart';
+import 'package:job/common/widget/custom_snackbar.dart';
+import 'package:job/common/widget/custom_text_field.dart';
+import 'package:job/feature/authentication/logic/authentication_controller.dart';
+import 'package:job/util/app_constants.dart';
+import 'package:job/util/dimensions.dart';
+import 'package:job/util/images.dart';
+import 'package:job/util/styles.dart';
 
 class LoginWidget extends StatefulWidget {
   final bool fromDashboard;
@@ -48,11 +48,11 @@ class _LoginWidgetState extends State<LoginWidget> {
     return Column(mainAxisSize: MainAxisSize.max,
       crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.center, children: [
-        Padding(padding: const EdgeInsets.all(Dimensions.paddingSizeDefault),
+        Padding(padding: EdgeInsets.all(Dimensions.paddingSizeDefault),
           child: Center(child: GetBuilder<AuthenticationController>(
               builder: (authenticationController) {
                 return Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeDefault),
+                  padding: EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeDefault),
                   child: Column(mainAxisSize: MainAxisSize.min, children: [
 
                     Text("login".tr, style: textBold.copyWith(
@@ -74,8 +74,8 @@ class _LoginWidgetState extends State<LoginWidget> {
                         prefixIconColor: Theme.of(context).colorScheme.onSecondary,
                         ),
 
-                    const SizedBox(height: Dimensions.paddingSizeLarge,),
-                    Padding(padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeExtraSmall),
+                    SizedBox(height: Dimensions.paddingSizeLarge,),
+                    Padding(padding:  EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeExtraSmall),
                       child: Row(spacing: Dimensions.paddingSizeExtraSmall, children: [
                         CustomCheckbox(value: authenticationController.isActiveRememberMe,
                           onChange: () {
@@ -89,7 +89,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                     ),
 
 
-                    Padding(padding: const EdgeInsets.symmetric(vertical: Dimensions.paddingSize),
+                    Padding(padding: EdgeInsets.symmetric(vertical: Dimensions.paddingSize),
                       child: authenticationController.isLoading? const CircularProgressIndicator():
                       CustomButton(onTap: () {
                         String username = phoneController.text.trim();

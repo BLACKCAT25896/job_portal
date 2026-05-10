@@ -1,16 +1,15 @@
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
-import 'package:mighty_job/common/widget/custom_button.dart';
-import 'package:mighty_job/common/widget/custom_contaner.dart';
-import 'package:mighty_job/common/widget/custom_text_field.dart';
-import 'package:mighty_job/common/widget/responsive_grid_widget.dart';
-import 'package:mighty_job/feature/authentication/presentation/widgets/gender_selection_widget.dart';
-import 'package:mighty_job/feature/career_level/presentation/widgets/select_career_level_widget.dart';
-import 'package:mighty_job/feature/degree_level/presentation/widgets/select_degree_level_widget.dart';
-import 'package:mighty_job/feature/job_listing/controller/job_listing_controller.dart';
-import 'package:mighty_job/feature/skill/presentation/widgets/select_skill_widget.dart';
-import 'package:mighty_job/helper/app_color_helper.dart';
-import 'package:mighty_job/util/app_constants.dart';
+import 'package:job/common/widget/custom_button.dart';
+import 'package:job/common/widget/custom_contaner.dart';
+import 'package:job/common/widget/custom_text_field.dart';
+import 'package:job/common/widget/responsive_grid_widget.dart';
+import 'package:job/feature/authentication/presentation/widgets/gender_selection_widget.dart';
+import 'package:job/feature/degree_level/presentation/widgets/select_degree_level_widget.dart';
+import 'package:job/feature/job_listing/controller/job_listing_controller.dart';
+import 'package:job/feature/skill/presentation/widgets/select_skill_widget.dart';
+import 'package:job/helper/app_color_helper.dart';
+import 'package:job/util/app_constants.dart';
 
 class CandidateRequirementsWidget extends StatefulWidget {
   const CandidateRequirementsWidget({super.key});

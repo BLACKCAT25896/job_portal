@@ -1,14 +1,14 @@
-import 'package:mighty_job/common/widget/responsive_grid_widget.dart';
-import 'package:mighty_job/feature/candidate_education/controller/candidate_education_controller.dart';
-import 'package:mighty_job/feature/candidate_education/domain/models/candidate_education_body.dart';
-import 'package:mighty_job/feature/candidate_education/domain/models/candidate_education_model.dart';
-import 'package:mighty_job/util/app_constants.dart';
+import 'package:job/common/widget/responsive_grid_widget.dart';
+import 'package:job/feature/candidate_education/controller/candidate_education_controller.dart';
+import 'package:job/feature/candidate_education/domain/models/candidate_education_body.dart';
+import 'package:job/feature/candidate_education/domain/models/candidate_education_model.dart';
+import 'package:job/util/app_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/widget/custom_button.dart';
-import 'package:mighty_job/common/widget/custom_snackbar.dart';
-import 'package:mighty_job/common/widget/custom_text_field.dart';
-import 'package:mighty_job/util/dimensions.dart';
+import 'package:job/common/widget/custom_button.dart';
+import 'package:job/common/widget/custom_snackbar.dart';
+import 'package:job/common/widget/custom_text_field.dart';
+import 'package:job/util/dimensions.dart';
 
 class AddNewCandidateEducationWidget extends StatefulWidget {
   final CandidateEducationItem? candidateEducationItem;
@@ -73,10 +73,10 @@ class _AddNewCandidateEducationWidgetState extends State<AddNewCandidateEducatio
             ),
 
 
-            candidateEducationController.isLoading? const Padding(padding: EdgeInsets.all(Dimensions.paddingSizeDefault),
+            candidateEducationController.isLoading? Padding(padding: EdgeInsets.all(Dimensions.paddingSizeDefault),
                 child: Center(child: CircularProgressIndicator())):
 
-            Padding(padding: const EdgeInsets.symmetric(vertical: Dimensions.paddingSizeDefault),
+            Padding(padding: EdgeInsets.symmetric(vertical: Dimensions.paddingSizeDefault),
                 child: CustomButton(onTap: (){
                   String name = firstNameController.text.trim();
                   String lastName = lastNameController.text.trim();

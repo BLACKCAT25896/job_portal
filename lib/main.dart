@@ -5,19 +5,19 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:flutter_quill/flutter_quill.dart';
 import 'package:meta_seo/meta_seo.dart';
-import 'package:mighty_job/common/controller/network_controller.dart';
+import 'package:job/common/controller/network_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/controller/route_controller.dart';
-import 'package:mighty_job/common/controller/theme_controller.dart';
-import 'package:mighty_job/common/model/messages.dart';
-import 'package:mighty_job/helper/di_container.dart';
-import 'package:mighty_job/helper/notification_helper.dart';
-import 'package:mighty_job/helper/route_helper.dart';
-import 'package:mighty_job/localization/localization_controller.dart';
-import 'package:mighty_job/theme/dark_theme.dart';
-import 'package:mighty_job/theme/light_theme.dart';
-import 'package:mighty_job/util/app_constants.dart';
+import 'package:job/common/controller/route_controller.dart';
+import 'package:job/common/controller/theme_controller.dart';
+import 'package:job/common/model/messages.dart';
+import 'package:job/helper/di_container.dart';
+import 'package:job/helper/notification_helper.dart';
+import 'package:job/helper/route_helper.dart';
+import 'package:job/localization/localization_controller.dart';
+import 'package:job/theme/dark_theme.dart';
+import 'package:job/theme/light_theme.dart';
+import 'package:job/util/app_constants.dart';
 import 'package:toastification/toastification.dart';
 import 'package:url_strategy/url_strategy.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -35,9 +35,9 @@ Future<void> main() async {
   if(GetPlatform.isWeb){
     await Firebase.initializeApp(options: const FirebaseOptions(
         apiKey: "AIzaSyCifalK_uMJydVsJqvNb7d9tDUDpWj3Qr0",
-        authDomain: "mighty-mighty_job.firebaseapp.com",
-        projectId: "mighty-mighty_job",
-        storageBucket: "mighty-mighty_job.firebasestorage.app",
+        authDomain: "mighty-job.firebaseapp.com",
+        projectId: "mighty-job",
+        storageBucket: "mighty-job.firebasestorage.app",
         messagingSenderId: "789305924846",
         appId: "1:789305924846:web:9f2e1784494c17179f27ff",
         measurementId: "G-BN99TFSDXJ"

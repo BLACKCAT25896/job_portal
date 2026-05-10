@@ -1,12 +1,12 @@
 import 'package:audioplayers/audioplayers.dart';
-import 'package:mighty_job/helper/app_color_helper.dart';
+import 'package:job/helper/app_color_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/widget/custom_button.dart';
-import 'package:mighty_job/helper/notification_helper.dart';
-import 'package:mighty_job/util/dimensions.dart';
-import 'package:mighty_job/util/images.dart';
-import 'package:mighty_job/util/styles.dart';
+import 'package:job/common/widget/custom_button.dart';
+import 'package:job/helper/notification_helper.dart';
+import 'package:job/util/dimensions.dart';
+import 'package:job/util/images.dart';
+import 'package:job/util/styles.dart';
 
 class NotificationPopUpDialog extends StatefulWidget {
   final PayloadModel payloadModel;
@@ -35,16 +35,15 @@ class _NewRequestDialogState extends State<NotificationPopUpDialog> {
 
     return Dialog(
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(Dimensions.radiusDefault)),
-      //insetPadding: EdgeInsets.all(Dimensions.paddingSizeLarge),
       child: Container(
         width: 500,
-        padding: const EdgeInsets.all(Dimensions.paddingSizeExtraLarge),
+        padding: EdgeInsets.all(Dimensions.paddingSizeExtraLarge),
         child: Column(mainAxisSize: MainAxisSize.min, children: [
 
           Icon(Icons.notifications_active, size: 60, color: systemPrimaryColor()),
 
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeLarge),
+            padding: EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeLarge),
             child: Text(
                 '${widget.payloadModel.title} ${widget.payloadModel.orderId != '' ?
                 '(${widget.payloadModel.orderId})': ''}',
@@ -52,10 +51,10 @@ class _NewRequestDialogState extends State<NotificationPopUpDialog> {
                 style: textRegular.copyWith(fontSize: Dimensions.fontSizeLarge),
               ),
           ),
-          const SizedBox(height: Dimensions.paddingSizeSmall),
+          SizedBox(height: Dimensions.paddingSizeSmall),
 
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeLarge),
+            padding: EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeLarge),
             child: Column(
               children: [
                 Text(
@@ -63,7 +62,7 @@ class _NewRequestDialogState extends State<NotificationPopUpDialog> {
                   style: textRegular.copyWith(fontSize: Dimensions.fontSizeLarge),
                 ),
                 if(widget.payloadModel.image != 'null')
-                  const SizedBox(height: Dimensions.paddingSizeExtraSmall,),
+                  SizedBox(height: Dimensions.paddingSizeExtraSmall,),
 
                 if(widget.payloadModel.image != 'null')
                   ClipRRect(
@@ -82,7 +81,7 @@ class _NewRequestDialogState extends State<NotificationPopUpDialog> {
               ],
             ),
           ),
-          const SizedBox(height: Dimensions.paddingSizeLarge),
+          SizedBox(height: Dimensions.paddingSizeLarge),
 
           Row(mainAxisAlignment: MainAxisAlignment.center, children: [
 

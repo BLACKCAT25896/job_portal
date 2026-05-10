@@ -1,5 +1,5 @@
-import 'package:mighty_job/api_handle/api_client.dart';
-import 'package:mighty_job/util/app_constants.dart';
+import 'package:job/api_handle/api_client.dart';
+import 'package:job/util/app_constants.dart';
 import 'package:get/get_connect/http/src/response/response.dart';
 
 class TransactionRepository{

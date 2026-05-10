@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:mighty_job/util/dimensions.dart';
-import 'package:mighty_job/util/images.dart';
-import 'package:mighty_job/util/styles.dart';
+import 'package:job/util/dimensions.dart';
+import 'package:job/util/images.dart';
+import 'package:job/util/styles.dart';
 
 class ProfileMenuItemWidget extends StatelessWidget {
   final String? icon;

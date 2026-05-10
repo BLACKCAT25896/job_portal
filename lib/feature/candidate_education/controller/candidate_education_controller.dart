@@ -1,10 +1,10 @@
 import 'package:get/get.dart';
-import 'package:mighty_job/api_handle/api_checker.dart';
-import 'package:mighty_job/api_handle/global_api_response_model.dart';
-import 'package:mighty_job/common/widget/custom_snackbar.dart';
-import 'package:mighty_job/feature/candidate_education/domain/models/candidate_education_body.dart';
-import 'package:mighty_job/feature/candidate_education/domain/models/candidate_education_model.dart';
-import 'package:mighty_job/feature/candidate_education/domain/repository/candidate_education_repository.dart';
+import 'package:job/api_handle/api_checker.dart';
+import 'package:job/api_handle/global_api_response_model.dart';
+import 'package:job/common/widget/custom_snackbar.dart';
+import 'package:job/feature/candidate_education/domain/models/candidate_education_body.dart';
+import 'package:job/feature/candidate_education/domain/models/candidate_education_model.dart';
+import 'package:job/feature/candidate_education/domain/repository/candidate_education_repository.dart';
 
 class CandidateEducationController extends GetxController implements GetxService{
   final CandidateEducationRepository candidateEducationRepository;

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/widget/custom_button.dart';
-import 'package:mighty_job/util/dimensions.dart';
-import 'package:mighty_job/util/styles.dart';
+import 'package:job/common/widget/custom_button.dart';
+import 'package:job/util/dimensions.dart';
+import 'package:job/util/styles.dart';
 
 class SubscriptionRequestSuccessfulDialog extends StatelessWidget {
   const SubscriptionRequestSuccessfulDialog({super.key});
@@ -11,13 +11,13 @@ class SubscriptionRequestSuccessfulDialog extends StatelessWidget {
   Widget build(BuildContext context) {
     return Dialog(
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(Dimensions.paddingSizeSmall)),
-      insetPadding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeSmall),
+      insetPadding: EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeSmall),
       child: Padding(
-        padding: const EdgeInsets.all(Dimensions.paddingSizeDefault),
+        padding:  EdgeInsets.all(Dimensions.paddingSizeDefault),
         child: Column(mainAxisSize: MainAxisSize.min, children: [
           Text("subscription_request_sent".tr,textAlign: TextAlign.center, style: textMedium.copyWith(fontSize: Dimensions.fontSizeOverLarge),),
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: Dimensions.paddingSizeSmall),
+            padding: EdgeInsets.symmetric(vertical: Dimensions.paddingSizeSmall),
             child: Text("call_you_soon".tr, style: textRegular,),
           ),
           Align(alignment: Alignment.bottomRight,

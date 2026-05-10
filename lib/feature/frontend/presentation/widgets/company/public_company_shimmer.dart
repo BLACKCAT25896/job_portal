@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:shimmer/shimmer.dart';
 
-import 'package:mighty_job/common/widget/custom_contaner.dart';
-import 'package:mighty_job/util/dimensions.dart';
+import 'package:job/common/widget/custom_contaner.dart';
+import 'package:job/util/dimensions.dart';
 
 class PublicCompanyListShimmer extends StatelessWidget {
   const PublicCompanyListShimmer({super.key});
@@ -24,7 +24,7 @@ class PublicCompanyListShimmer extends StatelessWidget {
           ),
         ),
 
-        const SizedBox(height: Dimensions.paddingSizeDefault),
+        SizedBox(height: Dimensions.paddingSizeDefault),
 
         Shimmer.fromColors(
           baseColor: Theme.of(context).cardColor,
@@ -60,7 +60,7 @@ class PublicCompanyListShimmer extends StatelessWidget {
                   borderRadius: 14,
 
                   child: Padding(
-                    padding: const EdgeInsets.all(
+                    padding: EdgeInsets.all(
                       Dimensions.paddingSizeDefault,
                     ),
 

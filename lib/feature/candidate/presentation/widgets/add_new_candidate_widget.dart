@@ -1,14 +1,14 @@
-import 'package:mighty_job/common/widget/responsive_grid_widget.dart';
-import 'package:mighty_job/util/app_constants.dart';
+import 'package:job/common/widget/responsive_grid_widget.dart';
+import 'package:job/util/app_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/widget/custom_button.dart';
-import 'package:mighty_job/common/widget/custom_snackbar.dart';
-import 'package:mighty_job/common/widget/custom_text_field.dart';
-import 'package:mighty_job/feature/candidate/controller/candidate_controller.dart';
-import 'package:mighty_job/feature/candidate/domain/models/candidate_body.dart';
-import 'package:mighty_job/feature/candidate/domain/models/candidate_model.dart';
-import 'package:mighty_job/util/dimensions.dart';
+import 'package:job/common/widget/custom_button.dart';
+import 'package:job/common/widget/custom_snackbar.dart';
+import 'package:job/common/widget/custom_text_field.dart';
+import 'package:job/feature/candidate/controller/candidate_controller.dart';
+import 'package:job/feature/candidate/domain/models/candidate_body.dart';
+import 'package:job/feature/candidate/domain/models/candidate_model.dart';
+import 'package:job/util/dimensions.dart';
 
 class AddNewCandidateWidget extends StatefulWidget {
   final CandidateItem? candidateItem;
@@ -77,10 +77,10 @@ class _AddNewCandidateWidgetState extends State<AddNewCandidateWidget> {
             ),
 
 
-            candidateController.isLoading? const Padding(padding: EdgeInsets.all(Dimensions.paddingSizeDefault),
+            candidateController.isLoading?  Padding(padding: EdgeInsets.all(Dimensions.paddingSizeDefault),
                 child: Center(child: CircularProgressIndicator())):
 
-            Padding(padding: const EdgeInsets.symmetric(vertical: Dimensions.paddingSizeDefault),
+            Padding(padding:  EdgeInsets.symmetric(vertical: Dimensions.paddingSizeDefault),
                 child: CustomButton(onTap: (){
                   String name = firstNameController.text.trim();
                   String lastName = lastNameController.text.trim();

@@ -1,10 +1,10 @@
 
-import 'package:mighty_job/common/global_widget/custom_web_scroll_view_widget.dart';
-import 'package:mighty_job/common/layout/section_header_with_path_widget.dart';
-import 'package:mighty_job/common/widget/custom_app_bar.dart';
-import 'package:mighty_job/feature/industries/domain/models/industry_model.dart';
-import 'package:mighty_job/feature/industries/presentation/widgets/add_new_industry_widget.dart';
-import 'package:mighty_job/util/dimensions.dart';
+import 'package:job/common/global_widget/custom_web_scroll_view_widget.dart';
+import 'package:job/common/layout/section_header_with_path_widget.dart';
+import 'package:job/common/widget/custom_app_bar.dart';
+import 'package:job/feature/industries/domain/models/industry_model.dart';
+import 'package:job/feature/industries/presentation/widgets/add_new_industry_widget.dart';
+import 'package:job/util/dimensions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -25,7 +25,7 @@ class _CreateNewIndustryScreenState extends State<CreateNewIndustryScreen> {
         SliverToBoxAdapter(child: Column(children: [
             SectionHeaderWithPath(sectionTitle: "industry".tr,
               pathItems: ["add_new_industry".tr]),
-            Padding(padding: const EdgeInsets.all(Dimensions.paddingSizeSmall),
+            Padding(padding: EdgeInsets.all(Dimensions.paddingSizeSmall),
               child: AddNewIndustryWidget(industryItem: widget.industryItem),
             ),
           ],

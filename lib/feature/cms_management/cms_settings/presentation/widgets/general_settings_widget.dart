@@ -1,13 +1,13 @@
-import 'package:mighty_job/helper/app_color_helper.dart';
+import 'package:job/helper/app_color_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/widget/custom_button.dart';
-import 'package:mighty_job/common/widget/custom_contaner.dart';
-import 'package:mighty_job/common/widget/custom_text_field.dart';
-import 'package:mighty_job/common/widget/custom_title.dart';
-import 'package:mighty_job/feature/cms_management/cms_settings/controller/system_settngs_controller.dart';
-import 'package:mighty_job/feature/cms_management/cms_settings/domain/model/general_settings_model.dart';
-import 'package:mighty_job/util/dimensions.dart';
+import 'package:job/common/widget/custom_button.dart';
+import 'package:job/common/widget/custom_contaner.dart';
+import 'package:job/common/widget/custom_text_field.dart';
+import 'package:job/common/widget/custom_title.dart';
+import 'package:job/feature/cms_management/cms_settings/controller/system_settngs_controller.dart';
+import 'package:job/feature/cms_management/cms_settings/domain/model/general_settings_model.dart';
+import 'package:job/util/dimensions.dart';
 
 class GeneralSettingsWidget extends StatefulWidget {
   const GeneralSettingsWidget({super.key});
@@ -57,7 +57,7 @@ class _GeneralSettingsWidgetState extends State<GeneralSettingsWidget> {
   Widget build(BuildContext context) {
     return GetBuilder<SystemSettingsController>(
       builder: (settingsController) {
-        return Padding(padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeDefault),
+        return Padding(padding: EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeDefault),
           child: CustomContainer(showShadow: false, borderRadius: 5,
             child: Column(spacing: Dimensions.paddingSizeSmall, children: [
               CustomTitle(title: "general".tr, webTitle: true, leftPadding: 0),

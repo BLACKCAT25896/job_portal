@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/widget/custom_contaner.dart';
-import 'package:mighty_job/common/widget/custom_image.dart';
-import 'package:mighty_job/feature/company/domain/models/company_model.dart';
-import 'package:mighty_job/helper/route_helper.dart';
-import 'package:mighty_job/util/dimensions.dart';
-import 'package:mighty_job/util/styles.dart';
+import 'package:job/common/widget/custom_contaner.dart';
+import 'package:job/common/widget/custom_image.dart';
+import 'package:job/feature/company/domain/models/company_model.dart';
+import 'package:job/helper/route_helper.dart';
+import 'package:job/util/dimensions.dart';
+import 'package:job/util/styles.dart';
 
 class PublicCompanyItemWidget extends StatefulWidget {
   final CompanyItem? item;
@@ -54,7 +54,7 @@ class _PublicCompanyItemWidgetState extends State<PublicCompanyItemWidget> {
               },
               borderRadius: 14,
 
-              child: Padding(padding: const EdgeInsets.all(Dimensions.paddingSizeDefault),
+              child: Padding(padding: EdgeInsets.all(Dimensions.paddingSizeDefault),
 
                 child: Column(mainAxisSize: MainAxisSize.min, children: [
                     AnimatedContainer(duration: const Duration(milliseconds: 220), height: 84, width: 84,

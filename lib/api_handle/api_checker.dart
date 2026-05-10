@@ -1,8 +1,8 @@
 
 import 'package:get/get.dart';
-import 'package:mighty_job/common/widget/custom_snackbar.dart';
-import 'package:mighty_job/feature/authentication/logic/authentication_controller.dart';
-import 'package:mighty_job/feature/authentication/presentation/screen/login_screen.dart';
+import 'package:job/common/widget/custom_snackbar.dart';
+import 'package:job/feature/authentication/logic/authentication_controller.dart';
+import 'package:job/feature/authentication/presentation/screen/login_screen.dart';
 
 
 class ApiChecker {

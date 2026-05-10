@@ -1,55 +1,56 @@
 
 
-import 'package:mighty_job/feature/authentication/presentation/screen/crete_new_account_screen.dart';
-import 'package:mighty_job/feature/authentication/presentation/screen/crete_new_company_account_screen.dart';
-import 'package:mighty_job/feature/candidate/presentation/screens/candidate_screen.dart';
+import 'package:job/feature/authentication/presentation/screen/crete_new_account_screen.dart';
+import 'package:job/feature/authentication/presentation/screen/crete_new_company_account_screen.dart';
+import 'package:job/feature/candidate/presentation/screens/candidate_screen.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/feature/candidate_education/presentation/screens/candidate_education_screen.dart';
-import 'package:mighty_job/feature/candidate_experience/presentation/screens/candidate_experience_screen.dart';
-import 'package:mighty_job/feature/candidate_resume/presentation/screens/candidate_resume_screen.dart';
-import 'package:mighty_job/feature/career_level/presentation/screens/career_level_screen.dart';
-import 'package:mighty_job/feature/cms_management/cms_settings/presentation/screens/system_setting_screen.dart';
-import 'package:mighty_job/feature/cms_management/policy_pages/presentation/screens/policy_pages_screen.dart';
-import 'package:mighty_job/feature/authentication/presentation/screen/delete_account_screen.dart';
-import 'package:mighty_job/feature/authentication/presentation/screen/login_screen.dart';
-import 'package:mighty_job/feature/company/presentation/screens/company_screen.dart';
-import 'package:mighty_job/feature/company_size/presentation/screens/company_size_screen.dart';
-import 'package:mighty_job/feature/dashboard/views/dashboard_screen.dart';
-import 'package:mighty_job/feature/degree_level/presentation/screens/degree_level_screen.dart';
-import 'package:mighty_job/feature/favorite_company/presentation/screens/favorite_company_screen.dart';
-import 'package:mighty_job/feature/frontend/policy_enum.dart';
-import 'package:mighty_job/feature/frontend/presentation/screens/category_wise_job_list_widget.dart';
-import 'package:mighty_job/feature/frontend/presentation/screens/job_apply_screen.dart';
-import 'package:mighty_job/feature/frontend/presentation/screens/job_details_screen.dart';
-import 'package:mighty_job/feature/frontend/presentation/screens/landing_screen.dart';
-import 'package:mighty_job/feature/frontend/presentation/screens/policy_screen.dart';
-import 'package:mighty_job/feature/industries/presentation/screens/industry_screen.dart';
-import 'package:mighty_job/feature/inquiry/presentation/screens/inquiry_screen.dart';
-import 'package:mighty_job/feature/job_application/presentation/screens/job_application_screen.dart';
-import 'package:mighty_job/feature/job_category/presentation/screens/job_category_screen.dart';
-import 'package:mighty_job/feature/job_listing/presentation/screens/job_listing_screen.dart';
-import 'package:mighty_job/feature/job_listing/presentation/screens/post_a_job_screen.dart';
-import 'package:mighty_job/feature/job_stage/presentation/screens/job_stage_screen.dart';
-import 'package:mighty_job/feature/notification/presentation/screens/notification_screen.dart';
-import 'package:mighty_job/feature/ownership_type/presentation/screens/ownership_type_screen.dart';
-import 'package:mighty_job/feature/payment_method/presentation/screens/payment_method_screen.dart';
-import 'package:mighty_job/feature/post/presentation/screens/post_screen.dart';
-import 'package:mighty_job/feature/post_category/presentation/screens/post_category_screen.dart';
-import 'package:mighty_job/feature/post_comment/presentation/screens/post_comment_screen.dart';
-import 'package:mighty_job/feature/profile/presentation/screens/profile_screen.dart';
-import 'package:mighty_job/feature/reported_job/presentation/screens/reported_job_screen.dart';
-import 'package:mighty_job/feature/role_and_permission/role/presentation/screens/role_screen.dart';
-import 'package:mighty_job/feature/role_and_permission/user/presentation/screens/user_screen.dart';
-import 'package:mighty_job/feature/salary_currency/presentation/screens/salary_currency_screen.dart';
-import 'package:mighty_job/feature/salary_period/presentation/screens/salary_period_screen.dart';
-import 'package:mighty_job/feature/setting/presentation/widgets/language_setting.dart';
-import 'package:mighty_job/feature/setting/presentation/widgets/system_setting.dart';
-import 'package:mighty_job/feature/skill/presentation/screens/skill_screen.dart';
-import 'package:mighty_job/feature/support_ticket/screens/add_ticket_screen.dart';
-import 'package:mighty_job/feature/support_ticket/screens/support_conversation_screen.dart';
-import 'package:mighty_job/feature/support_ticket/screens/support_ticket_screen.dart';
-import 'package:mighty_job/feature/support_ticket/screens/ticket_category_screen.dart';
-import 'package:mighty_job/feature/transaction/presentation/screens/transaction_screen.dart';
+import 'package:job/feature/candidate_education/presentation/screens/candidate_education_screen.dart';
+import 'package:job/feature/candidate_experience/presentation/screens/candidate_experience_screen.dart';
+import 'package:job/feature/candidate_resume/presentation/screens/candidate_resume_screen.dart';
+import 'package:job/feature/career_level/presentation/screens/career_level_screen.dart';
+import 'package:job/feature/cms_management/cms_settings/presentation/screens/system_setting_screen.dart';
+import 'package:job/feature/cms_management/policy_pages/presentation/screens/policy_pages_screen.dart';
+import 'package:job/feature/authentication/presentation/screen/delete_account_screen.dart';
+import 'package:job/feature/authentication/presentation/screen/login_screen.dart';
+import 'package:job/feature/company/presentation/screens/company_screen.dart';
+import 'package:job/feature/company_size/presentation/screens/company_size_screen.dart';
+import 'package:job/feature/dashboard/views/dashboard_screen.dart';
+import 'package:job/feature/degree_level/presentation/screens/degree_level_screen.dart';
+import 'package:job/feature/favorite_company/presentation/screens/favorite_company_screen.dart';
+import 'package:job/feature/frontend/policy_enum.dart';
+import 'package:job/feature/frontend/presentation/screens/category_wise_job_list_widget.dart';
+import 'package:job/feature/frontend/presentation/screens/job_apply_screen.dart';
+import 'package:job/feature/frontend/presentation/screens/job_details_screen.dart';
+import 'package:job/feature/frontend/presentation/screens/landing_screen.dart';
+import 'package:job/feature/frontend/presentation/screens/policy_screen.dart';
+import 'package:job/feature/industries/presentation/screens/industry_screen.dart';
+import 'package:job/feature/inquiry/presentation/screens/inquiry_screen.dart';
+import 'package:job/feature/job_application/presentation/screens/job_application_screen.dart';
+import 'package:job/feature/job_category/presentation/screens/job_category_screen.dart';
+import 'package:job/feature/job_listing/presentation/screens/job_listing_screen.dart';
+import 'package:job/feature/job_listing/presentation/screens/post_a_job_screen.dart';
+import 'package:job/feature/job_stage/presentation/screens/job_stage_screen.dart';
+import 'package:job/feature/notification/presentation/screens/notification_screen.dart';
+import 'package:job/feature/ownership_type/presentation/screens/ownership_type_screen.dart';
+import 'package:job/feature/payment_method/presentation/screens/payment_method_screen.dart';
+import 'package:job/feature/post/presentation/screens/post_screen.dart';
+import 'package:job/feature/post_category/presentation/screens/post_category_screen.dart';
+import 'package:job/feature/post_comment/presentation/screens/post_comment_screen.dart';
+import 'package:job/feature/profile/presentation/screens/candidate_profile_screen.dart';
+import 'package:job/feature/profile/presentation/screens/profile_screen.dart';
+import 'package:job/feature/reported_job/presentation/screens/reported_job_screen.dart';
+import 'package:job/feature/role_and_permission/role/presentation/screens/role_screen.dart';
+import 'package:job/feature/role_and_permission/user/presentation/screens/user_screen.dart';
+import 'package:job/feature/salary_currency/presentation/screens/salary_currency_screen.dart';
+import 'package:job/feature/salary_period/presentation/screens/salary_period_screen.dart';
+import 'package:job/feature/setting/presentation/widgets/language_setting.dart';
+import 'package:job/feature/setting/presentation/widgets/system_setting.dart';
+import 'package:job/feature/skill/presentation/screens/skill_screen.dart';
+import 'package:job/feature/support_ticket/screens/add_ticket_screen.dart';
+import 'package:job/feature/support_ticket/screens/support_conversation_screen.dart';
+import 'package:job/feature/support_ticket/screens/support_ticket_screen.dart';
+import 'package:job/feature/support_ticket/screens/ticket_category_screen.dart';
+import 'package:job/feature/transaction/presentation/screens/transaction_screen.dart';
 
 class RouteHelper {
   static const String initial = '/';
@@ -153,6 +154,9 @@ class RouteHelper {
   static const String profile = '/profile';
   static String getProfileRoute() => profile;
 
+  static const String candidateProfile = '/candidate-profile';
+  static String getCandidateProfileRoute() => candidateProfile;
+
 
 
   static const String policyPages = '/policy-pages';
@@ -252,6 +256,7 @@ class RouteHelper {
     GetPage(name: createCompanyAccount, page: () => const CreateNewCompanyAccount()),
     GetPage(name: dashboard, page: () => const DashboardScreen()),
     GetPage(name: profile, page: () => const ProfileScreen()),
+    GetPage(name: candidateProfile, page: () => CandidateProfileScreen()),
     GetPage(name: deleteAccount, page: () => const DeleteAccountScreen()),
     GetPage(name: notification, page: () => const NotificationScreen()),
 

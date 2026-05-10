@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mighty_job/util/dimensions.dart';
+import 'package:job/util/dimensions.dart';
 
 class CustomIndicator extends StatelessWidget {
   final int index;
@@ -11,7 +11,7 @@ class CustomIndicator extends StatelessWidget {
   Widget build(BuildContext context) {
     return AnimatedContainer(
       duration: const Duration(milliseconds: 200),
-      margin: const EdgeInsets.only(right: Dimensions.paddingSizeExtraSmall),
+      margin: EdgeInsets.only(right: Dimensions.paddingSizeExtraSmall),
       width:  (index == currentIndex)? (indicatorSize*3) : indicatorSize, height: indicatorSize,
       decoration: BoxDecoration(
         color:  (index == currentIndex)? Theme.of(context).cardColor : Theme.of(context).cardColor.withValues(alpha:0.5),

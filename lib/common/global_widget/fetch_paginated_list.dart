@@ -1,8 +1,8 @@
 
 
 import 'package:get/get_connect/http/src/response/response.dart';
-import 'package:mighty_job/api_handle/api_checker.dart';
-import 'package:mighty_job/api_handle/global_api_response_model.dart';
+import 'package:job/api_handle/api_checker.dart';
+import 'package:job/api_handle/global_api_response_model.dart';
 
 Future<ApiResponse<T>?> fetchPaginatedList<T>({
   required Future<Response?> Function() apiCall,

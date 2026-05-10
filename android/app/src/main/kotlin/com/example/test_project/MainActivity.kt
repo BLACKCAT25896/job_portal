@@ -1,4 +1,4 @@
-package com.mighty_job.fuedevs
+package com.job.fuedevs
 
 import android.os.Build
 import android.os.Bundle

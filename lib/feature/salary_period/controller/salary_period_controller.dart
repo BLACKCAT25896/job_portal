@@ -1,11 +1,11 @@
 
-import 'package:mighty_job/api_handle/api_checker.dart';
-import 'package:mighty_job/api_handle/global_api_response_model.dart';
-import 'package:mighty_job/common/widget/custom_snackbar.dart';
+import 'package:job/api_handle/api_checker.dart';
+import 'package:job/api_handle/global_api_response_model.dart';
+import 'package:job/common/widget/custom_snackbar.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/feature/salary_period/domain/models/salary_period_body.dart';
-import 'package:mighty_job/feature/salary_period/domain/models/salary_period_model.dart';
-import 'package:mighty_job/feature/salary_period/domain/repository/salary_period_repository.dart';
+import 'package:job/feature/salary_period/domain/models/salary_period_body.dart';
+import 'package:job/feature/salary_period/domain/models/salary_period_model.dart';
+import 'package:job/feature/salary_period/domain/repository/salary_period_repository.dart';
 
 class SalaryPeriodController extends GetxController implements GetxService{
   final SalaryPeriodRepository salaryPeriodRepository;

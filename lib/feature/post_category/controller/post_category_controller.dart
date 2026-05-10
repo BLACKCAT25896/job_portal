@@ -1,11 +1,11 @@
 
 import 'package:get/get.dart';
-import 'package:mighty_job/api_handle/api_checker.dart';
-import 'package:mighty_job/api_handle/global_api_response_model.dart';
-import 'package:mighty_job/common/widget/custom_snackbar.dart';
-import 'package:mighty_job/feature/post_category/domain/models/post_category_body.dart';
-import 'package:mighty_job/feature/post_category/domain/models/post_category_model.dart';
-import 'package:mighty_job/feature/post_category/domain/repository/post_category_repository.dart';
+import 'package:job/api_handle/api_checker.dart';
+import 'package:job/api_handle/global_api_response_model.dart';
+import 'package:job/common/widget/custom_snackbar.dart';
+import 'package:job/feature/post_category/domain/models/post_category_body.dart';
+import 'package:job/feature/post_category/domain/models/post_category_model.dart';
+import 'package:job/feature/post_category/domain/repository/post_category_repository.dart';
 
 class PostCategoryController extends GetxController implements GetxService{
   final PostCategoryRepository postCategoryRepository;

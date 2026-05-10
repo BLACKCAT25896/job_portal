@@ -1,33 +1,30 @@
-import 'package:mighty_job/helper/route_helper.dart';
+import 'package:job/helper/route_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/controller/theme_controller.dart';
-import 'package:mighty_job/common/widget/custom_contaner.dart';
-import 'package:mighty_job/common/widget/custom_image.dart';
-import 'package:mighty_job/feature/language/presentation/screens/select_language_bottom_sheet.dart';
-import 'package:mighty_job/feature/profile/logic/profile_controller.dart';
-import 'package:mighty_job/feature/profile/presentation/widgets/header_profile_info_dropdown.dart';
-import 'package:mighty_job/localization/localization_controller.dart';
-import 'package:mighty_job/util/app_constants.dart';
-import 'package:mighty_job/util/dimensions.dart';
-import 'package:mighty_job/util/images.dart';
-import 'package:mighty_job/util/styles.dart';
+import 'package:job/common/controller/theme_controller.dart';
+import 'package:job/common/widget/custom_contaner.dart';
+import 'package:job/common/widget/custom_image.dart';
+import 'package:job/feature/language/presentation/screens/select_language_bottom_sheet.dart';
+import 'package:job/feature/profile/logic/profile_controller.dart';
+import 'package:job/feature/profile/presentation/widgets/header_profile_info_dropdown.dart';
+import 'package:job/localization/localization_controller.dart';
+import 'package:job/util/app_constants.dart';
+import 'package:job/util/dimensions.dart';
+import 'package:job/util/images.dart';
+import 'package:job/util/styles.dart';
 
 class WebAppBar extends StatelessWidget implements PreferredSizeWidget {
   const WebAppBar({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<LocalizationController>(
-      builder: (languageController) {
-        // LanguageModel? language = AppConstants.languages[languageController.selectIndex];
-        //log("current_language:===>${AppConstants.languages[languageController.selectIndex].languageName}");
+    return GetBuilder<LocalizationController>(builder: (languageController) {
         return GetBuilder<ThemeController>(
           builder: (themeController) {
             return Container(
               decoration: BoxDecoration(boxShadow: ThemeShadow.getShadow(),
                 color: Theme.of(context).cardColor),
-              padding: const EdgeInsets.fromLTRB(Dimensions.paddingSizeDefault, Dimensions.paddingSizeSmall, 0, Dimensions.paddingSizeSmall),
+              padding:  EdgeInsets.fromLTRB(Dimensions.paddingSizeDefault, Dimensions.paddingSizeSmall, 0, Dimensions.paddingSizeSmall),
               child: Row(spacing: Dimensions.paddingSizeDefault, children: [
                 Spacer(),
 
@@ -60,7 +57,7 @@ class WebAppBar extends StatelessWidget implements PreferredSizeWidget {
                   builder: (profileController) {
                     return HeaderProfileInfoMenu();
                   } ),
-                const SizedBox(width: Dimensions.paddingSizeDefault),
+                SizedBox(width: Dimensions.paddingSizeDefault),
               ]),
             );
           }
@@ -91,7 +88,7 @@ class MenuButtonWebIcon extends StatelessWidget {
 
      ]),
 
-        const SizedBox(width: Dimensions.paddingSizeExtraSmall),
+        SizedBox(width: Dimensions.paddingSizeExtraSmall),
       ]),
     );
   }

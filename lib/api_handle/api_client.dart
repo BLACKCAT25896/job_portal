@@ -9,8 +9,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
 import 'package:path/path.dart';
-import 'package:mighty_job/api_handle/error_response.dart';
-import 'package:mighty_job/util/app_constants.dart';
+import 'package:job/api_handle/error_response.dart';
+import 'package:job/util/app_constants.dart';
 import 'dart:io' as io;
 
 

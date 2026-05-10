@@ -2,11 +2,11 @@ import 'dart:developer';
 
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/feature/authentication/domain/model/create_candidate_account_body.dart';
-import 'package:mighty_job/feature/authentication/domain/model/create_company_account_body.dart';
+import 'package:job/feature/authentication/domain/model/create_candidate_account_body.dart';
+import 'package:job/feature/authentication/domain/model/create_company_account_body.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:mighty_job/api_handle/api_client.dart';
-import 'package:mighty_job/util/app_constants.dart';
+import 'package:job/api_handle/api_client.dart';
+import 'package:job/util/app_constants.dart';
 
 class AuthenticationRepository{
   final ApiClient apiClient;

@@ -1,17 +1,17 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/widget/confirmation_dialog.dart';
-import 'package:mighty_job/common/widget/custom_contaner.dart';
-import 'package:mighty_job/common/widget/custom_text_item_widget.dart';
-import 'package:mighty_job/common/widget/edit_delete_popup_widget.dart';
-import 'package:mighty_job/common/widget/edit_delete_section.dart';
-import 'package:mighty_job/common/widget/numbering_widget.dart';
-import 'package:mighty_job/feature/cms_management/policy_pages/domain/model/policy_model.dart';
-import 'package:mighty_job/feature/cms_management/policy_pages/logic/pages_controller.dart';
-import 'package:mighty_job/feature/cms_management/policy_pages/presentation/widgets/create_new_page_widget.dart';
-import 'package:mighty_job/helper/responsive_helper.dart';
-import 'package:mighty_job/util/dimensions.dart';
+import 'package:job/common/widget/confirmation_dialog.dart';
+import 'package:job/common/widget/custom_contaner.dart';
+import 'package:job/common/widget/custom_text_item_widget.dart';
+import 'package:job/common/widget/edit_delete_popup_widget.dart';
+import 'package:job/common/widget/edit_delete_section.dart';
+import 'package:job/common/widget/numbering_widget.dart';
+import 'package:job/feature/cms_management/policy_pages/domain/model/policy_model.dart';
+import 'package:job/feature/cms_management/policy_pages/logic/pages_controller.dart';
+import 'package:job/feature/cms_management/policy_pages/presentation/widgets/create_new_page_widget.dart';
+import 'package:job/helper/responsive_helper.dart';
+import 'package:job/util/dimensions.dart';
 
 
 class PageItemWidget extends StatelessWidget {
@@ -49,7 +49,7 @@ class PageItemWidget extends StatelessWidget {
   void _onEdit(BuildContext context) {
     Get.dialog(
       Dialog(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-        child: Padding(padding: const EdgeInsets.all(Dimensions.paddingSizeDefault),
+        child: Padding(padding: EdgeInsets.all(Dimensions.paddingSizeDefault),
           child: CreateNewPageWidget(pageItem: pageItem),
         ),
       ),

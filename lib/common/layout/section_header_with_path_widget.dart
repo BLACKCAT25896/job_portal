@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/layout/custom_add_new_button_widget.dart';
-import 'package:mighty_job/common/widget/custom_route_path_widget.dart';
-import 'package:mighty_job/helper/responsive_helper.dart';
-import 'package:mighty_job/util/dimensions.dart';
+import 'package:job/common/layout/custom_add_new_button_widget.dart';
+import 'package:job/common/widget/custom_route_path_widget.dart';
+import 'package:job/helper/responsive_helper.dart';
+import 'package:job/util/dimensions.dart';
 
 
 class SectionHeaderWithPath extends StatelessWidget {
@@ -18,17 +18,17 @@ class SectionHeaderWithPath extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return (ResponsiveHelper.isDesktop(context))?
-    Padding(padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeDefault),
+    Padding(padding:  EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeDefault),
       child: CustomRoutePathWidget(title: sectionTitle.tr,
         subWidget: Row(children: [
           if(pathItems != null && pathItems!.isNotEmpty)
-            ...pathItems!.map((item) => Padding(padding: const EdgeInsets.only(right: Dimensions.paddingSizeDefault),
+            ...pathItems!.map((item) => Padding(padding:  EdgeInsets.only(right: Dimensions.paddingSizeDefault),
               child: PathItemWidget(title: item.tr))),
 
             if (addNewTitle != null && onAddNewTap != null)
             CustomAddNewButtonWidget(title: addNewTitle!.tr, onTap: onAddNewTap),
           if (subWidget != null)
-            Padding(padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeDefault),
+            Padding(padding:  EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeDefault),
               child: subWidget!,
             ),
           ],

@@ -1,12 +1,12 @@
-import 'package:mighty_job/common/layout/custom_dialog_widget.dart';
-import 'package:mighty_job/common/layout/list_layout_widget.dart';
-import 'package:mighty_job/common/widget/custom_search.dart';
-import 'package:mighty_job/common/widget/custom_snackbar.dart';
-import 'package:mighty_job/feature/reported_job/controller/reported_job_controller.dart';
-import 'package:mighty_job/feature/reported_job/domain/models/reported_job_model.dart';
-import 'package:mighty_job/feature/reported_job/presentation/widgets/add_new_reported_job_widget.dart';
-import 'package:mighty_job/feature/reported_job/presentation/widgets/reported_job_item.dart';
-import 'package:mighty_job/util/dimensions.dart';
+import 'package:job/common/layout/custom_dialog_widget.dart';
+import 'package:job/common/layout/list_layout_widget.dart';
+import 'package:job/common/widget/custom_search.dart';
+import 'package:job/common/widget/custom_snackbar.dart';
+import 'package:job/feature/reported_job/controller/reported_job_controller.dart';
+import 'package:job/feature/reported_job/domain/models/reported_job_model.dart';
+import 'package:job/feature/reported_job/presentation/widgets/add_new_reported_job_widget.dart';
+import 'package:job/feature/reported_job/presentation/widgets/reported_job_item.dart';
+import 'package:job/util/dimensions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -32,7 +32,7 @@ class _ReportedJobListWidgetState extends State<ReportedJobListWidget> {
         final data = reportedJobModel?.data;
 
         return GenericListSection<ReportedJobItem>(
-          topWidget: widget.fromFilter? SizedBox() : Padding(padding: const EdgeInsets.fromLTRB(Dimensions.paddingSizeDefault, 0,
+          topWidget: widget.fromFilter? SizedBox() : Padding(padding: EdgeInsets.fromLTRB(Dimensions.paddingSizeDefault, 0,
                 Dimensions.paddingSizeDefault,Dimensions.paddingSizeDefault),
             child: CustomSearch(hintText: 'search'.tr, searchController: searchController,
               onSearch: () async {

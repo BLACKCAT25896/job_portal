@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:mighty_job/common/widget/custom_button.dart';
-import 'package:mighty_job/common/widget/custom_contaner.dart';
-import 'package:mighty_job/common/widget/custom_image.dart';
-import 'package:mighty_job/feature/frontend/presentation/widgets/industry/select_public_industry_widget.dart';
-import 'package:mighty_job/feature/frontend/presentation/widgets/job_listing_summery_widget.dart';
-import 'package:mighty_job/feature/frontend/presentation/widgets/job_search_header_widget.dart';
-import 'package:mighty_job/helper/app_color_helper.dart';
-import 'package:mighty_job/util/dimensions.dart';
-import 'package:mighty_job/util/images.dart';
-import 'package:mighty_job/util/styles.dart';
+import 'package:job/common/widget/custom_button.dart';
+import 'package:job/common/widget/custom_contaner.dart';
+import 'package:job/common/widget/custom_image.dart';
+import 'package:job/feature/frontend/presentation/widgets/industry/select_public_industry_widget.dart';
+import 'package:job/feature/frontend/presentation/widgets/job_listing_summery_widget.dart';
+import 'package:job/feature/frontend/presentation/widgets/job_search_header_widget.dart';
+import 'package:job/helper/app_color_helper.dart';
+import 'package:job/util/dimensions.dart';
+import 'package:job/util/images.dart';
+import 'package:job/util/styles.dart';
 import 'package:get/get.dart';
 
 class HeroSectionWidget extends StatelessWidget {

@@ -1,10 +1,10 @@
 
-import 'package:mighty_job/common/global_widget/custom_web_scroll_view_widget.dart';
-import 'package:mighty_job/common/widget/custom_app_bar.dart';
-import 'package:mighty_job/common/widget/custom_bottom_navigation_button.dart';
-import 'package:mighty_job/feature/industries/controller/industry_controller.dart';
-import 'package:mighty_job/feature/industries/presentation/screens/create_new_industry_screen.dart';
-import 'package:mighty_job/feature/industries/presentation/widgets/industry_list_widget.dart';
+import 'package:job/common/global_widget/custom_web_scroll_view_widget.dart';
+import 'package:job/common/widget/custom_app_bar.dart';
+import 'package:job/common/widget/custom_bottom_navigation_button.dart';
+import 'package:job/feature/industries/controller/industry_controller.dart';
+import 'package:job/feature/industries/presentation/screens/create_new_industry_screen.dart';
+import 'package:job/feature/industries/presentation/widgets/industry_list_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

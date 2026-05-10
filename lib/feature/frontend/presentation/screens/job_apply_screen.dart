@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mighty_job/common/layout/base_layout.dart';
+import 'package:job/common/layout/base_layout.dart';
 
 class JobApplyScreen extends StatefulWidget {
   const JobApplyScreen({super.key});

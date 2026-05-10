@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:shimmer/shimmer.dart';
 
-import 'package:mighty_job/common/widget/custom_contaner.dart';
-import 'package:mighty_job/util/dimensions.dart';
+import 'package:job/common/widget/custom_contaner.dart';
+import 'package:job/util/dimensions.dart';
 
 class PublicJobCategoryShimmer extends StatelessWidget {
   const PublicJobCategoryShimmer({super.key});

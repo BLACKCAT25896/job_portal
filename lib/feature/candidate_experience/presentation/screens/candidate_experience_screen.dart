@@ -1,11 +1,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/global_widget/custom_web_scroll_view_widget.dart';
-import 'package:mighty_job/common/widget/custom_app_bar.dart';
-import 'package:mighty_job/common/widget/custom_floating_button.dart';
-import 'package:mighty_job/feature/candidate_experience/presentation/screens/create_new_candidate_experience_screen.dart';
-import 'package:mighty_job/feature/candidate_experience/presentation/widgets/candidate_experience_list_widget.dart';
+import 'package:job/common/global_widget/custom_web_scroll_view_widget.dart';
+import 'package:job/common/widget/custom_app_bar.dart';
+import 'package:job/common/widget/custom_floating_button.dart';
+import 'package:job/feature/candidate_experience/presentation/screens/create_new_candidate_experience_screen.dart';
+import 'package:job/feature/candidate_experience/presentation/widgets/candidate_experience_list_widget.dart';
 
 class CandidateExperienceScreen extends StatefulWidget {
   const CandidateExperienceScreen({super.key});

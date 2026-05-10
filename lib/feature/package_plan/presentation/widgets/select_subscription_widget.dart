@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/widget/custom_generic_dropdown.dart';
-import 'package:mighty_job/common/widget/custom_title.dart';
-import 'package:mighty_job/feature/package_plan/controller/package_controller.dart';
-import 'package:mighty_job/feature/package_plan/domain/models/package_model.dart';
-import 'package:mighty_job/util/dimensions.dart';
+import 'package:job/common/widget/custom_generic_dropdown.dart';
+import 'package:job/common/widget/custom_title.dart';
+import 'package:job/feature/package_plan/controller/package_controller.dart';
+import 'package:job/feature/package_plan/domain/models/package_model.dart';
+import 'package:job/util/dimensions.dart';
 
 class SelectPackageWidget extends StatefulWidget {
   const SelectPackageWidget({super.key});
@@ -25,7 +25,7 @@ class _SelectPackageWidgetState extends State<SelectPackageWidget> {
   @override
   Widget build(BuildContext context) {
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-        const SizedBox(height: Dimensions.paddingSizeDefault),
+      SizedBox(height: Dimensions.paddingSizeDefault),
         const CustomTitle(title: "package"),
         GetBuilder<PackageController>(
           builder: (packageController) {

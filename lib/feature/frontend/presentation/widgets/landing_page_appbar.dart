@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/global_widget/header_logo_section.dart';
-import 'package:mighty_job/common/layout/navbar_menu_button_widget.dart';
-import 'package:mighty_job/common/widget/custom_contaner.dart';
-import 'package:mighty_job/common/widget/custom_image.dart';
-import 'package:mighty_job/common/widget/navbar_hover_dropdown.dart';
-import 'package:mighty_job/feature/frontend/controller/frontend_controller.dart';
-import 'package:mighty_job/feature/profile/presentation/widgets/login_option_widget.dart';
-import 'package:mighty_job/helper/route_helper.dart';
-import 'package:mighty_job/localization/language_model.dart';
-import 'package:mighty_job/localization/localization_controller.dart';
-import 'package:mighty_job/util/app_constants.dart';
-import 'package:mighty_job/util/dimensions.dart';
+import 'package:job/common/global_widget/header_logo_section.dart';
+import 'package:job/common/layout/navbar_menu_button_widget.dart';
+import 'package:job/common/widget/custom_contaner.dart';
+import 'package:job/common/widget/custom_image.dart';
+import 'package:job/common/widget/navbar_hover_dropdown.dart';
+import 'package:job/feature/frontend/controller/frontend_controller.dart';
+import 'package:job/feature/profile/presentation/widgets/login_option_widget.dart';
+import 'package:job/helper/route_helper.dart';
+import 'package:job/localization/language_model.dart';
+import 'package:job/localization/localization_controller.dart';
+import 'package:job/util/app_constants.dart';
+import 'package:job/util/dimensions.dart';
 
 
 class LandingPageAppBar extends StatefulWidget implements PreferredSizeWidget {

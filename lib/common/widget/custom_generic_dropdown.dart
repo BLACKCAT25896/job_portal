@@ -1,8 +1,8 @@
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/util/dimensions.dart';
-import 'package:mighty_job/util/styles.dart';
+import 'package:job/util/dimensions.dart';
+import 'package:job/util/styles.dart';
 
 /// Generic Dropdown
 class CustomGenericDropdown<T> extends StatelessWidget {
@@ -41,7 +41,7 @@ class CustomGenericDropdown<T> extends StatelessWidget {
         value: (items != null && selectedValue != null && items!.contains(selectedValue)) ? selectedValue : null,
         onChanged: onChanged,
         buttonStyleData: ButtonStyleData(height: 35,
-          padding: const EdgeInsets.only(right: Dimensions.paddingSizeSmall),
+          padding: EdgeInsets.only(right: Dimensions.paddingSizeSmall),
           decoration: BoxDecoration(borderRadius: BorderRadius.circular(5),
             border: border ? Border.all(color: Colors.black26) : null, color: Colors.transparent), elevation: 0),
         iconStyleData: const IconStyleData(

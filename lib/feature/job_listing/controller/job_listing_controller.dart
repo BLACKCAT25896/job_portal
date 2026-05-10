@@ -1,13 +1,13 @@
 
 import 'package:flutter/material.dart';
-import 'package:mighty_job/api_handle/api_checker.dart';
-import 'package:mighty_job/api_handle/global_api_response_model.dart';
-import 'package:mighty_job/common/widget/custom_snackbar.dart';
-import 'package:mighty_job/feature/job_listing/domain/models/benefit_model.dart';
-import 'package:mighty_job/feature/job_listing/domain/models/post_a_job_body.dart';
-import 'package:mighty_job/feature/job_listing/domain/models/job_listing_model.dart';
-import 'package:mighty_job/feature/job_listing/domain/models/step_model.dart';
-import 'package:mighty_job/feature/job_listing/domain/repository/job_listing_repository.dart';
+import 'package:job/api_handle/api_checker.dart';
+import 'package:job/api_handle/global_api_response_model.dart';
+import 'package:job/common/widget/custom_snackbar.dart';
+import 'package:job/feature/job_listing/domain/models/benefit_model.dart';
+import 'package:job/feature/job_listing/domain/models/post_a_job_body.dart';
+import 'package:job/feature/job_listing/domain/models/job_listing_model.dart';
+import 'package:job/feature/job_listing/domain/models/step_model.dart';
+import 'package:job/feature/job_listing/domain/repository/job_listing_repository.dart';
 import 'package:get/get.dart';
 
 class JobListingController extends GetxController implements GetxService{

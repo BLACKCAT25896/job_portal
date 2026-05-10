@@ -1,17 +1,17 @@
-import 'package:mighty_job/common/layout/custom_dialog_widget.dart';
-import 'package:mighty_job/common/widget/confirmation_dialog.dart';
-import 'package:mighty_job/common/widget/custom_contaner.dart';
-import 'package:mighty_job/common/widget/custom_text_item_widget.dart';
-import 'package:mighty_job/common/widget/edit_delete_popup_widget.dart';
-import 'package:mighty_job/common/widget/edit_delete_section.dart';
-import 'package:mighty_job/common/widget/numbering_widget.dart';
-import 'package:mighty_job/feature/post/controller/post_controller.dart';
-import 'package:mighty_job/feature/post/presentation/widgets/add_new_post_widget.dart';
-import 'package:mighty_job/feature/post/domain/models/post_model.dart';
-import 'package:mighty_job/feature/post/presentation/screens/create_new_post_screen.dart';
-import 'package:mighty_job/helper/responsive_helper.dart';
-import 'package:mighty_job/util/dimensions.dart';
-import 'package:mighty_job/util/styles.dart';
+import 'package:job/common/layout/custom_dialog_widget.dart';
+import 'package:job/common/widget/confirmation_dialog.dart';
+import 'package:job/common/widget/custom_contaner.dart';
+import 'package:job/common/widget/custom_text_item_widget.dart';
+import 'package:job/common/widget/edit_delete_popup_widget.dart';
+import 'package:job/common/widget/edit_delete_section.dart';
+import 'package:job/common/widget/numbering_widget.dart';
+import 'package:job/feature/post/controller/post_controller.dart';
+import 'package:job/feature/post/presentation/widgets/add_new_post_widget.dart';
+import 'package:job/feature/post/domain/models/post_model.dart';
+import 'package:job/feature/post/presentation/screens/create_new_post_screen.dart';
+import 'package:job/helper/responsive_helper.dart';
+import 'package:job/util/dimensions.dart';
+import 'package:job/util/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -41,7 +41,7 @@ class PostItemWidget extends StatelessWidget {
           })
     ]):
 
-    Padding(padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeDefault, vertical: 5),
+    Padding(padding: EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeDefault, vertical: 5),
       child: CustomContainer(borderRadius: 5, showShadow: false,
           child: Row(children: [
 

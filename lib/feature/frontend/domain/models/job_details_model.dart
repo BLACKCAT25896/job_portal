@@ -1,4 +1,4 @@
-import 'package:mighty_job/feature/job_listing/domain/models/job_listing_model.dart';
+import 'package:job/feature/job_listing/domain/models/job_listing_model.dart';
 
 class LandingJobDetailsModel {
   bool? status;

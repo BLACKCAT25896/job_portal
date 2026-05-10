@@ -1,11 +1,11 @@
-import 'package:mighty_job/helper/app_color_helper.dart';
+import 'package:job/helper/app_color_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/widget/custom_button.dart';
-import 'package:mighty_job/localization/localization_controller.dart';
-import 'package:mighty_job/util/app_constants.dart';
-import 'package:mighty_job/util/dimensions.dart';
-import 'package:mighty_job/util/styles.dart';
+import 'package:job/common/widget/custom_button.dart';
+import 'package:job/localization/localization_controller.dart';
+import 'package:job/util/app_constants.dart';
+import 'package:job/util/dimensions.dart';
+import 'package:job/util/styles.dart';
 
 class SelectLanguageBottomSheet extends StatefulWidget {
   const SelectLanguageBottomSheet({super.key});
@@ -28,7 +28,7 @@ class _SelectLanguageBottomSheetState extends State<SelectLanguageBottomSheet> {
         return SingleChildScrollView(
           child: Container(padding: const EdgeInsets.only(bottom: 40, top: 15),
             decoration: BoxDecoration(color: Theme.of(context).cardColor,
-                borderRadius: const BorderRadius.vertical(
+                borderRadius:  BorderRadius.vertical(
                     top: Radius.circular(Dimensions.paddingSizeDefault))),
             child: Column(mainAxisSize: MainAxisSize.min, children: [
               Container(width: 40,height: 5,decoration: BoxDecoration(
@@ -39,7 +39,7 @@ class _SelectLanguageBottomSheetState extends State<SelectLanguageBottomSheet> {
               Text("select_language".tr, style: textBold.copyWith(
                   fontSize: Dimensions.fontSizeLarge),),
 
-              Padding(padding: const EdgeInsets.only(top: Dimensions.paddingSizeSmall,
+              Padding(padding: EdgeInsets.only(top: Dimensions.paddingSizeSmall,
                   bottom: Dimensions.paddingSizeLarge),
                 child: Text('choose_your_language_to_proceed'.tr),),
 
@@ -53,7 +53,7 @@ class _SelectLanguageBottomSheetState extends State<SelectLanguageBottomSheet> {
                         selectedIndex = index;
                       });
                     },
-                    child: Padding(padding: const EdgeInsets.fromLTRB(
+                    child: Padding(padding: EdgeInsets.fromLTRB(
                         Dimensions.paddingSizeDefault, 0,Dimensions.paddingSizeDefault,
                         Dimensions.paddingSizeSmall),
                       child: Container(decoration: BoxDecoration(
@@ -61,14 +61,14 @@ class _SelectLanguageBottomSheetState extends State<SelectLanguageBottomSheet> {
                         color: selectedIndex == index? systemPrimaryColor().withValues(alpha:.1):
                         Theme.of(context).cardColor),
                         child: Padding(
-                          padding: const EdgeInsets.symmetric(
+                          padding: EdgeInsets.symmetric(
                               horizontal: Dimensions.paddingSizeDefault,
                               vertical: Dimensions.paddingSizeSmall),
                           child: Row(children: [
                           SizedBox(width: 25,
                               child: Image.asset(AppConstants.languages[index].imageUrl)),
 
-                            Padding(padding: const EdgeInsets.symmetric(
+                            Padding(padding: EdgeInsets.symmetric(
                                 horizontal: Dimensions.paddingSizeSmall),
                               child: Text(AppConstants.languages[index].languageName))
 
@@ -77,7 +77,7 @@ class _SelectLanguageBottomSheetState extends State<SelectLanguageBottomSheet> {
                   );
               }),
 
-              Padding(padding: const EdgeInsets.fromLTRB(
+              Padding(padding: EdgeInsets.fromLTRB(
                   Dimensions.paddingSizeSmall, Dimensions.paddingSizeSmall,
                   Dimensions.paddingSizeSmall,0),
                 child: CustomButton(text: 'select'.tr, onTap: (){

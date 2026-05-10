@@ -1,12 +1,12 @@
-import 'package:mighty_job/common/layout/custom_dialog_widget.dart';
-import 'package:mighty_job/common/layout/list_layout_widget.dart';
-import 'package:mighty_job/common/widget/custom_search.dart';
-import 'package:mighty_job/common/widget/custom_snackbar.dart';
-import 'package:mighty_job/feature/salary_currency/controller/salary_currency_controller.dart';
-import 'package:mighty_job/feature/salary_currency/domain/models/salary_currency_model.dart';
-import 'package:mighty_job/feature/salary_currency/presentation/widgets/add_new_salary_currency_widget.dart';
-import 'package:mighty_job/feature/salary_currency/presentation/widgets/salary_currency_item.dart';
-import 'package:mighty_job/util/dimensions.dart';
+import 'package:job/common/layout/custom_dialog_widget.dart';
+import 'package:job/common/layout/list_layout_widget.dart';
+import 'package:job/common/widget/custom_search.dart';
+import 'package:job/common/widget/custom_snackbar.dart';
+import 'package:job/feature/salary_currency/controller/salary_currency_controller.dart';
+import 'package:job/feature/salary_currency/domain/models/salary_currency_model.dart';
+import 'package:job/feature/salary_currency/presentation/widgets/add_new_salary_currency_widget.dart';
+import 'package:job/feature/salary_currency/presentation/widgets/salary_currency_item.dart';
+import 'package:job/util/dimensions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -32,7 +32,7 @@ class _SalaryCurrencyListWidgetState extends State<SalaryCurrencyListWidget> {
         final data = model?.data;
 
         return GenericListSection<SalaryCurrencyItem>(
-          topWidget: widget.fromFilter? SizedBox() : Padding(padding: const EdgeInsets.fromLTRB(Dimensions.paddingSizeDefault, 0,
+          topWidget: widget.fromFilter? SizedBox() : Padding(padding: EdgeInsets.fromLTRB(Dimensions.paddingSizeDefault, 0,
                 Dimensions.paddingSizeDefault,Dimensions.paddingSizeDefault),
             child: CustomSearch(hintText: 'search'.tr, searchController: searchController,
               onSearch: () async {

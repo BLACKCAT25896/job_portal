@@ -1,18 +1,18 @@
-import 'package:mighty_job/common/widget/responsive_grid_widget.dart';
-import 'package:mighty_job/feature/role_and_permission/role/domain/models/role_model.dart';
-import 'package:mighty_job/util/app_constants.dart';
+import 'package:job/common/widget/responsive_grid_widget.dart';
+import 'package:job/feature/role_and_permission/role/domain/models/role_model.dart';
+import 'package:job/util/app_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/widget/custom_button.dart';
-import 'package:mighty_job/common/widget/custom_snackbar.dart';
-import 'package:mighty_job/common/widget/custom_text_field.dart';
-import 'package:mighty_job/common/widget/image_picker_widget.dart';
-import 'package:mighty_job/feature/role_and_permission/role/controller/role_controller.dart';
-import 'package:mighty_job/feature/role_and_permission/role/presentation/widgets/select_roll_widget.dart';
-import 'package:mighty_job/feature/role_and_permission/user/controller/user_controller.dart';
-import 'package:mighty_job/feature/role_and_permission/user/domain/models/user_body.dart';
-import 'package:mighty_job/feature/role_and_permission/user/domain/models/user_model.dart';
-import 'package:mighty_job/util/dimensions.dart';
+import 'package:job/common/widget/custom_button.dart';
+import 'package:job/common/widget/custom_snackbar.dart';
+import 'package:job/common/widget/custom_text_field.dart';
+import 'package:job/common/widget/image_picker_widget.dart';
+import 'package:job/feature/role_and_permission/role/controller/role_controller.dart';
+import 'package:job/feature/role_and_permission/role/presentation/widgets/select_roll_widget.dart';
+import 'package:job/feature/role_and_permission/user/controller/user_controller.dart';
+import 'package:job/feature/role_and_permission/user/domain/models/user_body.dart';
+import 'package:job/feature/role_and_permission/user/domain/models/user_model.dart';
+import 'package:job/util/dimensions.dart';
 
 class CreateNewUserWidget extends StatefulWidget {
   final UserItem? userItem;
@@ -94,10 +94,10 @@ class _CreateNewUserWidgetState extends State<CreateNewUserWidget> {
 
 
 
-            userController.isLoading? const Padding(padding: EdgeInsets.all(Dimensions.paddingSizeDefault),
+            userController.isLoading? Padding(padding: EdgeInsets.all(Dimensions.paddingSizeDefault),
               child: Center(child: CircularProgressIndicator())):
 
-            Padding(padding: const EdgeInsets.symmetric(vertical: Dimensions.paddingSizeDefault),
+            Padding(padding: EdgeInsets.symmetric(vertical: Dimensions.paddingSizeDefault),
               child: CustomButton(onTap: (){
                 String firstName = firstNameController.text.trim();
                 String lastName = lastNameController.text.trim();

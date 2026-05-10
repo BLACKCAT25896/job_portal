@@ -11,7 +11,7 @@ if (keystorePropertiesFile.exists()) {
     keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
 }
 android {
-    namespace = "com.mighty_job.fuedevs"
+    namespace = "com.job.fuedevs"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
@@ -26,7 +26,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.mighty_job.fuedevs"
+        applicationId = "com.job.fuedevs"
         minSdkVersion = flutter.minSdkVersion
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode

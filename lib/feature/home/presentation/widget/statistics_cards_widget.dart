@@ -1,15 +1,15 @@
-import 'package:mighty_job/common/widget/responsive_grid_widget.dart';
+import 'package:job/common/widget/responsive_grid_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/widget/custom_contaner.dart';
-import 'package:mighty_job/common/widget/custom_image.dart';
-import 'package:mighty_job/feature/report_management/domain/model/dashboard_report_data_model.dart';
-import 'package:mighty_job/feature/report_management/logic/report_controller.dart';
-import 'package:mighty_job/helper/price_converter.dart';
-import 'package:mighty_job/helper/responsive_helper.dart';
-import 'package:mighty_job/util/dimensions.dart';
-import 'package:mighty_job/util/images.dart';
-import 'package:mighty_job/util/styles.dart';
+import 'package:job/common/widget/custom_contaner.dart';
+import 'package:job/common/widget/custom_image.dart';
+import 'package:job/feature/report_management/domain/model/dashboard_report_data_model.dart';
+import 'package:job/feature/report_management/logic/report_controller.dart';
+import 'package:job/helper/price_converter.dart';
+import 'package:job/helper/responsive_helper.dart';
+import 'package:job/util/dimensions.dart';
+import 'package:job/util/images.dart';
+import 'package:job/util/styles.dart';
 
 class StatisticsCardsWidget extends StatelessWidget {
   const StatisticsCardsWidget({super.key});
@@ -24,7 +24,7 @@ class StatisticsCardsWidget extends StatelessWidget {
 
 
 
-        return Padding(padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeDefault),
+        return Padding(padding: EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeDefault),
           child: CustomContainer(showShadow: false, color: isDesktop?
           Theme.of(context).cardColor: Colors.transparent,
             child: Column(spacing: Dimensions.fontSizeDefault,

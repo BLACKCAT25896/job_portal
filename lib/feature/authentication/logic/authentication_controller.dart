@@ -2,14 +2,14 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/api_handle/api_checker.dart';
-import 'package:mighty_job/feature/authentication/domain/model/create_candidate_account_body.dart';
-import 'package:mighty_job/feature/authentication/domain/model/create_company_account_body.dart';
-import 'package:mighty_job/feature/authentication/domain/model/user_role_permission_model.dart';
-import 'package:mighty_job/feature/authentication/domain/repository/authentication_repository.dart';
-import 'package:mighty_job/feature/authentication/presentation/widgets/gender_selection_widget.dart';
-import 'package:mighty_job/feature/profile/logic/profile_controller.dart';
-import 'package:mighty_job/helper/route_helper.dart';
+import 'package:job/api_handle/api_checker.dart';
+import 'package:job/feature/authentication/domain/model/create_candidate_account_body.dart';
+import 'package:job/feature/authentication/domain/model/create_company_account_body.dart';
+import 'package:job/feature/authentication/domain/model/user_role_permission_model.dart';
+import 'package:job/feature/authentication/domain/repository/authentication_repository.dart';
+import 'package:job/feature/authentication/presentation/widgets/gender_selection_widget.dart';
+import 'package:job/feature/profile/logic/profile_controller.dart';
+import 'package:job/helper/route_helper.dart';
 
 class AuthenticationController extends GetxController implements GetxService{
   final AuthenticationRepository authenticationRepository;

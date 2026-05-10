@@ -8,10 +8,10 @@ import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:get/get.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:http/http.dart' as http;
-import 'package:mighty_job/common/model/notification_body.dart';
-import 'package:mighty_job/feature/authentication/logic/authentication_controller.dart';
-import 'package:mighty_job/feature/notification/widget/notifiation_popup_dialog.dart';
-import 'package:mighty_job/util/app_constants.dart';
+import 'package:job/common/model/notification_body.dart';
+import 'package:job/feature/authentication/logic/authentication_controller.dart';
+import 'package:job/feature/notification/widget/notifiation_popup_dialog.dart';
+import 'package:job/util/app_constants.dart';
 
 class NotificationHelper {
 
@@ -54,7 +54,7 @@ class NotificationHelper {
           //   Get.find<ChatController>().getMessages(
           //     1, NotificationBody(
           //     notificationType: NotificationType.message, adminId: message.data['sender_type'] == AppConstants.admin ? 0 : null,
-          //     mighty_jobId: message.data['sender_type'] == AppConstants.vendor ? 0 : null,
+          //     jobId: message.data['sender_type'] == AppConstants.vendor ? 0 : null,
           //     deliverymanId: message.data['sender_type'] == AppConstants.deliveryMan ? 0 : null,
           //   ),
           //     null, int.parse(message.data['conversation_id'].toString()),

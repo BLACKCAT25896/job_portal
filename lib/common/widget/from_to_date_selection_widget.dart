@@ -1,8 +1,8 @@
-import 'package:mighty_job/common/controller/date_picker_controller.dart';
-import 'package:mighty_job/common/widget/custom_button.dart';
-import 'package:mighty_job/common/widget/custom_text_field.dart';
-import 'package:mighty_job/helper/date_converter.dart';
-import 'package:mighty_job/util/dimensions.dart';
+import 'package:job/common/controller/date_picker_controller.dart';
+import 'package:job/common/widget/custom_button.dart';
+import 'package:job/common/widget/custom_text_field.dart';
+import 'package:job/helper/date_converter.dart';
+import 'package:job/util/dimensions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

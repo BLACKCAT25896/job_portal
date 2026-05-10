@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/layout/custom_dialog_widget.dart';
-import 'package:mighty_job/common/widget/confirmation_dialog.dart';
-import 'package:mighty_job/common/widget/custom_item_text_widget.dart';
-import 'package:mighty_job/common/widget/edit_delete_section.dart';
-import 'package:mighty_job/common/widget/numbering_widget.dart';
-import 'package:mighty_job/feature/package_plan/controller/package_controller.dart';
-import 'package:mighty_job/feature/package_plan/domain/models/package_model.dart';
-import 'package:mighty_job/feature/package_plan/presentation/screens/create_new_package_screen.dart';
-import 'package:mighty_job/util/dimensions.dart';
+import 'package:job/common/layout/custom_dialog_widget.dart';
+import 'package:job/common/widget/confirmation_dialog.dart';
+import 'package:job/common/widget/custom_item_text_widget.dart';
+import 'package:job/common/widget/edit_delete_section.dart';
+import 'package:job/common/widget/numbering_widget.dart';
+import 'package:job/feature/package_plan/controller/package_controller.dart';
+import 'package:job/feature/package_plan/domain/models/package_model.dart';
+import 'package:job/feature/package_plan/presentation/screens/create_new_package_screen.dart';
+import 'package:job/util/dimensions.dart';
 
 class PackageItemWidget extends StatelessWidget {
   final PackageItem? packageItem;

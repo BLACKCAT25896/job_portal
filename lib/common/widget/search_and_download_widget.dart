@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/widget/custom_button.dart';
-import 'package:mighty_job/common/widget/custom_contaner.dart';
-import 'package:mighty_job/util/dimensions.dart';
-import 'package:mighty_job/util/styles.dart';
+import 'package:job/common/widget/custom_button.dart';
+import 'package:job/common/widget/custom_contaner.dart';
+import 'package:job/util/dimensions.dart';
+import 'package:job/util/styles.dart';
 
 class SearchAndDownloadWidget extends StatelessWidget {
   final Function()? onTap;
@@ -13,7 +13,7 @@ class SearchAndDownloadWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Align(alignment : Alignment.centerRight,
-      child: Padding(padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeDefault),
+      child: Padding(padding: EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeDefault),
         child: Row(mainAxisSize: MainAxisSize.min, children: [
 
           if(download != null)

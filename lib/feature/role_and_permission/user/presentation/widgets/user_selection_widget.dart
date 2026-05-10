@@ -1,10 +1,10 @@
-import 'package:mighty_job/util/styles.dart';
+import 'package:job/util/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/widget/dropdown_with_search_widget.dart';
-import 'package:mighty_job/feature/role_and_permission/user/controller/user_controller.dart';
-import 'package:mighty_job/feature/role_and_permission/user/domain/models/user_model.dart';
-import 'package:mighty_job/feature/role_and_permission/user/presentation/widgets/user_list_for_filter.dart';
+import 'package:job/common/widget/dropdown_with_search_widget.dart';
+import 'package:job/feature/role_and_permission/user/controller/user_controller.dart';
+import 'package:job/feature/role_and_permission/user/domain/models/user_model.dart';
+import 'package:job/feature/role_and_permission/user/presentation/widgets/user_list_for_filter.dart';
 
 class SelectUserWidget extends StatefulWidget {
   final String userType;

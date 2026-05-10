@@ -2,9 +2,9 @@
 
 
 import 'package:flutter/material.dart';
-import 'package:mighty_job/common/widget/text_hover.dart';
-import 'package:mighty_job/util/dimensions.dart';
-import 'package:mighty_job/util/styles.dart';
+import 'package:job/common/widget/text_hover.dart';
+import 'package:job/util/dimensions.dart';
+import 'package:job/util/styles.dart';
 
 class MenuButtonWeb extends StatelessWidget {
   final String? title;
@@ -29,7 +29,7 @@ class MenuButtonWeb extends StatelessWidget {
             highlightColor: Colors.transparent,
             borderRadius: BorderRadius.circular(Dimensions.radiusSmall),
             onTap: onTap,
-            child: Padding(padding: const EdgeInsets.symmetric(
+            child: Padding(padding: EdgeInsets.symmetric(
                 vertical: Dimensions.paddingSizeSmall, horizontal: Dimensions.paddingSizeDefault + 4),
               child: Column(mainAxisSize: MainAxisSize.min, children: [
                 Text(title!, style: landingMediumFont.copyWith(

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/layout/custom_dialog_widget.dart';
-import 'package:mighty_job/common/layout/list_layout_widget.dart';
-import 'package:mighty_job/feature/package_plan/controller/package_controller.dart';
-import 'package:mighty_job/feature/package_plan/domain/models/package_model.dart';
-import 'package:mighty_job/feature/package_plan/presentation/screens/create_new_package_screen.dart';
-import 'package:mighty_job/feature/package_plan/presentation/widgets/package_item_widget.dart';
+import 'package:job/common/layout/custom_dialog_widget.dart';
+import 'package:job/common/layout/list_layout_widget.dart';
+import 'package:job/feature/package_plan/controller/package_controller.dart';
+import 'package:job/feature/package_plan/domain/models/package_model.dart';
+import 'package:job/feature/package_plan/presentation/screens/create_new_package_screen.dart';
+import 'package:job/feature/package_plan/presentation/widgets/package_item_widget.dart';
 
 class PackageListWidget extends StatelessWidget {
   final ScrollController scrollController;

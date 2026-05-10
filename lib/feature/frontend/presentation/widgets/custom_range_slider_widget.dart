@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mighty_job/util/dimensions.dart';
-import 'package:mighty_job/util/styles.dart';
+import 'package:job/util/dimensions.dart';
+import 'package:job/util/styles.dart';
 
 class CustomRangeSlider extends StatelessWidget {
   final RangeValues values;

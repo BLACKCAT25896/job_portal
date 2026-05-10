@@ -137,12 +137,12 @@ class Images {
 
 
   //...........................................................................................
-  // mighty_job Management System Icons
+  // job Management System Icons
   static const String logoWithName = 'assets/image/common/logo_with_name.png';
   static const String sms = 'assets/image/common/sms.png';
   static const String theme = 'assets/image/common/theme.png';
 
-  // Core mighty_job Operations
+  // Core job Operations
   static const String income = 'assets/image/common/income.png';
 
 

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/widget/custom_title.dart';
-import 'package:mighty_job/feature/payment_method/logic/payment_method_controller.dart';
-import 'package:mighty_job/util/dimensions.dart';
-import 'package:mighty_job/common/widget/custom_generic_dropdown.dart';
+import 'package:job/common/widget/custom_title.dart';
+import 'package:job/feature/payment_method/logic/payment_method_controller.dart';
+import 'package:job/util/dimensions.dart';
+import 'package:job/common/widget/custom_generic_dropdown.dart';
 
 class SelectPaymentMethodWidget extends StatefulWidget {
   const SelectPaymentMethodWidget({super.key});
@@ -16,7 +16,7 @@ class _SelectPaymentMethodWidgetState extends State<SelectPaymentMethodWidget> {
   @override
   Widget build(BuildContext context) {
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-        Padding(padding: const EdgeInsets.symmetric(vertical: Dimensions.paddingSizeSmall),
+        Padding(padding: EdgeInsets.symmetric(vertical: Dimensions.paddingSizeSmall),
           child: CustomTitle(title: "payment_method",
             leftPadding: 0, fontSize: Dimensions.fontSizeDefault)),
 

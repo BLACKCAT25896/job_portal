@@ -1,4 +1,4 @@
-import 'package:mighty_job/feature/cms_management/cms_settings/controller/system_settngs_controller.dart';
+import 'package:job/feature/cms_management/cms_settings/controller/system_settngs_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

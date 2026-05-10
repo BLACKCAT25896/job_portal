@@ -1,6 +1,6 @@
-import 'package:mighty_job/common/model/popup_menu_model.dart';
-import 'package:mighty_job/util/dimensions.dart';
-import 'package:mighty_job/util/styles.dart';
+import 'package:job/common/model/popup_menu_model.dart';
+import 'package:job/util/dimensions.dart';
+import 'package:job/util/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -34,10 +34,10 @@ class _CustomPopupMenuState extends State<CustomPopupMenu> {
       items: widget.menuItems.map((option) {
         return PopupMenuItem<PopupMenuModel>(value: option, height: 35,
           child: Row(children: [
-              const SizedBox(width: Dimensions.paddingSizeExtraSmall),
+            SizedBox(width: Dimensions.paddingSizeExtraSmall),
               Icon(option.icon, size: Dimensions.fontSizeLarge,
                 color: Theme.of(context).iconTheme.color),
-              const SizedBox(width: Dimensions.paddingSizeSmall),
+            SizedBox(width: Dimensions.paddingSizeSmall),
               Text(option.title.tr, style: textRegular.copyWith(fontSize: Dimensions.fontSizeSmall,
                   color: Theme.of(context).textTheme.bodyMedium?.color)),
             ]),
@@ -56,7 +56,7 @@ class _CustomPopupMenuState extends State<CustomPopupMenu> {
   Widget build(BuildContext context) {
     Widget trigger = Padding(
       key: _key,
-      padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeExtraSmall),
+      padding: EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeExtraSmall),
       child: widget.child ??
           Icon(Icons.more_vert_rounded, color: Theme.of(context).hintColor));
 

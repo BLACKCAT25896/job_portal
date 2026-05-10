@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/controller/theme_controller.dart';
-import 'package:mighty_job/util/dimensions.dart';
-import 'package:mighty_job/util/images.dart';
+import 'package:job/common/controller/theme_controller.dart';
+import 'package:job/util/dimensions.dart';
+import 'package:job/util/images.dart';
 
 class FancyDayNightSwitch extends StatefulWidget {
   final bool value;
@@ -52,7 +52,7 @@ class _FancyDayNightSwitchState extends State<FancyDayNightSwitch>
   Widget build(BuildContext context) {
     return GetBuilder<ThemeController>(
       builder: (themeController) {
-        return Padding(padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeDefault),
+        return Padding(padding:  EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeDefault),
           child: GestureDetector(onTap: () => themeController.toggleTheme(),
             child: AnimatedBuilder(animation: _animation,
               builder: (context, _) {

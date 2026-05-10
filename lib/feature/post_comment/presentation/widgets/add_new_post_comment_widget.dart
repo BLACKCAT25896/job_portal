@@ -1,12 +1,12 @@
-import 'package:mighty_job/common/widget/active_inactive_widget.dart';
-import 'package:mighty_job/common/widget/custom_button.dart';
-import 'package:mighty_job/common/widget/custom_snackbar.dart';
-import 'package:mighty_job/common/widget/custom_text_field.dart';
-import 'package:mighty_job/feature/post_comment/controller/post_comment_controller.dart';
-import 'package:mighty_job/feature/post_comment/domain/models/post_comment_body.dart';
-import 'package:mighty_job/feature/post_comment/domain/models/post_comment_model.dart';
-import 'package:mighty_job/util/dimensions.dart';
-import 'package:mighty_job/util/styles.dart';
+import 'package:job/common/widget/active_inactive_widget.dart';
+import 'package:job/common/widget/custom_button.dart';
+import 'package:job/common/widget/custom_snackbar.dart';
+import 'package:job/common/widget/custom_text_field.dart';
+import 'package:job/feature/post_comment/controller/post_comment_controller.dart';
+import 'package:job/feature/post_comment/domain/models/post_comment_body.dart';
+import 'package:job/feature/post_comment/domain/models/post_comment_model.dart';
+import 'package:job/util/dimensions.dart';
+import 'package:job/util/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -61,7 +61,7 @@ class _AddNewPostCommentWidgetState extends State<AddNewPostCommentWidget> {
 
         ]),
 
-        Padding(padding: const EdgeInsets.symmetric(vertical: Dimensions.paddingSizeDefault),
+        Padding(padding: EdgeInsets.symmetric(vertical: Dimensions.paddingSizeDefault),
             child: postCommentController.isLoading? const CircularProgressIndicator() :
 
             CustomButton(onTap: (){

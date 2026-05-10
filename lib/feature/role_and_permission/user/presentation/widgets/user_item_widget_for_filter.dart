@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:mighty_job/common/widget/custom_text_item_widget.dart';
-import 'package:mighty_job/common/widget/numbering_widget.dart';
-import 'package:mighty_job/feature/role_and_permission/user/domain/models/user_model.dart';
-import 'package:mighty_job/util/dimensions.dart';
+import 'package:job/common/widget/custom_text_item_widget.dart';
+import 'package:job/common/widget/numbering_widget.dart';
+import 'package:job/feature/role_and_permission/user/domain/models/user_model.dart';
+import 'package:job/util/dimensions.dart';
 
 class UserItemWidgetForFilter extends StatelessWidget {
   final UserItem? userItem;

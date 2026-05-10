@@ -1,11 +1,11 @@
 {
-  "name": "Mighty mighty_job",
-  "short_name": "Mighty mighty_job",
+  "name": "Mighty job",
+  "short_name": "Mighty job",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#FF5722",
   "theme_color": "#FF5722",
-  "description": "Complete mighty_job Management System - Manage orders, inventory, staff, and analytics all in one powerful platform.",
+  "description": "Complete job Management System - Manage orders, inventory, staff, and analytics all in one powerful platform.",
   "orientation": "portrait-primary",
   "prefer_related_applications": false,
   "icons": [

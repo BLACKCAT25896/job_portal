@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/feature/cms_management/cms_settings/controller/system_settngs_controller.dart';
-import 'package:mighty_job/feature/cms_management/cms_settings/presentation/widgets/heading_type_button_widget.dart';
-import 'package:mighty_job/util/dimensions.dart';
+import 'package:job/feature/cms_management/cms_settings/controller/system_settngs_controller.dart';
+import 'package:job/feature/cms_management/cms_settings/presentation/widgets/heading_type_button_widget.dart';
+import 'package:job/util/dimensions.dart';
 
 class SystemSettingsHeadingSectionWidget extends StatelessWidget {
   const SystemSettingsHeadingSectionWidget({super.key});
@@ -13,7 +13,7 @@ class SystemSettingsHeadingSectionWidget extends StatelessWidget {
 
       final List<String> titles = ["general_settings", "logo", "theme_color",];
 
-      return Padding(padding: const EdgeInsets.all(Dimensions.paddingSizeSmall),
+      return Padding(padding: EdgeInsets.all(Dimensions.paddingSizeSmall),
         child: SizedBox(height: 35,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,

@@ -259,6 +259,21 @@
   "education_qualification": "Education Qualification",
   "degree": "Degree",
   "university": "Gender",
-  "education_detail": "Education Details"
+  "education_detail": "Education Details",
+  "manage_profile": "Manage Profile",
+  "customized_cv":"Customized CV",
+  "invitation": "Invitation",
+  "my_activity": "My Activity",
+  "my_personal_hiring": "My Personal Hiring",
+  "account_settings": "Account Settings",
+  "general_interview": "General Interview",
+  "online_test": "Online Test",
+  "applied_jobs": "Applied Jobs",
+  "emailed_cv": "Emailed CV",
+  "shortlisted_job": "Shortlisted Job",
+  "transaction_overview": "Transaction Overview",
+  "post_new_job": "Post New Job",
+  "sign_out": "Sign Out",
+  "help": "Help"
 
 }

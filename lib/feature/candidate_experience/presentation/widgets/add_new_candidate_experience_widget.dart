@@ -1,18 +1,18 @@
-import 'package:mighty_job/common/controller/date_picker_controller.dart';
-import 'package:mighty_job/common/widget/custom_checkbox.dart';
-import 'package:mighty_job/common/widget/date_selection_widget.dart';
-import 'package:mighty_job/common/widget/responsive_grid_widget.dart';
-import 'package:mighty_job/feature/candidate/controller/candidate_controller.dart';
-import 'package:mighty_job/feature/candidate/presentation/widgets/candidate_selection_widget.dart';
-import 'package:mighty_job/feature/candidate_experience/controller/candidate_experience_controller.dart';
-import 'package:mighty_job/feature/candidate_experience/domain/models/candidate_experience_body.dart';
-import 'package:mighty_job/feature/candidate_experience/domain/models/candidate_experience_model.dart';
+import 'package:job/common/controller/date_picker_controller.dart';
+import 'package:job/common/widget/custom_checkbox.dart';
+import 'package:job/common/widget/date_selection_widget.dart';
+import 'package:job/common/widget/responsive_grid_widget.dart';
+import 'package:job/feature/candidate/controller/candidate_controller.dart';
+import 'package:job/feature/candidate/presentation/widgets/candidate_selection_widget.dart';
+import 'package:job/feature/candidate_experience/controller/candidate_experience_controller.dart';
+import 'package:job/feature/candidate_experience/domain/models/candidate_experience_body.dart';
+import 'package:job/feature/candidate_experience/domain/models/candidate_experience_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/widget/custom_button.dart';
-import 'package:mighty_job/common/widget/custom_snackbar.dart';
-import 'package:mighty_job/common/widget/custom_text_field.dart';
-import 'package:mighty_job/util/dimensions.dart';
+import 'package:job/common/widget/custom_button.dart';
+import 'package:job/common/widget/custom_snackbar.dart';
+import 'package:job/common/widget/custom_text_field.dart';
+import 'package:job/util/dimensions.dart';
 
 class AddNewCandidateExperienceWidget extends StatefulWidget {
   final CandidateExperienceItem? candidateExperienceItem;
@@ -70,10 +70,10 @@ class _AddNewCandidateExperienceWidgetState extends State<AddNewCandidateExperie
 
 
 
-            candidateExperienceController.isLoading? const Padding(padding: EdgeInsets.all(Dimensions.paddingSizeDefault),
+            candidateExperienceController.isLoading? Padding(padding: EdgeInsets.all(Dimensions.paddingSizeDefault),
                 child: Center(child: CircularProgressIndicator())):
 
-            Padding(padding: const EdgeInsets.symmetric(vertical: Dimensions.paddingSizeDefault),
+            Padding(padding: EdgeInsets.symmetric(vertical: Dimensions.paddingSizeDefault),
                 child: CustomButton(onTap: (){
                   int? candidateId = Get.find<CandidateController>().selectedCandidateItem?.id;
                   String title = titleController.text.trim();

@@ -1,7 +1,7 @@
 
-import 'package:mighty_job/common/widget/custom_contaner.dart';
-import 'package:mighty_job/util/dimensions.dart';
-import 'package:mighty_job/util/styles.dart';
+import 'package:job/common/widget/custom_contaner.dart';
+import 'package:job/util/dimensions.dart';
+import 'package:job/util/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_colorpicker/flutter_colorpicker.dart';
@@ -137,7 +137,7 @@ class _ColorPickerFieldState extends State<ColorPickerField> {
   @override
   Widget build(BuildContext context) {
     final border = BorderRadius.circular(10);
-    return Padding(padding: const EdgeInsets.symmetric(vertical: Dimensions.paddingSizeDefault),
+    return Padding(padding: EdgeInsets.symmetric(vertical: Dimensions.paddingSizeDefault),
       child: InkWell(onTap: _openPicker, borderRadius: border,
         child: CustomContainer(showShadow: false,border: Border.all(color: Theme.of(context).hintColor, width: .5),
           borderRadius: Dimensions.paddingSizeExtraSmall,

@@ -1,12 +1,12 @@
-import 'package:mighty_job/helper/app_color_helper.dart';
+import 'package:job/helper/app_color_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/widget/custom_button.dart';
-import 'package:mighty_job/common/widget/custom_snackbar.dart';
-import 'package:mighty_job/common/widget/custom_text_field.dart';
-import 'package:mighty_job/feature/support_ticket/controllers/support_ticket_controller.dart';
-import 'package:mighty_job/feature/support_ticket/domain/models/support_ticket_body.dart';
-import 'package:mighty_job/util/dimensions.dart';
+import 'package:job/common/widget/custom_button.dart';
+import 'package:job/common/widget/custom_snackbar.dart';
+import 'package:job/common/widget/custom_text_field.dart';
+import 'package:job/feature/support_ticket/controllers/support_ticket_controller.dart';
+import 'package:job/feature/support_ticket/domain/models/support_ticket_body.dart';
+import 'package:job/util/dimensions.dart';
 
 class AddTicketWidget extends StatefulWidget {
   const AddTicketWidget({super.key});
@@ -44,7 +44,8 @@ class _AddTicketWidgetState extends State<AddTicketWidget> {
             controller: _descriptionController,
             title: 'description'.tr,
             maxLines: 5),
-        const SizedBox(height: Dimensions.paddingSizeExtraLarge),
+
+        SizedBox(height: Dimensions.paddingSizeExtraLarge),
 
         GetBuilder<SupportTicketController>(builder: (supportTicketController) {
           return supportTicketController.isLoading ?
@@ -54,7 +55,7 @@ class _AddTicketWidgetState extends State<AddTicketWidget> {
           ]):
 
           Container(color: Theme.of(context).cardColor,
-            child: Padding(padding: const EdgeInsets.symmetric(
+            child: Padding(padding: EdgeInsets.symmetric(
                 horizontal : Dimensions.paddingSizeDefault,
                 vertical: Dimensions.paddingSizeSmall),
               child: CustomButton(text: "confirm".tr, onTap: () {

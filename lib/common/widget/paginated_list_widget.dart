@@ -1,9 +1,9 @@
-import 'package:mighty_job/common/widget/custom_contaner.dart';
-import 'package:mighty_job/helper/app_color_helper.dart';
+import 'package:job/common/widget/custom_contaner.dart';
+import 'package:job/helper/app_color_helper.dart';
 import 'package:flutter/material.dart';
-import 'package:mighty_job/helper/responsive_helper.dart';
-import 'package:mighty_job/util/dimensions.dart';
-import 'package:mighty_job/util/styles.dart';
+import 'package:job/helper/responsive_helper.dart';
+import 'package:job/util/dimensions.dart';
+import 'package:job/util/styles.dart';
 import 'package:get/get.dart';
 
 class PaginatedListWidget extends StatefulWidget {
@@ -186,7 +186,7 @@ class _PaginatedListWidgetState extends State<PaginatedListWidget> {
 
         if (widget.landing == true)
           Padding(
-            padding: const EdgeInsets.all(Dimensions.paddingSizeSmall),
+            padding: EdgeInsets.all(Dimensions.paddingSizeSmall),
             child: _isLoading
                 ? const CircularProgressIndicator()
                 : (_offset! * (widget.limit ?? 10) <
@@ -203,11 +203,11 @@ class _PaginatedListWidgetState extends State<PaginatedListWidget> {
         else if (ResponsiveHelper.isDesktop(context) &&
             widget.totalSize != null)
           Padding(
-            padding: const EdgeInsets.all(Dimensions.paddingSizeSmall),
+            padding: EdgeInsets.all(Dimensions.paddingSizeSmall),
             child: _buildDesktopPagination(context),
           )
         else if (_isLoading)
-            const Padding(
+          Padding(
               padding: EdgeInsets.all(Dimensions.paddingSizeSmall),
               child: CircularProgressIndicator(),
             ),

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/widget/custom_title.dart';
-import 'package:mighty_job/common/widget/dropdown_with_search_widget.dart';
-import 'package:mighty_job/feature/job_category/controller/job_category_controller.dart';
-import 'package:mighty_job/feature/job_category/domain/models/job_category_model.dart';
-import 'package:mighty_job/feature/job_category/presentation/widgets/job_category_list_widget.dart';
-import 'package:mighty_job/util/dimensions.dart';
+import 'package:job/common/widget/custom_title.dart';
+import 'package:job/common/widget/dropdown_with_search_widget.dart';
+import 'package:job/feature/job_category/controller/job_category_controller.dart';
+import 'package:job/feature/job_category/domain/models/job_category_model.dart';
+import 'package:job/feature/job_category/presentation/widgets/job_category_list_widget.dart';
+import 'package:job/util/dimensions.dart';
 
 class SelectJobCategoryWidget extends StatefulWidget {
   const SelectJobCategoryWidget({super.key});

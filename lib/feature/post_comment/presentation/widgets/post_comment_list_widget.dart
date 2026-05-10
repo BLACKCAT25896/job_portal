@@ -1,10 +1,10 @@
-import 'package:mighty_job/common/layout/list_layout_widget.dart';
-import 'package:mighty_job/common/widget/custom_search.dart';
-import 'package:mighty_job/common/widget/custom_snackbar.dart';
-import 'package:mighty_job/feature/post_comment/controller/post_comment_controller.dart';
-import 'package:mighty_job/feature/post_comment/domain/models/post_comment_model.dart';
-import 'package:mighty_job/feature/post_comment/presentation/widgets/post_comment_item.dart';
-import 'package:mighty_job/util/dimensions.dart';
+import 'package:job/common/layout/list_layout_widget.dart';
+import 'package:job/common/widget/custom_search.dart';
+import 'package:job/common/widget/custom_snackbar.dart';
+import 'package:job/feature/post_comment/controller/post_comment_controller.dart';
+import 'package:job/feature/post_comment/domain/models/post_comment_model.dart';
+import 'package:job/feature/post_comment/presentation/widgets/post_comment_item.dart';
+import 'package:job/util/dimensions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -30,7 +30,7 @@ class _PostCommentListWidgetState extends State<PostCommentListWidget> {
         final data = postCommentModel?.data;
 
         return GenericListSection<PostCommentItem>(
-          topWidget: widget.fromFilter? SizedBox() : Padding(padding: const EdgeInsets.fromLTRB(Dimensions.paddingSizeDefault, 0,
+          topWidget: widget.fromFilter? SizedBox() : Padding(padding: EdgeInsets.fromLTRB(Dimensions.paddingSizeDefault, 0,
                 Dimensions.paddingSizeDefault,Dimensions.paddingSizeDefault),
             child: CustomSearch(hintText: 'search'.tr, searchController: searchController,
               onSearch: () async {

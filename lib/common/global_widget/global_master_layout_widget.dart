@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/global_widget/header_logo_section.dart';
-import 'package:mighty_job/common/widget/custom_search.dart';
-import 'package:mighty_job/feature/side_menu/side_menu_controller.dart';
-import 'package:mighty_job/helper/responsive_helper.dart';
+import 'package:job/common/global_widget/header_logo_section.dart';
+import 'package:job/common/widget/custom_search.dart';
+import 'package:job/feature/side_menu/side_menu_controller.dart';
+import 'package:job/helper/responsive_helper.dart';
 
 class GlobalSideMenu extends StatefulWidget {
   final Widget child;

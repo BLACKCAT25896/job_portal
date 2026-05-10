@@ -1,23 +1,23 @@
 
 
 import 'package:flutter/material.dart';
-import 'package:mighty_job/api_handle/api_checker.dart';
-import 'package:mighty_job/api_handle/global_api_response_model.dart';
-import 'package:mighty_job/common/global_widget/fetch_paginated_list.dart';
-import 'package:mighty_job/common/widget/custom_snackbar.dart';
-import 'package:mighty_job/feature/company/domain/models/company_model.dart';
-import 'package:mighty_job/feature/frontend/domain/models/frontend_policy_model.dart';
-import 'package:mighty_job/feature/frontend/domain/models/job_details_model.dart';
-import 'package:mighty_job/feature/frontend/domain/models/job_listing_summery_model.dart';
-import 'package:mighty_job/feature/frontend/domain/repository/frontend_repository.dart';
+import 'package:job/api_handle/api_checker.dart';
+import 'package:job/api_handle/global_api_response_model.dart';
+import 'package:job/common/global_widget/fetch_paginated_list.dart';
+import 'package:job/common/widget/custom_snackbar.dart';
+import 'package:job/feature/company/domain/models/company_model.dart';
+import 'package:job/feature/frontend/domain/models/frontend_policy_model.dart';
+import 'package:job/feature/frontend/domain/models/job_details_model.dart';
+import 'package:job/feature/frontend/domain/models/job_listing_summery_model.dart';
+import 'package:job/feature/frontend/domain/repository/frontend_repository.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/feature/frontend/policy_enum.dart';
-import 'package:mighty_job/feature/industries/domain/models/industry_model.dart';
-import 'package:mighty_job/feature/job_category/domain/models/job_category_model.dart';
-import 'package:mighty_job/feature/job_listing/domain/models/job_listing_model.dart';
-import 'package:mighty_job/feature/post/domain/models/post_model.dart';
-import 'package:mighty_job/feature/post_category/domain/models/post_category_model.dart';
-import 'package:mighty_job/feature/skill/domain/models/skill_model.dart';
+import 'package:job/feature/frontend/policy_enum.dart';
+import 'package:job/feature/industries/domain/models/industry_model.dart';
+import 'package:job/feature/job_category/domain/models/job_category_model.dart';
+import 'package:job/feature/job_listing/domain/models/job_listing_model.dart';
+import 'package:job/feature/post/domain/models/post_model.dart';
+import 'package:job/feature/post_category/domain/models/post_category_model.dart';
+import 'package:job/feature/skill/domain/models/skill_model.dart';
 
 class LandingPageController extends GetxController implements GetxService{
   final LandingRepository landingRepository;

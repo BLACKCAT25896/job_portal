@@ -1,10 +1,10 @@
 
-import 'package:mighty_job/api_handle/api_checker.dart';
-import 'package:mighty_job/api_handle/global_api_response_model.dart';
-import 'package:mighty_job/common/widget/custom_snackbar.dart';
-import 'package:mighty_job/feature/company_size/domain/models/company_size_body.dart';
-import 'package:mighty_job/feature/company_size/domain/models/company_size_model.dart';
-import 'package:mighty_job/feature/company_size/domain/repository/company_size_repository.dart';
+import 'package:job/api_handle/api_checker.dart';
+import 'package:job/api_handle/global_api_response_model.dart';
+import 'package:job/common/widget/custom_snackbar.dart';
+import 'package:job/feature/company_size/domain/models/company_size_body.dart';
+import 'package:job/feature/company_size/domain/models/company_size_model.dart';
+import 'package:job/feature/company_size/domain/repository/company_size_repository.dart';
 import 'package:get/get.dart';
 
 class CompanySizeController extends GetxController implements GetxService{

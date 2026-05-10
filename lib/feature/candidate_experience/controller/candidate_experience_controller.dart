@@ -1,10 +1,10 @@
 import 'package:get/get.dart';
-import 'package:mighty_job/api_handle/api_checker.dart';
-import 'package:mighty_job/api_handle/global_api_response_model.dart';
-import 'package:mighty_job/common/widget/custom_snackbar.dart';
-import 'package:mighty_job/feature/candidate_experience/domain/models/candidate_experience_body.dart';
-import 'package:mighty_job/feature/candidate_experience/domain/models/candidate_experience_model.dart';
-import 'package:mighty_job/feature/candidate_experience/domain/repository/candidate_experience_repository.dart';
+import 'package:job/api_handle/api_checker.dart';
+import 'package:job/api_handle/global_api_response_model.dart';
+import 'package:job/common/widget/custom_snackbar.dart';
+import 'package:job/feature/candidate_experience/domain/models/candidate_experience_body.dart';
+import 'package:job/feature/candidate_experience/domain/models/candidate_experience_model.dart';
+import 'package:job/feature/candidate_experience/domain/repository/candidate_experience_repository.dart';
 
 class CandidateExperienceController extends GetxController implements GetxService{
   final CandidateExperienceRepository candidateExperienceRepository;

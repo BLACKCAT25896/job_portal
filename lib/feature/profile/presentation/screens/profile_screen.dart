@@ -1,16 +1,16 @@
-import 'package:mighty_job/helper/app_color_helper.dart';
+import 'package:job/helper/app_color_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/controller/theme_controller.dart';
-import 'package:mighty_job/common/widget/app_bar_widget.dart';
-import 'package:mighty_job/common/widget/body_widget.dart';
-import 'package:mighty_job/common/widget/custom_contaner.dart';
-import 'package:mighty_job/common/widget/custom_image.dart';
-import 'package:mighty_job/common/widget/sun_switch_widget.dart';
-import 'package:mighty_job/feature/profile/presentation/widgets/profile_menu_item_widget.dart';
-import 'package:mighty_job/util/dimensions.dart';
-import 'package:mighty_job/util/images.dart';
-import 'package:mighty_job/util/styles.dart';
+import 'package:job/common/controller/theme_controller.dart';
+import 'package:job/common/widget/app_bar_widget.dart';
+import 'package:job/common/widget/body_widget.dart';
+import 'package:job/common/widget/custom_contaner.dart';
+import 'package:job/common/widget/custom_image.dart';
+import 'package:job/common/widget/sun_switch_widget.dart';
+import 'package:job/feature/profile/presentation/widgets/profile_menu_item_widget.dart';
+import 'package:job/util/dimensions.dart';
+import 'package:job/util/images.dart';
+import 'package:job/util/styles.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -39,10 +39,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
         body: RefreshIndicator(
           onRefresh: () async {},
           child: ListView(
-            padding: const EdgeInsets.all(Dimensions.paddingSizeDefault),
+            padding: EdgeInsets.all(Dimensions.paddingSizeDefault),
             children: [
               _buildProfileHeader(),
-              const SizedBox(height: Dimensions.paddingSizeDefault),
+              SizedBox(height: Dimensions.paddingSizeDefault),
 
               ProfileSection(
                 title: 'account'.tr,
@@ -110,7 +110,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
     return Column(
       children: [
         CustomImage(width: 70, height: 70, radius: 234, image: ""),
-        const SizedBox(height: Dimensions.paddingSizeDefault),
+        SizedBox(height: Dimensions.paddingSizeDefault),
         Text("Mr John Doe", style: textMedium.copyWith(fontSize: Dimensions.fontSizeLarge)),
         Text("example@gmail.com", style: textRegular),
       ],
@@ -126,14 +126,14 @@ class ProfileSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(bottom: Dimensions.paddingSizeDefault),
+      padding: EdgeInsets.only(bottom: Dimensions.paddingSizeDefault),
       child: CustomContainer(showShadow: false, color: Theme.of(context).hintColor.withValues(alpha: 0.05), verticalPadding: Dimensions.paddingSizeDefault,
         borderRadius: 5,
         child: Column(spacing: Dimensions.paddingSizeExtraSmall,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(title, style: textMedium.copyWith(fontSize: Dimensions.fontSizeLarge)),
-            const SizedBox(height: Dimensions.paddingSizeSmall),
+            SizedBox(height: Dimensions.paddingSizeSmall),
             ...items,
           ],
         ),

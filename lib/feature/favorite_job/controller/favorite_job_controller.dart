@@ -1,10 +1,10 @@
 
-import 'package:mighty_job/api_handle/api_checker.dart';
-import 'package:mighty_job/api_handle/global_api_response_model.dart';
-import 'package:mighty_job/common/widget/custom_snackbar.dart';
-import 'package:mighty_job/feature/favorite_job/domain/models/favorite_job_body.dart';
-import 'package:mighty_job/feature/favorite_job/domain/models/favorite_job_model.dart';
-import 'package:mighty_job/feature/favorite_job/domain/repository/favorite_job_repository.dart';
+import 'package:job/api_handle/api_checker.dart';
+import 'package:job/api_handle/global_api_response_model.dart';
+import 'package:job/common/widget/custom_snackbar.dart';
+import 'package:job/feature/favorite_job/domain/models/favorite_job_body.dart';
+import 'package:job/feature/favorite_job/domain/models/favorite_job_model.dart';
+import 'package:job/feature/favorite_job/domain/repository/favorite_job_repository.dart';
 import 'package:get/get.dart';
 
 class FavoriteJobController extends GetxController implements GetxService{

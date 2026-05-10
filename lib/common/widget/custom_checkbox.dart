@@ -1,7 +1,7 @@
-import 'package:mighty_job/helper/app_color_helper.dart';
+import 'package:job/helper/app_color_helper.dart';
 import 'package:flutter/material.dart';
-import 'package:mighty_job/util/dimensions.dart';
-import 'package:mighty_job/util/styles.dart';
+import 'package:job/util/dimensions.dart';
+import 'package:job/util/styles.dart';
 
 class CustomCheckbox extends StatelessWidget {
   final bool value;
@@ -18,7 +18,8 @@ class CustomCheckbox extends StatelessWidget {
         child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
           Icon(value? Icons.check_box : Icons.check_box_outline_blank_rounded, size: 18,
           color: value? systemPrimaryColor() : Theme.of(context).hintColor),
-          const SizedBox(width: Dimensions.paddingSizeSmall,),
+
+          SizedBox(width: Dimensions.paddingSizeSmall,),
           if(title != null)
           Expanded(child: Text(title!, style: textRegular.copyWith())),
           if(titleWidget != null)

@@ -1,11 +1,11 @@
-import 'package:mighty_job/helper/app_color_helper.dart';
+import 'package:job/helper/app_color_helper.dart';
 import 'package:flutter/material.dart';
-import 'package:mighty_job/common/controller/splash_controller.dart';
-import 'package:mighty_job/util/app_constants.dart';
-import 'package:mighty_job/util/dimensions.dart';
-import 'package:mighty_job/util/images.dart';
+import 'package:job/common/controller/splash_controller.dart';
+import 'package:job/util/app_constants.dart';
+import 'package:job/util/dimensions.dart';
+import 'package:job/util/images.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/util/styles.dart';
+import 'package:job/util/styles.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -112,7 +112,7 @@ class _SplashScreenState extends State<SplashScreen>  with SingleTickerProviderS
                       FadeTransition(
                         opacity: _animation,
                         child: Text(
-                          'Complete mighty_job Management System',
+                          'Complete job Management System',
                           style: TextStyle(
                             fontSize: 16,
                             color: Colors.white.withValues(alpha:0.9),

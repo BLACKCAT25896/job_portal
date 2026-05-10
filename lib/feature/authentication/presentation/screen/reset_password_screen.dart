@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/widget/custom_app_bar.dart';
-import 'package:mighty_job/common/widget/custom_text_field.dart';
-import 'package:mighty_job/util/dimensions.dart';
-import 'package:mighty_job/util/images.dart';
+import 'package:job/common/widget/custom_app_bar.dart';
+import 'package:job/common/widget/custom_text_field.dart';
+import 'package:job/util/dimensions.dart';
+import 'package:job/util/images.dart';
 
 class ResetPasswordScreen extends StatelessWidget {
   const ResetPasswordScreen({super.key});
@@ -13,10 +13,10 @@ class ResetPasswordScreen extends StatelessWidget {
     return Scaffold(appBar: CustomAppBar(title: "${"reset_password".tr} "),
 
       body: ListView(
-          padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeDefault,vertical: Dimensions.paddingSizeLarge),
+          padding: EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeDefault,vertical: Dimensions.paddingSizeLarge),
           children: [
 
-            const SizedBox(height: Dimensions.paddingSize,),
+            SizedBox(height: Dimensions.paddingSize,),
             CustomTextField(
               title: "old_password".tr,hintText: "enter_old_password".tr,
               filled: true, showBorder: false,
@@ -27,7 +27,7 @@ class ResetPasswordScreen extends StatelessWidget {
               fillColor: Theme.of(context).hintColor.withValues(alpha:0.1),
             ),
 
-            const SizedBox(height: Dimensions.paddingSize,),
+            SizedBox(height: Dimensions.paddingSize,),
             CustomTextField(
               title: "newPassword".tr,hintText: "newPassword".tr,
               filled: true, showBorder: false,
@@ -38,7 +38,7 @@ class ResetPasswordScreen extends StatelessWidget {
               fillColor: Theme.of(context).hintColor.withValues(alpha:0.1),
             ),
 
-            const SizedBox(height: Dimensions.paddingSize,),
+            SizedBox(height: Dimensions.paddingSize,),
             CustomTextField(
               title: "confirmNewPassword".tr,hintText: "confirmNewPassword".tr,
               filled: true, showBorder: false,
@@ -49,7 +49,7 @@ class ResetPasswordScreen extends StatelessWidget {
               fillColor: Theme.of(context).hintColor.withValues(alpha:0.1),
             ),
 
-            const SizedBox(height: Dimensions.paddingSize,)]),
+            SizedBox(height: Dimensions.paddingSize,)]),
     );
   }
 }

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/feature/cms_management/cms_settings/controller/system_settngs_controller.dart';
-import 'package:mighty_job/feature/cms_management/cms_settings/presentation/widgets/payment_gateway_card_widget.dart';
-import 'package:mighty_job/util/dimensions.dart';
+import 'package:job/feature/cms_management/cms_settings/controller/system_settngs_controller.dart';
+import 'package:job/feature/cms_management/cms_settings/presentation/widgets/payment_gateway_card_widget.dart';
+import 'package:job/util/dimensions.dart';
 
 
 class SmsGatewayConfigWidget extends StatelessWidget {

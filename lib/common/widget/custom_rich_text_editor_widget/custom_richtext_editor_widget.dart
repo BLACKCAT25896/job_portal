@@ -2,11 +2,9 @@ import 'package:get/get.dart';
 import 'package:html_editor_enhanced/html_editor.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:mighty_job/common/widget/custom_snackbar.dart';
-import 'package:mighty_job/feature/profile/logic/profile_controller.dart';
-import 'package:mighty_job/util/dimensions.dart';
-import 'package:mighty_job/util/styles.dart';
-import 'package:mighty_job/common/widget/custom_rich_text_editor_widget/latex_dialog.dart';
+import 'package:job/feature/profile/logic/profile_controller.dart';
+import 'package:job/util/dimensions.dart';
+import 'package:job/util/styles.dart';
 
 class CustomRichEditor extends StatefulWidget {
   final HtmlEditorController? controller;
@@ -44,49 +42,6 @@ class _CustomRichEditorState extends State<CustomRichEditor> {
     }
   }
 
-  void _showLatexDialog() {
-    if (widget.controller == null) {
-      Get.snackbar(
-        'Error',
-        'Editor controller is not available',
-        snackPosition: SnackPosition.BOTTOM,
-      );
-      return;
-    }
-
-    showDialog(
-      context: context,
-      builder: (BuildContext context) {
-        return LatexDialog(
-          onLatexInserted: (String latexCode) async {
-            try {
-              if (latexCode.trim().isEmpty) {
-                Get.snackbar(
-                  'Error',
-                  'LaTeX code cannot be empty',
-                  snackPosition: SnackPosition.BOTTOM,
-                  backgroundColor: Colors.red,
-                  colorText: Colors.white,
-                );
-                return;
-              }
-
-              final htmlLatex = '<span class="latex">\\(${latexCode.replaceAll('\\', '\\\\')}\\)</span>';
-              widget.controller?.insertHtml(htmlLatex);
-              final html = await widget.controller?.getText();
-              if (html != null) {
-                widget.controller?.setText(html);
-              }
-              showCustomSnackBar('LaTeX formula inserted successfully', isError: false);
-            } catch (e) {
-              showCustomSnackBar("Failed to insert LaTeX formula");
-
-            }
-          },
-        );
-      },
-    );
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -109,7 +64,7 @@ class _CustomRichEditorState extends State<CustomRichEditor> {
                 TextSpan(text: "*", style: textRegular.copyWith(color: Colors.red)),
             ])),
           ),
-        const SizedBox(height: Dimensions.paddingSizeSmall),
+         SizedBox(height: Dimensions.paddingSizeSmall),
 
         Stack(children: [
           Column(
@@ -124,7 +79,7 @@ class _CustomRichEditorState extends State<CustomRichEditor> {
                       right: BorderSide(color: Theme.of(context).disabledColor, width: 0.5),
                     ),
                     color: widget.toolbarColor ?? Theme.of(context).hoverColor,
-                    borderRadius: const BorderRadius.vertical(
+                    borderRadius: BorderRadius.vertical(
                       top: Radius.circular(Dimensions.radiusDefault),
                     ),
                   ),
@@ -134,7 +89,7 @@ class _CustomRichEditorState extends State<CustomRichEditor> {
                 decoration: BoxDecoration(
                   color: Theme.of(context).cardColor,
                   borderRadius: widget.showToolbar
-                      ? const BorderRadius.vertical(
+                      ? BorderRadius.vertical(
                     bottom: Radius.circular(Dimensions.radiusDefault),
                   )
                       : BorderRadius.circular(Dimensions.radiusDefault),
@@ -243,11 +198,6 @@ class _CustomRichEditorState extends State<CustomRichEditor> {
                       icon: const Icon(Icons.image, size: 20),
                       tooltip: "Upload Image",
                       onPressed: _pickAndUploadImage,
-                    ),
-                    IconButton(
-                      icon: const Icon(Icons.functions, size: 20),
-                      tooltip: "Insert LaTeX",
-                      onPressed: _showLatexDialog,
                     ),
                   ],
                 )

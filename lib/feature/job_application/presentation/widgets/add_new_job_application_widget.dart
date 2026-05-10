@@ -1,13 +1,13 @@
-import 'package:mighty_job/common/widget/custom_button.dart';
-import 'package:mighty_job/common/widget/custom_snackbar.dart';
-import 'package:mighty_job/common/widget/custom_text_field.dart';
-import 'package:mighty_job/common/widget/responsive_grid_widget.dart';
-import 'package:mighty_job/feature/candidate/presentation/widgets/candidate_selection_widget.dart';
-import 'package:mighty_job/feature/job_application/domain/models/job_application_model.dart';
-import 'package:mighty_job/feature/job_application/controller/job_application_controller.dart';
-import 'package:mighty_job/feature/job_application/domain/models/job_application_body.dart';
-import 'package:mighty_job/feature/job_listing/presentation/widgets/select_job_listing_widget.dart';
-import 'package:mighty_job/util/dimensions.dart';
+import 'package:job/common/widget/custom_button.dart';
+import 'package:job/common/widget/custom_snackbar.dart';
+import 'package:job/common/widget/custom_text_field.dart';
+import 'package:job/common/widget/responsive_grid_widget.dart';
+import 'package:job/feature/candidate/presentation/widgets/candidate_selection_widget.dart';
+import 'package:job/feature/job_application/domain/models/job_application_model.dart';
+import 'package:job/feature/job_application/controller/job_application_controller.dart';
+import 'package:job/feature/job_application/domain/models/job_application_body.dart';
+import 'package:job/feature/job_listing/presentation/widgets/select_job_listing_widget.dart';
+import 'package:job/util/dimensions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -53,7 +53,7 @@ class _AddNewJobApplicationWidgetState extends State<AddNewJobApplicationWidget>
 
         ],),
 
-        Padding(padding: const EdgeInsets.symmetric(vertical: Dimensions.paddingSizeDefault),
+        Padding(padding: EdgeInsets.symmetric(vertical: Dimensions.paddingSizeDefault),
             child: applicationController.isLoading? const CircularProgressIndicator() :
 
             CustomButton(onTap: (){

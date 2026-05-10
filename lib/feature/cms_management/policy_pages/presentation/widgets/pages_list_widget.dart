@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/layout/list_layout_widget.dart';
-import 'package:mighty_job/feature/cms_management/policy_pages/domain/model/policy_model.dart';
-import 'package:mighty_job/feature/cms_management/policy_pages/logic/pages_controller.dart';
-import 'package:mighty_job/feature/cms_management/policy_pages/presentation/widgets/create_new_page_widget.dart';
-import 'package:mighty_job/feature/cms_management/policy_pages/presentation/widgets/page_item_widget.dart';
-import 'package:mighty_job/util/dimensions.dart';
+import 'package:job/common/layout/list_layout_widget.dart';
+import 'package:job/feature/cms_management/policy_pages/domain/model/policy_model.dart';
+import 'package:job/feature/cms_management/policy_pages/logic/pages_controller.dart';
+import 'package:job/feature/cms_management/policy_pages/presentation/widgets/create_new_page_widget.dart';
+import 'package:job/feature/cms_management/policy_pages/presentation/widgets/page_item_widget.dart';
+import 'package:job/util/dimensions.dart';
 
 class PagesListWidget extends StatelessWidget {
   final ScrollController scrollController;
@@ -23,7 +23,7 @@ class PagesListWidget extends StatelessWidget {
           pathItems: ["pages".tr],
           addNewTitle: "add_new_page".tr,
           onAddNewTap: () => showDialog(context: context,
-              builder: (_) => Dialog(child: Padding(padding: const EdgeInsets.all(Dimensions.paddingSizeLarge),
+              builder: (_) => Dialog(child: Padding(padding: EdgeInsets.all(Dimensions.paddingSizeLarge),
                   child: const CreateNewPageWidget()))),
           headings: const ["title", "description"],
 

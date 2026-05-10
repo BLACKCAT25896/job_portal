@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/widget/custom_button.dart';
-import 'package:mighty_job/common/widget/custom_contaner.dart';
-import 'package:mighty_job/common/widget/custom_snackbar.dart';
-import 'package:mighty_job/common/widget/custom_text_field.dart';
-import 'package:mighty_job/common/widget/custom_title.dart';
-import 'package:mighty_job/feature/profile/domain/model/profile_model.dart';
-import 'package:mighty_job/feature/profile/logic/profile_controller.dart';
-import 'package:mighty_job/helper/email_checker.dart';
-import 'package:mighty_job/util/dimensions.dart';
+import 'package:job/common/widget/custom_button.dart';
+import 'package:job/common/widget/custom_contaner.dart';
+import 'package:job/common/widget/custom_snackbar.dart';
+import 'package:job/common/widget/custom_text_field.dart';
+import 'package:job/common/widget/custom_title.dart';
+import 'package:job/feature/profile/domain/model/profile_model.dart';
+import 'package:job/feature/profile/logic/profile_controller.dart';
+import 'package:job/helper/email_checker.dart';
+import 'package:job/util/dimensions.dart';
 
 class ProfileInformationWidget extends StatefulWidget {
   const ProfileInformationWidget({super.key});
@@ -41,9 +41,7 @@ class _ProfileInformationWidgetState extends State<ProfileInformationWidget> {
         ProfileModel? profileModel = profileController.profileModel;
         return CustomContainer(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           const CustomTitle(title: "profile_information"),
-          const SizedBox(height: Dimensions.paddingSizeExtraSmall),
-          const CustomSubTitle(title: "profile_info_sub_title"),
-          const SizedBox(height: Dimensions.paddingSizeDefault),
+          SizedBox(height: Dimensions.paddingSizeExtraSmall),
 
           CustomTextField(title: "name".tr,
           controller: nameController,
@@ -53,7 +51,8 @@ class _ProfileInformationWidgetState extends State<ProfileInformationWidget> {
             controller: emailController,
             inputType: TextInputType.emailAddress,
             hintText: profileModel?.data?.email??'email'.tr),
-          const SizedBox(height: Dimensions.paddingSizeDefault),
+
+           SizedBox(height: Dimensions.paddingSizeDefault),
 
 
           SizedBox(width: 100, child:profileController.isLoading?

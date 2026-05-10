@@ -2,13 +2,13 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mighty_job/common/widget/custom_snackbar.dart';
-import 'package:mighty_job/common/widget/frontend_custom_button.dart';
-import 'package:mighty_job/feature/frontend/controller/frontend_controller.dart';
-import 'package:mighty_job/helper/responsive_helper.dart';
-import 'package:mighty_job/util/app_constants.dart';
-import 'package:mighty_job/util/dimensions.dart';
-import 'package:mighty_job/util/styles.dart';
+import 'package:job/common/widget/custom_snackbar.dart';
+import 'package:job/common/widget/frontend_custom_button.dart';
+import 'package:job/feature/frontend/controller/frontend_controller.dart';
+import 'package:job/helper/responsive_helper.dart';
+import 'package:job/util/app_constants.dart';
+import 'package:job/util/dimensions.dart';
+import 'package:job/util/styles.dart';
 
 class NewsLetterWidget extends StatefulWidget {
   const NewsLetterWidget({super.key});
