@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:job/common/global_widget/custom_web_scroll_view_widget.dart';
+import 'package:job/feature/home/presentation/widget/category_wise_chart.dart';
 import 'package:job/feature/home/presentation/widget/statistics_cards_widget.dart';
 import 'package:job/feature/report_management/domain/model/dashboard_report_data_model.dart';
 import 'package:job/feature/report_management/logic/report_controller.dart';
-import 'package:job/helper/responsive_helper.dart';
 import 'package:job/util/dimensions.dart';
 
 class AdminDashboardSection extends StatelessWidget {
@@ -28,17 +28,7 @@ class AdminDashboardSection extends StatelessWidget {
               SizedBox(height: Dimensions.paddingSizeDefault),
 
               const StatisticsCardsWidget(),
-
-              Padding(padding: EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeDefault),
-                  child: ResponsiveHelper.isDesktop(context)?
-                  Row(crossAxisAlignment: CrossAxisAlignment.start,spacing: Dimensions.paddingSizeDefault, children: [
-
-
-                  ]): Column(crossAxisAlignment: CrossAxisAlignment.start,
-                      spacing: Dimensions.paddingSizeDefault, children: [
-
-
-                      ])),
+              CategoryWiseChart()
 
             ],
           ):SizedBox();

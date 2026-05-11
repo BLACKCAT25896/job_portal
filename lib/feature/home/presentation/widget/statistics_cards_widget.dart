@@ -51,7 +51,6 @@ class StatisticsCardsWidget extends StatelessWidget {
                   title: "rejected".tr, icon: Images.rejected),
 
 
-
             ]),
             ],
           ),
