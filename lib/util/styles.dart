@@ -78,7 +78,7 @@ class ThemeShadow {
 TextStyle landingTextStyle(BuildContext context,
     {Color? color}) {
   return landingBoldFont.copyWith(
-    fontSize: min((MediaQuery.sizeOf(context).width) * 0.05, 60),
+    fontSize: min((MediaQuery.sizeOf(context).width) * 0.05, 40),
     color: color,
   );
 }

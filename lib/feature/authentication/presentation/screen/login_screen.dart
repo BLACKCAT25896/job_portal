@@ -1,5 +1,4 @@
 import 'package:job/helper/app_color_helper.dart';
-import 'package:job/helper/responsive_helper.dart';
 import 'package:job/util/dimensions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -67,9 +66,8 @@ class _LoginScreenState extends State<LoginScreen>
 
         Center(child: CustomContainer(
           child: Padding(padding: EdgeInsets.symmetric(
-              horizontal: ResponsiveHelper.isDesktop(context)?24: Dimensions.paddingSizeDefault),
-            child: ConstrainedBox(constraints: const BoxConstraints(maxWidth: 320,
-                maxHeight: 450),
+              horizontal: Dimensions.paddingSizeDefault),
+            child: ConstrainedBox(constraints: const BoxConstraints(maxWidth: 350, maxHeight: 550),
               child: GetBuilder<AuthenticationController>(builder: (_) {
                 return const LoginWidget();
                 }),

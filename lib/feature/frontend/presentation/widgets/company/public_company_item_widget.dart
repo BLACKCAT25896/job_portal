@@ -32,24 +32,19 @@ class _PublicCompanyItemWidgetState extends State<PublicCompanyItemWidget> {
       child: AnimatedSlide(
         duration: const Duration(milliseconds: 220),
         curve: Curves.easeOut,
-        offset: _isHover ? const Offset(0, -0.03) : Offset.zero,
+        offset: _isHover ? const Offset(0, -0.01) : Offset.zero,
 
         child: AnimatedScale(
           duration: const Duration(milliseconds: 220),
           curve: Curves.easeOut,
-          scale: _isHover ? 1.03 : 1.0,
+          scale: _isHover ? 1.01 : 1.0,
 
           child: AnimatedContainer(duration: const Duration(milliseconds: 220),
             curve: Curves.easeOut,
-            decoration: BoxDecoration(borderRadius: BorderRadius.circular(14),
-              boxShadow: [
-                BoxShadow(color: Colors.black.withValues(alpha: _isHover ? 0.16 : 0.08),
-                  blurRadius: _isHover ? 22 : 12,
-                  offset: const Offset(0, 6)),
-              ],
-            ),
+            decoration: BoxDecoration(borderRadius: BorderRadius.circular(5)),
 
-            child: CustomContainer(onTap: () {
+            child: CustomContainer(
+              onTap: () {
                 Get.toNamed(RouteHelper.getCategoryWiseJobRoute(slug: '', type: 'company'));
               },
               borderRadius: 14,

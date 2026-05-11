@@ -3,7 +3,6 @@ import 'package:job/feature/role_and_permission/user/presentation/widgets/create
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:job/common/layout/list_layout_widget.dart';
-import 'package:job/feature/role_and_permission/role/presentation/widgets/select_roll_widget.dart';
 import 'package:job/feature/role_and_permission/user/controller/user_controller.dart';
 import 'package:job/feature/role_and_permission/user/domain/models/user_model.dart';
 import 'package:job/feature/role_and_permission/user/presentation/widgets/user_item_widget.dart';
@@ -20,13 +19,12 @@ class UserListWidget extends StatelessWidget {
         final userModel = userController.userModel;
         final userData = userModel?.data;
         return GenericListSection<UserItem>(
-          subWidget: SizedBox(width: 200, child: SelectRoleWidget(fromUser: true)),
           sectionTitle: "user".tr,
           pathItems: ["user_list".tr],
           addNewTitle: "add_new_user".tr,
           onAddNewTap: () => Get.dialog(CustomDialogWidget(title: "user".tr,
               child: const CreateNewUserWidget())),
-          headings: const ["image", "name","email","phone", "user_type", "address",  "status",],
+          headings: const ["image", "name","email","phone", "user_type",  "status",],
           scrollController: scrollController,
           isLoading: userModel == null,
           totalSize: userData?.total ?? 0,

@@ -14,7 +14,7 @@ class SystemSettingsHeadingSectionWidget extends StatelessWidget {
       final List<String> titles = ["general_settings", "logo", "theme_color",];
 
       return Padding(padding: EdgeInsets.all(Dimensions.paddingSizeSmall),
-        child: SizedBox(height: 35,
+        child: SizedBox(height: 45,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
             itemCount: titles.length,

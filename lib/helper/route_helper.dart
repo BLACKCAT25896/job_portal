@@ -1,5 +1,6 @@
 
 
+import 'package:job/feature/authentication/presentation/screen/company_login_screen.dart';
 import 'package:job/feature/authentication/presentation/screen/crete_new_account_screen.dart';
 import 'package:job/feature/authentication/presentation/screen/crete_new_company_account_screen.dart';
 import 'package:job/feature/candidate/presentation/screens/candidate_screen.dart';
@@ -14,6 +15,7 @@ import 'package:job/feature/authentication/presentation/screen/delete_account_sc
 import 'package:job/feature/authentication/presentation/screen/login_screen.dart';
 import 'package:job/feature/company/presentation/screens/company_screen.dart';
 import 'package:job/feature/company_size/presentation/screens/company_size_screen.dart';
+import 'package:job/feature/contact_us/screens/contact_us_screen.dart';
 import 'package:job/feature/dashboard/views/dashboard_screen.dart';
 import 'package:job/feature/degree_level/presentation/screens/degree_level_screen.dart';
 import 'package:job/feature/favorite_company/presentation/screens/favorite_company_screen.dart';
@@ -246,12 +248,15 @@ class RouteHelper {
   static const String jobApply = '/job-apply';
   static String getJobApplyRoute() => jobApply;
 
+  static const String contactUs = '/contact-us';
+  static String getContactUsRoute() => contactUs;
 
 
 
   static List<GetPage> routes = [
     GetPage(name: initial, page: () => const LandingScreen()),
     GetPage(name: login, page: () => const LoginScreen()),
+    GetPage(name: companyLogin, page: () => const CompanyLoginScreen()),
     GetPage(name: signUp, page: () => const CreateNewAccount()),
     GetPage(name: createCompanyAccount, page: () => const CreateNewCompanyAccount()),
     GetPage(name: dashboard, page: () => const DashboardScreen()),
@@ -259,6 +264,7 @@ class RouteHelper {
     GetPage(name: candidateProfile, page: () => CandidateProfileScreen()),
     GetPage(name: deleteAccount, page: () => const DeleteAccountScreen()),
     GetPage(name: notification, page: () => const NotificationScreen()),
+    GetPage(name: contactUs, page: ()=> ContactUsScreen()),
 
 
 

@@ -52,7 +52,7 @@ class ImagePickerWidget extends StatelessWidget {
                   width: width, height: height, fit: BoxFit.cover) :
               Image.file(File(pickedFile!.path), width: width, height: height, fit: BoxFit.cover);
             } else {
-              imageWidget = CustomImage(image: imageUrl ?? "", height: height, width: width);
+              imageWidget = CustomImage(image: imageUrl ?? "", height: height, width: width, fit: BoxFit.contain);
             }
 
             return Align(alignment: Alignment.center,

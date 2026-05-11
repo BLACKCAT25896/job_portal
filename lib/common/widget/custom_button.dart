@@ -67,7 +67,7 @@ class _CustomButtonState extends State<CustomButton> {
     final bool isWebDesktop = ResponsiveHelper.isDesktop(context);
 
     final double finalHeight =
-    isWebDesktop ? widget.height + 5 : widget.height;
+    isWebDesktop ? widget.height + 15 : widget.height;
 
     final Color bgColor = widget.showBorderOnly
         ? Colors.transparent
@@ -146,9 +146,8 @@ class _CustomButtonState extends State<CustomButton> {
                               color: widget.onTap == null
                                   ? Theme.of(context).cardColor
                                   : widget.textColor,
-                              fontSize: widget.fontSize,
-                              fontWeight: widget.fontWeight,
-                            ),
+                              fontSize: isWebDesktop? widget.fontSize + 5 : widget.fontSize,
+                              fontWeight: widget.fontWeight),
                           ),
                         ),
                       ),

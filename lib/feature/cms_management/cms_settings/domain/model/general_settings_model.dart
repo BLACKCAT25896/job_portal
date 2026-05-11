@@ -1,5 +1,3 @@
-import 'package:job/helper/price_converter.dart';
-
 class GeneralSettingModel {
   bool? status;
   String? message;
@@ -25,65 +23,46 @@ class GeneralSettingModel {
 }
 
 class SettingItem {
-  String? mightyJobName;
-  String? siteTitle;
-  String? phone;
-  String? email;
-  String? language;
-  String? googleMap;
-  String? address;
-  String? onGoogleMap;
-  String? currencySymbol;
-  String? logo;
-  String? mailType;
-  String? disabledWebsite;
-  String? copyrightText;
-  String? facebookLink;
-  String? googlePlusLink;
-  String? youtubeLink;
-  String? whatsAppLink;
-  String? twitterLink;
-  String? headerNotice;
+  String? appName;
+  String? appLogo;
+  String? appFavicon;
   String? appVersion;
-  String? appUrl;
-  String? tagline;
-  String? favicon;
-  String? themeColor;
-  String? backgroundImage;
-  String? taxType;
-  double? taxPercentage;
-  double? serviceCharge;
-  String? defaultCurrency;
-  String? billingPrefix;
-  String? invoiceFooter;
-  String? enableKitchenPrint;
-  String? enableCustomerCopy;
-  String? enableOnlineOrder;
-  double? deliveryCharge;
-  double? minimumOrderAmount;
-  String? autoAcceptOrder;
-  double? estimatedPreparationTime;
-  String? slackWebhookUrl;
-  String? telegramBotToken;
-  String? telegramChatId;
-  String? twilioSmsEnabled;
-  String? emailNotifications;
-  String? whatsappNotifications;
-  String? autoBackup;
-  String? reportTimezone;
-  int? dataRetentionDays;
-  String? sidebarCollapsed;
-  String? darkMode;
-  String? defaultDashboard;
-  String? razorpayKey;
-  String? razorpaySecret;
-  String? stripeKey;
-  String? stripeSecret;
-  String? cashOnDelivery;
-  int? maxTableCapacity;
-  String? defaultShiftStart;
-  String? defaultShiftEnd;
-  int? autoLogoutIdleMinutes;
+  String? defaultLanguage;
+  String? timezone;
+  String? companyName;
+  String? companyEmail;
+  String? companyPhone;
+  String? companyAddress;
+  String? mailDriver;
+  String? mailHost;
+  String? mailPort;
+  String? mailUsername;
+  String? mailPassword;
+  String? mailEncryption;
+  String? mailFromAddress;
+  String? mailFromName;
+  String? smsGateway;
+  String? twilioSid;
+  String? twilioToken;
+  String? twilioFrom;
+  String? bulkSmsApiKey;
+  String? bulkSmsSenderId;
+  String? googleClientId;
+  String? googleClientSecret;
+  String? facebookAppId;
+  String? facebookAppSecret;
+  String? facebookUrl;
+  String? twitterUrl;
+  String? linkedinUrl;
+  String? youtubeUrl;
+  String? currency;
+  String? currencySymbol;
+  String? metaTitle;
+  String? metaDescription;
+  String? metaKeywords;
+  String? maintenanceMode;
+  String? registrationEnabled;
+  String? jobPostingEnabled;
   String? primaryColor;
   String? secondaryColor;
   String? primaryContainerColor;
@@ -94,90 +73,52 @@ class SettingItem {
   String? darkTextColor;
   String? sidebarSelectedBgColor;
   String? sidebarSelectedTextColor;
-  int? isOnline;
-  double? latitude;
-  double? longitude;
-  double? deliveryRadiusKm;
-  double? deliveryFee;
-  int? deliveryPartnerCount;
-  double? deliveryTimeAvg;
-  int? pickupEnabled;
-  String? openingTime;
-  String? closingTime;
-  int? autoAcceptOrders;
-  int? preOrderEnabled;
-  int? maxOrderCapacity;
-  double? avgRating;
-  int? reviewCount;
-  int? totalOrders;
-  String? lastOrderTime;
-  String? lastActiveTime;
-  int? loyaltyPointsEnabled;
-  int? offersEnabled;
-  SocialMediaLinks? socialMediaLinks;
-  int? whatsappChatEnable;
-
+  String? contactUsMapLink;
+  String? metaAuthor;
+  String? ogTitle;
+  String? ogDescription;
 
   SettingItem(
-      {this.mightyJobName,
-        this.siteTitle,
-        this.phone,
-        this.email,
-        this.language,
-        this.googleMap,
-        this.address,
-        this.onGoogleMap,
-        this.currencySymbol,
-        this.logo,
-        this.mailType,
-        this.disabledWebsite,
-        this.copyrightText,
-        this.facebookLink,
-        this.googlePlusLink,
-        this.youtubeLink,
-        this.whatsAppLink,
-        this.twitterLink,
-        this.headerNotice,
+      {this.appName,
+        this.appLogo,
+        this.appFavicon,
         this.appVersion,
-        this.appUrl,
-        this.tagline,
-        this.favicon,
-        this.themeColor,
-        this.backgroundImage,
-        this.taxType,
-        this.taxPercentage,
-        this.serviceCharge,
-        this.defaultCurrency,
-        this.billingPrefix,
-        this.invoiceFooter,
-        this.enableKitchenPrint,
-        this.enableCustomerCopy,
-        this.enableOnlineOrder,
-        this.deliveryCharge,
-        this.minimumOrderAmount,
-        this.autoAcceptOrder,
-        this.estimatedPreparationTime,
-        this.slackWebhookUrl,
-        this.telegramBotToken,
-        this.telegramChatId,
-        this.twilioSmsEnabled,
-        this.emailNotifications,
-        this.whatsappNotifications,
-        this.autoBackup,
-        this.reportTimezone,
-        this.dataRetentionDays,
-        this.sidebarCollapsed,
-        this.darkMode,
-        this.defaultDashboard,
-        this.razorpayKey,
-        this.razorpaySecret,
-        this.stripeKey,
-        this.stripeSecret,
-        this.cashOnDelivery,
-        this.maxTableCapacity,
-        this.defaultShiftStart,
-        this.defaultShiftEnd,
-        this.autoLogoutIdleMinutes,
+        this.defaultLanguage,
+        this.timezone,
+        this.companyName,
+        this.companyEmail,
+        this.companyPhone,
+        this.companyAddress,
+        this.mailDriver,
+        this.mailHost,
+        this.mailPort,
+        this.mailUsername,
+        this.mailPassword,
+        this.mailEncryption,
+        this.mailFromAddress,
+        this.mailFromName,
+        this.smsGateway,
+        this.twilioSid,
+        this.twilioToken,
+        this.twilioFrom,
+        this.bulkSmsApiKey,
+        this.bulkSmsSenderId,
+        this.googleClientId,
+        this.googleClientSecret,
+        this.facebookAppId,
+        this.facebookAppSecret,
+        this.facebookUrl,
+        this.twitterUrl,
+        this.linkedinUrl,
+        this.youtubeUrl,
+        this.currency,
+        this.currencySymbol,
+        this.metaTitle,
+        this.metaDescription,
+        this.metaKeywords,
+        this.maintenanceMode,
+        this.registrationEnabled,
+        this.jobPostingEnabled,
         this.primaryColor,
         this.secondaryColor,
         this.primaryContainerColor,
@@ -188,90 +129,52 @@ class SettingItem {
         this.darkTextColor,
         this.sidebarSelectedBgColor,
         this.sidebarSelectedTextColor,
-        this.isOnline,
-        this.latitude,
-        this.longitude,
-        this.deliveryRadiusKm,
-        this.deliveryFee,
-        this.deliveryPartnerCount,
-        this.deliveryTimeAvg,
-        this.pickupEnabled,
-        this.openingTime,
-        this.closingTime,
-        this.autoAcceptOrders,
-        this.preOrderEnabled,
-        this.maxOrderCapacity,
-        this.avgRating,
-        this.reviewCount,
-        this.totalOrders,
-        this.lastOrderTime,
-        this.lastActiveTime,
-        this.loyaltyPointsEnabled,
-        this.offersEnabled,
-        this.socialMediaLinks,
-        this.whatsappChatEnable
-      });
+        this.contactUsMapLink,
+        this.metaAuthor,
+        this.ogTitle,
+        this.ogDescription});
 
   SettingItem.fromJson(Map<String, dynamic> json) {
-    mightyJobName = json['job_name'];
-    siteTitle = json['site_title'];
-    phone = json['phone'].toString();
-    email = json['email'];
-    language = json['language'];
-    googleMap = json['google_map'].toString();
-    address = json['address'];
-    onGoogleMap = json['on_google_map'].toString();
+    appName = json['app_name'];
+    appLogo = json['app_logo'];
+    appFavicon = json['app_favicon'];
+    appVersion = json['app_version'];
+    defaultLanguage = json['default_language'];
+    timezone = json['timezone'];
+    companyName = json['company_name'];
+    companyEmail = json['company_email'];
+    companyPhone = json['company_phone'];
+    companyAddress = json['company_address'];
+    mailDriver = json['mail_driver'];
+    mailHost = json['mail_host'];
+    mailPort = json['mail_port'];
+    mailUsername = json['mail_username'];
+    mailPassword = json['mail_password'];
+    mailEncryption = json['mail_encryption'];
+    mailFromAddress = json['mail_from_address'];
+    mailFromName = json['mail_from_name'];
+    smsGateway = json['sms_gateway'];
+    twilioSid = json['twilio_sid'];
+    twilioToken = json['twilio_token'];
+    twilioFrom = json['twilio_from'];
+    bulkSmsApiKey = json['bulk_sms_api_key'];
+    bulkSmsSenderId = json['bulk_sms_sender_id'];
+    googleClientId = json['google_client_id'];
+    googleClientSecret = json['google_client_secret'];
+    facebookAppId = json['facebook_app_id'];
+    facebookAppSecret = json['facebook_app_secret'];
+    facebookUrl = json['facebook_url'];
+    twitterUrl = json['twitter_url'];
+    linkedinUrl = json['linkedin_url'];
+    youtubeUrl = json['youtube_url'];
+    currency = json['currency'];
     currencySymbol = json['currency_symbol'];
-    logo = json['logo'];
-    mailType = json['mail_type'].toString();
-    disabledWebsite = json['disabled_website'].toString();
-    copyrightText = json['copyright_text'];
-    facebookLink = json['facebook_link'];
-    googlePlusLink = json['google_plus_link'];
-    youtubeLink = json['youtube_link'];
-    whatsAppLink = json['whatsapp_chat_url'].toString();
-    twitterLink = json['twitter_link'];
-    headerNotice = json['header_notice'];
-    appVersion = json['app_version'].toString();
-    appUrl = json['app_url'];
-    tagline = json['tagline'];
-    favicon = json['favicon'];
-    themeColor = json['theme_color'];
-    backgroundImage = json['background_image'];
-    taxType = json['tax_type'];
-    taxPercentage = PriceConverter.parseAmount(json['tax_percentage']);
-    serviceCharge = PriceConverter.parseAmount(json['service_charge']);
-    defaultCurrency = json['default_currency'];
-    billingPrefix = json['billing_prefix'];
-    invoiceFooter = json['invoice_footer'];
-    enableKitchenPrint = json['enable_kitchen_print'].toString();
-    enableCustomerCopy = json['enable_customer_copy'].toString();
-    enableOnlineOrder = json['enable_online_order'].toString();
-    deliveryCharge = PriceConverter.parseAmount(json['delivery_charge']);
-    minimumOrderAmount = PriceConverter.parseAmount(json['minimum_order_amount']);
-    autoAcceptOrder = json['auto_accept_order'].toString();
-    estimatedPreparationTime = PriceConverter.parseAmount(json['estimated_preparation_time']);
-    slackWebhookUrl = json['slack_webhook_url'];
-    telegramBotToken = json['telegram_bot_token'];
-    telegramChatId = json['telegram_chat_id'];
-    twilioSmsEnabled = json['twilio_sms_enabled'];
-    emailNotifications = json['email_notifications'];
-    whatsappNotifications = json['whatsapp_notifications'].toString();
-    autoBackup = json['auto_backup'].toString();
-    reportTimezone = json['report_timezone'];
-    dataRetentionDays = PriceConverter.parseInt(json['data_retention_days']);
-    sidebarCollapsed = json['sidebar_collapsed'].toString();
-    darkMode = json['dark_mode'].toString();
-    defaultDashboard = json['default_dashboard'].toString();
-    razorpayKey = json['razorpay_key'];
-    razorpaySecret = json['razorpay_secret'];
-    stripeKey = json['stripe_key'];
-    stripeSecret = json['stripe_secret'];
-    cashOnDelivery = json['cash_on_delivery'].toString();
-    maxTableCapacity = PriceConverter.parseInt(json['max_table_capacity']);
-    defaultShiftStart = json['default_shift_start'];
-    defaultShiftEnd = json['default_shift_end'];
-    autoLogoutIdleMinutes = PriceConverter.parseInt( json['auto_logout_idle_minutes']);
+    metaTitle = json['meta_title'];
+    metaDescription = json['meta_description'];
+    metaKeywords = json['meta_keywords'];
+    maintenanceMode = json['maintenance_mode'];
+    registrationEnabled = json['registration_enabled'];
+    jobPostingEnabled = json['job_posting_enabled'];
     primaryColor = json['primary_color'];
     secondaryColor = json['secondary_color'];
     primaryContainerColor = json['primary_container_color'];
@@ -282,94 +185,54 @@ class SettingItem {
     darkTextColor = json['dark_text_color'];
     sidebarSelectedBgColor = json['sidebar_selected_bg_color'];
     sidebarSelectedTextColor = json['sidebar_selected_text_color'];
-    isOnline = PriceConverter.parseInt(json['is_online']);
-    latitude = PriceConverter.parseAmount(json['latitude']);
-    longitude = PriceConverter.parseAmount(json['longitude']);
-    deliveryRadiusKm = PriceConverter.parseAmount(json['delivery_radius_km']);
-    deliveryFee = PriceConverter.parseAmount(json['delivery_fee']);
-    deliveryPartnerCount = PriceConverter.parseInt(json['delivery_partner_count']);
-    deliveryTimeAvg = PriceConverter.parseAmount(json['delivery_time_avg']);
-    pickupEnabled = PriceConverter.parseInt(json['pickup_enabled']);
-    openingTime = json['opening_time'];
-    closingTime = json['closing_time'];
-    autoAcceptOrders = PriceConverter.parseInt(json['auto_accept_orders']);
-    preOrderEnabled = PriceConverter.parseInt(json['pre_order_enabled']);
-    maxOrderCapacity = PriceConverter.parseInt(json['max_order_capacity']);
-    avgRating = PriceConverter.parseAmount(json['avg_rating']);
-    reviewCount = PriceConverter.parseInt(json['review_count']);
-    totalOrders = PriceConverter.parseInt(json['total_orders']);
-    lastOrderTime = json['last_order_time'];
-    lastActiveTime = json['last_active_time'];
-    loyaltyPointsEnabled = PriceConverter.parseInt(json['loyalty_points_enabled']);
-    offersEnabled = PriceConverter.parseInt(json['offers_enabled']);
-    // socialMediaLinks = json['social_media_links'] != null
-    //     ? SocialMediaLinks.fromJson(json['social_media_links'])
-    //     : null;
-    whatsappChatEnable = PriceConverter.parseInt(json['whatsapp_chat_enable']);
-
+    contactUsMapLink = json['contact_us_map_link'];
+    metaAuthor = json['meta_author'];
+    ogTitle = json['og_title'];
+    ogDescription = json['og_description'];
   }
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = <String, dynamic>{};
-    data['job_name'] = mightyJobName;
-    data['site_title'] = siteTitle;
-    data['phone'] = phone;
-    data['email'] = email;
-    data['language'] = language;
-    data['google_map'] = googleMap;
-    data['address'] = address;
-    data['on_google_map'] = onGoogleMap;
-    data['currency_symbol'] = currencySymbol;
-    data['logo'] = logo;
-    data['mail_type'] = mailType;
-    data['disabled_website'] = disabledWebsite;
-    data['copyright_text'] = copyrightText;
-    data['facebook_link'] = facebookLink;
-    data['google_plus_link'] = googlePlusLink;
-    data['youtube_link'] = youtubeLink;
-    data['whatsapp_chat_url'] = whatsAppLink;
-    data['twitter_link'] = twitterLink;
-    data['header_notice'] = headerNotice;
+    data['app_name'] = appName;
+    data['app_logo'] = appLogo;
+    data['app_favicon'] = appFavicon;
     data['app_version'] = appVersion;
-    data['app_url'] = appUrl;
-    data['tagline'] = tagline;
-    data['favicon'] = favicon;
-    data['theme_color'] = themeColor;
-    data['background_image'] = backgroundImage;
-    data['tax_type'] = taxType;
-    data['tax_percentage'] = taxPercentage;
-    data['service_charge'] = serviceCharge;
-    data['default_currency'] = defaultCurrency;
-    data['billing_prefix'] = billingPrefix;
-    data['invoice_footer'] = invoiceFooter;
-    data['enable_kitchen_print'] = enableKitchenPrint;
-    data['enable_customer_copy'] = enableCustomerCopy;
-    data['enable_online_order'] = enableOnlineOrder;
-    data['delivery_charge'] = deliveryCharge;
-    data['minimum_order_amount'] = minimumOrderAmount;
-    data['auto_accept_order'] = autoAcceptOrder;
-    data['estimated_preparation_time'] = estimatedPreparationTime;
-    data['slack_webhook_url'] = slackWebhookUrl;
-    data['telegram_bot_token'] = telegramBotToken;
-    data['telegram_chat_id'] = telegramChatId;
-    data['twilio_sms_enabled'] = twilioSmsEnabled;
-    data['email_notifications'] = emailNotifications;
-    data['whatsapp_notifications'] = whatsappNotifications;
-    data['auto_backup'] = autoBackup;
-    data['report_timezone'] = reportTimezone;
-    data['data_retention_days'] = dataRetentionDays;
-    data['sidebar_collapsed'] = sidebarCollapsed;
-    data['dark_mode'] = darkMode;
-    data['default_dashboard'] = defaultDashboard;
-    data['razorpay_key'] = razorpayKey;
-    data['razorpay_secret'] = razorpaySecret;
-    data['stripe_key'] = stripeKey;
-    data['stripe_secret'] = stripeSecret;
-    data['cash_on_delivery'] = cashOnDelivery;
-    data['max_table_capacity'] = maxTableCapacity;
-    data['default_shift_start'] = defaultShiftStart;
-    data['default_shift_end'] = defaultShiftEnd;
-    data['auto_logout_idle_minutes'] = autoLogoutIdleMinutes;
+    data['default_language'] = defaultLanguage;
+    data['timezone'] = timezone;
+    data['company_name'] = companyName;
+    data['company_email'] = companyEmail;
+    data['company_phone'] = companyPhone;
+    data['company_address'] = companyAddress;
+    data['mail_driver'] = mailDriver;
+    data['mail_host'] = mailHost;
+    data['mail_port'] = mailPort;
+    data['mail_username'] = mailUsername;
+    data['mail_password'] = mailPassword;
+    data['mail_encryption'] = mailEncryption;
+    data['mail_from_address'] = mailFromAddress;
+    data['mail_from_name'] = mailFromName;
+    data['sms_gateway'] = smsGateway;
+    data['twilio_sid'] = twilioSid;
+    data['twilio_token'] = twilioToken;
+    data['twilio_from'] = twilioFrom;
+    data['bulk_sms_api_key'] = bulkSmsApiKey;
+    data['bulk_sms_sender_id'] = bulkSmsSenderId;
+    data['google_client_id'] = googleClientId;
+    data['google_client_secret'] = googleClientSecret;
+    data['facebook_app_id'] = facebookAppId;
+    data['facebook_app_secret'] = facebookAppSecret;
+    data['facebook_url'] = facebookUrl;
+    data['twitter_url'] = twitterUrl;
+    data['linkedin_url'] = linkedinUrl;
+    data['youtube_url'] = youtubeUrl;
+    data['currency'] = currency;
+    data['currency_symbol'] = currencySymbol;
+    data['meta_title'] = metaTitle;
+    data['meta_description'] = metaDescription;
+    data['meta_keywords'] = metaKeywords;
+    data['maintenance_mode'] = maintenanceMode;
+    data['registration_enabled'] = registrationEnabled;
+    data['job_posting_enabled'] = jobPostingEnabled;
     data['primary_color'] = primaryColor;
     data['secondary_color'] = secondaryColor;
     data['primary_container_color'] = primaryContainerColor;
@@ -380,57 +243,10 @@ class SettingItem {
     data['dark_text_color'] = darkTextColor;
     data['sidebar_selected_bg_color'] = sidebarSelectedBgColor;
     data['sidebar_selected_text_color'] = sidebarSelectedTextColor;
-    data['is_online'] = isOnline;
-    data['latitude'] = latitude;
-    data['longitude'] = longitude;
-    data['delivery_radius_km'] = deliveryRadiusKm;
-    data['delivery_fee'] = deliveryFee;
-    data['delivery_partner_count'] = deliveryPartnerCount;
-    data['delivery_time_avg'] = deliveryTimeAvg;
-    data['pickup_enabled'] = pickupEnabled;
-    data['opening_time'] = openingTime;
-    data['closing_time'] = closingTime;
-    data['auto_accept_orders'] = autoAcceptOrders;
-    data['pre_order_enabled'] = preOrderEnabled;
-    data['max_order_capacity'] = maxOrderCapacity;
-    data['avg_rating'] = avgRating;
-    data['review_count'] = reviewCount;
-    data['total_orders'] = totalOrders;
-    data['last_order_time'] = lastOrderTime;
-    data['last_active_time'] = lastActiveTime;
-    data['loyalty_points_enabled'] = loyaltyPointsEnabled;
-    data['offers_enabled'] = offersEnabled;
-    if (socialMediaLinks != null) {
-      data['social_media_links'] = socialMediaLinks!.toJson();
-    }
-    data['whatsapp_chat_enable'] = whatsappChatEnable;
-
-    return data;
-  }
-}
-
-class SocialMediaLinks {
-  String? facebook;
-  String? instagram;
-  String? twitter;
-  String? linkedin;
-
-  SocialMediaLinks(
-      {this.facebook, this.instagram, this.twitter, this.linkedin});
-
-  SocialMediaLinks.fromJson(Map<String, dynamic> json) {
-    facebook = json['facebook'];
-    instagram = json['instagram'];
-    twitter = json['twitter'];
-    linkedin = json['linkedin'];
-  }
-
-  Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = <String, dynamic>{};
-    data['facebook'] = facebook;
-    data['instagram'] = instagram;
-    data['twitter'] = twitter;
-    data['linkedin'] = linkedin;
+    data['contact_us_map_link'] = contactUsMapLink;
+    data['meta_author'] = metaAuthor;
+    data['og_title'] = ogTitle;
+    data['og_description'] = ogDescription;
     return data;
   }
 }

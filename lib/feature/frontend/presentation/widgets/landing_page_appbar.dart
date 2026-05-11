@@ -5,6 +5,7 @@ import 'package:job/common/layout/navbar_menu_button_widget.dart';
 import 'package:job/common/widget/custom_contaner.dart';
 import 'package:job/common/widget/custom_image.dart';
 import 'package:job/common/widget/navbar_hover_dropdown.dart';
+import 'package:job/feature/authentication/logic/authentication_controller.dart';
 import 'package:job/feature/frontend/controller/frontend_controller.dart';
 import 'package:job/feature/profile/presentation/widgets/login_option_widget.dart';
 import 'package:job/helper/route_helper.dart';
@@ -50,10 +51,20 @@ class _LandingPageAppBarState extends State<LandingPageAppBar> {
               child: Center(child: SizedBox(width: Dimensions.webMaxWidth,
                 child: Row(children: [
                   MenuButtonWeb(title: 'recruiter'.tr, onTap: () {
-                    Get.toNamed(RouteHelper.getCreateCompanyRoute());
+                    if(Get.find<AuthenticationController>().isLoggedIn()){
+                      Get.toNamed(RouteHelper.getCreateCompanyRoute());
+                    }else{
+                      Get.toNamed(RouteHelper.getCompanyLoginRoute());
+                    }
+
                   },),
                   MenuButtonWeb(title: 'post_a_job'.tr, onTap: () {
-                    Get.toNamed(RouteHelper.getPostAJobRoute());
+                    if(Get.find<AuthenticationController>().isLoggedIn()){
+                      Get.toNamed(RouteHelper.getPostAJobRoute());
+                    }else{
+                      Get.toNamed(RouteHelper.getCompanyLoginRoute());
+                    }
+
                   },),
                   Spacer(),
 
@@ -79,7 +90,7 @@ class _LandingPageAppBarState extends State<LandingPageAppBar> {
                     },
                   ) ,
                   MenuButtonWeb(title: 'contact_us'.tr, onTap: () {
-
+                    Get.toNamed(RouteHelper.getContactUsRoute());
                   },),
                 ]),)),
             ),

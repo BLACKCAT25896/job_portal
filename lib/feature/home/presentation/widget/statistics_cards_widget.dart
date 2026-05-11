@@ -1,3 +1,4 @@
+import 'package:job/common/widget/custom_divider.dart';
 import 'package:job/common/widget/responsive_grid_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -5,8 +6,8 @@ import 'package:job/common/widget/custom_contaner.dart';
 import 'package:job/common/widget/custom_image.dart';
 import 'package:job/feature/report_management/domain/model/dashboard_report_data_model.dart';
 import 'package:job/feature/report_management/logic/report_controller.dart';
+import 'package:job/helper/app_color_helper.dart';
 import 'package:job/helper/price_converter.dart';
-import 'package:job/helper/responsive_helper.dart';
 import 'package:job/util/dimensions.dart';
 import 'package:job/util/images.dart';
 import 'package:job/util/styles.dart';
@@ -16,42 +17,43 @@ class StatisticsCardsWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    bool isDesktop = ResponsiveHelper.isDesktop(context);
     return GetBuilder<ReportController>(builder: (reportController) {
       DashboardReportModel? dashboardReportModel = reportController.dashboardReportModel;
-      final stats = dashboardReportModel?.summary;
-      final earnings = dashboardReportModel?.earnings;
+      final stats = dashboardReportModel?.data?.cards;
+
 
 
 
         return Padding(padding: EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeDefault),
-          child: CustomContainer(showShadow: false, color: isDesktop?
-          Theme.of(context).cardColor: Colors.transparent,
-            child: Column(spacing: Dimensions.fontSizeDefault,
-              crossAxisAlignment: CrossAxisAlignment.start, children: [
+          child: Column(spacing: Dimensions.fontSizeDefault,
+            crossAxisAlignment: CrossAxisAlignment.start, children: [
 
 
-              ResponsiveMasonryGrid(children: [
-                OrderSummeryCardWidget(count: stats?.totalCustomers??0,
-                    title: "total_customer".tr,
-                     icon: Images.customer),
+            ResponsiveMasonryGrid(children: [
+              OrderSummeryCardWidget(count: stats?.applications??0,
+                  textColor: systemPrimaryColor(),
+                  title: "total_applications".tr, cardColor: Color(0xFFECF0FD),
+                   icon: Images.application),
 
-                OrderSummeryCardWidget(count: stats?.totalProducts??0,
-                    title: "total_products".tr, icon: Images.product),
+              OrderSummeryCardWidget(count: stats?.shortlisted??0,
+                  cardColor: Color(0xFFFCF1C5),
+                  textColor: Colors.orange,
+                  title: "shortlisted".tr, icon: Images.shortlisted),
 
-                OrderSummeryCardWidget(count: stats?.totalCategories??0,
-                    title: "total_category".tr, icon: Images.category),
+              OrderSummeryCardWidget(count: stats?.hired??0,
+                  cardColor: Color(0xFFCFF8E3),
+                  textColor: Colors.green,
+                  title: "hired".tr, icon: Images.hired),
 
-                OrderSummeryCardWidget(count: stats?.totalBrands??0,
-                    title: "total_brands".tr, icon: Images.brand),
+              OrderSummeryCardWidget(count: stats?.rejected??0,
+                  cardColor: Color(0xFFFCE0E0),
+                  textColor: Colors.red,
+                  title: "rejected".tr, icon: Images.rejected),
 
-                OrderSummeryCardWidget(value: earnings?.totalSales ??0,
-                    title: "total_sales".tr, icon: Images.sales)
 
 
-              ]),
-              ],
-            ),
+            ]),
+            ],
           ),
         );
       },
@@ -75,11 +77,10 @@ class OrderSummeryCardWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomContainer(borderRadius: 5, color: cardColor,
+    return CustomContainer(borderRadius: 15,
         verticalPadding: Dimensions.paddingSizeDefault,
         horizontalPadding: Dimensions.paddingSizeDefault,
-        child: Column(crossAxisAlignment: CrossAxisAlignment.start,
-            spacing: Dimensions.paddingSizeDefault, children: [
+        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
 
           Row(spacing: Dimensions.paddingSizeSmall, children: [
 
@@ -87,7 +88,8 @@ class OrderSummeryCardWidget extends StatelessWidget {
             if(value != null)
               Expanded(
                 child: Text(PriceConverter.convertPrice(context, value!),
-                    style: textBold.copyWith(fontSize: Dimensions.fontSizeOverLarge, color: textColor)),
+                    style: textBold.copyWith(fontSize: Dimensions.fontSizeOverLarge,
+                        color: textColor)),
               ),
             if(count != null)
               Expanded(
@@ -96,11 +98,17 @@ class OrderSummeryCardWidget extends StatelessWidget {
                       fontSize: Dimensions.fontSizeOverLarge)),
                 ),
               ),
-              CustomImage(width: 25, image: icon, isLocalAsset: true,),
+              CustomContainer(color: cardColor,showShadow: false,
+                  child: CustomImage(width: 25, image: icon, isLocalAsset: true,)),
             ]),
 
-          Text(title, style: textSemiBold.copyWith(color: textColor,
-              fontSize: Dimensions.fontSizeLarge)),
+          Text(title, style: textRegular.copyWith(color: textColor)),
+              CustomDivider(),
+              Row(spacing: 5, children: [
+                  Icon(Icons.calendar_month_sharp, color: systemPrimaryColor(),size: 14),
+                  Text("updated_today".tr, style: textRegular.copyWith()),
+                ],
+              )
 
 
     ]));

@@ -24,6 +24,7 @@ class _SelectPublicIndustryWidgetState extends State<SelectPublicIndustryWidget>
     },
       builder: (industryController) {
         return DropdownSearch<IndustryItem>(
+          height: 50,
           hintText: 'select_industry'.tr,
           selectedItem: industryController.selectedIndustryItem,
           itemLabel: (item) => item.name ?? "",

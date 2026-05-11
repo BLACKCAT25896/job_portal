@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:job/common/global_widget/custom_web_scroll_view_widget.dart';
-import 'package:job/feature/home/presentation/widget/sales_report_ratio_chart.dart';
 import 'package:job/feature/home/presentation/widget/statistics_cards_widget.dart';
 import 'package:job/feature/report_management/domain/model/dashboard_report_data_model.dart';
 import 'package:job/feature/report_management/logic/report_controller.dart';
@@ -34,11 +33,11 @@ class AdminDashboardSection extends StatelessWidget {
                   child: ResponsiveHelper.isDesktop(context)?
                   Row(crossAxisAlignment: CrossAxisAlignment.start,spacing: Dimensions.paddingSizeDefault, children: [
 
-                    SizedBox(width: 300, child: const SalesReportRatioChartWidget()),
+
                   ]): Column(crossAxisAlignment: CrossAxisAlignment.start,
                       spacing: Dimensions.paddingSizeDefault, children: [
 
-                        const SalesReportRatioChartWidget(),
+
                       ])),
 
             ],

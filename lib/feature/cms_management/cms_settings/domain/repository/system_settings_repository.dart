@@ -20,16 +20,7 @@ class SystemSettingsRepository{
 
 
   Future<Response?> updateGeneralSetting (SettingItem body) async {
-    return await apiClient.postData(AppConstants.generalSettingUpdate, {
-      "site_title" : body.siteTitle,
-      "phone" : body.phone,
-      "email" : body.email,
-      "address" : body.address,
-      "header_notice" : body.headerNotice,
-      "app_version" : body.appVersion,
-      "app_url" : body.appUrl,
-      "currency_symbol": body.currencySymbol
-    });
+    return await apiClient.postData(AppConstants.generalSettingUpdate, body.toJson());
   }
 
   Future<Response?> sideBarColorUpdate (String color) async {

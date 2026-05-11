@@ -50,18 +50,6 @@ class SettingController extends GetxController implements GetxService{
     update();
   }
 
-  Future<void> getGeneralSettingInfo() async {
-    isLoading = true;
-    update();
-   // Response? response = await settingRepository.clearCache();
-   //  if(response?.statusCode == 200){
-   //    showCustomSnackBar("cache_cleared_successfully".tr, isError: false);
-   //  }else{
-   //    ApiChecker.checkApi(response!);
-   //  }
-    isLoading = false;
-    update();
-  }
 
 
 }

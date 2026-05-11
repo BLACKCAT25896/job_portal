@@ -24,7 +24,7 @@ class HeaderProfileInfo extends StatelessWidget {
             if(Get.find<ProfileController>().profileModel == null) {
               Get.find<ProfileController>().getCompanyProfileInfo();
             }
-          }else{
+          }else if(userType == "Candidate"){
             if(Get.find<ProfileController>().profileModel == null) {
               Get.find<ProfileController>().getCandidateProfileInfo();
             }

@@ -14,13 +14,12 @@ class Images {
   static const String activeProfile = 'assets/image/profile.png';
   static const String flag = 'assets/image/flag.png';
   static const String userManual = 'assets/image/userManual.png';
+  static const String loginBgImage = 'assets/image/banner/employer-bg-login.jpg';
+  static const String application = 'assets/image/banner/application.png';
+  static const String shortlisted = 'assets/image/banner/shorlisted.png';
+  static const String hired = 'assets/image/banner/hired.png';
+  static const String rejected = 'assets/image/banner/rejected.png';
 
-  //
-  static const String bronze = 'assets/image/Bronze Rank.png';
-  static const String cristal = 'assets/image/Cristal Rank.png';
-  static const String gold = 'assets/image/Gold Rank.png';
-  static const String platinum = 'assets/image/Platinum Rank.png';
-  static const String silver = 'assets/image/Silver Rank.png';
 
 
 

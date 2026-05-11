@@ -3,7 +3,6 @@ class PostBody {
   String? slug;
   String? description;
   int? postCategoryId;
-  int? createdBy;
   String? metaTitle;
   String? metaDescription;
   String? featuredImage;
@@ -19,7 +18,6 @@ class PostBody {
         this.slug,
         this.description,
         this.postCategoryId,
-        this.createdBy,
         this.metaTitle,
         this.metaDescription,
         this.featuredImage,
@@ -35,7 +33,6 @@ class PostBody {
     slug = json['slug'];
     description = json['description'];
     postCategoryId = json['post_category_id'];
-    createdBy = json['created_by'];
     metaTitle = json['meta_title'];
     metaDescription = json['meta_description'];
     featuredImage = json['featured_image'];
@@ -53,7 +50,6 @@ class PostBody {
     data['slug'] = slug;
     data['description'] = description;
     data['post_category_id'] = postCategoryId;
-    data['created_by'] = createdBy;
     data['meta_title'] = metaTitle;
     data['meta_description'] = metaDescription;
     data['featured_image'] = featuredImage;

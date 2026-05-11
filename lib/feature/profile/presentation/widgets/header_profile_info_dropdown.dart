@@ -50,7 +50,7 @@ class _HeaderProfileInfoMenuState extends State<HeaderProfileInfoMenu> {
               Get.offAllNamed(RouteHelper.getSignInRoute());
             },
           ),
-        ] :[
+        ] :userType == "Company"?[
             SimpleMenuItem(title: 'billing'.tr, icon: Icons.payment_outlined,
                 onTap: () => Get.toNamed(RouteHelper.getProfileRoute())),
 
@@ -76,6 +76,22 @@ class _HeaderProfileInfoMenuState extends State<HeaderProfileInfoMenu> {
                 onTap: () => Get.toNamed(RouteHelper.getProfileRoute())),
 
             SimpleMenuItem(title: 'user_management'.tr, icon: Icons.manage_accounts_outlined,
+                onTap: () => Get.toNamed(RouteHelper.getProfileRoute())),
+
+            SimpleMenuItem(title: 'logout'.tr, icon: Icons.logout,
+                onTap: () {
+                  Get.find<AuthenticationController>().clearSharedData();
+                  Get.offAllNamed(RouteHelper.getSignInRoute());
+                }),
+          ]:[
+
+            SimpleMenuItem(title: 'dashboard'.tr, icon: Icons.dashboard,
+                onTap: () => Get.toNamed(RouteHelper.getDashboardRoute())),
+
+            SimpleMenuItem(title: 'profile'.tr, icon: Icons.person_outline,
+                onTap: () => Get.toNamed(RouteHelper.getCandidateProfileRoute())),
+
+            SimpleMenuItem(title: 'change_password'.tr, icon: Icons.lock_outline,
                 onTap: () => Get.toNamed(RouteHelper.getProfileRoute())),
 
             SimpleMenuItem(title: 'logout'.tr, icon: Icons.logout,
