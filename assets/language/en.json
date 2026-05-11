@@ -299,5 +299,16 @@
   "total_applications": "Total Applications",
   "shortlisted": "Shortlisted",
   "hired": "Hired",
-  "rejected": "Rejected"
+  "rejected": "Rejected",
+  "hiring_pipeline": "Hiring Pipeline",
+  "current_funnel_conversion": "Current Funnel Conversion",
+  "updated_today": "Updated Today",
+  "applied": "Applied",
+  "interview": "Interview",
+  "final_interview": "Final Interview",
+  "recent_applications": "Recent Applications",
+  "latest_five_submissions": "Latest five submissions",
+  "view_all": "View All",
+  "recent_activity": "Recent Activity",
+  "applications_by_category": "Applications by Category"
 }

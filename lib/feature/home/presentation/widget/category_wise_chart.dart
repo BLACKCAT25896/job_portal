@@ -19,13 +19,10 @@ class CategoryWiseChart extends StatelessWidget {
     );
   }
   Widget _buildBarChart() {
-    return _Card(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            children: [
-              const Text('Applications by Category', style: _cardTitleStyle),
+    return CustomContainer(
+      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          Row(children: [
+               Text('applications_by_category', style: textSemiBold.copyWith(fontSize: Dimensions.fontSizeExtraLarge) ),
               const Spacer(),
               _Chip(label: 'This Year', color: systemPrimaryColor()),
             ],
@@ -40,19 +37,8 @@ class CategoryWiseChart extends StatelessWidget {
     );
   }
 }
-const _cardTitleStyle = TextStyle(fontSize: 15, fontWeight: FontWeight.w700, letterSpacing: -0.2);
 
-class _Card extends StatelessWidget {
-  final Widget child;
-  const _Card({required this.child});
 
-  @override
-  Widget build(BuildContext context) {
-    return CustomContainer(
-      child: child,
-    );
-  }
-}
 class _Chip extends StatelessWidget {
   final String label;
   final Color color;
