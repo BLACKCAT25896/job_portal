@@ -33,7 +33,7 @@ class JobDetailsTitleSection extends StatelessWidget {
                   Expanded(child: Text("${"application_deadline".tr} : "
                       "${DateConverter.quotationDateAndTime(DateTime.parse(job?.jobExpiryDate??''))}")),
                   IntrinsicWidth(child: CustomButton(onTap: (){
-                    if(Get.find<AuthenticationController>().loggedIn()){
+                    if(Get.find<AuthenticationController>().isLoggedIn()){
                       Get.toNamed(RouteHelper.getJobApplyRoute());
                     }else{
                       Get.toNamed(RouteHelper.getLoginRoute());

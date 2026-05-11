@@ -23,13 +23,6 @@ class _LoginScreenState extends State<LoginScreen>
   @override
   void initState() {
     super.initState();
-
-    if (Get.find<AuthenticationController>().isLoggedIn()) {
-      Future.delayed(const Duration(milliseconds: 1), () {
-        Get.offAllNamed(RouteHelper.getDashboardRoute());
-      });
-    }
-
     _controller =
     AnimationController(vsync: this, duration: const Duration(seconds: 6))
       ..repeat(reverse: true);
