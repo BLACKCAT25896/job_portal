@@ -1,4 +1,8 @@
 import 'package:job/feature/home/presentation/widget/category_wise_chart.dart';
+import 'package:job/feature/home/presentation/widget/hiring_pipeline_widget.dart';
+import 'package:job/feature/home/presentation/widget/recent_activity_widget.dart';
+import 'package:job/feature/home/presentation/widget/recent_application_widget.dart';
+import 'package:job/feature/home/presentation/widget/vacancy_widget.dart';
 import 'package:job/helper/app_color_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -44,16 +48,20 @@ class _HomeScreenState extends State<HomeScreen> {
                 DashboardReportModel? reportModel = reportController.dashboardReportModel;
 
                 return reportModel != null?
-                Column(crossAxisAlignment: CrossAxisAlignment.start,
-                  spacing: Dimensions.paddingSizeDefault, children: [
+                Padding(
+                  padding: EdgeInsets.symmetric(vertical: Dimensions.paddingSizeDefault),
+                  child: Column(crossAxisAlignment: CrossAxisAlignment.start,
+                    spacing: Dimensions.paddingSizeDefault, children: [
 
+                      const StatisticsCardsWidget(),
+                      CategoryWiseChart(),
+                      HiringPipelineWidget(),
+                      RecentApplicationWidget(),
+                      VacancyWidget(),
+                      RecentActivityWidget(),
 
-                    const StatisticsCardsWidget(),
-                    CategoryWiseChart()
-
-
-
-                  ],
+                    ],
+                  ),
                 ):SizedBox();
               }
               ),

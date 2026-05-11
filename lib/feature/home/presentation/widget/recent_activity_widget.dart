@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:job/common/widget/custom_contaner.dart';
 import 'package:job/feature/report_management/logic/report_controller.dart';
+import 'package:job/helper/responsive_helper.dart';
 import 'package:job/util/dimensions.dart';
 import 'package:job/util/styles.dart';
 
@@ -10,6 +11,8 @@ class RecentActivityWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isMobile = ResponsiveHelper.isMobile(context);
+
     return GetBuilder<ReportController>(
       builder: (controller) {
         final recentActivity =
@@ -32,57 +35,184 @@ class RecentActivityWidget extends StatelessWidget {
         ];
 
         return Padding(
-          padding: EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeDefault),
-          child: CustomContainer(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          padding: EdgeInsets.symmetric(
+            horizontal: Dimensions.paddingSizeDefault,
+          ),
+          child: CustomContainer(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
 
-            Text('recent_activity'.tr, style: textSemiBold.copyWith(fontSize: Dimensions.fontSizeExtraLarge)),
-
-            const SizedBox(height: 24),
-
-            Row(crossAxisAlignment: CrossAxisAlignment.start,
-              children: List.generate(recentActivity.length, (i) {
-                      final activity = recentActivity[i];
-
-                      final color = colors[i % colors.length];
-                      final icon = icons[i % icons.length];
-
-                      return Expanded(
-                        child: Row(children: [
-                            Expanded(child: Column(children: [
-                              Container(width: 42, height: 42,
-                                  decoration: BoxDecoration(
-                                      shape: BoxShape.circle,
-                                      color: color.withValues(alpha: 0.12)),
-                                    child: Icon(icon, size: 18, color: color)),
-
-                                  const SizedBox(height: 10),
-
-                                  Text(activity.message ?? '',
-                                    textAlign: TextAlign.center,
-                                    style: textRegular.copyWith()),
-
-                                  const SizedBox(height: 4),
-
-                                  Text(activity.time ?? '',
-                                    textAlign: TextAlign.center,
-                                    style: textRegular.copyWith()),
-                                ],
-                              ),
-                            ),
-
-                            if (i < recentActivity.length - 1)
-                              Expanded(child: Container(height: 2,
-                                  margin: const EdgeInsets.only(bottom: 52),
-                                  decoration: BoxDecoration(
-                                    color: Colors.grey.shade300,
-                                    borderRadius: BorderRadius.circular(100))),
-                              ),
-                          ],
-                        ),
-                      );
-                    },
+                /// TITLE
+                Text(
+                  'recent_activity'.tr,
+                  style: textSemiBold.copyWith(
+                    fontSize: Dimensions.fontSizeExtraLarge,
                   ),
                 ),
+
+                const SizedBox(height: 24),
+
+                /// MOBILE VIEW
+                if (isMobile)
+                  Column(
+                    children: List.generate(
+                      recentActivity.length,
+                          (i) {
+                        final activity = recentActivity[i];
+
+                        final color = colors[i % colors.length];
+                        final icon = icons[i % icons.length];
+
+                        return Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+
+                            /// LEFT TIMELINE
+                            Column(
+                              children: [
+
+                                Container(
+                                  width: 42,
+                                  height: 42,
+                                  decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    color: color.withValues(alpha: 0.12),
+                                  ),
+                                  child: Icon(
+                                    icon,
+                                    size: 18,
+                                    color: color,
+                                  ),
+                                ),
+
+                                if (i < recentActivity.length - 1)
+                                  Container(
+                                    width: 2,
+                                    height: 55,
+                                    color: Colors.grey.shade300,
+                                  ),
+                              ],
+                            ),
+
+                            const SizedBox(width: 14),
+
+                            /// CONTENT
+                            Expanded(
+                              child: Padding(
+                                padding: const EdgeInsets.only(top: 4),
+                                child: Column(
+                                  crossAxisAlignment:
+                                  CrossAxisAlignment.start,
+                                  children: [
+
+                                    Text(
+                                      activity.message ?? '',
+                                      style: textSemiBold.copyWith(
+                                        fontSize: 14,
+                                      ),
+                                    ),
+
+                                    const SizedBox(height: 4),
+
+                                    Text(
+                                      activity.time ?? '',
+                                      style: textRegular.copyWith(
+                                        fontSize: 12,
+                                        color: Colors.grey.shade600,
+                                      ),
+                                    ),
+
+                                    const SizedBox(height: 22),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ],
+                        );
+                      },
+                    ),
+                  )
+
+                /// DESKTOP VIEW
+                else
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: List.generate(
+                      recentActivity.length,
+                          (i) {
+                        final activity = recentActivity[i];
+
+                        final color = colors[i % colors.length];
+                        final icon = icons[i % icons.length];
+
+                        return Expanded(
+                          child: Row(
+                            children: [
+
+                              Expanded(
+                                child: Column(
+                                  children: [
+
+                                    Container(
+                                      width: 42,
+                                      height: 42,
+                                      decoration: BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        color:
+                                        color.withValues(alpha: 0.12),
+                                      ),
+                                      child: Icon(
+                                        icon,
+                                        size: 18,
+                                        color: color,
+                                      ),
+                                    ),
+
+                                    const SizedBox(height: 10),
+
+                                    Text(
+                                      activity.message ?? '',
+                                      textAlign: TextAlign.center,
+                                      style: textSemiBold.copyWith(
+                                        fontSize: 13,
+                                      ),
+                                    ),
+
+                                    const SizedBox(height: 4),
+
+                                    Text(
+                                      activity.time ?? '',
+                                      textAlign: TextAlign.center,
+                                      style: textRegular.copyWith(
+                                        fontSize: 11,
+                                        color: Colors.grey.shade600,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+
+                              if (i < recentActivity.length - 1)
+                                Expanded(
+                                  child: Container(
+                                    height: 2,
+                                    margin: const EdgeInsets.only(
+                                      bottom: 52,
+                                    ),
+                                    decoration: BoxDecoration(
+                                      color: Colors.grey.shade300,
+                                      borderRadius:
+                                      BorderRadius.circular(100),
+                                    ),
+                                  ),
+                                ),
+                            ],
+                          ),
+                        );
+                      },
+                    ),
+                  ),
               ],
             ),
           ),
