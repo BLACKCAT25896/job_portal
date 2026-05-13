@@ -11,7 +11,9 @@ class PublicIndustryItemWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomContainer(
+    return CustomContainer(onTap: (){
+
+    },
         borderRadius: 5, showShadow: false,
         child: Row(spacing: Dimensions.paddingSizeExtraSmall,
           children: [

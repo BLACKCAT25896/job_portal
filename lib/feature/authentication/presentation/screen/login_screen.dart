@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:job/common/widget/custom_contaner.dart';
 import 'package:job/feature/authentication/logic/authentication_controller.dart';
-import 'package:job/helper/route_helper.dart';
 
 import '../widgets/login_widget.dart';
 

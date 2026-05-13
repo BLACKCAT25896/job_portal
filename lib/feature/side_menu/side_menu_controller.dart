@@ -244,7 +244,9 @@ class SideBarController extends GetxController implements GetxService{
 
   List<dynamic> _candidateSideMenuItems() { return  [
     SideMenuNestedExpansionItem(title: "dashboard".tr, keyValue: "dashboard", parent: true,
-      icon: Images.dashboardSvgIcon,onTap: () => Get.toNamed(RouteHelper.getDashboardRoute()),),
+      icon: Images.dashboardSvgIcon,onTap: () {
+
+        }),
 
 
     SideMenuNestedExpansionItem(title: "manage_profile".tr, keyValue: "manage_profile", parent: true,

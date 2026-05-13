@@ -7,6 +7,7 @@ import 'package:job/feature/candidate_education/controller/candidate_education_c
 import 'package:job/feature/candidate_education/domain/repository/candidate_education_repository.dart';
 import 'package:job/feature/candidate_experience/controller/candidate_experience_controller.dart';
 import 'package:job/feature/candidate_experience/domain/repository/candidate_experience_repository.dart';
+import 'package:job/feature/candidate_panel/logic/candidate_panel_controller.dart';
 import 'package:job/feature/candidate_resume/controller/candidate_resume_controller.dart';
 import 'package:job/feature/candidate_resume/domain/repository/candidate_resume_repository.dart';
 import 'package:job/feature/career_level/controller/career_level_controller.dart';
@@ -239,6 +240,7 @@ Future<Map<String, Map<String, String>>> init() async {
 
   Get.lazyPut(() => PackageRepository(apiClient: Get.find()));
   Get.lazyPut(() => PackageController(packageRepository: Get.find()));
+  Get.lazyPut(() => CandidatePanelController());
 
 
 

@@ -1,10 +1,16 @@
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:job/common/layout/base_layout.dart';
+import 'package:job/common/layout/candidate_base_layout.dart';
 import 'package:job/common/widget/custom_contaner.dart';
-import 'package:job/common/widget/custom_divider.dart';
-import 'package:job/feature/profile/presentation/widgets/profile_info_widget.dart';
-import 'package:job/feature/side_menu/side_menu_controller.dart';
+import 'package:job/feature/candidate_education/presentation/widgets/candidate_education_list_widget.dart';
+import 'package:job/feature/candidate_panel/logic/candidate_panel_controller.dart';
+import 'package:job/feature/candidate_panel/widgets/address_details_widget.dart';
+import 'package:job/feature/candidate_panel/widgets/candidate_personal_details_widget.dart';
+import 'package:job/feature/candidate_panel/widgets/candidate_profile_section_widget.dart';
+import 'package:job/feature/candidate_panel/widgets/career_and_application_informaton.dart';
+import 'package:job/feature/candidate_panel/widgets/relevant_information_widget.dart';
+import 'package:job/feature/profile/presentation/widgets/candidate_dashboard/dashboard_heading_widget.dart';
 import 'package:job/util/dimensions.dart';
 
 class CandidateProfileScreen extends StatefulWidget {
@@ -22,32 +28,26 @@ class _CandidateProfileScreenState extends State<CandidateProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: BaseLayout(scrollController: scrollController, child: Center(
-        child: SizedBox(width: Dimensions.webMaxWidth,
-          child: GetBuilder<SideBarController>(
-            builder: (controller) {
-              return Row(
-                children: [
-                  CustomContainer(width: 250, child: Column(children: [
-                    ProfileInfoWidget(),
-                    CustomDivider(),
+      body: CandidateBaseLayout(scrollController: scrollController,
+          child: CustomContainer(
+            child: GetBuilder<CandidatePanelController>(
+              builder: (controller) {
+                return Column(spacing: Dimensions.paddingSizeDefault, children: [
+                  DashboardHeadingWidget(),
+                  CandidateProfileSectionWidget(),
+                  if(controller.selectedSection?.name  == "personal_information")...[
+                    CandidatePersonalDetailsWidget(),
+                    AddressDetailsWidget(),
+                    CareenAndApplicationWidget(),
+                    RelevantInformationWidget()
+                  ]else if(controller.selectedSection?.name  == "education_and_training")...[
+                    CandidateEducationListWidget(scrollController: scrollController)
+                  ]
 
-                    SingleChildScrollView(
-                      child: Column(
-                        children: [
-                          ...controller.candidateSideMenuItems,
-                        ],
-                      ),
-                    ),
-
-                  ])),
-                  Expanded(child: Container()),
-                ],
-              );
-            }
-          ),
-        ),
-      )),
+                ]);
+              }
+            ),
+          )),
     );
   }
 

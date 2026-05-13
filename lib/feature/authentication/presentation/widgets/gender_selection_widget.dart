@@ -14,9 +14,9 @@ class GenderSelectionWidget extends StatelessWidget {
     return GetBuilder<AuthenticationController>(
       builder: (controller) {
         return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            Padding(padding: const EdgeInsets.symmetric(vertical: 8.0),
+            Padding(padding: const EdgeInsets.symmetric(vertical: 10),
               child: Text("gender".tr, style: textRegular.copyWith(fontSize: Dimensions.fontSizeLarge)),),
-            SizedBox(height: 34,
+            SizedBox(height: 40,
               child: ListView.separated(
                 physics: NeverScrollableScrollPhysics(),
                 scrollDirection: Axis.horizontal,

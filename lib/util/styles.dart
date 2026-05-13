@@ -83,6 +83,14 @@ TextStyle landingTextStyle(BuildContext context,
   );
 }
 
+TextStyle sectionHeadingTextStyle(BuildContext context,
+    {Color? color}) {
+  return textSemiBold.copyWith(
+    fontSize: min((MediaQuery.sizeOf(context).width) * 0.03, 18),
+    color: color,
+  );
+}
+
 TextStyle landingSectionStyle(BuildContext context,
     {Color? color}) {
   return landingMediumFont.copyWith(color: color?? systemPrimaryColor(),
