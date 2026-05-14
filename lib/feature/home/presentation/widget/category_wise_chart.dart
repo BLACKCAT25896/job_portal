@@ -94,7 +94,8 @@ class _CategoryBarChart extends StatelessWidget {
                   child: Padding(padding: EdgeInsets.only(right: i < data.length - 1 ? 6 : 0),
                     child: Column(mainAxisAlignment: MainAxisAlignment.end, children: [
 
-                      Text(item.total.toString(), style: textRegular.copyWith()),
+                      Text(item.total.toString(),
+                          style: textRegular.copyWith(fontSize: Dimensions.fontSizeExtraSmall)),
 
                       const SizedBox(height: 3),
 
@@ -106,7 +107,7 @@ class _CategoryBarChart extends StatelessWidget {
                         const SizedBox(height: 4),
 
                         RotatedBox(quarterTurns: 3, child: Text(item.name??'',
-                            style: textRegular.copyWith(fontSize: Dimensions.fontSizeSmall),
+                            style: textRegular.copyWith(fontSize: Dimensions.fontSizeExtraSmall),
                             overflow: TextOverflow.ellipsis),
                         ),
                       ],

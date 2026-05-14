@@ -3,13 +3,21 @@ import 'package:job/common/controller/image_picker_controller.dart';
 import 'package:job/common/controller/network_controller.dart';
 import 'package:job/feature/candidate/controller/candidate_controller.dart';
 import 'package:job/feature/candidate/domain/repository/candidate_repository.dart';
+import 'package:job/feature/candidate_certificate/controller/candidate_certificate_controller.dart';
+import 'package:job/feature/candidate_certificate/domain/repository/candidate_certificate_repository.dart';
 import 'package:job/feature/candidate_education/controller/candidate_education_controller.dart';
 import 'package:job/feature/candidate_education/domain/repository/candidate_education_repository.dart';
 import 'package:job/feature/candidate_experience/controller/candidate_experience_controller.dart';
 import 'package:job/feature/candidate_experience/domain/repository/candidate_experience_repository.dart';
+import 'package:job/feature/candidate_links/controller/candidate_link_controller.dart';
+import 'package:job/feature/candidate_links/domain/repository/candidate_link_repository.dart';
 import 'package:job/feature/candidate_panel/logic/candidate_panel_controller.dart';
+import 'package:job/feature/candidate_reference/controller/candidate_reference_controller.dart';
+import 'package:job/feature/candidate_reference/domain/repository/candidate_reference_repository.dart';
 import 'package:job/feature/candidate_resume/controller/candidate_resume_controller.dart';
 import 'package:job/feature/candidate_resume/domain/repository/candidate_resume_repository.dart';
+import 'package:job/feature/candidate_training/controller/candidate_training_controller.dart';
+import 'package:job/feature/candidate_training/domain/repository/candidate_training_repository.dart';
 import 'package:job/feature/career_level/controller/career_level_controller.dart';
 import 'package:job/feature/career_level/domain/repository/career_level_repository.dart';
 import 'package:job/feature/company/controller/company_controller.dart';
@@ -165,8 +173,21 @@ Future<Map<String, Map<String, String>>> init() async {
   Get.lazyPut(() => CandidateEducationRepository(apiClient: Get.find()));
   Get.lazyPut(() => CandidateEducationController(candidateEducationRepository: Get.find()));
 
+  Get.lazyPut(() => CandidateCertificateRepository(apiClient: Get.find()));
+  Get.lazyPut(() => CandidateCertificateController(candidateCertificateRepository: Get.find()));
+
+  Get.lazyPut(() => CandidateTrainingRepository(apiClient: Get.find()));
+  Get.lazyPut(() => CandidateTrainingController(candidateTrainingRepository: Get.find()));
+
   Get.lazyPut(() => CandidateExperienceRepository(apiClient: Get.find()));
   Get.lazyPut(() => CandidateExperienceController(candidateExperienceRepository: Get.find()));
+
+  Get.lazyPut(() => CandidateReferenceRepository(apiClient: Get.find()));
+  Get.lazyPut(() => CandidateReferenceController(candidateReferenceRepository: Get.find()));
+
+
+  Get.lazyPut(() => CandidateLinkRepository(apiClient: Get.find()));
+  Get.lazyPut(() => CandidateLinkController(candidateLinkRepository: Get.find()));
 
 
   Get.lazyPut(() => CandidateResumeRepository(apiClient: Get.find()));

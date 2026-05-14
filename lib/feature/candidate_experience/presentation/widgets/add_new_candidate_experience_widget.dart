@@ -2,8 +2,6 @@ import 'package:job/common/controller/date_picker_controller.dart';
 import 'package:job/common/widget/custom_checkbox.dart';
 import 'package:job/common/widget/date_selection_widget.dart';
 import 'package:job/common/widget/responsive_grid_widget.dart';
-import 'package:job/feature/candidate/controller/candidate_controller.dart';
-import 'package:job/feature/candidate/presentation/widgets/candidate_selection_widget.dart';
 import 'package:job/feature/candidate_experience/controller/candidate_experience_controller.dart';
 import 'package:job/feature/candidate_experience/domain/models/candidate_experience_body.dart';
 import 'package:job/feature/candidate_experience/domain/models/candidate_experience_model.dart';
@@ -25,7 +23,13 @@ class AddNewCandidateExperienceWidget extends StatefulWidget {
 class _AddNewCandidateExperienceWidgetState extends State<AddNewCandidateExperienceWidget> {
   TextEditingController titleController = TextEditingController();
   TextEditingController companyController = TextEditingController();
+  TextEditingController companyBusinessController = TextEditingController();
+  TextEditingController designationController = TextEditingController();
+  TextEditingController departmentController = TextEditingController();
   TextEditingController descriptionController = TextEditingController();
+  TextEditingController expertiseAreasController = TextEditingController();
+  TextEditingController responsibilitiesController = TextEditingController();
+
 
   bool update = false;
   @override
@@ -43,8 +47,6 @@ class _AddNewCandidateExperienceWidgetState extends State<AddNewCandidateExperie
 
         ResponsiveMasonryGrid(width: 300, children: [
 
-          SelectCandidateWidget(),
-
           CustomTextField(title: "title".tr,
             controller: titleController,
             hintText: "title".tr,),
@@ -53,9 +55,18 @@ class _AddNewCandidateExperienceWidgetState extends State<AddNewCandidateExperie
             controller: companyController,
             hintText: "company".tr,),
 
-          CustomTextField(title: "description".tr,
-            controller: descriptionController,
-            hintText: "description".tr,),
+          CustomTextField(title: "company_business".tr,
+            controller: companyBusinessController,
+            hintText: "company_business".tr,),
+
+          CustomTextField(title: "designation".tr,
+            controller: designationController,
+            hintText: "designation".tr,),
+
+          CustomTextField(title: "department".tr,
+            controller: departmentController,
+            hintText: "department".tr,),
+
 
           DateSelectionWidget(title: "start_date".tr,),
           ExpiryDateSelectionWidget(title: "end_date".tr),
@@ -67,6 +78,24 @@ class _AddNewCandidateExperienceWidgetState extends State<AddNewCandidateExperie
 
         ]),
 
+            CustomTextField(
+              title: "expertise_areas".tr,
+              controller: expertiseAreasController,
+              hintText: "expertise_areas".tr,
+              maxLines: 5, minLines: 3,
+              inputType: TextInputType.multiline,
+              inputAction: TextInputAction.newline,
+            ),
+
+            CustomTextField(
+              title: "responsibilities".tr,
+              controller: descriptionController,
+              hintText: "responsibilities".tr,
+              maxLines: 5, minLines: 3,
+              inputType: TextInputType.multiline,
+              inputAction: TextInputAction.newline,
+            ),
+
 
 
 
@@ -75,13 +104,17 @@ class _AddNewCandidateExperienceWidgetState extends State<AddNewCandidateExperie
 
             Padding(padding: EdgeInsets.symmetric(vertical: Dimensions.paddingSizeDefault),
                 child: CustomButton(onTap: (){
-                  int? candidateId = Get.find<CandidateController>().selectedCandidateItem?.id;
                   String title = titleController.text.trim();
                   bool isCurrentlyWorking = candidateExperienceController.isCurrentlyWorking;
                   String company = companyController.text.trim();
                   String description = descriptionController.text.trim();
+                  String companyBusiness = companyBusinessController.text.trim();
+                  String designation = designationController.text.trim();
+                  String department = departmentController.text.trim();
+                  String expertiseAreas = expertiseAreasController.text.trim();
                   String startDate = Get.find<DatePickerController>().formatedFromDate;
                   String endDate = Get.find<DatePickerController>().formatedToDate;
+
 
                   if(title.isEmpty){
                     showCustomSnackBar("title_is_empty".tr);
@@ -93,18 +126,20 @@ class _AddNewCandidateExperienceWidgetState extends State<AddNewCandidateExperie
                     showCustomSnackBar("start_date_is_empty".tr);
                   }else if(endDate.isEmpty){
                     showCustomSnackBar("end_date_is_empty".tr);
-                  }else if(candidateId == null){
-                    showCustomSnackBar("select_candidate".tr);
                   }
+
                   else{
                     CandidateExperienceBody body = CandidateExperienceBody(
                       experienceTitle: title,
-                      candidateId:(candidateId),
-                      company: company,
+                      companyName: company,
+                      companyBusiness: companyBusiness,
+                      designation: designation,
+                      department: department,
+                      expertiseAreas: [expertiseAreas],
                       description: description,
                       startDate: startDate,
-                      endDate: endDate,
-                      currentlyWorking: isCurrentlyWorking? 1 : 0,
+                      endDate: isCurrentlyWorking? null: endDate,
+                      currentlyWorking: isCurrentlyWorking,
                       sMethod: update? "put" : "post"
                     );
                     if(update){

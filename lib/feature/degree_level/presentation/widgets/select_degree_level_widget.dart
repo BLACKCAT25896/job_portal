@@ -21,8 +21,9 @@ class _SelectDegreeLevelWidgetState extends State<SelectDegreeLevelWidget> {
   Widget build(BuildContext context) {
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
 
-      SizedBox(height: Dimensions.paddingSizeSmall),
-      CustomTitle(title: "degree_level", leftPadding: 0, fontSize: Dimensions.fontSizeDefault),
+      Padding(padding: const EdgeInsets.symmetric(vertical: 12),
+        child: CustomTitle(title: "degree_level", leftPadding: 0,
+            fontSize: Dimensions.fontSizeDefault),),
 
       GetBuilder<DegreeLevelController>(initState: (_) {
         if (Get.find<DegreeLevelController>().degreeLevelModel == null) {

@@ -1,50 +1,56 @@
 
+import 'package:job/helper/price_converter.dart';
+
 class CandidateExperienceItem {
   int? id;
-  int? candidateId;
-  String? experienceTitle;
-  String? company;
-  String? description;
+  String? companyName;
+  String? companyBusiness;
+  String? designation;
+  String? department;
   String? startDate;
   String? endDate;
   int? currentlyWorking;
-  int? status;
+  String? responsibilities;
+  String? expertiseAreas;
 
   CandidateExperienceItem(
       {this.id,
-        this.candidateId,
-        this.experienceTitle,
-        this.company,
-        this.description,
+        this.companyName,
+        this.companyBusiness,
+        this.designation,
+        this.department,
         this.startDate,
         this.endDate,
         this.currentlyWorking,
-        this.status,
+        this.responsibilities,
+        this.expertiseAreas,
        });
 
   CandidateExperienceItem.fromJson(Map<String, dynamic> json) {
-    id = json['id'];
-    candidateId = json['candidate_id'];
-    experienceTitle = json['experience_title'];
-    company = json['company'];
-    description = json['description'];
+    id = PriceConverter.parseInt(json['id']);
+    companyName = json['company_name'];
+    companyBusiness = json['company_business'];
+    designation = json['designation'];
+    department = json['department'];
     startDate = json['start_date'];
     endDate = json['end_date'];
-    currentlyWorking = json['currently_working'];
-    status = json['status'];
+    currentlyWorking = PriceConverter.parseInt(json['currently_working']);
+    responsibilities = json['responsibilities'];
+    expertiseAreas = json['expertise_areas'].toString();
   }
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = <String, dynamic>{};
     data['id'] = id;
-    data['candidate_id'] = candidateId;
-    data['experience_title'] = experienceTitle;
-    data['company'] = company;
-    data['description'] = description;
+    data['company_name'] = companyName;
+    data['company_business'] = companyBusiness;
+    data['designation'] = designation;
+    data['department'] = department;
     data['start_date'] = startDate;
     data['end_date'] = endDate;
     data['currently_working'] = currentlyWorking;
-    data['status'] = status;
+    data['responsibilities'] = responsibilities;
+    data['expertise_areas'] = expertiseAreas;
     return data;
   }
 }

@@ -52,7 +52,7 @@ class AppConstants {
   static const String favoriteJobs = '/favorite-jobs';
   static const String jobListings = '/job-listings';
   static const String jobStages = '/job-stages';
-  static const String jobApplications = '/job-applications';
+  static const String jobApplications = '/candidate/job-applications';
   static const String candidateEducation = '/candidate/candidate-education';
   static const String candidateExperience = '/candidate/candidate-experiences';
   static const String candidateResume = '/candidate/candidate-resumes';

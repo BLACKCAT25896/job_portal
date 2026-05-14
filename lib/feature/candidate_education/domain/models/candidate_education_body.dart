@@ -6,6 +6,8 @@ class CandidateEducationBody {
   String? institute;
   bool? isForeignInstitute;
   String? result;
+  String? cgpa;
+  String? scale;
   int? passingYear;
   int? durationYears;
   String? achievement;
@@ -21,6 +23,8 @@ class CandidateEducationBody {
         this.institute,
         this.isForeignInstitute,
         this.result,
+        this.cgpa,
+        this.scale,
         this.passingYear,
         this.durationYears,
         this.achievement,
@@ -36,6 +40,8 @@ class CandidateEducationBody {
     institute = json['institute'];
     isForeignInstitute = json['is_foreign_institute'];
     result = json['result'];
+    cgpa = json['cgpa'];
+    scale = json['scale'];
     passingYear = json['passing_year'];
     durationYears = json['duration_years'];
     achievement = json['achievement'];
@@ -53,6 +59,8 @@ class CandidateEducationBody {
     data['institute'] = institute;
     data['is_foreign_institute'] = isForeignInstitute;
     data['result'] = result;
+    data['cgpa'] = cgpa;
+    data['scale'] = scale;
     data['passing_year'] = passingYear;
     data['duration_years'] = durationYears;
     data['achievement'] = achievement;

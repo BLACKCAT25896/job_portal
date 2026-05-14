@@ -7,7 +7,6 @@ import 'package:job/common/widget/edit_delete_section.dart';
 import 'package:job/common/widget/numbering_widget.dart';
 import 'package:job/feature/job_application/domain/models/job_application_model.dart';
 import 'package:job/feature/job_application/controller/job_application_controller.dart';
-import 'package:job/feature/job_application/presentation/screens/create_new_job_application_screen.dart';
 import 'package:job/feature/job_application/presentation/widgets/add_new_job_application_widget.dart';
 import 'package:job/helper/responsive_helper.dart';
 import 'package:job/util/dimensions.dart';
@@ -45,9 +44,6 @@ class JobApplicationItemWidget extends StatelessWidget {
 
               Expanded(child: Text("${applicationItem?.jobListing?.jobTitle}", style: textMedium.copyWith(fontSize: Dimensions.fontSizeDefault),)),
               EditDeleteSection(isHorizontal: true,
-                  onEdit: (){
-                Get.to(()=> CreateNewJobApplicationScreen(applicationItem: applicationItem));
-              },
                 onDelete: (){
                   Get.dialog(ConfirmationDialog(title: "application", onTap: (){
                       Get.back();

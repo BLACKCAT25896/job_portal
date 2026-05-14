@@ -90,6 +90,7 @@ dependencies:
   meta_seo: ^3.0.9
   audioplayers: ^6.5.1
   flutter_quill: ^11.5.0
+  open_filex: ^4.7.0
 
 
 dev_dependencies:

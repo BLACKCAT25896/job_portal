@@ -1,4 +1,5 @@
 
+import 'package:job/feature/authentication/logic/authentication_controller.dart';
 import 'package:job/feature/cms_management/cms_settings/controller/system_settngs_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -148,11 +149,6 @@ class SideBarController extends GetxController implements GetxService{
       onTap: () => Get.toNamed(RouteHelper.getJobStageRoute()),),
 
 
-    SideMenuNestedExpansionItem(title: "job_application".tr, keyValue: "job_application", parent: true,
-      icon: Images.dashboardSvgIcon,
-      onTap: () => Get.toNamed(RouteHelper.getJobApplicationRoute()),),
-
-
     SideMenuNestedExpansionItem(title: "candidate".tr, keyValue: "candidate", parent: true,
       icon: Images.dashboardSvgIcon,
       onTap: () => Get.toNamed(RouteHelper.getCandidateRoute()),),
@@ -243,91 +239,42 @@ class SideBarController extends GetxController implements GetxService{
   ];}
 
   List<dynamic> _candidateSideMenuItems() { return  [
-    SideMenuNestedExpansionItem(title: "dashboard".tr, keyValue: "dashboard", parent: true,
+    SideMenuNestedExpansionItem(title: "profile".tr, keyValue: "profile", parent: true,
       icon: Images.dashboardSvgIcon,onTap: () {
+      Get.toNamed(RouteHelper.getCandidateProfileRoute());
+    }),
 
+
+    SideMenuNestedExpansionItem(title: "customized_cv".tr, keyValue: "customized_cv", parent: true,
+        icon: Images.dashboardSvgIcon,onTap: () {
+          Get.toNamed(RouteHelper.getCandidateResumeRoute());
         }),
 
 
-    SideMenuNestedExpansionItem(title: "manage_profile".tr, keyValue: "manage_profile", parent: true,
-      icon: Images.dashboardSvgIcon,
-      children: [
-        SideMenuItemWidget(title: 'profile'.tr, keyValue: 'profile',
-            onTap: () => Get.toNamed(RouteHelper.getUsersRoute())),
-        SideMenuItemWidget(title: 'customized_cv'.tr, keyValue: 'customized_cv',
-            onTap: () => Get.toNamed(RouteHelper.getUsersRoute())),
-
-
-        SideMenuItemWidget(title: 'email_cv'.tr, keyValue: 'email_cv',
-            onTap: () => Get.toNamed(RouteHelper.getUsersRoute())),
-
-      ],
-    ),
-
-    SideMenuNestedExpansionItem(title: "invitation".tr, keyValue: "invitation", parent: true,
-      icon: Images.dashboardSvgIcon,
-      children: [
-        SideMenuItemWidget(title: 'general_interview'.tr, keyValue: 'general_interview',
-            onTap: () => Get.toNamed(RouteHelper.getUsersRoute())),
-
-        SideMenuItemWidget(title: 'online_test'.tr, keyValue: 'online_test',
-            onTap: () => Get.toNamed(RouteHelper.getUsersRoute())),
-
-
-      ],
-    ),
 
     SideMenuNestedExpansionItem(title: "my_activity".tr, keyValue: "my_activity", parent: true,
-      icon: Images.dashboardSvgIcon,
-      children: [
+      icon: Images.dashboardSvgIcon, children: [
         SideMenuItemWidget(title: 'applied_jobs'.tr, keyValue: 'applied_jobs',
-            onTap: () => Get.toNamed(RouteHelper.getUsersRoute())),
+            onTap: () => Get.toNamed(RouteHelper.getJobApplicationRoute())),
 
-        SideMenuItemWidget(title: 'emailed_cv'.tr, keyValue: 'emailed_cv',
-            onTap: () => Get.toNamed(RouteHelper.getUsersRoute())),
 
         SideMenuItemWidget(title: 'shortlisted_job'.tr, keyValue: 'shortlisted_job',
-            onTap: () => Get.toNamed(RouteHelper.getUsersRoute())),
-
-
-        SideMenuItemWidget(title: 'following_employer'.tr, keyValue: 'following_employer',
-            onTap: () => Get.toNamed(RouteHelper.getUsersRoute())),
-
-        SideMenuItemWidget(title: 'transaction_overview'.tr, keyValue: 'transaction_overview',
-            onTap: () => Get.toNamed(RouteHelper.getUsersRoute())),
-
-
-
+            onTap: () => Get.toNamed(RouteHelper.getJobApplicationRoute())),
 
       ],
     ),
 
-
-    SideMenuNestedExpansionItem(title: "my_personal_hiring".tr, keyValue: "my_personal_hiring", parent: true,
-      icon: Images.dashboardSvgIcon,
-      children: [
-        SideMenuItemWidget(title: 'post_new_job'.tr, keyValue: 'post_new_job',
-            onTap: () => Get.toNamed(RouteHelper.getUsersRoute())),
-
-        SideMenuItemWidget(title: 'dashboard'.tr, keyValue: 'dashboard',
-            onTap: () => Get.toNamed(RouteHelper.getUsersRoute())),
-
-        SideMenuItemWidget(title: 'help'.tr, keyValue: 'help',
-            onTap: () => Get.toNamed(RouteHelper.getUsersRoute())),
-
-      ],
-    ),
 
     SideMenuNestedExpansionItem(title: "account_settings".tr, keyValue: "account_settings", parent: true,
-      icon: Images.dashboardSvgIcon,onTap: () => Get.toNamed(RouteHelper.getDashboardRoute()),),
+      icon: Images.dashboardSvgIcon,onTap: () {}),
 
 
     SideMenuNestedExpansionItem(title: "sign_out".tr, keyValue: "sign_out", parent: true,
-      icon: Images.dashboardSvgIcon,onTap: () => Get.toNamed(RouteHelper.getDashboardRoute()),),
+      icon: Images.dashboardSvgIcon,onTap: () {
 
-
-
-
+          Get.find<AuthenticationController>().clearSharedData();
+          Get.offAllNamed(RouteHelper.getSignInRoute());
+        }),
 
   ];}
 

@@ -1,3 +1,4 @@
+import 'package:job/util/dimensions.dart';
 import 'package:job/util/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -24,21 +25,19 @@ class _SelectCandidateWidgetState extends State<SelectCandidateWidget> {
   @override
   Widget build(BuildContext context) {
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-      Padding(padding: const EdgeInsets.only(top: 8.0),
+      Padding(padding: EdgeInsets.symmetric(vertical: Dimensions.paddingSizeSmall),
         child: Text("candidate".tr, style: textRegular,),),
         GetBuilder<CandidateController>(builder: (candidateController) {
-            return Padding(padding: const EdgeInsets.symmetric(vertical: 8.0),
-              child: CustomGenericDropdown(width: Get.width,
-                title: "select_candidate".tr,
-                items: candidateController.candidateModel?.data?.data ?? [],
-                selectedValue: candidateController.selectedCandidateItem,
-                getLabel: (item) => item.firstName ?? '',
-                onChanged: (val) {
-                  if (val != null) {
-                    candidateController.selectCandidate(val);
-                  }
-                },
-              ),
+            return CustomGenericDropdown(width: Get.width,
+              title: "select_candidate".tr,
+              items: candidateController.candidateModel?.data?.data ?? [],
+              selectedValue: candidateController.selectedCandidateItem,
+              getLabel: (item) => item?.user?.firstName ?? '',
+              onChanged: (val) {
+                if (val != null) {
+                  candidateController.selectCandidate(val);
+                }
+              },
             );
           },
         ),

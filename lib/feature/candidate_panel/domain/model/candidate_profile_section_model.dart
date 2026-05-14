@@ -40,7 +40,6 @@ List<CandidateProfileSectionModel> candidateProfileSection = [
     icon: Icons.work,
     subSection: [
       SubSection(name: "work_experience"),
-      SubSection(name: "employment_history"),
     ],
   ),
   CandidateProfileSectionModel(

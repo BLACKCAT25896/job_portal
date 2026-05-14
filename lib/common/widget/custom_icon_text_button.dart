@@ -5,7 +5,7 @@ import 'package:job/helper/app_color_helper.dart';
 class CustomIconTextButton extends StatelessWidget {
   final String text;
   final String icon;
-  final VoidCallback onTap;
+  final Function()? onTap;
   final Color? color;
   final double iconSize;
   final double spacing;

@@ -30,6 +30,8 @@ class Images {
   static const String calender = 'assets/image/calendar.png';
   static const String edit = 'assets/image/edit_iicon.png';
   static const String delete = 'assets/image/trash.png';
+  static const String download = 'assets/image/downloads.png';
+  static const String newTab = 'assets/image/new-tab.png';
   static const String downloadIcon = 'assets/image/printer.png';
   static const String notificationIcon = 'assets/image/bell.png';
   static const String refresh = 'assets/image/refresh.png';

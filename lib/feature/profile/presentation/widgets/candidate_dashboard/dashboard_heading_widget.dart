@@ -31,19 +31,12 @@ class DashboardHeadingWidget extends StatelessWidget {
           ],),
         ),
 
-        IntrinsicWidth(
-          child: CustomButton(
-              buttonColor: Theme.of(context).cardColor,
-              textColor: systemPrimaryColor(),
-              iconPosition: IconPosition.right,
-              fontSize: Dimensions.fontSizeExtraSmall,
-              onTap: (){}, text: "download_profile".tr,
-              icon: Icon(Icons.download, size: 18,
-                  color: systemPrimaryColor())),
-        ),
+
 
         IntrinsicWidth(
-          child: CustomButton(onTap: (){}, text: "view_profile".tr,
+          child: CustomButton(onTap: (){
+
+          }, text: "view_profile".tr,
               iconPosition: IconPosition.right,
               fontSize: Dimensions.fontSizeExtraSmall,
               icon: Icon(Icons.remove_red_eye_outlined, size: 18,

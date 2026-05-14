@@ -1,9 +1,4 @@
-import 'package:job/common/controller/date_picker_controller.dart';
-import 'package:job/common/widget/custom_checkbox.dart';
-import 'package:job/common/widget/date_selection_widget.dart';
-import 'package:job/common/widget/responsive_grid_widget.dart';
-import 'package:job/feature/candidate/controller/candidate_controller.dart';
-import 'package:job/feature/candidate/presentation/widgets/candidate_selection_widget.dart';
+import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:job/common/widget/custom_button.dart';
@@ -13,6 +8,8 @@ import 'package:job/feature/candidate_resume/controller/candidate_resume_control
 import 'package:job/feature/candidate_resume/domain/models/candidate_resume_body.dart';
 import 'package:job/feature/candidate_resume/domain/models/candidate_resume_model.dart';
 import 'package:job/util/dimensions.dart';
+import 'package:job/util/images.dart';
+import 'package:job/util/styles.dart';
 
 class AddNewCandidateResumeWidget extends StatefulWidget {
   final CandidateResumeItem? candidateResumeItem;
@@ -24,14 +21,14 @@ class AddNewCandidateResumeWidget extends StatefulWidget {
 
 class _AddNewCandidateResumeWidgetState extends State<AddNewCandidateResumeWidget> {
   TextEditingController titleController = TextEditingController();
-  TextEditingController companyController = TextEditingController();
-  TextEditingController descriptionController = TextEditingController();
+
 
   bool update = false;
   @override
   void initState() {
     super.initState();
     if(widget.candidateResumeItem != null) {
+      titleController.text = widget.candidateResumeItem?.title??'';
       update = true;
 
     }
@@ -41,73 +38,71 @@ class _AddNewCandidateResumeWidgetState extends State<AddNewCandidateResumeWidge
     return  GetBuilder<CandidateResumeController>(builder: (candidateResumeController) {
       return Column(mainAxisSize: MainAxisSize.min, children: [
 
-        ResponsiveMasonryGrid(width: 300, children: [
-
-          SelectCandidateWidget(),
 
           CustomTextField(title: "title".tr,
             controller: titleController,
             hintText: "title".tr,),
 
-          CustomTextField(title: "company".tr,
-            controller: companyController,
-            hintText: "company".tr,),
-
-          CustomTextField(title: "description".tr,
-            controller: descriptionController,
-            hintText: "description".tr,),
-
-          DateSelectionWidget(title: "start_date".tr,),
-          ExpiryDateSelectionWidget(title: "end_date".tr),
-
-          CustomCheckbox(title: "currently_working".tr,
-            value: candidateResumeController.isCurrentlyWorking,
-            onChange: ()=> candidateResumeController.toggleCurrentlyWorking(),),
-
-
-        ]),
-
-
-
-
-            candidateResumeController.isLoading? Padding(padding: EdgeInsets.all(Dimensions.paddingSizeDefault),
-                child: Center(child: CircularProgressIndicator())):
-
-            Padding(padding: EdgeInsets.symmetric(vertical: Dimensions.paddingSizeDefault),
-                child: CustomButton(onTap: (){
-                  int? candidateId = Get.find<CandidateController>().selectedCandidateItem?.id;
-                  String title = titleController.text.trim();
-                  String company = companyController.text.trim();
-                  String description = descriptionController.text.trim();
-                  String startDate = Get.find<DatePickerController>().formatedFromDate;
-                  String endDate = Get.find<DatePickerController>().formatedToDate;
-
-                  if(title.isEmpty){
-                    showCustomSnackBar("title_is_empty".tr);
-                  }else if(company.isEmpty){
-                    showCustomSnackBar("company_is_empty".tr);
-                  }else if(description.isEmpty){
-                    showCustomSnackBar("description_is_empty".tr);
-                  }else if(startDate.isEmpty){
-                    showCustomSnackBar("start_date_is_empty".tr);
-                  }else if(endDate.isEmpty){
-                    showCustomSnackBar("end_date_is_empty".tr);
-                  }else if(candidateId == null){
-                    showCustomSnackBar("select_candidate".tr);
+          Padding(padding: EdgeInsets.fromLTRB(0, Dimensions.paddingSizeDefault, 0, 0),
+            child: DottedBorder(
+             options: RectDottedBorderOptions(
+               dashPattern: const [4,5],
+               color: Theme.of(context).hintColor,
+             ),
+              child: Container(
+                padding: EdgeInsets.all(Dimensions.paddingSizeSmall),
+                width: MediaQuery.of(context).size.width,
+                decoration: BoxDecoration(color: Theme.of(context).cardColor,
+                    borderRadius: BorderRadius.circular(Dimensions.paddingSizeExtraSmall)),
+                child: InkWell(onTap: () async{
+                  await candidateResumeController.pickOtherFile(false);
+                },
+                  child: Builder(builder: (context) {
+                    return Column(mainAxisAlignment: MainAxisAlignment.center,crossAxisAlignment: CrossAxisAlignment.center, children: [
+                      SizedBox(width: 50,child: Transform.rotate(angle: 90,
+                          child: Image.asset(Images.download))),
+                      Text(candidateResumeController.objFile?.name ?? 'upload_resume'.tr,
+                          style: textRegular),
+                    ],);
                   }
-                  else{
-                    CandidateResumeBody body = CandidateResumeBody(
-                      candidateId: (candidateId),
-                      sMethod: update? "put" : "post"
-                    );
-                    if(update){
-                      candidateResumeController.updateCandidateResume(body,
-                          widget.candidateResumeItem!.id!);
-                    }else{
-                      candidateResumeController.createNewCandidateResume(body);
-                    }
-                  }
-                }, text: update? "update".tr : "save".tr))
+                  ),
+                ),
+              ),
+            ),
+          ),
+
+
+
+
+
+        candidateResumeController.isLoading? Padding(padding: EdgeInsets.all(Dimensions.paddingSizeDefault),
+            child: Center(child: CircularProgressIndicator())):
+
+        Padding(padding: EdgeInsets.symmetric(vertical: Dimensions.paddingSizeDefault),
+            child: CustomButton(onTap: (){
+              String title = titleController.text.trim();
+
+              if(title.isEmpty){
+                showCustomSnackBar("title_is_empty".tr);
+              }else if(candidateResumeController.otherFile == null){
+                showCustomSnackBar("select_file".tr);
+              }
+              else{
+                CandidateResumeBody body = CandidateResumeBody(
+                    title: title,
+                    type: "uploaded",
+                    isDefault: 1,
+                    status: 1,
+                    sMethod: update? "put" : "post"
+                );
+                if(update){
+                  candidateResumeController.updateCandidateResume(body,
+                      widget.candidateResumeItem!.id!);
+                }else{
+                  candidateResumeController.createNewCandidateResume(body);
+                }
+              }
+              }, text: update? "update".tr : "save".tr))
           ],);
         }
     );

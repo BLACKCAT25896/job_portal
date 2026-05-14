@@ -24,13 +24,14 @@ class CandidateEducationItemWidget extends StatelessWidget {
             style: textMedium.copyWith(fontSize: Dimensions.fontSizeLarge),)),
 
           EditDeleteSection(isHorizontal: true, onDelete: (){
-            Get.dialog(ConfirmationDialog(title: "candidate_education", onTap: (){
+            Get.dialog(ConfirmationDialog(
+              title: "education", onTap: (){
               Get.back();
               Get.find<CandidateEducationController>().deleteCandidateEducation((candidateEducationItem!.id!));
             },));
 
           }, onEdit: (){
-            Get.dialog(CustomDialogWidget(title: "candidate_education".tr,
+            Get.dialog(CustomDialogWidget(title: "education".tr,
                 child: AddNewCandidateEducationWidget(candidateEducationItem: candidateEducationItem)));
           },)
 
@@ -50,7 +51,7 @@ class CandidateEducationItemWidget extends StatelessWidget {
               value:'${candidateEducationItem?.result}'),
           CandidateDetailItem(title: "cgpa".tr, value:"Grade"),
 
-          CandidateDetailItem(title: "scale".tr, value:'${4}'),
+          CandidateDetailItem(title: "scale".tr, value:candidateEducationItem?.scale??"-"),
 
           CandidateDetailItem(title: "passing_year".tr,
               value:candidateEducationItem?.passingYear??"-"),

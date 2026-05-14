@@ -9,6 +9,8 @@ class CandidateEducationItem {
   String? board;
   String? institute;
   String? result;
+  String? cgpa;
+  String? scale;
   String? passingYear;
   int? durationYears;
   String? achievement;
@@ -22,6 +24,8 @@ class CandidateEducationItem {
         this.board,
         this.institute,
         this.result,
+        this.cgpa,
+        this.scale,
         this.passingYear,
         this.durationYears,
         this.achievement,
@@ -36,6 +40,8 @@ class CandidateEducationItem {
     board = json['board'];
     institute = json['institute'];
     result = json['result'];
+    cgpa = json['cgpa'];
+    scale = json['scale'];
     passingYear = json['passing_year'];
     durationYears = PriceConverter.parseInt(json['duration_years']);
     achievement = json['achievement'];
@@ -51,6 +57,8 @@ class CandidateEducationItem {
     data['board'] = board;
     data['institute'] = institute;
     data['result'] = result;
+    data['cgpa'] = cgpa;
+    data['scale'] = scale;
     data['passing_year'] = passingYear;
     data['duration_years'] = durationYears;
     data['achievement'] = achievement;

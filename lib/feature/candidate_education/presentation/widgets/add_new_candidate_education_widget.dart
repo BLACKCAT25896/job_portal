@@ -26,6 +26,8 @@ class _AddNewCandidateEducationWidgetState extends State<AddNewCandidateEducatio
   TextEditingController boardController = TextEditingController();
   TextEditingController instituteController = TextEditingController();
   TextEditingController resultController = TextEditingController();
+  TextEditingController cgpaController = TextEditingController();
+  TextEditingController scaleController = TextEditingController();
   TextEditingController passingYearController = TextEditingController();
   TextEditingController durationYearsController = TextEditingController();
   TextEditingController achievementController = TextEditingController();
@@ -62,6 +64,16 @@ class _AddNewCandidateEducationWidgetState extends State<AddNewCandidateEducatio
           CustomTextField(controller: resultController,
             hintText: "result".tr,
             title: "result".tr),
+          CustomTextField(controller: cgpaController,
+            hintText: "cgpa".tr,
+              inputType: TextInputType.number,
+              inputFormatters: [AppConstants.numberFormat],
+            title: "cgpa".tr),
+          CustomTextField(controller: scaleController,
+            hintText: "scale".tr,
+              inputType: TextInputType.number,
+              inputFormatters: [AppConstants.numberFormat],
+            title: "scale".tr),
           CustomTextField(controller: passingYearController,
             hintText: "passing_year".tr,
             inputType: TextInputType.number,
@@ -92,6 +104,8 @@ class _AddNewCandidateEducationWidgetState extends State<AddNewCandidateEducatio
                   String board = boardController.text.trim();
                   String institute = instituteController.text.trim();
                   String result = resultController.text.trim();
+                  String cgpa = cgpaController.text.trim();
+                  String scale = scaleController.text.trim();
                   String passingYear = passingYearController.text.trim();
                   String durationYears = durationYearsController.text.trim();
                   String achievement = achievementController.text.trim();
@@ -104,6 +118,10 @@ class _AddNewCandidateEducationWidgetState extends State<AddNewCandidateEducatio
                   }
                   else if(result.isEmpty){
                     showCustomSnackBar("result_is_empty".tr);
+                  }
+
+                  else if(scale.isEmpty){
+                    showCustomSnackBar("scale_is_empty".tr);
                   }
                   else if(passingYear.isEmpty){
                     showCustomSnackBar("passing_year_is_empty".tr);
@@ -123,6 +141,8 @@ class _AddNewCandidateEducationWidgetState extends State<AddNewCandidateEducatio
                       board: board,
                       institute: institute,
                       result: result,
+                      cgpa: cgpa,
+                      scale: scale,
                       passingYear: int.parse(passingYear),
                       durationYears: int.parse(durationYears),
                       achievement: achievement,

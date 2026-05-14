@@ -1,3 +1,5 @@
+import 'package:job/helper/price_converter.dart';
+
 class DashboardReportModel {
   bool? status;
   String? message;
@@ -177,11 +179,11 @@ class Pipeline {
         this.hired});
 
   Pipeline.fromJson(Map<String, dynamic> json) {
-    applied = json['applied'];
-    shortlisted = json['shortlisted'];
-    interview = json['interview'];
-    finalInterview = json['final_interview'];
-    hired = json['hired'];
+    applied = PriceConverter.parseInt(json['applied']);
+    shortlisted = PriceConverter.parseAmount(json['shortlisted']);
+    interview = PriceConverter.parseInt(json['interview']);
+    finalInterview = PriceConverter.parseInt(json['final_interview']);
+    hired = PriceConverter.parseAmount(json['hired']);
   }
 
   Map<String, dynamic> toJson() {

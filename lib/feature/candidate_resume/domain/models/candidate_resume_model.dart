@@ -3,7 +3,6 @@ import 'package:job/helper/price_converter.dart';
 
 class CandidateResumeItem {
   int? id;
-  int? candidateId;
   String? title;
   String? filePath;
   String? fileName;
@@ -14,7 +13,6 @@ class CandidateResumeItem {
 
   CandidateResumeItem(
       {this.id,
-        this.candidateId,
         this.title,
         this.filePath,
         this.fileName,
@@ -26,7 +24,6 @@ class CandidateResumeItem {
 
   CandidateResumeItem.fromJson(Map<String, dynamic> json) {
     id = PriceConverter.parseInt(json['id']);
-    candidateId = PriceConverter.parseInt(json['candidate_id']);
     title = json['title'];
     filePath = json['file_path'];
     fileName = json['file_name'];
@@ -40,7 +37,6 @@ class CandidateResumeItem {
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = <String, dynamic>{};
     data['id'] = id;
-    data['candidate_id'] = candidateId;
     data['title'] = title;
     data['file_path'] = filePath;
     data['file_name'] = fileName;
