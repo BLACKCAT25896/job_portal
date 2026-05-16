@@ -188,5 +188,10 @@ class JobListingController extends GetxController implements GetxService{
     update();
   }
 
+  bool hideSalary = false;
+  void toggleHideSalary(){
+    hideSalary = !hideSalary;
+    update();
+  }
 
 }

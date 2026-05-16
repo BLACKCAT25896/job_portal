@@ -1,12 +1,8 @@
-import 'package:job/common/layout/custom_dialog_widget.dart';
 import 'package:job/common/layout/list_layout_widget.dart';
-import 'package:job/common/widget/custom_search.dart';
-import 'package:job/common/widget/custom_snackbar.dart';
 import 'package:job/feature/job_listing/controller/job_listing_controller.dart';
 import 'package:job/feature/job_listing/domain/models/job_listing_model.dart';
-import 'package:job/feature/job_listing/presentation/widgets/post_a_job_widget.dart';
 import 'package:job/feature/job_listing/presentation/widgets/job_listing_item.dart';
-import 'package:job/util/dimensions.dart';
+import 'package:job/helper/route_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -21,7 +17,7 @@ class JobListingListWidget extends StatefulWidget {
 }
 
 class _JobListingListWidgetState extends State<JobListingListWidget> {
-  TextEditingController searchController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return GetBuilder<JobListingController>(initState: (_) {
@@ -32,27 +28,12 @@ class _JobListingListWidgetState extends State<JobListingListWidget> {
         final data = listingModel?.data;
 
         return GenericListSection<JobListingItem>(
-          topWidget: widget.fromFilter? SizedBox() :
-          Padding(padding: EdgeInsets.fromLTRB(Dimensions.paddingSizeDefault, 0,
-                Dimensions.paddingSizeDefault,Dimensions.paddingSizeDefault),
-            child: CustomSearch(hintText: 'search'.tr, searchController: searchController,
-              onSearch: () async {
-                String search = searchController.text.trim();
-                if(search.isEmpty){
-                  showCustomSnackBar("empty_search".tr);
-                }else{
-                  await Get.find<JobListingController>().getJobListingList(1, search: search);
-                }
-
-              },),
-          ),
           showRouteSection: !widget.fromFilter,
-          sectionTitle: "listing".tr,
-          pathItems: ["listing".tr],
-          addNewTitle: "add_new_listing".tr,
+          sectionTitle: "job_dashboard".tr,
+          pathItems: ["talent_search".tr],
+          addNewTitle: "post_new_job".tr,
           onAddNewTap: () {
-            Get.dialog(CustomDialogWidget(title: "listing".tr,
-                child: PostAJobWidget()));
+          Get.toNamed(RouteHelper.getPostAJobRoute());
           },
 
           headings: const ["name"],

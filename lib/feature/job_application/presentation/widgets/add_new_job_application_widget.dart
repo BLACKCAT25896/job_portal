@@ -6,7 +6,6 @@ import 'package:job/feature/candidate/presentation/widgets/candidate_selection_w
 import 'package:job/feature/job_application/domain/models/job_application_model.dart';
 import 'package:job/feature/job_application/controller/job_application_controller.dart';
 import 'package:job/feature/job_application/domain/models/job_application_body.dart';
-import 'package:job/feature/job_listing/presentation/widgets/select_job_listing_widget.dart';
 import 'package:job/util/dimensions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -47,7 +46,6 @@ class _AddNewJobApplicationWidgetState extends State<AddNewJobApplicationWidget>
             controller: descriptionController,
             hintText: "enter_description".tr,),
 
-          SelectJobListingWidget(),
           SelectCandidateWidget(),
 
 

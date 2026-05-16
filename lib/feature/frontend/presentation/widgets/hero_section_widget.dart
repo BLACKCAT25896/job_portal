@@ -31,7 +31,7 @@ class HeroSectionWidget extends StatelessWidget {
                   child: Row(spacing: Dimensions.paddingSizeDefault, children: [
                     Expanded(child: JobSearchHeaderWidget()),
                     Expanded(child: SelectPublicIndustryWidget()),
-                    SizedBox(width: 120, child: CustomButton(height: 35,
+                    SizedBox(width: 120, child: CustomButton(height: 40,
                       buttonColor: Theme.of(context).primaryColor,
                         onTap: (){
 

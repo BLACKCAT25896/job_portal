@@ -79,9 +79,7 @@ class _AddNewCompanyWidgetState extends State<AddNewCompanyWidget> {
             CustomTextField(controller: locationController,
               hintText: "location".tr,
               title: "location".tr,),
-            CustomTextField(controller: uniqueIdController,
-              hintText: "unique_id".tr,
-              title: "unique_id".tr,),
+
           ]),
 
 
@@ -95,7 +93,6 @@ class _AddNewCompanyWidgetState extends State<AddNewCompanyWidget> {
                   String details = detailsController.text.trim();
                   String website = websiteController.text.trim();
                   String location = locationController.text.trim();
-                  String uniqueId = uniqueIdController.text.trim();
                   int? industryId = Get.find<IndustryController>().selectedIndustryItem?.id;
                   int? ownershipTypeId = Get.find<OwnershipTypeController>().selectedOwnershipTypeItem?.id;
                   int? companySizeId = Get.find<CompanySizeController>().selectedCompanySizeItem?.id;
@@ -112,8 +109,6 @@ class _AddNewCompanyWidgetState extends State<AddNewCompanyWidget> {
                     showCustomSnackBar("website_is_empty".tr);
                   }else if(location.isEmpty){
                     showCustomSnackBar("location_is_empty".tr);
-                  }else if(uniqueId.isEmpty){
-                    showCustomSnackBar("unique_id_is_empty".tr);
                   }else if(industryId == null){
                     showCustomSnackBar("select_industry".tr);
                   }else if(ownershipTypeId == null){
@@ -130,10 +125,8 @@ class _AddNewCompanyWidgetState extends State<AddNewCompanyWidget> {
                         details: details,
                         website: website,
                         location: location,
-                        uniqueId: uniqueId,
                         industryId: industryId,
                         ownerShipTypeId: ownershipTypeId,
-                        isFeatured: 0,
                         status: 1,
                         companySizeId: companySizeId,
                         sMethod: update? "put":"POST");

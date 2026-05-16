@@ -16,8 +16,7 @@ class JobDetailsTitleSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<LandingPageController>(
-      builder: (controller) {
+    return GetBuilder<LandingPageController>(builder: (controller) {
         final model = controller.jobDetailsModel;
         final data = model?.data;
         final job = data?.job;
@@ -25,13 +24,13 @@ class JobDetailsTitleSection extends StatelessWidget {
           child: Column(spacing: Dimensions.paddingSizeSmall,
               crossAxisAlignment: CrossAxisAlignment.start, children: [
                 Text(job?.company?.name??'N/A', style: textMedium.copyWith(fontSize: Dimensions.fontSizeLarge),),
-                Text(job?.jobTitle??'N/A', style: textSemiBold.copyWith(
+                Text(job?.title??'N/A', style: textSemiBold.copyWith(
                   color: systemPrimaryColor(),
                     fontSize: Dimensions.fontSizeExtraLarge)),
                 Row(spacing: Dimensions.paddingSizeDefault, children: [
-                  if(job?.jobExpiryDate != null)
+                  if(job?.applicationDeadline != null)
                   Expanded(child: Text("${"application_deadline".tr} : "
-                      "${DateConverter.quotationDateAndTime(DateTime.parse(job?.jobExpiryDate??''))}")),
+                      "${DateConverter.quotationDateAndTime(DateTime.parse(job?.applicationDeadline??''))}")),
                   IntrinsicWidth(child: CustomButton(onTap: (){
                     if(Get.find<AuthenticationController>().isLoggedIn()){
                       Get.toNamed(RouteHelper.getJobApplyRoute());
@@ -42,19 +41,17 @@ class JobDetailsTitleSection extends StatelessWidget {
 
 
 
-                  IntrinsicWidth(
-                      child: CustomButton(
-                          buttonColor: Theme.of(context).cardColor,
-                          borderColor: Theme.of(context).hintColor,
-                          textColor: Theme.of(context).textTheme.displayLarge!.color!,
-                          onTap: (){
+                  IntrinsicWidth(child: CustomButton(
+                      buttonColor: Theme.of(context).cardColor,
+                      borderColor: Theme.of(context).hintColor,
+                      textColor: Theme.of(context).textTheme.displayLarge!.color!, onTap: (){
 
-                          },
-                          text: "share".tr, icon: Row(spacing: Dimensions.paddingSizeSmall, children: [
-                            FaIcon(FontAwesomeIcons.facebook, size: 20,),
-                            FaIcon(FontAwesomeIcons.linkedin, size: 20,),
-                            FaIcon(FontAwesomeIcons.whatsapp, size: 20,),
-                          ]))),
+                        },
+                      text: "share".tr, icon: Row(spacing: Dimensions.paddingSizeSmall, children: [
+                        FaIcon(FontAwesomeIcons.facebook, size: 20,),
+                    FaIcon(FontAwesomeIcons.linkedin, size: 20,),
+                    FaIcon(FontAwesomeIcons.whatsapp, size: 20,),
+                  ]))),
                 ])
 
               ]),

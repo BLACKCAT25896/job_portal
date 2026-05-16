@@ -8,8 +8,8 @@ import 'package:job/common/widget/numbering_widget.dart';
 import 'package:job/feature/job_listing/controller/job_listing_controller.dart';
 import 'package:job/feature/job_listing/domain/models/job_listing_model.dart';
 import 'package:job/feature/job_listing/presentation/screens/post_a_job_screen.dart';
-import 'package:job/feature/job_listing/presentation/widgets/post_a_job_widget.dart';
 import 'package:job/helper/responsive_helper.dart';
+import 'package:job/helper/route_helper.dart';
 import 'package:job/util/dimensions.dart';
 import 'package:job/util/styles.dart';
 import 'package:flutter/material.dart';
@@ -25,13 +25,13 @@ class JobListingItemWidget extends StatelessWidget {
     return ResponsiveHelper.isDesktop(context)?
     Row(spacing: Dimensions.paddingSizeDefault, children: [
       NumberingWidget(index: index),
-      Expanded(child: CustomTextItemWidget(text: listingItem?.jobTitle??'')),
+      Expanded(child: CustomTextItemWidget(text: listingItem?.title??'')),
 
       EditDeletePopupMenu(onEdit:(){
-        Get.dialog(CustomDialogWidget(child: PostAJobWidget(listingItem: listingItem)));
+        Get.toNamed(RouteHelper.getPostAJobRoute());
       } ,
           onDelete: (){
-            Get.dialog(ConfirmationDialog(title: "listing", onTap: (){
+            Get.dialog(ConfirmationDialog(title: "job", onTap: (){
               Get.back();
               Get.find<JobListingController>().deleteJobListing(listingItem!.id!);
               },));
@@ -43,13 +43,13 @@ class JobListingItemWidget extends StatelessWidget {
       child: CustomContainer(borderRadius: 5, showShadow: false,
           child: Row(children: [
 
-              Expanded(child: Text("${listingItem?.jobTitle}", style: textMedium.copyWith(fontSize: Dimensions.fontSizeDefault),)),
+              Expanded(child: Text("${listingItem?.title}", style: textMedium.copyWith(fontSize: Dimensions.fontSizeDefault),)),
               EditDeleteSection(isHorizontal: true,
                   onEdit: (){
                 Get.to(()=> PostAJobScreen(listingItem: listingItem));
               },
                 onDelete: (){
-                  Get.dialog(ConfirmationDialog(title: "listing", onTap: (){
+                  Get.dialog(ConfirmationDialog(title: "job", onTap: (){
                       Get.back();
                       Get.find<JobListingController>().deleteJobListing(listingItem!.id!);
                     },));

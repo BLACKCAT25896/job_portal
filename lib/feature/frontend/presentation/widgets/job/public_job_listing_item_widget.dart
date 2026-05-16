@@ -90,7 +90,7 @@ class _PublicJoListingItemWidgetState extends State<PublicJoListingItemWidget> {
                       ),
                     ),
                     Text(
-                      item?.jobTitle ?? '',
+                      item?.title ?? '',
                       style: textRegular,
                     ),
                   ],

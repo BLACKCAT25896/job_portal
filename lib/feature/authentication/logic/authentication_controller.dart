@@ -39,9 +39,9 @@ class AuthenticationController extends GetxController implements GetxService{
         await Get.find<ProfileController>().getProfileInfo().then((val){
           Get.offNamed(RouteHelper.getDashboardRoute());
         });
-      }else if(userType == "Employer"){
+      }else if(userType == "Employer" || userType == "Company"){
         await Get.find<ProfileController>().getCompanyProfileInfo().then((val){
-          Get.offNamed(RouteHelper.getInitialRoute());
+          Get.offNamed(RouteHelper.getCompanyProfileRoute());
         });
       }else{
         await Get.find<ProfileController>().getCandidateProfileInfo().then((val){

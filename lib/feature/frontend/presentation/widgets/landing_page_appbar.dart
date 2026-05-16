@@ -39,11 +39,7 @@ class _LandingPageAppBarState extends State<LandingPageAppBar> {
                 InkWell(onTap: (){
                   Get.toNamed(RouteHelper.getInitialRoute());
                 }, child: const HeaderLogoSection()),
-
-                //Expanded(child: ProductSearchHeaderWidget()),
-
                 Spacer(),
-
                 LoginOptionWidget()
               ]),))),
             Container(
@@ -52,7 +48,7 @@ class _LandingPageAppBarState extends State<LandingPageAppBar> {
                 child: Row(children: [
                   MenuButtonWeb(title: 'recruiter'.tr, onTap: () {
                     if(Get.find<AuthenticationController>().isLoggedIn()){
-                      Get.toNamed(RouteHelper.getCreateCompanyRoute());
+                      Get.toNamed(RouteHelper.getCompanyProfileRoute());
                     }else{
                       Get.toNamed(RouteHelper.getCompanyLoginRoute());
                     }

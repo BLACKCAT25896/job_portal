@@ -23,11 +23,11 @@ class RequirementsWidget extends StatelessWidget {
 
                   Text("education".tr, style: textSemiBold.copyWith(
                       fontSize: Dimensions.fontSizeLarge)),
-                  Text(job?.degreeLevelName??'N/A',style: textRegular),
+                  Text(job?.educationDetail??'N/A',style: textRegular),
 
                   Text("experience".tr, style: textSemiBold.copyWith(
                       fontSize: Dimensions.fontSizeLarge)),
-                  Text("${job?.experience??0} years",style: textRegular),
+                  Text("${job?.minExperience??0}-${job?.maxExperience??0} years",style: textRegular),
 
                   Text("additional_requirement".tr, style: textSemiBold.copyWith(
                       fontSize: Dimensions.fontSizeLarge)),
@@ -54,7 +54,7 @@ class RequirementsWidget extends StatelessWidget {
 
                   Text("job_location".tr, style: textSemiBold.copyWith(
                       fontSize: Dimensions.fontSizeLarge)),
-                  Text(job?.cityName?? 'Anywhere in world',style: textRegular),
+                  Text(job?.company?.location?? 'Anywhere in world',style: textRegular),
 
 
 

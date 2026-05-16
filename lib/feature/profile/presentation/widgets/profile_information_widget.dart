@@ -40,7 +40,7 @@ class _ProfileInformationWidgetState extends State<ProfileInformationWidget> {
       builder: (profileController) {
         ProfileModel? profileModel = profileController.profileModel;
         return CustomContainer(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          const CustomTitle(title: "profile_information"),
+          const CustomTitle(title: "profile_information", leftPadding: 0,),
           SizedBox(height: Dimensions.paddingSizeExtraSmall),
 
           CustomTextField(title: "name".tr,
@@ -55,28 +55,30 @@ class _ProfileInformationWidgetState extends State<ProfileInformationWidget> {
            SizedBox(height: Dimensions.paddingSizeDefault),
 
 
-          SizedBox(width: 100, child:profileController.isLoading?
-          const Center(child: CircularProgressIndicator()):
-          CustomButton(borderRadius: 5,
-              onTap: (){
-            String name = nameController.text.trim();
-            String email = emailController.text.trim();
-            if(name.isEmpty){
-              showCustomSnackBar("name_is_empty".tr);
-            }
+          Align(alignment: Alignment.centerRight,
+            child: SizedBox(width: 100, child:profileController.isLoading?
+            const Center(child: CircularProgressIndicator()):
+            CustomButton(borderRadius: 5,
+                onTap: (){
+              String name = nameController.text.trim();
+              String email = emailController.text.trim();
+              if(name.isEmpty){
+                showCustomSnackBar("name_is_empty".tr);
+              }
 
-            else if(email.isNotEmpty && EmailChecker.isNotValid(email)){
-              showCustomSnackBar("email_is_invalid".tr);
-            }
-            else if(profileModel?.data?.email == email && profileModel?.data?.name == name){
-              showCustomSnackBar("nothing_change".tr);
-            }
+              else if(email.isNotEmpty && EmailChecker.isNotValid(email)){
+                showCustomSnackBar("email_is_invalid".tr);
+              }
+              else if(profileModel?.data?.email == email && profileModel?.data?.name == name){
+                showCustomSnackBar("nothing_change".tr);
+              }
 
-            else{
-              profileController.updateProfile(name, email);
-            }
+              else{
+                profileController.updateProfile(name, email);
+              }
 
-              }, text: "submit".tr))
+                }, text: "submit".tr)),
+          )
         ],),);
       }
     );

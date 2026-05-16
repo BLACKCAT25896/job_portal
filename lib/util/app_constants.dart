@@ -26,6 +26,8 @@ class AppConstants {
   static const String candidateRegistration = '/candidate/register';
   static const String companyRegistration = '/company/register';
   static const String profile = '/profile';
+  static const String profileUpdate = '/profile-update';
+  static const String changePassword = '/change-password';
   static const String candidateProfile = '/candidate/profile';
   static const String companyProfile = '/company/profile';
   static const String galleries = '/galleries';
@@ -132,6 +134,12 @@ class AppConstants {
 
 
   static const String packages = '/packages';
+
+  static const String companyJobs = '/company/jobs';
+  static const String companyJobApplication = '/company/job-applications';
+  static const String companyJobApplicationSchedule = '/company/job-application-schedules';
+
+
 
 
 

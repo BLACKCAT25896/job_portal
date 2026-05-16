@@ -5,7 +5,8 @@ import 'package:job/util/dimensions.dart';
 
 
 class CreateNewCompanyAccount extends StatefulWidget {
-  const CreateNewCompanyAccount({super.key});
+  final String type;
+  const CreateNewCompanyAccount({super.key, this.type = "create"});
 
   @override
   State<CreateNewCompanyAccount> createState() => _CreateNewCompanyAccountState();
@@ -20,6 +21,6 @@ class _CreateNewCompanyAccountState extends State<CreateNewCompanyAccount> {
     return BaseLayout(scrollController: scrollController,
         child: Center(child: SizedBox(width: Dimensions.webMaxWidth,
             child: Padding(padding: EdgeInsets.only(top: Dimensions.paddingSizeExtraLarge),
-              child: CompanyRegistrationWidget()))));
+              child: CompanyRegistrationWidget(type: widget.type)))));
   }
 }

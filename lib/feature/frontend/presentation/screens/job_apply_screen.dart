@@ -84,7 +84,7 @@ class _JobApplyScreenState extends State<JobApplyScreen> {
                   return Column(crossAxisAlignment: CrossAxisAlignment.start,
                       spacing: Dimensions.paddingSizeDefault, children: [
                     Text(job?.company?.name??'N/A', style: textMedium.copyWith(fontSize: Dimensions.fontSizeLarge),),
-                    Text(job?.jobTitle??'N/A', style: textSemiBold.copyWith(
+                    Text(job?.title??'N/A', style: textSemiBold.copyWith(
                         color: systemPrimaryColor(), fontSize: Dimensions.fontSizeExtraLarge)),
 
                     CustomDivider(),

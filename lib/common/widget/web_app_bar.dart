@@ -1,4 +1,3 @@
-import 'package:job/helper/route_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:job/common/controller/theme_controller.dart';
@@ -44,17 +43,7 @@ class WebAppBar extends StatelessWidget implements PreferredSizeWidget {
                 Container(width: 1, height: 40, color: Theme.of(context).hintColor),
 
 
-                CustomContainer(showShadow: false,
-                    onTap: ()=> Get.toNamed(RouteHelper.getSupportTicketRoute()),
-                    color: Theme.of(context).hintColor.withValues(alpha: .125), borderRadius: 3,
-                    child: CustomImage(isLocalAsset: true,width: 16,  image: Images.sms)),
-
-                CustomContainer(showShadow: false,
-                    color: Theme.of(context).hintColor.withValues(alpha: .125), borderRadius: 3,
-                    child: CustomImage(isLocalAsset: true,width: 16,  image: Images.notificationIcon)),
-
-                GetBuilder<ProfileController>(
-                  builder: (profileController) {
+                GetBuilder<ProfileController>(builder: (profileController) {
                     return HeaderProfileInfoMenu();
                   } ),
                 SizedBox(width: Dimensions.paddingSizeDefault),

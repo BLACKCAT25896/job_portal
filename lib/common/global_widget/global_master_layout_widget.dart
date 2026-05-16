@@ -4,6 +4,7 @@ import 'package:job/common/global_widget/header_logo_section.dart';
 import 'package:job/common/widget/custom_search.dart';
 import 'package:job/feature/side_menu/side_menu_controller.dart';
 import 'package:job/helper/responsive_helper.dart';
+import 'package:job/util/dimensions.dart';
 
 class GlobalSideMenu extends StatefulWidget {
   final Widget child;
@@ -18,49 +19,34 @@ class _GlobalSideMenuState extends State<GlobalSideMenu> {
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<SideBarController>(
-      builder: (controller) {
-        final bool isDesktop = ResponsiveHelper.isDesktop(context);
+    return GetBuilder<SideBarController>(builder: (controller) {
+      final bool isDesktop = ResponsiveHelper.isDesktop(context);
+      return Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
 
-        return Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            if (isDesktop)
-              AnimatedContainer(
-                width: controller.isExpanded ? 250 : 0,
-                duration: const Duration(milliseconds: 250),
-                curve: Curves.easeInOut,
-                color: Theme.of(context).colorScheme.secondaryContainer,
-                child: controller.isExpanded
-                    ? Column(
-                  children: [
-                    // ---------- FIXED HEADER ----------
-                    HeaderLogoSection(),
-                    Padding(padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                      child: CustomSearch(hintText: "search".tr,
-                          onSearch: () => controller.filterMenu(searchController.text),
-                          onChange: (val) => controller.filterMenu(val), // Auto search
-                          reset: () => controller.filterMenu(""),
-                          searchController: searchController)
-                    ),
+        if (isDesktop)
+          AnimatedContainer(
+            width: controller.isExpanded ? 250 : 0,
+            duration: const Duration(milliseconds: 250),
+            curve: Curves.easeInOut,
+            color: Theme.of(context).colorScheme.secondaryContainer,
+            child: controller.isExpanded ?
+            Column(spacing: Dimensions.paddingSizeDefault, children: [
 
-                    // ---------- SCROLLABLE MENU ----------
-                    Expanded(
-                      child: SingleChildScrollView(
-                        child: Column(
-                          children: [
-                            ...controller.sideMenuItems,
-                          ],
-                        ),
-                      ),
-                    ),
-                  ],
-                )
-                    : null,
-              ),
+              HeaderLogoSection(),
+              Padding(padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                  child: CustomSearch(hintText: "search".tr,
+                      onSearch: () => controller.filterMenu(searchController.text),
+                      onChange: (val) => controller.filterMenu(val), // Auto search
+                      reset: () => controller.filterMenu(""),
+                      searchController: searchController)),
 
-            // Main content
-            Expanded(child: widget.child),
+              Expanded(child: SingleChildScrollView(
+                child: Column(children: [
+                  ...controller.sideMenuItems,
+                ]))),
+            ]) : null),
+
+        Expanded(child: widget.child),
           ],
         );
       },

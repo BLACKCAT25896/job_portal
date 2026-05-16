@@ -39,6 +39,8 @@ import 'package:job/feature/post/presentation/screens/post_screen.dart';
 import 'package:job/feature/post_category/presentation/screens/post_category_screen.dart';
 import 'package:job/feature/post_comment/presentation/screens/post_comment_screen.dart';
 import 'package:job/feature/profile/presentation/screens/candidate_profile_screen.dart';
+import 'package:job/feature/profile/presentation/screens/company_profile_screen.dart';
+import 'package:job/feature/profile/presentation/screens/password_change_screen.dart';
 import 'package:job/feature/profile/presentation/screens/profile_screen.dart';
 import 'package:job/feature/reported_job/presentation/screens/reported_job_screen.dart';
 import 'package:job/feature/role_and_permission/role/presentation/screens/role_screen.dart';
@@ -73,7 +75,7 @@ class RouteHelper {
   static String getSignUpRoute() => signUp;
 
   static const String createCompanyAccount = '/create-company-account';
-  static String getCreateCompanyRoute() => createCompanyAccount;
+  static String getCreateCompanyRoute({required String type}) => "$createCompanyAccount?type=$type";
 
   static const String forgotPassword = '/forgot-password';
   static const String otpVerify = '/otp-verify';
@@ -153,11 +155,21 @@ class RouteHelper {
   static const String notification = '/notification';
   static String getNotificationRoute() => notification;
 
+  static const String changePassword = '/change-password';
+  static String getChangePasswordRoute() => changePassword;
+
+  static const String userChangePassword = '/user-change-password';
+  static String getUserChangePasswordRoute() => userChangePassword;
+
+
   static const String profile = '/profile';
   static String getProfileRoute() => profile;
 
   static const String candidateProfile = '/candidate-profile';
   static String getCandidateProfileRoute() => candidateProfile;
+
+  static const String companyProfile = '/company-profile';
+  static String getCompanyProfileRoute() => companyProfile;
 
 
 
@@ -192,6 +204,9 @@ class RouteHelper {
 
   static const String users = '/users';
   static String getUsersRoute() => users;
+
+  static const String companyUsers = '/company-users';
+  static String getCompanyUsersRoute() => companyUsers;
 
 
   static const String pages = '/pages';
@@ -258,10 +273,13 @@ class RouteHelper {
     GetPage(name: login, page: () => const LoginScreen()),
     GetPage(name: companyLogin, page: () => const CompanyLoginScreen()),
     GetPage(name: signUp, page: () => const CreateNewAccount()),
-    GetPage(name: createCompanyAccount, page: () => const CreateNewCompanyAccount()),
+    GetPage(name: createCompanyAccount, page: () => CreateNewCompanyAccount(type: Get.parameters['type']??"create")),
     GetPage(name: dashboard, page: () => const DashboardScreen()),
+    GetPage(name: changePassword, page: () => const PasswordChangeScreen()),
+    GetPage(name: userChangePassword, page: () => const CompanyPasswordChangeScreen()),
     GetPage(name: profile, page: () => const ProfileScreen()),
     GetPage(name: candidateProfile, page: () => CandidateProfileScreen()),
+    GetPage(name: companyProfile, page: () => CompanyProfileScreen()),
     GetPage(name: deleteAccount, page: () => const DeleteAccountScreen()),
     GetPage(name: notification, page: () => const NotificationScreen()),
     GetPage(name: contactUs, page: ()=> ContactUsScreen()),
@@ -275,6 +293,7 @@ class RouteHelper {
     GetPage(name: paymentMethod, page: () => const PaymentMethodScreen()),
     GetPage(name: roles, page: () => const RoleManagementScreen()),
     GetPage(name: users, page: () => const UserScreen()),
+    GetPage(name: companyUsers, page: () => const CompanyUserScreen()),
     GetPage(name: pages, page: ()=> PolicyPagesScreen()),
 
     //General Setting

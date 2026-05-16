@@ -33,14 +33,20 @@ class ProfileRepository{
 
 
   Future<Response?> updateProfile(String name, String email) async {
-    return await apiClient.postData("", {
+    return await apiClient.postData(AppConstants.profileUpdate, {
       'name': name,
       'email': email,
     });
   }
 
+
+  Future<Response?> avatarUpdateProfile(XFile? avatar) async {
+    return await apiClient.postMultipartData(AppConstants.profileUpdate, {
+    }, [], MultipartBody('avatar', avatar), [] );
+  }
+
   Future<Response?> changePassword(String oldPassword, String newPassword) async {
-    return await apiClient.postData("", {
+    return await apiClient.postData(AppConstants.changePassword, {
       'current_password': oldPassword,
       'password': newPassword,
       'password_confirmation': newPassword,

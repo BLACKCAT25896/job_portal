@@ -22,12 +22,9 @@ class _PasswordUpdateWidgetState extends State<PasswordUpdateWidget> {
   TextEditingController confirmPasswordController = TextEditingController();
   @override
   Widget build(BuildContext context) {
-    return  GetBuilder<ProfileController>(
-      builder: (profileController) {
+    return  GetBuilder<ProfileController>(builder: (profileController) {
         return CustomContainer(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
 
-           SizedBox(height: Dimensions.paddingSizeExtraSmall),
-          const CustomSubTitle(title: "update_password_info"),
 
           CustomTextField(title: "current_password".tr,
               controller: oldPasswordController,
@@ -55,8 +52,7 @@ class _PasswordUpdateWidgetState extends State<PasswordUpdateWidget> {
 
           Align(alignment: Alignment.bottomRight,
             child: profileController.isLoading? const CircularProgressIndicator():
-            SizedBox(width: 120, child: CustomButton(borderRadius: 5,
-                onTap: (){
+            SizedBox(width: 220, child: CustomButton(borderRadius: 5, onTap: (){
               String password = oldPasswordController.text.trim();
               String newPassword = newPasswordController.text.trim();
               String confirmPassword = confirmPasswordController.text.trim();
@@ -73,9 +69,7 @@ class _PasswordUpdateWidgetState extends State<PasswordUpdateWidget> {
                 showCustomSnackBar("password_and_confirm_password_not_match".tr);
               }else{
                 profileController.changePassword(password, newPassword);
-              }
-
-                }, text: "confirm".tr)),
+              }}, text: "confirm".tr)),
           )
 
         ],),);

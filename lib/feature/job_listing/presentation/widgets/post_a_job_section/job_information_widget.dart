@@ -18,6 +18,7 @@ import 'package:job/feature/job_listing/presentation/widgets/post_a_job_section/
 import 'package:job/feature/job_listing/presentation/widgets/post_a_job_section/select_salary_review_widget.dart';
 import 'package:job/feature/job_listing/presentation/widgets/post_a_job_section/selection_benefit_widget.dart';
 import 'package:job/helper/app_color_helper.dart';
+import 'package:job/util/app_constants.dart';
 import 'package:job/util/dimensions.dart';
 import 'package:job/util/styles.dart';
 
@@ -40,105 +41,116 @@ class _JobInformationWidgetState extends State<JobInformationWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return CustomContainer(child: Column(spacing: Dimensions.paddingSizeDefault,
-        crossAxisAlignment: CrossAxisAlignment.start, children: [
-      ResponsiveMasonryGrid(children: [
-        CustomTextField(
-          title: "job_title".tr,
-          controller: jobTitleController,
-          hintText: "job_title".tr
-        ),
-        DateSelectionWidget(title: "deadline".tr),
-        SelectPublicJobCategoryWidget(),
-
-        CustomTextField(
-          title: "job_location".tr,
-          controller: jobLocationController,
-            hintText: "job_location".tr
-        ),
-
-        CustomTextField(
-          title: "vacancy".tr,
-          controller: vacancyController,
-          hintText: "vacancy".tr
-        ),
-
-
-      ]),
-
-      SelectionEmployeeWidget(),
-
-      CustomRichEditorV2(
-          title: "job_responsible_and_context".tr,
-          controller: jobResponsibleAndContextController,
-          hintText: "job_responsible_and_context".tr),
-
-          Row(children: [
-            Expanded(child: Text("monthly_salary".tr, style: Theme.of(context).textTheme.titleMedium,)),
-
-            Row(children: [
-              Text("show_salary".tr, style: textRegular.copyWith(fontSize: Dimensions.fontSizeDefault)),
-              SizedBox(width: Dimensions.paddingSizeSmall),
-              CustomSwitch(value: false, onChanged: (value) {}),
-            ])]),
-
+    return GetBuilder<JobListingController>(builder: (controller) {
+        return CustomContainer(child: Column(spacing: Dimensions.paddingSizeDefault,
+            crossAxisAlignment: CrossAxisAlignment.start, children: [
           ResponsiveMasonryGrid(children: [
             CustomTextField(
-                title: "minimum_salary".tr,
-                controller: minimumSalaryController,
-                hintText: "minimum_salary".tr
+              title: "job_title".tr,
+              controller: jobTitleController,
+              hintText: "job_title".tr
             ),
+            DateSelectionWidget(title: "deadline".tr),
+            SelectPublicJobCategoryWidget(),
+
             CustomTextField(
-                title: "maximum_salary".tr,
-                controller: maximumController,
-                hintText: "maximum_salary".tr
-            )
+              title: "job_location".tr,
+              controller: jobLocationController,
+                hintText: "job_location".tr
+            ),
+
+            CustomTextField(
+              title: "vacancy".tr,
+              controller: vacancyController,
+              inputType: TextInputType.number,
+              inputFormatters: [AppConstants.numberFormat],
+              hintText: "vacancy".tr
+            ),
+
+
           ]),
 
+          SelectionEmployeeWidget(),
 
-          CustomAddNewButtonWidget(icon: Icons.add, onTap: () {
+          CustomRichEditorV2(
+              title: "job_responsible_and_context".tr,
+              controller: jobResponsibleAndContextController,
+              hintText: "job_responsible_and_context".tr),
 
-            Get.dialog(CustomDialogWidget(width: 700, title: "compensations_and_benefits".tr,
-                child: Column(crossAxisAlignment: CrossAxisAlignment.start,
-                    spacing: Dimensions.paddingSizeDefault,
-                    children: [
-                  SelectionBenefitWidget(),
-                  ResponsiveMasonryGrid(width: 400, children: [
-                    SelectionLunchWidget(),
-                    SelectionSalaryWidget(),
-                  ]),
-                  SelectionFestivalBonusWidget(),
+              Row(children: [
+                Expanded(child: Text("monthly_salary".tr, style: Theme.of(context).textTheme.titleMedium,)),
 
-                  CustomRichEditorV2(
-                    height: 200,
-                      title: "other_benefits".tr,
-                      controller: otherBenefitController,
-                      hintText: "other_benefits".tr),
+                Row(children: [
+                  Text("show_salary".tr, style: textRegular.copyWith(fontSize: Dimensions.fontSizeDefault)),
+                  SizedBox(width: Dimensions.paddingSizeSmall),
+                  CustomSwitch(value: controller.hideSalary, onChanged: (value) {
+                    controller.toggleHideSalary();
+                  }),
+                ])]),
 
-                  Align(alignment: Alignment.centerRight,
-                    child: SizedBox(width: 150,
-                      child: CustomButton(onTap: (){
-
-                      }, text: "save".tr),
-                    ),
-                  )
-
-
-              ])));
-              },
-              title: "add_compensations_and_benefits_information".tr),
-
-          CustomContainer(showShadow: false, borderRadius: 5,
-            verticalPadding: 20,
-            color: systemPrimaryColor().withValues(alpha: .125),
-            child: Align(alignment: Alignment.centerRight,
-              child: SizedBox(width: 150,
-            child: CustomButton(onTap: (){
-              Get.find<JobListingController>().selectStep(1);
-            }, text: "continue".tr),
-          )),)
+              ResponsiveMasonryGrid(children: [
+                CustomTextField(
+                  inputFormatters: [AppConstants.numberFormat],
+                    inputType: TextInputType.number,
+                    title: "minimum_salary".tr,
+                    controller: minimumSalaryController,
+                    hintText: "minimum_salary".tr
+                ),
+                CustomTextField(
+                    inputFormatters: [AppConstants.numberFormat],
+                    inputType: TextInputType.number,
+                    title: "maximum_salary".tr,
+                    controller: maximumController,
+                    hintText: "maximum_salary".tr
+                )
+              ]),
 
 
-    ]));
+              CustomAddNewButtonWidget(icon: Icons.add, onTap: () {
+
+                Get.dialog(CustomDialogWidget(width: 700, title: "compensations_and_benefits".tr,
+                    child: Column(crossAxisAlignment: CrossAxisAlignment.start,
+                        spacing: Dimensions.paddingSizeDefault,
+                        children: [
+                      SelectionBenefitWidget(),
+                      ResponsiveMasonryGrid(width: 400, children: [
+                        SelectionLunchWidget(),
+                        SelectionSalaryWidget(),
+                      ]),
+                      SelectionFestivalBonusWidget(),
+
+                      CustomRichEditorV2(
+                        height: 200,
+                          title: "other_benefits".tr,
+                          controller: otherBenefitController,
+                          hintText: "other_benefits".tr),
+
+                      Align(alignment: Alignment.centerRight,
+                        child: SizedBox(width: 150,
+                          child: CustomButton(onTap: (){
+
+                          }, text: "save".tr),
+                        ),
+                      )
+
+
+                  ])));
+                  },
+                  title: "add_compensations_and_benefits_information".tr),
+
+              CustomContainer(showShadow: false, borderRadius: 5,
+                verticalPadding: 20,
+                color: systemPrimaryColor().withValues(alpha: .125),
+                child: Align(alignment: Alignment.centerRight,
+                  child: SizedBox(width: 150,
+                child: CustomButton(onTap: (){
+                  Get.find<JobListingController>().selectStep(1);
+                }, text: "continue".tr),
+              )),)
+
+
+        ]));
+      }
+    );
   }
 }

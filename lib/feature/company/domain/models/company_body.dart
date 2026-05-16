@@ -9,8 +9,6 @@ class CompanyBody {
   String? details;
   String? website;
   String? location;
-  int? isFeatured;
-  String? uniqueId;
   int? status;
   String? sMethod;
 
@@ -25,8 +23,6 @@ class CompanyBody {
         this.details,
         this.website,
         this.location,
-        this.isFeatured,
-        this.uniqueId,
         this.status,
         this.sMethod});
 
@@ -41,8 +37,6 @@ class CompanyBody {
     details = json['details'];
     website = json['website'];
     location = json['location'];
-    isFeatured = json['is_featured'];
-    uniqueId = json['unique_id'];
     status = json['status'];
     sMethod = json['_method'];
   }
@@ -65,8 +59,6 @@ class CompanyBody {
     addIfNotNull(data, 'details', details);
     addIfNotNull(data, 'website', website);
     addIfNotNull(data, 'location', location);
-    addIfNotNull(data, 'is_featured', isFeatured);
-    addIfNotNull(data, 'unique_id', uniqueId);
     addIfNotNull(data, 'status', status);
     addIfNotNull(data, '_method', sMethod);
     return data;

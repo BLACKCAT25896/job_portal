@@ -30,7 +30,6 @@ class UserItemWidget extends StatelessWidget {
       Expanded(child: CustomTextItemWidget(text: userItem?.email?? 'N/A')),
       Expanded(child: CustomTextItemWidget(text: userItem?.phone?? 'N/A')),
       Expanded(child: CustomTextItemWidget(text: userItem?.userType?? 'N/A')),
-      Expanded(child: CustomTextItemWidget(text: userItem?.address?? 'N/A')),
 
       ActiveInActiveWidget(active: userItem?.status == "1",
       onChanged: (val){

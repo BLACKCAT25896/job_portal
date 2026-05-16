@@ -20,11 +20,11 @@ class ProfileInfoWidget extends StatelessWidget {
             if(Get.find<ProfileController>().profileModel == null) {
               Get.find<ProfileController>().getProfileInfo();
             }
-          }else if(userType == "Company"){
+          }else if(userType == "Company" || userType == "Employer"){
             if(Get.find<ProfileController>().profileModel == null) {
               Get.find<ProfileController>().getCompanyProfileInfo();
             }
-          }else{
+          }else if(userType == "Candidate"){
             if(Get.find<ProfileController>().profileModel == null) {
               Get.find<ProfileController>().getCandidateProfileInfo();
             }

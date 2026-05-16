@@ -154,20 +154,6 @@ class SideBarController extends GetxController implements GetxService{
       onTap: () => Get.toNamed(RouteHelper.getCandidateRoute()),),
 
 
-    SideMenuNestedExpansionItem(title: "candidate_education".tr, keyValue: "candidate_education", parent: true,
-      icon: Images.dashboardSvgIcon,
-      onTap: () => Get.toNamed(RouteHelper.getCandidateEducationRoute()),),
-
-
-    SideMenuNestedExpansionItem(title: "candidate_experience".tr, keyValue: "candidate_experience", parent: true,
-      icon: Images.dashboardSvgIcon,
-      onTap: () => Get.toNamed(RouteHelper.getCandidateExperienceRoute()),),
-
-
-    SideMenuNestedExpansionItem(title: "candidate_resume".tr, keyValue: "candidate_resume", parent: true,
-      icon: Images.dashboardSvgIcon,
-      onTap: () => Get.toNamed(RouteHelper.getCandidateResumeRoute()),),
-
     SideMenuNestedExpansionItem(title: "inquiry".tr, keyValue: "inquiry", parent: true,
       icon: Images.dashboardSvgIcon,
       onTap: () => Get.toNamed(RouteHelper.getInquiryRoute()),),

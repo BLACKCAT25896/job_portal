@@ -410,5 +410,28 @@
   "your_customized_cv": "Your Customized CV",
   "no_resume_found": "No Resume Found",
   "create_your_customised_cv": "Create your Customized CV",
-  "add_customized_cv": "Add Customized CV"
+  "add_customized_cv": "Add Customized CV",
+  "profile_information": "Profile Information",
+  "update_password_info": "Update Password Info",
+  "current_password": "Current Password",
+  "new_password": "New Password",
+  "confirm" : "Confirm Password",
+  "submit": "Submit",
+  "light_theme": "Light Theme",
+  "dark_theme": "Dark Theme",
+  "primary_color": "Primary Color",
+  "secondary_color": "Secondary Color",
+  "primary_container_color": "Primary Container Color",
+  "text_color": "Text Color",
+  "sidebar_color": "Sidebar Color",
+  "sidebar_text_color": "Sidebar Text Color",
+  "add_new_ticket": "Add New Ticket",
+  "ticket": "Ticket",
+  "support_ticket": "Support Ticket",
+  "post_job": "Post Job",
+  "talent_search": "Talent Search",
+  "job_dashboard": "Job Dashboard",
+  "status": "Status"
+
+
 }

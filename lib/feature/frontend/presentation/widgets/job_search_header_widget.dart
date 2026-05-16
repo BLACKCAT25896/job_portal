@@ -35,8 +35,8 @@ class _JobSearchHeaderWidgetState extends State<JobSearchHeaderWidget> {
 
 
               Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                Text(item.jobTitle ?? '', style: textMedium.copyWith()),
-                Text(item.companyName??'', style: textRegular),
+                Text(item.title ?? '', style: textMedium.copyWith()),
+                Text(item.company?.name??'', style: textRegular),
               ])),
             ])),
             onItemSelected: (item) {
@@ -44,7 +44,7 @@ class _JobSearchHeaderWidgetState extends State<JobSearchHeaderWidget> {
             },
             onChanged: (text) {
               //Get.find<JobController>().getJobList(1, search: text);
-            }, searchText: (item) => item.jobTitle ?? '',
+            }, searchText: (item) => item.title ?? '',
           ),
         );
       }

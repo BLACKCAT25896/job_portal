@@ -122,7 +122,7 @@ class _CompanyLoginWidgetState extends State<CompanyLoginWidget> {
                         ),
                         recognizer: TapGestureRecognizer()
                           ..onTap = () {
-                            Get.toNamed(RouteHelper.getCreateCompanyRoute());
+                            Get.toNamed(RouteHelper.getCreateCompanyRoute(type: "create"));
                           },
                       ),
 

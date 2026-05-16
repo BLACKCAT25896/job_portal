@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:job/common/widget/dropdown_with_search_widget.dart';
 import 'package:job/feature/job_category/domain/models/job_category_model.dart';
+import 'package:job/util/dimensions.dart';
 import 'package:job/util/styles.dart';
 
 class SelectPublicJobCategoryWidget extends StatefulWidget {
@@ -24,12 +25,10 @@ class _SelectPublicJobCategoryWidgetState extends State<SelectPublicJobCategoryW
       }
     },
       builder: (jobCategoryController) {
-        return Column(crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 8),
-              child: Text("job_category".tr, style: textRegular),
-            ),
+        return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            Padding(padding: EdgeInsets.symmetric(vertical: Dimensions.paddingSizeSmall + 1),
+              child: Text("job_category".tr, style: textRegular)),
+
             DropdownSearch<JobCategoryItem>(
               hintText: 'job_category'.tr,
               selectedItem: jobCategoryController.selectedJobCategoryItem,

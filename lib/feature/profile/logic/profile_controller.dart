@@ -6,6 +6,7 @@ import 'package:job/feature/profile/domain/model/profile_model.dart';
 import 'package:job/feature/profile/domain/model/status_update_body.dart';
 import 'package:job/feature/profile/domain/repository/profile_repository.dart';
 import 'package:job/feature/side_menu/side_menu_controller.dart';
+import 'package:job/helper/image_size_checker.dart';
 
 class ProfileController extends GetxController implements GetxService{
   final ProfileRepository profileRepository;
@@ -116,7 +117,7 @@ class ProfileController extends GetxController implements GetxService{
     isLoading = true;
     Response? response = await profileRepository.updateProfile(name, email);
     if (response?.statusCode == 200) {
-      showCustomSnackBar("profile_updated_successfully".tr, isError: false);
+      showCustomSnackBar("updated_successfully".tr, isError: false);
      getProfileInfo();
       isLoading = false;
     }else{
@@ -126,13 +127,12 @@ class ProfileController extends GetxController implements GetxService{
     update();
   }
 
-  Future<void> changePassword(String oldPassword, String newPassword) async {
+
+  Future<void> updateProfileAvatar() async {
     isLoading = true;
-    update();
-    Response? response = await profileRepository.changePassword(oldPassword, newPassword);
+    Response? response = await profileRepository.avatarUpdateProfile(profileAvatar);
     if (response?.statusCode == 200) {
-      Get.back();
-      showCustomSnackBar("password_changed_successfully".tr, isError: false);
+      showCustomSnackBar("updated_successfully".tr, isError: false);
       getProfileInfo();
       isLoading = false;
     }else{
@@ -141,6 +141,40 @@ class ProfileController extends GetxController implements GetxService{
     }
     update();
   }
+
+
+
+
+
+  Future<void> changePassword(String oldPassword, String newPassword) async {
+    isLoading = true;
+    update();
+    Response? response = await profileRepository.changePassword(oldPassword, newPassword);
+    if (response?.statusCode == 200) {
+      Get.back();
+      showCustomSnackBar("updated_successfully".tr, isError: false);
+      getProfileInfo();
+      isLoading = false;
+    }else{
+      isLoading = false;
+      ApiChecker.checkApi(response!);
+    }
+    update();
+  }
+
+  XFile? profileAvatar;
+  XFile? pickedImage;
+  void pickImage() async {
+    pickedImage = await ImagePicker().pickImage(source: ImageSource.gallery);
+    double imageSizeIs = await ImageSize.getImageSize(pickedImage!);
+    if(imageSizeIs > 1){
+      showCustomSnackBar("please_choose_image_size_less_than_2_mb".tr);
+    }else{
+      profileAvatar = pickedImage;
+    }
+    update();
+  }
+
 
 
 
