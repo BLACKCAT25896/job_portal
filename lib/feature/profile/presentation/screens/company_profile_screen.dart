@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:job/common/layout/base_layout.dart';
 import 'package:job/feature/candidate_panel/logic/candidate_panel_controller.dart';
-import 'package:job/feature/job_listing/presentation/widgets/job_listing_list_widget.dart';
+import 'package:job/feature/profile/presentation/widgets/password_update_widget.dart';
+import 'package:job/feature/profile/presentation/widgets/profile_information_widget.dart';
 import 'package:job/util/dimensions.dart';
 
 class CompanyProfileScreen extends StatefulWidget {
@@ -26,7 +27,8 @@ class _CompanyProfileScreenState extends State<CompanyProfileScreen> {
             child: Padding(padding: EdgeInsets.symmetric(vertical: Dimensions.paddingSizeDefault),
               child: Column(spacing: Dimensions.paddingSizeDefault, children: [
 
-                JobListingListWidget(scrollController: scrollController)
+                ProfileInformationWidget(),
+                PasswordUpdateWidget()
               ])),
           ));
         }

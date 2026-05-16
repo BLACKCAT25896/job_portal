@@ -38,9 +38,11 @@ class LandingPageController extends GetxController implements GetxService{
   }
 
   IndustryItem? selectedIndustryItem;
-  void selectIndustry(IndustryItem item) {
+  void selectIndustry(IndustryItem item, {bool notify = true}) {
     selectedIndustryItem = item;
-    update();
+    if(notify) {
+      update();
+    }
   }
 
   bool isCategorySelected = false;

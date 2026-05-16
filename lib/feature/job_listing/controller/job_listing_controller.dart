@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutter_quill/flutter_quill.dart';
 import 'package:job/api_handle/api_checker.dart';
 import 'package:job/api_handle/global_api_response_model.dart';
 import 'package:job/common/widget/custom_snackbar.dart';
@@ -22,6 +23,28 @@ class JobListingController extends GetxController implements GetxService{
   Future<void> getJobListingList(int offset, {String search = ""}) async {
     isLoading = true;
     Response? response = await listingRepository.getJobListingList(offset, search);
+    if (response?.statusCode == 200) {
+      final apiResponse = ApiResponse<JobListingItem>.fromJson(response?.body, (json)=>
+          JobListingItem.fromJson(json));
+      if(offset == 1){
+        listingModel = apiResponse;
+      }else{
+        listingModel?.data?.data?.addAll(apiResponse.data?.data??[]);
+        listingModel?.data?.total = apiResponse.data?.total;
+        listingModel?.data?.currentPage = apiResponse.data?.currentPage;
+      }
+      isLoading = false;
+    }else{
+      isLoading = false;
+      ApiChecker.checkApi(response!);
+    }
+    update();
+  }
+
+
+  Future<void> getCompanyJobListingList(int offset, {String search = ""}) async {
+    isLoading = true;
+    Response? response = await listingRepository.getCompanyJobListingList(offset, search);
     if (response?.statusCode == 200) {
       final apiResponse = ApiResponse<JobListingItem>.fromJson(response?.body, (json)=>
           JobListingItem.fromJson(json));
@@ -193,5 +216,13 @@ class JobListingController extends GetxController implements GetxService{
     hideSalary = !hideSalary;
     update();
   }
+
+  TextEditingController jobTitleController = TextEditingController();
+  TextEditingController jobLocationController = TextEditingController();
+  TextEditingController vacancyController = TextEditingController();
+  QuillController jobResponsibleAndContextController = QuillController.basic();
+  QuillController otherBenefitController = QuillController.basic();
+  TextEditingController minimumSalaryController = TextEditingController();
+  TextEditingController maximumController = TextEditingController();
 
 }

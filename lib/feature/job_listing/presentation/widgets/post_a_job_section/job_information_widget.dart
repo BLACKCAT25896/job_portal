@@ -30,13 +30,6 @@ class JobInformationWidget extends StatefulWidget {
 }
 
 class _JobInformationWidgetState extends State<JobInformationWidget> {
-  TextEditingController jobTitleController = TextEditingController();
-  TextEditingController jobLocationController = TextEditingController();
-  TextEditingController vacancyController = TextEditingController();
-  QuillController jobResponsibleAndContextController = QuillController.basic();
-  QuillController otherBenefitController = QuillController.basic();
-  TextEditingController minimumSalaryController = TextEditingController();
-  TextEditingController maximumController = TextEditingController();
 
 
   @override
@@ -47,7 +40,7 @@ class _JobInformationWidgetState extends State<JobInformationWidget> {
           ResponsiveMasonryGrid(children: [
             CustomTextField(
               title: "job_title".tr,
-              controller: jobTitleController,
+              controller: controller.jobTitleController,
               hintText: "job_title".tr
             ),
             DateSelectionWidget(title: "deadline".tr),
@@ -55,13 +48,13 @@ class _JobInformationWidgetState extends State<JobInformationWidget> {
 
             CustomTextField(
               title: "job_location".tr,
-              controller: jobLocationController,
+              controller: controller.jobLocationController,
                 hintText: "job_location".tr
             ),
 
             CustomTextField(
               title: "vacancy".tr,
-              controller: vacancyController,
+              controller: controller.vacancyController,
               inputType: TextInputType.number,
               inputFormatters: [AppConstants.numberFormat],
               hintText: "vacancy".tr
@@ -74,7 +67,7 @@ class _JobInformationWidgetState extends State<JobInformationWidget> {
 
           CustomRichEditorV2(
               title: "job_responsible_and_context".tr,
-              controller: jobResponsibleAndContextController,
+              controller: controller.jobResponsibleAndContextController,
               hintText: "job_responsible_and_context".tr),
 
               Row(children: [
@@ -93,14 +86,14 @@ class _JobInformationWidgetState extends State<JobInformationWidget> {
                   inputFormatters: [AppConstants.numberFormat],
                     inputType: TextInputType.number,
                     title: "minimum_salary".tr,
-                    controller: minimumSalaryController,
+                    controller: controller.minimumSalaryController,
                     hintText: "minimum_salary".tr
                 ),
                 CustomTextField(
                     inputFormatters: [AppConstants.numberFormat],
                     inputType: TextInputType.number,
                     title: "maximum_salary".tr,
-                    controller: maximumController,
+                    controller: controller.maximumController,
                     hintText: "maximum_salary".tr
                 )
               ]),
@@ -122,7 +115,7 @@ class _JobInformationWidgetState extends State<JobInformationWidget> {
                       CustomRichEditorV2(
                         height: 200,
                           title: "other_benefits".tr,
-                          controller: otherBenefitController,
+                          controller: controller.otherBenefitController,
                           hintText: "other_benefits".tr),
 
                       Align(alignment: Alignment.centerRight,

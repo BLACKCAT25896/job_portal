@@ -14,10 +14,10 @@ import 'package:job/util/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class JobListingItemWidget extends StatelessWidget {
+class CompanyJobListItemWidget extends StatelessWidget {
   final JobListingItem? listingItem;
   final int index;
-  const JobListingItemWidget({super.key,  required this.index, this.listingItem});
+  const CompanyJobListItemWidget({super.key,  required this.index, this.listingItem});
 
   @override
   Widget build(BuildContext context) {

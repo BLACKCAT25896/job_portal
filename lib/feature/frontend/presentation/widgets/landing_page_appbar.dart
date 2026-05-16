@@ -48,7 +48,7 @@ class _LandingPageAppBarState extends State<LandingPageAppBar> {
                 child: Row(children: [
                   MenuButtonWeb(title: 'recruiter'.tr, onTap: () {
                     if(Get.find<AuthenticationController>().isLoggedIn()){
-                      Get.toNamed(RouteHelper.getCompanyProfileRoute());
+                      Get.toNamed(RouteHelper.getCompanyJobListingRoute());
                     }else{
                       Get.toNamed(RouteHelper.getCompanyLoginRoute());
                     }

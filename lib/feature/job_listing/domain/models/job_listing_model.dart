@@ -1,6 +1,7 @@
 
 
 import 'package:job/feature/company/domain/models/company_model.dart';
+import 'package:job/feature/degree_level/domain/models/degree_level_model.dart';
 import 'package:job/feature/job_category/domain/models/job_category_model.dart';
 import 'package:job/feature/skill/domain/models/skill_model.dart';
 import 'package:job/helper/price_converter.dart';
@@ -12,12 +13,12 @@ class JobListingItem {
   String? slug;
   String? description;
   String? responsibilities;
-  List<Benefits>? benefits;
+  String? benefits;
+  int? jobCategoryId;
   String? address;
-  String? latitude;
-  String? longitude;
   double? salaryFrom;
   double? salaryTo;
+  int? currencyId;
   int? salaryPeriodId;
   bool? hideSalary;
   bool? isNegotiableSalary;
@@ -43,11 +44,13 @@ class JobListingItem {
   String? metaDescription;
   int? views;
   int? totalApplications;
+  int? shortlistedCount;
+  int? rejectedCount;
   String? createdAt;
-  CompanyItem? company;
   JobCategoryItem? category;
-  List<SkillItem>? skills;
-  List<ScreeningQuestions>? screeningQuestions;
+  DegreeLevelItem? degreeLevel;
+  CompanyItem? company;
+
 
   JobListingItem(
       {this.id,
@@ -57,11 +60,11 @@ class JobListingItem {
         this.description,
         this.responsibilities,
         this.benefits,
+        this.jobCategoryId,
         this.address,
-        this.latitude,
-        this.longitude,
         this.salaryFrom,
         this.salaryTo,
+        this.currencyId,
         this.salaryPeriodId,
         this.hideSalary,
         this.isNegotiableSalary,
@@ -87,11 +90,13 @@ class JobListingItem {
         this.metaDescription,
         this.views,
         this.totalApplications,
+        this.shortlistedCount,
+        this.rejectedCount,
         this.createdAt,
-        this.company,
         this.category,
-        this.skills,
-        this.screeningQuestions});
+        this.degreeLevel,
+        this.company,
+       });
 
   JobListingItem.fromJson(Map<String, dynamic> json) {
     id = PriceConverter.parseInt(json['id']);
@@ -100,31 +105,26 @@ class JobListingItem {
     slug = json['slug'];
     description = json['description'];
     responsibilities = json['responsibilities'];
-    if (json['benefits'] != null) {
-      benefits = <Benefits>[];
-      json['benefits'].forEach((v) {
-        benefits!.add(Benefits.fromJson(v));
-      });
-    }
+    benefits = json['benefits'];
+    jobCategoryId = PriceConverter.parseInt(json['job_category_id']);
     address = json['address'];
-    latitude = json['latitude'];
-    longitude = json['longitude'];
-    salaryFrom = json['salary_from'];
-    salaryTo = json['salary_to'];
-    salaryPeriodId = PriceConverter.parseInt(json['salary_period_id']);
+    salaryFrom = PriceConverter.parseAmount(json['salary_from']);
+    salaryTo = PriceConverter.parseAmount(json['salary_to']);
+    currencyId = json['currency_id'];
+    salaryPeriodId = json['salary_period_id'];
     hideSalary = json['hide_salary'];
     isNegotiableSalary = json['is_negotiable_salary'];
     employmentType = json['employment_type'];
     workplace = json['workplace'];
-    minExperience = PriceConverter.parseInt(json['min_experience']);
-    maxExperience = PriceConverter.parseInt(json['max_experience']);
+    minExperience = json['min_experience'];
+    maxExperience = json['max_experience'];
     isFresherAllowed = json['is_fresher_allowed'];
-    degreeLevelId = PriceConverter.parseInt(json['degree_level_id']);
+    degreeLevelId = json['degree_level_id'];
     educationDetail = json['education_detail'];
     gender = json['gender'];
-    minAge = PriceConverter.parseInt(json['min_age']);
-    maxAge = PriceConverter.parseInt(json['max_age']);
-    vacancies = PriceConverter.parseInt(json['vacancies']);
+    minAge = json['min_age'];
+    maxAge = json['max_age'];
+    vacancies = json['vacancies'];
     applicationDeadline = json['application_deadline'];
     joiningDate = json['joining_date'];
     applicationType = json['application_type'];
@@ -134,23 +134,22 @@ class JobListingItem {
     isHighlighted = json['is_highlighted'];
     metaTitle = json['meta_title'];
     metaDescription = json['meta_description'];
-    views = PriceConverter.parseInt(json['views']);
-    totalApplications = PriceConverter.parseInt(json['total_applications']);
+    views = json['views'];
+    totalApplications = json['total_applications'];
+    shortlistedCount = json['shortlisted_count'];
+    rejectedCount = json['rejected_count'];
     createdAt = json['created_at'];
-    company = json['company'] != null ? CompanyItem.fromJson(json['company']) : null;
-    category = json['category'] != null ? JobCategoryItem.fromJson(json['category']) : null;
-    if (json['skills'] != null) {
-      skills = <SkillItem>[];
-      json['skills'].forEach((v) {
-        skills!.add(SkillItem.fromJson(v));
-      });
-    }
-    if (json['screening_questions'] != null) {
-      screeningQuestions = <ScreeningQuestions>[];
-      json['screening_questions'].forEach((v) {
-        screeningQuestions!.add(ScreeningQuestions.fromJson(v));
-      });
-    }
+    category = json['category'] != null
+        ? JobCategoryItem.fromJson(json['category'])
+        : null;
+
+    degreeLevel = json['degree_level'] != null
+        ? DegreeLevelItem.fromJson(json['degree_level'])
+        : null;
+    company = json['company'] != null
+        ? CompanyItem.fromJson(json['company'])
+        : null;
+
   }
 
   Map<String, dynamic> toJson() {
@@ -161,14 +160,12 @@ class JobListingItem {
     data['slug'] = slug;
     data['description'] = description;
     data['responsibilities'] = responsibilities;
-    if (benefits != null) {
-      data['benefits'] = benefits!.map((v) => v.toJson()).toList();
-    }
+    data['benefits'] = benefits;
+    data['job_category_id'] = jobCategoryId;
     data['address'] = address;
-    data['latitude'] = latitude;
-    data['longitude'] = longitude;
     data['salary_from'] = salaryFrom;
     data['salary_to'] = salaryTo;
+    data['currency_id'] = currencyId;
     data['salary_period_id'] = salaryPeriodId;
     data['hide_salary'] = hideSalary;
     data['is_negotiable_salary'] = isNegotiableSalary;
@@ -194,111 +191,22 @@ class JobListingItem {
     data['meta_description'] = metaDescription;
     data['views'] = views;
     data['total_applications'] = totalApplications;
+    data['shortlisted_count'] = shortlistedCount;
+    data['rejected_count'] = rejectedCount;
     data['created_at'] = createdAt;
-    if (company != null) {
-      data['company'] = company!.toJson();
-    }
     if (category != null) {
       data['category'] = category!.toJson();
     }
-    if (skills != null) {
-      data['skills'] = skills!.map((v) => v.toJson()).toList();
+
+    if (degreeLevel != null) {
+      data['degree_level'] = degreeLevel!.toJson();
     }
-    if (screeningQuestions != null) {
-      data['screening_questions'] =
-          screeningQuestions!.map((v) => v.toJson()).toList();
-    }
-    return data;
-  }
-}
-
-class Benefits {
-  int? id;
-  String? name;
-
-  Benefits({this.id, this.name});
-
-  Benefits.fromJson(Map<String, dynamic> json) {
-    id = PriceConverter.parseInt(json['id']);
-    name = json['name'];
-  }
-
-  Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = <String, dynamic>{};
-    data['id'] = id;
-    data['name'] = name;
-    return data;
-  }
-}
-
-class ScreeningQuestions {
-  int? id;
-  int? jobListingId;
-  String? question;
-  String? type;
-  int? isRequired;
-  List<Options>? options;
-
-  ScreeningQuestions(
-      {this.id,
-        this.jobListingId,
-        this.question,
-        this.type,
-        this.isRequired,
-        this.options});
-
-  ScreeningQuestions.fromJson(Map<String, dynamic> json) {
-    id = PriceConverter.parseInt(json['id']);
-    jobListingId = PriceConverter.parseInt(json['job_listing_id']);
-    question = json['question'];
-    type = json['type'];
-    isRequired = PriceConverter.parseInt(json['is_required']);
-    if (json['options'] != null) {
-      options = <Options>[];
-      json['options'].forEach((v) {
-        options!.add(Options.fromJson(v));
-      });
-    }
-  }
-
-  Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = <String, dynamic>{};
-    data['id'] = id;
-    data['job_listing_id'] = jobListingId;
-    data['question'] = question;
-    data['type'] = type;
-    data['is_required'] = isRequired;
-    if (options != null) {
-      data['options'] = options!.map((v) => v.toJson()).toList();
+    if (company != null) {
+      data['company'] = company!.toJson();
     }
     return data;
   }
 }
 
-class Options {
-  int? id;
-  int? jobScreeningQuestionId;
-  String? optionText;
-
-  Options(
-      {this.id,
-        this.jobScreeningQuestionId,
-        this.optionText,
-       });
-
-  Options.fromJson(Map<String, dynamic> json) {
-    id = PriceConverter.parseInt(json['id']);
-    jobScreeningQuestionId = PriceConverter.parseInt(json['job_screening_question_id']);
-    optionText = json['option_text'];
-  }
-
-  Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = <String, dynamic>{};
-    data['id'] = id;
-    data['job_screening_question_id'] = jobScreeningQuestionId;
-    data['option_text'] = optionText;
-    return data;
-  }
-}
 
 

@@ -29,6 +29,7 @@ import 'package:job/feature/industries/presentation/screens/industry_screen.dart
 import 'package:job/feature/inquiry/presentation/screens/inquiry_screen.dart';
 import 'package:job/feature/job_application/presentation/screens/job_application_screen.dart';
 import 'package:job/feature/job_category/presentation/screens/job_category_screen.dart';
+import 'package:job/feature/job_listing/presentation/screens/company_job_list_screen.dart';
 import 'package:job/feature/job_listing/presentation/screens/job_listing_screen.dart';
 import 'package:job/feature/job_listing/presentation/screens/post_a_job_screen.dart';
 import 'package:job/feature/job_stage/presentation/screens/job_stage_screen.dart';
@@ -120,6 +121,9 @@ class RouteHelper {
 
   static const String jobListing = '/job-listing';
   static String getJobListingRoute() => jobListing;
+
+  static const String companyJobListing = '/company-job-listing';
+  static String getCompanyJobListingRoute() => companyJobListing;
 
   static const String postAJob = '/post-a-job';
   static String getPostAJobRoute() => postAJob;
@@ -315,6 +319,7 @@ class RouteHelper {
     GetPage(name: skill, page: ()=> SkillScreen()),
     GetPage(name: jobCategories, page: ()=> JobCategoryScreen()),
     GetPage(name: jobListing, page: ()=> JobListingScreen()),
+    GetPage(name: companyJobListing, page: ()=> CompanyJobListingScreen()),
     GetPage(name: postAJob, page: ()=> PostAJobScreen()),
     GetPage(name: jobStage, page: ()=> JobStageScreen()),
     GetPage(name: jobApplication, page: ()=> JobApplicationScreen()),

@@ -30,6 +30,7 @@ class AppConstants {
   static const String changePassword = '/change-password';
   static const String candidateProfile = '/candidate/profile';
   static const String companyProfile = '/company/profile';
+  static const String companyProfileUpdate = '/company/profile-update';
   static const String galleries = '/galleries';
   static const String tokenUri = '/save-fcm-token';
   static const String vapidKey = 'BGvbfIkEn80a8STCbBPdr-S8QNtjrZfrs-UH7-sZgDDpr_LDfxCsx4n-pC-kUh2jqpWLwEvoAti0AyFYLcvQhng';

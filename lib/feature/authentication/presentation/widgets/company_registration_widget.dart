@@ -1,4 +1,3 @@
-import 'package:country_code_picker/country_code_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:job/common/widget/custom_button.dart';
 import 'package:job/common/widget/custom_checkbox.dart';
@@ -10,9 +9,11 @@ import 'package:job/feature/authentication/domain/model/create_company_account_b
 import 'package:job/feature/authentication/logic/authentication_controller.dart';
 import 'package:job/feature/authentication/presentation/widgets/captcha_verification.dart';
 import 'package:job/feature/authentication/presentation/widgets/company_registration_heading_widget.dart';
+import 'package:job/feature/authentication/presentation/widgets/edit_company_information_header_section.dart';
 import 'package:job/feature/authentication/presentation/widgets/employee_number_selection_widget.dart';
 import 'package:job/feature/frontend/controller/frontend_controller.dart';
 import 'package:job/feature/frontend/presentation/widgets/industry/select_public_industry_widget.dart';
+import 'package:job/feature/profile/logic/profile_controller.dart';
 import 'package:job/util/app_constants.dart';
 import 'package:job/util/dimensions.dart';
 import 'package:job/util/styles.dart';
@@ -44,6 +45,35 @@ class _CompanyRegistrationWidgetState extends State<CompanyRegistrationWidget> {
   TextEditingController contactPersonEmailController = TextEditingController();
   TextEditingController contactPersonPhoneController = TextEditingController();
 
+  @override
+  void initState() {
+    super.initState();
+    if(widget.type == "edit"){
+      loadData();
+    }
+  }
+
+  Future<void> loadData() async {
+    await Get.find<ProfileController>().getCompanyProfileInfo().then((val){
+      final data = Get.find<ProfileController>().profileModel?.data;
+      userNameController.text = data?.name??'';
+      companyNameController.text = data?.companyInfo?.name??'';
+      establishedInController.text = data?.companyInfo?.establishedIn??'';
+      companyDetailsController.text = data?.companyInfo?.details??'';
+      companyAddressController.text = data?.companyInfo?.address??'';
+      businessDescriptionController.text = data?.companyInfo?.details??'';
+      tradeLicenceNoController.text = data?.companyInfo?.businessTradeLicenseNo??'';
+      rlNoController.text = data?.companyInfo?.rlNo??'';
+      websiteUrlController.text = data?.companyInfo?.website??'';
+      contactPersonNameController.text = data?.companyInfo?.contactPersonName??'';
+      contactPersonDesignationController.text = data?.companyInfo?.contactPersonDesignation??'';
+      contactPersonEmailController.text = data?.companyInfo?.contactPersonEmail??'';
+      contactPersonPhoneController.text = data?.companyInfo?.contactPersonMobile??'';
+      if(data?.companyInfo?.industry != null) {
+        Get.find<LandingPageController>().selectIndustry(data!.companyInfo!.industry!, notify: false);
+      }
+    });
+  }
 
 
   @override
@@ -52,29 +82,34 @@ class _CompanyRegistrationWidgetState extends State<CompanyRegistrationWidget> {
         spacing: Dimensions.paddingSizeDefault, children: [
 
           widget.type  == "create"?
-          CompanyRegistrationHeadingWidget():SizedBox(),
+          CompanyRegistrationHeadingWidget():EditCompanyInformationHeaderSection(),
 
       CustomContainer(
         horizontalPadding: Dimensions.paddingSizeLarge,
           verticalPadding: Dimensions.paddingSizeLarge,
           child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             SizedBox(height: Dimensions.paddingSizeLarge),
-        Text("user_information".tr, style: textSemiBold.copyWith(fontSize: Dimensions.fontSizeLarge)),
-        ResponsiveMasonryGrid(children: [
-          CustomTextField(title: "username".tr,
-            controller: userNameController,
-            hintText: "username".tr),
 
-          CustomTextField(title: "password".tr,
-            controller: passwordController,
-            hintText: "password".tr,
-            isPassword: true),
 
-          CustomTextField(title: "confirm_password".tr,
-            controller: confirmPasswordController,
-            hintText: "confirm_password".tr,
-            isPassword: true),
+        if(widget.type == "create")
+        Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          Text("user_information".tr, style: textSemiBold.copyWith(fontSize: Dimensions.fontSizeLarge)),
+          ResponsiveMasonryGrid(children: [
+            CustomTextField(title: "username".tr,
+                controller: userNameController,
+                hintText: "username".tr),
 
+            CustomTextField(title: "password".tr,
+                controller: passwordController,
+                hintText: "password".tr,
+                isPassword: true),
+
+            CustomTextField(title: "confirm_password".tr,
+                controller: confirmPasswordController,
+                hintText: "confirm_password".tr,
+                isPassword: true),
+
+          ]),
         ]),
 
         SizedBox(height: Dimensions.paddingSizeLarge),
@@ -95,7 +130,11 @@ class _CompanyRegistrationWidgetState extends State<CompanyRegistrationWidget> {
 
         ]),
 
-            EmployeeNumberSelectionWidget(),
+
+
+
+            Padding(padding: EdgeInsets.symmetric(vertical: Dimensions.paddingSizeDefault),
+              child: EmployeeNumberSelectionWidget()),
 
         CustomTextField(
           title: "company_details".tr,
@@ -161,19 +200,13 @@ class _CompanyRegistrationWidgetState extends State<CompanyRegistrationWidget> {
                   GetBuilder<AuthenticationController>(
                     builder: (authenticationController) {
                       return CustomTextField(
-                        isCodePicker: true,
                         title: "contact_person_phone".tr,
                         hintText: 'contact_person_phone'.tr,
                         inputType: TextInputType.number,
-                        countryDialCode: authenticationController.countryDialCode,
                         prefixHeight: 35,
                         inputFormatters: [AppConstants.phoneNumberFormat],
                         controller: contactPersonPhoneController,
                         inputAction: TextInputAction.done,
-                        onCountryChanged: (CountryCode countryCode){
-                          authenticationController.countryDialCode = countryCode.dialCode!;
-                          authenticationController.setCountryCode(countryCode.dialCode!);
-                        },
                       );
                     }
                   )
@@ -181,6 +214,7 @@ class _CompanyRegistrationWidgetState extends State<CompanyRegistrationWidget> {
                 ]),
               ])),
 
+          if(widget.type == "create")
           CustomContainer(borderRadius: 5, showShadow: false,
               verticalPadding: Dimensions.paddingSizeLarge,
               child: Column(crossAxisAlignment: CrossAxisAlignment.start,
@@ -202,11 +236,10 @@ class _CompanyRegistrationWidgetState extends State<CompanyRegistrationWidget> {
                 ],
               )),
 
-          GetBuilder<AuthenticationController>(
-            builder: (controller) {
+          GetBuilder<AuthenticationController>(builder: (controller) {
               return controller.isLoading?
               Center(child: const CircularProgressIndicator()):
-              CustomButton(onTap: (controller.isAccept && controller.captchaVerified)?(){
+              CustomButton(onTap: ((controller.isAccept && controller.captchaVerified) || widget.type == "edit")?(){
                 String username = userNameController.text.trim();
                 String password = passwordController.text.trim();
                 String confirmPassword = confirmPasswordController.text.trim();
@@ -221,15 +254,15 @@ class _CompanyRegistrationWidgetState extends State<CompanyRegistrationWidget> {
                 String contactPersonDesignation = contactPersonDesignationController.text.trim();
                 String contactPersonEmail = contactPersonEmailController.text.trim();
                 String contactPersonPhone = contactPersonPhoneController.text.trim();
-
+                String rlNo = rlNoController.text.trim();
                 int? industryId = Get.find<LandingPageController>().selectedIndustryItem?.id;
 
 
-                if(username.isEmpty){
+                if(widget.type == "create" && username.isEmpty){
                   showCustomSnackBar("username_is_empty".tr);
-                }else if(password.isEmpty){
+                }else if(widget.type == "create" && password.isEmpty){
                   showCustomSnackBar("password_is_empty".tr);
-                }else if(confirmPassword.isEmpty){
+                }else if(widget.type == "create" && confirmPassword.isEmpty){
                   showCustomSnackBar("confirm_password_is_empty".tr);
                 }else if(companyName.isEmpty){
                   showCustomSnackBar("company_name_is_empty".tr);
@@ -254,17 +287,31 @@ class _CompanyRegistrationWidgetState extends State<CompanyRegistrationWidget> {
                   }
                 else{
                   CreateCompanyAccountBody body = CreateCompanyAccountBody(
-                    firstName: contactPersonName,
+                    username: username,
+                    firstName: "-",
+                    lastName: "-",
+                    phone: controller.countryDialCode + contactPersonPhone,
+                    contactPersonDesignation: contactPersonDesignation,
+                    contactPersonEmail: contactPersonEmail,
+                    contactPersonName: contactPersonName,
+                    contactPersonMobile: controller.countryDialCode + contactPersonPhone,
+                    establishedIn: establishedIn,
+                    details: companyDetails,
+                    businessTradeLicenseNo: tradeLicenceNo,
                     companyName: companyName,
                     website: website,
-                    location: companyAddress,
+                    address: companyAddress,
                     industryId: industryId,
-                    phone: controller.countryDialCode + contactPersonPhone,
                     password: password,
                     passwordConfirmation: confirmPassword,
                     email: contactPersonEmail,
+                    rlNo: rlNo,
                   );
-                  controller.companyRegistration(body);
+                  if(widget.type == "edit"){
+                    Get.find<ProfileController>().updateCompanyProfile(body);
+                  }else {
+                    controller.companyRegistration(body);
+                  }
 
                 }
 

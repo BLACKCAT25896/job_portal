@@ -415,7 +415,7 @@
   "update_password_info": "Update Password Info",
   "current_password": "Current Password",
   "new_password": "New Password",
-  "confirm" : "Confirm Password",
+  "confirm" : "Confirm",
   "submit": "Submit",
   "light_theme": "Light Theme",
   "dark_theme": "Dark Theme",
@@ -431,7 +431,14 @@
   "post_job": "Post Job",
   "talent_search": "Talent Search",
   "job_dashboard": "Job Dashboard",
-  "status": "Status"
+  "status": "Status",
+  "upload_your_company_logo": "Upload your company logo",
+  "edit_company_information": "Edit Company Information",
+  "set_up_your_hiring_needs": "Set up your recruiter presence and hiring needs",
+  "applicant_matching": "Applicant Matching",
+  "matching_strength": "Matching Strength",
+  "upload": "Upload",
+  "profile_image": "Profile Image"
 
 
 }

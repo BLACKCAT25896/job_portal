@@ -2,13 +2,16 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:job/api_handle/api_checker.dart';
+import 'package:job/common/widget/custom_snackbar.dart';
 import 'package:job/feature/authentication/domain/model/create_candidate_account_body.dart';
 import 'package:job/feature/authentication/domain/model/create_company_account_body.dart';
 import 'package:job/feature/authentication/domain/model/user_role_permission_model.dart';
 import 'package:job/feature/authentication/domain/repository/authentication_repository.dart';
 import 'package:job/feature/authentication/presentation/widgets/gender_selection_widget.dart';
 import 'package:job/feature/profile/logic/profile_controller.dart';
+import 'package:job/helper/image_size_checker.dart';
 import 'package:job/helper/route_helper.dart';
 
 class AuthenticationController extends GetxController implements GetxService{
@@ -24,7 +27,7 @@ class AuthenticationController extends GetxController implements GetxService{
 
 
   bool isLoading = false;
-  Future<void> login( String email, String password, {bool fromDashboard = false}) async {
+  Future<void> login( String email, String password) async {
     isLoading = true;
     update();
     Response? response = await authenticationRepository.login(email: email, password: password);
@@ -41,7 +44,7 @@ class AuthenticationController extends GetxController implements GetxService{
         });
       }else if(userType == "Employer" || userType == "Company"){
         await Get.find<ProfileController>().getCompanyProfileInfo().then((val){
-          Get.offNamed(RouteHelper.getCompanyProfileRoute());
+          Get.offNamed(RouteHelper.getCompanyJobListingRoute());
         });
       }else{
         await Get.find<ProfileController>().getCandidateProfileInfo().then((val){
@@ -51,11 +54,9 @@ class AuthenticationController extends GetxController implements GetxService{
 
     }else{
       isLoading = false;
-      ApiChecker.checkApi(response);
+     showCustomSnackBar("${response.body['message']}");
     }
-    if(!fromDashboard) {
-      update();
-    }
+    update();
 
   }
 
@@ -209,6 +210,20 @@ class AuthenticationController extends GetxController implements GetxService{
     update();
   }
 
+
+
+  XFile? userImage;
+  XFile? pickedImage;
+  void pickImage() async {
+    pickedImage = await ImagePicker().pickImage(source: ImageSource.gallery);
+    double imageSizeIs = await ImageSize.getImageSize(pickedImage!);
+    if(imageSizeIs > 1){
+      showCustomSnackBar("please_choose_image_size_less_than_2_mb".tr);
+    }else{
+      userImage = pickedImage;
+    }
+    update();
+  }
 
 
 

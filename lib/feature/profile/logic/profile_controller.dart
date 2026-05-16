@@ -2,6 +2,7 @@ import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:job/api_handle/api_checker.dart';
 import 'package:job/common/widget/custom_snackbar.dart';
+import 'package:job/feature/authentication/domain/model/create_company_account_body.dart';
 import 'package:job/feature/profile/domain/model/profile_model.dart';
 import 'package:job/feature/profile/domain/model/status_update_body.dart';
 import 'package:job/feature/profile/domain/repository/profile_repository.dart';
@@ -127,6 +128,20 @@ class ProfileController extends GetxController implements GetxService{
     update();
   }
 
+  Future<void> updateCompanyProfile(CreateCompanyAccountBody body) async {
+    isLoading = true;
+    Response? response = await profileRepository.updateCompanyProfile(body);
+    if (response?.statusCode == 200) {
+      showCustomSnackBar("updated_successfully".tr, isError: false);
+      getCompanyProfileInfo();
+      isLoading = false;
+    }else{
+      isLoading = false;
+      ApiChecker.checkApi(response!);
+    }
+    update();
+  }
+
 
   Future<void> updateProfileAvatar() async {
     isLoading = true;
@@ -134,6 +149,20 @@ class ProfileController extends GetxController implements GetxService{
     if (response?.statusCode == 200) {
       showCustomSnackBar("updated_successfully".tr, isError: false);
       getProfileInfo();
+      isLoading = false;
+    }else{
+      isLoading = false;
+      ApiChecker.checkApi(response!);
+    }
+    update();
+  }
+
+  Future<void> updateCompanyLogo() async {
+    isLoading = true;
+    Response? response = await profileRepository.companyLogoUpdate(profileAvatar);
+    if (response?.statusCode == 200) {
+      showCustomSnackBar("updated_successfully".tr, isError: false);
+      getCompanyProfileInfo();
       isLoading = false;
     }else{
       isLoading = false;

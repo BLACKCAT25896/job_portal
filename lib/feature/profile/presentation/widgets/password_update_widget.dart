@@ -4,7 +4,6 @@ import 'package:job/common/widget/custom_button.dart';
 import 'package:job/common/widget/custom_contaner.dart';
 import 'package:job/common/widget/custom_snackbar.dart';
 import 'package:job/common/widget/custom_text_field.dart';
-import 'package:job/common/widget/custom_title.dart';
 import 'package:job/feature/profile/logic/profile_controller.dart';
 import 'package:job/util/app_constants.dart';
 import 'package:job/util/dimensions.dart';

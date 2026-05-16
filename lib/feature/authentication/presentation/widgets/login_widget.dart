@@ -109,8 +109,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                           }else{
                             authenticationController.clearUserEmailAndPassword();
                           }
-                          authenticationController.login(username, password,
-                              fromDashboard: widget.fromDashboard);
+                          authenticationController.login(username, password);
                         }
                       },
                         text: "signIn".tr,),

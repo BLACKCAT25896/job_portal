@@ -23,6 +23,8 @@ class ImagePickerWidget extends StatelessWidget {
   final String? title;
   final String? guide;
   final bool isDelete;
+  final CrossAxisAlignment? alignment;
+  final AlignmentGeometry? imageAlignment;
 
   const ImagePickerWidget({
     super.key,
@@ -35,12 +37,12 @@ class ImagePickerWidget extends StatelessWidget {
     required this.onImagePicked,
     this.pickedFile,
     this.title, this.guide,
-    this.isDelete = false,
+    this.isDelete = false, this.alignment, this.imageAlignment,
   });
 
   @override
   Widget build(BuildContext context) {
-    return Column(crossAxisAlignment: CrossAxisAlignment.center,
+    return Column(crossAxisAlignment: alignment?? CrossAxisAlignment.center,
       spacing: Dimensions.paddingSizeSmall, children: [
         if (title != null)
           Padding(padding: const EdgeInsets.only(bottom: 8.0),
@@ -55,7 +57,7 @@ class ImagePickerWidget extends StatelessWidget {
               imageWidget = CustomImage(image: imageUrl ?? "", height: height, width: width, fit: BoxFit.contain);
             }
 
-            return Align(alignment: Alignment.center,
+            return Align(alignment: imageAlignment?? Alignment.center,
               child: Stack(children: [
                   ClipRRect(borderRadius: BorderRadius.circular(borderRadius), child: imageWidget),
                   isDelete ? Positioned(top: 5,right: 5,

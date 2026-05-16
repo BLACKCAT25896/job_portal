@@ -40,21 +40,12 @@ class _HeaderProfileInfoMenuState extends State<HeaderProfileInfoMenu> {
             },
           ),
         ] :(userType == "Company" || userType == "Employer")?[
-            SimpleMenuItem(title: 'billing'.tr, icon: Icons.payment_outlined,
-                onTap: () => Get.toNamed(RouteHelper.getProfileRoute())),
 
-            SimpleMenuItem(title: 'subscribed_services'.tr, icon: Icons.subscriptions_outlined,
-                onTap: () => Get.toNamed(RouteHelper.getProfileRoute())),
+            SimpleMenuItem(title: 'profile'.tr, icon: Icons.person_outline,
+                onTap: () => Get.toNamed(RouteHelper.getCompanyProfileRoute())),
 
             SimpleMenuItem(title: 'edit_account'.tr, icon: Icons.edit_outlined,
                 onTap: () => Get.toNamed(RouteHelper.getCreateCompanyRoute(type: "edit"))),
-
-
-            SimpleMenuItem(title: 'support'.tr, icon: Icons.support_agent,
-                onTap: () => Get.toNamed(RouteHelper.getProfileRoute())),
-
-            SimpleMenuItem(title: 'settings'.tr, icon: Icons.settings_outlined,
-                onTap: () => Get.toNamed(RouteHelper.getProfileRoute())),
 
 
             SimpleMenuItem(title: 'change_password'.tr, icon: Icons.lock_outline,

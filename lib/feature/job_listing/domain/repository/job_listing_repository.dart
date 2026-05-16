@@ -12,6 +12,10 @@ class JobListingRepository{
     return await apiClient.getData("${AppConstants.jobListings}?page=$page&perPage=10&search=$search");
   }
 
+  Future<Response?> getCompanyJobListingList(int page, String search) async {
+    return await apiClient.getData("${AppConstants.companyJobs}?page=$page&perPage=10&search=$search");
+  }
+
   Future<Response?> createNewJobListing(PostAJobBody categoryBody) async {
     return await apiClient.postData(AppConstants.jobListings, categoryBody.toJson());
   }

@@ -1,5 +1,7 @@
 import 'package:job/common/global_widget/custom_web_scroll_view_widget.dart';
 import 'package:job/common/layout/section_header_with_path_widget.dart';
+import 'package:job/common/widget/custom_button.dart';
+import 'package:job/common/widget/custom_snackbar.dart';
 import 'package:job/common/widget/image_picker_widget.dart';
 import 'package:job/feature/profile/logic/profile_controller.dart';
 import 'package:job/feature/profile/presentation/widgets/password_update_widget.dart';
@@ -30,9 +32,24 @@ class _ProfileScreenState extends State<ProfileScreen> {
            GetBuilder<ProfileController>(builder: (controller) {
              final model = controller.profileModel;
              final avatar = model?.data?.image;
-             return ImagePickerWidget(pickedFile: controller.profileAvatar,
-                   imageUrl: avatar != null? "${AppConstants.imageBaseUrl}/users/$avatar" : "",
-                   onImagePicked: ()=> controller.pickImage());
+             return Row(spacing: Dimensions.paddingSizeDefault,
+               children: [
+                 ImagePickerWidget(pickedFile: controller.profileAvatar,
+                       title: "profile_image".tr,
+                       imageUrl: avatar != null? "${AppConstants.imageBaseUrl}/users/$avatar" : "",
+                       onImagePicked: ()=> controller.pickImage()),
+
+                 controller.isLoading? Center(child: CircularProgressIndicator()):
+                 IntrinsicWidth(child: CustomButton(onTap: (){
+                     if(controller.profileAvatar != null){
+                       controller.updateProfileAvatar();
+                     }else{
+                       showCustomSnackBar("message");
+                     }
+                   }, text: "confirm".tr),
+                 )
+               ],
+             );
              }),
 
 

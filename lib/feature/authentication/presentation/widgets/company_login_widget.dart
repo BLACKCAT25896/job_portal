@@ -106,7 +106,7 @@ class _CompanyLoginWidgetState extends State<CompanyLoginWidget> {
                       }else{
                         authenticationController.clearUserEmailAndPassword();
                       }
-                      authenticationController.login(username, password, fromDashboard: false);
+                      authenticationController.login(username, password);
                     }
                     }, text: "signIn".tr)),
 

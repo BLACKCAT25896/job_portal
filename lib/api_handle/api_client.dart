@@ -33,7 +33,6 @@ class ApiClient extends GetxService {
   }
 
   void updateHeader(String token, {String? deviceInfo, String? location}) {
-    final currentDomain = AppConstants.domain;
     Map<String, String> header = {
       'Content-Type': 'application/json; charset=UTF-8',
       'Accept' : 'application/json',
@@ -42,7 +41,7 @@ class ApiClient extends GetxService {
       'deviceinfo' : deviceInfo??'',
       'location' : location??'',
       'Authorization': 'Bearer $token',
-      'X-Domain' : currentDomain,
+
     };
     _mainHeaders = header;
   }
