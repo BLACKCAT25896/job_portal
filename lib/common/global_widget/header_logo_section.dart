@@ -26,7 +26,7 @@ class HeaderLogoSection extends StatelessWidget {
         String ? logoToShow = Get.isDarkMode? darkLogo : lightLogo;
         return(imageSettingModel != null && imageSettingModel.data != null )?
         CustomContainer(showShadow: false,verticalPadding: 0,
-            horizontalPadding: 0,borderRadius: 0,
+            horizontalPadding: 0,borderRadius: 0, color: Colors.transparent,
             onTap: () => Get.toNamed(RouteHelper.getInitialRoute()),
             child: SizedBox(height: 50, child: CustomImage(
               image: '${AppConstants.imageBaseUrl}/image_settings/$logoToShow',

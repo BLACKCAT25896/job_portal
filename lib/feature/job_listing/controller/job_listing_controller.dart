@@ -154,12 +154,24 @@ class JobListingController extends GetxController implements GetxService{
     ),
   ];
 
-  List<String> employeeStatus = ["full_time", "part_time", "contract", "internship", "freelance"];
+  List<String> employeeStatus = [  'Full Time', 'Part Time', 'Freelance', 'Contract',];
   String selectedEmployeeStatus = "full_time";
-  void selectEmployeeStatus(String status) {
+  void selectEmployeeStatus(String status, {bool notify = true}) {
     selectedEmployeeStatus = status;
-    update();
+    if(notify) {
+      update();
+    }
   }
+
+  List<String> jobLevel = ['Intern', 'Trainee', 'Junior', 'Mid Level', 'Senior', 'Team Lead', 'Manager', 'Top Level', 'Executive', 'Consultant'];
+  String selectedJobLevel = "Team Lead";
+  void selectJobLevel(String level, {bool notify = true}) {
+    selectedJobLevel = level;
+    if(notify) {
+      update();
+    }
+  }
+
 
   List<String> workPlace = ["work_from_office", "work_from_home"];
   String selectedWorkPlace = "work_from_office";

@@ -51,8 +51,8 @@ class ImagePickerWidget extends StatelessWidget {
             Widget imageWidget;
             if (pickedFile != null) {
               imageWidget = GetPlatform.isWeb ? Image.network(pickedFile!.path,
-                  width: width, height: height, fit: BoxFit.cover) :
-              Image.file(File(pickedFile!.path), width: width, height: height, fit: BoxFit.cover);
+                  width: width, height: height, fit: BoxFit.contain) :
+              Image.file(File(pickedFile!.path), width: width, height: height, fit: BoxFit.contain);
             } else {
               imageWidget = CustomImage(image: imageUrl ?? "", height: height, width: width, fit: BoxFit.contain);
             }

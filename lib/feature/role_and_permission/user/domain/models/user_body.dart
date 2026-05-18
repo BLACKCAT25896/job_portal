@@ -5,6 +5,7 @@ class UserBody {
   String? phone;
   String? address;
   int? roleId;
+  String? userType;
   String? password;
   String? passwordConfirmation;
   String? sMethod;
@@ -16,6 +17,7 @@ class UserBody {
         this.phone,
         this.address,
         this.roleId,
+        this.userType,
         this.password,
         this.passwordConfirmation,
         this.sMethod
@@ -28,6 +30,7 @@ class UserBody {
     phone = json['phone'];
     address = json['address'];
     roleId = json['role_id'];
+    userType = json['user_type'];
     password = json['password'];
     passwordConfirmation = json['password_confirmation'];
     sMethod = json['_method'];
@@ -41,6 +44,7 @@ class UserBody {
     data['phone'] = phone;
     data['address'] = address;
     data['role_id'] = roleId;
+    data['user_type'] = userType;
     data['password'] = password;
     data['password_confirmation'] = passwordConfirmation;
     data['_method'] = sMethod;

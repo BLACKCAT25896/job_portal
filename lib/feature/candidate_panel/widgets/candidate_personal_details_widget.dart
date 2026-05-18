@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:job/common/widget/custom_contaner.dart';
+import 'package:job/common/layout/custom_dialog_widget.dart';
 import 'package:job/common/widget/custom_icon_text_button.dart';
-import 'package:job/common/widget/custom_image.dart';
 import 'package:job/common/widget/responsive_grid_widget.dart';
 import 'package:job/feature/candidate_panel/logic/candidate_panel_controller.dart';
+import 'package:job/feature/candidate_panel/widgets/candidate_profile_image_widget.dart';
+import 'package:job/feature/candidate_panel/widgets/edit_candidate_personal_details_widget.dart';
 import 'package:job/feature/candidate_panel/widgets/generic_expand_collapse_widget.dart';
+import 'package:job/feature/profile/logic/profile_controller.dart';
 import 'package:job/util/dimensions.dart';
 import 'package:job/util/images.dart';
 import 'package:job/util/styles.dart';
@@ -15,56 +17,48 @@ class CandidatePersonalDetailsWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<CandidatePanelController>(
-      builder: (controller) {
-        return CustomExpandCollapse(
-          initiallyExpanded: true,
-            isExpanded: controller.isExpanded("personal_details"),
-            onChanged: (v) => controller.toggleSection("personal_details"),
-            header: Text("personal_details".tr, style: sectionHeadingTextStyle(context)),
-          trailing: CustomIconTextButton(text: "edit".tr,onTap: (){
+    return GetBuilder<CandidatePanelController>(builder: (controller) {
+        return GetBuilder<ProfileController>(builder: (profileController) {
+          final data = profileController.profileModel?.data;
+          final candidate = data?.candidateInfo;
+          if(candidate == null) return Container();
+            return CustomExpandCollapse(
+              initiallyExpanded: true,
+                isExpanded: controller.isExpanded("personal_details"),
+                onChanged: (v) => controller.toggleSection("personal_details"),
+                header: Text("personal_details".tr, style: sectionHeadingTextStyle(context)),
+              trailing: CustomIconTextButton(text: "edit".tr,onTap: (){
+                Get.dialog(CustomDialogWidget(title: "personal_details".tr,width: 900,
+                    child: EditCandidatePersonalDetailsWidget()));
 
-          },icon: Images.edit),
-          child: Column(spacing: Dimensions.paddingSizeDefault, children: [
-            Row(spacing: Dimensions.paddingSizeSmall, children: [
-              CustomImage(width: 70, height: 70, radius: 123, image: ""),
-              Column(spacing: Dimensions.paddingSizeExtraSmall,
-                  crossAxisAlignment: CrossAxisAlignment.start, children: [
-                    Row(spacing: Dimensions.paddingSizeSmall, children: [
-                      CustomContainer(borderRadius: 5, showShadow: false,
-                          border: Border.all(width: .25, color: Theme.of(context).hintColor),
-                          child: Text("change_image".tr)),
-                      Text("or".tr),
-                      Text("delete".tr,
-                          style: textRegular.copyWith(color: Theme.of(context).colorScheme.error)),
-                    ]),
-                    Text("upload_your_profile_image".tr, style: textRegular)
-                  ])
-            ]),
-            ResponsiveMasonryGrid(children:  [
-              CandidateDetailItem(title: "first_name".tr, value: "Md"),
-              CandidateDetailItem(title: "last_name".tr, value: "Hasan"),
-              CandidateDetailItem(title: "fathers_name", value: "Abdul Karim"),
-              CandidateDetailItem(title: "mothers_name", value: "Rahima Begum"),
-              CandidateDetailItem(title: "date_of_birth".tr, value: "25 Aug 2020"),
-              CandidateDetailItem(title: "gender".tr, value: "Male"),
-              CandidateDetailItem(title: "religion".tr, value: "Muslim"),
-              CandidateDetailItem(title: "marital_status".tr, value: "Single"),
-              CandidateDetailItem(title: "nationality".tr, value: "Bangladeshi"),
-              CandidateDetailItem(title: "national_id_number".tr, value: "-"),
-              CandidateDetailItem(title: "passport_number".tr, value: "-"),
-              CandidateDetailItem(title: "passport_expiry_date".tr, value: "-"),
-              CandidateDetailItem(title: "primary_mobile".tr, value: "-"),
-              CandidateDetailItem(title: "secondary_mobile".tr, value: "-"),
-              CandidateDetailItem(title: "primary_email".tr, value: "-"),
-              CandidateDetailItem(title: "alternative_email".tr, value: "-"),
-              CandidateDetailItem(title: "emergency_contact".tr, value: "-"),
-              CandidateDetailItem(title: "blood_group".tr, value: "-"),
-              CandidateDetailItem(title: "height".tr, value: "-"),
-              CandidateDetailItem(title: "weight".tr, value: "-"),
-              ],
-            ),
-          ],));
+              },icon: Images.edit),
+              child: Column(spacing: Dimensions.paddingSizeDefault, children: [
+                CandidateProfileImageWidget(),
+                ResponsiveMasonryGrid(children:  [
+                  CandidateDetailItem(title: "name".tr, value: "${data?.name}"),
+                  CandidateDetailItem(title: "fathers_name".tr, value: candidate.fatherName??"-"),
+                  CandidateDetailItem(title: "mothers_name", value: candidate.motherName??"-"),
+                  CandidateDetailItem(title: "date_of_birth".tr, value: candidate.dob??"-"),
+                  CandidateDetailItem(title: "gender".tr, value: candidate.gender??"-"),
+                  CandidateDetailItem(title: "religion".tr, value: candidate.religion??"-"),
+                  CandidateDetailItem(title: "marital_status".tr, value: candidate.maritalStatus??"-"),
+                  CandidateDetailItem(title: "nationality".tr, value: candidate.nationality??"-"),
+                  CandidateDetailItem(title: "national_id_number".tr, value: candidate.nationalIdCard??"-"),
+                  CandidateDetailItem(title: "passport_number".tr, value: candidate.passportNumber?? "-"),
+                  CandidateDetailItem(title: "passport_expiry_date".tr, value: candidate.passportIssueDate?? "-"),
+                  CandidateDetailItem(title: "primary_mobile".tr, value: data?.phone??"-"),
+                  CandidateDetailItem(title: "secondary_mobile".tr, value: candidate.secondaryMobile?? "-"),
+                  CandidateDetailItem(title: "primary_email".tr, value: data?.email??"-"),
+                  CandidateDetailItem(title: "alternative_email".tr, value: candidate.alternateEmail?? "-"),
+                  CandidateDetailItem(title: "emergency_contact".tr, value: candidate.emergencyContact?? "-"),
+                  CandidateDetailItem(title: "blood_group".tr, value: candidate.bloodGroup??"-"),
+                  CandidateDetailItem(title: "height".tr, value: candidate.height?? "-"),
+                  CandidateDetailItem(title: "weight".tr, value: candidate.weight ?? "-"),
+                  ],
+                ),
+              ],));
+          }
+        );
       }
     );
   }

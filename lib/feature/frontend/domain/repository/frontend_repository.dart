@@ -48,12 +48,12 @@ Future<Response?> getLandingCompanies(int page, String search) async {
     void addParam(String key, dynamic value) {
       if (value != null) {
         if (value is String && value.isEmpty) return;
-        queryParams[key] = value.toString(); // 🔥 FIX
+        queryParams[key] = value.toString();
       }
     }
 
     addParam('page', page);
-    addParam('per_page', 50);
+    addParam('perPage', 10);
     addParam('search', search);
     addParam('company_id', companyId);
     addParam('job_category_id', jobCategoryId);

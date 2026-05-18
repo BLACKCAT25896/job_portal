@@ -42,7 +42,7 @@ class JobSummerySection extends StatelessWidget {
               ResponsiveMasonryGrid(
                 children: [
                   InfoRichText(label:"vacancy".tr, value: job?.vacancies.toString() ?? "0"),
-                  InfoRichText(label:"location".tr, value:job?.company?.location ?? "N/A"),
+                  InfoRichText(label:"location".tr, value:job?.address ?? "N/A"),
                   InfoRichText(label:"salary".tr, value: _formatSalary(job?.salaryFrom, job?.salaryTo)),
                   InfoRichText(label:"experience".tr, value: "${job?.minExperience ?? 0} - ${"${job?.maxExperience ?? 0} years"}"),
                   InfoRichText(label:"published".tr, value: _formatDate(job?.createdAt)),

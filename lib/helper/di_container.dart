@@ -24,6 +24,8 @@ import 'package:job/feature/company/controller/company_controller.dart';
 import 'package:job/feature/company/domain/repository/company_repository.dart';
 import 'package:job/feature/company_size/controller/company_size_controller.dart';
 import 'package:job/feature/company_size/domain/repository/company_size_repository.dart';
+import 'package:job/feature/contact_us/controller/contact_us_controller.dart';
+import 'package:job/feature/contact_us/domain/repository/contact_us_repository.dart';
 import 'package:job/feature/degree_level/controller/degree_level_controller.dart';
 import 'package:job/feature/degree_level/domain/repository/degree_level_repository.dart';
 import 'package:job/feature/favorite_company/controller/favorite_company_controller.dart';
@@ -257,6 +259,9 @@ Future<Map<String, Map<String, String>>> init() async {
 
   Get.lazyPut(() => LandingRepository(apiClient: Get.find()));
   Get.lazyPut(() => LandingPageController(landingRepository: Get.find()));
+
+  Get.lazyPut(() => ContactUsRepository(apiClient: Get.find()));
+  Get.lazyPut(() => ContactUsController(contactUsRepository: Get.find()));
 
 
   Get.lazyPut(() => PackageRepository(apiClient: Get.find()));

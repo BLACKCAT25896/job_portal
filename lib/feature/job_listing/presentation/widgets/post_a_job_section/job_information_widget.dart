@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_quill/flutter_quill.dart';
 import 'package:get/get.dart';
 import 'package:job/common/layout/custom_add_new_button_widget.dart';
 import 'package:job/common/layout/custom_dialog_widget.dart';

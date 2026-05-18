@@ -60,33 +60,33 @@ class _CreateNewUserWidgetState extends State<CreateNewUserWidget> {
             ResponsiveMasonryGrid(children: [
               CustomTextField(title: "first_name".tr,
                   controller: firstNameController,
-                  hintText: "enter_first_name".tr),
+                  hintText: "first_name".tr),
 
               CustomTextField(title: "last_name".tr,
                   controller: lastNameController,
-                  hintText: "enter_last_name".tr),
+                  hintText: "last_name".tr),
 
               CustomTextField(title: "email".tr,
                 controller: emailController,
-                hintText: "enter_email".tr,),
+                hintText: "email".tr,),
 
               CustomTextField(title: "phone".tr,
                   controller: phoneController,
                   inputType: TextInputType.phone,
                   inputFormatters: [AppConstants.phoneNumberFormat],
-                  hintText: "enter_phone".tr),
+                  hintText: "phone".tr),
 
               CustomTextField(title: "password".tr,
                 controller: passwordController,
-                hintText: "enter_password".tr),
+                hintText: "password".tr),
 
               CustomTextField(title: "confirm_password".tr,
                 controller: confirmController,
-                hintText: "enter_confirm_password".tr),
+                hintText: "confirm_password".tr),
               SelectRoleWidget(),
               CustomTextField(title: "address".tr,
                 controller: addressController,
-                hintText: "enter_address".tr,),
+                hintText: "address".tr,),
 
 
             ]),
@@ -107,6 +107,7 @@ class _CreateNewUserWidgetState extends State<CreateNewUserWidget> {
                 String password = passwordController.text.trim();
                 String confirm = confirmController.text.trim();
                 int? selectedRole = Get.find<RoleController>().selectedRoleItem?.id;
+                String? userType = Get.find<RoleController>().selectedRoleItem?.name;
                 if(firstName.isEmpty){
                   showCustomSnackBar("first_name_is_empty".tr);
                 }else if(lastName.isEmpty){
@@ -132,7 +133,7 @@ class _CreateNewUserWidgetState extends State<CreateNewUserWidget> {
                   showCustomSnackBar("password_not_match".tr);
                 }
                 else if(selectedRole == null){
-                  showCustomSnackBar("select_roll".tr);
+                  showCustomSnackBar("select_role".tr);
                 }else{
                   UserBody body = UserBody(
                     firstName: firstName,
@@ -143,6 +144,7 @@ class _CreateNewUserWidgetState extends State<CreateNewUserWidget> {
                     password: password,
                     passwordConfirmation: confirm,
                     roleId: selectedRole,
+                    userType: userType,
                     sMethod: update? "put" : "post"
                   );
                   if(update){

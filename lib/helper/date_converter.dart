@@ -125,7 +125,7 @@ class DateConverter {
   }
 
   static String quotationDate(DateTime dateTime) {
-    return DateFormat('dd/MM/yyyy ').format(dateTime.toLocal());
+    return DateFormat('MMM dd, yyyy ').format(dateTime.toLocal());
   }
 
 

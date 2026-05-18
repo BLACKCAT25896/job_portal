@@ -7,6 +7,7 @@ import 'package:job/feature/candidate/presentation/screens/candidate_screen.dart
 import 'package:get/get.dart';
 import 'package:job/feature/candidate_education/presentation/screens/candidate_education_screen.dart';
 import 'package:job/feature/candidate_experience/presentation/screens/candidate_experience_screen.dart';
+import 'package:job/feature/candidate_panel/screens/account_setting_screen.dart';
 import 'package:job/feature/candidate_resume/presentation/screens/candidate_resume_screen.dart';
 import 'package:job/feature/career_level/presentation/screens/career_level_screen.dart';
 import 'package:job/feature/cms_management/cms_settings/presentation/screens/system_setting_screen.dart';
@@ -203,6 +204,9 @@ class RouteHelper {
   static const String candidateResume = '/candidate-resume';
   static String getCandidateResumeRoute() => candidateResume;
 
+  static const String candidateAccountSetting = '/candidate-account-setting';
+  static String getCandidateAccountSettingRoute() => candidateAccountSetting;
+
   static const String roles = '/roles';
   static String getRolesRoute() => roles;
 
@@ -329,6 +333,7 @@ class RouteHelper {
     GetPage(name: candidateEducation, page: () => const CandidateEducationScreen()),
     GetPage(name: candidateExperience, page: () => const CandidateExperienceScreen()),
     GetPage(name: candidateResume, page: () => const CandidateResumeScreen()),
+    GetPage(name: candidateAccountSetting, page: () => const CandidateAccountSettingScreen()),
 
     GetPage(name: postCategory, page: ()=> PostCategoryScreen()),
     GetPage(name: post, page: ()=> PostScreen()),

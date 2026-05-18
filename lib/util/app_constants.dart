@@ -29,6 +29,7 @@ class AppConstants {
   static const String profileUpdate = '/profile-update';
   static const String changePassword = '/change-password';
   static const String candidateProfile = '/candidate/profile';
+  static const String candidateProfileUpdate = '/candidate/profile-update';
   static const String companyProfile = '/company/profile';
   static const String companyProfileUpdate = '/company/profile-update';
   static const String galleries = '/galleries';
@@ -64,6 +65,7 @@ class AppConstants {
   static const String candidateCertificate = '/candidate/candidate-certifications';
   static const String candidateReference = '/candidate/candidate-references';
   static const String candidateSocialLinks = '/candidate/candidate-social-links';
+  static const String candidateSkills = '/candidate/candidate-skills';
   static const String reportedJobs = '/reported-jobs';
   static const String inquiries = '/inquiries';
   static const String dashboardStatistics = '/dashboard/statistics';

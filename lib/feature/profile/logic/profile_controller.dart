@@ -142,6 +142,24 @@ class ProfileController extends GetxController implements GetxService{
     update();
   }
 
+  Future<void> updateCandidateProfile(CandidateInfo body) async {
+    isLoading = true;
+    update();
+    Response? response = await profileRepository.updateCandidateInfo(body);
+    if (response?.statusCode == 200) {
+      Get.back();
+      showCustomSnackBar("updated_successfully".tr, isError: false);
+      getCandidateProfileInfo();
+      isLoading = false;
+    }else{
+      isLoading = false;
+      ApiChecker.checkApi(response!);
+    }
+    update();
+  }
+
+
+
 
   Future<void> updateProfileAvatar() async {
     isLoading = true;

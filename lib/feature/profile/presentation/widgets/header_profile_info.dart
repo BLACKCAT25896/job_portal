@@ -38,7 +38,9 @@ class HeaderProfileInfo extends StatelessWidget {
           return CustomContainer(borderRadius: 120, verticalPadding: 4, horizontalPadding: 7,
             showShadow: false, color: Theme.of(context).hintColor.withValues(alpha: .125),
             child: Row(spacing: Dimensions.paddingSizeSmall, children: [
-              CustomContainer(border: Border.all(width: .125, color: Theme.of(context).hintColor), showShadow: false, horizontalPadding: 0, verticalPadding: 0, borderRadius: 120,
+              CustomContainer(border: Border.all(width: .125,
+                  color: Theme.of(context).hintColor), showShadow: false,
+                  horizontalPadding: 0, verticalPadding: 0, borderRadius: 120,
                   child: CustomImage(width: 30,height: 30,radius: 120,
                   image: profile?.data?.image != null?
                   "${AppConstants.imageBaseUrl}/users/${profile?.data?.image??''}" : "",)),

@@ -7,10 +7,10 @@ import 'package:job/common/widget/numbering_widget.dart';
 import 'package:job/feature/job_listing/controller/job_listing_controller.dart';
 import 'package:job/feature/job_listing/domain/models/job_listing_model.dart';
 import 'package:job/feature/job_listing/presentation/screens/post_a_job_screen.dart';
+import 'package:job/helper/date_converter.dart';
 import 'package:job/helper/responsive_helper.dart';
 import 'package:job/helper/route_helper.dart';
 import 'package:job/util/dimensions.dart';
-import 'package:job/util/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -25,6 +25,8 @@ class CompanyJobListItemWidget extends StatelessWidget {
     Row(spacing: Dimensions.paddingSizeDefault, children: [
       NumberingWidget(index: index),
       Expanded(child: CustomTextItemWidget(text: listingItem?.title??'')),
+      Expanded(child: CustomTextItemWidget(text: DateConverter.quotationDate(DateTime.parse(listingItem?.createdAt??'')))),
+      Expanded(child: CustomTextItemWidget(text: DateConverter.quotationDate(DateTime.parse(listingItem?.applicationDeadline??'')))),
 
       EditDeletePopupMenu(onEdit:(){
         Get.toNamed(RouteHelper.getPostAJobRoute());
@@ -41,9 +43,15 @@ class CompanyJobListItemWidget extends StatelessWidget {
     Padding(padding: EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeDefault, vertical: 5),
       child: CustomContainer(borderRadius: 5, showShadow: false,
           child: Row(children: [
+            Expanded(child: Column(children: [
+              CustomTextItemWidget(text:"${listingItem?.title}"),
+              CustomTextItemWidget(text:DateConverter.quotationDate(DateTime.parse(listingItem?.createdAt??'')),),
+              CustomTextItemWidget(text: DateConverter.quotationDate(DateTime.parse(listingItem?.applicationDeadline??'')),),
 
-              Expanded(child: Text("${listingItem?.title}", style: textMedium.copyWith(fontSize: Dimensions.fontSizeDefault),)),
-              EditDeleteSection(isHorizontal: true,
+            ])),
+
+
+            EditDeleteSection(isHorizontal: true,
                   onEdit: (){
                 Get.to(()=> PostAJobScreen(listingItem: listingItem));
               },

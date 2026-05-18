@@ -4,6 +4,7 @@ import 'package:job/common/widget/custom_contaner.dart';
 import 'package:job/common/widget/custom_image.dart';
 import 'package:job/feature/company/domain/models/company_model.dart';
 import 'package:job/helper/route_helper.dart';
+import 'package:job/util/app_constants.dart';
 import 'package:job/util/dimensions.dart';
 import 'package:job/util/styles.dart';
 
@@ -52,12 +53,16 @@ class _PublicCompanyItemWidgetState extends State<PublicCompanyItemWidget> {
               child: Padding(padding: EdgeInsets.all(Dimensions.paddingSizeDefault),
 
                 child: Column(mainAxisSize: MainAxisSize.min, children: [
-                    AnimatedContainer(duration: const Duration(milliseconds: 220), height: 84, width: 84,
+                    AnimatedContainer(duration: const Duration(milliseconds: 220),
+                        height: 150, width: 150,
                       decoration: BoxDecoration(borderRadius: BorderRadius.circular(14),
                         border: Border.all(color: _isHover
                             ? primary.withValues(alpha: 0.5)
                             : Colors.grey.withValues(alpha: 0.2))),
-                        child: CustomImage(radius: 14, width: 84, height: 84)),
+                        child: CustomImage(radius: 14,
+                            width: 150, height: 150,
+                        fit: BoxFit.contain,
+                        image: "${AppConstants.imageBaseUrl}/companies/${widget.item?.logo}")),
 
                     const SizedBox(height: 12),
 

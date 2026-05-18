@@ -42,7 +42,7 @@ class _PublicJobListingListWidgetState extends State<PublicJobListingListWidget>
                 if(!widget.fromFilter)
                 Text("hot_jobs".tr, style: textBold.copyWith(fontSize: Dimensions.fontSizeExtraLarge),),
 
-                PaginatedListWidget(landing: true,limit: 50,
+                PaginatedListWidget(landing: true,
                   offset: data.currentPage??1,
                   scrollController: widget.scrollController,
                   totalSize: data.total,
@@ -56,7 +56,7 @@ class _PublicJobListingListWidgetState extends State<PublicJobListingListWidget>
                       padding: EdgeInsets.zero,
                       physics: const NeverScrollableScrollPhysics(),
                       gridDelegate: SliverSimpleGridDelegateWithMaxCrossAxisExtent(
-                          maxCrossAxisExtent: widget.fromFilter? 500 : 300),
+                          maxCrossAxisExtent: widget.fromFilter? 500 : 400),
                       itemBuilder: (_, index){
                         final item = data.data?[index];
                         return PublicJoListingItemWidget(item: item, fromFilter: widget.fromFilter);

@@ -252,7 +252,9 @@ class SideBarController extends GetxController implements GetxService{
 
 
     SideMenuNestedExpansionItem(title: "account_settings".tr, keyValue: "account_settings", parent: true,
-      icon: Images.dashboardSvgIcon,onTap: () {}),
+      icon: Images.dashboardSvgIcon,onTap: () {
+      Get.toNamed(RouteHelper.getCandidateAccountSettingRoute());
+        }),
 
 
     SideMenuNestedExpansionItem(title: "sign_out".tr, keyValue: "sign_out", parent: true,

@@ -20,10 +20,12 @@ class HeadingMenu extends StatelessWidget {
         decoration: BoxDecoration(color: systemPrimaryColor().withValues(alpha: .2),
             borderRadius: BorderRadius.vertical(top: Radius.circular(Dimensions.radiusSmall))),
         child: Row(spacing:  Dimensions.paddingSizeDefault, children: [
-             Text("sl".tr, style: textMedium.copyWith(fontSize: Dimensions.fontSizeDefault,
-                 color: systemPrimaryColor())),
+             SizedBox(width: 40,
+               child: Text("sl".tr, style: textMedium.copyWith(fontSize: Dimensions.fontSizeDefault,
+                   color: systemPrimaryColor())),
+             ),
 
-            SizedBox(width: Dimensions.paddingSizeDefault),
+           // SizedBox(width: Dimensions.paddingSizeDefault),
             ...List.generate(headings.length, (index) {
               final textWidget = Text(headings[index].tr,
                   style: textMedium.copyWith(fontSize: Dimensions.fontSizeDefault,

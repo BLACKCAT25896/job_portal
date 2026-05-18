@@ -22,7 +22,7 @@ class _SelectRoleWidgetState extends State<SelectRoleWidget> {
       if(!widget.fromUser)
       SizedBox(height: Dimensions.paddingSizeDefault),
       if(!widget.fromUser)
-      CustomTitle(title: "roll", leftPadding: 0, fontSize: Dimensions.fontSizeDefault),
+      CustomTitle(title: "role", leftPadding: 0, fontSize: Dimensions.fontSizeDefault),
 
       GetBuilder<RoleController>(
         initState: (_) {
@@ -36,7 +36,7 @@ class _SelectRoleWidgetState extends State<SelectRoleWidget> {
           return (roleModel != null && roleModel.data?.data != null && roleModel.data!.data!.isNotEmpty )?
           Padding(padding: const EdgeInsets.symmetric(vertical: 8.0),
             child: CustomGenericDropdown<RoleItem>(
-              title : "select_roll".tr,
+              title : "select".tr,
               items: roleModel.data?.data??[],
               onChanged: (item) => roleController.setRoleItem(item!, fromUser: widget.fromUser),
               selectedValue: roleController.selectedRoleItem,

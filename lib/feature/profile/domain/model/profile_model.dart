@@ -218,6 +218,7 @@ class CompanyInfo {
 class CandidateInfo {
   int? id;
   int? userId;
+  String? name;
   String? careerLevelId;
   String? industryId;
   String? salaryCurrencyId;
@@ -225,6 +226,8 @@ class CandidateInfo {
   String? availableFor;
   String? fatherName;
   String? motherName;
+  String? dob;
+  String? gender;
   String? nationality;
   String? religion;
   String? maritalStatus;
@@ -254,6 +257,7 @@ class CandidateInfo {
   CandidateInfo(
       {this.id,
         this.userId,
+        this.name,
         this.careerLevelId,
         this.industryId,
         this.salaryCurrencyId,
@@ -261,6 +265,8 @@ class CandidateInfo {
         this.availableFor,
         this.fatherName,
         this.motherName,
+        this.dob,
+        this.gender,
         this.nationality,
         this.religion,
         this.maritalStatus,
@@ -290,6 +296,7 @@ class CandidateInfo {
   CandidateInfo.fromJson(Map<String, dynamic> json) {
     id = PriceConverter.parseInt(json['id']);
     userId = PriceConverter.parseInt(json['user_id']);
+    name = json['name'];
     careerLevelId = json['career_level_id'];
     industryId = json['industry_id'];
     salaryCurrencyId = json['salary_currency_id'];
@@ -297,6 +304,8 @@ class CandidateInfo {
     availableFor = json['available_for'];
     fatherName = json['father_name'];
     motherName = json['mother_name'];
+    dob = json['dob'];
+    gender = json['gender'];
     nationality = json['nationality'];
     religion = json['religion'];
     maritalStatus = json['marital_status'];
@@ -329,6 +338,7 @@ class CandidateInfo {
     final Map<String, dynamic> data = <String, dynamic>{};
     data['id'] = id;
     data['user_id'] = userId;
+    data['name'] = name;
     data['career_level_id'] = careerLevelId;
     data['industry_id'] = industryId;
     data['salary_currency_id'] = salaryCurrencyId;
@@ -337,6 +347,8 @@ class CandidateInfo {
     data['father_name'] = fatherName;
     data['mother_name'] = motherName;
     data['nationality'] = nationality;
+    data['dob'] = dob;
+    data['gender'] = gender;
     data['religion'] = religion;
     data['marital_status'] = maritalStatus;
     data['national_id_card'] = nationalIdCard;

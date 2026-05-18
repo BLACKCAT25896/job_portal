@@ -2,6 +2,7 @@ import 'package:flutter_image_compress/flutter_image_compress.dart';
 import 'package:get/get_connect/http/src/response/response.dart';
 import 'package:job/api_handle/api_client.dart';
 import 'package:job/feature/authentication/domain/model/create_company_account_body.dart';
+import 'package:job/feature/profile/domain/model/profile_model.dart';
 import 'package:job/feature/profile/domain/model/status_update_body.dart';
 import 'package:job/util/app_constants.dart';
 
@@ -38,6 +39,10 @@ class ProfileRepository{
       'name': name,
       'email': email,
     });
+  }
+
+  Future<Response?> updateCandidateInfo(CandidateInfo body) async {
+    return await apiClient.postData(AppConstants.candidateProfileUpdate,body.toJson());
   }
 
   Future<Response?> updateCompanyProfile(CreateCompanyAccountBody body) async {

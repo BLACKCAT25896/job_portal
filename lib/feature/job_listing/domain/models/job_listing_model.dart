@@ -3,7 +3,6 @@
 import 'package:job/feature/company/domain/models/company_model.dart';
 import 'package:job/feature/degree_level/domain/models/degree_level_model.dart';
 import 'package:job/feature/job_category/domain/models/job_category_model.dart';
-import 'package:job/feature/skill/domain/models/skill_model.dart';
 import 'package:job/helper/price_converter.dart';
 
 class JobListingItem {
@@ -13,7 +12,7 @@ class JobListingItem {
   String? slug;
   String? description;
   String? responsibilities;
-  String? benefits;
+  List<Benefits>? benefits;
   int? jobCategoryId;
   String? address;
   double? salaryFrom;
@@ -50,6 +49,9 @@ class JobListingItem {
   JobCategoryItem? category;
   DegreeLevelItem? degreeLevel;
   CompanyItem? company;
+  List<Tags>? tags;
+  List<Skills>? skills;
+  List<ScreeningQuestions>? screeningQuestions;
 
 
   JobListingItem(
@@ -96,6 +98,9 @@ class JobListingItem {
         this.category,
         this.degreeLevel,
         this.company,
+        this.tags,
+        this.skills,
+        this.screeningQuestions
        });
 
   JobListingItem.fromJson(Map<String, dynamic> json) {
@@ -105,26 +110,31 @@ class JobListingItem {
     slug = json['slug'];
     description = json['description'];
     responsibilities = json['responsibilities'];
-    benefits = json['benefits'];
+    if (json['benefits'] != null) {
+      benefits = <Benefits>[];
+      json['benefits'].forEach((v) {
+        benefits!.add(Benefits.fromJson(v));
+      });
+    }
     jobCategoryId = PriceConverter.parseInt(json['job_category_id']);
     address = json['address'];
     salaryFrom = PriceConverter.parseAmount(json['salary_from']);
     salaryTo = PriceConverter.parseAmount(json['salary_to']);
-    currencyId = json['currency_id'];
-    salaryPeriodId = json['salary_period_id'];
+    currencyId = PriceConverter.parseInt(json['currency_id']);
+    salaryPeriodId = PriceConverter.parseInt(json['salary_period_id']);
     hideSalary = json['hide_salary'];
     isNegotiableSalary = json['is_negotiable_salary'];
     employmentType = json['employment_type'];
     workplace = json['workplace'];
-    minExperience = json['min_experience'];
-    maxExperience = json['max_experience'];
+    minExperience = PriceConverter.parseInt(json['min_experience']);
+    maxExperience = PriceConverter.parseInt(json['max_experience']);
     isFresherAllowed = json['is_fresher_allowed'];
-    degreeLevelId = json['degree_level_id'];
+    degreeLevelId = PriceConverter.parseInt(json['degree_level_id']);
     educationDetail = json['education_detail'];
     gender = json['gender'];
-    minAge = json['min_age'];
-    maxAge = json['max_age'];
-    vacancies = json['vacancies'];
+    minAge = PriceConverter.parseInt(json['min_age']);
+    maxAge = PriceConverter.parseInt(json['max_age']);
+    vacancies = PriceConverter.parseInt(json['vacancies']);
     applicationDeadline = json['application_deadline'];
     joiningDate = json['joining_date'];
     applicationType = json['application_type'];
@@ -134,10 +144,10 @@ class JobListingItem {
     isHighlighted = json['is_highlighted'];
     metaTitle = json['meta_title'];
     metaDescription = json['meta_description'];
-    views = json['views'];
-    totalApplications = json['total_applications'];
-    shortlistedCount = json['shortlisted_count'];
-    rejectedCount = json['rejected_count'];
+    views = PriceConverter.parseInt(json['views']);
+    totalApplications = PriceConverter.parseInt(json['total_applications']);
+    shortlistedCount = PriceConverter.parseInt(json['shortlisted_count']);
+    rejectedCount = PriceConverter.parseInt(json['rejected_count']);
     createdAt = json['created_at'];
     category = json['category'] != null
         ? JobCategoryItem.fromJson(json['category'])
@@ -150,6 +160,25 @@ class JobListingItem {
         ? CompanyItem.fromJson(json['company'])
         : null;
 
+    if (json['tags'] != null) {
+      tags = <Tags>[];
+      json['tags'].forEach((v) {
+        tags!.add(Tags.fromJson(v));
+      });
+    }
+    if (json['skills'] != null) {
+      skills = <Skills>[];
+      json['skills'].forEach((v) {
+        skills!.add(Skills.fromJson(v));
+      });
+    }
+    if (json['screening_questions'] != null) {
+      screeningQuestions = <ScreeningQuestions>[];
+      json['screening_questions'].forEach((v) {
+        screeningQuestions!.add(ScreeningQuestions.fromJson(v));
+      });
+    }
+
   }
 
   Map<String, dynamic> toJson() {
@@ -160,7 +189,6 @@ class JobListingItem {
     data['slug'] = slug;
     data['description'] = description;
     data['responsibilities'] = responsibilities;
-    data['benefits'] = benefits;
     data['job_category_id'] = jobCategoryId;
     data['address'] = address;
     data['salary_from'] = salaryFrom;
@@ -208,5 +236,137 @@ class JobListingItem {
   }
 }
 
+class Benefits {
+  int? id;
+  String? name;
 
+  Benefits(
+      {this.id,
+        this.name,
+        });
+
+  Benefits.fromJson(Map<String, dynamic> json) {
+    id = json['id'];
+    name = json['name'];
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['id'] = id;
+    data['name'] = name;
+    return data;
+  }
+}
+
+class Skills {
+  int? id;
+  String? name;
+  String? description;
+
+  Skills({this.id,
+    this.name,
+    this.description});
+
+  Skills.fromJson(Map<String, dynamic> json) {
+    id = json['id'];
+    name = json['name'];
+    description = json['description'];
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['id'] = id;
+    data['name'] = name;
+    data['description'] = description;
+    return data;
+  }
+}
+
+class ScreeningQuestions {
+  int? id;
+  int? jobListingId;
+  String? question;
+  String? type;
+  List<Options>? options;
+
+  ScreeningQuestions(
+      {this.id,
+        this.jobListingId,
+        this.question,
+        this.type,
+        this.options});
+
+  ScreeningQuestions.fromJson(Map<String, dynamic> json) {
+    id = json['id'];
+    jobListingId = json['job_listing_id'];
+    question = json['question'];
+    type = json['type'];
+    if (json['options'] != null) {
+      options = <Options>[];
+      json['options'].forEach((v) {
+        options!.add(Options.fromJson(v));
+      });
+    }
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['id'] = id;
+    data['job_listing_id'] = jobListingId;
+    data['question'] = question;
+    data['type'] = type;
+    if (options != null) {
+      data['options'] = options!.map((v) => v.toJson()).toList();
+    }
+    return data;
+  }
+}
+
+class Options {
+  int? id;
+  int? jobScreeningQuestionId;
+  String? optionText;
+
+  Options(
+      {this.id,
+        this.jobScreeningQuestionId,
+        this.optionText,});
+
+  Options.fromJson(Map<String, dynamic> json) {
+    id = json['id'];
+    jobScreeningQuestionId = json['job_screening_question_id'];
+    optionText = json['option_text'];
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['id'] = id;
+    data['job_screening_question_id'] = jobScreeningQuestionId;
+    data['option_text'] = optionText;
+    return data;
+  }
+}
+
+class Tags {
+  int? id;
+  String? name;
+
+  Tags(
+      {this.id,
+        this.name,
+       });
+
+  Tags.fromJson(Map<String, dynamic> json) {
+    id = json['id'];
+    name = json['name'];
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['id'] = id;
+    data['name'] = name;
+
+    return data;
+  }
+}
 

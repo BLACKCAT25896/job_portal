@@ -187,7 +187,7 @@
   "user": "User",
   "user_list": "User List",
   "add_new_user": "Add New User",
-  "select_roll": "Select Roll",
+  "select": "Select",
   "add_new_page": "Add New Page",
   "admin_roles_and_permissions": "Role & Permission",
   "role_list": "Role List",
@@ -438,7 +438,16 @@
   "applicant_matching": "Applicant Matching",
   "matching_strength": "Matching Strength",
   "upload": "Upload",
-  "profile_image": "Profile Image"
+  "profile_image": "Profile Image",
+  "posted": "Posted",
+  "skills_and_expertise": "Skills & Expertise",
+  "role": "Role",
+  "address": "Address",
+  "select_role": "Select Role",
+  "looking_for":"Looking for(Job Level)",
+  "entry_level": "Entry Level",
+  "mid_level": "Mid Level",
+  "top_level": "Top Level"
 
 
 }
