@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import 'package:job/feature/candidate_panel/domain/model/Candidate_profile_section_model.dart';
+import 'package:job/feature/candidate_panel/domain/model/candidate_profile_section_model.dart';
 
 class CandidatePanelController extends GetxController implements GetxService{
 
