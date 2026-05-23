@@ -253,6 +253,8 @@ class CandidateInfo {
   bool? immediateAvailable;
   String? availableAt;
   bool? jobAlert;
+  String? presentAddress;
+  String? permanentAddress;
 
   CandidateInfo(
       {this.id,
@@ -291,7 +293,10 @@ class CandidateInfo {
         this.profileStrength,
         this.immediateAvailable,
         this.availableAt,
-        this.jobAlert});
+        this.jobAlert,
+        this.presentAddress,
+        this.permanentAddress
+      });
 
   CandidateInfo.fromJson(Map<String, dynamic> json) {
     id = PriceConverter.parseInt(json['id']);
@@ -331,48 +336,70 @@ class CandidateInfo {
     immediateAvailable = json['immediate_available'];
     availableAt = json['available_at'];
     jobAlert = json['job_alert'];
+    presentAddress = json['present_address'];
+    permanentAddress = json['permanent_address'];
 
   }
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = <String, dynamic>{};
-    data['id'] = id;
-    data['user_id'] = userId;
-    data['name'] = name;
-    data['career_level_id'] = careerLevelId;
-    data['industry_id'] = industryId;
-    data['salary_currency_id'] = salaryCurrencyId;
-    data['looking_for'] = lookingFor;
-    data['available_for'] = availableFor;
-    data['father_name'] = fatherName;
-    data['mother_name'] = motherName;
-    data['nationality'] = nationality;
-    data['dob'] = dob;
-    data['gender'] = gender;
-    data['religion'] = religion;
-    data['marital_status'] = maritalStatus;
-    data['national_id_card'] = nationalIdCard;
-    data['passport_number'] = passportNumber;
-    data['passport_issue_date'] = passportIssueDate;
-    data['secondary_mobile'] = secondaryMobile;
-    data['alternate_email'] = alternateEmail;
-    data['emergency_contact'] = emergencyContact;
-    data['blood_group'] = bloodGroup;
-    data['height'] = height;
-    data['weight'] = weight;
-    data['career_summary'] = careerSummary;
-    data['special_qualification'] = specialQualification;
-    data['keywords'] = keywords;
-    data['career_object'] = careerObject;
-    data['current_salary'] = currentSalary;
-    data['expected_salary'] = expectedSalary;
-    data['experience'] = experience;
-    data['address'] = address;
-    data['video_intro'] = videoIntro;
-    data['profile_strength'] = profileStrength;
-    data['immediate_available'] = immediateAvailable;
-    data['available_at'] = availableAt;
-    data['job_alert'] = jobAlert;
+
+    if (id != null) data['id'] = id;
+    if (userId != null) data['user_id'] = userId;
+    if (name != null) data['name'] = name;
+    if (careerLevelId != null) data['career_level_id'] = careerLevelId;
+    if (industryId != null) data['industry_id'] = industryId;
+    if (salaryCurrencyId != null) data['salary_currency_id'] = salaryCurrencyId;
+    if (lookingFor != null) data['looking_for'] = lookingFor;
+    if (availableFor != null) data['available_for'] = availableFor;
+    if (fatherName != null) data['father_name'] = fatherName;
+    if (motherName != null) data['mother_name'] = motherName;
+    if (nationality != null) data['nationality'] = nationality;
+    if (dob != null) data['dob'] = dob;
+    if (gender != null) data['gender'] = gender;
+    if (religion != null) data['religion'] = religion;
+    if (maritalStatus != null) data['marital_status'] = maritalStatus;
+    if (nationalIdCard != null) data['national_id_card'] = nationalIdCard;
+    if (passportNumber != null) data['passport_number'] = passportNumber;
+    if (passportIssueDate != null) {
+      data['passport_issue_date'] = passportIssueDate;
+    }
+    if (secondaryMobile != null) {
+      data['secondary_mobile'] = secondaryMobile;
+    }
+    if (alternateEmail != null) data['alternate_email'] = alternateEmail;
+    if (emergencyContact != null) {
+      data['emergency_contact'] = emergencyContact;
+    }
+    if (bloodGroup != null) data['blood_group'] = bloodGroup;
+    if (height != null) data['height'] = height;
+    if (weight != null) data['weight'] = weight;
+    if (careerSummary != null) data['career_summary'] = careerSummary;
+    if (specialQualification != null) {
+      data['special_qualification'] = specialQualification;
+    }
+    if (keywords != null) data['keywords'] = keywords;
+    if (careerObject != null) data['career_object'] = careerObject;
+    if (currentSalary != null) data['current_salary'] = currentSalary;
+    if (expectedSalary != null) data['expected_salary'] = expectedSalary;
+    if (experience != null) data['experience'] = experience;
+    if (address != null) data['address'] = address;
+    if (videoIntro != null) data['video_intro'] = videoIntro;
+    if (profileStrength != null) {
+      data['profile_strength'] = profileStrength;
+    }
+    if (immediateAvailable != null) {
+      data['immediate_available'] = immediateAvailable;
+    }
+    if (availableAt != null) data['available_at'] = availableAt;
+    if (jobAlert != null) data['job_alert'] = jobAlert;
+    if (presentAddress != null) {
+      data['present_address'] = presentAddress;
+    }
+    if (permanentAddress != null) {
+      data['permanent_address'] = permanentAddress;
+    }
+
     return data;
   }
 }

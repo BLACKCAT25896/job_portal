@@ -6,7 +6,6 @@ list(APPEND FLUTTER_PLUGIN_LIST
   audioplayers_linux
   charset_converter
   file_selector_linux
-  open_file_linux
   printing
   record_linux
   syncfusion_pdfviewer_linux

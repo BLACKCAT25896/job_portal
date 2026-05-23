@@ -38,7 +38,7 @@ class _PublicJobCategoryListWidgetState extends State<PublicJobCategoryListWidge
 
             return data != null? (data.data != null && data.data!.isNotEmpty)?
             Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-              if(!widget.fromFilter)
+              if(!widget.fromFilter )
               CategoryOrIndustrySelectionWidget(),
                 PaginatedListWidget(landing: true,
                   offset: data.currentPage??1,

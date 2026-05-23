@@ -8,7 +8,9 @@ import 'package:job/common/widget/responsive_grid_widget.dart';
 import 'package:job/feature/candidate_certificate/controller/candidate_certificate_controller.dart';
 import 'package:job/feature/candidate_certificate/domain/models/candidate_certificate_model.dart';
 import 'package:job/feature/candidate_certificate/presentation/widgets/add_new_candidate_certificate_widget.dart';
+import 'package:job/feature/candidate_panel/screens/edit_certificate_screen.dart';
 import 'package:job/feature/candidate_panel/widgets/candidate_personal_details_widget.dart';
+import 'package:job/helper/responsive_helper.dart';
 import 'package:job/util/dimensions.dart';
 import 'package:job/util/styles.dart';
 
@@ -19,6 +21,7 @@ class CandidateCertificateItemWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool isDesktop = ResponsiveHelper.isDesktop(context);
     return Column(children: [
         Row(spacing: Dimensions.paddingSizeDefault, children: [
           Expanded(child: Text("${"certificate".tr} ${index+1}",
@@ -32,8 +35,13 @@ class CandidateCertificateItemWidget extends StatelessWidget {
             },));
 
           }, onEdit: (){
-            Get.dialog(CustomDialogWidget(title: "certificate".tr,
-                child: AddNewCandidateCertificateWidget(candidateCertificateItem: candidateCertificateItem)));
+            if(isDesktop){
+              Get.dialog(CustomDialogWidget(title: "certificate".tr,
+                  child: AddNewCandidateCertificateWidget(candidateCertificateItem: candidateCertificateItem)));
+            }else{
+              Get.to(()=> EditCertificateScreen(candidateCertificateItem: candidateCertificateItem));
+            }
+
           },)
 
 

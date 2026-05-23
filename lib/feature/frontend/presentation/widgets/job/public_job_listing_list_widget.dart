@@ -56,7 +56,7 @@ class _PublicJobListingListWidgetState extends State<PublicJobListingListWidget>
                       padding: EdgeInsets.zero,
                       physics: const NeverScrollableScrollPhysics(),
                       gridDelegate: SliverSimpleGridDelegateWithMaxCrossAxisExtent(
-                          maxCrossAxisExtent: widget.fromFilter? 500 : 400),
+                          maxCrossAxisExtent:widget.fromFilter? 500 : 400 ),
                       itemBuilder: (_, index){
                         final item = data.data?[index];
                         return PublicJoListingItemWidget(item: item, fromFilter: widget.fromFilter);

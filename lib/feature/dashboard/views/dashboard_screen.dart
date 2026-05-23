@@ -1,10 +1,13 @@
 
+import 'dart:developer';
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:job/common/widget/animated_custom_dialog.dart';
 import 'package:job/common/widget/confirmation_dialog_widget.dart';
+import 'package:job/feature/authentication/logic/authentication_controller.dart';
 import 'package:job/feature/dashboard/controller/dashboard_controller.dart';
 import 'package:job/feature/dashboard/model/navigation_model.dart';
 import 'package:job/feature/dashboard/widget/custom_menu_item.dart';
@@ -39,19 +42,31 @@ class DashboardScreenState extends State<DashboardScreen> {
         return;
       },
       child: GetBuilder<DashboardController>(builder: (menuController) {
-        return Scaffold(
-          resizeToAvoidBottomInset: false,
-          body: isDesktop? const WebHomeScreen() :
-          PageStorage(bucket: bucket, child: menuController.item[menuController.currentTab].screen),
+        return GetBuilder<AuthenticationController>(
+          builder: (controller) {
+            String userType = controller.getUserType();
+            log("===UserType==> $userType");
+            return Scaffold(resizeToAvoidBottomInset: false,
+              body: isDesktop? const WebHomeScreen() :
+              PageStorage(bucket: bucket,
+                  child: userType == "Candidate"?
+                  menuController.candidateItem[menuController.currentTab].screen:
+                  menuController.item[menuController.currentTab].screen
+              ),
 
-          bottomNavigationBar: isDesktop? const SizedBox() :
-          Container(decoration: BoxDecoration(
-              color: Theme.of(context).cardColor,
-              boxShadow: [BoxShadow(offset: const Offset(1,1),
-                  blurRadius: 2, spreadRadius: 1, color: Theme.of(context).hintColor)]),
-            child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: generateBottomNavigationItems(menuController, menuController.item)),
-          ),
+              bottomNavigationBar: isDesktop? const SizedBox() :
+              Container(padding: EdgeInsets.only(bottom: MediaQuery.of(context).viewPadding.bottom),
+                decoration: BoxDecoration(
+                  color: Theme.of(context).cardColor,
+                  boxShadow: [BoxShadow(offset: const Offset(1,1),
+                      blurRadius: 2, spreadRadius: 1, color: Theme.of(context).hintColor)]),
+                child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: generateBottomNavigationItems(menuController,
+                        userType == "Candidate"? menuController.candidateItem:
+                        menuController.item)),
+              ),
+            );
+          }
         );
       }),
     );

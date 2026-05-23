@@ -55,8 +55,8 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
           onPressed: () => onBackPressed != null ? onBackPressed!() :
           Navigator.canPop(context) ? Get.back() : Get.offAll(()=> const DashboardScreen()),
         ) :
-        HeaderLogoSection()
-      ),
+        Padding(padding: EdgeInsets.all(Dimensions.paddingSizeDefault),
+          child: HeaderLogoSection())),
     );
   }
 

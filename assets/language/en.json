@@ -447,7 +447,16 @@
   "looking_for":"Looking for(Job Level)",
   "entry_level": "Entry Level",
   "mid_level": "Mid Level",
-  "top_level": "Top Level"
+  "top_level": "Top Level",
+  "more": "More",
+  "upload_photo": "Upload Photo",
+  "contact_details": "Contact Details",
+  "certificate": "Certificate",
+  "duration_in_hour": "Duration in hour",
+  "add": "Add",
+  "relationship": "Relationship",
+  "links": "Links",
+  "update": "Update"
 
 
 }

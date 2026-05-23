@@ -2,7 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:job/common/model/popup_menu_model.dart';
 import 'package:job/feature/dashboard/model/navigation_model.dart';
+import 'package:job/feature/frontend/presentation/screens/mobile_app_landing_screen.dart';
 import 'package:job/feature/home/presentation/screens/home_screen.dart';
+import 'package:job/feature/job_application/presentation/screens/job_application_mobile_screen.dart';
+import 'package:job/feature/profile/presentation/screens/candidate_profile_mobile_screen.dart';
+import 'package:job/feature/side_menu/presentation/candidate_more_screen.dart';
 import 'package:job/feature/side_menu/presentation/more_screen.dart';
 import 'package:job/helper/responsive_helper.dart';
 import 'package:job/util/images.dart';
@@ -32,6 +36,25 @@ class DashboardController extends GetxController implements GetxService{
         inactiveIcon: Images.product, screen: const SizedBox()),
     NavigationModel(name: 'more', activeIcon: Images.more,
         inactiveIcon: Images.more, screen: const MoreScreen()),
+  ];
+
+
+
+  final List<NavigationModel> candidateItem = [
+    NavigationModel(name: 'home', activeIcon: Images.home, inactiveIcon: Images.home,
+        screen: const MobileAppLandingScreen()),
+
+    NavigationModel(name: 'applied_jobs', activeIcon: Images.newJob, inactiveIcon: Images.home,
+        screen: const JobApplicationMobileScreen()),
+
+
+    NavigationModel(name: 'profile', activeIcon: Images.profile,
+        inactiveIcon: Images.product, screen: const CandidateProfileMobileScreen()),
+
+
+    NavigationModel(name: 'more', activeIcon: Images.more,
+        inactiveIcon: Images.more, screen: const CandidateMoreScreen()),
+
   ];
 
 

@@ -4,28 +4,32 @@ import 'package:job/helper/price_converter.dart';
 class CandidateReferenceItem {
   int? id;
   String? name;
-  String? phone;
+  String? mobile;
   String? email;
-  String? position;
-  String? company;
+  String? designation;
+  String? organization;
   String? address;
+  String? relation;
+
 
   CandidateReferenceItem(
       {this.id,
         this.name,
-        this.phone,
+        this.mobile,
         this.email,
-        this.position,
-        this.company,
+        this.designation,
+        this.organization,
+        this.relation,
         this.address,});
 
   CandidateReferenceItem.fromJson(Map<String, dynamic> json) {
     id = PriceConverter.parseInt(json['id']);
     name = json['name'];
-    phone = json['phone'];
     email = json['email'];
-    position = json['position'];
-    company = json['company'];
+    mobile = json['mobile'];
+    organization = json['organization'];
+    designation = json['designation'];
+    relation = json['relation'];
     address = json['address'];
 
   }
@@ -34,11 +38,12 @@ class CandidateReferenceItem {
     final Map<String, dynamic> data = <String, dynamic>{};
     data['id'] = id;
     data['name'] = name;
-    data['phone'] = phone;
     data['email'] = email;
-    data['position'] = position;
-    data['company'] = company;
     data['address'] = address;
+    data['mobile'] = mobile;
+    data['organization'] = organization;
+    data['designation'] = designation;
+    data['relation'] = relation;
     return data;
   }
 }

@@ -6,6 +6,7 @@ import 'package:job/feature/frontend/presentation/widgets/industry/select_public
 import 'package:job/feature/frontend/presentation/widgets/job_listing_summery_widget.dart';
 import 'package:job/feature/frontend/presentation/widgets/job_search_header_widget.dart';
 import 'package:job/helper/app_color_helper.dart';
+import 'package:job/helper/responsive_helper.dart';
 import 'package:job/util/dimensions.dart';
 import 'package:job/util/images.dart';
 import 'package:job/util/styles.dart';
@@ -20,26 +21,31 @@ class HeroSectionWidget extends StatelessWidget {
       CustomImage(image: Images.heroBg, isLocalAsset: true,),
         Center(child: SizedBox(width: Dimensions.webMaxWidth,
             child: Padding(padding: const EdgeInsets.symmetric(vertical: 50),
-              child: Column(crossAxisAlignment: CrossAxisAlignment.start,
-                  spacing: Dimensions.paddingSizeDefault, children: [
-                Text("find_the_right_job".tr,
-                    style: landingTextStyle(context).copyWith(fontSize: Dimensions.fontSizeHeading)),
-                    JobListingSummeryWidget(),
-                CustomContainer(color: systemPrimaryColor(),
-                  showShadow: false, horizontalPadding: Dimensions.paddingSizeLarge,
-                  verticalPadding: Dimensions.paddingSizeLarge,
-                  child: Row(spacing: Dimensions.paddingSizeDefault, children: [
-                    Expanded(child: JobSearchHeaderWidget()),
-                    Expanded(child: SelectPublicIndustryWidget()),
-                    SizedBox(width: 120, child: CustomButton(height: 40,
-                      buttonColor: Theme.of(context).primaryColor,
-                        onTap: (){
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeDefault),
+                child: Column(crossAxisAlignment: CrossAxisAlignment.start,
+                    spacing: Dimensions.paddingSizeDefault, children: [
+                  Text("find_the_right_job".tr,
+                      style: landingTextStyle(context).copyWith(fontSize: Dimensions.fontSizeHeading)),
+                      JobListingSummeryWidget(),
+                  CustomContainer(color: systemPrimaryColor(),
+                    showShadow: false, horizontalPadding: Dimensions.paddingSizeLarge,
+                    verticalPadding: Dimensions.paddingSizeLarge,
+                    child: Row(spacing: Dimensions.paddingSizeDefault, children: [
+                      Expanded(child: JobSearchHeaderWidget()),
+                      if(ResponsiveHelper.isDesktop(context))
+                      Expanded(child: SelectPublicIndustryWidget()),
+                      if(ResponsiveHelper.isDesktop(context))
+                      SizedBox(width: 120, child: CustomButton(height: 40,
+                        buttonColor: Theme.of(context).primaryColor,
+                          onTap: (){
 
-                        }, text: "search".tr))
+                          }, text: "search".tr))
 
-                  ]),
-                ),
-              ]),
+                    ]),
+                  ),
+                ]),
+              ),
             ),
           ),
         ),

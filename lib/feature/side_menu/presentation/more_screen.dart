@@ -6,7 +6,6 @@ import 'package:job/feature/authentication/logic/authentication_controller.dart'
 import 'package:job/feature/profile/logic/profile_controller.dart';
 import 'package:job/feature/side_menu/side_menu_controller.dart';
 import 'package:job/helper/route_helper.dart';
-import 'package:job/util/dimensions.dart';
 import 'package:job/util/images.dart';
 import 'package:job/util/styles.dart';
 
@@ -57,78 +56,6 @@ class _MoreScreenState extends State<MoreScreen> {
 
           ]);
         }
-      ),
-    );
-  }
-}
-
-class SquareButton extends StatelessWidget {
-  final String image;
-  final String? title;
-  final Widget navigateTo;
-  final int count;
-  final bool hasCount;
-  final bool isWallet;
-  final double? balance;
-  final bool isLoyalty;
-  final String? subTitle;
-
-  const SquareButton({super.key, required this.image,
-    required this.title, required this.navigateTo, required this.count,
-    required this.hasCount, this.isWallet = false, this.balance, this.subTitle,
-    this.isLoyalty = false});
-
-  @override
-  Widget build(BuildContext context) {
-    return InkWell(onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => navigateTo)),
-      child: Column(children: [
-        Padding(padding: const EdgeInsets.all(8.0),
-          child: Container(width: 120, height: 90,
-            decoration: BoxDecoration(borderRadius: BorderRadius.circular(10),
-                color: Get.isDarkMode ?
-                systemPrimaryColor().withValues(alpha: .30) : systemPrimaryColor()),
-            child: Stack(children: [
-              Positioned(top: -80,left: -10,right: -10,
-                  child: Container(height: 120, decoration: BoxDecoration(
-                      border: Border.all(color: Colors.white.withValues(alpha: .07), width: 15),
-                      borderRadius: BorderRadius.circular(100)))),
-
-
-              isWallet?
-              Padding(padding: const EdgeInsets.all(8.0),
-                child: SizedBox(width: 30, height: 30,child: Image.asset(image, color: Colors.white)),
-              ):
-
-              Center(child: Padding(padding: EdgeInsets.all(Dimensions.paddingSizeLarge),
-                  child: Image.asset(image, color: Theme.of(context).hintColor))),
-
-            ],
-            ),
-          ),
-        ),
-        Text(title??'', maxLines: 1,overflow: TextOverflow.clip,
-            style: textRegular.copyWith(fontSize: Dimensions.fontSizeDefault, color: Theme.of(context).textTheme.bodyLarge?.color)),
-      ]),
-    );
-  }
-}
-
-class TitleButton extends StatelessWidget {
-  final String image;
-  final String? title;
-  final Widget navigateTo;
-  final bool isNotification;
-  final bool isProfile;
-  const TitleButton({super.key, required this.image, required this.title, required this.navigateTo,  this.isNotification = false, this.isProfile = false});
-
-  @override
-  Widget build(BuildContext context) {
-    return ListTile(
-
-      leading: Image.asset(image, width: 25, height: 25, fit: BoxFit.fill, color: systemPrimaryColor().withValues(alpha: .6),),
-      title: Text(title!, style: textRegular.copyWith(fontSize: Dimensions.fontSizeLarge)),
-      onTap: () => Navigator.push(
-        context, MaterialPageRoute(builder: (_) => navigateTo),
       ),
     );
   }

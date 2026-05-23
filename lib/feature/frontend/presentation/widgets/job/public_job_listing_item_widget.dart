@@ -6,6 +6,7 @@ import 'package:job/common/widget/custom_image.dart';
 import 'package:job/common/widget/custom_text_item_widget.dart';
 import 'package:job/feature/job_listing/domain/models/job_listing_model.dart';
 import 'package:job/helper/app_color_helper.dart';
+import 'package:job/helper/responsive_helper.dart';
 import 'package:job/helper/route_helper.dart';
 import 'package:job/util/app_constants.dart';
 import 'package:job/util/dimensions.dart';
@@ -28,8 +29,10 @@ class _PublicJoListingItemWidgetState extends State<PublicJoListingItemWidget> {
   @override
   Widget build(BuildContext context) {
     final item = widget.item;
+    bool isDesktop = ResponsiveHelper.isDesktop(context);
 
-    return MouseRegion(onEnter: (_) => setState(() => isHovered = true),
+    return isDesktop?
+    MouseRegion(onEnter: (_) => setState(() => isHovered = true),
       onExit: (_) => setState(() => isHovered = false),
       child: GestureDetector(onTap: () {
           Get.toNamed(RouteHelper.getJobDetailRoute(item?.id.toString() ?? ''));
@@ -68,7 +71,7 @@ class _PublicJoListingItemWidgetState extends State<PublicJoListingItemWidget> {
                     height: 50,
                     radius: 123,
                     image:
-                    "${AppConstants.imageBaseUrl}/company/${item?.company?.logo}",
+                    "${AppConstants.imageBaseUrl}/companies/${item?.company?.logo}",
                   ),
                 ),
 
@@ -100,6 +103,17 @@ class _PublicJoListingItemWidgetState extends State<PublicJoListingItemWidget> {
           ),
         ),
       ),
-    );
+    ):
+    CustomContainer(borderRadius: 5,
+        horizontalPadding: 5,verticalPadding: 5,
+        child: Row(spacing: Dimensions.paddingSizeSmall, children: [
+      CustomImage(width: 50, height: 50, fit: BoxFit.contain, radius: 5,
+        image: "${AppConstants.imageBaseUrl}/companies/${item?.company?.logo}"),
+      Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start,children: [
+        Text(item?.company?.name ?? 'N/A',
+          style: textRegular.copyWith(fontSize: Dimensions.fontSizeSmall)),
+        Text(item?.title ?? '', style: textMedium.copyWith()),
+      ],))
+    ]));
   }
 }

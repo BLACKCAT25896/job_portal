@@ -1,3 +1,4 @@
+import 'dart:developer';
 import 'dart:io';
 
 import 'package:file_picker/file_picker.dart';
@@ -126,6 +127,7 @@ class CandidateResumeController extends GetxController implements GetxService{
         final anchor = html.AnchorElement(href: url)
           ..setAttribute("download", fileName)
           ..click();
+        log("${anchor.hostname}");
         return;
       }
 

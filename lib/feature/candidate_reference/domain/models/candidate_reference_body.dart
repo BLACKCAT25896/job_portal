@@ -1,29 +1,38 @@
 class CandidateReferenceBody {
   String? name;
-  String? phone;
+  String? designation;
+  String? organization;
+  String? relation;
   String? email;
-  String? position;
-  String? company;
+  String? mobile;
+  String? phoneOffice;
+  String? phoneResidential;
   String? address;
   int? status;
   String? sMethod;
 
   CandidateReferenceBody(
       {this.name,
-        this.phone,
+        this.designation,
+        this.organization,
+        this.relation,
         this.email,
-        this.position,
-        this.company,
+        this.mobile,
+        this.phoneOffice,
+        this.phoneResidential,
         this.address,
         this.status,
         this.sMethod});
 
   CandidateReferenceBody.fromJson(Map<String, dynamic> json) {
     name = json['name'];
-    phone = json['phone'];
+    designation = json['designation'];
+    organization = json['organization'];
+    relation = json['relation'];
     email = json['email'];
-    position = json['position'];
-    company = json['company'];
+    mobile = json['mobile'];
+    phoneOffice = json['phone_office'];
+    phoneResidential = json['phone_residential'];
     address = json['address'];
     status = json['status'];
     sMethod = json['_method'];
@@ -32,10 +41,13 @@ class CandidateReferenceBody {
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = <String, dynamic>{};
     data['name'] = name;
-    data['phone'] = phone;
+    data['designation'] = designation;
+    data['organization'] = organization;
+    data['relation'] = relation;
     data['email'] = email;
-    data['position'] = position;
-    data['company'] = company;
+    data['mobile'] = mobile;
+    data['phone_office'] = phoneOffice;
+    data['phone_residential'] = phoneResidential;
     data['address'] = address;
     data['status'] = status;
     data['_method'] = sMethod;

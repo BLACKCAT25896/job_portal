@@ -4,6 +4,8 @@ import 'package:job/helper/price_converter.dart';
 
 class CandidateEducationItem {
   int? id;
+  int? degreeLevelId;
+  String? degreeLevelName;
   String? degreeTitle;
   String? major;
   String? board;
@@ -19,6 +21,8 @@ class CandidateEducationItem {
 
   CandidateEducationItem(
       {this.id,
+        this.degreeLevelId,
+        this.degreeLevelName,
         this.degreeTitle,
         this.major,
         this.board,
@@ -35,6 +39,8 @@ class CandidateEducationItem {
 
   CandidateEducationItem.fromJson(Map<String, dynamic> json) {
     id = PriceConverter.parseInt(json['id']);
+    degreeLevelId = PriceConverter.parseInt(json['degree_level_id']);
+    degreeLevelName = json['degree_level_name'];
     degreeTitle = json['degree_title'];
     major = json['major'];
     board = json['board'];
@@ -52,6 +58,8 @@ class CandidateEducationItem {
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = <String, dynamic>{};
     data['id'] = id;
+    data['degree_level_id'] = degreeLevelId;
+    data['degree_level_name'] = degreeLevelName;
     data['degree_title'] = degreeTitle;
     data['major'] = major;
     data['board'] = board;

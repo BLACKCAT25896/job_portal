@@ -8,7 +8,9 @@ import 'package:job/common/widget/responsive_grid_widget.dart';
 import 'package:job/feature/candidate_links/controller/candidate_link_controller.dart';
 import 'package:job/feature/candidate_links/domain/models/candidate_link_model.dart';
 import 'package:job/feature/candidate_links/presentation/widgets/add_new_candidate_link_widget.dart';
+import 'package:job/feature/candidate_panel/screens/edit_links_screen.dart';
 import 'package:job/feature/candidate_panel/widgets/candidate_personal_details_widget.dart';
+import 'package:job/helper/responsive_helper.dart';
 import 'package:job/util/dimensions.dart';
 import 'package:job/util/styles.dart';
 
@@ -19,6 +21,7 @@ class CandidateLinkItemWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool isDesktop = ResponsiveHelper.isDesktop(context);
     return Column(children: [
         Row(spacing: Dimensions.paddingSizeDefault, children: [
           Expanded(child: Text("${"link".tr} ${index+1}",
@@ -32,8 +35,13 @@ class CandidateLinkItemWidget extends StatelessWidget {
             },));
 
           }, onEdit: (){
-            Get.dialog(CustomDialogWidget(title: "link".tr,
-                child: AddNewCandidateLinkWidget(candidateLinkItem: candidateLinkItem)));
+            if(isDesktop){
+              Get.dialog(CustomDialogWidget(title: "link".tr,
+                  child: AddNewCandidateLinkWidget(candidateLinkItem: candidateLinkItem)));
+            }else{
+              Get.to(()=> EditLinksScreen(candidateLinkItem: candidateLinkItem));
+            }
+
           },)
 
 

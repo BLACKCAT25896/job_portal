@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:job/common/widget/custom_button.dart';
 import 'package:job/common/widget/custom_contaner.dart';
 import 'package:job/common/widget/custom_snackbar.dart';
 import 'package:job/common/widget/image_picker_widget.dart';
 import 'package:job/feature/profile/logic/profile_controller.dart';
+import 'package:job/helper/responsive_helper.dart';
 import 'package:job/util/app_constants.dart';
 import 'package:job/util/dimensions.dart';
 import 'package:job/util/styles.dart';
@@ -13,12 +15,17 @@ class CandidateProfileImageWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<ProfileController>(
-      builder: (profileController) {
+    bool isDesktop = ResponsiveHelper.isDesktop(context);
+    return GetBuilder<ProfileController>(initState: (val){
+      if(Get.find<ProfileController>().profileModel == null){
+        Get.find<ProfileController>().getCandidateProfileInfo();
+      }
+    },builder: (profileController) {
         final data = profileController.profileModel?.data;
         final candidate = data?.candidateInfo;
         if(candidate == null) return Container();
-        return Row(spacing: Dimensions.paddingSizeSmall, children: [
+        return isDesktop?
+        Row(spacing: Dimensions.paddingSizeSmall, children: [
           ImagePickerWidget(borderRadius: 123,
               pickedFile: profileController.profileAvatar,
               imageUrl: "${AppConstants.imageBaseUrl}/users/${data?.image}",
@@ -41,7 +48,23 @@ class CandidateProfileImageWidget extends StatelessWidget {
                 ]),
                 Text("upload_your_profile_image".tr, style: textRegular)
               ])
-        ]);
+        ]):
+        Padding(padding: const EdgeInsets.all(50),
+          child: Column(spacing: Dimensions.paddingSizeSmall, children: [
+            ImagePickerWidget(borderRadius: 123,
+                pickedFile: profileController.profileAvatar,
+                imageUrl: "${AppConstants.imageBaseUrl}/users/${data?.image}",
+                onImagePicked: ()=> profileController.pickImage(),
+                width: 120, height: 120),
+            CustomButton(onTap: (){
+              if(profileController.profileAvatar != null){
+                profileController.updateProfileAvatar();
+              }else{
+                showCustomSnackBar("select_image".tr);
+              }
+              }, text: "change_image".tr),
+          ]),
+        );
       }
     );
   }

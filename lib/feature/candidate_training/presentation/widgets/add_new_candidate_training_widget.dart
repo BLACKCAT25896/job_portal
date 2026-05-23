@@ -34,6 +34,14 @@ class _AddNewCandidateTrainingWidgetState extends State<AddNewCandidateTrainingW
     super.initState();
     if(widget.candidateTrainingItem != null) {
       update = true;
+      titleController.text = widget.candidateTrainingItem!.title ?? "";
+      topicController.text = widget.candidateTrainingItem!.topicsCovered.toString();
+      durationController.text = widget.candidateTrainingItem!.durationValue.toString();
+      trainingYearController.text = widget.candidateTrainingItem!.trainingYear.toString();
+      instituteController.text = widget.candidateTrainingItem!.institute ?? "";
+      locationController.text = widget.candidateTrainingItem!.location ?? "";
+      descriptionController.text = widget.candidateTrainingItem!.description ?? "";
+
 
     }
   }

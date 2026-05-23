@@ -31,6 +31,10 @@ class _AddNewCandidateCertificateWidgetState extends State<AddNewCandidateCertif
     super.initState();
     if(widget.candidateCertificateItem != null) {
       update = true;
+      titleController.text = widget.candidateCertificateItem?.title??'';
+      instituteController.text = widget.candidateCertificateItem?.institute??'';
+      durationController.text = widget.candidateCertificateItem?.durationValue?.toString()??'';
+      locationController.text = widget.candidateCertificateItem?.location??'';
 
     }
   }

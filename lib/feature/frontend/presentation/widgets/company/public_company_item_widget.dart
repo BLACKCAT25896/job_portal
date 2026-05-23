@@ -3,6 +3,8 @@ import 'package:get/get.dart';
 import 'package:job/common/widget/custom_contaner.dart';
 import 'package:job/common/widget/custom_image.dart';
 import 'package:job/feature/company/domain/models/company_model.dart';
+import 'package:job/helper/app_color_helper.dart';
+import 'package:job/helper/responsive_helper.dart';
 import 'package:job/helper/route_helper.dart';
 import 'package:job/util/app_constants.dart';
 import 'package:job/util/dimensions.dart';
@@ -23,9 +25,11 @@ class _PublicCompanyItemWidgetState extends State<PublicCompanyItemWidget> {
 
   @override
   Widget build(BuildContext context) {
-    final primary = Theme.of(context).primaryColor;
+    final primary = systemPrimaryColor();
+    bool isDesktop = ResponsiveHelper.isDesktop(context);
 
-    return MouseRegion(
+    return isDesktop?
+    MouseRegion(
       cursor: SystemMouseCursors.click,
       onEnter: (_) => setState(() => _isHover = true),
       onExit: (_) => setState(() => _isHover = false),
@@ -44,17 +48,18 @@ class _PublicCompanyItemWidgetState extends State<PublicCompanyItemWidget> {
             curve: Curves.easeOut,
             decoration: BoxDecoration(borderRadius: BorderRadius.circular(5)),
 
-            child: CustomContainer(
+            child: CustomContainer(showShadow: false,
+              border: Border.all(width: .125, color: Theme.of(context).hintColor),
               onTap: () {
                 Get.toNamed(RouteHelper.getCategoryWiseJobRoute(slug: '', type: 'company'));
               },
-              borderRadius: 14,
+              borderRadius: 10,
 
               child: Padding(padding: EdgeInsets.all(Dimensions.paddingSizeDefault),
 
                 child: Column(mainAxisSize: MainAxisSize.min, children: [
                     AnimatedContainer(duration: const Duration(milliseconds: 220),
-                        height: 150, width: 150,
+                        height: 100, width: 100,
                       decoration: BoxDecoration(borderRadius: BorderRadius.circular(14),
                         border: Border.all(color: _isHover
                             ? primary.withValues(alpha: 0.5)
@@ -78,22 +83,6 @@ class _PublicCompanyItemWidgetState extends State<PublicCompanyItemWidget> {
                     Text(widget.item?.location ?? 'Location not set', maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                       style: textRegular.copyWith(color: Colors.grey)),
-
-                    const SizedBox(height: 10),
-
-                    AnimatedContainer(duration: const Duration(milliseconds: 220),
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 12, vertical: 5),
-                      decoration: BoxDecoration(
-                        color: _isHover ? Colors.green.withValues(alpha: 0.15)
-                            : Colors.green.withValues(alpha: 0.10),
-                        borderRadius: BorderRadius.circular(20),
-                        border: Border.all(color: Colors.green.withValues(alpha: 0.2))),
-                      child:  Text('2 open jobs',
-                        style: textRegular.copyWith(fontSize: Dimensions.fontSizeSmall,
-                          color: Colors.green),
-                      ),
-                    ),
                   ],
                 ),
               ),
@@ -101,6 +90,18 @@ class _PublicCompanyItemWidgetState extends State<PublicCompanyItemWidget> {
           ),
         ),
       ),
-    );
+    ):
+    CustomContainer(borderRadius: 5,horizontalPadding: 5,verticalPadding: 5,
+        child: Row(spacing: Dimensions.paddingSizeSmall, children: [
+      CustomImage(radius: 5,
+          width: 50, height: 50,
+          fit: BoxFit.contain,
+          image: "${AppConstants.imageBaseUrl}/companies/${widget.item?.logo}"),
+      Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+        Text(widget.item?.name ?? 'Unknown Company',style: textMedium),
+        Text("2 Jobs", style: textRegular.copyWith()),
+
+      ]))
+    ]));
   }
 }

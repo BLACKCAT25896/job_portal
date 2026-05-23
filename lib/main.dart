@@ -120,8 +120,7 @@ class _MyAppState extends State<MyApp> {
                 defaultTransition: Transition.fadeIn,
                 transitionDuration: const Duration(milliseconds: 400),
                 builder:(context,child){
-                  return SafeArea(top: false,
-                      child: child!);
+                  return child!;
                 },
               ),
             );

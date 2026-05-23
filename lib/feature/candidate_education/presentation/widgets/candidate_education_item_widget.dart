@@ -7,7 +7,9 @@ import 'package:job/common/widget/responsive_grid_widget.dart';
 import 'package:job/feature/candidate_education/controller/candidate_education_controller.dart';
 import 'package:job/feature/candidate_education/domain/models/candidate_education_model.dart';
 import 'package:job/feature/candidate_education/presentation/widgets/add_new_candidate_education_widget.dart';
+import 'package:job/feature/candidate_panel/screens/edit_education_screen.dart';
 import 'package:job/feature/candidate_panel/widgets/candidate_personal_details_widget.dart';
+import 'package:job/helper/responsive_helper.dart';
 import 'package:job/util/dimensions.dart';
 import 'package:job/util/styles.dart';
 
@@ -18,6 +20,7 @@ class CandidateEducationItemWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool isDesktop = ResponsiveHelper.isDesktop(context);
     return Column(children: [
         Row(spacing: Dimensions.paddingSizeDefault, children: [
           Expanded(child: Text("${"education".tr} ${index+1}",
@@ -31,8 +34,13 @@ class CandidateEducationItemWidget extends StatelessWidget {
             },));
 
           }, onEdit: (){
-            Get.dialog(CustomDialogWidget(title: "education".tr,
-                child: AddNewCandidateEducationWidget(candidateEducationItem: candidateEducationItem)));
+            if(isDesktop){
+              Get.dialog(CustomDialogWidget(title: "education".tr,
+                  child: AddNewCandidateEducationWidget(candidateEducationItem: candidateEducationItem)));
+            }else{
+              Get.to(()=> EditEducationScreen(candidateEducationItem: candidateEducationItem));
+            }
+
           },)
 
 

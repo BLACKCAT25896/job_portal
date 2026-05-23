@@ -22,7 +22,7 @@ class CategoryWiseChart extends StatelessWidget {
     return CustomContainer(
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           Row(children: [
-               Text('applications_by_category', style: textSemiBold.copyWith(fontSize: Dimensions.fontSizeExtraLarge) ),
+               Text('applications_by_category'.tr, style: textSemiBold.copyWith(fontSize: Dimensions.fontSizeExtraLarge) ),
               const Spacer(),
               _Chip(label: 'This Year', color: systemPrimaryColor()),
             ],

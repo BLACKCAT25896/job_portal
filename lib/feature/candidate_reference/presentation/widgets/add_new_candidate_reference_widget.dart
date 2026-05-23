@@ -7,6 +7,7 @@ import 'package:get/get.dart';
 import 'package:job/common/widget/custom_button.dart';
 import 'package:job/common/widget/custom_snackbar.dart';
 import 'package:job/common/widget/custom_text_field.dart';
+import 'package:job/util/app_constants.dart';
 import 'package:job/util/dimensions.dart';
 
 class AddNewCandidateReferenceWidget extends StatefulWidget {
@@ -25,6 +26,7 @@ class _AddNewCandidateReferenceWidgetState extends State<AddNewCandidateReferenc
   TextEditingController positionController = TextEditingController();
   TextEditingController companyController = TextEditingController();
   TextEditingController addressController = TextEditingController();
+  TextEditingController relationshipController = TextEditingController();
 
 
   bool update = false;
@@ -33,6 +35,15 @@ class _AddNewCandidateReferenceWidgetState extends State<AddNewCandidateReferenc
     super.initState();
     if(widget.candidateReferenceItem != null) {
       update = true;
+      nameController.text = widget.candidateReferenceItem?.name??'';
+      phoneController.text = widget.candidateReferenceItem?.mobile??'';
+      emailController.text = widget.candidateReferenceItem?.email??'';
+      positionController.text = widget.candidateReferenceItem?.designation??'';
+      companyController.text = widget.candidateReferenceItem?.organization??'';
+      addressController.text = widget.candidateReferenceItem?.address??'';
+      relationshipController.text = widget.candidateReferenceItem?.relation??'';
+
+
 
     }
   }
@@ -40,26 +51,35 @@ class _AddNewCandidateReferenceWidgetState extends State<AddNewCandidateReferenc
   Widget build(BuildContext context) {
     return  GetBuilder<CandidateReferenceController>(builder: (candidateReferenceController) {
       return Column(mainAxisSize: MainAxisSize.min, children: [
-
         ResponsiveMasonryGrid(width: 300, children: [
-
           CustomTextField(controller: nameController,
               hintText: "name".tr,
+              title: "name".tr,
               inputType: TextInputType.name),
           CustomTextField(controller: phoneController,
               hintText: "phone".tr,
+              title: "phone".tr,
+              inputFormatters: [AppConstants.phoneNumberFormat],
               inputType: TextInputType.phone),
           CustomTextField(controller: emailController,
               hintText: "email".tr,
+              title: "email".tr,
               inputType: TextInputType.emailAddress),
+          CustomTextField(controller: relationshipController,
+              hintText: "relationship".tr,
+              title: "relationship".tr,
+              inputType: TextInputType.name),
           CustomTextField(controller: positionController,
-              hintText: "position".tr,
+              hintText: "designation".tr,
+              title: "designation".tr,
               inputType: TextInputType.name),
           CustomTextField(controller: companyController,
               hintText: "company".tr,
+              title: "company".tr,
               inputType: TextInputType.name),
           CustomTextField(controller: addressController,
               hintText: "address".tr,
+              title: "address".tr,
               inputType: TextInputType.name),
 
 
@@ -78,6 +98,8 @@ class _AddNewCandidateReferenceWidgetState extends State<AddNewCandidateReferenc
                   String position = positionController.text.trim();
                   String company = companyController.text.trim();
                   String address = addressController.text.trim();
+                  String relationship = relationshipController.text.trim();
+
 
                   if(name.isEmpty){
                     showCustomSnackBar("name_is_required".tr);
@@ -95,10 +117,11 @@ class _AddNewCandidateReferenceWidgetState extends State<AddNewCandidateReferenc
                   else{
                     CandidateReferenceBody body = CandidateReferenceBody(
                       name: name,
-                      phone: phone,
+                      mobile: phone,
+                      designation: position,
+                      organization: company,
+                      relation: relationship,
                       email: email,
-                      position: position,
-                      company: company,
                       address: address,
                       status: 1,
                       sMethod: update? "put" : "post"

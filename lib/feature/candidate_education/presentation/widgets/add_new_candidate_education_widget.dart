@@ -3,6 +3,7 @@ import 'package:job/feature/candidate_education/controller/candidate_education_c
 import 'package:job/feature/candidate_education/domain/models/candidate_education_body.dart';
 import 'package:job/feature/candidate_education/domain/models/candidate_education_model.dart';
 import 'package:job/feature/degree_level/controller/degree_level_controller.dart';
+import 'package:job/feature/degree_level/domain/models/degree_level_model.dart';
 import 'package:job/feature/degree_level/presentation/widgets/select_degree_level_widget.dart';
 import 'package:job/util/app_constants.dart';
 import 'package:flutter/material.dart';
@@ -38,6 +39,20 @@ class _AddNewCandidateEducationWidgetState extends State<AddNewCandidateEducatio
     super.initState();
     if(widget.candidateEducationItem != null) {
       update = true;
+      degreeTitleController.text = widget.candidateEducationItem!.degreeTitle ?? "";
+      majorNameController.text = widget.candidateEducationItem!.major ?? "";
+      boardController.text = widget.candidateEducationItem!.board ?? "";
+      instituteController.text = widget.candidateEducationItem!.institute ?? "";
+      resultController.text = widget.candidateEducationItem!.result ?? "";
+      cgpaController.text = widget.candidateEducationItem!.cgpa ?? "";
+      scaleController.text = widget.candidateEducationItem!.scale ?? "";
+      passingYearController.text = widget.candidateEducationItem!.passingYear.toString();
+      durationYearsController.text = widget.candidateEducationItem!.durationYears.toString();
+      achievementController.text = widget.candidateEducationItem!.achievement ?? "";
+      Get.find<DegreeLevelController>().selectDegreeLevel(DegreeLevelItem(
+        name: widget.candidateEducationItem?.degreeLevelName??'',
+        id: widget.candidateEducationItem?.degreeLevelId
+      ), notify: false);
 
     }
   }

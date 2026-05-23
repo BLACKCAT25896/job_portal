@@ -29,6 +29,8 @@ class _AddNewCandidateLinkWidgetState extends State<AddNewCandidateLinkWidget> {
     super.initState();
     if(widget.candidateLinkItem != null) {
       update = true;
+      nameController.text = widget.candidateLinkItem!.platform!;
+      urlController.text = widget.candidateLinkItem!.url!;
 
     }
   }
