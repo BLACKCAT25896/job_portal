@@ -49,7 +49,7 @@ class _PublicCompanyItemWidgetState extends State<PublicCompanyItemWidget> {
             decoration: BoxDecoration(borderRadius: BorderRadius.circular(5)),
 
             child: CustomContainer(showShadow: false,
-              border: Border.all(width: .125, color: Theme.of(context).hintColor),
+              border: Border.all(width: _isHover? .5 : .125, color: _isHover? systemPrimaryColor(): Theme.of(context).hintColor),
               onTap: () {
                 Get.toNamed(RouteHelper.getCategoryWiseJobRoute(slug: '', type: 'company'));
               },

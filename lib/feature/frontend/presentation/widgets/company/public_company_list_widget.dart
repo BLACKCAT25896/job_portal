@@ -49,8 +49,8 @@ class _PublicCompanyListWidgetState extends State<PublicCompanyListWidget> {
               itemView : MasonryGridView.builder(
                   itemCount: data.data?.length ?? 0,
                   shrinkWrap: true,
-                  mainAxisSpacing: Dimensions.paddingSizeSmall,
-                  crossAxisSpacing: Dimensions.paddingSizeSmall,
+                  mainAxisSpacing: Dimensions.paddingSizeDefault,
+                  crossAxisSpacing: Dimensions.paddingSizeDefault,
                   padding: EdgeInsets.zero,
                   physics: const NeverScrollableScrollPhysics(),
                   gridDelegate: SliverSimpleGridDelegateWithMaxCrossAxisExtent(maxCrossAxisExtent: 300),

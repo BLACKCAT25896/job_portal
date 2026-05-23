@@ -64,16 +64,9 @@ class _PublicJoListingItemWidgetState extends State<PublicJoListingItemWidget> {
           child: Row(
             children: [
               if (!widget.fromFilter)
-                CustomContainer(
-                  borderRadius: 123,
-                  child: CustomImage(
-                    width: 50,
-                    height: 50,
+                CustomContainer(borderRadius: 123, child: CustomImage(width: 50, height: 50, fit: BoxFit.contain,
                     radius: 123,
-                    image:
-                    "${AppConstants.imageBaseUrl}/companies/${item?.company?.logo}",
-                  ),
-                ),
+                  image: "${AppConstants.imageBaseUrl}/companies/${item?.company?.logo}")),
 
               const SizedBox(width: 8),
 
