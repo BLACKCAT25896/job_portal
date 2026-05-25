@@ -3,13 +3,14 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:job/common/layout/base_layout.dart';
-import 'package:job/common/widget/custom_contaner.dart';
+import 'package:job/common/widget/custom_app_bar.dart';
 import 'package:job/common/widget/custom_search.dart';
 import 'package:job/feature/frontend/controller/frontend_controller.dart';
-import 'package:job/feature/frontend/presentation/widgets/custom_range_slider_widget.dart';
 import 'package:job/feature/frontend/presentation/widgets/industry/public_industry_list_widget.dart';
 import 'package:job/feature/frontend/presentation/widgets/job/public_job_category_list_widget.dart';
 import 'package:job/feature/frontend/presentation/widgets/job/public_job_listing_list_widget.dart';
+import 'package:job/feature/frontend/presentation/widgets/job_filter_widget.dart';
+import 'package:job/helper/responsive_helper.dart';
 import 'package:job/util/dimensions.dart';
 
 class CategoryOrIndustryWiseJobListWidget extends StatefulWidget {
@@ -36,73 +37,39 @@ class _CategoryOrIndustryWiseJobListWidgetState extends State<CategoryOrIndustry
   }
   @override
   Widget build(BuildContext context) {
-    return BaseLayout(scrollController: scrollController,
+    bool isDesktop = ResponsiveHelper.isDesktop(context);
+    return isDesktop?
+    BaseLayout(scrollController: scrollController,
         child: GetBuilder<LandingPageController>(builder: (controller) {
-            return Padding(padding: EdgeInsets.only(top: Dimensions.paddingSizeDefault),
-              child: Center(child: SizedBox(width: Dimensions.webMaxWidth,
-                  child: Row(crossAxisAlignment: CrossAxisAlignment.start,
-                    spacing: Dimensions.paddingSizeDefault, children: [
-                      SizedBox(width: 190, child: Column(mainAxisSize: MainAxisSize.min,
-                        spacing: Dimensions.paddingSizeSmall, children: [
-                          CustomSearch(hintText: "search_for_job".tr,
-                              searchController: searchController),
+          return Padding(padding: EdgeInsets.only(top: Dimensions.paddingSizeDefault),
+            child: Center(child: SizedBox(width: Dimensions.webMaxWidth,
+                child: Row(crossAxisAlignment: CrossAxisAlignment.start,
+                  spacing: Dimensions.paddingSizeDefault, children: [
+                    SizedBox(width: 190, child: Column(mainAxisSize: MainAxisSize.min,
+                      spacing: Dimensions.paddingSizeSmall, children: [
+                        CustomSearch(hintText: "search_for_job".tr,
+                            searchController: searchController),
 
-                          CustomContainer(
-                            borderRadius: 5,
-                            showShadow: false,
-                            child: Column(
-                              children: [
+                        JobFilterWidget(),
 
-                                CustomRangeSlider(
-                                  values: controller.salaryRange,
-                                  title: "salary_range".tr,
-                                  min: 0,
-                                  max: 100,
-                                  divisions: 10,
-                                  onChanged: (values) {
-                                    controller.updateSalaryRange(values);
-                                  },
-                                ),
+                        PublicJobCategoryListWidget(fromFilter: true, scrollController: scrollController),
+                        PublicIndustryListWidget(fromFilter: true, scrollController: scrollController)
+                      ],
+                    )),
 
-                                CustomRangeSlider(
-                                  values: controller.ageRange,
-                                  title: "age_range".tr,
-                                  min: 0,
-                                  max: 100,
-                                  divisions: 10,
-                                  onChanged: (values) {
-                                    controller.updateAgeRange(values);
-                                  },
-                                ),
-
-                                CustomRangeSlider(
-                                  values: controller.experienceRange, // ✅ FIXED
-                                  title: "experience_range".tr,
-                                  min: 0,
-                                  max: 100,
-                                  divisions: 10,
-                                  onChanged: (values) {
-                                    controller.updateExperienceRange(values);
-                                  },
-                                ),
-
-                              ],
-                            ),
-                          ),
-
-                          PublicJobCategoryListWidget(fromFilter: true,
-                              scrollController: scrollController),
-                          PublicIndustryListWidget(fromFilter: true,
-                              scrollController: scrollController)
-                        ],
-                      )),
-
-                      Expanded(child: PublicJobListingListWidget(fromFilter: true,
-                          scrollController: scrollController)),
+                    Expanded(child: PublicJobListingListWidget(fromFilter: true, scrollController: scrollController)),
                     ],
                   ))),
             );
           }
-        ));
+        )): Scaffold(
+      appBar: CustomAppBar(),
+      body: CustomScrollView(slivers: [
+        SliverToBoxAdapter(child: Column(children: [
+          PublicJobListingListWidget(fromFilter: true, scrollController: scrollController),
+        ]),)
+      ]),
+
+    );
   }
 }

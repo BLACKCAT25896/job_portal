@@ -21,6 +21,7 @@ class CompanyItem {
   int? isFeatured;
   String? fax;
   String? uniqueId;
+  int? openJobs;
   int? status;
 
   CompanyItem(
@@ -42,6 +43,7 @@ class CompanyItem {
         this.isFeatured,
         this.fax,
         this.uniqueId,
+        this.openJobs,
         this.status});
 
   CompanyItem.fromJson(Map<String, dynamic> json) {
@@ -63,6 +65,7 @@ class CompanyItem {
     isFeatured = PriceConverter.parseInt(json['is_featured']);
     fax = json['fax'];
     uniqueId = json['unique_id'];
+    openJobs = PriceConverter.parseInt(json['open_jobs']);
     status = PriceConverter.parseInt(json['status']);
   }
 
@@ -86,6 +89,7 @@ class CompanyItem {
     data['is_featured'] = isFeatured;
     data['fax'] = fax;
     data['unique_id'] = uniqueId;
+    data['open_jobs'] = openJobs;
     data['status'] = status;
     return data;
   }

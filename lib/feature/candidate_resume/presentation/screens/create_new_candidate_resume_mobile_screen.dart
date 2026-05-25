@@ -4,26 +4,22 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:job/feature/candidate_resume/domain/models/candidate_resume_model.dart';
 import 'package:job/feature/candidate_resume/presentation/widgets/add_new_candidate_resume_widget.dart';
-import 'package:job/util/dimensions.dart';
 
-class CreateNewCandidateResumeScreen extends StatefulWidget {
+class CreateNewCandidateResumeMobileScreen extends StatefulWidget {
   final CandidateResumeItem? candidateResumeItem;
-  const CreateNewCandidateResumeScreen({super.key, this.candidateResumeItem});
+  const CreateNewCandidateResumeMobileScreen({super.key, this.candidateResumeItem});
 
   @override
-  State<CreateNewCandidateResumeScreen> createState() => _CreateNewCandidateResumeScreenState();
+  State<CreateNewCandidateResumeMobileScreen> createState() => _CreateNewCandidateResumeMobileScreenState();
 }
 
-class _CreateNewCandidateResumeScreenState extends State<CreateNewCandidateResumeScreen> {
+class _CreateNewCandidateResumeMobileScreenState extends State<CreateNewCandidateResumeMobileScreen> {
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(appBar: CustomAppBar(title: "candidate_resume".tr),
         body: CustomWebScrollView(slivers: [
           SliverToBoxAdapter(
-            child: Padding(
-              padding: EdgeInsets.all(Dimensions.paddingSizeDefault),
-              child: AddNewCandidateResumeWidget(candidateResumeItem: widget.candidateResumeItem),
-            ),)]));
+            child: AddNewCandidateResumeWidget(candidateResumeItem: widget.candidateResumeItem),)]));
   }
 }

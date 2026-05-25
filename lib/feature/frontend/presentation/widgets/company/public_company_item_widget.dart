@@ -83,6 +83,12 @@ class _PublicCompanyItemWidgetState extends State<PublicCompanyItemWidget> {
                     Text(widget.item?.location ?? 'Location not set', maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                       style: textRegular.copyWith(color: Colors.grey)),
+                  SizedBox(height: Dimensions.paddingSizeSmall),
+                  CustomContainer(showShadow: false, borderRadius: 123, verticalPadding: 5,
+                      horizontalPadding: Dimensions.paddingSizeDefault,
+                      color: systemPrimaryColor().withValues(alpha: .125),
+                      child: Text("${widget.item?.openJobs ?? 0} Jobs", maxLines: 1,
+                      style: textRegular.copyWith(color: systemPrimaryColor())))
                   ],
                 ),
               ),
@@ -99,7 +105,7 @@ class _PublicCompanyItemWidgetState extends State<PublicCompanyItemWidget> {
           image: "${AppConstants.imageBaseUrl}/companies/${widget.item?.logo}"),
       Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         Text(widget.item?.name ?? 'Unknown Company',style: textMedium),
-        Text("2 Jobs", style: textRegular.copyWith()),
+        Text("${widget.item?.openJobs ?? 0} Jobs", style: textRegular.copyWith()),
 
       ]))
     ]));

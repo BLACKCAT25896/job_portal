@@ -10,6 +10,7 @@ class CandidateResumeItem {
   String? type;
   int? isDefault;
   int? status;
+  String? createdAt;
 
   CandidateResumeItem(
       {this.id,
@@ -20,6 +21,7 @@ class CandidateResumeItem {
         this.type,
         this.isDefault,
         this.status,
+        this.createdAt,
        });
 
   CandidateResumeItem.fromJson(Map<String, dynamic> json) {
@@ -31,6 +33,7 @@ class CandidateResumeItem {
     type = json['type'];
     isDefault = PriceConverter.parseInt(json['is_default']);
     status = PriceConverter.parseInt(json['status']);
+    createdAt = json['created_at'];
 
   }
 
@@ -44,6 +47,7 @@ class CandidateResumeItem {
     data['type'] = type;
     data['is_default'] = isDefault;
     data['status'] = status;
+    data['created_at'] = createdAt;
     return data;
   }
 }

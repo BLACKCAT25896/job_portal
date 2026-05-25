@@ -259,6 +259,7 @@ class LandingPageController extends GetxController implements GetxService{
     update();
   }
 
+  TextEditingController monthlySalaryController = TextEditingController();
 
 
 

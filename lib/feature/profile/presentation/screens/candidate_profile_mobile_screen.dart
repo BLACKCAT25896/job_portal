@@ -16,6 +16,7 @@ import 'package:job/feature/candidate_panel/screens/refference_screen.dart';
 import 'package:job/feature/candidate_panel/screens/relevant_information_screen.dart';
 import 'package:job/feature/candidate_panel/screens/training_screen.dart';
 import 'package:job/feature/candidate_panel/screens/upload_photo_screen.dart';
+import 'package:job/feature/profile/logic/profile_controller.dart';
 import 'package:job/feature/profile/presentation/widgets/profile_menu_item_widget.dart';
 import 'package:job/util/dimensions.dart';
 import 'package:job/util/images.dart';
@@ -31,6 +32,12 @@ class CandidateProfileMobileScreen extends StatefulWidget {
 class _CandidateProfileMobileScreenState extends State<CandidateProfileMobileScreen> {
 
   ScrollController scrollController = ScrollController();
+
+  @override
+  void initState() {
+    super.initState();
+    Get.find<ProfileController>().getCandidateProfileInfo();
+  }
 
 
   @override

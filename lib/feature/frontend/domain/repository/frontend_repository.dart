@@ -88,15 +88,15 @@ Future<Response?> getLandingCompanies(int page, String search) async {
 
 
   Future<Response> privacyPolicy() async {
-    return await apiClient.getData(AppConstants.frontendPrivacyPolicy);
+    return await apiClient.getData("${AppConstants.frontendPrivacyPolicy}?type=privacy_policy");
   }
 
   Future<Response> termsAndCondition() async {
-    return await apiClient.getData(AppConstants.frontendTermsCondition);
+    return await apiClient.getData("${AppConstants.frontendPrivacyPolicy}?type=terms_conditions");
   }
 
   Future<Response> cookiePolicy() async {
-    return await apiClient.getData(AppConstants.frontendCookiePolicy);
+    return await apiClient.getData("${AppConstants.frontendPrivacyPolicy}?type=cookie_policy");
   }
 
   Future<Response> aboutUs() async {

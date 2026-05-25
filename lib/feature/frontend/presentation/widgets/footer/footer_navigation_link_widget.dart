@@ -47,6 +47,7 @@ class FooterNavigationLinkWidget extends StatelessWidget {
               children: quickLinks.map((item) {
                 return InkWell(onTap: () => {
 
+
                 },
                   child: Text(item['label'] as String, style: textStyle));
               }).toList(),

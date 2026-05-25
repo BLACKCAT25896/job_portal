@@ -24,7 +24,7 @@ class CompanyInfoWidget extends StatelessWidget {
 
                   SizedBox(height: Dimensions.paddingSizeExtraSmall),
                   Text("address".tr, style: textSemiBold.copyWith(fontSize: Dimensions.fontSizeLarge)),
-                  Text("${job?.company?.location}", style: textRegular.copyWith()),
+                  Text(job?.company?.location??'-', style: textRegular.copyWith()),
 
                 ]));
       }

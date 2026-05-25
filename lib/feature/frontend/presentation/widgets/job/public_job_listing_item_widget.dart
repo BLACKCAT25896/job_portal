@@ -41,28 +41,18 @@ class _PublicJoListingItemWidgetState extends State<PublicJoListingItemWidget> {
           curve: Curves.easeOut,
           transform: Matrix4.identity()
             ..scaleByDouble(isHovered ? 1.03 : 1.0, isHovered ? 1.03 : 1.0, isHovered ? 1.03 : 1.0, isHovered ? 1.03 : 1.0),
-          decoration: BoxDecoration(
-            color: Theme.of(context).cardColor,
+          decoration: BoxDecoration(color: Theme.of(context).cardColor,
             borderRadius: BorderRadius.circular(8),
-            boxShadow: isHovered
-                ? [
-              BoxShadow(
-                color: Colors.black.withValues(alpha: 0.08),
-                blurRadius: 12,
-                offset: const Offset(0, 6),
-              )
+            boxShadow: isHovered ? [
+              BoxShadow(color: Colors.black.withValues(alpha: 0.08),
+                blurRadius: 12, offset: const Offset(0, 6))
             ]
                 : [
-              BoxShadow(
-                color: Colors.black.withValues(alpha : 0.04),
-                blurRadius: 4,
-                offset: const Offset(0, 2),
-              )
-            ],
-          ),
+              BoxShadow(color: Colors.black.withValues(alpha : 0.04), blurRadius: 4,
+                offset: const Offset(0, 2))
+            ]),
           padding: const EdgeInsets.all(10),
-          child: Row(
-            children: [
+          child: Row(children: [
               if (!widget.fromFilter)
                 CustomContainer(borderRadius: 123, child: CustomImage(width: 50, height: 50, fit: BoxFit.contain,
                     radius: 123,
@@ -70,34 +60,24 @@ class _PublicJoListingItemWidgetState extends State<PublicJoListingItemWidget> {
 
               const SizedBox(width: 8),
 
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    CustomTextItemWidget(
-                      text: item?.category?.name ?? 'N/A',
-                      fontSize: Dimensions.fontSizeLarge,
-                      color: systemPrimaryColor(),
-                    ),
-                    Text(
-                      item?.company?.name ?? 'N/A',
-                      style: textMedium.copyWith(
-                        fontSize: Dimensions.fontSizeLarge,
-                      ),
-                    ),
-                    Text(
-                      item?.title ?? '',
-                      style: textRegular,
-                    ),
-                  ],
-                ),
-              ),
+              Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                CustomTextItemWidget(text: item?.category?.name ?? 'N/A',
+                  fontSize: Dimensions.fontSizeLarge, color: systemPrimaryColor()),
+
+                Text(item?.company?.name ?? 'N/A',
+                  style: textMedium.copyWith(fontSize: Dimensions.fontSizeLarge)),
+
+                Text(item?.title ?? '', style: textRegular)])),
             ],
           ),
         ),
       ),
     ):
+
     CustomContainer(borderRadius: 5,
+        onTap: (){
+          Get.toNamed(RouteHelper.getJobDetailRoute(item?.id.toString() ?? ''));
+        },
         horizontalPadding: 5,verticalPadding: 5,
         child: Row(spacing: Dimensions.paddingSizeSmall, children: [
       CustomImage(width: 50, height: 50, fit: BoxFit.contain, radius: 5,

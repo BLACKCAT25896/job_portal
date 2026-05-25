@@ -81,9 +81,7 @@ class AppConstants {
   static const String frontendPostCategories = '/frontend/post-categories';
   static const String frontendPost = '/frontend/posts';
   static const String frontendContactUs = '/frontend/contact-us';
-  static const String frontendPrivacyPolicy = '/frontend/privacy-policy';
-  static const String frontendTermsCondition = '/frontend/terms-conditions';
-  static const String frontendCookiePolicy = '/frontend/cookie-policy';
+  static const String frontendPrivacyPolicy = '/frontend/policy';
   static const String frontendAboutUs = '/frontend/about-us';
   static const String frontendJobListingSummery = '/frontend/job-listing-summery';
 

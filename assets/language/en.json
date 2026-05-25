@@ -456,7 +456,12 @@
   "add": "Add",
   "relationship": "Relationship",
   "links": "Links",
-  "update": "Update"
+  "update": "Update",
+  "job_application_limit": "Job Application Limit",
+  "apply_online": "Apply Online",
+  "add_more_lomit": "Add more limit",
+  "upgrade_to_pro": "Upgrade to Pro",
+  "upload_resume": "Upload Resume"
 
 
 }

@@ -1,6 +1,7 @@
 import 'package:job/common/widget/custom_contaner.dart';
 import 'package:job/common/widget/responsive_grid_widget.dart';
 import 'package:job/feature/candidate_panel/screens/candidate_short_and_details_profile_resume_screen.dart';
+import 'package:job/feature/frontend/policy_enum.dart';
 import 'package:job/feature/profile/presentation/widgets/profile_menu_item_widget.dart';
 import 'package:job/helper/app_color_helper.dart';
 import 'package:flutter/material.dart';
@@ -51,9 +52,20 @@ class _CandidateMoreScreenState extends State<CandidateMoreScreen> {
 
                   ]),
 
-                  ProfileMenuItemWidget(icon: Images.profile, title: "contact_us".tr),
-                  ProfileMenuItemWidget(icon: Images.profile, title: "privacy_policy".tr),
-                  ProfileMenuItemWidget(icon: Images.profile, title: "terms_and_condition".tr),
+                  ProfileMenuItemWidget(
+                      onTap: (){
+                        Get.toNamed(RouteHelper.getContactUsRoute());
+                      },
+                      icon: Images.profile, title: "contact_us".tr),
+                  ProfileMenuItemWidget(onTap: (){
+                    Get.toNamed(RouteHelper.getPolicyRoute(PolicyEnum.privacyPolicy));
+                  },
+                      icon: Images.profile, title: "privacy_policy".tr),
+                  ProfileMenuItemWidget(
+                    onTap: (){
+                      Get.toNamed(RouteHelper.getPolicyRoute(PolicyEnum.termsOfService));
+                    },
+                      icon: Images.profile, title: "terms_and_condition".tr),
                   ProfileMenuItemWidget(icon: Images.delete, title: "delete_account".tr),
                   ProfileMenuItemWidget(icon: Images.logout, title: "logout".tr,
                     onTap: (){

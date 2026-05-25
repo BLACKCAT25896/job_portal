@@ -12,6 +12,7 @@ import 'package:job/feature/contact_us/controller/contact_us_controller.dart';
 import 'package:job/feature/contact_us/domain/model/contact_us_body.dart';
 import 'package:job/feature/frontend/controller/frontend_controller.dart';
 import 'package:job/helper/app_color_helper.dart';
+import 'package:job/helper/responsive_helper.dart';
 import 'package:job/util/app_constants.dart';
 import 'package:job/util/dimensions.dart';
 import 'package:job/util/styles.dart';
@@ -28,7 +29,9 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return BaseLayout(scrollController: scrollController,
+    bool isDesktop = ResponsiveHelper.isDesktop(context);
+    return isDesktop?
+    BaseLayout(scrollController: scrollController,
       child: Center(child: SizedBox(width: Dimensions.webMaxWidth,
           child: GetBuilder<LandingPageController>(builder: (controller) {
 
@@ -42,6 +45,15 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
           }),
         ),
       ),
+    ) : Scaffold(
+      appBar: AppBar(title: Text("contact_us".tr)),
+      body: CustomScrollView(slivers: [
+        SliverToBoxAdapter(child: Column(children: [
+          const _ContactInfo(),
+          const _ContactForm(),
+        ]),)
+      ]),
+
     );
   }
 
