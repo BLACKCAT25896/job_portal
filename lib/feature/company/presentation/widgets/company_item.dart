@@ -37,7 +37,8 @@ class CompanyItemWidget extends StatelessWidget {
 
 
       EditDeletePopupMenu(onEdit:(){
-        Get.dialog(CustomDialogWidget(child: AddNewCompanyWidget(companyItem: companyItem)));
+        Get.dialog(CustomDialogWidget(title: "company".tr,
+            child: AddNewCompanyWidget(companyItem: companyItem)));
       } ,
           onDelete: (){
             Get.dialog(ConfirmationDialog(title: "company".tr, onTap: (){
@@ -54,7 +55,16 @@ class CompanyItemWidget extends StatelessWidget {
 
 
             SizedBox(width: Dimensions.paddingSizeSmall),
-              Expanded(child: Text("${companyItem?.name}", style: textMedium.copyWith(fontSize: Dimensions.fontSizeDefault),)),
+              Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text("${companyItem?.name}", style: textMedium.copyWith(fontSize: Dimensions.fontSizeDefault),),
+                  Text("${companyItem?.website}", style: textRegular.copyWith(fontSize: Dimensions.fontSizeDefault),),
+                  Text("${companyItem?.details}", style: textRegular.copyWith(fontSize: Dimensions.fontSizeDefault),),
+                  Text("${companyItem?.establishedIn}", style: textRegular.copyWith(fontSize: Dimensions.fontSizeDefault),),
+                  Text("${companyItem?.openJobs}", style: textRegular.copyWith(fontSize: Dimensions.fontSizeDefault),),
+                ],
+              )),
+
               EditDeleteSection(isHorizontal: true,
                   onEdit: (){
                 Get.to(()=> CreateNewCompanyScreen(companyItem: companyItem));

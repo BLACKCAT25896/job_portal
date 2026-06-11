@@ -37,6 +37,11 @@ class _AddNewCompanyWidgetState extends State<AddNewCompanyWidget> {
     if(widget.companyItem != null){
       update = true;
       nameController.text = widget.companyItem?.name??'';
+      ceoController.text = widget.companyItem?.ceo??'';
+      establishedInController.text = widget.companyItem?.establishedIn??'';
+      detailsController.text = widget.companyItem?.details??'';
+      websiteController.text = widget.companyItem?.website??'';
+      locationController.text = widget.companyItem?.location??'';
 
     }
     super.initState();
