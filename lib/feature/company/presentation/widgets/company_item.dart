@@ -1,6 +1,7 @@
 import 'package:job/common/layout/custom_dialog_widget.dart';
 import 'package:job/common/widget/confirmation_dialog.dart';
 import 'package:job/common/widget/custom_contaner.dart';
+import 'package:job/common/widget/custom_image.dart';
 import 'package:job/common/widget/custom_text_item_widget.dart';
 import 'package:job/common/widget/edit_delete_popup_widget.dart';
 import 'package:job/common/widget/edit_delete_section.dart';
@@ -10,6 +11,7 @@ import 'package:job/feature/company/domain/models/company_model.dart';
 import 'package:job/feature/company/presentation/screens/create_new_company_screen.dart';
 import 'package:job/feature/company/presentation/widgets/add_new_company_widget.dart';
 import 'package:job/helper/responsive_helper.dart';
+import 'package:job/util/app_constants.dart';
 import 'package:job/util/dimensions.dart';
 import 'package:job/util/styles.dart';
 import 'package:flutter/material.dart';
@@ -26,7 +28,13 @@ class CompanyItemWidget extends StatelessWidget {
     Row(spacing: Dimensions.paddingSizeDefault, children: [
       NumberingWidget(index: index),
 
-      Expanded(child: CustomTextItemWidget(text: companyItem?.name??'')),
+      CustomImage(width: 50,height: 50, image: "${AppConstants.imageBaseUrl}/companies/${companyItem?.logo}"),
+      Expanded(child: CustomTextItemWidget(text: companyItem?.name??'-')),
+      Expanded(child: CustomTextItemWidget(text: companyItem?.website??'-')),
+      Expanded(child: CustomTextItemWidget(text: companyItem?.details??'-')),
+      Expanded(child: CustomTextItemWidget(text: companyItem?.establishedIn??'-')),
+      Expanded(child: CustomTextItemWidget(text: companyItem?.openJobs.toString()??'-')),
+
 
       EditDeletePopupMenu(onEdit:(){
         Get.dialog(CustomDialogWidget(child: AddNewCompanyWidget(companyItem: companyItem)));

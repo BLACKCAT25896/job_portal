@@ -54,7 +54,7 @@ class _CompanyListWidgetState extends State<CompanyListWidget> {
                 child: AddNewCompanyWidget()));
           },
 
-          headings: const ["name"],
+          headings: const ["icon","name", "website", "description", "established_in", "open_jobs"],
           scrollController: widget.scrollController,
           isLoading: companyModel == null,
           totalSize:  data?.total ?? 0,

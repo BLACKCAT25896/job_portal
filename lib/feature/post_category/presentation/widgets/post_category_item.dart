@@ -26,12 +26,14 @@ class PostCategoryItemWidget extends StatelessWidget {
     Row(spacing: Dimensions.paddingSizeDefault, children: [
       NumberingWidget(index: index),
       Expanded(child: CustomTextItemWidget(text: postCategoryItem?.name??'')),
+      Expanded(child: CustomTextItemWidget(text: postCategoryItem?.description??'')),
 
       EditDeletePopupMenu(onEdit:(){
-        Get.dialog(CustomDialogWidget(child: AddNewPostCategoryWidget(postCategoryItem: postCategoryItem)));
+        Get.dialog(CustomDialogWidget(title: "post_category".tr,
+            child: AddNewPostCategoryWidget(postCategoryItem: postCategoryItem)));
       } ,
           onDelete: (){
-            Get.dialog(ConfirmationDialog(title: "post_category", onTap: (){
+            Get.dialog(ConfirmationDialog(title: "post_category".tr, onTap: (){
               Get.back();
               Get.find<PostCategoryController>().deletePostCategory(postCategoryItem!.id!);
               },));
@@ -43,13 +45,22 @@ class PostCategoryItemWidget extends StatelessWidget {
       child: CustomContainer(borderRadius: 5, showShadow: false,
           child: Row(children: [
 
-              Expanded(child: Text("${postCategoryItem?.name}", style: textMedium.copyWith(fontSize: Dimensions.fontSizeDefault),)),
+              Expanded(child: Column(
+                children: [
+                  Text("${postCategoryItem?.name}",
+                    style: textMedium.copyWith(fontSize: Dimensions.fontSizeDefault),),
+
+                  Text("${postCategoryItem?.description}",
+                    style: textRegular.copyWith(fontSize: Dimensions.fontSizeSmall),),
+                ],
+              )),
+
               EditDeleteSection(isHorizontal: true,
                   onEdit: (){
                 Get.to(()=> CreateNewPostCategoryScreen(postCategoryItem: postCategoryItem));
               },
                 onDelete: (){
-                  Get.dialog(ConfirmationDialog(title: "post_category", onTap: (){
+                  Get.dialog(ConfirmationDialog(title: "post_category".tr, onTap: (){
                       Get.back();
                       Get.find<PostCategoryController>().deletePostCategory(postCategoryItem!.id!);
                     },));

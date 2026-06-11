@@ -91,7 +91,7 @@ class AppConstants {
   static const String policies = '/policies';
   static const String generalSetting = '/tenant-settings';
   static const String generalSettingUpdate = '/tenant-settings-update';
-  static const String publicSetting = '/publicSetting';
+  static const String publicSetting = '/frontend/settings';
   static const String imageSetting = '/image-settings';
   static const String frontendImageSetting = '/frontend/image-settings';
   static const String paymentMethods = '/payment-methods';
@@ -174,7 +174,11 @@ class AppConstants {
 
   static List<LanguageModel> languages = [
     LanguageModel(imageUrl: Images.unitedKingdom, languageName: 'English', countryCode: 'US', languageCode: 'en'),
-    LanguageModel(imageUrl: Images.bangladesh, languageName: 'Bengali', countryCode: 'BD', languageCode: 'bn'),
+    LanguageModel(imageUrl: Images.saudi, languageName: 'Arabic', countryCode: 'SA', languageCode: 'ar'),
+    LanguageModel(imageUrl: Images.india, languageName: 'Hindi', countryCode: 'IN', languageCode: 'hi'),
+    LanguageModel(imageUrl: Images.spain, languageName: 'Spanish', countryCode: 'ES', languageCode: 'es'),
+
+
   ];
 
   static const int limitOfPickedIdentityImageNumber = 2;

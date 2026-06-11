@@ -10,8 +10,6 @@
   "remember_me": "Remember Me",
   "dont_have_an_account": "Don't have an account?",
   "create_an_account": "Create an account",
-
-
   "select_industry": "Select Industry",
   "search": "Search",
   "find_the_right_job": "Find The Right Job",
@@ -461,7 +459,11 @@
   "apply_online": "Apply Online",
   "add_more_lomit": "Add more limit",
   "upgrade_to_pro": "Upgrade to Pro",
-  "upload_resume": "Upload Resume"
+  "upload_resume": "Upload Resume",
+  "open_jobs": "Open Jobs",
+  "add_new_career_level": "Add New Career Level",
+  "back": "Back"
+
 
 
 }

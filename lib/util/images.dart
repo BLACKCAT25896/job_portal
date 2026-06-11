@@ -4,6 +4,8 @@ class Images {
   static const String saudi = 'assets/image/saudi.png';
   static const String unitedKingdom = 'assets/image/united_kingdom.png';
   static const String bangladesh = 'assets/image/bangladesh.png';
+  static const String india = 'assets/image/india.png';
+  static const String spain = 'assets/image/spain.png';
 
   static const String placeholder = 'assets/image/placeholder.jpg';
   static const String personPlaceholder = 'assets/image/person_placeholder.png';

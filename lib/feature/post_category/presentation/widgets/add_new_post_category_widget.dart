@@ -1,4 +1,3 @@
-import 'package:job/common/widget/active_inactive_widget.dart';
 import 'package:job/common/widget/custom_button.dart';
 import 'package:job/common/widget/custom_snackbar.dart';
 import 'package:job/common/widget/custom_text_field.dart';
@@ -6,7 +5,6 @@ import 'package:job/feature/post_category/controller/post_category_controller.da
 import 'package:job/feature/post_category/domain/models/post_category_body.dart';
 import 'package:job/feature/post_category/domain/models/post_category_model.dart';
 import 'package:job/util/dimensions.dart';
-import 'package:job/util/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -37,29 +35,17 @@ class _AddNewPostCategoryWidgetState extends State<AddNewPostCategoryWidget> {
     return GetBuilder<PostCategoryController>(builder: (postCategoryController) {
       return Column(mainAxisSize: MainAxisSize.min, spacing: Dimensions.paddingSizeDefault, children: [
 
-        Row(spacing: Dimensions.paddingSizeDefault, children: [
-          Expanded(child: Column(spacing: Dimensions.paddingSizeDefault, children: [
+        CustomTextField(title: "name".tr,
+          controller: nameController,
+          hintText: "name".tr,),
 
-            CustomTextField(title: "name".tr,
-              controller: nameController,
-              hintText: "enter_name".tr,),
-
-
-            Row(spacing: Dimensions.paddingSizeDefault, children: [
-              Row(mainAxisSize: MainAxisSize.min,spacing: Dimensions.paddingSizeExtraSmall,
-                children: [
-
-                  Text("default".tr, style: textRegular),
-                  ActiveInActiveWidget(active: postCategoryController.isDefault,
-                    onChanged: (val){
-                    postCategoryController.toggleIsFeatured();
-                    },),
-                ]),
-            ]),
-          ],),
-          ),
-
-        ]),
+        CustomTextField(
+          minLines: 3, maxLines: 5,
+          inputType: TextInputType.multiline,
+          inputAction: TextInputAction.newline,
+          title: "description".tr,
+          controller: descriptionController,
+          hintText: "description".tr,),
 
         Padding(padding: EdgeInsets.symmetric(vertical: Dimensions.paddingSizeDefault),
             child: postCategoryController.isLoading? const CircularProgressIndicator() :
@@ -74,6 +60,7 @@ class _AddNewPostCategoryWidgetState extends State<AddNewPostCategoryWidget> {
               else{
                 PostCategoryBody postCategoryBody = PostCategoryBody(
                     name: name,
+                    slug: name.toLowerCase().replaceAll(" ", "-"),
                     isDefault: postCategoryController.isDefault,
                     description: description,
                     sMethod: update? "put":"POST",

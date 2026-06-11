@@ -31,7 +31,6 @@ class _AddNewCompanyWidgetState extends State<AddNewCompanyWidget> {
   TextEditingController detailsController = TextEditingController();
   TextEditingController websiteController = TextEditingController();
   TextEditingController locationController = TextEditingController();
-  TextEditingController uniqueIdController = TextEditingController();
   bool update = false;
   @override
   void initState() {
@@ -51,7 +50,7 @@ class _AddNewCompanyWidgetState extends State<AddNewCompanyWidget> {
           ResponsiveMasonryGrid(children: [
             CustomTextField(title: "name".tr,
               controller: nameController,
-              hintText: "enter_name".tr,),
+              hintText: "name".tr,),
 
             CustomTextField(
               controller: ceoController,

@@ -22,7 +22,7 @@ class _SelectOwnershipTypeWidgetState extends State<SelectOwnershipTypeWidget> {
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
 
       SizedBox(height: Dimensions.paddingSizeSmall),
-      CustomTitle(title: "company_size", leftPadding: 0, fontSize: Dimensions.fontSizeDefault),
+      CustomTitle(title: "ownership_type", leftPadding: 0, fontSize: Dimensions.fontSizeDefault),
 
       GetBuilder<OwnershipTypeController>(initState: (_) {
         if (Get.find<OwnershipTypeController>().ownershipTypeModel == null) {
